@@ -117,7 +117,7 @@ export default function PosPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
   const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
   const [isSyncPanelOpen, setIsSyncPanelOpen] = useState(false);
-  
+
   // M26-EXT2: Modifier drawer state
   const [modifierDrawerOpen, setModifierDrawerOpen] = useState(false);
   const [modifierTarget, setModifierTarget] = useState<{
@@ -127,16 +127,16 @@ export default function PosPage() {
     basePrice: number;
     existingModifiers?: PosOrderLineModifier[];
   } | null>(null);
-  
+
   // M26-EXT3: Tabs management state
   const [tabsSidebarOpen, setTabsSidebarOpen] = useState(false);
   const [tabNameDialogOpen, setTabNameDialogOpen] = useState(false);
   const [tabNameDialogMode, setTabNameDialogMode] = useState<'create' | 'rename'>('create');
   const [tabNameDialogTarget, setTabNameDialogTarget] = useState<string | null>(null);
-  
+
   // M30-OPS-S1: Diagnostics panel state
   const [diagnosticsOpen, setDiagnosticsOpen] = useState(false);
-  
+
   const queryClient = useQueryClient();
 
   // M29-PWA-S2: Device role for multi-device deployment
@@ -989,453 +989,264 @@ export default function PosPage() {
         </div>
       )}
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {/* Left: Order List */}
-        <Card className="lg:col-span-1">
-          <div className="flex items-center justify-between mb-4">
-            <div className="flex items-center gap-2">
-              <h3 className="text-lg font-semibold">Open Orders</h3>
-              {/* M26-EXT3: Tabs button */}
-              {openTabs.length > 0 && (
-                <button
-                  onClick={() => setTabsSidebarOpen(true)}
-                  className="flex items-center gap-1 rounded-lg border border-blue-200 bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 hover:bg-blue-100 transition-colors"
-                  aria-label="Open tabs sidebar"
-                >
-                  <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-                  </svg>
-                  Tabs ({openTabs.length})
-                </button>
-              )}
-            </div>
-            <Button
-              variant="default"
-              size="sm"
-              onClick={() => createOrderMutation.mutate()}
-              disabled={createOrderMutation.isPending}
-              data-testid="pos-new-order"
-            >
-              New Order
-            </Button>
-          </div>
-
-          {ordersLoading && <p className="text-sm text-gray-500">Loading...</p>}
-
-          {!ordersLoading && orders.length === 0 && (
-            <p className="text-sm text-gray-500">No open orders</p>
-          )}
-
-          {!ordersLoading && orders.length > 0 && (
-            <div className="space-y-2">
-              {orders.map((order) => (
-                <button
-                  key={order.id}
-                  onClick={() => setSelectedOrderId(order.id)}
-                  className={`w-full text-left p-3 border rounded-lg transition-colors ${
-                    selectedOrderId === order.id
-                      ? 'border-blue-500 bg-blue-50'
-                      : 'border-gray-200 hover:border-gray-300'
-                  }`}
-                >
-                  <div className="flex items-center justify-between mb-1">
-                    <span className="font-medium">
-                      {order.tableName || order.tabName || 'Walk-in'}
-                    </span>
-                    <span className={`text-xs px-2 py-1 rounded-full ${STATUS_COLORS[order.status] || 'bg-gray-100'}`}>
-                      {order.status}
-                    </span>
-                  </div>
-                  <div className="flex items-center justify-between text-sm text-gray-600">
-                    <span>UGX {order.total.toLocaleString()}</span>
-                    <span>{new Date(order.createdAt).toLocaleTimeString()}</span>
-                  </div>
-                </button>
-              ))}
-            </div>
-          )}
-        </Card>
-
-        {/* Center: Active Order */}
-        <Card className="lg:col-span-1">
-          <h3 className="text-lg font-semibold mb-4">Active Order</h3>
-
-          {!selectedOrderId && (
-            <p className="text-sm text-gray-500">Select an order or create a new one</p>
-          )}
-
-          {selectedOrderId && orderLoading && (
-            <p className="text-sm text-gray-500">Loading...</p>
-          )}
-
-          {selectedOrderId && !orderLoading && activeOrder && (
-            <div>
-              <div className="mb-4">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="font-medium">
-                    {activeOrder.tableName || activeOrder.tabName || 'Walk-in'}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4 h-[calc(100vh-140px)]">
+        {/* Left/Center Area: Menu or Order List */}
+        {!selectedOrderId ? (
+          <Card className="lg:col-span-12 flex flex-col bg-nimbus-mist/50 dark:bg-nimbus-navy/50 border-none shadow-none">
+            <div className="flex items-center justify-between mb-4 px-1">
+              <div className="flex items-center gap-3">
+                <h3 className="text-xl font-bold text-nimbus-navy dark:text-white">Open Orders</h3>
+                {openTabs.length > 0 && (
+                  <span className="bg-nimbus-blue text-white text-xs font-bold px-2 py-0.5 rounded-full">
+                    {openTabs.length}
                   </span>
-                  <span className={`text-xs px-2 py-1 rounded-full ${STATUS_COLORS[activeOrder.status] || 'bg-gray-100'}`}>
-                    {activeOrder.status}
-                  </span>
-                </div>
+                )}
               </div>
+              <Button
+                variant="default"
+                size="lg"
+                onClick={() => createOrderMutation.mutate()}
+                disabled={createOrderMutation.isPending}
+                data-testid="pos-new-order"
+                className="bg-nimbus-blue hover:bg-nimbus-blue/90 shadow-lg shadow-nimbus-blue/20"
+              >
+                + New Order
+              </Button>
+            </div>
 
-              {/* Items - M26-S3/S4: Enhanced with quantity controls */}
-              <div className="border-t border-b py-3 mb-3">
-                {activeOrder.items.length === 0 && (
-                  <p className="text-sm text-gray-500">No items yet</p>
-                )}
-                {!canEditOrderItems && activeOrder.items.length > 0 && (
-                  <p className="text-xs text-amber-600 mb-2">
-                    Items locked once order is sent to kitchen or ready.
-                  </p>
-                )}
-                <div className="space-y-2">
-                  {activeOrder.items.map((item) => (
-                    <div
-                      key={item.id}
-                      onClick={() => setSelectedItemId(item.id)}
-                      className={`flex items-center gap-3 py-2 border-b last:border-b-0 cursor-pointer rounded px-1 transition-colors ${
-                        selectedItemId === item.id
-                          ? 'bg-blue-50 border-blue-200'
-                          : 'hover:bg-gray-50'
-                      }`}
-                    >
-                      {/* Item info */}
-                      <div className="flex-1 min-w-0">
-                        <div className="font-medium text-sm truncate">{item.name}</div>
-                        <div className="text-xs text-gray-600">
-                          UGX {item.unitPrice.toLocaleString()} each
-                        </div>
-                        {/* M26-EXT2: Modifier summary */}
-                        {item.modifiers && item.modifiers.length > 0 && (
-                          <div className="text-xs text-emerald-600 mt-1">
-                            🔧 {buildModifierSummary(item.modifiers)}
-                          </div>
-                        )}
-                        {item.notes && (
-                          <div className="text-xs text-blue-600 mt-1 italic">
-                            📝 {item.notes}
-                          </div>
-                        )}
-                      </div>
+            {ordersLoading && <div className="p-8 text-center text-muted-foreground">Loading orders...</div>}
 
-                      {/* Quantity controls */}
-                      {canEditOrderItems ? (
-                        <div className="flex items-center gap-1">
-                          <Button
-                            size="sm"
-                            variant="outline"
-                            className="h-7 w-7 p-0"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleDecreaseQuantity(item);
-                            }}
-                            disabled={updateItemsMutation.isPending}
-                          >
-                            −
-                          </Button>
-                          <span className="px-2 text-sm font-medium min-w-[2rem] text-center">
-                            {item.quantity}
-                          </span>
-                          <Button
-                            size="sm"
-                            variant="outline"
-                            className="h-7 w-7 p-0"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              handleIncreaseQuantity(item);
-                            }}
-                            disabled={updateItemsMutation.isPending}
-                          >
-                            +
-                          </Button>
-                        </div>
-                      ) : (
-                        <div className="px-2 text-sm font-medium">× {item.quantity}</div>
-                      )}
+            {!ordersLoading && orders.length === 0 && (
+              <div className="flex-1 flex flex-col items-center justify-center text-muted-foreground bg-white dark:bg-nimbus-navy rounded-xl border border-dashed border-nimbus-navy/20 dark:border-white/20 m-1">
+                <p className="text-lg font-medium">No open orders</p>
+                <p className="text-sm mt-1">Create a new order to get started</p>
+              </div>
+            )}
 
-                      {/* Total */}
-                      <div className="text-right min-w-[80px]">
-                        <div className="font-medium text-sm">
-                          UGX {item.total.toLocaleString()}
-                        </div>
-                        <span
-                          className={`text-xs px-2 py-0.5 rounded-full ${STATUS_COLORS[item.status] || 'bg-gray-100'}`}
-                        >
-                          {item.status}
-                        </span>
-                      </div>
-
-                      {/* Remove button */}
-                      {canEditOrderItems && (
-                        <Button
-                          size="sm"
-                          variant="ghost"
-                          className="h-7 w-7 p-0 text-muted-foreground hover:text-red-600"
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            handleRemoveItem(item);
-                          }}
-                          disabled={updateItemsMutation.isPending}
-                        >
-                          🗑
-                        </Button>
-                      )}
+            {!ordersLoading && orders.length > 0 && (
+              <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 overflow-y-auto p-1">
+                {orders.map((order) => (
+                  <button
+                    key={order.id}
+                    onClick={() => setSelectedOrderId(order.id)}
+                    className="flex flex-col text-left p-4 bg-white dark:bg-nimbus-navy rounded-xl border border-nimbus-navy/5 dark:border-white/10 hover:border-nimbus-blue hover:shadow-md transition-all group"
+                  >
+                    <div className="flex items-center justify-between mb-2 w-full">
+                      <span className="font-bold text-lg text-nimbus-navy dark:text-white group-hover:text-nimbus-blue">
+                        {order.tableName || order.tabName || 'Walk-in'}
+                      </span>
+                      <span className={`text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded-md ${STATUS_COLORS[order.status] || 'bg-gray-100'}`}>
+                        {order.status}
+                      </span>
                     </div>
+                    <div className="flex items-center justify-between text-sm text-nimbus-ink/60 dark:text-white/60 w-full mt-auto">
+                      <span className="font-medium text-nimbus-ink dark:text-white">UGX {order.total.toLocaleString()}</span>
+                      <span>{new Date(order.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            )}
+          </Card>
+        ) : (
+          <>
+            {/* MENU BROWSER (Left Side - 8 Cols) */}
+            <Card className="lg:col-span-8 flex flex-col h-full bg-white dark:bg-nimbus-navy border-nimbus-navy/10 dark:border-white/10 shadow-sm overflow-hidden">
+              <div className="p-4 border-b border-nimbus-navy/5 dark:border-white/5 bg-nimbus-mist/30 dark:bg-white/5">
+                <div className="flex items-center gap-3">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="h-9 w-9 -ml-2 text-nimbus-navy dark:text-white"
+                    onClick={() => setSelectedOrderId(null)}
+                  >
+                    <span className="sr-only">Back</span>
+                    ←
+                  </Button>
+                  <div className="relative flex-1">
+                    <Input
+                      placeholder="Search menu..."
+                      value={menuSearch}
+                      onChange={(e) => setMenuSearch(e.target.value)}
+                      className="h-10 text-sm bg-white dark:bg-black/20 border-transparent focus:border-nimbus-blue ring-0 rounded-full pl-4"
+                    />
+                  </div>
+                </div>
+
+                {/* Category Pills */}
+                <div className="flex gap-2 mt-3 overflow-x-auto pb-1 scrollbar-hide">
+                  <Button
+                    size="sm"
+                    variant={selectedCategory === 'ALL' ? 'default' : 'outline'}
+                    onClick={() => setSelectedCategory('ALL')}
+                    className={selectedCategory === 'ALL' ? 'bg-nimbus-navy text-white rounded-full' : 'rounded-full border-nimbus-navy/20 text-nimbus-navy dark:text-white'}
+                  >
+                    All Items
+                  </Button>
+                  {categories.map((cat) => (
+                    <Button
+                      key={cat}
+                      size="sm"
+                      variant={selectedCategory === cat ? 'default' : 'outline'}
+                      onClick={() => setSelectedCategory(cat)}
+                      className={selectedCategory === cat ? 'bg-nimbus-navy text-white rounded-full' : 'rounded-full border-nimbus-navy/20 text-nimbus-navy dark:text-white'}
+                    >
+                      {cat}
+                    </Button>
                   ))}
                 </div>
               </div>
 
-              {/* Totals */}
-              <div className="space-y-2 mb-4">
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">Subtotal</span>
-                  <span>UGX {activeOrder.subtotal.toLocaleString()}</span>
+              <div className="flex-1 overflow-y-auto p-4 bg-nimbus-mist/20 dark:bg-black/20">
+                <div className="grid gap-3 grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+                  {menuLoading ? (
+                    <div className="col-span-full text-center py-12 text-muted-foreground">Loading menu...</div>
+                  ) : filteredMenuItems.length === 0 ? (
+                    <div className="col-span-full text-center py-12 text-muted-foreground">No items match your filters.</div>
+                  ) : (
+                    filteredMenuItems.map((item) => (
+                      <button
+                        key={item.id}
+                        type="button"
+                        onClick={() => handleAddItemClick(item)}
+                        disabled={addItemsMutation.isPending}
+                        className="flex flex-col text-left h-[120px] p-3 rounded-xl bg-white dark:bg-nimbus-navy border border-nimbus-navy/5 dark:border-white/10 shadow-sm hover:shadow-md hover:border-nimbus-blue/50 dark:hover:border-nimbus-blue transition-all group active:scale-[0.98]"
+                      >
+                        <div className="font-bold text-sm text-nimbus-navy dark:text-white line-clamp-2 leading-tight mb-1">
+                          {item.name}
+                        </div>
+                        {item.sku && (
+                          <div className="text-[10px] text-nimbus-ink/40 dark:text-white/40 mb-auto">
+                            {item.sku}
+                          </div>
+                        )}
+                        <div className="mt-auto font-bold text-nimbus-blue dark:text-nimbus-violet">
+                          UGX {item.price.toLocaleString()}
+                        </div>
+                      </button>
+                    ))
+                  )}
                 </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">Tax</span>
-                  <span>UGX {activeOrder.tax.toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between font-semibold text-lg border-t pt-2">
-                  <span>Total</span>
-                  <span>UGX {activeOrder.total.toLocaleString()}</span>
-                </div>
-                {totalPaid > 0 && (
-                  <>
-                    <div className="flex justify-between text-sm text-green-600">
-                      <span>Paid</span>
-                      <span>-UGX {totalPaid.toLocaleString()}</span>
-                    </div>
-                    <div className="flex justify-between font-semibold">
-                      <span>Balance</span>
-                      <span>UGX {balance.toLocaleString()}</span>
-                    </div>
-                  </>
-                )}
               </div>
+            </Card>
 
-              {/* Actions */}
-              <div className="space-y-2">
-                {activeOrder.status === 'NEW' && (
-                  <Button
-                    variant="default"
-                    className="w-full"
-                    onClick={() => sendToKitchenMutation.mutate(activeOrder.id)}
-                    disabled={sendToKitchenMutation.isPending || activeOrder.items.length === 0}
-                    data-testid="pos-send-kitchen"
-                  >
-                    Send to Kitchen
-                  </Button>
-                )}
-
-                {['SENT', 'IN_KITCHEN', 'READY', 'SERVED'].includes(activeOrder.status) && balance > 0 && (
-                  <>
-                    <Button
-                      variant="default"
-                      className="w-full"
-                      onClick={handleOpenPayment}
-                      data-testid="pos-checkout"
-                    >
-                      Take Payment
-                    </Button>
-                    <Button
-                      variant="secondary"
-                      className="w-full"
-                      onClick={() => setActiveSplitOrderId(activeOrder.id)}
-                      data-testid="pos-split-bill"
-                    >
-                      Split Bill
-                    </Button>
-                  </>
-                )}
-
-                {['NEW', 'SENT'].includes(activeOrder.status) && (
-                  <Button
-                    variant="secondary"
-                    className="w-full"
-                    onClick={handleOpenVoid}
-                    data-testid="pos-void-order"
-                  >
-                    Void Order
-                  </Button>
-                )}
-              </div>
-            </div>
-          )}
-
-          {/* M26-S4: Modifiers & Notes Panel */}
-          {selectedItem && selectedOrderId && (
-            <div className="mt-4">
-              <Card>
-                <div className="p-4 border-b flex items-center justify-between">
-                  <div>
-                    <h3 className="text-sm font-semibold">
-                      Modifiers & notes for: {selectedItem.name}
-                    </h3>
-                    <p className="text-xs text-muted-foreground">
-                      These instructions are sent to the kitchen.
-                    </p>
+            {/* ACTIVE ORDER (Right Side - 4 Cols) */}
+            <Card className="lg:col-span-4 flex flex-col h-full bg-white dark:bg-nimbus-navy border-nimbus-navy/10 dark:border-white/10 shadow-md z-10">
+              {/* Header */}
+              <div className="p-4 border-b border-nimbus-navy/10 dark:border-white/10 flex items-center justify-between bg-nimbus-mist/30 dark:bg-white/5">
+                <div>
+                  <h3 className="font-bold text-nimbus-navy dark:text-white text-lg">
+                    {activeOrder?.tableName || activeOrder?.tabName || 'New Order'}
+                  </h3>
+                  <div className="flex items-center gap-2 mt-0.5">
+                    <span className={`text-[10px] font-bold px-1.5 py-0.5 rounded ${STATUS_COLORS[activeOrder?.status || 'NEW']}`}>
+                      {activeOrder?.status || 'NEW'}
+                    </span>
+                    <span className="text-xs text-nimbus-ink/50 dark:text-white/50">
+                      #{activeOrder?.id.slice(-4) || '----'}
+                    </span>
                   </div>
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    onClick={() => setSelectedItemId(null)}
-                    className="h-6 w-6 p-0"
-                  >
-                    ✕
+                </div>
+                <div className="flex gap-1">
+                  {/* Tabs Toggle if needed */}
+                  <Button variant="ghost" size="icon" onClick={() => setTabsSidebarOpen(true)} title="Switch Tab">
+                    <svg className="h-5 w-5 text-nimbus-navy dark:text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                    </svg>
                   </Button>
                 </div>
-                <div className="p-4 space-y-4">
-                  {/* Quick modifiers */}
+              </div>
+
+              {/* Order Items List */}
+              <div className="flex-1 overflow-y-auto p-0">
+                {/* Logic for items list (copied/adapted from original center card) */}
+                {selectedOrderId && !orderLoading && activeOrder ? (
                   <div>
-                    <div className="text-xs font-medium mb-2">Quick modifiers</div>
-                    <div className="flex flex-wrap gap-2">
-                      {[
-                        'No onions',
-                        'Extra spicy',
-                        'Less salt',
-                        'No cheese',
-                        'Well done',
-                      ].map((label) => (
+                    {activeOrder.items.length === 0 && (
+                      <div className="p-8 text-center text-sm text-nimbus-ink/40 dark:text-white/40 italic">
+                        Items you add will appear here
+                      </div>
+                    )}
+
+                    {activeOrder.items.map((item) => (
+                      <div
+                        key={item.id}
+                        onClick={() => setSelectedItemId(item.id)}
+                        className={`relative p-3 border-b border-nimbus-navy/5 dark:border-white/5 transition-colors ${selectedItemId === item.id ? 'bg-nimbus-blue/5 dark:bg-white/10' : 'hover:bg-nimbus-mist/30 dark:hover:bg-white/5'
+                          }`}
+                      >
+                        <div className="flex justify-between items-start mb-1">
+                          <span className="font-bold text-sm text-nimbus-navy dark:text-white pr-2">{item.name}</span>
+                          <span className="font-bold text-sm text-nimbus-navy dark:text-white">UGX {item.total.toLocaleString()}</span>
+                        </div>
+                        <div className="flex items-center justify-between text-xs text-nimbus-ink/50 dark:text-white/50">
+                          <span>{item.quantity} × {item.unitPrice.toLocaleString()}</span>
+                          {/* Qty Controls embedded */}
+                          {canEditOrderItems && selectedItemId === item.id && (
+                            <div className="flex items-center gap-2 bg-white dark:bg-black rounded-full border shadow-sm px-1 py-0.5 ml-2 absolute right-2 bottom-2">
+                              <button className="w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full" onClick={(e) => { e.stopPropagation(); handleDecreaseQuantity(item); }}>-</button>
+                              <span className="font-bold text-nimbus-navy dark:text-white">{item.quantity}</span>
+                              <button className="w-6 h-6 flex items-center justify-center hover:bg-gray-100 rounded-full" onClick={(e) => { e.stopPropagation(); handleIncreaseQuantity(item); }}>+</button>
+                            </div>
+                          )}
+                        </div>
+                        {item.notes && <div className="text-[10px] text-nimbus-blue mt-1 bg-nimbus-blue/5 px-1 py-0.5 rounded inline-block">{item.notes}</div>}
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="p-8 text-center text-sm text-muted-foreground">Select an order</div>
+                )}
+              </div>
+
+              {/* Totals & Actions Footer */}
+              <div className="border-t border-nimbus-navy/10 dark:border-white/10 bg-nimbus-mist/30 dark:bg-white/5 p-4">
+                {activeOrder && (
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-end">
+                      <span className="text-sm font-medium text-nimbus-ink/60 dark:text-white/60">Total</span>
+                      <span className="text-2xl font-bold text-nimbus-navy dark:text-white">UGX {activeOrder.total.toLocaleString()}</span>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-2 pt-2">
+                      {activeOrder.status === 'NEW' && (
                         <Button
-                          key={label}
-                          size="sm"
-                          variant="outline"
-                          className="text-xs"
-                          disabled={
-                            updateItemsMutation.isPending || !canEditOrderItems
-                          }
-                          onClick={() => {
-                            const existing = (selectedItem.notes ?? '').trim();
-                            const next = existing
-                              ? `${existing}; ${label}`
-                              : label;
-                            updateItemsMutation.mutate({
-                              orderId: selectedOrderId,
-                              itemId: selectedItem.id,
-                              notes: next,
-                            });
-                          }}
+                          className="col-span-2 h-12 text-lg font-bold bg-nimbus-blue hover:bg-nimbus-blue/90"
+                          onClick={() => sendToKitchenMutation.mutate(activeOrder.id)}
+                          disabled={sendToKitchenMutation.isPending || activeOrder.items.length === 0}
                         >
-                          {label}
+                          Send to Kitchen
                         </Button>
-                      ))}
+                      )}
+                      {['SENT', 'IN_KITCHEN', 'READY', 'SERVED'].includes(activeOrder.status) && (
+                        <>
+                          <Button
+                            variant="secondary"
+                            className="h-12 font-semibold"
+                            onClick={() => setActiveSplitOrderId(activeOrder.id)}
+                          >
+                            Split
+                          </Button>
+                          <Button
+                            className="h-12 font-bold bg-emerald-600 hover:bg-emerald-700 text-white shadow-emerald-600/20 shadow-lg"
+                            onClick={handleOpenPayment}
+                          >
+                            Pay
+                          </Button>
+                        </>
+                      )}
+                      {['NEW', 'SENT'].includes(activeOrder.status) && (
+                        <Button variant="ghost" className="col-span-2 text-destructive hover:bg-destructive/10" onClick={handleOpenVoid}>
+                          Void Order
+                        </Button>
+                      )}
                     </div>
                   </div>
-
-                  {/* Free-text notes */}
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <label className="text-xs font-medium">
-                        Special instructions
-                      </label>
-                      <span className="text-[10px] text-muted-foreground">
-                        Max ~200 characters
-                      </span>
-                    </div>
-                    <textarea
-                      className="w-full min-h-[80px] text-sm border rounded-md px-2 py-1 bg-background"
-                      defaultValue={selectedItem.notes ?? ''}
-                      disabled={
-                        updateItemsMutation.isPending || !canEditOrderItems
-                      }
-                      onBlur={(e) => {
-                        const value = e.target.value.trim();
-                        updateItemsMutation.mutate({
-                          orderId: selectedOrderId,
-                          itemId: selectedItem.id,
-                          notes: value || '',
-                        });
-                      }}
-                      maxLength={200}
-                    />
-                    <p className="mt-1 text-[10px] text-muted-foreground">
-                      Example: &ldquo;Birthday cake, bring with sparkler at dessert.&rdquo;
-                    </p>
-                  </div>
-
-                  {!canEditOrderItems && (
-                    <p className="mt-2 text-xs text-amber-600">
-                      Items are locked because this order is{' '}
-                      {activeOrder?.status.toLowerCase()}.
-                    </p>
-                  )}
-                </div>
-              </Card>
-            </div>
-          )}
-        </Card>
-
-        {/* Right: Menu Browser (M26-S2) */}
-        <Card className="lg:col-span-1 flex flex-col h-full">
-          <div className="p-4 border-b">
-            <h3 className="text-lg font-semibold mb-1">Menu</h3>
-            <p className="text-sm text-muted-foreground">
-              Tap items to add them to the active order.
-            </p>
-
-            <div className="mt-3 space-y-2">
-              <Input
-                placeholder="Search menu..."
-                value={menuSearch}
-                onChange={(e) => setMenuSearch(e.target.value)}
-              />
-              <div className="flex flex-wrap gap-2">
-                <Button
-                  size="sm"
-                  variant={selectedCategory === 'ALL' ? 'default' : 'outline'}
-                  onClick={() => setSelectedCategory('ALL')}
-                >
-                  All
-                </Button>
-                {categories.map((cat) => (
-                  <Button
-                    key={cat}
-                    size="sm"
-                    variant={selectedCategory === cat ? 'default' : 'outline'}
-                    onClick={() => setSelectedCategory(cat)}
-                  >
-                    {cat}
-                  </Button>
-                ))}
+                )}
               </div>
-            </div>
-          </div>
-
-          <div className="flex-1 overflow-y-auto p-3 grid gap-2 grid-cols-2">
-            {menuLoading ? (
-              <div className="col-span-2 text-center text-sm text-muted-foreground py-4">
-                Loading menu...
-              </div>
-            ) : filteredMenuItems.length === 0 ? (
-              <div className="col-span-2 text-center text-sm text-muted-foreground py-4">
-                No items match your filters.
-              </div>
-            ) : (
-              filteredMenuItems.map((item) => (
-                <button
-                  key={item.id}
-                  type="button"
-                  onClick={() => handleAddItemClick(item)}
-                  disabled={addItemsMutation.isPending}
-                  className="text-left rounded-lg border p-3 hover:bg-muted transition disabled:opacity-50"
-                >
-                  <div className="font-medium truncate text-sm">{item.name}</div>
-                  {item.sku && (
-                    <div className="text-xs text-muted-foreground truncate mt-0.5">
-                      {item.sku}
-                    </div>
-                  )}
-                  <div className="mt-2 text-sm font-semibold">
-                    UGX {item.price.toLocaleString()}
-                  </div>
-                </button>
-              ))
-            )}
-          </div>
-        </Card>
+            </Card>
+          </>
+        )}
       </div>
 
       {/* Payment Modal */}

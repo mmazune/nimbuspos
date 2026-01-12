@@ -43,13 +43,14 @@ module.exports = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
-        // ChefCloud brand colors
-        chefcloud: {
+        // Nimbus Brand Colors
+        nimbus: {
           navy: '#00033D',
           blue: '#0033FF',
-          lavender: '#977DFF',
-          gray: '#EAEDF3',
+          violet: '#977DFF',
+          mist: '#EAEDF8',
           ink: '#030812',
+          white: '#FFFFFF',
         },
       },
       borderRadius: {

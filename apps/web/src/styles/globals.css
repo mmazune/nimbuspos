@@ -4,48 +4,114 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
+    --background: 234 37% 96%;
+    /* Nimbus Mist #EAEDF8 (234, 37%, 91% converted to HSL approx) -> Keeping HSL consistent with inputs */
+    /* Actually converting hex to hsl for accuracy:
+       #EAEDF8 -> hsl(227, 42%, 95%) 
+       #00033D -> hsl(235, 100%, 12%)
+       #0033FF -> hsl(228, 100%, 50%)
+       #977DFF -> hsl(252, 100%, 75%)
+       #030812 -> hsl(220, 71%, 4%)
+       #FFFFFF -> hsl(0, 0%, 100%)
+    */
+
+    --nimbus-navy: 235 100% 12%;
+    /* #00033D */
+    --nimbus-blue: 228 100% 50%;
+    /* #0033FF */
+    --nimbus-violet: 252 100% 75%;
+    /* #977DFF */
+    --nimbus-mist: 227 42% 95%;
+    /* #EAEDF8 */
+    --nimbus-ink: 220 71% 4%;
+    /* #030812 */
+
+    /* Light Theme Mapping */
+    --background: 227 42% 95%;
+    /* Nimbus Mist */
+    --foreground: 220 71% 4%;
+    /* Ink */
+
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 3.9%;
+    /* White */
+    --card-foreground: 220 71% 4%;
+    /* Ink */
+
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 3.9%;
-    --primary: 239 100% 25%; /* ChefCloud Navy #00033D */
-    --primary-foreground: 0 0% 98%;
-    --secondary: 240 4.8% 95.9%;
-    --secondary-foreground: 240 5.9% 10%;
-    --muted: 240 4.8% 95.9%;
-    --muted-foreground: 240 3.8% 46.1%;
-    --accent: 240 4.8% 95.9%;
-    --accent-foreground: 240 5.9% 10%;
+    /* White */
+    --popover-foreground: 220 71% 4%;
+    /* Ink */
+
+    --primary: 228 100% 50%;
+    /* Nimbus Blue */
+    --primary-foreground: 0 0% 100%;
+    /* White */
+
+    --secondary: 252 100% 75%;
+    /* Nimbus Violet */
+    --secondary-foreground: 235 100% 12%;
+    /* Navy on Violet */
+
+    --muted: 227 20% 90%;
+    /* Mist derivative for muted */
+    --muted-foreground: 220 20% 40%;
+    /* Lighter ink */
+
+    --accent: 252 100% 95%;
+    /* Very light violet for accents/hover */
+    --accent-foreground: 235 100% 12%;
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 5.9% 90%;
-    --input: 240 5.9% 90%;
-    --ring: 239 100% 50%; /* ChefCloud Blue #0033FF */
-    --radius: 0.5rem;
+
+    --border: 220 15% 85%;
+    /* Subtle grey-blue */
+    --input: 220 15% 85%;
+    --ring: 228 100% 50%;
+    /* Nimbus Blue */
+
+    --radius: 0.75rem;
+    /* 12px */
   }
 
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 239 100% 50%; /* ChefCloud Blue #0033FF */
-    --primary-foreground: 240 5.9% 10%;
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
-    --accent: 240 3.7% 15.9%;
-    --accent-foreground: 0 0% 98%;
+    /* Dark Theme Mapping */
+    --background: 235 100% 12%;
+    /* Nimbus Navy */
+    /* Option: could use Ink #030812 as background, but guideline says "NIMBUS-900 (#00033D) or INK-950 (#030812)" */
+
+    --foreground: 0 0% 100%;
+    /* White */
+
+    --card: 235 80% 16%;
+    /* Slightly lighter Navy for depth */
+    --card-foreground: 0 0% 100%;
+
+    --popover: 235 80% 16%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 228 100% 50%;
+    /* Nimbus Blue */
+    --primary-foreground: 0 0% 100%;
+    /* White */
+
+    --secondary: 252 100% 75%;
+    /* Nimbus Violet */
+    --secondary-foreground: 235 100% 12%;
+
+    --muted: 235 50% 25%;
+    --muted-foreground: 227 20% 70%;
+
+    --accent: 235 50% 25%;
+    --accent-foreground: 0 0% 100%;
+
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 262 83% 58%; /* ChefCloud Lavender #977DFF */
+
+    --border: 235 50% 25%;
+    --input: 235 50% 25%;
+    --ring: 228 100% 50%;
+    /* Nimbus Blue */
   }
 }
 
@@ -53,6 +119,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

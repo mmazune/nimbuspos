@@ -44,15 +44,15 @@ function getPostLoginRoute(
     }
     // Explicit redirect not accessible, fall through to default
   }
-  
+
   // Get default route with validation and fallback
   const result = getDefaultRouteForRole(jobRole);
-  
+
   // Prevent loop: if already on default route, don't redirect
   if (result.route === currentPath) {
     return currentPath;
   }
-  
+
   return result.route;
 }
 
@@ -91,10 +91,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setError(null);
       const userData = await authLogin(credentials);
       setUser(userData);
-      
+
       // Small delay to ensure cookie is fully set before navigation
       await new Promise(resolve => setTimeout(resolve, 100));
-      
+
       // M8.1/Prompt5: Role-based post-login routing with validation
       const explicitRedirect = router.query.redirect as string;
       const targetRoute = getPostLoginRoute(
@@ -117,10 +117,10 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setError(null);
       const userData = await authPinLogin(credentials);
       setUser(userData);
-      
+
       // Small delay to ensure cookie is fully set before navigation
       await new Promise(resolve => setTimeout(resolve, 100));
-      
+
       // M8.1/Prompt5: Role-based post-login routing with validation
       const explicitRedirect = router.query.redirect as string;
       const targetRoute = getPostLoginRoute(

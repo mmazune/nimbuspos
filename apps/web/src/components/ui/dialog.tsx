@@ -9,7 +9,7 @@ interface DialogContextValue {
 
 const DialogContext = React.createContext<DialogContextValue>({
   open: false,
-  setOpen: () => {},
+  setOpen: () => { },
 });
 
 export interface DialogProps {
@@ -32,13 +32,13 @@ export function Dialog({ children, open: controlledOpen, onOpenChange }: DialogP
 
 export function DialogTrigger({ children, asChild }: { children: React.ReactNode; asChild?: boolean }) {
   const { setOpen } = React.useContext(DialogContext);
-  
+
   if (asChild && React.isValidElement(children)) {
     return React.cloneElement(children as React.ReactElement<{ onClick?: () => void }>, {
       onClick: () => setOpen(true),
     });
   }
-  
+
   return (
     <button type="button" onClick={() => setOpen(true)}>
       {children}
@@ -48,17 +48,17 @@ export function DialogTrigger({ children, asChild }: { children: React.ReactNode
 
 export function DialogContent({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   const { open, setOpen } = React.useContext(DialogContext);
-  
+
   if (!open) return null;
-  
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      <div 
-        className="fixed inset-0 bg-black/50" 
+      <div
+        className="fixed inset-0 bg-black/50"
         onClick={() => setOpen(false)}
         aria-hidden="true"
       />
-      <div className={`relative z-50 bg-white rounded-lg shadow-lg p-6 max-w-lg w-full mx-4 ${className}`}>
+      <div className={`relative z-50 bg-white dark:bg-nimbus-navy rounded-xl shadow-lg p-6 max-w-lg w-full mx-4 border border-nimbus-navy/10 dark:border-white/10 ${className}`}>
         {children}
       </div>
     </div>
@@ -83,7 +83,7 @@ export function DialogDescription({ children, className = '' }: { children: Reac
 
 export function DialogClose({ children, className = '' }: { children: React.ReactNode; className?: string }) {
   const { setOpen } = React.useContext(DialogContext);
-  
+
   return (
     <button
       type="button"
