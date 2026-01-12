@@ -116,38 +116,3 @@ export const LOC_CAFE_VM_MAIN_ID = '00000000-0000-4000-8000-000000002001';
 export const LOC_CAFE_AM_MAIN_ID = '00000000-0000-4000-8000-000000002002';
 export const LOC_CAFE_ARM_MAIN_ID = '00000000-0000-4000-8000-000000002003';
 export const LOC_CAFE_MOM_MAIN_ID = '00000000-0000-4000-8000-000000002004';
-
-// ===== Deterministic Date Anchor =====
-// All seeded dates should be relative to this anchor to ensure consistency
-// This date ensures data spans UI default ranges (7/30/90 days)
-// Format: 2025-12-23T12:00:00Z (approximately 90 days ago from typical seed time)
-export const SEED_DATE_ANCHOR = new Date('2025-12-23T12:00:00Z');
-
-// ===== User Branch Assignment Mapping =====
-// Maps user emails to specific branches
-// L5 owners are org-scoped (should NOT be in this map or mapped to empty string)
-// All other users MUST be mapped to a valid branch ID
-export const USER_BRANCH_MAP: Record<string, string> = {
-  // Tapas (single branch - all non-L5 users get main branch)
-  // Note: owner@tapas.demo.local is L5, so not mapped (gets null branchId)
-  'manager@tapas.demo.local': BRANCH_TAPAS_MAIN_ID,
-  'accountant@tapas.demo.local': BRANCH_TAPAS_MAIN_ID,
-  'procurement@tapas.demo.local': BRANCH_TAPAS_MAIN_ID,
-  'stock@tapas.demo.local': BRANCH_TAPAS_MAIN_ID,
-  'supervisor@tapas.demo.local': BRANCH_TAPAS_MAIN_ID,
-  'cashier@tapas.demo.local': BRANCH_TAPAS_MAIN_ID,
-  'waiter@tapas.demo.local': BRANCH_TAPAS_MAIN_ID,
-  'chef@tapas.demo.local': BRANCH_TAPAS_MAIN_ID,
-  'bartender@tapas.demo.local': BRANCH_TAPAS_MAIN_ID,
-  'eventmgr@tapas.demo.local': BRANCH_TAPAS_MAIN_ID,
-  
-  // Cafesserie (multi-branch) - distribute users across branches
-  // Note: owner@cafesserie.demo.local is L5, so not mapped (gets null branchId)
-  'manager@cafesserie.demo.local': BRANCH_CAFE_VILLAGE_MALL_ID, // Primary branch
-  'accountant@cafesserie.demo.local': BRANCH_CAFE_VILLAGE_MALL_ID, // Primary branch
-  'procurement@cafesserie.demo.local': BRANCH_CAFE_VILLAGE_MALL_ID, // Primary branch
-  'supervisor@cafesserie.demo.local': BRANCH_CAFE_ACACIA_MALL_ID, // Second branch
-  'cashier@cafesserie.demo.local': BRANCH_CAFE_ARENA_MALL_ID, // Third branch
-  'waiter@cafesserie.demo.local': BRANCH_CAFE_VILLAGE_MALL_ID, // Primary branch
-  'chef@cafesserie.demo.local': BRANCH_CAFE_MOMBASA_ID, // Fourth branch
-};

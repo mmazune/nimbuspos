@@ -17,6 +17,7 @@ import { Badge } from '@/components/ui/badge';
 import { CreditCard, Banknote, CheckCircle, AlertCircle, Loader2, ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { definePageMeta } from '@/lib/pageMeta';
+import { authenticatedFetch, API_BASE_URL } from '@/lib/api';
 
 /** Phase I2: Page metadata for action catalog */
 export const pageMeta = definePageMeta({
@@ -38,8 +39,6 @@ export const pageMeta = definePageMeta({
   allowedRoles: ['OWNER', 'MANAGER', 'SUPERVISOR', 'CASHIER', 'WAITER', 'BARTENDER'],
   parent: '/pos',
 });
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
 
 interface OrderDetail {
   id: string;
@@ -93,9 +92,7 @@ export default function CheckoutPage() {
   const { data: order, isLoading: orderLoading, error: orderError } = useQuery<OrderDetail>({
     queryKey: ['pos-order', orderId],
     queryFn: async () => {
-      const res = await fetch(`${API_URL}/pos/orders/${orderId}`, {
-        credentials: 'include',
-      });
+      const res = await authenticatedFetch(`${API_BASE_URL}/pos/orders/${orderId}`);
       if (!res.ok) throw new Error('Failed to fetch order');
       return res.json();
     },
@@ -111,11 +108,9 @@ export default function CheckoutPage() {
       cardToken?: string;
     }) => {
       const idempotencyKey = generateIdempotencyKey(`checkout-${orderId}-${method}`);
-      const res = await fetch(`${API_URL}/pos/orders/${orderId}/payments`, {
+      const res = await authenticatedFetch(`${API_BASE_URL}/pos/orders/${orderId}/payments`, {
         method: 'POST',
-        credentials: 'include',
         headers: {
-          'Content-Type': 'application/json',
           'x-idempotency-key': idempotencyKey,
         },
         body: JSON.stringify({ 
@@ -147,9 +142,8 @@ export default function CheckoutPage() {
   // Capture payment mutation (for card)
   const capturePayment = useMutation({
     mutationFn: async (paymentId: string) => {
-      const res = await fetch(`${API_URL}/pos/payments/${paymentId}/capture`, {
+      const res = await authenticatedFetch(`${API_BASE_URL}/pos/payments/${paymentId}/capture`, {
         method: 'POST',
-        credentials: 'include',
       });
       if (!res.ok) {
         const err = await res.json();
@@ -170,9 +164,8 @@ export default function CheckoutPage() {
   // Issue receipt mutation
   const issueReceipt = useMutation({
     mutationFn: async () => {
-      const res = await fetch(`${API_URL}/pos/orders/${orderId}/receipt`, {
+      const res = await authenticatedFetch(`${API_BASE_URL}/pos/orders/${orderId}/receipt`, {
         method: 'POST',
-        credentials: 'include',
       });
       if (!res.ok) {
         const err = await res.json();

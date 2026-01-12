@@ -21,8 +21,6 @@ import {
   TAPAS_DEMO_USERS,
   CAFESSERIE_DEMO_USERS,
   DEMO_PASSWORD,
-  USER_BRANCH_MAP,
-  SEED_DATE_ANCHOR,
 } from './constants';
 import { seedWorkforce } from './seedWorkforce';
 
@@ -70,78 +68,16 @@ async function cleanupOldDemoData(prisma: PrismaClient): Promise<void> {
   });
   const branchIds = branches.map((b) => b.id);
 
-  // Delete in dependency order to avoid FK constraint violations
-  // Start with leaf nodes (most dependent) and work up to parents
-  
-  // Delete orders and related data first (V2.1.1 - open orders exist now)
+  // Delete orders first (V2.1.1 - open orders exist now)
   if (branchIds.length > 0) {
-    // Delete payments (references orders)
-    await prisma.payment.deleteMany({
-      where: { order: { branchId: { in: branchIds } } },
-    });
-    // Delete order items (references orders)
     await prisma.orderItem.deleteMany({
       where: { order: { branchId: { in: branchIds } } },
     });
-    // Delete orders
     await prisma.order.deleteMany({
       where: { branchId: { in: branchIds } },
     });
-    console.log(`    ✅ Deleted orders, order items, and payments for demo branches`);
+    console.log(`    ✅ Deleted orders for demo branches`);
   }
-  
-  // Delete journal entries and lines (references accounts, branches)
-  if (branchIds.length > 0) {
-    await prisma.journalLine.deleteMany({
-      where: { entry: { branchId: { in: branchIds } } },
-    });
-    await prisma.journalEntry.deleteMany({
-      where: { branchId: { in: branchIds } },
-    });
-    console.log(`    ✅ Deleted journal entries`);
-  }
-  
-  // Delete reservations (references tables, branches)
-  if (branchIds.length > 0) {
-    await prisma.reservation.deleteMany({
-      where: { branchId: { in: branchIds } },
-    });
-    console.log(`    ✅ Deleted reservations`);
-  }
-  
-  // Delete time entries (references users, branches)
-  await prisma.timeEntry.deleteMany({
-    where: { orgId: { in: orgIds } },
-  });
-  console.log(`    ✅ Deleted time entries`);
-  
-  // Delete employees (references users, branches)
-  await prisma.employee.deleteMany({
-    where: { orgId: { in: orgIds } },
-  });
-  console.log(`    ✅ Deleted employees`);
-  
-  // Delete feedback (references branches)
-  if (branchIds.length > 0) {
-    await prisma.feedback.deleteMany({
-      where: { branchId: { in: branchIds } },
-    });
-    console.log(`    ✅ Deleted feedback`);
-  }
-  
-  // Delete service providers (references branches)
-  if (branchIds.length > 0) {
-    await prisma.serviceProvider.deleteMany({
-      where: { branchId: { in: branchIds } },
-    });
-    console.log(`    ✅ Deleted service providers`);
-  }
-  
-  // Delete suppliers (org-scoped)
-  await prisma.supplier.deleteMany({
-    where: { orgId: { in: orgIds } },
-  });
-  console.log(`    ✅ Deleted suppliers`);
 
   // Delete employee profiles before users (foreign key)
   await prisma.employeeProfile.deleteMany({
@@ -305,17 +241,14 @@ async function seedOrg(
     console.log(`    ✅ Branch: ${branch.name}`);
   }
 
-  // Get all branches for this org for user assignment
-  const allBranches = await prisma.branch.findMany({
+  // Get first branch for user assignment
+  const firstBranch = await prisma.branch.findFirst({
     where: { orgId: org.id },
-    orderBy: { name: 'asc' },
   });
 
-  if (allBranches.length === 0) {
+  if (!firstBranch) {
     throw new Error(`No branches found for org ${org.id}`);
   }
-
-  const firstBranch = allBranches[0];
 
   // Hash password once for all users
   const passwordHash = await hashPassword(DEMO_PASSWORD);
@@ -323,31 +256,6 @@ async function seedOrg(
   // Create users
   for (const userDef of users) {
     const pinHash = userDef.pin ? await hashPassword(userDef.pin) : null;
-
-    // Determine branchId for this user:
-    // 1. L5 owners are org-scoped (branchId = null)
-    // 2. Check USER_BRANCH_MAP for explicit assignment
-    // 3. Otherwise use first branch as default
-    let userBranchId: string | null = null;
-    if (userDef.roleLevel === 'L5') {
-      // L5 owners are org-scoped - can access all branches
-      userBranchId = null;
-    } else {
-      const mappedBranchId = USER_BRANCH_MAP[userDef.email];
-      if (mappedBranchId) {
-        // Explicit mapping found - validate it exists
-        const mappedBranch = allBranches.find(b => b.id === mappedBranchId);
-        if (mappedBranch) {
-          userBranchId = mappedBranchId;
-        } else {
-          console.warn(`  ⚠️  Mapped branch ${mappedBranchId} not found for ${userDef.email}, using first branch`);
-          userBranchId = firstBranch.id;
-        }
-      } else {
-        // No explicit mapping - use first branch
-        userBranchId = firstBranch.id;
-      }
-    }
 
     const user = await prisma.user.upsert({
       where: { email: userDef.email },
@@ -359,7 +267,7 @@ async function seedOrg(
         roleLevel: userDef.roleLevel as any,
         jobRole: userDef.jobRole as any, // M8.1: Populate jobRole for role-specific UX
         orgId: org.id,
-        branchId: userBranchId,
+        branchId: firstBranch.id,
         isActive: true,
       },
       create: {
@@ -371,12 +279,11 @@ async function seedOrg(
         roleLevel: userDef.roleLevel as any,
         jobRole: userDef.jobRole as any, // M8.1: Populate jobRole for role-specific UX
         orgId: org.id,
-        branchId: userBranchId,
+        branchId: firstBranch.id,
         isActive: true,
       },
     });
-    const branchInfo = userBranchId ? `branch=${allBranches.find(b => b.id === userBranchId)?.name || userBranchId}` : 'org-scoped';
-    console.log(`    ✅ User: ${user.email} (${user.roleLevel}/${user.jobRole || 'no jobRole'}, ${branchInfo})`);
+    console.log(`    ✅ User: ${user.email} (${user.roleLevel}/${user.jobRole || 'no jobRole'})`);
   }
 
   // Seed badges for MSR authentication
@@ -549,10 +456,9 @@ async function seedChartOfAccounts(prisma: PrismaClient, orgId: string): Promise
 async function seedFiscalPeriods(prisma: PrismaClient, orgId: string): Promise<void> {
   console.log(`    📅 Seeding Fiscal Periods...`);
 
-  // Use deterministic anchor date instead of current date
-  const anchor = SEED_DATE_ANCHOR;
-  const currentYear = anchor.getFullYear();
-  const currentQuarter = Math.floor(anchor.getMonth() / 3) + 1;
+  const now = new Date();
+  const currentYear = now.getFullYear();
+  const currentQuarter = Math.floor(now.getMonth() / 3) + 1;
 
   // Previous quarter (LOCKED)
   const prevQ = currentQuarter === 1 ? 4 : currentQuarter - 1;
@@ -592,7 +498,7 @@ async function seedFiscalPeriods(prisma: PrismaClient, orgId: string): Promise<v
         startsAt: p.startsAt,
         endsAt: p.endsAt,
         status: p.status,
-        lockedAt: p.status === 'LOCKED' ? SEED_DATE_ANCHOR : null,
+        lockedAt: p.status === 'LOCKED' ? new Date() : null,
       },
     });
   }
@@ -633,27 +539,26 @@ async function seedVendorsAndBills(prisma: PrismaClient, orgId: string): Promise
   console.log(`    ✅ ${vendorData.length} vendors created`);
 
   // Create 14 vendor bills (mix of statuses including PARTIALLY_PAID for M8.4)
-  // Use deterministic anchor date - bills span last 90 days for UI ranges
-  const anchor = SEED_DATE_ANCHOR;
+  const now = new Date();
   const billData = [
-    { num: 'VB-001', vendorIdx: 0, days: -85, amount: 850000, status: 'PAID', paidAmount: 1003000 }, // total with tax
-    { num: 'VB-002', vendorIdx: 1, days: -75, amount: 1200000, status: 'PAID', paidAmount: 1416000 },
-    { num: 'VB-003', vendorIdx: 2, days: -65, amount: 350000, status: 'OPEN', paidAmount: 0 },
-    { num: 'VB-004', vendorIdx: 3, days: -55, amount: 2500000, status: 'OPEN', paidAmount: 0 },
-    { num: 'VB-005', vendorIdx: 4, days: -45, amount: 4500000, status: 'PARTIALLY_PAID', paidAmount: 3000000 }, // M8.4: partial
-    { num: 'VB-006', vendorIdx: 0, days: -35, amount: 750000, status: 'PARTIALLY_PAID', paidAmount: 500000 }, // M8.4: partial
-    { num: 'VB-007', vendorIdx: 1, days: -25, amount: 980000, status: 'DRAFT', paidAmount: 0 },
-    { num: 'VB-008', vendorIdx: 2, days: -15, amount: 425000, status: 'DRAFT', paidAmount: 0 },
-    { num: 'VB-009', vendorIdx: 3, days: -7, amount: 1850000, status: 'DRAFT', paidAmount: 0 },
-    { num: 'VB-010', vendorIdx: 4, days: -3, amount: 650000, status: 'DRAFT', paidAmount: 0 },
-    { num: 'VB-011', vendorIdx: 0, days: -89, amount: 920000, status: 'VOID', paidAmount: 0 },
+    { num: 'VB-001', vendorIdx: 0, days: -45, amount: 850000, status: 'PAID', paidAmount: 1003000 }, // total with tax
+    { num: 'VB-002', vendorIdx: 1, days: -40, amount: 1200000, status: 'PAID', paidAmount: 1416000 },
+    { num: 'VB-003', vendorIdx: 2, days: -35, amount: 350000, status: 'OPEN', paidAmount: 0 },
+    { num: 'VB-004', vendorIdx: 3, days: -30, amount: 2500000, status: 'OPEN', paidAmount: 0 },
+    { num: 'VB-005', vendorIdx: 4, days: -25, amount: 4500000, status: 'PARTIALLY_PAID', paidAmount: 3000000 }, // M8.4: partial
+    { num: 'VB-006', vendorIdx: 0, days: -20, amount: 750000, status: 'PARTIALLY_PAID', paidAmount: 500000 }, // M8.4: partial
+    { num: 'VB-007', vendorIdx: 1, days: -15, amount: 980000, status: 'DRAFT', paidAmount: 0 },
+    { num: 'VB-008', vendorIdx: 2, days: -10, amount: 425000, status: 'DRAFT', paidAmount: 0 },
+    { num: 'VB-009', vendorIdx: 3, days: -5, amount: 1850000, status: 'DRAFT', paidAmount: 0 },
+    { num: 'VB-010', vendorIdx: 4, days: -2, amount: 650000, status: 'DRAFT', paidAmount: 0 },
+    { num: 'VB-011', vendorIdx: 0, days: -50, amount: 920000, status: 'VOID', paidAmount: 0 },
     { num: 'VB-012', vendorIdx: 1, days: -1, amount: 1100000, status: 'DRAFT', paidAmount: 0 },
     { num: 'VB-013', vendorIdx: 2, days: -18, amount: 680000, status: 'PARTIALLY_PAID', paidAmount: 400000 }, // M8.4
-    { num: 'VB-014', vendorIdx: 3, days: -50, amount: 1500000, status: 'OPEN', paidAmount: 0 },
+    { num: 'VB-014', vendorIdx: 3, days: -22, amount: 1500000, status: 'OPEN', paidAmount: 0 },
   ];
 
   for (const bill of billData) {
-    const billDate = new Date(anchor.getTime() + bill.days * 24 * 60 * 60 * 1000);
+    const billDate = new Date(now.getTime() + bill.days * 24 * 60 * 60 * 1000);
     const dueDate = new Date(billDate.getTime() + 30 * 24 * 60 * 60 * 1000);
     const vendor = vendorData[bill.vendorIdx];
     const billId = `00000000-0000-4000-8000-vb${orgId.slice(-4)}${bill.num.slice(-3)}`;
@@ -713,27 +618,26 @@ async function seedCustomersAndInvoices(prisma: PrismaClient, orgId: string): Pr
   console.log(`    ✅ ${customerData.length} customers created`);
 
   // Create 14 customer invoices (mix of statuses including PARTIALLY_PAID for M8.4)
-  // Use deterministic anchor date - invoices span last 90 days for UI ranges
-  const anchor = SEED_DATE_ANCHOR;
+  const now = new Date();
   const invoiceData = [
-    { num: 'INV-001', customerIdx: 0, days: -85, amount: 1500000, status: 'PAID', paidAmount: 1770000 }, // total with tax
-    { num: 'INV-002', customerIdx: 1, days: -75, amount: 3200000, status: 'PAID', paidAmount: 3776000 },
-    { num: 'INV-003', customerIdx: 2, days: -65, amount: 2800000, status: 'PARTIALLY_PAID', paidAmount: 2000000 }, // M8.4
-    { num: 'INV-004', customerIdx: 3, days: -55, amount: 1200000, status: 'OPEN', paidAmount: 0 },
-    { num: 'INV-005', customerIdx: 4, days: -45, amount: 5500000, status: 'PARTIALLY_PAID', paidAmount: 4000000 }, // M8.4
-    { num: 'INV-006', customerIdx: 0, days: -35, amount: 980000, status: 'OPEN', paidAmount: 0 },
-    { num: 'INV-007', customerIdx: 1, days: -25, amount: 2100000, status: 'DRAFT', paidAmount: 0 },
+    { num: 'INV-001', customerIdx: 0, days: -50, amount: 1500000, status: 'PAID', paidAmount: 1770000 }, // total with tax
+    { num: 'INV-002', customerIdx: 1, days: -45, amount: 3200000, status: 'PAID', paidAmount: 3776000 },
+    { num: 'INV-003', customerIdx: 2, days: -40, amount: 2800000, status: 'PARTIALLY_PAID', paidAmount: 2000000 }, // M8.4
+    { num: 'INV-004', customerIdx: 3, days: -35, amount: 1200000, status: 'OPEN', paidAmount: 0 },
+    { num: 'INV-005', customerIdx: 4, days: -30, amount: 5500000, status: 'PARTIALLY_PAID', paidAmount: 4000000 }, // M8.4
+    { num: 'INV-006', customerIdx: 0, days: -25, amount: 980000, status: 'OPEN', paidAmount: 0 },
+    { num: 'INV-007', customerIdx: 1, days: -20, amount: 2100000, status: 'DRAFT', paidAmount: 0 },
     { num: 'INV-008', customerIdx: 2, days: -15, amount: 1750000, status: 'DRAFT', paidAmount: 0 },
-    { num: 'INV-009', customerIdx: 3, days: -7, amount: 890000, status: 'DRAFT', paidAmount: 0 },
-    { num: 'INV-010', customerIdx: 4, days: -3, amount: 4200000, status: 'DRAFT', paidAmount: 0 },
-    { num: 'INV-011', customerIdx: 0, days: -89, amount: 1650000, status: 'VOID', paidAmount: 0 },
-    { num: 'INV-012', customerIdx: 1, days: -1, amount: 2950000, status: 'DRAFT', paidAmount: 0 },
-    { num: 'INV-013', customerIdx: 2, days: -18, amount: 1400000, status: 'PARTIALLY_PAID', paidAmount: 800000 }, // M8.4
-    { num: 'INV-014', customerIdx: 3, days: -50, amount: 2200000, status: 'OPEN', paidAmount: 0 },
+    { num: 'INV-009', customerIdx: 3, days: -10, amount: 890000, status: 'DRAFT', paidAmount: 0 },
+    { num: 'INV-010', customerIdx: 4, days: -5, amount: 4200000, status: 'DRAFT', paidAmount: 0 },
+    { num: 'INV-011', customerIdx: 0, days: -55, amount: 1650000, status: 'VOID', paidAmount: 0 },
+    { num: 'INV-012', customerIdx: 1, days: -2, amount: 2950000, status: 'DRAFT', paidAmount: 0 },
+    { num: 'INV-013', customerIdx: 2, days: -28, amount: 1400000, status: 'PARTIALLY_PAID', paidAmount: 800000 }, // M8.4
+    { num: 'INV-014', customerIdx: 3, days: -32, amount: 2200000, status: 'OPEN', paidAmount: 0 },
   ];
 
   for (const inv of invoiceData) {
-    const invoiceDate = new Date(anchor.getTime() + inv.days * 24 * 60 * 60 * 1000);
+    const invoiceDate = new Date(now.getTime() + inv.days * 24 * 60 * 60 * 1000);
     const dueDate = new Date(invoiceDate.getTime() + 30 * 24 * 60 * 60 * 1000);
     const customer = customerData[inv.customerIdx];
     const invoiceId = `00000000-0000-4000-8000-ci${orgId.slice(-4)}${inv.num.slice(-3)}`;
@@ -758,63 +662,6 @@ async function seedCustomersAndInvoices(prisma: PrismaClient, orgId: string): Pr
     });
   }
   console.log(`    ✅ ${invoiceData.length} customer invoices created`);
-}
-
-/**
- * Post-seed verification: ensures all demo users have valid branch assignments
- * Fails fast with clear errors if any issues are found
- */
-async function verifyPostSeed(prisma: PrismaClient): Promise<void> {
-  console.log('\n🔍 Running post-seed verification...');
-  
-  const errors: string[] = [];
-  
-  // Verify both orgs
-  for (const orgDef of [TAPAS_ORG, CAFESSERIE_ORG]) {
-    // Get all branches for this org
-    const branches = await prisma.branch.findMany({
-      where: { orgId: orgDef.id },
-      select: { id: true },
-    });
-    const branchIds = new Set(branches.map(b => b.id));
-    
-    // Get all users for this org
-    const users = await prisma.user.findMany({
-      where: { orgId: orgDef.id },
-      select: { id: true, email: true, roleLevel: true, branchId: true },
-    });
-    
-    // Check 1: No branch-scoped user has null branchId
-    const usersWithNullBranchId: string[] = [];
-    for (const user of users) {
-      if (user.roleLevel !== 'L5' && !user.branchId) {
-        usersWithNullBranchId.push(`${user.email} (ID: ${user.id}, role: ${user.roleLevel})`);
-      }
-    }
-    if (usersWithNullBranchId.length > 0) {
-      errors.push(`${orgDef.name}: ${usersWithNullBranchId.length} branch-scoped user(s) have NULL branchId: ${usersWithNullBranchId.join(', ')}`);
-    }
-    
-    // Check 2: All branchIds belong to the user's org
-    const usersWithInvalidBranchId: string[] = [];
-    for (const user of users) {
-      if (user.branchId && !branchIds.has(user.branchId)) {
-        usersWithInvalidBranchId.push(`${user.email} (ID: ${user.id}, branchId: ${user.branchId})`);
-      }
-    }
-    if (usersWithInvalidBranchId.length > 0) {
-      errors.push(`${orgDef.name}: ${usersWithInvalidBranchId.length} user(s) have branchId that doesn't belong to org: ${usersWithInvalidBranchId.join(', ')}`);
-    }
-  }
-  
-  // Fail fast if any errors found
-  if (errors.length > 0) {
-    console.error('\n❌ Post-seed verification FAILED:');
-    errors.forEach(error => console.error(`  - ${error}`));
-    throw new Error(`Post-seed verification failed: ${errors.length} error(s) found`);
-  }
-  
-  console.log('✅ Post-seed verification passed');
 }
 
 /**
@@ -851,9 +698,6 @@ export async function seedDemo(prisma: PrismaClient): Promise<void> {
 
   // Seed workforce data (M10.2)
   await seedWorkforce(prisma);
-
-  // Post-seed verification: ensure all users have valid branch assignments
-  await verifyPostSeed(prisma);
 
   console.log('\n✅ Demo organizations seeded successfully!');
 }

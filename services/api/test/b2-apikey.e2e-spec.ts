@@ -1,8 +1,8 @@
+import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import request from 'supertest';
 import { AppModule } from '../src/app.module';
 import { PrismaService } from '../src/prisma.service';
-import { createE2EApp } from './helpers/e2e-bootstrap';
 import { cleanup } from './helpers/cleanup';
 
 describe('API Key Security (E2E)', () => {
@@ -15,8 +15,13 @@ describe('API Key Security (E2E)', () => {
   let apiKey: string;
 
   beforeAll(async () => {
-    // Use createE2EApp for proper shutdown hooks (prevents open handle timeouts)
-    app = await createE2EApp({ imports: [AppModule] });
+    const moduleFixture: TestingModule = await Test.createTestingModule({
+      imports: [AppModule],
+    }).compile();
+
+    app = moduleFixture.createNestApplication();
+    await app.init();
+
     prisma = app.get<PrismaService>(PrismaService);
 
     // Create test org and user
@@ -76,25 +81,17 @@ describe('API Key Security (E2E)', () => {
   });
 
   afterAll(async () => {
-    // Data cleanup - only if orgId was created
-    if (orgId && prisma) {
-      try {
-        await prisma.spoutDevice.deleteMany({ where: { orgId } });
-        await prisma.apiKey.deleteMany({ where: { orgId } });
-        await prisma.session.deleteMany({ where: { orgId } });
-        await prisma.user.deleteMany({ where: { orgId } });
-        await prisma.branch.deleteMany({ where: { orgId } });
-        await prisma.org.deleteMany({ where: { id: orgId } });
-      } catch (e) {
-        // Ignore cleanup errors - test data may not exist
-      }
-    }
+    // Data cleanup
+    await prisma.spoutDevice.deleteMany({ where: { orgId } });
+    await prisma.apiKey.deleteMany({ where: { orgId } });
+    await prisma.session.deleteMany({});
+    await prisma.user.deleteMany({ where: { orgId } });
+    await prisma.branch.deleteMany({ where: { orgId } });
+    await prisma.org.deleteMany({ where: { id: orgId } });
     
-    // App cleanup with timeout
-    const cleanupPromise = cleanup(app);
-    const timeoutPromise = new Promise<void>((resolve) => setTimeout(resolve, 10000));
-    await Promise.race([cleanupPromise, timeoutPromise]);
-  }, 15000); // Timeout with fallback
+    // App cleanup
+    await cleanup(app);
+  });
 
   describe('POST /ops/apikeys', () => {
     it('should create API key as L5 user', async () => {

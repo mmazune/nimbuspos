@@ -1,81 +1,32 @@
 # Nimbus POS / ChefCloud — Session State
 
-date: 2026-01-11
+date: 2026-01-10
 repo: mmazune/nimbuspos
 branch: main
-
-# ══════════════════════════════════════════════════════════════════════════════
-# CURRENT OBJECTIVE (exactly ONE)
-# ══════════════════════════════════════════════════════════════════════════════
-
-objective: "M2.5 — Stabilize API E2E Gate Suite (0 timeouts)"
+head_sha: c2465ffaf229da050eaa84111b0ab78b0676cd7d
+objective: "Phase I1-I2 — Role Navigation Trees + Page Action Catalog"
 
 definition_of_done:
-  - pnpm -C services/api test:e2e:gate → PASS with 0 timeouts
-  - PASS twice consecutively (two sequential runs)
-  - No reduction in meaningful coverage
-  - docs/completions/M2_5_COMPLETION_REPORT.md created
-  - docs/SESSION_STATE.yml updated to mark M2.5 complete
-
-# ══════════════════════════════════════════════════════════════════════════════
-# COMPLETED MILESTONES
-# ══════════════════════════════════════════════════════════════════════════════
-
-completed:
-  - milestone: M1
-    name: "Backend Verification"
-    date: 2026-01-11
-    report: "docs/completions/M1_COMPLETION_REPORT.md"
-    status: "✅ PASS"
-
-  - milestone: M2
-    name: "Backend E2E + Seeds + Verification Scripts"
-    date: 2026-01-11
-    report: "docs/completions/M2_COMPLETION_REPORT.md"
-    status: "✅ PASS (with documented pre-existing issues)"
-    gates_passed:
-      - Infra Up → PASS (Postgres + Redis healthy)
-      - API Lint → PASS
-      - API Build → PASS
-      - API E2E (gate) → PARTIAL (3 timeout files, pre-existing)
-      - Seed Determinism → PASS
-      - verify-m4-completion → PASS (via Docker)
-      - verify-deployment → PASS (manual)
-    pre_existing_issues:
-      - PRE-015: E2E Full Suite Failures (588/1396 tests fail)
-
-# ══════════════════════════════════════════════════════════════════════════════
-# M2.5 SPECIFIC
-# ══════════════════════════════════════════════════════════════════════════════
-
-m25_timeout_files:
-  - test/b2-apikey.e2e-spec.ts
-  - test/e26-kpis.e2e-spec.ts
-  - test/sse-security.e2e-spec.ts
-
-# ══════════════════════════════════════════════════════════════════════════════
-# STANDARD GATES (always required)
-# ══════════════════════════════════════════════════════════════════════════════
+  - Role nav tree generator created (scripts/analysis/generate-role-nav-trees.mjs)
+  - Page action catalog generator created (scripts/analysis/generate-page-action-catalog.mjs)
+  - All 11 roles mapped with nav groups and landing routes
+  - 8+ high-traffic pages annotated with pageMeta
+  - Reports generated (reports/navigation/)
+  - Docs generated (docs/navigation/)
+  - npm scripts added (nav:generate, actions:generate)
+  - AI_INDEX.json updated with navigation pointers
+  - lint+build pass
+  - Atomic commit with proof
 
 gates_required:
+  - pnpm verify:no-wip-imports
   - pnpm -C services/api lint
-  - pnpm -C services/api build
   - pnpm -C apps/web lint
+  - pnpm -C services/api build
   - pnpm -C apps/web build
 
-# ══════════════════════════════════════════════════════════════════════════════
-# NOTES
-# ══════════════════════════════════════════════════════════════════════════════
-
 notes: |
-  M2.5 objective: Fix the 3 timeout files in E2E gate runner.
-  
-  Timeout files to fix:
-  1. b2-apikey.e2e-spec.ts
-  2. e26-kpis.e2e-spec.ts
-  3. sse-security.e2e-spec.ts
-  
-  Approach:
-  - Identify timeout root causes (unawaited promises, open handles, missing cleanup)
-  - Apply minimal fixes that preserve test intent
-  - Prove stability with 2 consecutive passes
+  Phase I is navigation/action documentation.
+  I1 = Role navigation trees for all 11 roles
+  I2 = Page action catalog with pageMeta convention
+  Generators produce deterministic outputs for stable diffs.

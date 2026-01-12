@@ -20,11 +20,11 @@ import { apiClient } from '@/lib/api';
 import { formatCurrency, formatCurrencyCompact, calculatePercentageChange } from '@/lib/utils';
 import { useAuth } from '@/contexts/AuthContext';
 import { useActiveBranch } from '@/contexts/ActiveBranchContext';
-import {
-  DollarSign,
-  ShoppingCart,
-  TrendingUp,
-  Package,
+import { 
+  DollarSign, 
+  ShoppingCart, 
+  TrendingUp, 
+  Package, 
   Percent,
   AlertTriangle,
   CreditCard,
@@ -77,7 +77,7 @@ export default function DashboardPage() {
   const router = useRouter();
   const { user } = useAuth();
   const { activeBranchId, branches, isMultiBranch, setActiveBranchId } = useActiveBranch();
-
+  
   // Date range state
   const [datePreset, setDatePreset] = useState<DateRangePreset>(isMultiBranch ? '30d' : '7d');
   const [from, setFrom] = useState<string>(formatDateForInput(getDaysAgo(isMultiBranch ? 30 : 7)));
@@ -87,42 +87,42 @@ export default function DashboardPage() {
   const [compareBranchIds, setCompareBranchIds] = useState<string[]>([]);
 
   // Get available presets based on org type
-  const datePresets: DateRangePreset[] = isMultiBranch
-    ? ['7d', '30d', '90d', '180d']
+  const datePresets: DateRangePreset[] = isMultiBranch 
+    ? ['7d', '30d', '90d', '180d'] 
     : ['7d', '30d', '90d'];
 
   // Fetch data using hooks - V2.1.1: Use activeBranchId from context
-  const { data: kpis, isLoading: kpisLoading, refetch: refetchKpis } = useDashboardKPIs({
-    from, to, branchId: activeBranchId
+  const { data: kpis, isLoading: kpisLoading, refetch: refetchKpis } = useDashboardKPIs({ 
+    from, to, branchId: activeBranchId 
   });
-
-  const { data: revenueData, isLoading: revenueLoading } = useRevenueTimeseries({
-    from, to, branchId: activeBranchId
+  
+  const { data: revenueData, isLoading: revenueLoading } = useRevenueTimeseries({ 
+    from, to, branchId: activeBranchId 
   });
-
-  const { data: topItems, isLoading: topItemsLoading } = useTopItems({
-    from, to, branchId: activeBranchId, limit: 10
+  
+  const { data: topItems, isLoading: topItemsLoading } = useTopItems({ 
+    from, to, branchId: activeBranchId, limit: 10 
   });
-
-  const { data: categoryMix, isLoading: categoryLoading } = useCategoryMix({
-    from, to, branchId: activeBranchId
+  
+  const { data: categoryMix, isLoading: categoryLoading } = useCategoryMix({ 
+    from, to, branchId: activeBranchId 
   });
-
-  const { data: paymentMix, isLoading: paymentLoading } = usePaymentMix({
-    from, to, branchId: activeBranchId
+  
+  const { data: paymentMix, isLoading: paymentLoading } = usePaymentMix({ 
+    from, to, branchId: activeBranchId 
   });
-
-  const { data: peakHours, isLoading: peakHoursLoading } = usePeakHours({
-    from, to, branchId: activeBranchId
+  
+  const { data: peakHours, isLoading: peakHoursLoading } = usePeakHours({ 
+    from, to, branchId: activeBranchId 
   });
-
+  
   const { data: alerts, isLoading: alertsLoading } = useDashboardAlerts(activeBranchId);
-
+  
   // Multi-branch specific data
-  const { data: branchRankings, isLoading: branchRankingsLoading } = useBranchRankings({
-    from, to
+  const { data: branchRankings, isLoading: branchRankingsLoading } = useBranchRankings({ 
+    from, to 
   });
-
+  
   const { data: branchTimeseries } = useBranchTimeseries({
     from, to, branchIds: compareBranchIds,
   });
@@ -130,7 +130,7 @@ export default function DashboardPage() {
   // Compute insights
   const insights = useMemo(() => {
     const results: Array<{ type: 'positive' | 'negative' | 'neutral' | 'info'; message: string }> = [];
-
+    
     if (kpis?.previousPeriod) {
       const revenueChange = calculatePercentageChange(kpis.revenue.week, kpis.previousPeriod.revenue);
       if (revenueChange > 5) {
@@ -139,11 +139,11 @@ export default function DashboardPage() {
         results.push({ type: 'negative', message: `Revenue down ${Math.abs(revenueChange).toFixed(1)}% vs last period` });
       }
     }
-
+    
     if (kpis?.lowStockCount && kpis.lowStockCount > 0) {
       results.push({ type: 'info', message: `${kpis.lowStockCount} items need restocking` });
     }
-
+    
     return results;
   }, [kpis]);
 
@@ -157,8 +157,8 @@ export default function DashboardPage() {
   }, [branches, compareBranchIds.length]);
 
   // Calculate delta for KPIs
-  const revenueDelta = kpis?.previousPeriod
-    ? calculatePercentageChange(kpis.revenue.week, kpis.previousPeriod.revenue)
+  const revenueDelta = kpis?.previousPeriod 
+    ? calculatePercentageChange(kpis.revenue.week, kpis.previousPeriod.revenue) 
     : undefined;
   const ordersDelta = kpis?.previousPeriod
     ? calculatePercentageChange(kpis.orders.week, kpis.previousPeriod.orders)
@@ -170,9 +170,9 @@ export default function DashboardPage() {
   };
 
   // Last updated timestamp
-  const lastUpdated = new Date().toLocaleTimeString('en-US', {
-    hour: '2-digit',
-    minute: '2-digit'
+  const lastUpdated = new Date().toLocaleTimeString('en-US', { 
+    hour: '2-digit', 
+    minute: '2-digit' 
   });
 
   return (
@@ -187,7 +187,7 @@ export default function DashboardPage() {
           <div className="flex items-center gap-2 text-sm text-muted-foreground" data-testid="dashboard-timestamp">
             <Clock className="h-4 w-4" />
             Updated {lastUpdated}
-            <button
+            <button 
               onClick={handleRefresh}
               className="ml-2 p-1 hover:bg-muted rounded-md transition-colors"
               title="Refresh data"
@@ -210,7 +210,7 @@ export default function DashboardPage() {
             presets={datePresets}
             activePreset={datePreset}
           />
-
+          
           {/* V2.1.1: Use ActiveBranchContext for branch selection */}
           {isMultiBranch && branches.length > 0 && (
             <BranchSelector
@@ -233,8 +233,8 @@ export default function DashboardPage() {
         )}
       </div>
 
-      {/* KPI Cards Row - M7.2B: Responsive grid */}
-      <div className="grid gap-4 mb-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-4">
+      {/* KPI Cards Row - M7.2B: Responsive auto-fit grid prevents clipping on all screen sizes */}
+      <div className="grid gap-4 mb-6" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))' }}>
         <KPICard
           label="Revenue"
           value={kpis ? formatCurrencyCompact(kpis.revenue.week) : '—'}
@@ -371,7 +371,7 @@ export default function DashboardPage() {
               Branch Performance
             </h2>
           </div>
-
+          
           <div className="grid gap-6 lg:grid-cols-2 mb-6">
             <BranchLeaderboard
               branches={branchRankings || []}
@@ -383,10 +383,10 @@ export default function DashboardPage() {
               }}
             />
             <BranchCompareChart
-              branches={branchTimeseries || branches.map(b => ({
-                id: b.id,
-                name: b.name,
-                data: []
+              branches={branchTimeseries || branches.map(b => ({ 
+                id: b.id, 
+                name: b.name, 
+                data: [] 
               }))}
               selectedBranchIds={compareBranchIds}
               onSelectionChange={setCompareBranchIds}

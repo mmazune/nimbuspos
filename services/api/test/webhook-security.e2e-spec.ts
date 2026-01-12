@@ -1,10 +1,10 @@
-import { INestApplication } from '@nestjs/common';
+import { Test, TestingModule } from '@nestjs/testing';
+import { INestApplication, ValidationPipe } from '@nestjs/common';
 import request from 'supertest';
 import { createHmac } from 'crypto';
 import { AppModule } from '../src/app.module';
 import { json } from 'express';
 import { cleanup } from './helpers/cleanup';
-import { createE2EApp } from './helpers/e2e-bootstrap';
 
 describe('Webhook Security E2E (E24)', () => {
   let app: INestApplication;
@@ -15,24 +15,31 @@ describe('Webhook Security E2E (E24)', () => {
     process.env.REDIS_HOST = 'localhost';
     process.env.REDIS_PORT = '6379';
 
-    // Use createE2EApp with middleware configuration for raw body capture
-    // This must be configured before init (via beforeInit callback)
-    app = await createE2EApp(
-      { imports: [AppModule] },
-      {
-        beforeInit: (app) => {
-          // Configure body parser with raw body capture (same as main.ts)
-          app.use(
-            json({
-              limit: '256kb',
-              verify: (req: any, _res, buf: Buffer) => {
-                req.rawBody = buf.toString('utf8');
-              },
-            }),
-          );
+    const moduleFixture: TestingModule = await Test.createTestingModule({
+      imports: [AppModule],
+    }).compile();
+
+    app = moduleFixture.createNestApplication();
+
+    // Configure body parser with raw body capture (same as main.ts)
+    app.use(
+      json({
+        limit: '256kb',
+        verify: (req: any, _res, buf: Buffer) => {
+          req.rawBody = buf.toString('utf8');
         },
-      },
+      }),
     );
+
+    app.useGlobalPipes(
+      new ValidationPipe({
+        whitelist: true,
+        forbidNonWhitelisted: true,
+        transform: true,
+      }),
+    );
+
+    await app.init();
   });
 
   afterAll(async () => {

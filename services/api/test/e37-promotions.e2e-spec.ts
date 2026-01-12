@@ -142,8 +142,6 @@ describe('E37 - Promotions & Pricing Engine (e2e)', () => {
       const order = await prisma.order.create({
         data: {
           branchId,
-          userId,
-          orderNumber: `ORD-${Date.now()}`,
           status: 'OPEN',
           metadata: {},
         },

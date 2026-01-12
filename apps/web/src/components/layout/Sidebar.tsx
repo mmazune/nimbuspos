@@ -29,10 +29,10 @@ export function Sidebar() {
   // Phase I3: Record sidebar links for navmap capture
   useEffect(() => {
     if (!isNavmapEnabled() || !user?.jobRole) return;
-
+    
     // Start capture for this role
     startCapture(user.jobRole);
-
+    
     // Record all sidebar links
     navGroups.forEach(group => {
       recordSidebarLinks(
@@ -51,22 +51,21 @@ export function Sidebar() {
   const roleHome = capabilities.defaultRoute;
 
   return (
-    <aside className="fixed left-0 top-0 z-40 h-screen w-[280px] border-r bg-nimbus-mist dark:bg-nimbus-navy flex flex-col transition-all duration-300">
+    <aside className="fixed left-0 top-0 z-40 h-screen w-64 border-r bg-card flex flex-col">
       {/* Logo/Brand - M8.6: Clicking logo navigates to role home */}
-      <div className="flex h-[64px] items-center border-b border-nimbus-navy/10 dark:border-white/10 px-6 bg-white dark:bg-nimbus-navy">
+      <div className="flex h-16 items-center border-b px-6">
         <Link
           href={roleHome}
-          className="flex items-center space-x-3 hover:opacity-80 transition-opacity"
+          className="flex items-center space-x-2 hover:opacity-80 transition-opacity"
           aria-label="Go to workspace home"
           data-testid="sidebar-logo"
         >
-          {/* Logo adherence: Navy/White only, no gradients */}
-          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-nimbus-navy text-white font-bold">
-            N
+          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-chefcloud-blue to-chefcloud-lavender text-white font-bold">
+            CC
           </div>
           <div>
-            <h1 className="text-lg font-bold text-nimbus-navy dark:text-white tracking-tight">Nimbus POS</h1>
-            <p className="text-[11px] uppercase tracking-wider text-nimbus-ink/60 dark:text-white/60 font-semibold">
+            <h1 className="text-lg font-bold text-foreground">ChefCloud</h1>
+            <p className="text-xs text-muted-foreground">
               {user?.jobRole ? user.jobRole.replace('_', ' ') : 'Backoffice'}
             </p>
           </div>
@@ -77,27 +76,25 @@ export function Sidebar() {
       <nav aria-label="Primary" className="flex-1 overflow-y-auto p-4 space-y-6">
         {navGroups.map((group) => (
           <div key={group.title}>
-            <h2 className="text-xs font-bold text-nimbus-navy/50 dark:text-white/50 uppercase tracking-wider mb-3 px-3">
+            <h2 className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-2 px-3">
               {group.title}
             </h2>
             <div className="space-y-1">
               {group.items.map((item) => {
                 const Icon = item.icon;
-                const active = isActive(item.href);
                 return (
                   <Link
                     key={item.href}
                     href={item.href}
-                    aria-current={active ? 'page' : undefined}
+                    aria-current={isActive(item.href) ? 'page' : undefined}
                     className={cn(
-                      'flex items-center space-x-3 rounded-xl px-4 py-3 text-sm font-medium transition-all duration-200',
-                      'min-h-[44px]', // Touch target size
-                      active
-                        ? 'bg-nimbus-blue text-white shadow-md shadow-nimbus-blue/20'
-                        : 'text-nimbus-ink dark:text-gray-300 hover:bg-nimbus-blue/10 hover:text-nimbus-blue dark:hover:bg-white/10 dark:hover:text-white'
+                      'flex items-center space-x-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
+                      isActive(item.href)
+                        ? 'bg-primary text-primary-foreground'
+                        : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground'
                     )}
                   >
-                    <Icon className={cn("h-5 w-5", active ? "text-white" : "text-current")} />
+                    <Icon className="h-5 w-5" />
                     <span>{item.label}</span>
                   </Link>
                 );
@@ -108,9 +105,9 @@ export function Sidebar() {
       </nav>
 
       {/* Footer Info */}
-      <div className="border-t border-nimbus-navy/10 dark:border-white/10 p-6 bg-nimbus-mist/50 dark:bg-nimbus-navy/50">
-        <div className="text-xs text-nimbus-ink/50 dark:text-white/50 font-medium">
-          <p>v0.1.0 (Nimbus)</p>
+      <div className="border-t p-4">
+        <div className="text-xs text-muted-foreground">
+          <p>v0.1.0 (M8.1)</p>
           <p className="mt-1">© 2025 ChefCloud</p>
         </div>
       </div>

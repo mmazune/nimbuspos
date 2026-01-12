@@ -28,7 +28,6 @@ import { FranchiseVarianceCard } from '@/components/analytics/franchise/Franchis
 import { FranchiseForecastCard } from '@/components/analytics/franchise/FranchiseForecastCard';
 import { FranchiseMultiMonthChart } from '@/components/analytics/franchise/FranchiseMultiMonthChart';
 import { useAuth } from '@/contexts/AuthContext';
-import { useActiveBranch } from '@/contexts/ActiveBranchContext';
 import { apiClient } from '@/lib/api';
 import { definePageMeta } from '@/lib/pageMeta';
 
@@ -151,10 +150,9 @@ export default function AnalyticsPage() {
   // View toggle state
   const [view, setView] = useState<'overview' | 'branches' | 'financial' | 'risk' | 'franchise'>('overview');
 
-  // Get branch context for consistent data filtering
+  // Get user context for branchId
   const { user } = useAuth();
-  const { activeBranchId } = useActiveBranch();
-  const branchId = activeBranchId || user?.branch?.id;
+  const branchId = user?.branch?.id;
 
   // Date range state
   const [from, setFrom] = useState<string>(formatDateForInput(getDaysAgo(30)));

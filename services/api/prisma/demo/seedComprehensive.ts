@@ -22,7 +22,6 @@ import {
   BRANCH_CAFE_ACACIA_MALL_ID,
   BRANCH_CAFE_ARENA_MALL_ID,
   BRANCH_CAFE_MOMBASA_ID,
-  SEED_DATE_ANCHOR,
 } from './constants';
 import { seedTapasInventory } from './tapas/inventory';
 import { seedCafesserieInventory } from './cafesserie/inventory';
@@ -195,8 +194,7 @@ function createDateTime(baseDate: Date, timeStr: string): Date {
 async function seedReservations(prisma: PrismaClient): Promise<void> {
   console.log('\n📅 Seeding Reservations...');
 
-  // Use deterministic anchor date - reservations span past/future relative to anchor
-  const anchor = SEED_DATE_ANCHOR;
+  const now = new Date();
   
   // Helper to create reservation data
   const createReservation = (
@@ -218,11 +216,11 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
     tableId,
     name,
     phone,
-      partySize,
-      startAt: createDateTime(baseDate, startTime),
-      endAt: createDateTime(baseDate, endTime),
-      status,
-    });
+    partySize,
+    startAt: createDateTime(baseDate, startTime),
+    endAt: createDateTime(baseDate, endTime),
+    status,
+  });
 
   const reservationData = [
     // Tapas - Past reservations (seated/completed)
@@ -234,7 +232,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'John Smith',
       '+256700111222',
       2,
-      new Date(anchor.getTime() - 3 * 24 * 60 * 60 * 1000), // 3 days ago
+      new Date(now.getTime() - 3 * 24 * 60 * 60 * 1000), // 3 days ago
       '19:00',
       '21:00',
       'SEATED',
@@ -247,7 +245,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'Mary Johnson',
       '+256700222333',
       4,
-      new Date(anchor.getTime() - 2 * 24 * 60 * 60 * 1000), // 2 days ago
+      new Date(now.getTime() - 2 * 24 * 60 * 60 * 1000), // 2 days ago
       '18:30',
       '20:30',
       'SEATED',
@@ -260,7 +258,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'David Williams',
       '+256700333444',
       6,
-      new Date(anchor.getTime() - 1 * 24 * 60 * 60 * 1000), // Yesterday
+      new Date(now.getTime() - 1 * 24 * 60 * 60 * 1000), // Yesterday
       '20:00',
       '22:00',
       'CANCELLED',
@@ -274,7 +272,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'Sarah Brown',
       '+256700444555',
       2,
-      anchor,
+      now,
       '12:00',
       '14:00',
       'CONFIRMED',
@@ -287,7 +285,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'Michael Davis',
       '+256700555666',
       4,
-      anchor,
+      now,
       '19:00',
       '21:00',
       'CONFIRMED',
@@ -301,7 +299,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'Emily Wilson',
       '+256700666777',
       8,
-      new Date(anchor.getTime() + 2 * 24 * 60 * 60 * 1000), // 2 days from now
+      new Date(now.getTime() + 2 * 24 * 60 * 60 * 1000), // 2 days from now
       '18:00',
       '21:00',
       'HELD',
@@ -314,7 +312,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'Robert Taylor',
       '+256700777888',
       2,
-      new Date(anchor.getTime() + 5 * 24 * 60 * 60 * 1000), // 5 days from now
+      new Date(now.getTime() + 5 * 24 * 60 * 60 * 1000), // 5 days from now
       '20:00',
       '22:00',
       'CONFIRMED',
@@ -328,7 +326,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'Alice Thompson',
       '+256700888999',
       2,
-      anchor,
+      now,
       '10:00',
       '11:30',
       'CONFIRMED',
@@ -341,7 +339,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'James Anderson',
       '+256700999000',
       4,
-      new Date(anchor.getTime() + 1 * 24 * 60 * 60 * 1000), // Tomorrow
+      new Date(now.getTime() + 1 * 24 * 60 * 60 * 1000), // Tomorrow
       '15:00',
       '17:00',
       'HELD',
@@ -659,13 +657,12 @@ async function seedOrdersForBranch(
     return 0;
   }
 
-  // Use deterministic anchor date - orders span last N days from anchor
-  const anchor = SEED_DATE_ANCHOR;
+  const now = new Date();
   let orderCount = 0;
 
   // Create orders for the last N days
   for (let daysAgo = daysBack; daysAgo >= 0; daysAgo--) {
-    const orderDate = new Date(anchor.getTime() - daysAgo * 24 * 60 * 60 * 1000);
+    const orderDate = new Date(now.getTime() - daysAgo * 24 * 60 * 60 * 1000);
     
     // Vary orders by weekday
     const dayOfWeek = orderDate.getDay();
@@ -808,8 +805,7 @@ async function seedOpenOrders(
     return 0;
   }
 
-  // Use deterministic anchor date - open orders from last 24 hours relative to anchor
-  const anchor = SEED_DATE_ANCHOR;
+  const now = new Date();
   let createdCount = 0;
   
   // Statuses for active orders (not CLOSED)
@@ -820,7 +816,7 @@ async function seedOpenOrders(
     // Random time within last 24 hours
     const hoursAgo = Math.floor(Math.random() * 24);
     const minutesAgo = Math.floor(Math.random() * 60);
-    const orderDate = new Date(anchor.getTime() - (hoursAgo * 60 * 60 * 1000) - (minutesAgo * 60 * 1000));
+    const orderDate = new Date(now.getTime() - (hoursAgo * 60 * 60 * 1000) - (minutesAgo * 60 * 1000));
     
     const orderId = `00000000-0000-4000-8000-0000${orderIdPrefix}${String(i).padStart(4, '0')}`;
     
@@ -904,53 +900,48 @@ async function seedOpenOrders(
 async function seedCompletedOrders(prisma: PrismaClient): Promise<void> {
   console.log('\n💰 Seeding Completed Orders with Payments...');
 
-  // Seed Tapas orders (span 90 days)
+  // Seed Tapas orders
   const tapasCount = await seedOrdersForBranch(prisma, {
     branchId: BRANCH_TAPAS_MAIN_ID,
     orgId: ORG_TAPAS_ID,
     tableIds: TABLE_IDS.TAPAS,
     orderIdPrefix: '0005',
-    daysBack: 90,
   });
   console.log(`  ✅ Tapas: Created ${tapasCount} completed orders`);
 
-  // Seed Cafesserie Village Mall orders (span 90 days)
+  // Seed Cafesserie Village Mall orders
   const villageCount = await seedOrdersForBranch(prisma, {
     branchId: BRANCH_CAFE_VILLAGE_MALL_ID,
     orgId: ORG_CAFESSERIE_ID,
     tableIds: TABLE_IDS.CAFESSERIE_VILLAGE,
     orderIdPrefix: '1005',
-    daysBack: 90,
   });
   console.log(`  ✅ Village Mall: Created ${villageCount} completed orders`);
 
-  // Seed Cafesserie Acacia Mall orders (span 90 days)
+  // Seed Cafesserie Acacia Mall orders
   const acaciaCount = await seedOrdersForBranch(prisma, {
     branchId: BRANCH_CAFE_ACACIA_MALL_ID,
     orgId: ORG_CAFESSERIE_ID,
     tableIds: TABLE_IDS.CAFESSERIE_ACACIA,
     orderIdPrefix: '2005',
-    daysBack: 90,
   });
   console.log(`  ✅ Acacia Mall: Created ${acaciaCount} completed orders`);
 
-  // Seed Cafesserie Arena Mall orders (span 90 days)
+  // Seed Cafesserie Arena Mall orders
   const arenaCount = await seedOrdersForBranch(prisma, {
     branchId: BRANCH_CAFE_ARENA_MALL_ID,
     orgId: ORG_CAFESSERIE_ID,
     tableIds: TABLE_IDS.CAFESSERIE_ARENA,
     orderIdPrefix: '3005',
-    daysBack: 90,
   });
   console.log(`  ✅ Arena Mall: Created ${arenaCount} completed orders`);
 
-  // Seed Cafesserie Mombasa orders (span 90 days)
+  // Seed Cafesserie Mombasa orders
   const mombasaCount = await seedOrdersForBranch(prisma, {
     branchId: BRANCH_CAFE_MOMBASA_ID,
     orgId: ORG_CAFESSERIE_ID,
     tableIds: TABLE_IDS.CAFESSERIE_MOMBASA,
     orderIdPrefix: '4005',
-    daysBack: 90,
   });
   console.log(`  ✅ Mombasa: Created ${mombasaCount} completed orders`);
 
@@ -1074,8 +1065,7 @@ async function seedJournalEntries(prisma: PrismaClient): Promise<void> {
       continue;
     }
 
-    // Use deterministic anchor date - journal entries for last 30 days from anchor
-    const anchor = SEED_DATE_ANCHOR;
+    const now = new Date();
     let orgEntryCount = 0;
 
     for (const branch of org.branches) {
@@ -1083,7 +1073,7 @@ async function seedJournalEntries(prisma: PrismaClient): Promise<void> {
       
       // Create journal entries for last 30 days
       for (let daysAgo = 30; daysAgo >= 0; daysAgo--) {
-        const entryDate = new Date(anchor.getTime() - daysAgo * 24 * 60 * 60 * 1000);
+        const entryDate = new Date(now.getTime() - daysAgo * 24 * 60 * 60 * 1000);
         const dateStr = entryDate.toISOString().split('T')[0];
         
         // Daily sales entry with COGS
@@ -1281,8 +1271,8 @@ async function seedEmployees(prisma: PrismaClient): Promise<void> {
   let count = 0;
   for (const user of tapasUsers) {
     const employeeId = `00000000-0000-4000-8000-000000008${String(count).padStart(3, '0')}`;
-    const hiredAt = new Date(SEED_DATE_ANCHOR);
-    hiredAt.setMonth(hiredAt.getMonth() - (6 + Math.floor(Math.random() * 18))); // 6-24 months ago from anchor
+    const hiredAt = new Date();
+    hiredAt.setMonth(hiredAt.getMonth() - (6 + Math.floor(Math.random() * 18))); // 6-24 months ago
 
     await prisma.employee.upsert({
       where: { id: employeeId },
@@ -1317,8 +1307,8 @@ async function seedEmployees(prisma: PrismaClient): Promise<void> {
   for (const user of cafeUsers) {
     // Use different ID range for Cafesserie (9xxx instead of 8xxx)
     const employeeId = `00000000-0000-4000-8000-000000009${String(cafeCount).padStart(3, '0')}`;
-    const hiredAt = new Date(SEED_DATE_ANCHOR);
-    hiredAt.setMonth(hiredAt.getMonth() - (6 + Math.floor(Math.random() * 18))); // 6-24 months ago from anchor
+    const hiredAt = new Date();
+    hiredAt.setMonth(hiredAt.getMonth() - (6 + Math.floor(Math.random() * 18))); // 6-24 months ago
 
     await prisma.employee.upsert({
       where: { id: employeeId },
@@ -1368,8 +1358,7 @@ async function seedStaffAwards(prisma: PrismaClient): Promise<void> {
     return;
   }
 
-  // Use deterministic anchor date - awards for last 3 months from anchor
-  const anchor = SEED_DATE_ANCHOR;
+  const now = new Date();
   const categories: Array<'TOP_PERFORMER' | 'HIGHEST_SALES' | 'BEST_SERVICE' | 'MOST_RELIABLE'> = [
     'TOP_PERFORMER', 'HIGHEST_SALES', 'BEST_SERVICE', 'MOST_RELIABLE',
   ];
@@ -1378,8 +1367,8 @@ async function seedStaffAwards(prisma: PrismaClient): Promise<void> {
 
   // Create awards for the last 3 months
   for (let monthsAgo = 0; monthsAgo < 3; monthsAgo++) {
-    const periodStart = new Date(anchor.getFullYear(), anchor.getMonth() - monthsAgo, 1);
-    const periodEnd = new Date(anchor.getFullYear(), anchor.getMonth() - monthsAgo + 1, 0);
+    const periodStart = new Date(now.getFullYear(), now.getMonth() - monthsAgo, 1);
+    const periodEnd = new Date(now.getFullYear(), now.getMonth() - monthsAgo + 1, 0);
 
     // Pick a random employee for each category
     for (const category of categories) {
@@ -1421,8 +1410,7 @@ async function seedStaffAwards(prisma: PrismaClient): Promise<void> {
 async function seedFeedback(prisma: PrismaClient): Promise<void> {
   console.log('\n📝 Seeding Customer Feedback (NPS)...');
 
-  // Use deterministic anchor date - feedback over last 30 days from anchor
-  const anchor = SEED_DATE_ANCHOR;
+  const now = new Date();
   const channels: Array<'POS' | 'PORTAL' | 'QR' | 'EMAIL'> = ['POS', 'PORTAL', 'QR', 'EMAIL'];
   
   // NPS score distribution: 60% promoters (9-10), 25% passives (7-8), 15% detractors (0-6)
@@ -1467,7 +1455,7 @@ async function seedFeedback(prisma: PrismaClient): Promise<void> {
   // Create 200 feedback entries over the last 30 days
   for (let i = 0; i < 200; i++) {
     const daysAgo = Math.floor(Math.random() * 30);
-    const createdAt = new Date(anchor.getTime() - daysAgo * 24 * 60 * 60 * 1000);
+    const createdAt = new Date(now.getTime() - daysAgo * 24 * 60 * 60 * 1000);
     createdAt.setHours(10 + Math.floor(Math.random() * 10), Math.floor(Math.random() * 60));
 
     const score = getNpsScore();
@@ -1517,8 +1505,8 @@ async function seedEmployeeProfiles(prisma: PrismaClient): Promise<void> {
   for (const user of users) {
     if (!user.employeeProfile) {
       const employeeCode = `EMP${String(profileCount + 1).padStart(4, '0')}`;
-      const hireDate = new Date(SEED_DATE_ANCHOR);
-      hireDate.setMonth(hireDate.getMonth() - Math.floor(Math.random() * 24)); // Hired 0-24 months ago from anchor
+      const hireDate = new Date();
+      hireDate.setMonth(hireDate.getMonth() - Math.floor(Math.random() * 24)); // Hired 0-24 months ago
       
       const baseSalary = user.roleLevel === 'L4' ? 2500000 :
                         user.roleLevel === 'L3' ? 1800000 :
@@ -1564,13 +1552,12 @@ async function seedTimeEntries(prisma: PrismaClient): Promise<void> {
     return;
   }
 
-  // Use deterministic anchor date - time entries for last 14 days from anchor
-  const anchor = SEED_DATE_ANCHOR;
+  const now = new Date();
   let entryCount = 0;
 
   // Create time entries for the last 14 days
   for (let daysAgo = 14; daysAgo >= 0; daysAgo--) {
-    const workDate = new Date(anchor.getTime() - daysAgo * 24 * 60 * 60 * 1000);
+    const workDate = new Date(now.getTime() - daysAgo * 24 * 60 * 60 * 1000);
     const dayOfWeek = workDate.getDay();
     
     // Skip Sundays
@@ -1597,7 +1584,7 @@ async function seedTimeEntries(prisma: PrismaClient): Promise<void> {
           userId: employee.id,
           branchId: BRANCH_TAPAS_MAIN_ID,
           clockInAt: clockIn,
-          clockOutAt: daysAgo === 0 && clockOut > anchor ? null : clockOut, // Today might still be working
+          clockOutAt: daysAgo === 0 && clockOut > now ? null : clockOut, // Today might still be working
           method: 'MSR', // Magnetic Stripe Reader (badge swipe)
         },
       });
