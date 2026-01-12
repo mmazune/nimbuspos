@@ -28,8 +28,8 @@ import * as request from 'supertest';
 import { createE2ETestingModule } from '../helpers/module';
 import { cleanup } from '../helpers/cleanup';
 import { createOrgWithUsers, FactoryOrg } from './factory';
-import { PrismaService } from '@api/prisma/prisma.service';
-import { AppModule } from '@api/app.module';
+import { PrismaService } from '../../src/prisma.service';
+import { AppModule } from '../../src/app.module';
 import { Decimal } from '@prisma/client/runtime/library';
 
 describe('M11.7: Inventory Lots + Expiry + Traceability E2E', () => {
@@ -65,7 +65,7 @@ describe('M11.7: Inventory Lots + Expiry + Traceability E2E', () => {
     // Create base UOM
     const uom = await prisma.unitOfMeasure.create({
       data: {
-        organizationId: testOrg.orgId,
+        orgId: testOrg.orgId,
         code: 'EA',
         name: 'Each',
         conversionFactor: new Decimal(1),
@@ -76,7 +76,7 @@ describe('M11.7: Inventory Lots + Expiry + Traceability E2E', () => {
     // Create category
     const category = await prisma.inventoryCategory.create({
       data: {
-        organizationId: testOrg.orgId,
+        orgId: testOrg.orgId,
         code: 'CAT-LOTS',
         name: 'Lot Test Category',
       },
@@ -86,7 +86,7 @@ describe('M11.7: Inventory Lots + Expiry + Traceability E2E', () => {
     // Create test item
     const item = await prisma.inventoryItem.create({
       data: {
-        organizationId: testOrg.orgId,
+        orgId: testOrg.orgId,
         categoryId: category.id,
         sku: 'LOT-ITEM-001',
         name: 'Lot Test Item',
@@ -100,7 +100,7 @@ describe('M11.7: Inventory Lots + Expiry + Traceability E2E', () => {
     // Create test location
     const location = await prisma.inventoryLocation.create({
       data: {
-        organizationId: testOrg.orgId,
+        orgId: testOrg.orgId,
         branchId,
         code: 'LOC-LOTS',
         name: 'Lot Test Location',

@@ -18,8 +18,8 @@ import * as request from 'supertest';
 import { createE2ETestingModule } from '../helpers/module';
 import { cleanup } from '../helpers/cleanup';
 import { createOrgWithUsers, FactoryOrg } from './factory';
-import { PrismaService } from '@api/prisma/prisma.service';
-import { AppModule } from '@api/app.module';
+import { PrismaService } from '../../src/prisma.service';
+import { AppModule } from '../../src/app.module';
 import { Decimal } from '@prisma/client/runtime/library';
 
 describe('M11.4: Recipes/BOM + POS Depletion E2E', () => {

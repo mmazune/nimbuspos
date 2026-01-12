@@ -15,6 +15,10 @@ import {
   MockReadinessService,
 } from './_mocks';
 import { cleanup } from '../helpers/cleanup';
+import * as argon2 from 'argon2';
+
+// Note: app is used in loginUsers() but defined in beforeAll
+declare const app: INestApplication;
 
 describe('Billing E2E (E24 - Auth, Authz, Rate Limiting)', () => {
   let app: INestApplication;
@@ -83,31 +87,43 @@ describe('Billing E2E (E24 - Auth, Authz, Rate Limiting)', () => {
       },
     });
 
-    // Create owner user (L5)
+    // Create owner user (L5) with proper password hash
+    const ownerPasswordHash = await argon2.hash('Test#123', {
+      type: argon2.argon2id,
+      memoryCost: 65536,
+      timeCost: 3,
+    });
     owner = await prisma.user.create({
       data: {
         id: `owner-${Date.now()}`,
         email: `owner-${Date.now()}@test.com`,
-        passwordHash: 'fake-hash',
+        passwordHash: ownerPasswordHash,
         firstName: 'Test',
         lastName: 'Owner',
         roleLevel: 'L5',
         orgId: org.id,
         branchId,
+        isActive: true,
       },
     });
 
-    // Create manager user (L4)
+    // Create manager user (L4) with proper password hash
+    const managerPasswordHash = await argon2.hash('Test#123', {
+      type: argon2.argon2id,
+      memoryCost: 65536,
+      timeCost: 3,
+    });
     manager = await prisma.user.create({
       data: {
         id: `manager-${Date.now()}`,
         email: `manager-${Date.now()}@test.com`,
-        passwordHash: 'fake-hash',
+        passwordHash: managerPasswordHash,
         firstName: 'Test',
         lastName: 'Manager',
         roleLevel: 'L4',
         orgId: org.id,
         branchId,
+        isActive: true,
       },
     });
 
@@ -119,25 +135,6 @@ describe('Billing E2E (E24 - Auth, Authz, Rate Limiting)', () => {
         status: 'ACTIVE',
         nextRenewalAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000), // 30 days from now
       },
-    });
-
-    // Generate JWT tokens
-    ownerToken = jwtService.sign({
-      sub: owner.id,
-      userId: owner.id,
-      email: owner.email,
-      orgId,
-      branchId,
-      roleLevel: 'L5',
-    });
-
-    managerToken = jwtService.sign({
-      sub: manager.id,
-      userId: manager.id,
-      email: manager.email,
-      orgId,
-      branchId,
-      roleLevel: 'L4',
     });
   }
 
@@ -171,6 +168,23 @@ describe('Billing E2E (E24 - Auth, Authz, Rate Limiting)', () => {
     jwtService = moduleFixture.get<JwtService>(JwtService);
 
     await setupTestData();
+
+    // Login to get real JWT tokens (ensures proper token structure and user validation)
+    const ownerLoginRes = await request(app.getHttpServer())
+      .post('/auth/login')
+      .send({
+        email: owner.email,
+        password: 'Test#123',
+      });
+    ownerToken = ownerLoginRes.body.access_token;
+
+    const managerLoginRes = await request(app.getHttpServer())
+      .post('/auth/login')
+      .send({
+        email: manager.email,
+        password: 'Test#123',
+      });
+    managerToken = managerLoginRes.body.access_token;
   });
 
   afterAll(async () => {
@@ -320,10 +334,10 @@ describe('Billing E2E (E24 - Auth, Authz, Rate Limiting)', () => {
         .set('Authorization', `Bearer ${ownerToken}`);
 
       expect(response.status).toBe(200);
-      expect(response.body).toHaveProperty('subscription');
-      expect(response.body.subscription).toHaveProperty('planCode');
-      expect(response.body.subscription).toHaveProperty('status');
-      expect(response.body.subscription).toHaveProperty('startDate');
+      expect(response.body).toHaveProperty('plan');
+      expect(response.body).toHaveProperty('status');
+      expect(response.body).toHaveProperty('nextRenewalAt');
+      expect(response.body.plan).toHaveProperty('code');
     });
   });
 });

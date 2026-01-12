@@ -1,7 +1,71 @@
 # Pre-Existing Issues Log
 
-This is an **append-only** log of pre-existing issues discovered during milestone execution.  
-These issues were NOT introduced by the current work and are NOT blockers for the milestone.
+This is an **append-only** log of ALL issues discovered during milestone execution.  
+This log tracks both pre-existing issues (not caused by current work) and new issues (introduced by current work).
+
+---
+
+## Workflow Overview
+
+### When You Encounter an Issue
+
+1. **Log the Issue Immediately**
+   - Add a new entry to this log with the next sequential PRE-### ID
+   - Fill in all required fields (see Log Format below)
+   - Categorize the issue type (lint-error, test-error, build-error, etc.)
+   - Determine if the issue is pre-existing or newly introduced
+
+2. **Determine Issue Relationship**
+   - **Pre-existing (unrelated)**: Issue existed before current work, not caused by your changes, not related to current objective
+   - **Pre-existing (related)**: Issue existed before but is directly related to current work
+   - **New/Introduced**: Issue caused by current work (must fix immediately)
+
+3. **Fix or Defer Decision**
+   - **New/Introduced issues**: MUST fix immediately (blockers)
+   - **Pre-existing but related**: Fix if directly connected to current work
+   - **Pre-existing and unrelated**: Log only, defer to appropriate milestone/owner
+   - **Never silently suppress**: All issues must be logged or fixed
+
+4. **Document in Task Summary**
+   - Every task completion report MUST include:
+     - List of all PRE-### IDs encountered
+     - Issue type (pre-existing/new)
+     - Status (OPEN/RESOLVED)
+     - Fix details if resolved
+
+### When You Fix an Issue
+
+1. **Update the Log Entry**
+   - Change Status from "OPEN" to "✅ RESOLVED"
+   - Add "Resolved Date": YYYY-MM-DD
+   - Document "Resolution" with:
+     - What was fixed
+     - How it was fixed
+     - Verification command and results
+     - Related commit SHA if applicable
+
+2. **Update Resolution History**
+   - Add entry to the "Resolution History" section at the bottom
+   - Include date, issue ID(s), summary, fix details, verification
+
+3. **Update Statistics**
+   - If statistics table exists, update counts (Open/Resolved/Total)
+
+### Prohibited Patterns
+
+**Never:**
+- ❌ Silently suppress errors or failures
+- ❌ Ignore issues because they're "pre-existing"
+- ❌ Skip logging because an issue seems minor
+- ❌ Fix issues without updating the log
+- ❌ Mark issues as resolved without verification
+
+**Always:**
+- ✅ Log every issue discovered
+- ✅ Document in task completion summary
+- ✅ Update log when issues are resolved
+- ✅ Provide verification evidence for fixes
+- ✅ Defer unrelated issues to appropriate owners
 
 ---
 
@@ -570,4 +634,56 @@ Tests:       84 failed, 875 passed, 959 total (~91% pass rate)
 
 ---
 
-*Last Updated: 2026-01-10 (PRE-014 added)*
+### PRE-015: E2E Full Test Suite — Significant Pre-Existing Failures
+
+| Field | Value |
+|-------|-------|
+| **ID** | PRE-015 |
+| **Category** | test-failure |
+| **First Seen** | 2026-01-11 |
+| **Command** | `pnpm -C services/api test:e2e` |
+| **Impact** | Medium — 588 test failures in 72 suites |
+| **Suggested Owner** | E2E test infrastructure / tech debt |
+| **Status** | OPEN |
+
+**Summary**: Running the full E2E test suite (`pnpm -C services/api test:e2e`) produces significant failures:
+
+| Metric | Value |
+|--------|-------|
+| **Test Suites** | 72 failed, 44 passed, 116 total |
+| **Tests** | 588 failed, 3 skipped, 805 passed, 1396 total |
+| **Duration** | ~5 minutes 11 seconds (311.138s) |
+
+**Top Failure Patterns**:
+
+1. **Timeout Exceeded (5000ms)** — Many tests hit the default Jest timeout
+   - `pos-m134-payments.e2e-spec.ts`: All CASH/CARD payment tests timeout
+   - `role-api-contracts.e2e-spec.ts`: Multiple endpoint tests timeout
+
+2. **Module Import Errors** — Helper files not found
+   - `Cannot find module './helpers/auth-helper'` in multiple inventory tests
+   - Missing shared test utilities causing cascade failures
+
+3. **Status Code Mismatches** — Role API contract tests expecting 2xx, receiving 403/404
+   - `/pos/menu`, `/pos/open`, `/workforce/swaps` returning 403/404 instead of 200
+
+4. **AppModule Access Error**
+   - `app-bisect.e2e-spec.ts`: "AppModule.imports not accessible"
+
+**Passing Test Suites (44)**: Core tests that pass include auth, billing, health checks, SSE, and most inventory slice tests.
+
+**Notes**: 
+- The repo has specialized test runners (`test:e2e:gate`, `test:e2e:strict`, `test:e2e:release`) that run curated subsets of tests designed to pass
+- Full suite (`test:e2e`) includes experimental/WIP tests not yet production-ready
+- This is expected behavior per the repo's test infrastructure design
+
+**Workaround**: Use scoped test runners:
+```bash
+pnpm -C services/api test:e2e:gate        # Curated passing subset
+pnpm -C services/api test:e2e:strict      # Strict mode tests
+pnpm -C services/api test:e2e:release     # Release gate tests
+```
+
+---
+
+*Last Updated: 2026-01-11 (PRE-015 added)*

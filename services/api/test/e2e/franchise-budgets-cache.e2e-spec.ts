@@ -63,7 +63,6 @@ describe('E22.C - Franchise Budgets Caching (e2e)', () => {
       data: {
         name: 'E22C Test Org',
         slug: `e22c-test-${Date.now()}`,
-        tier: 'BASIC',
       },
     });
     testOrgId = org.id;
@@ -73,8 +72,7 @@ describe('E22.C - Franchise Budgets Caching (e2e)', () => {
       data: {
         orgId: testOrgId,
         name: 'E22C Test Branch',
-        status: 'ACTIVE',
-        isHeadquarters: false,
+        address: 'Test Address',
       },
     });
     testBranchId = branch.id;
@@ -95,7 +93,7 @@ describe('E22.C - Franchise Budgets Caching (e2e)', () => {
 
     // Create test budget
     const period = '2025-11';
-    await prisma.budget.create({
+    await prisma.branchBudget.create({
       data: {
         orgId: testOrgId,
         branchId: testBranchId,

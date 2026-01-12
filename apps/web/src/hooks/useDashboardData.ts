@@ -135,6 +135,19 @@ export function useDashboardKPIs(params: UseDashboardDataParams) {
         } catch (finErr) {
           // Financial data not available - continue with defaults
         }
+
+        // Fetch low stock count for consistency with dashboard alerts
+        let lowStockCount = 0;
+        if (params.branchId) {
+          try {
+            const lowStockRes = await apiClient.get('/inventory/low-stock/alerts', {
+              params: { branchId: params.branchId },
+            });
+            lowStockCount = (lowStockRes.data || []).length;
+          } catch (lowStockErr) {
+            // Low stock data not available - keep count at 0
+          }
+        }
         
         return {
           revenue: { 
@@ -160,7 +173,7 @@ export function useDashboardKPIs(params: UseDashboardDataParams) {
             week: financialData?.pnl?.grossMarginPct || 65, 
             month: financialData?.pnl?.grossMarginPct || 65 
           },
-          lowStockCount: 0,
+          lowStockCount,
           wastageValue: { week: 0, month: 0 },
           payablesDue: { week: 0, month: 0 },
         };

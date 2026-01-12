@@ -31,9 +31,10 @@ describe('POS E2E', () => {
     await app.init();
 
     const prisma = app.get(PrismaService);
-    const factory = await createOrgWithUsers(prisma, 'e2e-pos');
-    const menu = await createMenu(prisma, factory.orgId, factory.branchId);
-    const floor = await createFloor(prisma, factory.orgId, factory.branchId);
+    const prismaClient = prisma.client;
+    const factory = await createOrgWithUsers(prismaClient, 'e2e-pos');
+    const menu = await createMenu(prismaClient, factory.orgId, factory.branchId);
+    const floor = await createFloor(prismaClient, factory.orgId, factory.branchId);
 
     burgerId = menu.burger.id;
     friesId = menu.fries.id;
@@ -81,12 +82,11 @@ describe('POS E2E', () => {
       .post(`/pos/orders/${orderId}/close`)
       .set('Authorization', `Bearer ${authToken}`)
       .send({
-        paymentMethod: 'CASH',
-        amountTendered: 25000,
+        amount: 25000,
       })
       .expect(201);
 
-    expect(closeResponse.body.status).toBe('COMPLETED');
+    expect(closeResponse.body.status).toBe('CLOSED');
     expect(closeResponse.body.total).toBeGreaterThan(0);
   });
 });

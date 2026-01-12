@@ -3,28 +3,24 @@
     "totalSuites": 57,
     "passedSuites": 13,
     "failedSuites": 44,
-    "totalTests": 422,
-    "passedTests": 72,
-    "failedTests": 349
+    "totalTests": 329,
+    "passedTests": 70,
+    "failedTests": 259
   },
   "categories": {
-    "Other": 19,
-    "Auth/Seed Expectation Mismatches": 14,
-    "Prisma Validation Errors": 8,
-    "Response Shape Mismatches": 2,
-    "Module Import Errors": 1
+    "DI/Module Resolution Errors": 12,
+    "Other": 11,
+    "Module Import Errors": 11,
+    "Prisma Validation Errors": 4,
+    "Missing Routes/Endpoints": 4,
+    "Auth/Login Failures": 2
   },
-  "topCategory": "Other",
+  "topCategory": "DI/Module Resolution Errors",
   "topFailingFiles": [
     {
       "file": "test/e22-franchise.e2e-spec.ts",
       "category": "Prisma Validation Errors",
       "failedTests": 34
-    },
-    {
-      "file": "test/m2-shifts-scheduling.e2e-spec.ts",
-      "category": "Prisma Validation Errors",
-      "failedTests": 22
     },
     {
       "file": "test/webhook-security.e2e-spec.ts",
@@ -37,54 +33,59 @@
       "failedTests": 16
     },
     {
-      "file": "test/e23-roles-access.e2e-spec.ts",
-      "category": "Auth/Seed Expectation Mismatches",
-      "failedTests": 15
-    },
-    {
-      "file": "test/e2e/inventory.slice.e2e-spec.ts",
-      "category": "Auth/Seed Expectation Mismatches",
-      "failedTests": 14
-    },
-    {
       "file": "test/e2e/payments.slice.e2e-spec.ts",
-      "category": "Auth/Seed Expectation Mismatches",
+      "category": "DI/Module Resolution Errors",
       "failedTests": 14
     },
     {
       "file": "test/e2e/orders.slice.e2e-spec.ts",
-      "category": "Auth/Seed Expectation Mismatches",
+      "category": "DI/Module Resolution Errors",
+      "failedTests": 14
+    },
+    {
+      "file": "test/e2e/inventory.slice.e2e-spec.ts",
+      "category": "DI/Module Resolution Errors",
       "failedTests": 14
     },
     {
       "file": "test/e2e/reservations.slice.e2e-spec.ts",
-      "category": "Auth/Seed Expectation Mismatches",
+      "category": "DI/Module Resolution Errors",
       "failedTests": 13
     },
     {
       "file": "test/sse-security.e2e-spec.ts",
-      "category": "Auth/Seed Expectation Mismatches",
+      "category": "Other",
       "failedTests": 12
     },
     {
-      "file": "test/billing-simple.e2e-spec.ts",
-      "category": "Auth/Seed Expectation Mismatches",
-      "failedTests": 11
-    },
-    {
-      "file": "test/e2e/billing.e2e-spec.ts",
-      "category": "Auth/Seed Expectation Mismatches",
-      "failedTests": 11
-    },
-    {
       "file": "test/e2e/devportal.slice.e2e-spec.ts",
-      "category": "Other",
+      "category": "DI/Module Resolution Errors",
       "failedTests": 11
     },
     {
       "file": "test/e2e/billing.slice.e2e-spec.ts",
-      "category": "Auth/Seed Expectation Mismatches",
+      "category": "DI/Module Resolution Errors",
       "failedTests": 11
+    },
+    {
+      "file": "test/e2e/billing.e2e-spec.ts",
+      "category": "Other",
+      "failedTests": 11
+    },
+    {
+      "file": "test/msr-card.e2e-spec.ts",
+      "category": "Auth/Login Failures",
+      "failedTests": 9
+    },
+    {
+      "file": "test/e2e/kds.slice.e2e-spec.ts",
+      "category": "DI/Module Resolution Errors",
+      "failedTests": 9
+    },
+    {
+      "file": "test/e2e/franchise.slice.e2e-spec.ts",
+      "category": "DI/Module Resolution Errors",
+      "failedTests": 9
     },
     {
       "file": "test/e2e/badge-revocation.e2e-spec.ts",
@@ -95,18 +96,22 @@
   "topErrors": [
     {
       "message": "● Test suite failed to run",
-      "count": 2
+      "count": 12
     },
     {
       "message": "● SSE /stream/kpis Security (E26) › Authentication › should return 401 when no token provided",
       "count": 1
     },
     {
-      "message": "● Accounting E2E › should create period → lock → posting blocked",
+      "message": "● Webhook Security E2E (E24) › Authentication › should reject webhook without signature header",
       "count": 1
     },
     {
-      "message": "● E22-s2: Franchise APIs (e2e) › POST /franchise/budgets › should upsert a budget for a branch",
+      "message": "● Multi-Tenant Isolation (E2E) › Cross-org menu item access › should deny user A access to org B menu items with wrong x-org-id",
+      "count": 1
+    },
+    {
+      "message": "● E23 Platform Access (e2e) › Public routes bypass › should allow unauthenticated access to /health",
       "count": 1
     },
     {
@@ -114,23 +119,19 @@
       "count": 1
     },
     {
-      "message": "● Reports E2E › should fetch X report (shift summary)",
+      "message": "● Plan-Aware Rate Limiting E2E › POST /billing/plan/change › should enforce free tier rate limit (10/min)",
       "count": 1
     },
     {
-      "message": "● Inventory E2E › should receive PO → on-hand increases",
+      "message": "● M7: Service Providers, Budgets & Cost Insights (e2e) › 1. Service Providers Management › should create a service provider",
+      "count": 1
+    },
+    {
+      "message": "● MSR Card Management (e2e) › POST /auth/msr/assign › should assign MSR card to employee",
       "count": 1
     },
     {
       "message": "● Workforce E2E › should clock in → clock out",
-      "count": 1
-    },
-    {
-      "message": "● Bookings E2E › should create booking → HOLD → pay → confirm",
-      "count": 1
-    },
-    {
-      "message": "● E23 Platform Access (e2e) › Public routes bypass › should allow unauthenticated access to /health",
       "count": 1
     }
   ]

@@ -15,8 +15,8 @@ import * as request from 'supertest';
 import { createE2ETestingModule } from '../helpers/module';
 import { cleanup } from '../helpers/cleanup';
 import { createOrgWithUsers, FactoryOrg } from './factory';
-import { PrismaService } from '@api/prisma/prisma.service';
-import { AppModule } from '@api/app.module';
+import { PrismaService } from '../../src/prisma.service';
+import { AppModule } from '../../src/app.module';
 import { Decimal } from '@prisma/client/runtime/library';
 
 describe('M11.2: Inventory Procurement E2E', () => {
@@ -46,7 +46,7 @@ describe('M11.2: Inventory Procurement E2E', () => {
     // Create test vendor
     const vendorRes = await prisma.vendor.create({
       data: {
-        organizationId: testOrg.orgId,
+        orgId: testOrg.orgId,
         code: 'VND-TEST',
         name: 'Test Vendor Procurement',
         contactName: 'Test Contact',
@@ -59,7 +59,7 @@ describe('M11.2: Inventory Procurement E2E', () => {
     // Create base UOM
     const baseUom = await prisma.unitOfMeasure.create({
       data: {
-        organizationId: testOrg.orgId,
+        orgId: testOrg.orgId,
         code: 'EA',
         name: 'Each',
         conversionFactor: new Decimal(1),
@@ -70,7 +70,7 @@ describe('M11.2: Inventory Procurement E2E', () => {
     // Create case UOM (1 case = 12 each)
     const caseUom = await prisma.unitOfMeasure.create({
       data: {
-        organizationId: testOrg.orgId,
+        orgId: testOrg.orgId,
         code: 'CS',
         name: 'Case',
         baseUnitOfMeasureId: baseUom.id,
@@ -82,7 +82,7 @@ describe('M11.2: Inventory Procurement E2E', () => {
     // Create category
     const category = await prisma.inventoryCategory.create({
       data: {
-        organizationId: testOrg.orgId,
+        orgId: testOrg.orgId,
         code: 'CAT-TEST',
         name: 'Test Category',
       },
@@ -91,7 +91,7 @@ describe('M11.2: Inventory Procurement E2E', () => {
     // Create test items
     const itemA = await prisma.inventoryItem.create({
       data: {
-        organizationId: testOrg.orgId,
+        orgId: testOrg.orgId,
         categoryId: category.id,
         sku: 'ITEM-A',
         name: 'Test Item A',
@@ -103,7 +103,7 @@ describe('M11.2: Inventory Procurement E2E', () => {
 
     const itemB = await prisma.inventoryItem.create({
       data: {
-        organizationId: testOrg.orgId,
+        orgId: testOrg.orgId,
         categoryId: category.id,
         sku: 'ITEM-B',
         name: 'Test Item B',
@@ -116,7 +116,7 @@ describe('M11.2: Inventory Procurement E2E', () => {
     // Create test location
     const loc = await prisma.inventoryLocation.create({
       data: {
-        organizationId: testOrg.orgId,
+        orgId: testOrg.orgId,
         branchId: testOrg.branchId,
         code: 'LOC-TEST',
         name: 'Test Location',

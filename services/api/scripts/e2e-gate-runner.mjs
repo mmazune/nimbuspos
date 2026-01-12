@@ -283,6 +283,7 @@ async function runTestFile(filePath, index, total, startTime) {
       '--runTestsByPath',
       filePath,
       '--runInBand',
+      '--forceExit',
       '--json',
       '--outputFile',
       outputFile,

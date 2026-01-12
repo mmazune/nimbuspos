@@ -8,15 +8,14 @@
  * - Close pack using effectiveAt boundaries
  * - Automation endpoints (run-preclose, generate-close-pack)
  */
-import { Test, TestingModule } from '@nestjs/testing';
-import { INestApplication, ValidationPipe } from '@nestjs/common';
-import * as request from 'supertest';
-import { AppModule } from '../src/app.module';
-import { PrismaService } from '../src/prisma.service';
-import { AuthTestHelper } from './helpers/auth-test.helper';
-import { Prisma } from '@chefcloud/db';
-
-const Decimal = Prisma.Decimal;
+import { INestApplication } from '@nestjs/common';
+import request from 'supertest';
+import { createE2ETestingModule } from '../helpers/module';
+import { cleanup } from '../helpers/cleanup';
+import { createOrgWithUsers, FactoryOrg } from './factory';
+import { PrismaService } from '../../src/prisma.service';
+import { AppModule } from '../../src/app.module';
+import { Decimal } from '@prisma/client/runtime/library';
 
 // Extend Jest timeout for E2E tests
 jest.setTimeout(120_000);
@@ -24,7 +23,7 @@ jest.setTimeout(120_000);
 describe('M12.3 Inventory Period Controls v3 (e2e)', () => {
   let app: INestApplication;
   let prisma: PrismaService;
-  let authHelper: AuthTestHelper;
+  let testOrg: FactoryOrg;
 
   // Test data
   let orgId: string;
@@ -35,36 +34,41 @@ describe('M12.3 Inventory Period Controls v3 (e2e)', () => {
   let managerToken: string;
 
   beforeAll(async () => {
-    const moduleFixture: TestingModule = await Test.createTestingModule({
+    const moduleRef = await createE2ETestingModule({
       imports: [AppModule],
-    }).compile();
-
-    app = moduleFixture.createNestApplication();
-    app.useGlobalPipes(new ValidationPipe({ transform: true, whitelist: true }));
+    });
+    app = moduleRef.createNestApplication();
+    prisma = moduleRef.get(PrismaService);
     await app.init();
 
-    prisma = app.get(PrismaService);
-    authHelper = new AuthTestHelper(app);
+    // Create test org with users
+    testOrg = await createOrgWithUsers(prisma.client as any, `test-m123-${Date.now()}`);
+    orgId = testOrg.orgId;
+    branchId = testOrg.branchId;
 
-    // Create test org with owner
-    const owner = await authHelper.createTestUser({
-      roleLevel: 'L5',
-      jobRole: 'OWNER',
-    });
-    ownerToken = owner.token;
-    orgId = owner.orgId;
-    branchId = owner.branchId;
+    // Get tokens by logging in with factory-created users
+    const ownerResponse = await request(app.getHttpServer())
+      .post('/auth/login')
+      .send({
+        email: testOrg.users.owner.email,
+        password: 'Test#123',
+      })
+      .expect(200);
+    ownerToken = ownerResponse.body.access_token;
 
-    // Create manager user
-    const manager = await authHelper.createTestUserInOrg(orgId, branchId, {
-      roleLevel: 'L4',
-      jobRole: 'MANAGER',
-    });
-    managerToken = manager.token;
+    const managerResponse = await request(app.getHttpServer())
+      .post('/auth/login')
+      .send({
+        email: testOrg.users.manager.email,
+        password: 'Test#123',
+      })
+      .expect(200);
+    managerToken = managerResponse.body.access_token;
 
     // Create test location
     const location = await prisma.client.inventoryLocation.create({
       data: {
+        orgId,
         branchId,
         name: 'Main Storage',
         code: 'MAIN',
@@ -101,16 +105,7 @@ describe('M12.3 Inventory Period Controls v3 (e2e)', () => {
   });
 
   afterAll(async () => {
-    // Cleanup
-    await prisma.client.inventoryLedgerEntry.deleteMany({ where: { orgId } });
-    await prisma.client.inventoryItem.deleteMany({ where: { orgId } });
-    await prisma.client.inventoryLocation.deleteMany({ where: { branchId } });
-    await prisma.client.inventoryPeriodEvent.deleteMany({ where: { orgId } });
-    await prisma.client.inventoryPeriodMovementSummary.deleteMany({ where: { orgId } });
-    await prisma.client.inventoryValuationSnapshot.deleteMany({ where: { orgId } });
-    await prisma.client.inventoryPeriod.deleteMany({ where: { orgId } });
-    
-    await app.close();
+    await cleanup(app);
   });
 
   describe('A) effectiveAt Field', () => {

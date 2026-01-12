@@ -13,6 +13,8 @@ import { Search, AlertTriangle, CheckCircle } from 'lucide-react';
 import { registerPosServiceWorker } from '@/lib/registerPosServiceWorker';
 import { useOnlineStatus } from '@/hooks/useOnlineStatus';
 import { useInventoryCachedOverview } from '@/hooks/useInventoryCachedOverview';
+import { useActiveBranch } from '@/contexts/ActiveBranchContext';
+import { useAuth } from '@/contexts/AuthContext';
 
 // M24-S2: Inventory Management Page
 // M27-S5: Extended with offline-first caching
@@ -51,6 +53,11 @@ export default function InventoryPage() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [editingItem, setEditingItem] = useState<InventoryItem | null>(null);
 
+  // Get branch context for consistent data filtering
+  const { activeBranchId } = useActiveBranch();
+  const { user } = useAuth();
+  const branchId = activeBranchId || user?.branch?.id;
+
   // M27-S5: Register service worker for offline support
   useEffect(() => {
     registerPosServiceWorker();
@@ -81,13 +88,13 @@ export default function InventoryPage() {
     },
   });
 
-  // Fetch low-stock alerts
+  // Fetch low-stock alerts - use branchId from context for consistency
   const { data: lowStockAlerts } = useQuery({
-    queryKey: ['low-stock-alerts'],
+    queryKey: ['low-stock-alerts', branchId],
     queryFn: async () => {
       try {
         const response = await apiClient.get<LowStockAlert[]>('/inventory/low-stock/alerts', {
-          params: { branchId: 'default' },
+          params: { branchId },
         });
         return response.data;
       } catch (error) {
@@ -95,6 +102,7 @@ export default function InventoryPage() {
         return [];
       }
     },
+    enabled: !!branchId,
   });
 
   // Update item mutation

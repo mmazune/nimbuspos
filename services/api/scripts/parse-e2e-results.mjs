@@ -25,40 +25,31 @@ if (jsonIdx >= 0 && args[jsonIdx + 1]) {
 }
 
 // Category patterns (order matters - first match wins)
+// Excluding Prisma drift and Windows spawn issues per user requirements
 const CATEGORIES = [
   {
-    name: 'Module Import Errors',
-    pattern: /Cannot find module|Module not found/i,
-    color: '🔴'
-  },
-  {
-    name: 'DI/Module Resolution Errors',
-    pattern: /can't resolve dependencies|Nest can't resolve|is not available in.*context|Please make sure that the argument/i,
+    name: 'DI',
+    pattern: /Cannot resolve dependencies|Nest can't resolve/i,
     color: '🟤'
   },
   {
-    name: 'Prisma Validation Errors',
-    pattern: /PrismaClientValidationError|Argument .* is missing|Invalid value for argument|Can not use `undefined` value/i,
-    color: '🟠'
+    name: 'Import/module',
+    pattern: /Cannot find module|request is not a function|ERR_MODULE_NOT_FOUND/i,
+    color: '🔴'
   },
   {
-    name: 'Auth/Login Failures',
-    pattern: /Login failed|expected 200.*got 401|Unauthorized.*login|Invalid credentials/i,
-    color: '🟡'
-  },
-  {
-    name: 'Missing Routes/Endpoints',
-    pattern: /expected 200.*got 404|404.*Not Found|Cannot GET|Cannot POST/i,
+    name: 'Missing route',
+    pattern: /404|Not Found/i,
     color: '🟣'
   },
   {
-    name: 'Response Shape Mismatches',
-    pattern: /expect.*toEqual|expect.*toHaveProperty|expect.*toBe|Received.*Expected/i,
-    color: '🔵'
+    name: 'Auth/login',
+    pattern: /401|403|UNAUTHORIZED|Forbidden/i,
+    color: '🟡'
   },
   {
-    name: 'Timeouts/Race Conditions',
-    pattern: /timeout|Timeout|exceeded.*ms|async operation/i,
+    name: 'Timeout',
+    pattern: /Exceeded timeout|jest\.setTimeout|Timeout/i,
     color: '⚫'
   }
 ];
@@ -69,7 +60,7 @@ function categorizeError(message) {
       return cat.name;
     }
   }
-  return 'Other';
+  return 'Functional';
 }
 
 function normalizeError(message) {
@@ -118,10 +109,25 @@ try {
     }
   }
 
-  // Sort and get top 15 files
+  // Sort and get top 15 files overall
   const topFailingFiles = failedFiles
     .sort((a, b) => b.failedTests - a.failedTests)
     .slice(0, 15);
+
+  // Group by category and get top 5 per category
+  const filesByCategory = {};
+  for (const file of failedFiles) {
+    if (!filesByCategory[file.category]) {
+      filesByCategory[file.category] = [];
+    }
+    filesByCategory[file.category].push(file);
+  }
+  const topPerCategory = {};
+  for (const [cat, files] of Object.entries(filesByCategory)) {
+    topPerCategory[cat] = files
+      .sort((a, b) => b.failedTests - a.failedTests)
+      .slice(0, 5);
+  }
 
   // Sort and get top 10 errors
   const topErrors = Array.from(errorMessages.entries())
@@ -163,6 +169,22 @@ try {
   });
   md += `\n`;
 
+  md += `## Top 5 Failing Files Per Category\n\n`;
+  for (const [cat, count] of sortedCategories) {
+    const files = topPerCategory[cat] || [];
+    if (files.length > 0) {
+      const catObj = CATEGORIES.find(c => c.name === cat);
+      const color = catObj ? catObj.color : '⚪';
+      md += `### ${color} ${cat} (${count} failures)\n\n`;
+      md += `| # | File | Failed Tests |\n`;
+      md += `|---|------|-------------|\n`;
+      files.forEach((file, idx) => {
+        md += `| ${idx + 1} | ${file.file} | ${file.failedTests} |\n`;
+      });
+      md += `\n`;
+    }
+  }
+
   md += `## Top 10 Recurring Error Messages\n\n`;
   topErrors.forEach(([msg, count], idx) => {
     md += `### ${idx + 1}. (${count}x)\n\n`;
@@ -182,6 +204,7 @@ try {
     categories: Object.fromEntries(sortedCategories),
     topCategory: sortedCategories[0][0],
     topFailingFiles,
+    topPerCategory,
     topErrors: topErrors.map(([msg, count]) => ({ message: msg, count }))
   };
   writeFileSync(OUTPUT_JSON, JSON.stringify(jsonOutput, null, 2));

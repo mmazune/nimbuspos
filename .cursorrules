@@ -1,0 +1,521 @@
+# Cursor Rules for Nimbus POS / ChefCloud
+
+This file contains rules and guidelines for Cursor AI to follow when working in this codebase.
+These rules are designed to improve debugging efficiency, testing practices, and overall code quality.
+
+---
+
+## 1. DEBUGGING AND FIXING CODE
+
+### 1.1 Hypothesis-Driven Debugging (MANDATORY)
+
+When encountering a bug or error, the LLM MUST:
+
+1. **Generate 3-4 probable causes** before attempting any fixes
+   - Analyze the error message, stack trace, and relevant code context
+   - Consider both syntax and logical errors
+   - Think about edge cases, timing issues, and environmental factors
+   - Document each hypothesis with reasoning
+
+2. **Prioritize hypotheses** based on:
+   - Most likely cause (based on error patterns)
+   - Easiest to verify
+   - Most critical impact
+   - Historical patterns in the codebase
+
+3. **Test each hypothesis individually**
+   - Modify only one variable at a time
+   - Use systematic debugging (print/log intermediate states)
+   - Verify the hypothesis before moving to the next
+
+4. **Use git reset if a fix doesn't work**
+   - If a fix attempt doesn't resolve the issue, immediately revert using `git reset --hard HEAD`
+   - DO NOT compound fixes on top of failed attempts
+   - Start fresh with the next hypothesis
+   - This maintains code integrity and prevents cascading issues
+
+### 1.2 Error Analysis Structure
+
+For every error encountered, provide:
+- **Error analysis**: Detailed explanation of the issue
+- **Context**: Relevant code snippets and file locations
+- **Hypotheses**: 3-4 probable causes with reasoning
+- **Fix suggestions**: Potential solutions for each hypothesis
+- **Testing approach**: How to verify each fix
+
+### 1.3 Iterative Refinement
+
+- Refine code based on execution feedback
+- Provide explanations for debugging steps and code suggestions
+- Avoid overcorrection—make minimal, necessary changes only
+- Document assumptions and reasoning for future reference
+
+---
+
+## 2. TIME MANAGEMENT AND COMPLEX COMMANDS
+
+### 2.1 Timeout Implementation (MANDATORY)
+
+**For all complex commands**, especially E2E tests:
+- **ALWAYS** set appropriate timeouts to prevent indefinite execution
+- Use the project's deadline runners when available:
+  - `node services/api/scripts/run-e2e-with-deadline.mjs --minutes=25`
+  - `pnpm -C services/api test:e2e:gate` (includes built-in timeouts)
+- Never run raw `pnpm jest` without an outer deadline wrapper
+- Default timeout recommendations:
+  - E2E tests: 25 minutes maximum
+  - Single E2E file: 12 minutes maximum
+  - Unit tests: 5 minutes maximum
+  - Build commands: 10 minutes maximum
+
+### 2.2 Timeout Layers for E2E Tests
+
+E2E tests MUST implement the 3-layer timeout contract:
+
+1. **Layer A - Command Deadline** (outer kill switch)
+   - Use `node scripts/run-e2e-with-deadline.mjs` or `test:e2e:gate`
+   - Never run without a deadline
+
+2. **Layer B - Jest File Timeout**
+   - Set `jest.setTimeout(120_000)` for full AppModule tests
+   - Set `jest.setTimeout(30_000)` for slice tests
+
+3. **Layer C - Per-Await Timeout**
+   - Wrap all potentially blocking awaits with `withTimeout()`
+   - Applies to: SSE waits, polling loops, event subscriptions, app shutdown
+
+See `instructions/standards/E2E_TESTING_STANDARD.md` for complete details.
+
+---
+
+## 3. END-TO-END (E2E) TESTING RULES
+
+### 3.1 E2E Test Execution Strategy (MANDATORY)
+
+**When working with E2E tests:**
+
+1. **Isolate failing tests FIRST**
+   - If a test suite has one failing or timing out test, work on it separately
+   - Run only that specific test file: `pnpm test:e2e -- --runInBand --runTestsByPath test/path/to/specific.e2e-spec.ts`
+   - Wrap in deadline: `node scripts/run-e2e-with-deadline.mjs --minutes=12 -- --runInBand --runTestsByPath test/path/to/specific.e2e-spec.ts`
+
+2. **Verify the isolated test passes**
+   - Ensure the specific test no longer times out or fails
+   - Confirm it exits cleanly (no Jest "did not exit" warnings)
+   - Check that teardown is complete
+
+3. **Then run the full suite**
+   - Only after the isolated test is fixed, run the complete test suite
+   - This saves time and resources by avoiding unnecessary full suite runs
+
+### 3.2 E2E Test Structure Requirements
+
+All E2E tests must:
+- Use seeded datasets (`E2E_DATASET=ALL`) rather than write-heavy setup
+- Implement proper teardown in `afterAll()` with `withTimeout()`
+- Close all resources: Prisma, Redis, BullMQ, SSE connections
+- Use trace checkpoints for long-running phases
+- Be deterministic and always exit cleanly
+
+### 3.3 E2E Test Commands
+
+**Approved commands:**
+```bash
+# Full gate (CI-equivalent, includes timeout)
+pnpm -C services/api test:e2e:gate
+
+# Single file with deadline
+node services/api/scripts/run-e2e-with-deadline.mjs --minutes=12 -- --runInBand --runTestsByPath test/path/to/file.e2e-spec.ts
+
+# Profile E2E performance
+pnpm -C services/api test:e2e:profile
+```
+
+**Prohibited patterns:**
+- ❌ Raw `pnpm test:e2e` without deadline wrapper
+- ❌ Running full suite when only one test is broken
+- ❌ Ignoring Jest "did not exit" warnings
+
+### 3.4 E2E Test Coverage Requirements
+
+- Every acceptance criterion must have corresponding E2E coverage
+- Minimum tests per feature:
+  - Small (1-2 endpoints): 4 tests, 8 assertions
+  - Medium (3-5 endpoints): 8 tests, 16 assertions
+  - Large (6+ endpoints): 12 tests, 24 assertions
+
+See `instructions/standards/E2E_EXPANSION_CONTRACT.md` for details.
+
+---
+
+## 4. CODE QUALITY AND TESTING
+
+### 4.1 Test Structure
+
+- **Unit tests**: Fast, isolated, test individual functions/services
+- **Integration tests**: Test module interactions
+- **E2E tests**: Test complete workflows end-to-end
+- **Slice tests**: Isolated feature E2E tests (faster, focused)
+
+### 4.2 Test Independence
+
+- Each test MUST be independent and not rely on other tests
+- Use proper setup/teardown to ensure clean state
+- Avoid shared state between tests
+- This prevents cascading failures and simplifies troubleshooting
+
+### 4.3 Test Data
+
+- Use realistic production-like data when possible
+- Prefer seeded datasets over runtime creation
+- Use dataset declarations: `@dataset DEMO_TAPAS`, `@dataset DEMO_EMPTY`, etc.
+- Avoid write-heavy setup in `beforeAll()` - causes timeouts and deadlocks
+
+---
+
+## 5. VERSION CONTROL PRACTICES
+
+### 5.1 Git Reset Protocol
+
+**When a fix doesn't work:**
+1. Immediately run `git reset --hard HEAD` to revert changes
+2. Document why the fix didn't work
+3. Move to the next hypothesis with a clean state
+4. Never compound fixes on top of failed attempts
+
+### 5.2 Commit Practices
+
+- Make atomic commits (one logical change per commit)
+- Write clear commit messages following the project's conventions
+- Ensure all tests pass before committing
+- Verify gates pass: lint, build, test (minimum)
+
+---
+
+## 6. CROSS-PLATFORM COMPATIBILITY
+
+### 6.1 Platform-Agnostic Commands
+
+**Always use:**
+- `pnpm -C services/api test:e2e:gate` (cross-platform gate runner)
+- Node-based deadline runners (not OS `timeout` command)
+- `path.join()` for file paths (not hardcoded `/`)
+
+**Never use:**
+- `spawn('pnpm', ...)` - use platform resolution: `const PNPM = process.platform === 'win32' ? 'pnpm.cmd' : 'pnpm'`
+- `timeout 5m ...` - GNU timeout not available on Windows
+- `bash -c "..."` - not available in PowerShell
+
+### 6.2 Windows/PowerShell Support
+
+- All scripts and commands must work on both Linux (CI) and Windows (local)
+- Test on both platforms when possible
+- Use the cross-platform gate runner for E2E tests
+
+---
+
+## 7. OBSERVABILITY AND DEBUGGING
+
+### 7.1 Trace Mode
+
+For debugging E2E tests:
+- Enable trace mode: `E2E_TRACE=1`
+- Log key checkpoints (beforeAll, login, critical API calls)
+- Log elapsed time deltas
+- Use `test/helpers/e2e-trace.ts` helper
+
+### 7.2 Progress Reporting
+
+For long-running operations:
+- Print checkpoints every 10+ seconds
+- Show attempt counts for polling loops
+- Display last known state (safe summary)
+- Report progress: setup, bootstrap, dispatcher, teardown phases
+
+### 7.3 Error Reporting
+
+When errors occur:
+- Provide full error context (message, stack, file locations)
+- Include relevant code snippets
+- Suggest actionable fixes
+- Log to appropriate channels (console, file, monitoring)
+
+---
+
+## 8. RESOURCE MANAGEMENT
+
+### 8.1 Resource Cleanup
+
+**Always close resources:**
+- Prisma client: `await prisma.$disconnect()`
+- Redis client: `await redis.quit()`
+- BullMQ queues/workers: `await queue.close()`, `await worker.close()`
+- SSE streams: close connection in teardown
+- HTTP servers: close in `afterAll()`
+- Clear intervals/timeouts: track and clear in teardown
+
+### 8.2 Open Handle Prevention
+
+Common sources of "Jest did not exit":
+- Unclosed Prisma connections
+- Unclosed Redis connections
+- Unclosed BullMQ queues
+- Open SSE streams
+- Dangling timers
+- Unawaited async tasks
+
+**Rule**: If you create a resource, you MUST close it in teardown.
+
+---
+
+## 9. DOCUMENTATION AND REPORTING
+
+### 9.1 Task Completion Reports
+
+Every task must conclude with:
+1. **Files changed**: Exact list of modified/created files
+2. **Commands run**: With timeouts, pass/fail status, duration
+3. **Gates passed**: lint, build, test (minimum)
+4. **Pre-existing issues**: Any PRE-### issues encountered
+5. **Commit proof**: HEAD SHA, clean tree status
+
+### 9.2 Code Documentation
+
+- Document complex logic and non-obvious decisions
+- Explain "why" not just "what"
+- Keep documentation up-to-date with code changes
+- Use TypeScript types and JSDoc comments appropriately
+
+---
+
+## 10. PROJECT-SPECIFIC RULES
+
+### 10.1 Entry Points
+
+Before starting work, always read:
+1. `AI_START_HERE.md` - Engineering contract and process
+2. `docs/SESSION_STATE.yml` - Current session state
+3. `instructions/00_START_HERE.md` - Engineering standards
+4. Relevant milestone documentation
+
+### 10.2 Standards Compliance
+
+Follow project standards:
+- `instructions/standards/E2E_TESTING_STANDARD.md` - E2E testing requirements
+- `instructions/standards/E2E_EXPANSION_CONTRACT.md` - E2E coverage requirements
+- `instructions/TESTING_AND_VERIFICATION_MAP.md` - Testing infrastructure
+- `instructions/T1.23_FAILURE_TAXONOMY.md` - Failure categorization
+
+### 10.3 Definition of Done
+
+A milestone cannot be marked complete unless:
+- All new/modified E2E tests exit cleanly
+- All tests have 3-layer timeout contract
+- `test:e2e:gate` passes (TIMED_OUT=0, KILLED=0)
+- Pre-existing failures logged as PRE-###
+- All gates pass: lint, build, test
+
+---
+
+## 11. AUTOMATED TESTING BEST PRACTICES
+
+### 11.1 Test Automation
+
+- Integrate tests into CI/CD pipeline
+- Automate E2E tests for continuous execution
+- Run tests across multiple environments when possible
+- Use realistic production-like data
+
+### 11.2 Test Maintenance
+
+- Regularly refactor tests to match evolving code
+- Remove flaky tests or fix root causes
+- Update tests when requirements change
+- Maintain test documentation
+
+### 11.3 Explicit Waits
+
+- Replace fixed delays with explicit waits
+- Use `withTimeout()` for async operations
+- Implement proper synchronization
+- Avoid arbitrary `sleep()` calls
+
+---
+
+## 12. PERFORMANCE CONSIDERATIONS
+
+### 12.1 Test Performance
+
+- Individual E2E test > 1s: Consider optimization
+- Individual E2E test > 5s: Requires investigation
+- Test file > 5s: Check setup/teardown
+- Test file > 10s: Likely inefficient bootstrap
+
+### 12.2 Command Performance
+
+- Monitor command execution times
+- Profile slow operations
+- Use performance profiling tools when available
+- Optimize bottlenecks identified in profiling
+
+---
+
+## 13. SECURITY AND SAFETY
+
+### 13.1 Safe Operations
+
+- Never delete code without explicit approval
+- Check `docs/cleanup/CANDIDATES.md` before deleting
+- Verify impact before making breaking changes
+- Test changes in isolation before integration
+
+### 13.2 Error Handling
+
+- Handle errors gracefully
+- Provide meaningful error messages
+- Log errors appropriately
+- Don't expose sensitive information in errors
+
+---
+
+## 14. ISSUE LOGGING AND TRACKING (MANDATORY)
+
+### 14.1 Comprehensive Issue Logging Workflow
+
+When encountering ANY issue (pre-existing or new) during work, you MUST:
+
+1. **Log the Issue Immediately**
+   - All issues MUST be logged in `instructions/PRE_EXISTING_ISSUES_LOG.md`
+   - Issues include: lint errors/warnings, test failures, build errors, type errors, security issues, infrastructure problems
+   - Use sequential PRE-### IDs (PRE-001, PRE-002, etc.)
+   - Document with required fields: ID, Category, First Seen, Command, Impact, Status
+
+2. **Determine Issue Type and Relation**
+   - **Pre-existing**: Issue existed before current work (not caused by your changes)
+   - **New/Introduced**: Issue caused by current work (must fix immediately)
+   - **Unrelated**: Issue discovered but not related to current objective
+
+3. **Document in Task Summary**
+   - Every task completion report MUST include an "Issues Logged" section
+   - List all PRE-### IDs encountered during the task
+   - Document whether issues are pre-existing or new
+   - Include resolution status if fixed
+
+4. **Fixing Strategy**
+   - **New/Introduced issues**: MUST fix immediately (blockers for task completion)
+   - **Pre-existing but related**: Fix if directly connected to current work
+   - **Pre-existing and unrelated**: Log only, defer fixing to appropriate milestone/owner
+   - **Never silently suppress**: All issues must be logged or fixed
+
+5. **Resolution Tracking**
+   - When an issue is fixed, update the log entry:
+     - Set Status to "✅ RESOLVED"
+     - Add "Resolved Date"
+     - Document "Resolution" with fix details
+     - Include verification command/output
+     - Add entry to "Resolution History" section
+   - Update statistics table if present
+
+### 14.2 Issue Log Entry Format
+
+Every issue logged MUST include:
+
+```markdown
+### PRE-###: [Category] Short Description
+
+| Field | Value |
+|-------|-------|
+| **ID** | PRE-### |
+| **Category** | lint-warning, lint-error, test-error, build-error, type-error, security, infra, etc. |
+| **First Seen** | YYYY-MM-DD |
+| **Command** | Command used to detect (with timeout) |
+| **Impact** | Low / Medium / High |
+| **Suggested Owner** | Team/milestone bucket for resolution |
+| **Status** | OPEN / RESOLVED |
+| **Resolution** | Notes if/when resolved (including date and verification) |
+
+**Summary**: Brief description of the issue
+
+**Error/Excerpt**: ≤15 lines of representative output
+
+[Additional details, affected files, root cause analysis, etc.]
+```
+
+### 14.3 Resolution Process
+
+When fixing a logged issue:
+
+1. **Update the Issue Entry**
+   - Change Status from "OPEN" to "✅ RESOLVED"
+   - Add "Resolved Date": YYYY-MM-DD
+   - Document "Resolution" with:
+     - What was fixed
+     - How it was fixed
+     - Verification command and results
+     - Related commit SHA if applicable
+
+2. **Add to Resolution History**
+   - Update the "Resolution History" section at the bottom of the log
+   - Include date, issue ID(s), summary, fix details, verification
+
+3. **Update Statistics**
+   - If statistics table exists, update counts (Open/Resolved/Total)
+
+### 14.4 Task Completion Requirements
+
+Every task completion report MUST include:
+
+1. **Issues Encountered**
+   - List all PRE-### IDs discovered during the task
+   - Categorize as: Pre-existing (unrelated), Pre-existing (related), New/Introduced
+   - Include status: OPEN or RESOLVED
+
+2. **Issues Logged**
+   - Confirm all issues have been added to `PRE_EXISTING_ISSUES_LOG.md`
+   - If no issues found, state "None"
+
+3. **Issues Resolved**
+   - List any PRE-### issues that were fixed during this task
+   - Include verification evidence (command output)
+
+4. **Deferred Issues**
+   - List pre-existing issues that were logged but not fixed
+   - Include reasoning for deferral (not related to current work, assigned to different milestone, etc.)
+
+### 14.5 Prohibited Patterns
+
+**Never:**
+- ❌ Silently suppress errors or failures
+- ❌ Ignore issues because they're "pre-existing"
+- ❌ Skip logging because an issue seems minor
+- ❌ Fix issues without updating the log
+- ❌ Mark issues as resolved without verification
+
+**Always:**
+- ✅ Log every issue discovered
+- ✅ Document in task completion summary
+- ✅ Update log when issues are resolved
+- ✅ Provide verification evidence for fixes
+- ✅ Defer unrelated issues to appropriate owners
+
+---
+
+## REMINDERS FOR LLM
+
+1. **Always hypothesize before fixing**: Generate 3-4 probable causes
+2. **Use git reset liberally**: Revert failed attempts immediately
+3. **Set timeouts for everything**: Especially E2E tests and complex commands
+4. **Isolate failing tests**: Fix individually before running full suite
+5. **Follow 3-layer timeout contract**: Command, Jest, and per-await timeouts
+6. **Clean up resources**: Close connections, queues, timers
+7. **Cross-platform compatibility**: Use approved commands that work on Windows and Linux
+8. **Document everything**: Files changed, commands run, gates passed
+9. **Verify before proceeding**: Test isolated fixes before full suite runs
+10. **Read standards**: Follow project-specific testing and quality standards
+11. **Log all issues**: Every issue (pre-existing or new) must be logged in PRE_EXISTING_ISSUES_LOG.md
+12. **Update on resolution**: When fixing issues, update the log with resolution details
+
+---
+
+*Last updated: 2026-01-11*
+*Version: 1.1*

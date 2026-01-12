@@ -1,10 +1,10 @@
 {
-  "status": "COMPLETED",
-  "exitCode": 1,
-  "durationMs": 60012,
-  "startedAt": "2026-01-02T03:38:39.073Z",
-  "finishedAt": "2026-01-02T03:39:39.085Z",
-  "deadlineMinutes": 25,
+  "status": "TIMED_OUT",
+  "exitCode": 124,
+  "durationMs": 600074,
+  "startedAt": "2026-01-12T01:24:16.343Z",
+  "finishedAt": "2026-01-12T01:34:16.421Z",
+  "deadlineMinutes": 10,
   "dataset": "DEMO_TAPAS",
   "pattern": "all"
 }

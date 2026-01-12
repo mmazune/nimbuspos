@@ -46,6 +46,7 @@ export function createE2ETestingModuleBuilder(metadata: ModuleMetadata): Testing
  * @param metadata - Module metadata (imports, providers, controllers, etc.)
  * @param options - Optional configuration
  * @param options.enableValidation - Whether to enable global ValidationPipe (default: true)
+ * @param options.beforeInit - Callback to configure app before initialization (e.g., middleware)
  * @returns Initialized INestApplication ready for testing
  *
  * @example
@@ -63,10 +64,13 @@ export function createE2ETestingModuleBuilder(metadata: ModuleMetadata): Testing
  */
 export async function createE2EApp(
   metadata: ModuleMetadata,
-  options: { enableValidation?: boolean } = {},
+  options: {
+    enableValidation?: boolean;
+    beforeInit?: (app: INestApplication) => void | Promise<void>;
+  } = {},
 ): Promise<INestApplication> {
   return traceSpan('createE2EApp', async () => {
-    const { enableValidation = true } = options;
+    const { enableValidation = true, beforeInit } = options;
 
     // CRITICAL: Ensure JWT_SECRET is always present for E2E tests
     // This prevents cryptic "secretOrPrivateKey must have a value" errors
@@ -97,12 +101,18 @@ export async function createE2EApp(
       );
     }
 
-    // 4. CRITICAL: Enable shutdown hooks BEFORE init
+    // 4. Run custom configuration before init (e.g., middleware)
+    if (beforeInit) {
+      trace('running custom beforeInit configuration');
+      await beforeInit(app);
+    }
+
+    // 5. CRITICAL: Enable shutdown hooks BEFORE init
     // This ensures onModuleDestroy lifecycle hooks fire when app.close() is called
     trace('enabling shutdown hooks');
     app.enableShutdownHooks();
 
-    // 5. Initialize the application
+    // 6. Initialize the application
     trace('initializing application');
     await app.init();
     trace('application initialized');

@@ -3,14 +3,13 @@ import { INestApplication, ValidationPipe } from '@nestjs/common';
 import request from 'supertest';
 import { AppModule } from '../src/app.module';
 import { PrismaService } from '../src/prisma.service';
-import { JwtService } from '@nestjs/jwt';
 import { json } from 'express';
 import { PLAN_RATE_LIMITS } from '../src/common/plan-rate-limiter.guard';
+import * as argon2 from 'argon2';
 
 describe('Plan-Aware Rate Limiting E2E', () => {
   let app: INestApplication;
   let prisma: PrismaService;
-  let jwtService: JwtService;
 
   let freeUserToken: string;
   let proUserToken: string;
@@ -44,7 +43,6 @@ describe('Plan-Aware Rate Limiting E2E', () => {
     await app.init();
 
     prisma = moduleFixture.get<PrismaService>(PrismaService);
-    jwtService = moduleFixture.get<JwtService>(JwtService);
 
     // Setup test data
     await setupTestData();
@@ -122,6 +120,37 @@ describe('Plan-Aware Rate Limiting E2E', () => {
       },
     });
 
+    // Create branches for each org
+    const freeBranch = await prisma.branch.upsert({
+      where: { id: `free-branch-${freeOrg.id}` },
+      update: {},
+      create: {
+        id: `free-branch-${freeOrg.id}`,
+        orgId: freeOrg.id,
+        name: 'Free Branch',
+      },
+    });
+
+    const proBranch = await prisma.branch.upsert({
+      where: { id: `pro-branch-${proOrg.id}` },
+      update: {},
+      create: {
+        id: `pro-branch-${proOrg.id}`,
+        orgId: proOrg.id,
+        name: 'Pro Branch',
+      },
+    });
+
+    const enterpriseBranch = await prisma.branch.upsert({
+      where: { id: `ent-branch-${enterpriseOrg.id}` },
+      update: {},
+      create: {
+        id: `ent-branch-${enterpriseOrg.id}`,
+        orgId: enterpriseOrg.id,
+        name: 'Enterprise Branch',
+      },
+    });
+
     // Create subscriptions
     await prisma.orgSubscription.upsert({
       where: { orgId: freeOrg.id },
@@ -156,61 +185,104 @@ describe('Plan-Aware Rate Limiting E2E', () => {
       },
     });
 
-    // Create test users
-    const freeUser = await prisma.user.upsert({
-      where: { email: 'rate-limit-free@test.local' },
-      update: {},
-      create: {
+    // Delete any existing test users first to ensure clean state
+    await prisma.user.deleteMany({
+      where: {
+        email: { in: ['rate-limit-free@test.local', 'rate-limit-pro@test.local', 'rate-limit-ent@test.local'] },
+      },
+    });
+
+    // Create test users with password hashes - Path 2 fix: Ensure L5 roleLevel
+    const testPassword = 'Test#123';
+    const passwordHash = await argon2.hash(testPassword, {
+      type: argon2.argon2id,
+      memoryCost: 65536,
+      timeCost: 3,
+    });
+
+    // Create users with explicit L5 roleLevel (required for BILLING_MANAGE capability)
+    const freeUser = await prisma.user.create({
+      data: {
         email: 'rate-limit-free@test.local',
+        passwordHash,
         firstName: 'Free',
         lastName: 'User',
-        roleLevel: 'L5',
+        roleLevel: 'L5', // L5 required for BILLING_MANAGE capability
         orgId: freeOrg.id,
+        branchId: freeBranch.id,
+        isActive: true,
       },
     });
 
-    const proUser = await prisma.user.upsert({
-      where: { email: 'rate-limit-pro@test.local' },
-      update: {},
-      create: {
+    const proUser = await prisma.user.create({
+      data: {
         email: 'rate-limit-pro@test.local',
+        passwordHash,
         firstName: 'Pro',
         lastName: 'User',
-        roleLevel: 'L5',
+        roleLevel: 'L5', // L5 required for BILLING_MANAGE capability
         orgId: proOrg.id,
+        branchId: proBranch.id,
+        isActive: true,
       },
     });
 
-    const enterpriseUser = await prisma.user.upsert({
-      where: { email: 'rate-limit-ent@test.local' },
-      update: {},
-      create: {
+    const enterpriseUser = await prisma.user.create({
+      data: {
         email: 'rate-limit-ent@test.local',
+        passwordHash,
         firstName: 'Enterprise',
         lastName: 'User',
-        roleLevel: 'L5',
+        roleLevel: 'L5', // L5 required for BILLING_MANAGE capability
         orgId: enterpriseOrg.id,
+        branchId: enterpriseBranch.id,
+        isActive: true,
       },
     });
 
-    // Generate JWT tokens
-    freeUserToken = jwtService.sign({
-      userId: freeUser.id,
-      orgId: freeOrg.id,
-      roleLevel: 'L5',
-    });
+    // Verify users have L5 in database before login (critical for RolesGuard)
+    const verifyFreeUser = await prisma.user.findUnique({ where: { id: freeUser.id } });
+    if (verifyFreeUser?.roleLevel !== 'L5') {
+      throw new Error(`User ${freeUser.id} does not have L5 roleLevel, got: ${verifyFreeUser?.roleLevel}`);
+    }
 
-    proUserToken = jwtService.sign({
-      userId: proUser.id,
-      orgId: proOrg.id,
-      roleLevel: 'L5',
-    });
+    // Login to get real JWT tokens
+    const freeLoginRes = await request(app.getHttpServer())
+      .post('/auth/login')
+      .send({
+        email: freeUser.email,
+        password: testPassword,
+      });
+    if (!freeLoginRes.body.access_token) {
+      throw new Error(`Login failed for ${freeUser.email}: ${JSON.stringify(freeLoginRes.body)}`);
+    }
+    freeUserToken = freeLoginRes.body.access_token;
+    
+    // Verify JWT payload has L5
+    try {
+      const jwtPayload = JSON.parse(Buffer.from(freeUserToken.split('.')[1], 'base64').toString());
+      if (jwtPayload.roleLevel !== 'L5') {
+        throw new Error(`JWT payload roleLevel is ${jwtPayload.roleLevel}, expected L5`);
+      }
+    } catch (e) {
+      throw new Error(`Failed to verify JWT payload: ${e}`);
+    }
 
-    enterpriseUserToken = jwtService.sign({
-      userId: enterpriseUser.id,
-      orgId: enterpriseOrg.id,
-      roleLevel: 'L5',
-    });
+    const proLoginRes = await request(app.getHttpServer())
+      .post('/auth/login')
+      .send({
+        email: proUser.email,
+        password: testPassword,
+      });
+    proUserToken = proLoginRes.body.access_token;
+
+    const enterpriseLoginRes = await request(app.getHttpServer())
+      .post('/auth/login')
+      .send({
+        email: enterpriseUser.email,
+        password: testPassword,
+      });
+    enterpriseUserToken = enterpriseLoginRes.body.access_token;
   }
 
   async function cleanupTestData() {
@@ -278,6 +350,23 @@ describe('Plan-Aware Rate Limiting E2E', () => {
             limit: PLAN_RATE_LIMITS.free,
             window: 60,
           });
+        } else if (response.status === 403 && i === 0) {
+          // Log first 403 for debugging
+          console.error('=== 403 FORENSIC OUTPUT ===');
+          console.error('Status Code:', response.status);
+          console.error('Response Body:', JSON.stringify(response.body, null, 2));
+          console.error('Response Headers:', JSON.stringify(response.headers, null, 2));
+          console.error('Endpoint:', endpoint);
+          console.error('Token (first 50 chars):', freeUserToken.substring(0, 50));
+          // Decode JWT to see what's in it
+          try {
+            const jwtPayload = JSON.parse(Buffer.from(freeUserToken.split('.')[1], 'base64').toString());
+            console.error('JWT Payload roleLevel:', jwtPayload.roleLevel);
+            console.error('JWT Payload:', JSON.stringify(jwtPayload, null, 2));
+          } catch (e) {
+            console.error('Failed to decode JWT:', e);
+          }
+          console.error('==========================');
         }
       }
 

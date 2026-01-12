@@ -1,0 +1,1 @@
+{"level":"info","time":1768181655856,"service":"chefcloud-api","env":"test","type":"http_request","method":"POST","url":"/billing/cancel","statusCode":403,"durationMs":30,"requestId":"2a8d335f-f50b-4268-aaf2-72341ca29f0e","orgId":"00000000-0000-4000-8000-000000000001","route":"/billing/cancel"}

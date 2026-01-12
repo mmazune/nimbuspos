@@ -15,10 +15,10 @@ import * as request from 'supertest';
 import { createE2ETestingModule } from '../helpers/module';
 import { cleanup } from '../helpers/cleanup';
 import { createOrgWithUsers, FactoryOrg } from './factory';
-import { PrismaService } from '@api/prisma/prisma.service';
-import { AppModule } from '@api/app.module';
+import { PrismaService } from '../../src/prisma.service';
+import { AppModule } from '../../src/app.module';
 import { Decimal } from '@prisma/client/runtime/library';
-import { LedgerEntryReason, LedgerSourceType } from '@api/inventory/inventory-ledger.service';
+import { LedgerEntryReason, LedgerSourceType } from '../../src/inventory/inventory-ledger.service';
 
 describe('M11.14: Demand Forecasting + Reorder Optimization E2E', () => {
   let app: INestApplication;

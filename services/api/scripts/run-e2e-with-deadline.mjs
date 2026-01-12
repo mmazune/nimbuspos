@@ -59,7 +59,7 @@ if (!process.env.E2E_DEMO_DATASET) {
   const setupChild = spawn(PNPM, ['test:e2e:setup'], {
     cwd: process.cwd(),
     stdio: 'inherit',
-    shell: false,
+    shell: IS_WINDOWS, // Windows requires shell for reliable command resolution
   });
 
   await new Promise((resolve, reject) => {
@@ -110,11 +110,13 @@ if (!process.env.E2E_DEMO_DATASET) {
   const startTime = Date.now();
 
   // Spawn jest directly (not through pnpm) to avoid wrapper noise
-  const child = spawn('npx', ['jest', ...jestArgs], {
+  // Use platform-specific npx command and shell setting
+  const NPX_CMD = IS_WINDOWS ? 'npx.cmd' : 'npx';
+  const child = spawn(NPX_CMD, ['jest', ...jestArgs], {
     cwd: process.cwd(),
     stdio: ['ignore', 'pipe', 'pipe'], // Capture stdout/stderr separately
-    shell: false,
-    detached: process.platform !== 'win32', // Create process group on Unix for clean termination
+    shell: IS_WINDOWS, // Windows requires shell for reliable command resolution
+    detached: !IS_WINDOWS, // Create process group on Unix for clean termination
   });
 
   let stdout = '';

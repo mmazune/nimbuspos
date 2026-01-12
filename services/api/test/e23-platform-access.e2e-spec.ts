@@ -4,6 +4,7 @@ import { INestApplication } from '@nestjs/common';
 import { AppModule } from '../src/app.module';
 import { createE2ETestingModule } from './helpers/e2e-bootstrap';
 import { cleanup } from './helpers/cleanup';
+import { API_PATHS } from './helpers/paths';
 
 describe('E23 Platform Access (e2e)', () => {
   let app: INestApplication;
@@ -22,20 +23,20 @@ describe('E23 Platform Access (e2e)', () => {
   });
 
   describe('Public routes bypass', () => {
-    it('should allow unauthenticated access to /health', async () => {
+    it('should allow unauthenticated access to /api/health', async () => {
       await request(app.getHttpServer())
-        .get('/health')
+        .get(API_PATHS.HEALTH)
         .set('X-Client-Platform', 'mobile')
         .expect(200);
     });
 
-    it('should allow unauthenticated access to /health from any platform', async () => {
+    it('should allow unauthenticated access to /api/health from any platform', async () => {
       await request(app.getHttpServer())
-        .get('/health')
+        .get(API_PATHS.HEALTH)
         .set('X-Client-Platform', 'desktop')
         .expect(200);
 
-      await request(app.getHttpServer()).get('/health').set('X-Client-Platform', 'web').expect(200);
+      await request(app.getHttpServer()).get(API_PATHS.HEALTH).set('X-Client-Platform', 'web').expect(200);
     });
 
     it('should allow unauthenticated POST to /auth/login', async () => {
@@ -50,7 +51,7 @@ describe('E23 Platform Access (e2e)', () => {
   describe('Platform header handling', () => {
     it('should work without X-Client-Platform header (defaults to web)', async () => {
       await request(app.getHttpServer())
-        .get('/health')
+        .get(API_PATHS.HEALTH)
         // No X-Client-Platform header
         .expect(200);
     });

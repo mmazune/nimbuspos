@@ -16,8 +16,8 @@ import * as request from 'supertest';
 import { createE2ETestingModule } from '../helpers/module';
 import { cleanup } from '../helpers/cleanup';
 import { createOrgWithUsers, FactoryOrg } from './factory';
-import { PrismaService } from '@api/prisma/prisma.service';
-import { AppModule } from '@api/app.module';
+import { PrismaService } from '../../src/prisma.service';
+import { AppModule } from '../../src/app.module';
 import { Decimal } from '@prisma/client/runtime/library';
 
 describe('M11.5: Inventory Costing + Valuation + COGS E2E', () => {
@@ -47,7 +47,7 @@ describe('M11.5: Inventory Costing + Valuation + COGS E2E', () => {
         // Create vendor
         const vendorRes = await prisma.vendor.create({
             data: {
-                organizationId: testOrg.orgId,
+                orgId: testOrg.orgId,
                 code: 'VND-COST-TEST',
                 name: 'Test Vendor for Costing',
                 contactName: 'Test Contact',
@@ -60,7 +60,7 @@ describe('M11.5: Inventory Costing + Valuation + COGS E2E', () => {
         // Create base UOM
         const baseUom = await prisma.unitOfMeasure.create({
             data: {
-                organizationId: testOrg.orgId,
+                orgId: testOrg.orgId,
                 code: 'EA',
                 name: 'Each',
                 conversionFactor: new Decimal(1),
@@ -71,7 +71,7 @@ describe('M11.5: Inventory Costing + Valuation + COGS E2E', () => {
         // Create category
         const category = await prisma.inventoryCategory.create({
             data: {
-                organizationId: testOrg.orgId,
+                orgId: testOrg.orgId,
                 code: 'CAT-COST',
                 name: 'Costing Test Category',
             },
@@ -80,7 +80,7 @@ describe('M11.5: Inventory Costing + Valuation + COGS E2E', () => {
         // Create test item
         const item = await prisma.inventoryItem.create({
             data: {
-                organizationId: testOrg.orgId,
+                orgId: testOrg.orgId,
                 categoryId: category.id,
                 sku: 'COST-ITEM-001',
                 name: 'Costing Test Item',
@@ -93,7 +93,7 @@ describe('M11.5: Inventory Costing + Valuation + COGS E2E', () => {
         // Create location
         const location = await prisma.inventoryLocation.create({
             data: {
-                organizationId: testOrg.orgId,
+                orgId: testOrg.orgId,
                 branchId: testOrg.branchId,
                 code: 'MAIN',
                 name: 'Main Storage',
@@ -382,7 +382,7 @@ describe('M11.5: Inventory Costing + Valuation + COGS E2E', () => {
             // Create a new item for this test
             const newItem = await prisma.inventoryItem.create({
                 data: {
-                    organizationId: testOrg.orgId,
+                    orgId: testOrg.orgId,
                     sku: 'SEED-ITEM-001',
                     name: 'Seed Test Item',
                     baseUnitOfMeasureId: uomBaseId,
@@ -423,7 +423,7 @@ describe('M11.5: Inventory Costing + Valuation + COGS E2E', () => {
             // Create item with no stock
             const emptyItem = await prisma.inventoryItem.create({
                 data: {
-                    organizationId: testOrg.orgId,
+                    orgId: testOrg.orgId,
                     sku: 'EMPTY-ITEM-001',
                     name: 'Empty Test Item',
                     baseUnitOfMeasureId: uomBaseId,

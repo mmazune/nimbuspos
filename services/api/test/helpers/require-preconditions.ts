@@ -264,7 +264,7 @@ export async function requireUsers(
   const userCount = await prisma.user.count({
     where: {
       orgId: org.id,
-      ...(roles.length > 0 ? { role: { in: roles } } : {}),
+      ...(roles.length > 0 ? { roleLevel: { in: roles } } : {}),
     },
   });
 

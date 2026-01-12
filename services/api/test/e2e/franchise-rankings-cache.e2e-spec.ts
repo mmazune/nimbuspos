@@ -61,7 +61,6 @@ describe('E22.B - Franchise Rankings Caching (e2e)', () => {
       data: {
         name: 'E22B Test Org',
         slug: `e22b-test-${Date.now()}`,
-        tier: 'BASIC',
       },
     });
     testOrgId = org.id;
@@ -71,8 +70,7 @@ describe('E22.B - Franchise Rankings Caching (e2e)', () => {
       data: {
         orgId: testOrgId,
         name: 'E22B Test Branch',
-        status: 'ACTIVE',
-        isHeadquarters: false,
+        address: 'Test Address',
       },
     });
     testBranchId = branch.id;
@@ -104,15 +102,14 @@ describe('E22.B - Franchise Rankings Caching (e2e)', () => {
     );
 
     // Create some test orders for rankings calculation
-    const _period = new Date().toISOString().slice(0, 7); // YYYY-MM
+    // Order requires userId, orderNumber, and doesn't have orgId or tableNumber
     await prisma.order.create({
       data: {
-        orgId: testOrgId,
         branchId: testBranchId,
-        tableNumber: 1,
+        userId: testUserId,
+        orderNumber: `ORD-${Date.now()}`,
         status: 'CLOSED',
         total: 75000,
-        updatedAt: new Date(),
       },
     });
   }
@@ -163,7 +160,7 @@ describe('E22.B - Franchise Rankings Caching (e2e)', () => {
     });
 
     it('should return same data structure on cache hit and miss', async () => {
-      const _period = getCurrentPeriod();
+      const period = getCurrentPeriod();
 
       const response1 = await request(app.getHttpServer())
         .get(`/franchise/rankings?period=${period}`)
@@ -223,7 +220,7 @@ describe('E22.B - Franchise Rankings Caching (e2e)', () => {
     });
 
     it('should measure response time difference between miss and hit', async () => {
-      const _period = getCurrentPeriod();
+      const period = getCurrentPeriod();
 
       // First call - cache miss (should take longer)
       const start1 = Date.now();

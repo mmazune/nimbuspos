@@ -60,7 +60,6 @@ describe('E22.D - Franchise Cache Invalidation (e2e)', () => {
       data: {
         name: 'E22D Test Org',
         slug: `e22d-test-${Date.now()}`,
-        tier: 'BASIC',
       },
     });
     testOrgId = org.id;
@@ -70,8 +69,7 @@ describe('E22.D - Franchise Cache Invalidation (e2e)', () => {
       data: {
         orgId: testOrgId,
         name: 'E22D Test Branch',
-        status: 'ACTIVE',
-        isHeadquarters: false,
+        address: 'Test Address',
       },
     });
     testBranchId = branch.id;
@@ -92,7 +90,7 @@ describe('E22.D - Franchise Cache Invalidation (e2e)', () => {
 
     // Create initial budget
     const period = '2025-11';
-    await prisma.budget.create({
+    await prisma.branchBudget.create({
       data: {
         orgId: testOrgId,
         branchId: testBranchId,

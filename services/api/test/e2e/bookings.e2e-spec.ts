@@ -29,8 +29,9 @@ describe('Bookings E2E', () => {
     await app.init();
 
     const prisma = app.get(PrismaService);
-    const factory = await createOrgWithUsers(prisma, 'e2e-bookings');
-    const event = await createEvent(prisma, factory.orgId, factory.branchId);
+    const prismaClient = prisma.client;
+    const factory = await createOrgWithUsers(prismaClient, 'e2e-bookings');
+    const event = await createEvent(prismaClient, factory.orgId, factory.branchId);
 
     eventId = event.id;
 

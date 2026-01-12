@@ -9,6 +9,7 @@
   "globalSetup": "<rootDir>/jest-e2e.setup.ts",
   "setupFilesAfterEnv": ["<rootDir>/handle-debug.setup.ts"],
   "moduleNameMapper": {
-    "^@simplewebauthn/server$": "<rootDir>/__mocks__/simplewebauthn.e2e.ts"
+    "^@simplewebauthn/server$": "<rootDir>/__mocks__/simplewebauthn.e2e.ts",
+    "^@api/(.*)$": "<rootDir>/../src/$1"
   }
 }
