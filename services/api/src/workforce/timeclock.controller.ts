@@ -155,26 +155,41 @@ export class TimeclockController {
   /**
    * GET /workforce/timeclock/entries
    * Get time entries (L2+ see own, L3+ see all)
+   * If from/to not provided, defaults to last 7 days
    */
   @Get('entries')
   @Roles('L2', 'L3', 'L4', 'L5')
   async getTimeEntries(
     @Query('branchId') branchId: string | undefined,
     @Query('userId') userId: string | undefined,
-    @Query('from') from: string,
-    @Query('to') to: string,
+    @Query('from') from: string | undefined,
+    @Query('to') to: string | undefined,
+    @Query('limit') limit: string | undefined,
     @Request() req: any,
   ) {
     // Staff (L2) can only see own entries
     const effectiveUserId =
       req.user.roleLevel === 'L2' ? req.user.id : userId;
 
-    return this.timeclockService.getTimeEntries({
+    // Default date range: last 7 days
+    const now = new Date();
+    const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+    
+    const fromDate = from ? new Date(from) : sevenDaysAgo;
+    const toDate = to ? new Date(to) : now;
+
+    const entries = await this.timeclockService.getTimeEntries({
       orgId: req.user.orgId,
       branchId,
       userId: effectiveUserId,
-      from: new Date(from),
-      to: new Date(to),
+      from: fromDate,
+      to: toDate,
     });
+
+    // Apply limit if specified
+    if (limit) {
+      return entries.slice(0, parseInt(limit, 10));
+    }
+    return entries;
   }
 }

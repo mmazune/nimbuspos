@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { FileText, Calendar, TrendingUp, Users, Mail } from 'lucide-react';
+import { authenticatedFetch, API_BASE_URL } from '@/lib/api';
 
 // Types matching backend
 type ReportType = 'SHIFT_END' | 'DAILY_SUMMARY' | 'WEEKLY_SUMMARY' | 'MONTHLY_SUMMARY' | 'FRANCHISE_WEEKLY';
@@ -57,7 +58,7 @@ interface PeriodDigestSummary {
   orderCount: number;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+// API_URL removed - using API_BASE_URL from @/lib/api
 
 export default function ReportsPage() {
   const queryClient = useQueryClient();
@@ -83,9 +84,7 @@ export default function ReportsPage() {
       const params = new URLSearchParams();
       if (branchId) params.append('branchId', branchId);
       
-      const res = await fetch(`${API_URL}/reports/subscriptions?${params}`, {
-        credentials: 'include',
-      });
+      const res = await authenticatedFetch(`${API_BASE_URL}/reports/subscriptions?${params}`);
       if (!res.ok) throw new Error('Failed to fetch subscriptions');
       return res.json();
     },
@@ -101,9 +100,7 @@ export default function ReportsPage() {
       if (to) params.append('to', to);
       params.append('limit', '20');
       
-      const res = await fetch(`${API_URL}/reports/shift-end/history?${params}`, {
-        credentials: 'include',
-      });
+      const res = await authenticatedFetch(`${API_BASE_URL}/reports/shift-end/history?${params}`);
       if (!res.ok) throw new Error('Failed to fetch shift-end reports');
       return res.json();
     },
@@ -120,9 +117,7 @@ export default function ReportsPage() {
       if (to) params.append('to', to);
       params.append('limit', '20');
       
-      const res = await fetch(`${API_URL}/reports/period/history?${params}`, {
-        credentials: 'include',
-      });
+      const res = await authenticatedFetch(`${API_BASE_URL}/reports/period/history?${params}`);
       if (!res.ok) throw new Error('Failed to fetch period digests');
       return res.json();
     },
@@ -131,10 +126,8 @@ export default function ReportsPage() {
   // Toggle subscription enabled
   const toggleSubscription = useMutation({
     mutationFn: async ({ id, enabled }: { id: string; enabled: boolean }) => {
-      const res = await fetch(`${API_URL}/reports/subscriptions/${id}`, {
+      const res = await authenticatedFetch(`${API_BASE_URL}/reports/subscriptions/${id}`, {
         method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
         body: JSON.stringify({ enabled }),
       });
       if (!res.ok) throw new Error('Failed to update subscription');

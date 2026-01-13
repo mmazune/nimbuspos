@@ -57,7 +57,7 @@ CREATE INDEX "depletion_cost_breakdowns_orgId_orderId_idx" ON "depletion_cost_br
 CREATE INDEX "depletion_cost_breakdowns_itemId_idx" ON "depletion_cost_breakdowns"("itemId");
 
 -- Foreign keys for inventory_cost_layers
-ALTER TABLE "inventory_cost_layers" ADD CONSTRAINT "inventory_cost_layers_orgId_fkey" FOREIGN KEY ("orgId") REFERENCES "organizations"("id") ON DELETE CASCADE ON UPDATE CASCADE;
+ALTER TABLE "inventory_cost_layers" ADD CONSTRAINT "inventory_cost_layers_orgId_fkey" FOREIGN KEY ("orgId") REFERENCES "orgs"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE "inventory_cost_layers" ADD CONSTRAINT "inventory_cost_layers_branchId_fkey" FOREIGN KEY ("branchId") REFERENCES "branches"("id") ON DELETE CASCADE ON UPDATE CASCADE;
 ALTER TABLE "inventory_cost_layers" ADD CONSTRAINT "inventory_cost_layers_itemId_fkey" FOREIGN KEY ("itemId") REFERENCES "inventory_items"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 ALTER TABLE "inventory_cost_layers" ADD CONSTRAINT "inventory_cost_layers_locationId_fkey" FOREIGN KEY ("locationId") REFERENCES "inventory_locations"("id") ON DELETE SET NULL ON UPDATE CASCADE;

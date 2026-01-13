@@ -41,6 +41,7 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { definePageMeta } from '@/lib/pageMeta';
+import { authenticatedFetch, API_BASE_URL } from '@/lib/api';
 
 /** Phase I2: Page metadata for action catalog */
 export const pageMeta = definePageMeta({
@@ -61,7 +62,7 @@ export const pageMeta = definePageMeta({
   allowedRoles: ['OWNER', 'MANAGER', 'SUPERVISOR', 'CASHIER'],
 });
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+// API_URL removed - using API_BASE_URL from @/lib/api
 
 interface CashSession {
   id: string;
@@ -91,9 +92,7 @@ export default function CashSessionsPage() {
   const { data: sessions = [], isLoading } = useQuery<CashSession[]>({
     queryKey: ['cash-sessions'],
     queryFn: async () => {
-      const res = await fetch(`${API_URL}/pos/cash-sessions`, {
-        credentials: 'include',
-      });
+      const res = await authenticatedFetch(`${API_BASE_URL}/pos/cash-sessions`);
       if (!res.ok) throw new Error('Failed to fetch sessions');
       return res.json();
     },
@@ -106,10 +105,8 @@ export default function CashSessionsPage() {
   // Open session mutation
   const openSessionMutation = useMutation({
     mutationFn: async (openingFloatCents: number) => {
-      const res = await fetch(`${API_URL}/pos/cash-sessions/open`, {
+      const res = await authenticatedFetch(`${API_BASE_URL}/pos/cash-sessions/open`, {
         method: 'POST',
-        credentials: 'include',
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ openingFloatCents }),
       });
       if (!res.ok) {
@@ -136,10 +133,8 @@ export default function CashSessionsPage() {
       countedCashCents: number;
       note?: string;
     }) => {
-      const res = await fetch(`${API_URL}/pos/cash-sessions/${sessionId}/close`, {
+      const res = await authenticatedFetch(`${API_BASE_URL}/pos/cash-sessions/${sessionId}/close`, {
         method: 'POST',
-        credentials: 'include',
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ countedCashCents, note }),
       });
       if (!res.ok) {
@@ -189,9 +184,7 @@ export default function CashSessionsPage() {
   // Export CSV
   const handleExport = useCallback(async () => {
     try {
-      const res = await fetch(`${API_URL}/pos/export/cash-sessions.csv`, {
-        credentials: 'include',
-      });
+      const res = await authenticatedFetch(`${API_BASE_URL}/pos/export/cash-sessions.csv`);
       if (!res.ok) throw new Error('Export failed');
       
       const blob = await res.blob();

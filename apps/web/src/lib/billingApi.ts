@@ -31,7 +31,7 @@ export async function fetchBillingPlans(): Promise<BillingPlanDto[]> {
 }
 
 export async function fetchOrgSubscription(): Promise<OrgSubscriptionDto> {
-  const res = await fetch(`${API_URL}/billing/org-subscription`, {
+  const res = await fetch(`${API_URL}/billing/subscription`, {
     credentials: "include",
   });
   
@@ -59,7 +59,7 @@ export async function fetchBillingUsage(): Promise<BillingUsageDto> {
 export async function fetchPlanChangeQuote(
   targetPlanId: BillingPlanId,
 ): Promise<PlanChangeQuoteDto> {
-  const res = await fetch(`${API_URL}/billing/org-subscription/quote-change`, {
+  const res = await fetch(`${API_URL}/billing/plan/quote`, {
     method: "POST",
     credentials: "include",
     headers: { "Content-Type": "application/json" },
@@ -77,11 +77,11 @@ export async function fetchPlanChangeQuote(
 export async function applyPlanChange(
   targetPlanId: BillingPlanId,
 ): Promise<OrgSubscriptionDto> {
-  const res = await fetch(`${API_URL}/billing/org-subscription/change-plan`, {
+  const res = await fetch(`${API_URL}/billing/plan/change`, {
     method: "POST",
     credentials: "include",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ targetPlanId }),
+    body: JSON.stringify({ planCode: targetPlanId }),
   });
   
   if (res.status === 401 || res.status === 419) {

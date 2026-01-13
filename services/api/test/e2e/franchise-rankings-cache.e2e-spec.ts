@@ -43,13 +43,13 @@ describe('E22.B - Franchise Rankings Caching (e2e)', () => {
   afterAll(async () => {
     // Clean up test data
     if (testUserId) {
-      await prisma.user.delete({ where: { id: testUserId } }).catch(() => {});
+      await prisma.user.delete({ where: { id: testUserId } }).catch(() => { });
     }
     if (testBranchId) {
-      await prisma.branch.delete({ where: { id: testBranchId } }).catch(() => {});
+      await prisma.branch.delete({ where: { id: testBranchId } }).catch(() => { });
     }
     if (testOrgId) {
-      await prisma.org.delete({ where: { id: testOrgId } }).catch(() => {});
+      await prisma.org.delete({ where: { id: testOrgId } }).catch(() => { });
     }
 
     await cleanup(app);
@@ -157,7 +157,7 @@ describe('E22.B - Franchise Rankings Caching (e2e)', () => {
         .expect(200);
 
       expect(response2.body.cached).toBe(true);
-      
+
       // Data should be identical
       expect(response2.body.data).toEqual(response1.body.data);
     });
@@ -247,7 +247,7 @@ describe('E22.B - Franchise Rankings Caching (e2e)', () => {
 
       // Log timing for monitoring
       console.log(`E22.B Timing: Cache MISS=${elapsed1}ms, Cache HIT=${elapsed2}ms`);
-      
+
       // Just ensure it's reasonably fast (avoid flaky tests)
       expect(elapsed2).toBeLessThan(1000);
     });

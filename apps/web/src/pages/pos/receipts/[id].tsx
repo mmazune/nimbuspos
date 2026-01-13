@@ -13,8 +13,7 @@ import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Printer, ArrowLeft, Loader2, AlertCircle } from 'lucide-react';
 import Link from 'next/link';
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+import { authenticatedFetch, API_BASE_URL } from '@/lib/api';
 
 interface TotalsSnapshot {
   subtotal: number;
@@ -53,9 +52,7 @@ export default function ReceiptPage() {
   const { data: receipt, isLoading, error } = useQuery<Receipt>({
     queryKey: ['pos-receipt', id],
     queryFn: async () => {
-      const res = await fetch(`${API_URL}/pos/receipts/${id}`, {
-        credentials: 'include',
-      });
+      const res = await authenticatedFetch(`${API_BASE_URL}/pos/receipts/${id}`);
       if (!res.ok) throw new Error('Failed to fetch receipt');
       return res.json();
     },

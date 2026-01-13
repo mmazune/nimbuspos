@@ -29,6 +29,28 @@ export class BookingsController {
   constructor(private readonly bookingsService: BookingsService) {}
 
   /**
+   * GET /bookings/list
+   * List all bookings for the org (L2+)
+   */
+  @Get('list')
+  @Roles('L2', 'L3', 'L4', 'L5')
+  async listBookings(@Request() req: any): Promise<any> {
+    return this.bookingsService.prisma.client.eventBooking.findMany({
+      where: {
+        event: {
+          orgId: req.user.orgId,
+        },
+      },
+      include: {
+        event: true,
+        eventTable: true,
+      },
+      orderBy: { createdAt: 'desc' },
+      take: 100,
+    });
+  }
+
+  /**
    * POST /bookings/events
    * Create or update event with tables (L4+)
    */
@@ -142,10 +164,16 @@ export class BookingsController {
   /**
    * GET /bookings/:id
    * Get full booking details (L2+)
+   * IMPORTANT: This route MUST come after /bookings/list to avoid conflicts
    */
   @Get(':id')
   @Roles('L2', 'L3', 'L4', 'L5')
   async getBooking(@Param('id') id: string, @Request() req: any): Promise<any> {
+    // Guard against 'list' being captured as ID
+    if (id === 'list' || id === 'events') {
+      throw new Error('Invalid booking ID');
+    }
+    
     const booking = await this.bookingsService.prisma.client.eventBooking.findUnique({
       where: { id },
       include: {

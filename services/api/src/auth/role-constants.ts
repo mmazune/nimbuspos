@@ -18,19 +18,21 @@ export const ROLE_HIERARCHY = {
 export const ROLE_TO_LEVEL = {
   // L1 roles
   WAITER: 'L1',
+  BARTENDER: 'L1',
   
   // L2 roles
   CASHIER: 'L2',
   SUPERVISOR: 'L2',
   TICKET_MASTER: 'L2',
   ASSISTANT_CHEF: 'L2',
+  CHEF: 'L2',
   
   // L3 roles
-  CHEF: 'L3',
   STOCK: 'L3',
   PROCUREMENT: 'L3',
   ASSISTANT_MANAGER: 'L3',
   EVENT_MANAGER: 'L3',
+  EVENTMGR: 'L3',
   HEAD_BARISTA: 'L3',
   
   // L4 roles
@@ -39,6 +41,7 @@ export const ROLE_TO_LEVEL = {
   
   // L5 roles (full access)
   OWNER: 'L5',
+  FRANCHISE_OWNER: 'L5',
   ADMIN: 'L5',
 } as const;
 

@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Download, Search, FileText, Receipt, FileSpreadsheet, FileCheck } from 'lucide-react';
+import { authenticatedFetch, API_BASE_URL } from '@/lib/api';
 
 // Document types matching backend schema
 type DocumentCategory = 
@@ -57,7 +58,7 @@ interface DocumentsResponse {
   total: number;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+// API_URL removed - using API_BASE_URL from @/lib/api
 
 export default function DocumentsPage() {
   const [search, setSearch] = useState('');
@@ -85,9 +86,7 @@ export default function DocumentsPage() {
       if (categoryFilter !== 'ALL') params.append('category', categoryFilter);
       params.append('limit', '200');
       
-      const res = await fetch(`${API_URL}/documents?${params}`, {
-        credentials: 'include',
-      });
+      const res = await authenticatedFetch(`${API_BASE_URL}/documents?${params}`);
       if (!res.ok) throw new Error('Failed to fetch documents');
       return res.json();
     },
@@ -222,7 +221,7 @@ export default function DocumentsPage() {
   };
 
   const handleDownload = (docId: string) => {
-    window.open(`${API_URL}/documents/${docId}/download`, '_blank');
+    window.open(`${API_BASE_URL}/documents/${docId}/download`, '_blank');
   };
 
   const setQuickFilter = (days: number) => {

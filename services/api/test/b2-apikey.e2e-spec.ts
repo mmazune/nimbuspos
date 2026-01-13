@@ -88,7 +88,7 @@ describe('API Key Security (E2E)', () => {
     await prisma.user.deleteMany({ where: { orgId } });
     await prisma.branch.deleteMany({ where: { orgId } });
     await prisma.org.deleteMany({ where: { id: orgId } });
-    
+
     // App cleanup
     await cleanup(app);
   });
@@ -174,7 +174,7 @@ describe('API Key Security (E2E)', () => {
   describe('Rate limiting', () => {
     it('should enforce rate limit on public endpoints', async () => {
       const rateLimit = parseInt(process.env.RATE_LIMIT_PUBLIC || '60');
-      
+
       // Make requests up to the limit
       for (let i = 0; i < Math.min(rateLimit, 10); i++) {
         await request(app.getHttpServer())

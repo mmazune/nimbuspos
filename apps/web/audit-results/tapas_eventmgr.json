@@ -1,0 +1,1042 @@
+{
+  "org": "tapas",
+  "role": "eventmgr",
+  "email": "eventmgr@tapas.demo.local",
+  "startedAt": "2026-01-13T12:07:09.398Z",
+  "completedAt": "2026-01-13T12:10:05.981Z",
+  "durationMs": 176583,
+  "loginSuccess": true,
+  "routesVisited": [
+    {
+      "path": "/dashboard",
+      "title": "",
+      "visitedAt": "2026-01-13T12:07:41.085Z",
+      "loadTimeMs": 5158,
+      "status": "success",
+      "apiCallsOnLoad": 11
+    },
+    {
+      "path": "/pos",
+      "title": "",
+      "visitedAt": "2026-01-13T12:07:52.051Z",
+      "loadTimeMs": 3807,
+      "status": "success",
+      "apiCallsOnLoad": 5
+    },
+    {
+      "path": "/reservations",
+      "title": "",
+      "visitedAt": "2026-01-13T12:08:13.938Z",
+      "loadTimeMs": 5850,
+      "status": "success",
+      "apiCallsOnLoad": 4
+    },
+    {
+      "path": "/settings",
+      "title": "",
+      "visitedAt": "2026-01-13T12:08:34.444Z",
+      "loadTimeMs": 4691,
+      "status": "success",
+      "apiCallsOnLoad": 3
+    },
+    {
+      "path": "/staff",
+      "title": "",
+      "visitedAt": "2026-01-13T12:08:53.350Z",
+      "loadTimeMs": 2651,
+      "status": "success",
+      "apiCallsOnLoad": 4
+    },
+    {
+      "path": "/workforce/my-availability",
+      "title": "",
+      "visitedAt": "2026-01-13T12:09:13.839Z",
+      "loadTimeMs": 6538,
+      "status": "success",
+      "apiCallsOnLoad": 4
+    },
+    {
+      "path": "/workforce/my-swaps",
+      "title": "",
+      "visitedAt": "2026-01-13T12:09:25.084Z",
+      "loadTimeMs": 11244,
+      "status": "error",
+      "error": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/workforce/my-swaps\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "apiCallsOnLoad": 0
+    },
+    {
+      "path": "/workforce/open-shifts",
+      "title": "",
+      "visitedAt": "2026-01-13T12:09:52.138Z",
+      "loadTimeMs": 10160,
+      "status": "success",
+      "apiCallsOnLoad": 5
+    },
+    {
+      "path": "/workspaces/event-manager",
+      "title": "",
+      "visitedAt": "2026-01-13T12:10:05.915Z",
+      "loadTimeMs": 4845,
+      "status": "success",
+      "apiCallsOnLoad": 2
+    }
+  ],
+  "controlsClicked": [
+    {
+      "route": "/dashboard",
+      "selector": "[data-testid=\"user-menu-trigger\"]",
+      "label": "user-menu-trigger",
+      "type": "menu",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "menu-opened"
+    },
+    {
+      "route": "/dashboard",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/dashboard",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/dashboard",
+      "selector": "button svg:has-text(\"[icon-button-2]\")",
+      "label": "[icon-button-2]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/dashboard",
+      "selector": "button svg:has-text(\"[icon-button-3]\")",
+      "label": "[icon-button-3]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-3]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/dashboard",
+      "selector": "button svg:has-text(\"[icon-button-4]\")",
+      "label": "[icon-button-4]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-4]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/dashboard",
+      "selector": "[data-testid=\"theme-toggle-btn\"]",
+      "label": "theme-toggle-btn",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"theme-toggle-btn\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button title=\"Switch to dark mode\" data-testid=\"theme-toggle-btn\" aria-label=\"Switch to dark mode\" class=\"inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-nimbus-mist hover:text-nimbus-navy h-11 w-11\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "route": "/dashboard",
+      "selector": "[data-testid=\"user-menu-trigger\"]",
+      "label": "user-menu-trigger",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"user-menu-trigger\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button aria-expanded=\"true\" aria-haspopup=\"menu\" data-testid=\"user-menu-trigger\" aria-label=\"User menu for Kelly Events\" class=\"flex items-center space-x-2 rounded-lg px-3 py-2 hover:bg-accent transition-colors\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "route": "/dashboard",
+      "selector": "[data-testid=\"dashboard-refresh-btn\"]",
+      "label": "dashboard-refresh-btn",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"dashboard-refresh-btn\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button title=\"Refresh data\" data-testid=\"dashboard-refresh-btn\" aria-label=\"Refresh dashboard data\" class=\"ml-2 p-1 hover:bg-muted rounded-md transition-colors\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button role=\"menuitem\" aria-label=\"Logout\" data-testid=\"logout-btn\" class=\"flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm text-destructive hover:bg-destructive/10 transition-colors\">…</button> from <header data-testid=\"topbar\" class=\"sticky top-0 z-30 flex h-16 items-center justify-between border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-6\">…</header> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - <button role=\"menuitem\" aria-label=\"Logout\" data-testid=\"logout-btn\" class=\"flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm text-destructive hover:bg-destructive/10 transition-colors\">…</button> from <header data-testid=\"topbar\" class=\"sticky top-0 z-30 flex h-16 items-center justify-between border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-6\">…</header> subtree intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"px-3 py-2 border-b\" data-testid=\"user-menu-header\">…</div> from <header data-testid=\"topbar\" class=\"sticky top-0 z-30 flex h-16 items-center justify-between border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-6\">…</header> subtree intercepts pointer events\u001b[22m\n\u001b[2m  2 × retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m      - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button role=\"menuitem\" aria-label=\"Logout\" data-testid=\"logout-btn\" class=\"flex w-full items-center space-x-2 rounded-md px-3 py-2 text-sm text-destructive hover:bg-destructive/10 transition-colors\">…</button> from <header data-testid=\"topbar\" class=\"sticky top-0 z-30 flex h-16 items-center justify-between border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 px-6\">…</header> subtree intercepts pointer events\u001b[22m\n\u001b[2m  - retrying click action\u001b[22m\n\u001b[2m    - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "route": "/dashboard",
+      "selector": "[data-testid=\"date-preset-7d\"]",
+      "label": "date-preset-7d",
+      "type": "button",
+      "safeToClick": false,
+      "clicked": false,
+      "outcome": "skipped-unsafe"
+    },
+    {
+      "route": "/pos",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n\u001b[2m    - waiting for\" http://localhost:3000/login?reason=session_expired\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"http://localhost:3000/login?reason=session_expired\"\u001b[22m\n"
+    },
+    {
+      "route": "/pos",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/pos",
+      "selector": "button:not([type=\"submit\"]):has-text(\"[button-0]\")",
+      "label": "[button-0]",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/pos",
+      "selector": "[aria-label=\"Open Tanstack query devtools\"]",
+      "label": "Open Tanstack query devtools",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "no-op"
+    },
+    {
+      "route": "/reservations",
+      "selector": "select:has-text(\"Sort by status\nSort by query h\")",
+      "label": "Sort by status\nSort by query hash\nSort by last upd",
+      "type": "dropdown",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"select:has-text(\"Sort by status\nSort by query h\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for select:has-text(\"Sort by status\u001b[22m\n\u001b[2mSort by query h\") >> nth=0\u001b[22m\n"
+    },
+    {
+      "route": "/reservations",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/reservations",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/reservations",
+      "selector": "button svg:has-text(\"[icon-button-2]\")",
+      "label": "[icon-button-2]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/reservations",
+      "selector": "button svg:has-text(\"[icon-button-3]\")",
+      "label": "[icon-button-3]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-3]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/reservations",
+      "selector": "button svg:has-text(\"[icon-button-4]\")",
+      "label": "[icon-button-4]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-4]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/reservations",
+      "selector": "[data-testid=\"theme-toggle-btn\"]",
+      "label": "theme-toggle-btn",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "no-op"
+    },
+    {
+      "route": "/reservations",
+      "selector": "[data-testid=\"user-menu-trigger\"]",
+      "label": "user-menu-trigger",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "menu-opened"
+    },
+    {
+      "route": "/reservations",
+      "selector": "[data-testid=\"reservation-nav-policies\"]",
+      "label": "reservation-nav-policies",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"reservation-nav-policies\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button data-testid=\"reservation-nav-policies\" class=\"inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-nimbus-navy/20 bg-background hover:bg-nimbus-mist hover:text-nimbus-navy h-11 px-4 py-2\">⚙️ Policies</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n"
+    },
+    {
+      "route": "/reservations",
+      "selector": "[data-testid=\"reservation-nav-calendar\"]",
+      "label": "reservation-nav-calendar",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"reservation-nav-calendar\"]').first()\u001b[22m\n\u001b[2m    - waiting for\" http://localhost:3000/reservations/policies\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"http://localhost:3000/reservations/policies\"\u001b[22m\n"
+    },
+    {
+      "route": "/settings",
+      "selector": "select:has-text(\"Sort by status\nSort by query h\")",
+      "label": "Sort by status\nSort by query hash\nSort by last upd",
+      "type": "dropdown",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"select:has-text(\"Sort by status\nSort by query h\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for select:has-text(\"Sort by status\u001b[22m\n\u001b[2mSort by query h\") >> nth=0\u001b[22m\n"
+    },
+    {
+      "route": "/settings",
+      "selector": "[data-testid=\"theme-toggle-btn\"]",
+      "label": "theme-toggle-btn",
+      "type": "toggle",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "no-op"
+    },
+    {
+      "route": "/settings",
+      "selector": "[data-testid=\"user-menu-container\"]",
+      "label": "user-menu-container",
+      "type": "menu",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "menu-opened"
+    },
+    {
+      "route": "/settings",
+      "selector": "[data-testid=\"user-menu-trigger\"]",
+      "label": "user-menu-trigger",
+      "type": "menu",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"user-menu-trigger\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button aria-expanded=\"true\" aria-haspopup=\"menu\" data-testid=\"user-menu-trigger\" aria-label=\"User menu for Kelly Events\" class=\"flex items-center space-x-2 rounded-lg px-3 py-2 hover:bg-accent transition-colors\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n"
+    },
+    {
+      "route": "/settings",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/settings",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/settings",
+      "selector": "button svg:has-text(\"[icon-button-2]\")",
+      "label": "[icon-button-2]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/settings",
+      "selector": "button svg:has-text(\"[icon-button-3]\")",
+      "label": "[icon-button-3]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-3]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/settings",
+      "selector": "button svg:has-text(\"[icon-button-4]\")",
+      "label": "[icon-button-4]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-4]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/settings",
+      "selector": "[data-testid=\"theme-toggle-btn\"]",
+      "label": "theme-toggle-btn",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"theme-toggle-btn\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button title=\"Switch to light mode\" data-testid=\"theme-toggle-btn\" aria-label=\"Switch to light mode\" class=\"inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-nimbus-mist hover:text-nimbus-navy h-11 w-11\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n"
+    },
+    {
+      "route": "/staff",
+      "selector": "select:has-text(\"Sort by status\nSort by query h\")",
+      "label": "Sort by status\nSort by query hash\nSort by last upd",
+      "type": "dropdown",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"select:has-text(\"Sort by status\nSort by query h\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for select:has-text(\"Sort by status\u001b[22m\n\u001b[2mSort by query h\") >> nth=0\u001b[22m\n"
+    },
+    {
+      "route": "/staff",
+      "selector": "input[placeholder*=\"search\" i]:has-text(\"[search-0]\")",
+      "label": "[search-0]",
+      "type": "search",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder*=\"search\" i]:has-text(\"[search-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/staff",
+      "selector": "[data-testid=\"theme-toggle-btn\"]",
+      "label": "theme-toggle-btn",
+      "type": "toggle",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "no-op"
+    },
+    {
+      "route": "/staff",
+      "selector": "[data-testid=\"user-menu-container\"]",
+      "label": "user-menu-container",
+      "type": "menu",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "menu-opened"
+    },
+    {
+      "route": "/staff",
+      "selector": "[data-testid=\"user-menu-trigger\"]",
+      "label": "user-menu-trigger",
+      "type": "menu",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"user-menu-trigger\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button aria-expanded=\"true\" aria-haspopup=\"menu\" data-testid=\"user-menu-trigger\" aria-label=\"User menu for Kelly Events\" class=\"flex items-center space-x-2 rounded-lg px-3 py-2 hover:bg-accent transition-colors\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n"
+    },
+    {
+      "route": "/staff",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/staff",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/staff",
+      "selector": "button svg:has-text(\"[icon-button-2]\")",
+      "label": "[icon-button-2]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/staff",
+      "selector": "button svg:has-text(\"[icon-button-3]\")",
+      "label": "[icon-button-3]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-3]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/staff",
+      "selector": "button svg:has-text(\"[icon-button-4]\")",
+      "label": "[icon-button-4]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-4]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "selector": "select:has-text(\"Sort by status\nSort by query h\")",
+      "label": "Sort by status\nSort by query hash\nSort by last upd",
+      "type": "dropdown",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"select:has-text(\"Sort by status\nSort by query h\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for select:has-text(\"Sort by status\u001b[22m\n\u001b[2mSort by query h\") >> nth=0\u001b[22m\n"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "selector": "button svg:has-text(\"[icon-button-2]\")",
+      "label": "[icon-button-2]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "selector": "button svg:has-text(\"[icon-button-3]\")",
+      "label": "[icon-button-3]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-3]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "selector": "button svg:has-text(\"[icon-button-4]\")",
+      "label": "[icon-button-4]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-4]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "selector": "button:not([type=\"submit\"]):has-text(\"Refresh\")",
+      "label": "Refresh",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "no-op"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "selector": "button:not([type=\"submit\"]):has-text(\"Weekly Availability\")",
+      "label": "Weekly Availability",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "no-op"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "selector": "button:not([type=\"submit\"]):has-text(\"Date Exceptions\")",
+      "label": "Date Exceptions",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "no-op"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "selector": "button:not([type=\"submit\"]):has-text(\"Add Slot\")",
+      "label": "Add Slot",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"Add Slot\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "selector": "select:has-text(\"Sort by status\nSort by query h\")",
+      "label": "Sort by status\nSort by query hash\nSort by last upd",
+      "type": "dropdown",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"select:has-text(\"Sort by status\nSort by query h\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for select:has-text(\"Sort by status\u001b[22m\n\u001b[2mSort by query h\") >> nth=0\u001b[22m\n"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "selector": "button svg:has-text(\"[icon-button-2]\")",
+      "label": "[icon-button-2]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "selector": "button svg:has-text(\"[icon-button-3]\")",
+      "label": "[icon-button-3]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-3]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "selector": "button svg:has-text(\"[icon-button-4]\")",
+      "label": "[icon-button-4]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-4]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "selector": "button:not([type=\"submit\"]):has-text(\"Refresh\")",
+      "label": "Refresh",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "no-op"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "selector": "button:not([type=\"submit\"]):has-text(\"[button-1]\")",
+      "label": "[button-1]",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "selector": "[aria-label=\"Close tanstack query devtools\"]",
+      "label": "Close tanstack query devtools",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "no-op"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "selector": "[aria-label=\"Close Tanstack query devtools\"]",
+      "label": "Close Tanstack query devtools",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[aria-label=\"Close Tanstack query devtools\"]').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workspaces/event-manager",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workspaces/event-manager",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workspaces/event-manager",
+      "selector": "[data-testid=\"theme-toggle-btn\"]",
+      "label": "theme-toggle-btn",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "no-op"
+    },
+    {
+      "route": "/workspaces/event-manager",
+      "selector": "[data-testid=\"user-menu-trigger\"]",
+      "label": "user-menu-trigger",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "menu-opened"
+    },
+    {
+      "route": "/workspaces/event-manager",
+      "selector": "button:not([type=\"submit\"]):has-text(\"[button-2]\")",
+      "label": "[button-2]",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/workspaces/event-manager",
+      "selector": "[aria-label=\"Open Tanstack query devtools\"]",
+      "label": "Open Tanstack query devtools",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "menu-opened"
+    }
+  ],
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/analytics/daily-metrics",
+      "status": 403,
+      "count": 4,
+      "triggeredBy": "page-load"
+    },
+    {
+      "method": "GET",
+      "path": "/analytics/payment-mix",
+      "status": 200,
+      "count": 2,
+      "triggeredBy": "page-load"
+    },
+    {
+      "method": "GET",
+      "path": "/analytics/daily",
+      "status": 200,
+      "count": 2,
+      "triggeredBy": "page-load"
+    },
+    {
+      "method": "GET",
+      "path": "/analytics/category-mix",
+      "status": 200,
+      "count": 2,
+      "triggeredBy": "page-load"
+    },
+    {
+      "method": "GET",
+      "path": "/franchise/rankings",
+      "status": 403,
+      "count": 2,
+      "triggeredBy": "page-load"
+    },
+    {
+      "method": "GET",
+      "path": "/analytics/peak-hours",
+      "status": 200,
+      "count": 2,
+      "triggeredBy": "page-load"
+    },
+    {
+      "method": "GET",
+      "path": "/analytics/top-items",
+      "status": 200,
+      "count": 2,
+      "triggeredBy": "[data-testid=\"user-menu-trigger\"]"
+    },
+    {
+      "method": "GET",
+      "path": "/analytics/financial-summary",
+      "status": 403,
+      "count": 2,
+      "triggeredBy": "[data-testid=\"user-menu-trigger\"]"
+    },
+    {
+      "method": "GET",
+      "path": "/inventory/low-stock/alerts",
+      "status": 200,
+      "count": 3,
+      "triggeredBy": "[data-testid=\"user-menu-trigger\"]"
+    },
+    {
+      "method": "GET",
+      "path": "/me",
+      "status": 200,
+      "count": 21,
+      "triggeredBy": "[data-testid=\"user-menu-trigger\"]"
+    },
+    {
+      "method": "GET",
+      "path": "/branches",
+      "status": 200,
+      "count": 21,
+      "triggeredBy": "[data-testid=\"user-menu-trigger\"]"
+    },
+    {
+      "method": "GET",
+      "path": "/pos/orders",
+      "status": 401,
+      "count": 2,
+      "triggeredBy": "button svg:has-text(\"[icon-button-0]\")"
+    },
+    {
+      "method": "GET",
+      "path": "/menu/items",
+      "status": 200,
+      "count": 2,
+      "triggeredBy": "button svg:has-text(\"[icon-button-1]\")"
+    },
+    {
+      "method": "GET",
+      "path": "/billing/subscription",
+      "status": 401,
+      "count": 1,
+      "triggeredBy": "button svg:has-text(\"[icon-button-1]\")"
+    },
+    {
+      "method": "GET",
+      "path": "/bookings/list",
+      "status": 200,
+      "count": 1,
+      "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
+    },
+    {
+      "method": "GET",
+      "path": "/reservations",
+      "status": 200,
+      "count": 1,
+      "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
+    },
+    {
+      "method": "GET",
+      "path": "/reservations/policies",
+      "status": 404,
+      "count": 2,
+      "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
+    },
+    {
+      "method": "GET",
+      "path": "/hr/staff",
+      "status": 404,
+      "count": 1,
+      "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
+    },
+    {
+      "method": "GET",
+      "path": "/hr/employees",
+      "status": 200,
+      "count": 1,
+      "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
+    },
+    {
+      "method": "GET",
+      "path": "/workforce/self/availability",
+      "status": 200,
+      "count": 2,
+      "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
+    },
+    {
+      "method": "GET",
+      "path": "/workforce/self/availability/exceptions",
+      "status": 200,
+      "count": 2,
+      "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
+    },
+    {
+      "method": "GET",
+      "path": "/workforce/self/swaps",
+      "status": 200,
+      "count": 1,
+      "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
+    },
+    {
+      "method": "GET",
+      "path": "/workforce/self/open-shifts/claims",
+      "status": 404,
+      "count": 2,
+      "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
+    },
+    {
+      "method": "GET",
+      "path": "/workforce/self/open-shifts",
+      "status": 200,
+      "count": 2,
+      "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
+    }
+  ],
+  "failures": [
+    {
+      "route": "/dashboard",
+      "type": "api-forbidden",
+      "message": "403 Forbidden: GET /analytics/daily-metrics",
+      "endpoint": "/analytics/daily-metrics",
+      "status": 403
+    },
+    {
+      "route": "/dashboard",
+      "type": "api-forbidden",
+      "message": "403 Forbidden: GET /franchise/rankings",
+      "endpoint": "/franchise/rankings",
+      "status": 403
+    },
+    {
+      "route": "/dashboard",
+      "type": "api-forbidden",
+      "message": "403 Forbidden: GET /analytics/financial-summary",
+      "endpoint": "/analytics/financial-summary",
+      "status": 403
+    },
+    {
+      "route": "/dashboard",
+      "type": "api-forbidden",
+      "message": "403 Forbidden: GET /analytics/daily-metrics",
+      "endpoint": "/analytics/daily-metrics",
+      "status": 403
+    },
+    {
+      "route": "/dashboard",
+      "type": "api-forbidden",
+      "message": "403 Forbidden: GET /franchise/rankings",
+      "endpoint": "/franchise/rankings",
+      "status": 403
+    },
+    {
+      "route": "/dashboard",
+      "type": "api-forbidden",
+      "message": "403 Forbidden: GET /analytics/daily-metrics",
+      "endpoint": "/analytics/daily-metrics",
+      "status": 403
+    },
+    {
+      "route": "/dashboard",
+      "type": "api-forbidden",
+      "message": "403 Forbidden: GET /analytics/financial-summary",
+      "endpoint": "/analytics/financial-summary",
+      "status": 403
+    },
+    {
+      "route": "/dashboard",
+      "type": "api-forbidden",
+      "message": "403 Forbidden: GET /analytics/daily-metrics",
+      "endpoint": "/analytics/daily-metrics",
+      "status": 403
+    },
+    {
+      "route": "/pos",
+      "type": "api-unauthorized",
+      "message": "401 Unauthorized: GET /pos/orders",
+      "endpoint": "/pos/orders",
+      "status": 401
+    },
+    {
+      "route": "/pos",
+      "type": "api-unauthorized",
+      "message": "401 Unauthorized: GET /billing/subscription",
+      "endpoint": "/billing/subscription",
+      "status": 401
+    },
+    {
+      "route": "/pos",
+      "type": "api-unauthorized",
+      "message": "401 Unauthorized: GET /pos/orders",
+      "endpoint": "/pos/orders",
+      "status": 401
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "type": "route-error",
+      "message": "page.goto: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/workforce/my-swaps\", waiting until \"domcontentloaded\"\u001b[22m\n",
+      "screenshot": "error--workforce-my-swaps-1768306163863.png"
+    }
+  ],
+  "screenshots": [
+    "error--workforce-my-swaps-1768306163863.png"
+  ],
+  "summary": {
+    "routesTotal": 9,
+    "routesSuccess": 8,
+    "routesForbidden": 0,
+    "routesNotFound": 0,
+    "routesError": 1,
+    "controlsFound": 70,
+    "controlsClicked": 16,
+    "controlsSkipped": 54,
+    "endpointsHit": 24,
+    "endpoints2xx": 67,
+    "endpoints4xx": 16,
+    "endpoints5xx": 0,
+    "failuresTotal": 12
+  }
+}

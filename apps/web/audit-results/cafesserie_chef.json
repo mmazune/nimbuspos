@@ -1,0 +1,29 @@
+{
+  "org": "cafesserie",
+  "role": "chef",
+  "email": "chef@cafesserie.demo.local",
+  "startedAt": "2026-01-13T12:23:30.375Z",
+  "completedAt": "2026-01-13T12:23:40.075Z",
+  "durationMs": 9700,
+  "loginSuccess": true,
+  "routesVisited": [],
+  "controlsClicked": [],
+  "endpoints": [],
+  "failures": [],
+  "screenshots": [],
+  "summary": {
+    "routesTotal": 0,
+    "routesSuccess": 0,
+    "routesForbidden": 0,
+    "routesNotFound": 0,
+    "routesError": 0,
+    "controlsFound": 0,
+    "controlsClicked": 0,
+    "controlsSkipped": 0,
+    "endpointsHit": 0,
+    "endpoints2xx": 0,
+    "endpoints4xx": 0,
+    "endpoints5xx": 0,
+    "failuresTotal": 0
+  }
+}

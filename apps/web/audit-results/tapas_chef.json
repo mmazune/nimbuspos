@@ -1,0 +1,36 @@
+{
+  "org": "tapas",
+  "role": "chef",
+  "email": "chef@tapas.demo.local",
+  "startedAt": "2026-01-13T12:06:48.672Z",
+  "completedAt": "2026-01-13T12:06:54.411Z",
+  "durationMs": 5739,
+  "loginSuccess": false,
+  "routesVisited": [],
+  "controlsClicked": [],
+  "endpoints": [],
+  "failures": [
+    {
+      "route": "/login",
+      "type": "login-failed",
+      "message": "Redirected back to login after token injection. Cookie present: true, value length: 479"
+    }
+  ],
+  "screenshots": [],
+  "summary": {
+    "routesTotal": 0,
+    "routesSuccess": 0,
+    "routesForbidden": 0,
+    "routesNotFound": 0,
+    "routesError": 0,
+    "controlsFound": 0,
+    "controlsClicked": 0,
+    "controlsSkipped": 0,
+    "endpointsHit": 0,
+    "endpoints2xx": 0,
+    "endpoints4xx": 0,
+    "endpoints5xx": 0,
+    "failuresTotal": 1
+  },
+  "loginError": "Redirected back to login after token injection. Cookie present: true, value length: 479"
+}

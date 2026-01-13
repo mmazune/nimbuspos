@@ -116,7 +116,7 @@ export default function PosPage() {
   const [selectedCategory, setSelectedCategory] = useState<string>('ALL');
   const [selectedItemId, setSelectedItemId] = useState<string | null>(null);
   const [isSyncPanelOpen, setIsSyncPanelOpen] = useState(false);
-  
+
   // M26-EXT2: Modifier drawer state
   const [modifierDrawerOpen, setModifierDrawerOpen] = useState(false);
   const [modifierTarget, setModifierTarget] = useState<{
@@ -126,16 +126,16 @@ export default function PosPage() {
     basePrice: number;
     existingModifiers?: PosOrderLineModifier[];
   } | null>(null);
-  
+
   // M26-EXT3: Tabs management state
   const [tabsSidebarOpen, setTabsSidebarOpen] = useState(false);
   const [tabNameDialogOpen, setTabNameDialogOpen] = useState(false);
   const [tabNameDialogMode, setTabNameDialogMode] = useState<'create' | 'rename'>('create');
   const [tabNameDialogTarget, setTabNameDialogTarget] = useState<string | null>(null);
-  
+
   // M30-OPS-S1: Diagnostics panel state
   const [diagnosticsOpen, setDiagnosticsOpen] = useState(false);
-  
+
   const queryClient = useQueryClient();
 
   // M29-PWA-S2: Device role for multi-device deployment
@@ -1012,11 +1012,10 @@ export default function PosPage() {
                 <button
                   key={order.id}
                   onClick={() => setSelectedOrderId(order.id)}
-                  className={`w-full text-left p-3 border rounded-lg transition-colors ${
-                    selectedOrderId === order.id
+                  className={`w-full text-left p-3 border rounded-lg transition-colors ${selectedOrderId === order.id
                       ? 'border-blue-500 bg-blue-50'
                       : 'border-gray-200 hover:border-gray-300'
-                  }`}
+                    }`}
                 >
                   <div className="flex items-center justify-between mb-1">
                     <span className="font-medium">
@@ -1076,11 +1075,10 @@ export default function PosPage() {
                     <div
                       key={item.id}
                       onClick={() => setSelectedItemId(item.id)}
-                      className={`flex items-center gap-3 py-2 border-b last:border-b-0 cursor-pointer rounded px-1 transition-colors ${
-                        selectedItemId === item.id
+                      className={`flex items-center gap-3 py-2 border-b last:border-b-0 cursor-pointer rounded px-1 transition-colors ${selectedItemId === item.id
                           ? 'bg-blue-50 border-blue-200'
                           : 'hover:bg-gray-50'
-                      }`}
+                        }`}
                     >
                       {/* Item info */}
                       <div className="flex-1 min-w-0">

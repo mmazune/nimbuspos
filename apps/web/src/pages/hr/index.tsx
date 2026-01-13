@@ -6,6 +6,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Users, UserCheck, UserX, Clock, DollarSign, Award, TrendingUp } from 'lucide-react';
+import { authenticatedFetch, API_BASE_URL } from '@/lib/api';
 
 // Types matching backend
 type AttendanceStatus = 'PRESENT' | 'ABSENT' | 'LATE' | 'LEFT_EARLY' | 'COVERED';
@@ -108,7 +109,7 @@ interface AwardsResponse {
   total: number;
 }
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3000';
+// API_URL removed - using API_BASE_URL from @/lib/api
 
 export default function HRPage() {
   const [statusFilter, setStatusFilter] = useState<AttendanceStatus | 'ALL'>('ALL');
@@ -129,9 +130,7 @@ export default function HRPage() {
       const params = new URLSearchParams({ orgId });
       if (branchId) params.append('branchId', branchId);
       
-      const res = await fetch(`${API_URL}/hr/attendance/today-summary?${params}`, {
-        credentials: 'include',
-      });
+      const res = await authenticatedFetch(`${API_BASE_URL}/hr/attendance/today-summary?${params}`);
       if (!res.ok) throw new Error('Failed to fetch attendance summary');
       return res.json();
     },
@@ -146,9 +145,7 @@ export default function HRPage() {
       params.append('dateFrom', sevenDaysAgo.toISOString().split('T')[0]);
       params.append('dateTo', today.toISOString().split('T')[0]);
       
-      const res = await fetch(`${API_URL}/hr/attendance?${params}`, {
-        credentials: 'include',
-      });
+      const res = await authenticatedFetch(`${API_BASE_URL}/hr/attendance?${params}`);
       if (!res.ok) throw new Error('Failed to fetch attendance records');
       return res.json();
     },
@@ -162,9 +159,7 @@ export default function HRPage() {
       if (branchId) params.append('branchId', branchId);
       params.append('limit', '5');
       
-      const res = await fetch(`${API_URL}/payroll/runs?${params}`, {
-        credentials: 'include',
-      });
+      const res = await authenticatedFetch(`${API_BASE_URL}/payroll/runs?${params}`);
       if (!res.ok) throw new Error('Failed to fetch payroll runs');
       return res.json();
     },
@@ -178,9 +173,7 @@ export default function HRPage() {
       if (branchId) params.append('branchId', branchId);
       params.append('limit', '5');
       
-      const res = await fetch(`${API_URL}/staff/insights/awards?${params}`, {
-        credentials: 'include',
-      });
+      const res = await authenticatedFetch(`${API_BASE_URL}/staff/insights/awards?${params}`);
       if (!res.ok) throw new Error('Failed to fetch staff awards');
       return res.json();
     },
@@ -195,9 +188,7 @@ export default function HRPage() {
       params.append('status', 'PENDING');
       params.append('limit', '5');
       
-      const res = await fetch(`${API_URL}/staff/promotion-suggestions?${params}`, {
-        credentials: 'include',
-      });
+      const res = await authenticatedFetch(`${API_BASE_URL}/staff/promotion-suggestions?${params}`);
       if (!res.ok) throw new Error('Failed to fetch promotion suggestions');
       return res.json();
     },

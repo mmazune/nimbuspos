@@ -102,8 +102,8 @@ export default function CheckoutPage() {
 
   // Create payment mutation
   const createPayment = useMutation({
-    mutationFn: async ({ method, amountCents, cardToken }: { 
-      method: 'CASH' | 'CARD'; 
+    mutationFn: async ({ method, amountCents, cardToken }: {
+      method: 'CASH' | 'CARD';
       amountCents: number;
       cardToken?: string;
     }) => {
@@ -113,8 +113,8 @@ export default function CheckoutPage() {
         headers: {
           'x-idempotency-key': idempotencyKey,
         },
-        body: JSON.stringify({ 
-          method, 
+        body: JSON.stringify({
+          method,
           amountCents,
           ...(cardToken && { cardToken }),
         }),
@@ -128,7 +128,7 @@ export default function CheckoutPage() {
     onSuccess: (data) => {
       setPaymentError(null);
       queryClient.invalidateQueries({ queryKey: ['pos-order', orderId] });
-      
+
       // If card payment needs capture, track it
       if (data.method === 'CARD' && data.posStatus === 'AUTHORIZED') {
         setPendingCardPaymentId(data.id);
@@ -213,8 +213,8 @@ export default function CheckoutPage() {
     const amount = customAmount ? Math.round(parseFloat(customAmount) * 100) : remainingCents;
     if (amount <= 0) return;
     // Use test-token-success for development
-    createPayment.mutate({ 
-      method: 'CARD', 
+    createPayment.mutate({
+      method: 'CARD',
       amountCents: amount,
       cardToken: 'test-token-success',
     });
@@ -275,7 +275,7 @@ export default function CheckoutPage() {
 
   return (
     <AppShell>
-      <PageHeader 
+      <PageHeader
         title={`Checkout - Order #${order.orderNumber}`}
         actions={
           <Link href="/pos">
@@ -291,7 +291,7 @@ export default function CheckoutPage() {
         {/* Order Summary */}
         <Card className="p-6">
           <h2 className="mb-4 text-lg font-semibold">Order Summary</h2>
-          
+
           <div className="space-y-2 border-b pb-4">
             {order.items.map((item) => (
               <div key={item.id} className="flex justify-between text-sm">
@@ -379,8 +379,8 @@ export default function CheckoutPage() {
                   Card authorized. Click Capture to complete the transaction.
                 </AlertDescription>
               </Alert>
-              <Button 
-                className="mt-3 w-full" 
+              <Button
+                className="mt-3 w-full"
                 onClick={handleCapture}
                 disabled={isProcessing}
               >

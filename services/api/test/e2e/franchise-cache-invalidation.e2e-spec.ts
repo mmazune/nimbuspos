@@ -42,13 +42,13 @@ describe('E22.D - Franchise Cache Invalidation (e2e)', () => {
   afterAll(async () => {
     // Clean up test data
     if (testUserId) {
-      await prisma.user.delete({ where: { id: testUserId } }).catch(() => {});
+      await prisma.user.delete({ where: { id: testUserId } }).catch(() => { });
     }
     if (testBranchId) {
-      await prisma.branch.delete({ where: { id: testBranchId } }).catch(() => {});
+      await prisma.branch.delete({ where: { id: testBranchId } }).catch(() => { });
     }
     if (testOrgId) {
-      await prisma.org.delete({ where: { id: testOrgId } }).catch(() => {});
+      await prisma.org.delete({ where: { id: testOrgId } }).catch(() => { });
     }
 
     await cleanup(app);

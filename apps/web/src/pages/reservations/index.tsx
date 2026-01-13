@@ -9,7 +9,7 @@ import { Input } from '@/components/ui/input';
 import { useAuth } from '@/contexts/AuthContext';
 import { apiClient } from '@/lib/api';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+// API_URL removed - using apiClient from @/lib/api
 
 interface Reservation {
   id: string;
@@ -109,12 +109,8 @@ export default function ReservationsPage() {
 
   const cancelMutation = useMutation({
     mutationFn: async (id: string) => {
-      const res = await fetch(`${API_URL}/reservations/${id}/cancel`, {
-        method: 'POST',
-        credentials: 'include',
-      });
-      if (!res.ok) throw new Error('Failed to cancel');
-      return res.json();
+      const res = await apiClient.post(`/reservations/${id}/cancel`);
+      return res.data;
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['reservations'] });
@@ -123,12 +119,8 @@ export default function ReservationsPage() {
 
   const seatMutation = useMutation({
     mutationFn: async (id: string) => {
-      const res = await fetch(`${API_URL}/reservations/${id}/seat`, {
-        method: 'POST',
-        credentials: 'include',
-      });
-      if (!res.ok) throw new Error('Failed to seat');
-      return res.json();
+      const res = await apiClient.post(`/reservations/${id}/seat`);
+      return res.data;
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['reservations'] });

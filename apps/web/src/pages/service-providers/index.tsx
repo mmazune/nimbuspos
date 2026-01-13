@@ -10,7 +10,7 @@ import { Drawer } from '@/components/ui/drawer';
 import { useAuth } from '@/contexts/AuthContext';
 import { apiClient } from '@/lib/api';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+// API_URL removed - using apiClient from @/lib/api
 
 interface ServiceProvider {
   id: string;
@@ -120,14 +120,8 @@ export default function ServiceProvidersPage() {
   // Update provider mutation
   const updateMutation = useMutation({
     mutationFn: async ({ id, data }: { id: string; data: Partial<ServiceProvider> }) => {
-      const res = await fetch(`${API_URL}/service-providers/${id}`, {
-        method: 'PATCH',
-        headers: { 'Content-Type': 'application/json' },
-        credentials: 'include',
-        body: JSON.stringify(data),
-      });
-      if (!res.ok) throw new Error('Failed to update provider');
-      return res.json();
+      const res = await apiClient.patch(`/service-providers/${id}`, data);
+      return res.data;
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['service-providers'] });

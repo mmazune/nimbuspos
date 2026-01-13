@@ -1,32 +1,31 @@
 # Nimbus POS / ChefCloud — Session State
 
-date: 2026-01-10
+date: 2026-01-13
 repo: mmazune/nimbuspos
 branch: main
 head_sha: c2465ffaf229da050eaa84111b0ab78b0676cd7d
-objective: "Phase I1-I2 — Role Navigation Trees + Page Action Catalog"
+objective: "Milestone 9 — Role Audit Re-run + 5xx Burndown"
 
 definition_of_done:
-  - Role nav tree generator created (scripts/analysis/generate-role-nav-trees.mjs)
-  - Page action catalog generator created (scripts/analysis/generate-page-action-catalog.mjs)
-  - All 11 roles mapped with nav groups and landing routes
-  - 8+ high-traffic pages annotated with pageMeta
-  - Reports generated (reports/navigation/)
-  - Docs generated (docs/navigation/)
-  - npm scripts added (nav:generate, actions:generate)
-  - AI_INDEX.json updated with navigation pointers
-  - lint+build pass
-  - Atomic commit with proof
+  - Re-run 19-role UI audit with stable runtime
+  - Eliminate all P0 (5xx) server errors
+  - Generate fresh AGGREGATE_REPORT.md
+  - Achieve >50% reduction in total failures
+  - Create M9 completion report
 
 gates_required:
-  - pnpm verify:no-wip-imports
-  - pnpm -C services/api lint
-  - pnpm -C apps/web lint
-  - pnpm -C services/api build
-  - pnpm -C apps/web build
+  - API healthy on localhost:3001
+  - Web healthy on localhost:3000
+  - pnpm ui:audit completes for all 19 roles
+  - AGGREGATE_REPORT.md shows 0 5xx errors
 
 notes: |
-  Phase I is navigation/action documentation.
-  I1 = Role navigation trees for all 11 roles
-  I2 = Page action catalog with pageMeta convention
-  Generators produce deterministic outputs for stable diffs.
+  M9 builds on M7 (audit execution) and M8 (API startup fix).
+  Prior baseline: 328 failures, 29 5xx
+  Final result: 111 failures, 0 5xx (66% improvement)
+  All 5xx errors were transient DB/startup issues, now resolved.
+  
+completed_milestones:
+  - M7: Role UI Audit (baseline metrics)
+  - M8: API Startup Fix (PowerShell stdin issue)
+  - M9: 5xx Burndown (100% 5xx elimination)
