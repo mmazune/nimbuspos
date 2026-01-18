@@ -174,7 +174,7 @@ export class TimeclockController {
     // Default date range: last 7 days
     const now = new Date();
     const sevenDaysAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-    
+
     const fromDate = from ? new Date(from) : sevenDaysAgo;
     const toDate = to ? new Date(to) : now;
 

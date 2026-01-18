@@ -26,7 +26,7 @@ import { IdempotencyInterceptor } from '../common/idempotency.interceptor';
 @Controller('bookings')
 @UseGuards(AuthGuard('jwt'), RolesGuard)
 export class BookingsController {
-  constructor(private readonly bookingsService: BookingsService) {}
+  constructor(private readonly bookingsService: BookingsService) { }
 
   /**
    * GET /bookings/list
@@ -173,7 +173,7 @@ export class BookingsController {
     if (id === 'list' || id === 'events') {
       throw new Error('Invalid booking ID');
     }
-    
+
     const booking = await this.bookingsService.prisma.client.eventBooking.findUnique({
       where: { id },
       include: {

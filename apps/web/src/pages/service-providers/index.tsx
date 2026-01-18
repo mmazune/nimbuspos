@@ -133,7 +133,7 @@ export default function ServiceProvidersPage() {
 
   // Filtered providers
   const filteredProviders = providers.filter((p) => {
-    const matchesSearch = !search || 
+    const matchesSearch = !search ||
       p.name.toLowerCase().includes(search.toLowerCase()) ||
       p.category.toLowerCase().includes(search.toLowerCase());
     const matchesActive = !showActiveOnly || p.isActive;
@@ -143,7 +143,7 @@ export default function ServiceProvidersPage() {
   // Calculate summary stats
   const activeProviders = providers.filter((p) => p.isActive).length;
   const totalActiveContracts = contracts.filter((c) => c.status === 'ACTIVE').length;
-  
+
   // Estimate monthly spend
   const monthlySpend = contracts
     .filter((c) => c.status === 'ACTIVE')
@@ -393,93 +393,93 @@ export default function ServiceProvidersPage() {
         size="md"
       >
         <div className="space-y-4 p-6">
-            <div>
-              <label className="text-sm font-medium mb-2 block">Name</label>
-              <Input
-                value={editForm.name || ''}
-                onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
-              />
-            </div>
-            <div>
-              <label className="text-sm font-medium mb-2 block">Category</label>
-              <select
-                className="w-full px-3 py-2 border rounded-md"
-                value={editForm.category || ''}
-                onChange={(e) => setEditForm({ ...editForm, category: e.target.value })}
-              >
-                <option value="RENT">Rent</option>
-                <option value="UTILITIES">Utilities</option>
-                <option value="ISP">Internet Service Provider</option>
-                <option value="SECURITY">Security</option>
-                <option value="CLEANING">Cleaning</option>
-                <option value="MAINTENANCE">Maintenance</option>
-                <option value="ENTERTAINMENT">Entertainment</option>
-                <option value="OTHER">Other</option>
-              </select>
-            </div>
-            <div>
-              <label className="text-sm font-medium mb-2 block">Contact Name</label>
-              <Input
-                value={editForm.contactName || ''}
-                onChange={(e) => setEditForm({ ...editForm, contactName: e.target.value })}
-              />
-            </div>
-            <div>
-              <label className="text-sm font-medium mb-2 block">Contact Email</label>
-              <Input
-                type="email"
-                value={editForm.contactEmail || ''}
-                onChange={(e) => setEditForm({ ...editForm, contactEmail: e.target.value })}
-              />
-            </div>
-            <div>
-              <label className="text-sm font-medium mb-2 block">Contact Phone</label>
-              <Input
-                value={editForm.contactPhone || ''}
-                onChange={(e) => setEditForm({ ...editForm, contactPhone: e.target.value })}
-              />
-            </div>
-            <div>
-              <label className="text-sm font-medium mb-2 block">Notes</label>
-              <textarea
-                className="w-full px-3 py-2 border rounded-md min-h-[80px]"
-                value={editForm.notes || ''}
-                onChange={(e) => setEditForm({ ...editForm, notes: e.target.value })}
-              />
-            </div>
-            <div className="flex items-center gap-2">
-              <input
-                type="checkbox"
-                id="isActive"
-                checked={editForm.isActive || false}
-                onChange={(e) => setEditForm({ ...editForm, isActive: e.target.checked })}
-                className="rounded"
-              />
-              <label htmlFor="isActive" className="text-sm font-medium">
-                Active
-              </label>
-            </div>
-            <div className="flex gap-2 pt-4">
-              <Button
-                onClick={handleSubmit}
-                disabled={updateMutation.isPending}
-                className="flex-1"
-              >
-                {updateMutation.isPending ? 'Saving...' : 'Save Changes'}
-              </Button>
-              <Button
-                variant="outline"
-                onClick={() => {
-                  setDrawerOpen(false);
-                  setEditingProvider(null);
-                  setEditForm({});
-                }}
-                className="flex-1"
-              >
-                Cancel
-              </Button>
-            </div>
+          <div>
+            <label className="text-sm font-medium mb-2 block">Name</label>
+            <Input
+              value={editForm.name || ''}
+              onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
+            />
           </div>
+          <div>
+            <label className="text-sm font-medium mb-2 block">Category</label>
+            <select
+              className="w-full px-3 py-2 border rounded-md"
+              value={editForm.category || ''}
+              onChange={(e) => setEditForm({ ...editForm, category: e.target.value })}
+            >
+              <option value="RENT">Rent</option>
+              <option value="UTILITIES">Utilities</option>
+              <option value="ISP">Internet Service Provider</option>
+              <option value="SECURITY">Security</option>
+              <option value="CLEANING">Cleaning</option>
+              <option value="MAINTENANCE">Maintenance</option>
+              <option value="ENTERTAINMENT">Entertainment</option>
+              <option value="OTHER">Other</option>
+            </select>
+          </div>
+          <div>
+            <label className="text-sm font-medium mb-2 block">Contact Name</label>
+            <Input
+              value={editForm.contactName || ''}
+              onChange={(e) => setEditForm({ ...editForm, contactName: e.target.value })}
+            />
+          </div>
+          <div>
+            <label className="text-sm font-medium mb-2 block">Contact Email</label>
+            <Input
+              type="email"
+              value={editForm.contactEmail || ''}
+              onChange={(e) => setEditForm({ ...editForm, contactEmail: e.target.value })}
+            />
+          </div>
+          <div>
+            <label className="text-sm font-medium mb-2 block">Contact Phone</label>
+            <Input
+              value={editForm.contactPhone || ''}
+              onChange={(e) => setEditForm({ ...editForm, contactPhone: e.target.value })}
+            />
+          </div>
+          <div>
+            <label className="text-sm font-medium mb-2 block">Notes</label>
+            <textarea
+              className="w-full px-3 py-2 border rounded-md min-h-[80px]"
+              value={editForm.notes || ''}
+              onChange={(e) => setEditForm({ ...editForm, notes: e.target.value })}
+            />
+          </div>
+          <div className="flex items-center gap-2">
+            <input
+              type="checkbox"
+              id="isActive"
+              checked={editForm.isActive || false}
+              onChange={(e) => setEditForm({ ...editForm, isActive: e.target.checked })}
+              className="rounded"
+            />
+            <label htmlFor="isActive" className="text-sm font-medium">
+              Active
+            </label>
+          </div>
+          <div className="flex gap-2 pt-4">
+            <Button
+              onClick={handleSubmit}
+              disabled={updateMutation.isPending}
+              className="flex-1"
+            >
+              {updateMutation.isPending ? 'Saving...' : 'Save Changes'}
+            </Button>
+            <Button
+              variant="outline"
+              onClick={() => {
+                setDrawerOpen(false);
+                setEditingProvider(null);
+                setEditForm({});
+              }}
+              className="flex-1"
+            >
+              Cancel
+            </Button>
+          </div>
+        </div>
       </Drawer>
     </AppShell>
   );

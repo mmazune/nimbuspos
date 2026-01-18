@@ -149,8 +149,8 @@ function generateMarkdownReport(result: RoleAuditResult): string {
   for (const route of result.routesVisited) {
     const statusIcon =
       route.status === 'success' ? '✅' :
-      route.status === 'forbidden' ? '🚫' :
-      route.status === 'not-found' ? '❓' : '❌';
+        route.status === 'forbidden' ? '🚫' :
+          route.status === 'not-found' ? '❓' : '❌';
     md += `| ${route.path} | ${statusIcon} ${route.status} | ${route.loadTimeMs}ms |\n`;
   }
 
@@ -226,7 +226,7 @@ test.describe('Role Audit Harness', () => {
     test(`Audit ${config.org}/${config.role}`, async ({ page }) => {
       // Per-test timeout - 3.5 minutes for full crawl + cleanup
       test.setTimeout(210_000);
-      
+
       const result = createEmptyAuditResult(config);
       const screenshotDir = path.join(OUTPUT_DIR, 'screenshots', `${config.org}_${config.role}`);
 

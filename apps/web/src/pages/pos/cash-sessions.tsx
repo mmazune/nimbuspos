@@ -29,12 +29,12 @@ import {
   DialogHeader,
   DialogTitle,
 } from '@/components/ui/dialog';
-import { 
-  DollarSign, 
-  Plus, 
-  XCircle, 
-  CheckCircle, 
-  Loader2, 
+import {
+  DollarSign,
+  Plus,
+  XCircle,
+  CheckCircle,
+  Loader2,
   AlertCircle,
   Download,
   ArrowLeft
@@ -79,7 +79,7 @@ interface CashSession {
 
 export default function CashSessionsPage() {
   const queryClient = useQueryClient();
-  
+
   const [openDialogVisible, setOpenDialogVisible] = useState(false);
   const [closeDialogVisible, setCloseDialogVisible] = useState(false);
   const [selectedSession, setSelectedSession] = useState<CashSession | null>(null);
@@ -186,7 +186,7 @@ export default function CashSessionsPage() {
     try {
       const res = await authenticatedFetch(`${API_BASE_URL}/pos/export/cash-sessions.csv`);
       if (!res.ok) throw new Error('Export failed');
-      
+
       const blob = await res.blob();
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
@@ -215,7 +215,7 @@ export default function CashSessionsPage() {
 
   return (
     <AppShell>
-      <PageHeader 
+      <PageHeader
         title="Cash Sessions"
         actions={
           <div className="flex gap-2">
@@ -387,7 +387,7 @@ export default function CashSessionsPage() {
             <Button variant="outline" onClick={() => setOpenDialogVisible(false)}>
               Cancel
             </Button>
-            <Button 
+            <Button
               onClick={handleOpenSession}
               disabled={openSessionMutation.isPending}
               data-testid="cash-confirm-open"
@@ -442,7 +442,7 @@ export default function CashSessionsPage() {
             <Button variant="outline" onClick={() => setCloseDialogVisible(false)}>
               Cancel
             </Button>
-            <Button 
+            <Button
               variant="destructive"
               onClick={handleCloseSession}
               disabled={closeSessionMutation.isPending}

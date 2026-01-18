@@ -21,12 +21,12 @@ export async function fetchBillingPlans(): Promise<BillingPlanDto[]> {
   const res = await fetch(`${API_URL}/billing/plans`, {
     credentials: "include",
   });
-  
+
   if (res.status === 401 || res.status === 419) {
     handleAuthHttpError(res.status);
     throw new Error('Unauthorized');
   }
-  
+
   return handleJson<BillingPlanDto[]>(res);
 }
 
@@ -34,12 +34,12 @@ export async function fetchOrgSubscription(): Promise<OrgSubscriptionDto> {
   const res = await fetch(`${API_URL}/billing/subscription`, {
     credentials: "include",
   });
-  
+
   if (res.status === 401 || res.status === 419) {
     handleAuthHttpError(res.status);
     throw new Error('Unauthorized');
   }
-  
+
   return handleJson<OrgSubscriptionDto>(res);
 }
 
@@ -47,12 +47,12 @@ export async function fetchBillingUsage(): Promise<BillingUsageDto> {
   const res = await fetch(`${API_URL}/billing/usage`, {
     credentials: "include",
   });
-  
+
   if (res.status === 401 || res.status === 419) {
     handleAuthHttpError(res.status);
     throw new Error('Unauthorized');
   }
-  
+
   return handleJson<BillingUsageDto>(res);
 }
 
@@ -65,12 +65,12 @@ export async function fetchPlanChangeQuote(
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ targetPlanId }),
   });
-  
+
   if (res.status === 401 || res.status === 419) {
     handleAuthHttpError(res.status);
     throw new Error('Unauthorized');
   }
-  
+
   return handleJson<PlanChangeQuoteDto>(res);
 }
 
@@ -83,11 +83,11 @@ export async function applyPlanChange(
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ planCode: targetPlanId }),
   });
-  
+
   if (res.status === 401 || res.status === 419) {
     handleAuthHttpError(res.status);
     throw new Error('Unauthorized');
   }
-  
+
   return handleJson<OrgSubscriptionDto>(res);
 }

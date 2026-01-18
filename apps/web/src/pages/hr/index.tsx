@@ -129,7 +129,7 @@ export default function HRPage() {
     queryFn: async () => {
       const params = new URLSearchParams({ orgId });
       if (branchId) params.append('branchId', branchId);
-      
+
       const res = await authenticatedFetch(`${API_BASE_URL}/hr/attendance/today-summary?${params}`);
       if (!res.ok) throw new Error('Failed to fetch attendance summary');
       return res.json();
@@ -144,7 +144,7 @@ export default function HRPage() {
       if (branchId) params.append('branchId', branchId);
       params.append('dateFrom', sevenDaysAgo.toISOString().split('T')[0]);
       params.append('dateTo', today.toISOString().split('T')[0]);
-      
+
       const res = await authenticatedFetch(`${API_BASE_URL}/hr/attendance?${params}`);
       if (!res.ok) throw new Error('Failed to fetch attendance records');
       return res.json();
@@ -158,7 +158,7 @@ export default function HRPage() {
       const params = new URLSearchParams({ orgId });
       if (branchId) params.append('branchId', branchId);
       params.append('limit', '5');
-      
+
       const res = await authenticatedFetch(`${API_BASE_URL}/payroll/runs?${params}`);
       if (!res.ok) throw new Error('Failed to fetch payroll runs');
       return res.json();
@@ -172,7 +172,7 @@ export default function HRPage() {
       const params = new URLSearchParams();
       if (branchId) params.append('branchId', branchId);
       params.append('limit', '5');
-      
+
       const res = await authenticatedFetch(`${API_BASE_URL}/staff/insights/awards?${params}`);
       if (!res.ok) throw new Error('Failed to fetch staff awards');
       return res.json();
@@ -187,7 +187,7 @@ export default function HRPage() {
       if (branchId) params.append('branchId', branchId);
       params.append('status', 'PENDING');
       params.append('limit', '5');
-      
+
       const res = await authenticatedFetch(`${API_BASE_URL}/staff/promotion-suggestions?${params}`);
       if (!res.ok) throw new Error('Failed to fetch promotion suggestions');
       return res.json();
@@ -208,7 +208,7 @@ export default function HRPage() {
     const thisMonth = new Date();
     thisMonth.setDate(1);
     thisMonth.setHours(0, 0, 0, 0);
-    
+
     const monthlyRuns = payrollRuns.filter((run) => {
       const runDate = new Date(run.periodEnd);
       return runDate >= thisMonth;
@@ -268,9 +268,9 @@ export default function HRPage() {
 
   const formatDate = (isoDate: string): string => {
     const date = new Date(isoDate);
-    return date.toLocaleDateString('en-US', { 
-      month: 'short', 
-      day: 'numeric', 
+    return date.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
       year: 'numeric',
     });
   };
@@ -286,11 +286,11 @@ export default function HRPage() {
   const formatPeriod = (start: string, end: string): string => {
     const startDate = new Date(start);
     const endDate = new Date(end);
-    
+
     if (startDate.getMonth() === endDate.getMonth() && startDate.getFullYear() === endDate.getFullYear()) {
       return startDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
     }
-    
+
     return `${formatDate(start)} - ${formatDate(end)}`;
   };
 
@@ -325,7 +325,7 @@ export default function HRPage() {
               <p className="text-sm text-gray-600">Present Today</p>
               <p className="text-2xl font-bold">{attendanceSummary?.presentToday || 0}</p>
               <p className="text-xs text-gray-500">
-                {attendanceSummary?.totalEmployees 
+                {attendanceSummary?.totalEmployees
                   ? `${Math.round((attendanceSummary.presentToday / attendanceSummary.totalEmployees) * 100)}% attendance`
                   : 'N/A'
                 }

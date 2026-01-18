@@ -73,7 +73,7 @@ export async function discoverRoutes(page: Page): Promise<string[]> {
   const routes = new Set<string>();
 
   // Wait for sidebar to render (short timeout)
-  await page.waitForSelector('nav, aside, [role="navigation"]', { timeout: 5000 }).catch(() => {});
+  await page.waitForSelector('nav, aside, [role="navigation"]', { timeout: 5000 }).catch(() => { });
 
   // Get all internal links from navigation areas
   const navSelectors = [
@@ -175,13 +175,13 @@ export async function discoverControls(page: Page, route: string): Promise<Disco
 
   for (const { selector, type } of CONTROL_SELECTORS) {
     if (controls.length >= MAX_CONTROLS_PER_PAGE) break;
-    
+
     try {
       const elements = await page.locator(selector).all();
 
       for (let i = 0; i < Math.min(elements.length, 5); i++) {
         if (controls.length >= MAX_CONTROLS_PER_PAGE) break;
-        
+
         const el = elements[i];
 
         // Get unique identifier (with timeout)
@@ -512,7 +512,7 @@ export async function visitRoute(
         if (urlAfter !== urlBefore) {
           clickRecord.outcome = 'navigated';
           // Navigate back (short timeout)
-          await page.goBack({ waitUntil: 'domcontentloaded', timeout: 5000 }).catch(() => {});
+          await page.goBack({ waitUntil: 'domcontentloaded', timeout: 5000 }).catch(() => { });
           await waitForPageReady(page);
         } else {
           // Check for modals/menus
@@ -521,14 +521,14 @@ export async function visitRoute(
             clickRecord.outcome = 'modal-opened';
             // Close modal
             await page.keyboard.press('Escape');
-            await page.waitForTimeout(200).catch(() => {});
+            await page.waitForTimeout(200).catch(() => { });
           } else {
             const menu = await page.locator('[role="menu"]').first().isVisible().catch(() => false);
             if (menu) {
               clickRecord.outcome = 'menu-opened';
               // Close menu
               await page.keyboard.press('Escape');
-              await page.waitForTimeout(200).catch(() => {});
+              await page.waitForTimeout(200).catch(() => { });
             } else if (ctrl.type === 'tab') {
               clickRecord.outcome = 'tab-switched';
             } else if (ctrl.type === 'filter' || ctrl.type === 'dropdown') {
@@ -541,7 +541,7 @@ export async function visitRoute(
       } catch (error) {
         clickRecord.outcome = 'error';
         clickRecord.error = error instanceof Error ? error.message : String(error);
-        
+
         // If error is context-related, break out of the loop
         const errorMsg = error instanceof Error ? error.message : String(error);
         if (errorMsg.includes('context') || errorMsg.includes('closed') || errorMsg.includes('destroyed')) {

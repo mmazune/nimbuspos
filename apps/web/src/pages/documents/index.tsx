@@ -10,14 +10,14 @@ import { Download, Search, FileText, Receipt, FileSpreadsheet, FileCheck } from 
 import { authenticatedFetch, API_BASE_URL } from '@/lib/api';
 
 // Document types matching backend schema
-type DocumentCategory = 
-  | 'INVOICE' 
-  | 'STOCK_RECEIPT' 
-  | 'CONTRACT' 
-  | 'HR_DOC' 
-  | 'BANK_STATEMENT' 
-  | 'PAYSLIP' 
-  | 'RESERVATION_DOC' 
+type DocumentCategory =
+  | 'INVOICE'
+  | 'STOCK_RECEIPT'
+  | 'CONTRACT'
+  | 'HR_DOC'
+  | 'BANK_STATEMENT'
+  | 'PAYSLIP'
+  | 'RESERVATION_DOC'
   | 'OTHER';
 
 interface Document {
@@ -85,7 +85,7 @@ export default function DocumentsPage() {
       if (branchId) params.append('branchId', branchId);
       if (categoryFilter !== 'ALL') params.append('category', categoryFilter);
       params.append('limit', '200');
-      
+
       const res = await authenticatedFetch(`${API_BASE_URL}/documents?${params}`);
       if (!res.ok) throw new Error('Failed to fetch documents');
       return res.json();
@@ -104,7 +104,7 @@ export default function DocumentsPage() {
         const docDate = new Date(doc.uploadedAt);
         const fromDate = dateFrom ? new Date(dateFrom) : null;
         const toDate = dateTo ? new Date(dateTo) : null;
-        
+
         if (fromDate && docDate < fromDate) return false;
         if (toDate) {
           const endOfDay = new Date(toDate);
@@ -121,10 +121,10 @@ export default function DocumentsPage() {
       filtered = filtered.filter((doc) => {
         const fileName = doc.fileName?.toLowerCase() || '';
         const category = doc.category?.toLowerCase() || '';
-        const uploaderName = doc.uploader 
+        const uploaderName = doc.uploader
           ? `${doc.uploader.firstName} ${doc.uploader.lastName}`.toLowerCase()
           : '';
-        
+
         return (
           fileName.includes(searchLower) ||
           category.includes(searchLower) ||
@@ -140,11 +140,11 @@ export default function DocumentsPage() {
   // Summary stats
   const summaryStats = useMemo(() => {
     const total = filteredDocuments.length;
-    
+
     const now = new Date();
     const sevenDaysAgo = new Date();
     sevenDaysAgo.setDate(now.getDate() - 7);
-    
+
     const last7Days = filteredDocuments.filter((doc) => {
       const uploadDate = new Date(doc.uploadedAt);
       return uploadDate >= sevenDaysAgo;
@@ -211,9 +211,9 @@ export default function DocumentsPage() {
 
   const formatDate = (isoDate: string): string => {
     const date = new Date(isoDate);
-    return date.toLocaleDateString('en-US', { 
-      month: 'short', 
-      day: 'numeric', 
+    return date.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
       year: 'numeric',
       hour: '2-digit',
       minute: '2-digit'
@@ -228,7 +228,7 @@ export default function DocumentsPage() {
     const to = new Date();
     const from = new Date();
     from.setDate(to.getDate() - days);
-    
+
     setDateFrom(from.toISOString().split('T')[0]);
     setDateTo(to.toISOString().split('T')[0]);
   };
@@ -414,7 +414,7 @@ export default function DocumentsPage() {
                       {getLinkedEntityDisplay(doc)}
                     </td>
                     <td className="py-3 pr-4 text-gray-600">
-                      {doc.uploader 
+                      {doc.uploader
                         ? `${doc.uploader.firstName} ${doc.uploader.lastName}`
                         : '—'
                       }

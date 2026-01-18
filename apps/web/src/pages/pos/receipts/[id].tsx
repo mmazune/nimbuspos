@@ -105,7 +105,7 @@ export default function ReceiptPage() {
 
   return (
     <AppShell>
-      <PageHeader 
+      <PageHeader
         title="Receipt"
         actions={
           <div className="flex gap-2">

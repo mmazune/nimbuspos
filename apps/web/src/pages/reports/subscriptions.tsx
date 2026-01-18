@@ -65,12 +65,12 @@ export default function ReportsPage() {
 
   // State
   const [digestType, setDigestType] = useState<DigestTypeFilter>('ALL');
-  
+
   // Default date range: last 7 days
   const today = new Date();
   const sevenDaysAgo = new Date();
   sevenDaysAgo.setDate(today.getDate() - 7);
-  
+
   const [from, setFrom] = useState<string>(sevenDaysAgo.toISOString().split('T')[0]);
   const [to, setTo] = useState<string>(today.toISOString().split('T')[0]);
 
@@ -83,7 +83,7 @@ export default function ReportsPage() {
     queryFn: async () => {
       const params = new URLSearchParams();
       if (branchId) params.append('branchId', branchId);
-      
+
       const res = await authenticatedFetch(`${API_BASE_URL}/reports/subscriptions?${params}`);
       if (!res.ok) throw new Error('Failed to fetch subscriptions');
       return res.json();
@@ -99,7 +99,7 @@ export default function ReportsPage() {
       if (from) params.append('from', from);
       if (to) params.append('to', to);
       params.append('limit', '20');
-      
+
       const res = await authenticatedFetch(`${API_BASE_URL}/reports/shift-end/history?${params}`);
       if (!res.ok) throw new Error('Failed to fetch shift-end reports');
       return res.json();
@@ -116,7 +116,7 @@ export default function ReportsPage() {
       if (from) params.append('from', from);
       if (to) params.append('to', to);
       params.append('limit', '20');
-      
+
       const res = await authenticatedFetch(`${API_BASE_URL}/reports/period/history?${params}`);
       if (!res.ok) throw new Error('Failed to fetch period digests');
       return res.json();
@@ -144,8 +144,8 @@ export default function ReportsPage() {
     const digestCount = periodDigests.length;
     const totalSales = periodDigests.reduce((sum, d) => sum + d.totalSales, 0);
     const npsValues = periodDigests.filter((d) => d.nps !== null).map((d) => d.nps!);
-    const avgNps = npsValues.length > 0 
-      ? npsValues.reduce((sum, n) => sum + n, 0) / npsValues.length 
+    const avgNps = npsValues.length > 0
+      ? npsValues.reduce((sum, n) => sum + n, 0) / npsValues.length
       : null;
 
     return { shiftEndCount, digestCount, totalSales, avgNps };
@@ -176,9 +176,9 @@ export default function ReportsPage() {
 
   const formatDate = (isoDate: string): string => {
     const date = new Date(isoDate);
-    return date.toLocaleDateString('en-US', { 
-      month: 'short', 
-      day: 'numeric', 
+    return date.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
       year: 'numeric',
       hour: '2-digit',
       minute: '2-digit',
@@ -187,9 +187,9 @@ export default function ReportsPage() {
 
   const formatDateOnly = (isoDate: string): string => {
     const date = new Date(isoDate);
-    return date.toLocaleDateString('en-US', { 
-      month: 'short', 
-      day: 'numeric', 
+    return date.toLocaleDateString('en-US', {
+      month: 'short',
+      day: 'numeric',
       year: 'numeric',
     });
   };
@@ -205,11 +205,11 @@ export default function ReportsPage() {
   const formatPeriod = (from: string, to: string): string => {
     const fromDate = new Date(from);
     const toDate = new Date(to);
-    
+
     if (fromDate.toDateString() === toDate.toDateString()) {
       return formatDateOnly(from);
     }
-    
+
     return `${formatDateOnly(from)} - ${formatDateOnly(to)}`;
   };
 
