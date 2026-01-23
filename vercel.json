@@ -1,8 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "npm install -g pnpm && pnpm install && pnpm --filter @chefcloud/web build",
+  "buildCommand": "pnpm --filter @chefcloud/web build",
   "devCommand": "pnpm --filter @chefcloud/web dev",
-  "installCommand": "npm install -g pnpm && pnpm install",
+  "installCommand": "corepack enable && pnpm install",
   "framework": "nextjs",
   "outputDirectory": "apps/web/.next",
   "rewrites": [
