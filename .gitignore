@@ -56,3 +56,4 @@ demo_assets/
 # Reference repos (cloned for architecture study only)
 reference-pos/
 reference-feature-repos/
+.vercel

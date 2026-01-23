@@ -1,0 +1,9 @@
+node_modules
+.next
+.turbo
+coverage
+*.log
+*.md
+!README.md
+.vscode
+.git
