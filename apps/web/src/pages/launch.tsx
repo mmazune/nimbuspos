@@ -40,7 +40,7 @@ export default function LaunchPage() {
     <div className="flex min-h-screen flex-col bg-slate-950 text-slate-100">
       <header className="flex items-center justify-between px-4 py-3 border-b border-slate-800">
         <div>
-          <h1 className="text-sm font-semibold">ChefCloud</h1>
+          <h1 className="text-sm font-semibold">Nimbus POS</h1>
           <p className="text-[11px] text-slate-400">
             Choose what this device is primarily used for.
           </p>
@@ -97,11 +97,10 @@ function RoleCard(props: RoleCardProps) {
     <button
       type="button"
       onClick={() => onSelect(role)}
-      className={`flex h-40 flex-col justify-between rounded-2xl border px-4 py-3 text-left transition ${
-        isActive
+      className={`flex h-40 flex-col justify-between rounded-2xl border px-4 py-3 text-left transition ${isActive
           ? 'border-emerald-400 bg-emerald-500/10'
           : 'border-slate-700 bg-slate-900 hover:border-slate-500 hover:bg-slate-800'
-      }`}
+        }`}
     >
       <div>
         <h2 className="text-sm font-semibold">{title}</h2>
@@ -112,11 +111,10 @@ function RoleCard(props: RoleCardProps) {
           {isActive ? 'Default on this device' : 'Set as default'}
         </span>
         <span
-          className={`inline-flex items-center rounded-full px-2 py-0.5 ${
-            isActive
+          className={`inline-flex items-center rounded-full px-2 py-0.5 ${isActive
               ? 'bg-emerald-500 text-slate-900'
               : 'bg-slate-800 text-slate-100'
-          }`}
+            }`}
         >
           Go
         </span>

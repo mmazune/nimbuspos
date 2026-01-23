@@ -1,77 +1,56 @@
 /**
  * Demo Quick Login Panel
- * Milestone 6: ChefCloud V2 UX Upgrade
+ * Redesign: Unified Login Experience
  * 
- * Provides quick login buttons for demo accounts (Tapas/Cafesserie)
- * without exposing secrets beyond the known Demo#123 password.
+ * Provides quick login buttons for demo accounts organized by group (Tapas vs Cafesserie).
  */
 
 import React, { useState } from 'react';
 import { useAuth } from '@/contexts/AuthContext';
 import { cn } from '@/lib/utils';
-import { Building2, ChefHat, Loader2, Sparkles } from 'lucide-react';
-
-interface DemoAccount {
-  name: string;
-  email: string;
-  org: string;
-  role: string;
-  icon: React.ReactNode;
-  color: string;
-  bgColor: string;
-}
+import { Loader2, Sparkles } from 'lucide-react';
+import { DEMO_GROUPS, DemoUser } from './demo-users';
 
 const DEMO_PASSWORD = 'Demo#123';
-
-const DEMO_ACCOUNTS: DemoAccount[] = [
-  {
-    name: 'Tapas Owner',
-    email: 'owner@tapas.demo.local',
-    org: 'Tapas Bar & Restaurant',
-    role: 'Owner (L5)',
-    icon: <ChefHat className="h-5 w-5" />,
-    color: 'text-orange-600',
-    bgColor: 'bg-orange-50 hover:bg-orange-100 border-orange-200',
-  },
-  {
-    name: 'Cafesserie Manager',
-    email: 'manager@cafesserie.demo.local',
-    org: 'Cafesserie (4 branches)',
-    role: 'Manager (L4)',
-    icon: <Building2 className="h-5 w-5" />,
-    color: 'text-blue-600',
-    bgColor: 'bg-blue-50 hover:bg-blue-100 border-blue-200',
-  },
-];
 
 interface DemoQuickLoginProps {
   onLoginStart?: () => void;
   onLoginSuccess?: () => void;
   onLoginError?: (error: string) => void;
+  /**
+   * Optional callback to just populate credentials instead of auto-logging in.
+   * If provided, auto-login is disabled.
+   */
   onSelectCredentials?: (email: string, password: string) => void;
   className?: string;
-  compact?: boolean;
 }
 
 export function DemoQuickLogin({
   onLoginStart,
   onLoginSuccess,
   onLoginError,
+  onSelectCredentials,
   className,
-  compact = false,
 }: DemoQuickLoginProps) {
   const { login } = useAuth();
   const [loading, setLoading] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
-  const handleDemoLogin = async (account: DemoAccount) => {
-    setLoading(account.email);
+  const handleDemoClick = async (user: DemoUser) => {
+    // If just selecting credentials (for population), emit and return
+    if (onSelectCredentials) {
+      onSelectCredentials(user.email, DEMO_PASSWORD);
+      return;
+    }
+
+    // Otherwise perform actual login
+    setLoading(user.email);
     setError(null);
     onLoginStart?.();
 
     try {
       await login({
-        email: account.email,
+        email: user.email,
         password: DEMO_PASSWORD,
       });
       onLoginSuccess?.();
@@ -84,111 +63,71 @@ export function DemoQuickLogin({
     }
   };
 
-  if (compact) {
-    return (
-      <div className={cn('flex gap-2', className)}>
-        {DEMO_ACCOUNTS.map((account) => (
-          <button
-            key={account.email}
-            onClick={() => handleDemoLogin(account)}
-            disabled={loading !== null}
-            className={cn(
-              'flex items-center gap-2 px-3 py-2 rounded-lg border text-sm font-medium transition-all',
-              account.bgColor,
-              account.color,
-              loading === account.email && 'opacity-70'
-            )}
-          >
-            {loading === account.email ? (
-              <Loader2 className="h-4 w-4 animate-spin" />
-            ) : (
-              account.icon
-            )}
-            {account.name}
-          </button>
-        ))}
-      </div>
-    );
-  }
-
   return (
-    <div className={cn('rounded-xl border bg-gradient-to-br from-white to-gray-50 p-6', className)}>
-      <div className="flex items-center gap-2 mb-4">
-        <div className="p-2 rounded-lg bg-gradient-to-r from-chefcloud-blue to-purple-500">
-          <Sparkles className="h-5 w-5 text-white" />
-        </div>
-        <div>
-          <h3 className="font-semibold text-gray-900">Demo Quick Access</h3>
-          <p className="text-xs text-muted-foreground">Try ChefCloud with sample data</p>
-        </div>
-      </div>
+    <div className={cn('space-y-8 animate-in fade-in zoom-in duration-300', className)}>
 
       {error && (
-        <div className="mb-4 p-3 rounded-lg bg-red-50 border border-red-200 text-sm text-red-600">
+        <div className="rounded-lg bg-red-50 p-3 text-sm text-red-600 border border-red-200">
           {error}
         </div>
       )}
 
-      <div className="space-y-3">
-        {DEMO_ACCOUNTS.map((account) => (
-          <button
-            key={account.email}
-            onClick={() => handleDemoLogin(account)}
-            disabled={loading !== null}
-            className={cn(
-              'w-full flex items-center gap-4 p-4 rounded-xl border-2 text-left transition-all',
-              account.bgColor,
-              loading === account.email && 'opacity-70 cursor-wait'
-            )}
-          >
-            <div className={cn('p-3 rounded-lg', account.color, 'bg-white/80')}>
-              {loading === account.email ? (
-                <Loader2 className="h-6 w-6 animate-spin" />
-              ) : (
-                account.icon
-              )}
-            </div>
-            <div className="flex-1">
-              <div className={cn('font-semibold', account.color)}>{account.name}</div>
-              <div className="text-sm text-gray-600">{account.org}</div>
-              <div className="text-xs text-muted-foreground">{account.role}</div>
-            </div>
-            <div className="text-xs text-muted-foreground px-2 py-1 bg-white/60 rounded">
-              {loading === account.email ? 'Signing in...' : 'Click to login'}
-            </div>
-          </button>
-        ))}
-      </div>
+      {DEMO_GROUPS.map((group) => (
+        <div key={group.id} className="space-y-3">
+          <div className="flex items-center gap-2 border-b border-gray-100 pb-2">
+            <h3 className="text-sm font-semibold text-gray-900 uppercase tracking-wider">{group.label}</h3>
+            <span className="text-xs text-muted-foreground">/ {group.description}</span>
+          </div>
 
-      <div className="mt-4 pt-4 border-t border-gray-200">
-        <p className="text-xs text-muted-foreground text-center">
-          Demo accounts use password <code className="px-1 py-0.5 bg-gray-100 rounded">Demo#123</code>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+            {group.users.map((user) => (
+              <button
+                key={user.email}
+                onClick={() => handleDemoClick(user)}
+                disabled={loading !== null}
+                className={cn(
+                  'relative flex items-center gap-3 p-2 rounded-lg border text-left transition-all hover:scale-[1.01] active:scale-[0.99]',
+                  user.bgColor,
+                  loading === user.email ? 'opacity-70 cursor-wait' : 'hover:shadow-sm',
+                  loading !== null && loading !== user.email && 'opacity-50'
+                )}
+              >
+                <div className={cn('p-2 rounded-md bg-white/80 shrink-0', user.color)}>
+                  {loading === user.email ? (
+                    <Loader2 className="h-4 w-4 animate-spin" />
+                  ) : (
+                    <user.icon className="h-4 w-4" />
+                  )}
+                </div>
+
+                <div className="min-w-0 flex-1">
+                  <div className="font-medium text-sm text-gray-900 truncate">{user.name}</div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-gray-600 truncate">{user.role}</span>
+                  </div>
+                </div>
+
+                {!onSelectCredentials && (
+                  <div className="absolute right-2 top-1/2 -translate-y-1/2 opacity-0 transition-opacity group-hover:opacity-100">
+                    <Sparkles className="h-3 w-3 text-chefcloud-blue" />
+                  </div>
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+      ))}
+
+      <div className="mt-4 pt-4 border-t border-gray-200 text-center">
+        <p className="text-xs text-muted-foreground">
+          All demo accounts use password <code className="px-1 py-0.5 bg-gray-100 rounded font-mono text-gray-700">Demo#123</code>
         </p>
       </div>
     </div>
   );
 }
 
-/**
- * Autofill helper - fills email/password inputs without submitting
- * For use when you want to show credentials in form first
- */
 export function useDemoAutofill() {
-  const autofillTapas = (
-    setEmail: (v: string) => void,
-    setPassword: (v: string) => void
-  ) => {
-    setEmail('owner@tapas.demo.local');
-    setPassword(DEMO_PASSWORD);
-  };
-
-  const autofillCafesserie = (
-    setEmail: (v: string) => void,
-    setPassword: (v: string) => void
-  ) => {
-    setEmail('manager@cafesserie.demo.local');
-    setPassword(DEMO_PASSWORD);
-  };
-
-  return { autofillTapas, autofillCafesserie, DEMO_PASSWORD };
+  // Deprecated but kept for compatibility if needed elsewhere
+  return { DEMO_PASSWORD };
 }

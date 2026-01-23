@@ -17,14 +17,14 @@ export default function RootRedirectPage() {
 
   useEffect(() => {
     if (!isLoaded || authLoading) return;
-    
+
     // M8.1: For BACKOFFICE device role, use jobRole-based routing if user is logged in
     if (role === 'BACKOFFICE' && user?.jobRole) {
       const target = getDefaultRoute(user.jobRole);
       void router.replace(target);
       return;
     }
-    
+
     // Default device role routing
     const target = DEVICE_ROLE_ROUTE[role] ?? '/pos';
     void router.replace(target);
@@ -32,7 +32,7 @@ export default function RootRedirectPage() {
 
   return (
     <div className="flex h-screen flex-col items-center justify-center bg-slate-950 text-slate-100 text-xs">
-      <p>Redirecting to your default ChefCloud screen…</p>
+      <p>Redirecting to your default Nimbus POS screen…</p>
       <p className="mt-2 text-[11px] text-slate-500">
         If nothing happens,{' '}
         <Link href="/launch" className="underline">
