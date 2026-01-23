@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "buildCommand": "pnpm --filter @chefcloud/web build",
+  "buildCommand": "pnpm turbo build --filter=@chefcloud/web",
   "installCommand": "corepack enable && pnpm install",
   "outputDirectory": "apps/web/.next",
   "rewrites": [
