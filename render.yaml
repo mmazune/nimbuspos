@@ -1,5 +1,5 @@
 services:
-  - type: pserv
+  - type: web
     name: chefcloud-api
     env: node
     region: oregon
@@ -23,7 +23,7 @@ services:
       - key: DEMO_TAPAS_ORG_SLUG
         value: tapas-demo
       - key: CORS_ORIGIN
-        value: https://chefcloud-web.vercel.app
+        value: https://nimbuspos-moses-mazunes-projects.vercel.app
 
 databases:
   - name: chefcloud-postgres
