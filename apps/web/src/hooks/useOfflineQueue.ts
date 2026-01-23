@@ -22,6 +22,7 @@ import {
   savePersistedSyncLog,
   clearPersistedSyncLog,
 } from '@/lib/posSyncLogDb';
+import { authenticatedFetch, API_BASE_URL } from '@/lib/api';
 
 type SyncStatus = 'pending' | 'syncing' | 'success' | 'failed' | 'conflict';
 
@@ -151,13 +152,7 @@ async function checkOrderConflict(
   }
 
   try {
-    const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
-    const resp = await fetch(`${API_URL}/pos/orders/${orderId}`, {
-      headers: { 
-        'Accept': 'application/json',
-      },
-      credentials: 'include',
-    });
+    const resp = await authenticatedFetch(`${API_BASE_URL}/pos/orders/${orderId}`);
 
     if (!resp.ok) {
       // If we can't read server state, just fall back to normal replay.
@@ -294,13 +289,13 @@ export function useOfflineQueue() {
         }));
 
         try {
-          const res = await fetch(item.url, {
+          // Use authenticatedFetch to ensure Bearer token is included
+          const fullUrl = item.url.startsWith('/') ? `${API_BASE_URL}${item.url}` : item.url;
+          const res = await authenticatedFetch(fullUrl, {
             method: item.method,
             headers: {
-              'Content-Type': 'application/json',
-              'Idempotency-Key': item.idempotencyKey,
+              'X-Idempotency-Key': item.idempotencyKey,
             },
-            credentials: 'include',
             body: item.body ? JSON.stringify(item.body) : undefined,
           });
 

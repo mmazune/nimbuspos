@@ -1,0 +1,84 @@
+{
+  "timestamp": "2026-01-22T14:01:18.905Z",
+  "org": "cafesserie",
+  "role": "owner",
+  "totalReceipts": 5,
+  "crashedReceipts": 0,
+  "evidence": [
+    {
+      "receiptId": "cmknx7s8106d314b5ygjgcpbx",
+      "url": "http://localhost:3000/pos/receipts/cmknx7s8106d314b5ygjgcpbx",
+      "overlayDetected": false,
+      "consoleErrors": [],
+      "pageerrorStack": null,
+      "failingRequests": [],
+      "screenshotPath": null,
+      "pageTitle": "",
+      "buttonTexts": [
+        "Joshua OwnerL5",
+        "Back to POS",
+        "Print"
+      ]
+    },
+    {
+      "receiptId": "cmknx7s7q06cz14b5ixx36rj0",
+      "url": "http://localhost:3000/pos/receipts/cmknx7s7q06cz14b5ixx36rj0",
+      "overlayDetected": false,
+      "consoleErrors": [],
+      "pageerrorStack": null,
+      "failingRequests": [],
+      "screenshotPath": null,
+      "pageTitle": "",
+      "buttonTexts": [
+        "Joshua OwnerL5",
+        "Back to POS",
+        "Print"
+      ]
+    },
+    {
+      "receiptId": "cmknx7s7k06cx14b5zdpitl59",
+      "url": "http://localhost:3000/pos/receipts/cmknx7s7k06cx14b5zdpitl59",
+      "overlayDetected": false,
+      "consoleErrors": [],
+      "pageerrorStack": null,
+      "failingRequests": [],
+      "screenshotPath": null,
+      "pageTitle": "",
+      "buttonTexts": [
+        "Joshua OwnerL5",
+        "Back to POS",
+        "Print"
+      ]
+    },
+    {
+      "receiptId": "cmknx7s7e06cv14b5rerse2rk",
+      "url": "http://localhost:3000/pos/receipts/cmknx7s7e06cv14b5rerse2rk",
+      "overlayDetected": false,
+      "consoleErrors": [],
+      "pageerrorStack": null,
+      "failingRequests": [],
+      "screenshotPath": null,
+      "pageTitle": "",
+      "buttonTexts": [
+        "Joshua OwnerL5",
+        "Back to POS",
+        "Print"
+      ]
+    },
+    {
+      "receiptId": "cmknx7s7906ct14b51x4czyol",
+      "url": "http://localhost:3000/pos/receipts/cmknx7s7906ct14b51x4czyol",
+      "overlayDetected": false,
+      "consoleErrors": [],
+      "pageerrorStack": null,
+      "failingRequests": [],
+      "screenshotPath": null,
+      "pageTitle": "",
+      "buttonTexts": [
+        "Joshua OwnerL5",
+        "Back to POS",
+        "Print"
+      ]
+    }
+  ]
+}

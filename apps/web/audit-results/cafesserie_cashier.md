@@ -1,8 +1,8 @@
 # Role Audit Report: CAFESSERIE / CASHIER
 
-**Date:** 2026-01-13  
+**Date:** 2026-01-21  
 **Status:** ✅ PASS  
-**Duration:** 7.9s  
+**Duration:** 75.5s  
 **Email:** cashier@cafesserie.demo.local
 
 ---
@@ -11,16 +11,16 @@
 
 | Metric | Value |
 |--------|-------|
-| Routes Visited | 0 / 0 |
+| Routes Visited | 3 / 3 |
 | Routes Forbidden | 0 |
 | Routes Not Found | 0 |
 | Routes Error | 0 |
-| Controls Found | 0 |
-| Controls Clicked | 0 |
-| Controls Skipped | 0 |
-| API Endpoints Hit | 0 |
-| 2xx Responses | 0 |
-| 4xx Responses | 0 |
+| Controls Found | 46 |
+| Controls Clicked | 10 |
+| Controls Skipped | 36 |
+| API Endpoints Hit | 13 |
+| 2xx Responses | 16 |
+| 4xx Responses | 31 |
 | 5xx Responses | 0 |
 | Total Failures | 0 |
 
@@ -30,6 +30,9 @@
 
 | Route | Status | Load Time |
 |-------|--------|-----------|
+| /dashboard | ✅ success | 2804ms |
+| /pos | ✅ success | 1713ms |
+| /settings | ✅ success | 4371ms |
 
 ---
 
@@ -37,6 +40,46 @@
 
 | Method | Path | Status | Count |
 |--------|------|--------|-------|
+| GET | /analytics/daily-metrics | ⚠️ 403 | 13 |
+| GET | /me |  200 | 5 |
+| GET | /branches |  200 | 5 |
+| GET | /analytics/daily | ⚠️ 403 | 3 |
+| GET | /analytics/top-items | ⚠️ 403 | 3 |
+| GET | /analytics/category-mix | ⚠️ 403 | 3 |
+| GET | /analytics/payment-mix | ⚠️ 403 | 3 |
+| GET | /analytics/peak-hours | ⚠️ 403 | 3 |
+| GET | /franchise/rankings | ⚠️ 403 | 2 |
+| GET | /inventory/low-stock/alerts |  200 | 2 |
+| GET | /pos/orders |  200 | 2 |
+| GET | /menu/items |  200 | 2 |
+| GET | /billing/subscription | ⚠️ 403 | 1 |
+
+---
+
+## Controls Clicked (Sample)
+
+| Route | Label | Type | Outcome |
+|-------|-------|------|---------|
+| /dashboard | theme-toggle-btn | toggle | no-op |
+| /dashboard | user-menu-container | menu | menu-opened |
+| /dashboard | Acacia Mall | button | menu-opened |
+| /dashboard | Arena Mall | button | menu-opened |
+| /dashboard | Mombasa | button | menu-opened |
+| /pos | theme-toggle-btn | toggle | no-op |
+| /pos | user-menu-container | menu | menu-opened |
+| /pos | Open tabs sidebar | button | menu-opened |
+| /settings | theme-toggle-btn | toggle | no-op |
+| /settings | user-menu-container | menu | menu-opened |
+
+---
+
+## Landing Page Visibility Checks ⚠️
+
+| Check | Status | Details |
+|-------|--------|---------|
+| POS interface | ❌ | Not visible: POS visible |
+| Menu items | ❌ | Not visible: menu items |
+| Cart or order area | ✅ | Found: cart/order area |
 
 ---
 

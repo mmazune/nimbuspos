@@ -6,8 +6,24 @@ import {
   BillingPlanId,
 } from "@/types/billing";
 import { handleAuthHttpError } from "@/lib/authHttpError";
+import Cookies from "js-cookie";
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001";
+const AUTH_TOKEN_KEY = "auth_token";
+
+/**
+ * Get headers with auth token for API requests
+ */
+function getAuthHeaders(): HeadersInit {
+  const token = Cookies.get(AUTH_TOKEN_KEY);
+  const headers: HeadersInit = {
+    "Content-Type": "application/json",
+  };
+  if (token) {
+    headers["Authorization"] = `Bearer ${token}`;
+  }
+  return headers;
+}
 
 async function handleJson<T>(res: Response): Promise<T> {
   if (!res.ok) {
@@ -19,6 +35,7 @@ async function handleJson<T>(res: Response): Promise<T> {
 
 export async function fetchBillingPlans(): Promise<BillingPlanDto[]> {
   const res = await fetch(`${API_URL}/billing/plans`, {
+    headers: getAuthHeaders(),
     credentials: "include",
   });
 
@@ -32,6 +49,7 @@ export async function fetchBillingPlans(): Promise<BillingPlanDto[]> {
 
 export async function fetchOrgSubscription(): Promise<OrgSubscriptionDto> {
   const res = await fetch(`${API_URL}/billing/subscription`, {
+    headers: getAuthHeaders(),
     credentials: "include",
   });
 
@@ -45,6 +63,7 @@ export async function fetchOrgSubscription(): Promise<OrgSubscriptionDto> {
 
 export async function fetchBillingUsage(): Promise<BillingUsageDto> {
   const res = await fetch(`${API_URL}/billing/usage`, {
+    headers: getAuthHeaders(),
     credentials: "include",
   });
 
@@ -62,7 +81,7 @@ export async function fetchPlanChangeQuote(
   const res = await fetch(`${API_URL}/billing/plan/quote`, {
     method: "POST",
     credentials: "include",
-    headers: { "Content-Type": "application/json" },
+    headers: getAuthHeaders(),
     body: JSON.stringify({ targetPlanId }),
   });
 
@@ -80,7 +99,7 @@ export async function applyPlanChange(
   const res = await fetch(`${API_URL}/billing/plan/change`, {
     method: "POST",
     credentials: "include",
-    headers: { "Content-Type": "application/json" },
+    headers: getAuthHeaders(),
     body: JSON.stringify({ planCode: targetPlanId }),
   });
 

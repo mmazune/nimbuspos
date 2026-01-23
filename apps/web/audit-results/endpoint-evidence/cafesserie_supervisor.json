@@ -1,0 +1,75 @@
+{
+  "org": "cafesserie",
+  "role": "supervisor",
+  "email": "supervisor@cafesserie.demo.local",
+  "generatedAt": "2026-01-22T19:01:35.209Z",
+  "durationMs": 31618,
+  "summary": {
+    "routesVisited": 10,
+    "routesWithEndpoints": 0,
+    "totalEndpoints": 0,
+    "uniqueEndpoints": 0
+  },
+  "routes": [
+    {
+      "route": "/pos",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T19:01:08.410Z"
+    },
+    {
+      "route": "/reservations",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T19:01:11.657Z"
+    },
+    {
+      "route": "/staff",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T19:01:14.926Z"
+    },
+    {
+      "route": "/workforce/timeclock",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T19:01:18.225Z"
+    },
+    {
+      "route": "/workforce/swaps",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T19:01:21.574Z"
+    },
+    {
+      "route": "/dashboard",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T19:01:24.342Z"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T19:01:27.052Z"
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T19:01:29.774Z"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T19:01:32.494Z"
+    },
+    {
+      "route": "/settings",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T19:01:35.208Z"
+    }
+  ]
+}

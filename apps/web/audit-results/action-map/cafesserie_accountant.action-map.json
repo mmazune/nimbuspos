@@ -1,0 +1,3584 @@
+{
+  "org": "cafesserie",
+  "role": "accountant",
+  "email": "accountant@cafesserie.demo.local",
+  "generatedAt": "2026-01-23T02:45:40.066Z",
+  "durationMs": 211280,
+  "summary": {
+    "total": 233,
+    "hasEndpoints": 44,
+    "noNetworkEffect": 49,
+    "skipped": 140,
+    "uniqueEndpoints": 27,
+    "attributionPercent": 39.9,
+    "mutationBlockingEnabled": true,
+    "totalBlockedMutations": 0,
+    "controlsWithBlockedMutations": 0
+  },
+  "controls": [
+    {
+      "actionKey": "cafesserie/accountant//analytics/button/Switch-to-dark-mode",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/button/User-menu-for-Nina-Accountant",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "User menu for Nina Accountant",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/button/Overview",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Overview",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/button/By-Branch",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "By Branch",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/button/Financial",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Financial",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/button/Risk",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Risk",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/risk-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/risk-events",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/button/Franchise",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Franchise",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/button/Last-7-days",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 7 days",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/franchise/branch-metrics",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/button/Last-30-days",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 30 days",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/button/Last-90-days",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 90 days",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/button/Open-Tanstack-query-devtools",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/Skip-to-main-content",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/Go-to-workspace-home",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/accounts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/Chart-of-Accounts",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/accounts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/Journal-Entries",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/Fiscal-Periods",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/Trial-Balance",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/Profit-&-Loss",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/Balance-Sheet",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/Service-Providers",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/AP-Aging",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "AP Aging",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/AR-Aging",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "AR Aging",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/Budgets",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Budgets",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/Reports",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/Analytics",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/My-Availability",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/My-Swaps",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//analytics/link/Open-Shifts",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/button/Switch-to-dark-mode",
+      "route": "/finance",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/button/User-menu-for-Nina-Accountant",
+      "route": "/finance",
+      "controlType": "button",
+      "label": "User menu for Nina Accountant",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/button/Open-Tanstack-query-devtools",
+      "route": "/finance",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/Skip-to-main-content",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/Go-to-workspace-home",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/accounts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/Chart-of-Accounts",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/Journal-Entries",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/Fiscal-Periods",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/Trial-Balance",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/Profit-&-Loss",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/Balance-Sheet",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/Service-Providers",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/AP-Aging",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "AP Aging",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/AR-Aging",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "AR Aging",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/Budgets",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Budgets",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/Reports",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/Analytics",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/My-Availability",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/My-Swaps",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/link/Open-Shifts",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/accounts/button/Reload-app",
+      "route": "/finance/accounts",
+      "controlType": "button",
+      "label": "Reload app",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/accounts/button/Go-to-POS",
+      "route": "/finance/accounts",
+      "controlType": "button",
+      "label": "Go to POS",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/accounts/button/Close",
+      "route": "/finance/accounts",
+      "controlType": "button",
+      "label": "Close",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/accounts/button/Show-collapsed-frames",
+      "route": "/finance/accounts",
+      "controlType": "button",
+      "label": "Show collapsed frames",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/button/Switch-to-dark-mode",
+      "route": "/finance/ap-aging",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/button/User-menu-for-Nina-Accountant",
+      "route": "/finance/ap-aging",
+      "controlType": "button",
+      "label": "User menu for Nina Accountant",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/button/Open-Tanstack-query-devtools",
+      "route": "/finance/ap-aging",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/Skip-to-main-content",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/Go-to-workspace-home",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/accounts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ap/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/Chart-of-Accounts",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/accounts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ap/aging",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/Journal-Entries",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/accounts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/journal",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ap/aging",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/Fiscal-Periods",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/periods",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ap/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/Trial-Balance",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ap/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/Profit-&-Loss",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/pnl",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ap/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/Balance-Sheet",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ap/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/Service-Providers",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/service-providers/contracts",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders/summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ap/aging",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/AP-Aging",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "AP Aging",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/AR-Aging",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "AR Aging",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/ar/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ap/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/Budgets",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Budgets",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/Reports",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/Analytics",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/My-Availability",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ap/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/My-Swaps",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ap/aging",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ap-aging/link/Open-Shifts",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ap/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/button/Switch-to-dark-mode",
+      "route": "/finance/ar-aging",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/button/User-menu-for-Nina-Accountant",
+      "route": "/finance/ar-aging",
+      "controlType": "button",
+      "label": "User menu for Nina Accountant",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/button/Open-Tanstack-query-devtools",
+      "route": "/finance/ar-aging",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/Skip-to-main-content",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/Go-to-workspace-home",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/accounts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ar/aging",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/Chart-of-Accounts",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/accounts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ar/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/Journal-Entries",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/journal",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/accounts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ar/aging",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/Fiscal-Periods",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/periods",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ar/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/Trial-Balance",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/trial-balance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ar/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/Profit-&-Loss",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/pnl",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ar/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/Balance-Sheet",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ar/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/Service-Providers",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders/summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers/contracts",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ar/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/AP-Aging",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "AP Aging",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/ap/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ar/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/AR-Aging",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "AR Aging",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/Budgets",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Budgets",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/Reports",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/Analytics",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/My-Availability",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ar/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/My-Swaps",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ar/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/ar-aging/link/Open-Shifts",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ar/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/button/Switch-to-dark-mode",
+      "route": "/finance/balance-sheet",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/button/User-menu-for-Nina-Accountant",
+      "route": "/finance/balance-sheet",
+      "controlType": "button",
+      "label": "User menu for Nina Accountant",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/button/Generate-Report",
+      "route": "/finance/balance-sheet",
+      "controlType": "button",
+      "label": "Generate Report",
+      "dataTestId": "bs-generate",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/button/Export-CSV",
+      "route": "/finance/balance-sheet",
+      "controlType": "button",
+      "label": "Export CSV",
+      "dataTestId": "bs-export",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/button/Open-Tanstack-query-devtools",
+      "route": "/finance/balance-sheet",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/Skip-to-main-content",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/Go-to-workspace-home",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/accounts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/Chart-of-Accounts",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/accounts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/Journal-Entries",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/accounts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/journal",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/Fiscal-Periods",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/periods",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/Trial-Balance",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/trial-balance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/Profit-&-Loss",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/pnl",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/Balance-Sheet",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/Service-Providers",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/service-providers",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers/contracts",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders/summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/AP-Aging",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "AP Aging",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/ap/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/AR-Aging",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "AR Aging",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/accounting/ar/aging",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/Budgets",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Budgets",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/Reports",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/Analytics",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/My-Availability",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/My-Swaps",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/balance-sheet/link/Open-Shifts",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/journal/button/Reload-app",
+      "route": "/finance/journal",
+      "controlType": "button",
+      "label": "Reload app",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/journal/button/Go-to-POS",
+      "route": "/finance/journal",
+      "controlType": "button",
+      "label": "Go to POS",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/journal/button/Close",
+      "route": "/finance/journal",
+      "controlType": "button",
+      "label": "Close",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/journal/button/Show-collapsed-frames",
+      "route": "/finance/journal",
+      "controlType": "button",
+      "label": "Show collapsed frames",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/periods/button/Reload-app",
+      "route": "/finance/periods",
+      "controlType": "button",
+      "label": "Reload app",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/periods/button/Go-to-POS",
+      "route": "/finance/periods",
+      "controlType": "button",
+      "label": "Go to POS",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/periods/button/Close",
+      "route": "/finance/periods",
+      "controlType": "button",
+      "label": "Close",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/periods/button/Show-collapsed-frames",
+      "route": "/finance/periods",
+      "controlType": "button",
+      "label": "Show collapsed frames",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/button/Switch-to-dark-mode",
+      "route": "/finance/pnl",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/button/User-menu-for-Nina-Accountant",
+      "route": "/finance/pnl",
+      "controlType": "button",
+      "label": "User menu for Nina Accountant",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/button/Generate-Report",
+      "route": "/finance/pnl",
+      "controlType": "button",
+      "label": "Generate Report",
+      "dataTestId": "pnl-generate",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/button/Export-CSV",
+      "route": "/finance/pnl",
+      "controlType": "button",
+      "label": "Export CSV",
+      "dataTestId": "pnl-export",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/button/Open-Tanstack-query-devtools",
+      "route": "/finance/pnl",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/Skip-to-main-content",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/Go-to-workspace-home",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/Chart-of-Accounts",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/Journal-Entries",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/Fiscal-Periods",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/Trial-Balance",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/Profit-&-Loss",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/Balance-Sheet",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/Service-Providers",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/AP-Aging",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "AP Aging",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/AR-Aging",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "AR Aging",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/Budgets",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Budgets",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/Reports",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/Analytics",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/My-Availability",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/My-Swaps",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/pnl/link/Open-Shifts",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/button/Switch-to-dark-mode",
+      "route": "/finance/trial-balance",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/button/User-menu-for-Nina-Accountant",
+      "route": "/finance/trial-balance",
+      "controlType": "button",
+      "label": "User menu for Nina Accountant",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/button/Generate-Report",
+      "route": "/finance/trial-balance",
+      "controlType": "button",
+      "label": "Generate Report",
+      "dataTestId": "tb-generate",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/button/Export-CSV",
+      "route": "/finance/trial-balance",
+      "controlType": "button",
+      "label": "Export CSV",
+      "dataTestId": "tb-export",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/button/Open-Tanstack-query-devtools",
+      "route": "/finance/trial-balance",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/Skip-to-main-content",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/Go-to-workspace-home",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/Chart-of-Accounts",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/Journal-Entries",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/Fiscal-Periods",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/Trial-Balance",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/Profit-&-Loss",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/Balance-Sheet",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/Service-Providers",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/AP-Aging",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "AP Aging",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/AR-Aging",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "AR Aging",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/Budgets",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Budgets",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/Reports",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/Analytics",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/My-Availability",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/My-Swaps",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//finance/trial-balance/link/Open-Shifts",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/button/Switch-to-dark-mode",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/button/User-menu-for-Nina-Accountant",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "User menu for Nina Accountant",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/button/Open-Tanstack-query-devtools",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Skip-to-main-content",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Go-to-workspace-home",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Chart-of-Accounts",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Journal-Entries",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Fiscal-Periods",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Trial-Balance",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Profit-&-Loss",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Balance-Sheet",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Service-Providers",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/AP-Aging",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "AP Aging",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/AR-Aging",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "AR Aging",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Budgets",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Budgets",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Reports",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Analytics",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/My-Availability",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/My-Swaps",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Open-Shifts",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Sales-Franchise-Analytics-Sales,-margins,-rankings-and-multi-month-trends-across-all-branches.-CSV",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Sales\nFranchise Analytics\n\nSales, margins, rankings and multi-month trends across all branches.\n\nCSV",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Finance-Budgets-&-Variance-Budget-vs-actual-sales,-COGS-and-variance-across-branches.-CSV-export-P",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Finance\nBudgets & Variance\n\nBudget vs actual sales, COGS and variance across branches.\n\nCSV export\nP",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Operations-Inventory-&-Stock-Current-stock-levels,-low-stock-items,-wastage-and-shrinkage.",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Operations\nInventory & Stock\n\nCurrent stock levels, low-stock items, wastage and shrinkage.",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/HR-Staff-Insights-KPIs,-Employee-of-the-Month-awards-and-promotion-suggestions.",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "HR\nStaff Insights\n\nKPIs, Employee of the Month awards and promotion suggestions.",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Customer-Customer-Feedback-&-NPS-Promoters,-passives,-detractors-and-feedback-comments.",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Customer\nCustomer Feedback & NPS\n\nPromoters, passives, detractors and feedback comments.",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Admin-Report-Subscriptions-Manage-automated-delivery-of-shift-end-reports,-daily/weekly/monthly-dig",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Admin\nReport Subscriptions\n\nManage automated delivery of shift-end reports, daily/weekly/monthly dig",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Operations-Reservations-&-Events-Reservation-calendar,-deposits-and-event-management.",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Operations\nReservations & Events\n\nReservation calendar, deposits and event management.",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Tech-API-Usage-&-Webhooks-API-key-usage-metrics,-webhook-delivery-logs-and-failures.-Dev",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Tech\nAPI Usage & Webhooks\n\nAPI key usage metrics, webhook delivery logs and failures.\n\nDev",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//reports/link/Finance-Finance-Overview-P&L-summary,-expense-tracking-and-service-provider-payables.",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Finance\nFinance Overview\n\nP&L summary, expense tracking and service provider payables.",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/button/Switch-to-dark-mode",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/button/User-menu-for-Nina-Accountant",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "User menu for Nina Accountant",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/button/All",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/button/Active-Only",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Active Only",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/button/Edit",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Edit",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/button/Open-Tanstack-query-devtools",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/Skip-to-main-content",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/Go-to-workspace-home",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/Chart-of-Accounts",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/Journal-Entries",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/Fiscal-Periods",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/Trial-Balance",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/Profit-&-Loss",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/Balance-Sheet",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/Service-Providers",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/AP-Aging",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "AP Aging",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/AR-Aging",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "AR Aging",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/Budgets",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Budgets",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/Reports",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/Analytics",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/My-Availability",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/My-Swaps",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//service-providers/link/Open-Shifts",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//workforce/my-availability/button/Refresh",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//workforce/my-availability/button/Weekly-Availability",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Weekly Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//workforce/my-availability/button/Date-Exceptions",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Date Exceptions",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//workforce/my-availability/button/Add-Slot",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Add Slot",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//workforce/my-availability/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//workforce/my-availability/link/Skip-to-main-content",
+      "route": "/workforce/my-availability",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//workforce/my-swaps/button/Refresh",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//workforce/my-swaps/button/Request-Swap",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Request Swap",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//workforce/my-swaps/button/Sent-Requests-(0)",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Sent Requests (0)",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//workforce/my-swaps/button/Received-Requests-(0)",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Received Requests (0)",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//workforce/my-swaps/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//workforce/my-swaps/link/Skip-to-main-content",
+      "route": "/workforce/my-swaps",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//workforce/open-shifts/button/Refresh",
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//workforce/open-shifts/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/accountant//workforce/open-shifts/link/Skip-to-main-content",
+      "route": "/workforce/open-shifts",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    }
+  ]
+}

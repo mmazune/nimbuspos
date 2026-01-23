@@ -1,0 +1,62 @@
+{
+  "org": "cafesserie",
+  "role": "chef",
+  "email": "chef@cafesserie.demo.local",
+  "extractedAt": "2026-01-20T01:40:39.404Z",
+  "durationMs": 29330,
+  "routesVisited": 1,
+  "controlsExtracted": 5,
+  "controlsMissingTestId": 5,
+  "controls": [
+    {
+      "route": "/launch",
+      "controlType": "button",
+      "accessibleName": "POS\n\nTables, orders, payments, offline queue.\n\nDefault on this device\nGo",
+      "testId": null,
+      "locatorStrategy": "locator('button')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/launch",
+      "controlType": "button",
+      "accessibleName": "Kitchen Display\n\nTickets, stations, live updates & alerts.\n\nSet as default\nGo",
+      "testId": null,
+      "locatorStrategy": "locator('button')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/launch",
+      "controlType": "button",
+      "accessibleName": "Backoffice\n\nReports, inventory, staff, configuration.\n\nSet as default\nGo",
+      "testId": null,
+      "locatorStrategy": "locator('button')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/launch",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/launch",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    }
+  ]
+}

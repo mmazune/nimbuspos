@@ -16,10 +16,12 @@
     "test:e2e:ui-map:headed": "playwright test ui-owner-map.spec.ts --headed",
     "ui-map:report": "npx tsx e2e/ui-map/generate-report.ts",
     "ui-map:gate": "npx tsx e2e/ui-map/testability-gate.ts",
-    "ui:audit": "playwright test e2e/role-audit/audit.spec.ts",
-    "ui:audit:headed": "playwright test e2e/role-audit/audit.spec.ts --headed",
-    "ui:audit:all": "AUDIT_ORG= AUDIT_ROLES= playwright test e2e/role-audit/audit.spec.ts",
-    "ui:audit:report": "npx tsx e2e/role-audit/generate-report.ts"
+    "ui:audit": "node ../../scripts/run-with-deadline.mjs 900000 \"pnpm exec playwright test e2e/role-audit/audit.spec.ts --workers=1 --reporter=list --retries=0 --timeout=60000\"",
+    "ui:audit:headed": "pnpm exec playwright test e2e/role-audit/audit.spec.ts --headed",
+    "ui:audit:all": "node ../../scripts/run-with-deadline.mjs 2700000 \"pnpm exec playwright test e2e/role-audit/audit.spec.ts --workers=1 --reporter=list --retries=0 --timeout=60000\"",
+    "ui:audit:ff": "node ../../scripts/run-with-deadline.mjs 900000 \"pnpm exec playwright test e2e/role-audit/audit.spec.ts --workers=1 --reporter=list --retries=0 --timeout=60000 --max-failures=1\"",
+    "ui:audit:report": "npx tsx e2e/role-audit/generate-report.ts",
+    "ui:tail": "node ./scripts/tail-latest-log.mjs"
   },
   "dependencies": {
     "@chefcloud/contracts": "workspace:*",

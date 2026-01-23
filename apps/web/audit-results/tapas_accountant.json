@@ -2,130 +2,181 @@
   "org": "tapas",
   "role": "accountant",
   "email": "accountant@tapas.demo.local",
-  "startedAt": "2026-01-13T12:18:57.586Z",
-  "completedAt": "2026-01-13T12:22:05.741Z",
-  "durationMs": 188155,
+  "startedAt": "2026-01-19T21:32:15.165Z",
+  "completedAt": "2026-01-19T21:35:30.081Z",
+  "durationMs": 194916,
   "loginSuccess": true,
   "routesVisited": [
     {
       "path": "/analytics",
       "title": "",
-      "visitedAt": "2026-01-13T12:19:19.641Z",
-      "loadTimeMs": 7786,
-      "status": "error",
-      "error": "page.title: Execution context was destroyed, most likely because of a navigation",
+      "visitedAt": "2026-01-19T21:32:34.093Z",
+      "loadTimeMs": 2534,
+      "status": "success",
       "apiCallsOnLoad": 6
     },
     {
       "path": "/finance",
       "title": "",
-      "visitedAt": "2026-01-13T12:19:39.858Z",
-      "loadTimeMs": 2376,
+      "visitedAt": "2026-01-19T21:32:50.369Z",
+      "loadTimeMs": 2059,
       "status": "success",
       "apiCallsOnLoad": 3
     },
     {
       "path": "/finance/accounts",
       "title": "",
-      "visitedAt": "2026-01-13T12:19:51.673Z",
-      "loadTimeMs": 4591,
+      "visitedAt": "2026-01-19T21:33:07.101Z",
+      "loadTimeMs": 2027,
       "status": "success",
       "apiCallsOnLoad": 3
     },
     {
       "path": "/finance/ap-aging",
       "title": "",
-      "visitedAt": "2026-01-13T12:20:15.198Z",
-      "loadTimeMs": 5051,
+      "visitedAt": "2026-01-19T21:33:18.803Z",
+      "loadTimeMs": 3311,
       "status": "success",
       "apiCallsOnLoad": 3
     },
     {
       "path": "/finance/ar-aging",
       "title": "",
-      "visitedAt": "2026-01-13T12:20:27.440Z",
-      "loadTimeMs": 4332,
+      "visitedAt": "2026-01-19T21:33:37.132Z",
+      "loadTimeMs": 2354,
       "status": "success",
       "apiCallsOnLoad": 3
     },
     {
       "path": "/finance/balance-sheet",
       "title": "",
-      "visitedAt": "2026-01-13T12:20:44.355Z",
-      "loadTimeMs": 9756,
+      "visitedAt": "2026-01-19T21:33:54.935Z",
+      "loadTimeMs": 2396,
       "status": "success",
       "apiCallsOnLoad": 3
     },
     {
       "path": "/finance/journal",
       "title": "",
-      "visitedAt": "2026-01-13T12:21:06.372Z",
-      "loadTimeMs": 2916,
+      "visitedAt": "2026-01-19T21:34:15.559Z",
+      "loadTimeMs": 2517,
       "status": "success",
       "apiCallsOnLoad": 4
     },
     {
       "path": "/finance/periods",
       "title": "",
-      "visitedAt": "2026-01-13T12:21:09.801Z",
-      "loadTimeMs": 3429,
-      "status": "error",
-      "error": "page.goto: net::ERR_ABORTED at http://localhost:3000/finance/periods\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/finance/periods\", waiting until \"domcontentloaded\"\u001b[22m\n",
-      "apiCallsOnLoad": 5
+      "visitedAt": "2026-01-19T21:34:43.716Z",
+      "loadTimeMs": 3456,
+      "status": "success",
+      "apiCallsOnLoad": 3
     },
     {
       "path": "/finance/pnl",
       "title": "",
-      "visitedAt": "2026-01-13T12:21:30.658Z",
-      "loadTimeMs": 3605,
+      "visitedAt": "2026-01-19T21:34:59.674Z",
+      "loadTimeMs": 2922,
       "status": "success",
       "apiCallsOnLoad": 3
     },
     {
       "path": "/finance/trial-balance",
       "title": "",
-      "visitedAt": "2026-01-13T12:21:47.364Z",
-      "loadTimeMs": 2992,
+      "visitedAt": "2026-01-19T21:35:17.295Z",
+      "loadTimeMs": 2157,
       "status": "success",
       "apiCallsOnLoad": 3
     },
     {
       "path": "/reports",
       "title": "",
-      "visitedAt": "2026-01-13T12:22:05.638Z",
-      "loadTimeMs": 2664,
+      "visitedAt": "2026-01-19T21:35:19.615Z",
+      "loadTimeMs": 2316,
+      "status": "success",
+      "apiCallsOnLoad": 0
+    },
+    {
+      "path": "/service-providers",
+      "title": "",
+      "visitedAt": "2026-01-19T21:35:22.602Z",
+      "loadTimeMs": 2986,
       "status": "success",
       "apiCallsOnLoad": 2
+    },
+    {
+      "path": "/workforce/my-availability",
+      "title": "",
+      "visitedAt": "2026-01-19T21:35:25.184Z",
+      "loadTimeMs": 2581,
+      "status": "success",
+      "apiCallsOnLoad": 8
+    },
+    {
+      "path": "/workforce/my-swaps",
+      "title": "",
+      "visitedAt": "2026-01-19T21:35:27.485Z",
+      "loadTimeMs": 2300,
+      "status": "success",
+      "apiCallsOnLoad": 1
+    },
+    {
+      "path": "/workforce/open-shifts",
+      "title": "",
+      "visitedAt": "2026-01-19T21:35:30.039Z",
+      "loadTimeMs": 2553,
+      "status": "success",
+      "apiCallsOnLoad": 5
     }
   ],
   "controlsClicked": [
     {
-      "route": "/finance",
-      "selector": "[data-testid=\"theme-toggle-btn\"]",
-      "label": "theme-toggle-btn",
-      "type": "toggle",
+      "route": "/analytics",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/analytics",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/analytics",
+      "selector": "button:not([type=\"submit\"]):has-text(\"[button-0]\")",
+      "label": "[button-0]",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/analytics",
+      "selector": "[aria-label=\"Open Tanstack query devtools\"]",
+      "label": "Open Tanstack query devtools",
+      "type": "button",
       "safeToClick": true,
       "clicked": true,
       "outcome": "no-op"
     },
     {
       "route": "/finance",
-      "selector": "[data-testid=\"user-menu-container\"]",
-      "label": "user-menu-container",
-      "type": "menu",
-      "safeToClick": true,
-      "clicked": true,
-      "outcome": "menu-opened"
-    },
-    {
-      "route": "/finance",
-      "selector": "[data-testid=\"user-menu-trigger\"]",
-      "label": "user-menu-trigger",
-      "type": "menu",
+      "selector": "select:has-text(\"Sort by status\nSort by query h\")",
+      "label": "Sort by status\nSort by query hash\nSort by last upd",
+      "type": "dropdown",
       "safeToClick": true,
       "clicked": false,
       "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"user-menu-trigger\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button aria-expanded=\"true\" aria-haspopup=\"menu\" data-testid=\"user-menu-trigger\" aria-label=\"User menu for Carol Accountant\" class=\"flex items-center space-x-2 rounded-lg px-3 py-2 hover:bg-accent transition-colors\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"select:has-text(\"Sort by status\nSort by query h\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for select:has-text(\"Sort by status\u001b[22m\n\u001b[2mSort by query h\") >> nth=0\u001b[22m\n"
     },
     {
       "route": "/finance",
@@ -183,9 +234,8 @@
       "label": "theme-toggle-btn",
       "type": "button",
       "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"theme-toggle-btn\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button title=\"Switch to light mode\" data-testid=\"theme-toggle-btn\" aria-label=\"Switch to light mode\" class=\"inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-nimbus-mist hover:text-nimbus-navy h-11 w-11\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n"
+      "clicked": true,
+      "outcome": "no-op"
     },
     {
       "route": "/finance",
@@ -193,19 +243,57 @@
       "label": "user-menu-trigger",
       "type": "button",
       "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"user-menu-trigger\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button aria-expanded=\"true\" aria-haspopup=\"menu\" data-testid=\"user-menu-trigger\" aria-label=\"User menu for Carol Accountant\" class=\"flex items-center space-x-2 rounded-lg px-3 py-2 hover:bg-accent transition-colors\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+      "clicked": true,
+      "outcome": "menu-opened"
     },
     {
-      "route": "/finance/accounts",
-      "selector": "[data-testid=\"coa-clear-filters\"]",
-      "label": "coa-clear-filters",
-      "type": "filter",
+      "route": "/finance",
+      "selector": "button:not([type=\"submit\"]):has-text(\"[button-2]\")",
+      "label": "[button-2]",
+      "type": "button",
       "safeToClick": true,
       "clicked": false,
       "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"coa-clear-filters\"]').first()\u001b[22m\n"
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance",
+      "selector": "[aria-label=\"Close tanstack query devtools\"]",
+      "label": "Close tanstack query devtools",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "menu-opened"
+    },
+    {
+      "route": "/finance/accounts",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/accounts",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/accounts",
+      "selector": "button svg:has-text(\"[icon-button-2]\")",
+      "label": "[icon-button-2]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
     },
     {
       "route": "/finance/accounts",
@@ -215,7 +303,7 @@
       "safeToClick": true,
       "clicked": false,
       "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"Reload app\")').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"rounded-md bg-emerald-500 px-4 py-1.5 text-xs font-semibold text-slate-900 hover:bg-emerald-400\">Reload app</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n"
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"Reload app\")').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"rounded-md bg-emerald-500 px-4 py-1.5 text-xs font-semibold text-slate-900 hover:bg-emerald-400\">Reload app</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
     },
     {
       "route": "/finance/accounts",
@@ -225,324 +313,39 @@
       "safeToClick": true,
       "clicked": false,
       "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"Go to POS\")').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"rounded-md border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs text-slate-100 hover:bg-slate-800\">Go to POS</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"Go to POS\")').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"rounded-md border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs text-slate-100 hover:bg-slate-800\">Go to POS</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
     },
     {
-      "route": "/finance/ap-aging",
-      "selector": "[data-testid=\"theme-toggle-btn\"]",
-      "label": "theme-toggle-btn",
-      "type": "toggle",
-      "safeToClick": true,
-      "clicked": true,
-      "outcome": "no-op"
-    },
-    {
-      "route": "/finance/ap-aging",
-      "selector": "[data-testid=\"user-menu-container\"]",
-      "label": "user-menu-container",
-      "type": "menu",
-      "safeToClick": true,
-      "clicked": true,
-      "outcome": "menu-opened"
-    },
-    {
-      "route": "/finance/ap-aging",
-      "selector": "[data-testid=\"user-menu-trigger\"]",
-      "label": "user-menu-trigger",
-      "type": "menu",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"user-menu-trigger\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button aria-expanded=\"true\" aria-haspopup=\"menu\" data-testid=\"user-menu-trigger\" aria-label=\"User menu for Carol Accountant\" class=\"flex items-center space-x-2 rounded-lg px-3 py-2 hover:bg-accent transition-colors\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n"
-    },
-    {
-      "route": "/finance/ap-aging",
-      "selector": "button svg:has-text(\"[icon-button-0]\")",
-      "label": "[icon-button-0]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/ap-aging",
-      "selector": "button svg:has-text(\"[icon-button-1]\")",
-      "label": "[icon-button-1]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/ap-aging",
-      "selector": "button svg:has-text(\"[icon-button-2]\")",
-      "label": "[icon-button-2]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/ap-aging",
-      "selector": "button svg:has-text(\"[icon-button-3]\")",
-      "label": "[icon-button-3]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-3]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/ap-aging",
-      "selector": "button svg:has-text(\"[icon-button-4]\")",
-      "label": "[icon-button-4]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-4]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/ap-aging",
-      "selector": "[data-testid=\"theme-toggle-btn\"]",
-      "label": "theme-toggle-btn",
-      "type": "button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"theme-toggle-btn\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button title=\"Switch to light mode\" data-testid=\"theme-toggle-btn\" aria-label=\"Switch to light mode\" class=\"inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-nimbus-mist hover:text-nimbus-navy h-11 w-11\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
-    },
-    {
-      "route": "/finance/ap-aging",
-      "selector": "[data-testid=\"user-menu-trigger\"]",
-      "label": "user-menu-trigger",
-      "type": "button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"user-menu-trigger\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button aria-expanded=\"true\" aria-haspopup=\"menu\" data-testid=\"user-menu-trigger\" aria-label=\"User menu for Carol Accountant\" class=\"flex items-center space-x-2 rounded-lg px-3 py-2 hover:bg-accent transition-colors\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
-    },
-    {
-      "route": "/finance/ar-aging",
-      "selector": "button svg:has-text(\"[icon-button-0]\")",
-      "label": "[icon-button-0]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/ar-aging",
-      "selector": "button svg:has-text(\"[icon-button-1]\")",
-      "label": "[icon-button-1]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/ar-aging",
-      "selector": "button:not([type=\"submit\"]):has-text(\"[button-0]\")",
-      "label": "[button-0]",
-      "type": "button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-0]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/ar-aging",
-      "selector": "[data-testid=\"user-menu-trigger\"]",
-      "label": "user-menu-trigger",
-      "type": "button",
-      "safeToClick": true,
-      "clicked": true,
-      "outcome": "menu-opened"
-    },
-    {
-      "route": "/finance/balance-sheet",
-      "selector": "button svg:has-text(\"[icon-button-0]\")",
-      "label": "[icon-button-0]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/balance-sheet",
-      "selector": "button svg:has-text(\"[icon-button-1]\")",
-      "label": "[icon-button-1]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/balance-sheet",
-      "selector": "button:not([type=\"submit\"]):has-text(\"[button-0]\")",
-      "label": "[button-0]",
-      "type": "button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-0]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/balance-sheet",
-      "selector": "[aria-label=\"Open Tanstack query devtools\"]",
-      "label": "Open Tanstack query devtools",
-      "type": "button",
-      "safeToClick": true,
-      "clicked": true,
-      "outcome": "no-op"
-    },
-    {
-      "route": "/finance/journal",
-      "selector": "select:has-text(\"Sort by status\nSort by query h\")",
-      "label": "Sort by status\nSort by query hash\nSort by last upd",
-      "type": "dropdown",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"select:has-text(\"Sort by status\nSort by query h\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for select:has-text(\"Sort by status\u001b[22m\n\u001b[2mSort by query h\") >> nth=0\u001b[22m\n"
-    },
-    {
-      "route": "/finance/journal",
-      "selector": "button svg:has-text(\"[icon-button-0]\")",
-      "label": "[icon-button-0]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/journal",
-      "selector": "button svg:has-text(\"[icon-button-1]\")",
-      "label": "[icon-button-1]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/journal",
-      "selector": "button svg:has-text(\"[icon-button-2]\")",
-      "label": "[icon-button-2]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/journal",
-      "selector": "button svg:has-text(\"[icon-button-3]\")",
-      "label": "[icon-button-3]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-3]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/journal",
-      "selector": "button svg:has-text(\"[icon-button-4]\")",
-      "label": "[icon-button-4]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-4]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/journal",
-      "selector": "[data-testid=\"theme-toggle-btn\"]",
-      "label": "theme-toggle-btn",
-      "type": "button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"theme-toggle-btn\"]').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/journal",
-      "selector": "button:not([type=\"submit\"]):has-text(\"Go to POS\")",
-      "label": "Go to POS",
-      "type": "button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"Go to POS\")').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"rounded-md border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs text-slate-100 hover:bg-slate-800\">Go to POS</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n\u001b[2m    - performing click action\u001b[22m\n\u001b[2m    - click action done\u001b[22m\n\u001b[2m    - waiting for scheduled navigations to finish\u001b[22m\n"
-    },
-    {
-      "route": "/finance/journal",
+      "route": "/finance/accounts",
       "selector": "button:not([type=\"submit\"]):has-text(\"[button-2]\")",
       "label": "[button-2]",
       "type": "button",
       "safeToClick": true,
       "clicked": false,
       "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-2]\")').first()\u001b[22m\n\u001b[2m    - waiting for\" http://localhost:3000/pos\" navigation to finish...\u001b[22m\n"
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-2]\")').first()\u001b[22m\n"
     },
     {
-      "route": "/finance/journal",
+      "route": "/finance/accounts",
       "selector": "button:not([type=\"submit\"]):has-text(\"[button-3]\")",
       "label": "[button-3]",
       "type": "button",
       "safeToClick": true,
       "clicked": false,
       "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-3]\")').first()\u001b[22m\n\u001b[2m    - waiting for\" http://localhost:3000/pos\" navigation to finish...\u001b[22m\n\u001b[2m    - navigated to \"http://localhost:3000/pos\"\u001b[22m\n"
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-3]\")').first()\u001b[22m\n"
     },
     {
-      "route": "/finance/pnl",
-      "selector": "select:has-text(\"Sort by status\nSort by query h\")",
-      "label": "Sort by status\nSort by query hash\nSort by last upd",
-      "type": "dropdown",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"select:has-text(\"Sort by status\nSort by query h\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for select:has-text(\"Sort by status\u001b[22m\n\u001b[2mSort by query h\") >> nth=0\u001b[22m\n"
-    },
-    {
-      "route": "/finance/pnl",
-      "selector": "[data-testid=\"theme-toggle-btn\"]",
-      "label": "theme-toggle-btn",
-      "type": "toggle",
+      "route": "/finance/accounts",
+      "selector": "[aria-label=\"Close\"]",
+      "label": "Close",
+      "type": "button",
       "safeToClick": true,
       "clicked": true,
       "outcome": "no-op"
     },
     {
-      "route": "/finance/pnl",
-      "selector": "[data-testid=\"user-menu-container\"]",
-      "label": "user-menu-container",
-      "type": "menu",
-      "safeToClick": true,
-      "clicked": true,
-      "outcome": "menu-opened"
-    },
-    {
-      "route": "/finance/pnl",
-      "selector": "[data-testid=\"user-menu-trigger\"]",
-      "label": "user-menu-trigger",
-      "type": "menu",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"user-menu-trigger\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button aria-expanded=\"true\" aria-haspopup=\"menu\" data-testid=\"user-menu-trigger\" aria-label=\"User menu for Carol Accountant\" class=\"flex items-center space-x-2 rounded-lg px-3 py-2 hover:bg-accent transition-colors\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
-    },
-    {
-      "route": "/finance/pnl",
+      "route": "/finance/ap-aging",
       "selector": "button svg:has-text(\"[icon-button-0]\")",
       "label": "[icon-button-0]",
       "type": "icon-button",
@@ -552,7 +355,7 @@
       "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
     },
     {
-      "route": "/finance/pnl",
+      "route": "/finance/ap-aging",
       "selector": "button svg:has-text(\"[icon-button-1]\")",
       "label": "[icon-button-1]",
       "type": "icon-button",
@@ -562,107 +365,7 @@
       "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
     },
     {
-      "route": "/finance/pnl",
-      "selector": "button svg:has-text(\"[icon-button-2]\")",
-      "label": "[icon-button-2]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/pnl",
-      "selector": "button svg:has-text(\"[icon-button-3]\")",
-      "label": "[icon-button-3]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-3]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/pnl",
-      "selector": "button svg:has-text(\"[icon-button-4]\")",
-      "label": "[icon-button-4]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-4]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/pnl",
-      "selector": "[data-testid=\"theme-toggle-btn\"]",
-      "label": "theme-toggle-btn",
-      "type": "button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"theme-toggle-btn\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button title=\"Switch to light mode\" data-testid=\"theme-toggle-btn\" aria-label=\"Switch to light mode\" class=\"inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-nimbus-mist hover:text-nimbus-navy h-11 w-11\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n"
-    },
-    {
-      "route": "/finance/trial-balance",
-      "selector": "select:has-text(\"Sort by status\nSort by query h\")",
-      "label": "Sort by status\nSort by query hash\nSort by last upd",
-      "type": "dropdown",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"select:has-text(\"Sort by status\nSort by query h\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for select:has-text(\"Sort by status\u001b[22m\n\u001b[2mSort by query h\") >> nth=0\u001b[22m\n"
-    },
-    {
-      "route": "/finance/trial-balance",
-      "selector": "button svg:has-text(\"[icon-button-0]\")",
-      "label": "[icon-button-0]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/trial-balance",
-      "selector": "button svg:has-text(\"[icon-button-1]\")",
-      "label": "[icon-button-1]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/trial-balance",
-      "selector": "button svg:has-text(\"[icon-button-2]\")",
-      "label": "[icon-button-2]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/trial-balance",
-      "selector": "button svg:has-text(\"[icon-button-3]\")",
-      "label": "[icon-button-3]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-3]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/trial-balance",
-      "selector": "button svg:has-text(\"[icon-button-4]\")",
-      "label": "[icon-button-4]",
-      "type": "icon-button",
-      "safeToClick": true,
-      "clicked": false,
-      "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-4]\")').first()\u001b[22m\n"
-    },
-    {
-      "route": "/finance/trial-balance",
+      "route": "/finance/ap-aging",
       "selector": "[data-testid=\"theme-toggle-btn\"]",
       "label": "theme-toggle-btn",
       "type": "button",
@@ -671,7 +374,7 @@
       "outcome": "no-op"
     },
     {
-      "route": "/finance/trial-balance",
+      "route": "/finance/ap-aging",
       "selector": "[data-testid=\"user-menu-trigger\"]",
       "label": "user-menu-trigger",
       "type": "button",
@@ -680,25 +383,26 @@
       "outcome": "menu-opened"
     },
     {
-      "route": "/finance/trial-balance",
-      "selector": "[data-testid=\"tb-generate\"]",
-      "label": "tb-generate",
+      "route": "/finance/ap-aging",
+      "selector": "button:not([type=\"submit\"]):has-text(\"[button-2]\")",
+      "label": "[button-2]",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/ap-aging",
+      "selector": "[aria-label=\"Open Tanstack query devtools\"]",
+      "label": "Open Tanstack query devtools",
       "type": "button",
       "safeToClick": true,
       "clicked": true,
       "outcome": "menu-opened"
     },
     {
-      "route": "/finance/trial-balance",
-      "selector": "[data-testid=\"tb-export\"]",
-      "label": "tb-export",
-      "type": "button",
-      "safeToClick": true,
-      "clicked": true,
-      "outcome": "menu-opened"
-    },
-    {
-      "route": "/reports",
+      "route": "/finance/ar-aging",
       "selector": "select:has-text(\"Sort by status\nSort by query h\")",
       "label": "Sort by status\nSort by query hash\nSort by last upd",
       "type": "dropdown",
@@ -708,7 +412,7 @@
       "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"select:has-text(\"Sort by status\nSort by query h\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for select:has-text(\"Sort by status\u001b[22m\n\u001b[2mSort by query h\") >> nth=0\u001b[22m\n"
     },
     {
-      "route": "/reports",
+      "route": "/finance/ar-aging",
       "selector": "[data-testid=\"theme-toggle-btn\"]",
       "label": "theme-toggle-btn",
       "type": "toggle",
@@ -717,7 +421,7 @@
       "outcome": "no-op"
     },
     {
-      "route": "/reports",
+      "route": "/finance/ar-aging",
       "selector": "[data-testid=\"user-menu-container\"]",
       "label": "user-menu-container",
       "type": "menu",
@@ -726,7 +430,7 @@
       "outcome": "menu-opened"
     },
     {
-      "route": "/reports",
+      "route": "/finance/ar-aging",
       "selector": "[data-testid=\"user-menu-trigger\"]",
       "label": "user-menu-trigger",
       "type": "menu",
@@ -736,7 +440,7 @@
       "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"user-menu-trigger\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button aria-expanded=\"true\" aria-haspopup=\"menu\" data-testid=\"user-menu-trigger\" aria-label=\"User menu for Carol Accountant\" class=\"flex items-center space-x-2 rounded-lg px-3 py-2 hover:bg-accent transition-colors\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n"
     },
     {
-      "route": "/reports",
+      "route": "/finance/ar-aging",
       "selector": "button svg:has-text(\"[icon-button-0]\")",
       "label": "[icon-button-0]",
       "type": "icon-button",
@@ -746,7 +450,7 @@
       "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
     },
     {
-      "route": "/reports",
+      "route": "/finance/ar-aging",
       "selector": "button svg:has-text(\"[icon-button-1]\")",
       "label": "[icon-button-1]",
       "type": "icon-button",
@@ -756,7 +460,7 @@
       "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
     },
     {
-      "route": "/reports",
+      "route": "/finance/ar-aging",
       "selector": "button svg:has-text(\"[icon-button-2]\")",
       "label": "[icon-button-2]",
       "type": "icon-button",
@@ -766,7 +470,7 @@
       "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
     },
     {
-      "route": "/reports",
+      "route": "/finance/ar-aging",
       "selector": "button svg:has-text(\"[icon-button-3]\")",
       "label": "[icon-button-3]",
       "type": "icon-button",
@@ -776,7 +480,7 @@
       "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-3]\")').first()\u001b[22m\n"
     },
     {
-      "route": "/reports",
+      "route": "/finance/ar-aging",
       "selector": "button svg:has-text(\"[icon-button-4]\")",
       "label": "[icon-button-4]",
       "type": "icon-button",
@@ -786,93 +490,584 @@
       "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-4]\")').first()\u001b[22m\n"
     },
     {
-      "route": "/reports",
+      "route": "/finance/ar-aging",
       "selector": "[data-testid=\"theme-toggle-btn\"]",
       "label": "theme-toggle-btn",
       "type": "button",
       "safeToClick": true,
       "clicked": false,
       "outcome": "error",
-      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"theme-toggle-btn\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button title=\"Switch to light mode\" data-testid=\"theme-toggle-btn\" aria-label=\"Switch to light mode\" class=\"inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-nimbus-mist hover:text-nimbus-navy h-11 w-11\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"theme-toggle-btn\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button title=\"Switch to light mode\" data-testid=\"theme-toggle-btn\" aria-label=\"Switch to light mode\" class=\"inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-nimbus-mist hover:text-nimbus-navy h-11 w-11\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> from <div class=\"relative\" data-testid=\"user-menu-container\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n\u001b[2m    - waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m    - element is visible, enabled and stable\u001b[22m\n\u001b[2m    - scrolling into view if needed\u001b[22m\n\u001b[2m    - done scrolling\u001b[22m\n"
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "selector": "select:has-text(\"Sort by status\nSort by query h\")",
+      "label": "Sort by status\nSort by query hash\nSort by last upd",
+      "type": "dropdown",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"select:has-text(\"Sort by status\nSort by query h\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for select:has-text(\"Sort by status\u001b[22m\n\u001b[2mSort by query h\") >> nth=0\u001b[22m\n"
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "selector": "input[type=\"date\"]:has-text(\"[date-picker-0]\")",
+      "label": "[date-picker-0]",
+      "type": "date-picker",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"date\"]:has-text(\"[date-picker-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "selector": "[data-testid=\"theme-toggle-btn\"]",
+      "label": "theme-toggle-btn",
+      "type": "toggle",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "no-op"
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "selector": "[data-testid=\"user-menu-container\"]",
+      "label": "user-menu-container",
+      "type": "menu",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "menu-opened"
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "selector": "[data-testid=\"user-menu-trigger\"]",
+      "label": "user-menu-trigger",
+      "type": "menu",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"user-menu-trigger\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button aria-expanded=\"true\" aria-haspopup=\"menu\" data-testid=\"user-menu-trigger\" aria-label=\"User menu for Carol Accountant\" class=\"flex items-center space-x-2 rounded-lg px-3 py-2 hover:bg-accent transition-colors\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "selector": "button svg:has-text(\"[icon-button-2]\")",
+      "label": "[icon-button-2]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "selector": "button svg:has-text(\"[icon-button-3]\")",
+      "label": "[icon-button-3]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-3]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "selector": "button svg:has-text(\"[icon-button-4]\")",
+      "label": "[icon-button-4]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-4]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/journal",
+      "selector": "select:has-text(\"Sort by status\nSort by query h\")",
+      "label": "Sort by status\nSort by query hash\nSort by last upd",
+      "type": "dropdown",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"select:has-text(\"Sort by status\nSort by query h\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for select:has-text(\"Sort by status\u001b[22m\n\u001b[2mSort by query h\") >> nth=0\u001b[22m\n"
+    },
+    {
+      "route": "/finance/journal",
+      "selector": "input[placeholder*=\"search\" i]:has-text(\"[search-0]\")",
+      "label": "[search-0]",
+      "type": "search",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder*=\"search\" i]:has-text(\"[search-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/journal",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/journal",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/journal",
+      "selector": "button svg:has-text(\"[icon-button-2]\")",
+      "label": "[icon-button-2]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/journal",
+      "selector": "button:not([type=\"submit\"]):has-text(\"Reload app\")",
+      "label": "Reload app",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"Reload app\")').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"rounded-md bg-emerald-500 px-4 py-1.5 text-xs font-semibold text-slate-900 hover:bg-emerald-400\">Reload app</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "route": "/finance/journal",
+      "selector": "button:not([type=\"submit\"]):has-text(\"Go to POS\")",
+      "label": "Go to POS",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"Go to POS\")').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"rounded-md border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs text-slate-100 hover:bg-slate-800\">Go to POS</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "route": "/finance/journal",
+      "selector": "button:not([type=\"submit\"]):has-text(\"[button-2]\")",
+      "label": "[button-2]",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/journal",
+      "selector": "button:not([type=\"submit\"]):has-text(\"[button-3]\")",
+      "label": "[button-3]",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-3]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/journal",
+      "selector": "[aria-label=\"Close\"]",
+      "label": "Close",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "no-op"
+    },
+    {
+      "route": "/finance/periods",
+      "selector": "select:has-text(\"Sort by status\nSort by query h\")",
+      "label": "Sort by status\nSort by query hash\nSort by last upd",
+      "type": "dropdown",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"select:has-text(\"Sort by status\nSort by query h\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for select:has-text(\"Sort by status\u001b[22m\n\u001b[2mSort by query h\") >> nth=0\u001b[22m\n"
+    },
+    {
+      "route": "/finance/periods",
+      "selector": "[data-testid=\"theme-toggle-btn\"]",
+      "label": "theme-toggle-btn",
+      "type": "toggle",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"theme-toggle-btn\"]').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/periods",
+      "selector": "[data-testid*=\"menu\"]:has-text(\"[menu-0]\")",
+      "label": "[menu-0]",
+      "type": "menu",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid*=\"menu\"]:has-text(\"[menu-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/periods",
+      "selector": "[data-testid*=\"menu\"]:has-text(\"[menu-1]\")",
+      "label": "[menu-1]",
+      "type": "menu",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid*=\"menu\"]:has-text(\"[menu-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/periods",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/periods",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/periods",
+      "selector": "button svg:has-text(\"[icon-button-2]\")",
+      "label": "[icon-button-2]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/periods",
+      "selector": "button:not([type=\"submit\"]):has-text(\"Reload app\")",
+      "label": "Reload app",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"Reload app\")').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"rounded-md bg-emerald-500 px-4 py-1.5 text-xs font-semibold text-slate-900 hover:bg-emerald-400\">Reload app</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "route": "/finance/periods",
+      "selector": "button:not([type=\"submit\"]):has-text(\"Go to POS\")",
+      "label": "Go to POS",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"Go to POS\")').first()\u001b[22m\n\u001b[2m    - locator resolved to <button type=\"button\" class=\"rounded-md border border-slate-700 bg-slate-900 px-3 py-1.5 text-xs text-slate-100 hover:bg-slate-800\">Go to POS</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    4 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <nextjs-portal></nextjs-portal> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "route": "/finance/periods",
+      "selector": "button:not([type=\"submit\"]):has-text(\"[button-2]\")",
+      "label": "[button-2]",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/pnl",
+      "selector": "select:has-text(\"Sort by status\nSort by query h\")",
+      "label": "Sort by status\nSort by query hash\nSort by last upd",
+      "type": "dropdown",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"select:has-text(\"Sort by status\nSort by query h\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for select:has-text(\"Sort by status\u001b[22m\n\u001b[2mSort by query h\") >> nth=0\u001b[22m\n"
+    },
+    {
+      "route": "/finance/pnl",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/pnl",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/pnl",
+      "selector": "button svg:has-text(\"[icon-button-2]\")",
+      "label": "[icon-button-2]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/pnl",
+      "selector": "button svg:has-text(\"[icon-button-3]\")",
+      "label": "[icon-button-3]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-3]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/pnl",
+      "selector": "button svg:has-text(\"[icon-button-4]\")",
+      "label": "[icon-button-4]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-4]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/pnl",
+      "selector": "[data-testid=\"theme-toggle-btn\"]",
+      "label": "theme-toggle-btn",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "no-op"
+    },
+    {
+      "route": "/finance/pnl",
+      "selector": "[data-testid=\"user-menu-trigger\"]",
+      "label": "user-menu-trigger",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "menu-opened"
+    },
+    {
+      "route": "/finance/pnl",
+      "selector": "[data-testid=\"pnl-generate\"]",
+      "label": "pnl-generate",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "menu-opened"
+    },
+    {
+      "route": "/finance/pnl",
+      "selector": "[data-testid=\"pnl-export\"]",
+      "label": "pnl-export",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "menu-opened"
+    },
+    {
+      "route": "/finance/trial-balance",
+      "selector": "select:has-text(\"Sort by status\nSort by query h\")",
+      "label": "Sort by status\nSort by query hash\nSort by last upd",
+      "type": "dropdown",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"select:has-text(\"Sort by status\nSort by query h\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for select:has-text(\"Sort by status\u001b[22m\n\u001b[2mSort by query h\") >> nth=0\u001b[22m\n"
+    },
+    {
+      "route": "/finance/trial-balance",
+      "selector": "input[type=\"date\"]:has-text(\"[date-picker-0]\")",
+      "label": "[date-picker-0]",
+      "type": "date-picker",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"date\"]:has-text(\"[date-picker-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/trial-balance",
+      "selector": "input[type=\"date\"]:has-text(\"[date-picker-1]\")",
+      "label": "[date-picker-1]",
+      "type": "date-picker",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[type=\"date\"]:has-text(\"[date-picker-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/trial-balance",
+      "selector": "[data-testid=\"theme-toggle-btn\"]",
+      "label": "theme-toggle-btn",
+      "type": "toggle",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "no-op"
+    },
+    {
+      "route": "/finance/trial-balance",
+      "selector": "[data-testid=\"user-menu-container\"]",
+      "label": "user-menu-container",
+      "type": "menu",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "menu-opened"
+    },
+    {
+      "route": "/finance/trial-balance",
+      "selector": "[data-testid=\"user-menu-trigger\"]",
+      "label": "user-menu-trigger",
+      "type": "menu",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-testid=\"user-menu-trigger\"]').first()\u001b[22m\n\u001b[2m    - locator resolved to <button aria-expanded=\"true\" aria-haspopup=\"menu\" data-testid=\"user-menu-trigger\" aria-label=\"User menu for Carol Accountant\" class=\"flex items-center space-x-2 rounded-lg px-3 py-2 hover:bg-accent transition-colors\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    3 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <div class=\"fixed inset-0 z-40\" data-testid=\"user-menu-backdrop\"></div> intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 500ms\u001b[22m\n"
+    },
+    {
+      "route": "/finance/trial-balance",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/trial-balance",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/trial-balance",
+      "selector": "button svg:has-text(\"[icon-button-2]\")",
+      "label": "[icon-button-2]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-2]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/finance/trial-balance",
+      "selector": "button svg:has-text(\"[icon-button-3]\")",
+      "label": "[icon-button-3]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-3]\")').first()\u001b[22m\n"
     }
   ],
   "endpoints": [
     {
       "method": "GET",
-      "path": "/billing/subscription",
-      "status": 401,
-      "count": 3,
-      "triggeredBy": "page-load"
+      "path": "/franchise/budgets/variance",
+      "status": 200,
+      "count": 7,
+      "triggeredBy": "button svg:has-text(\"[icon-button-0]\")"
     },
     {
       "method": "GET",
-      "path": "/franchise/budgets/variance",
-      "status": 401,
-      "count": 7,
-      "triggeredBy": "page-load"
+      "path": "/billing/subscription",
+      "status": 403,
+      "count": 1,
+      "triggeredBy": "button svg:has-text(\"[icon-button-0]\")"
     },
     {
       "method": "GET",
       "path": "/franchise/forecast",
-      "status": 401,
+      "status": 200,
       "count": 7,
-      "triggeredBy": "page-load"
+      "triggeredBy": "button svg:has-text(\"[icon-button-1]\")"
     },
     {
       "method": "GET",
       "path": "/me",
       "status": 200,
-      "count": 21,
-      "triggeredBy": "page-load"
+      "count": 29,
+      "triggeredBy": "button svg:has-text(\"[icon-button-1]\")"
     },
     {
       "method": "GET",
       "path": "/branches",
       "status": 200,
-      "count": 21,
-      "triggeredBy": "page-load"
+      "count": 28,
+      "triggeredBy": "button svg:has-text(\"[icon-button-1]\")"
     },
     {
       "method": "GET",
       "path": "/analytics/daily-metrics",
       "status": 200,
       "count": 1,
-      "triggeredBy": "page-load"
+      "triggeredBy": "button svg:has-text(\"[icon-button-1]\")"
     },
     {
       "method": "GET",
       "path": "/finance/budgets/summary",
       "status": 200,
       "count": 1,
-      "triggeredBy": "[data-testid=\"theme-toggle-btn\"]"
+      "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
     },
     {
       "method": "GET",
       "path": "/accounting/accounts",
       "status": 200,
       "count": 3,
-      "triggeredBy": "[data-testid=\"coa-clear-filters\"]"
+      "triggeredBy": "button svg:has-text(\"[icon-button-0]\")"
     },
     {
       "method": "GET",
       "path": "/accounting/ap/aging",
       "status": 200,
       "count": 1,
-      "triggeredBy": "[data-testid=\"user-menu-container\"]"
+      "triggeredBy": "button svg:has-text(\"[icon-button-0]\")"
     },
     {
       "method": "GET",
       "path": "/accounting/ar/aging",
       "status": 200,
       "count": 1,
-      "triggeredBy": "button svg:has-text(\"[icon-button-1]\")"
+      "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
     },
     {
       "method": "GET",
       "path": "/accounting/balance-sheet",
       "status": 200,
       "count": 1,
-      "triggeredBy": "button svg:has-text(\"[icon-button-1]\")"
+      "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
     },
     {
       "method": "GET",
@@ -883,69 +1078,134 @@
     },
     {
       "method": "GET",
-      "path": "/pos/orders",
-      "status": 401,
-      "count": 2,
-      "triggeredBy": "page-load"
-    },
-    {
-      "method": "GET",
-      "path": "/menu/items",
+      "path": "/accounting/periods",
       "status": 200,
-      "count": 2,
-      "triggeredBy": "page-load"
+      "count": 1,
+      "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
     },
     {
       "method": "GET",
       "path": "/accounting/pnl",
       "status": 200,
-      "count": 1,
-      "triggeredBy": "[data-testid=\"user-menu-container\"]"
+      "count": 2,
+      "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
     },
     {
       "method": "GET",
       "path": "/accounting/trial-balance",
       "status": 200,
-      "count": 2,
+      "count": 1,
       "triggeredBy": "select:has-text(\"Sort by status\nSort by query h\")"
+    },
+    {
+      "method": "GET",
+      "path": "/service-providers/contracts",
+      "status": 404,
+      "count": 1,
+      "triggeredBy": "page-load"
+    },
+    {
+      "method": "GET",
+      "path": "/service-providers",
+      "status": 200,
+      "count": 1,
+      "triggeredBy": "page-load"
+    },
+    {
+      "method": "GET",
+      "path": "/finance/service-reminders",
+      "status": 200,
+      "count": 1,
+      "triggeredBy": "page-load"
+    },
+    {
+      "method": "GET",
+      "path": "/finance/service-reminders/summary",
+      "status": 200,
+      "count": 1,
+      "triggeredBy": "page-load"
+    },
+    {
+      "method": "GET",
+      "path": "/workforce/self/availability/exceptions",
+      "status": 200,
+      "count": 1,
+      "triggeredBy": "page-load"
+    },
+    {
+      "method": "GET",
+      "path": "/workforce/self/availability",
+      "status": 200,
+      "count": 1,
+      "triggeredBy": "page-load"
+    },
+    {
+      "method": "GET",
+      "path": "/workforce/self/swaps",
+      "status": 200,
+      "count": 1,
+      "triggeredBy": "page-load"
+    },
+    {
+      "method": "GET",
+      "path": "/workforce/self/open-shifts/claims",
+      "status": 404,
+      "count": 1,
+      "triggeredBy": "page-load"
+    },
+    {
+      "method": "GET",
+      "path": "/workforce/self/open-shifts",
+      "status": 200,
+      "count": 1,
+      "triggeredBy": "page-load"
     }
   ],
   "failures": [
     {
       "route": "/analytics",
-      "type": "route-error",
-      "message": "page.title: Execution context was destroyed, most likely because of a navigation",
-      "screenshot": "error--analytics-1768306759445.png"
-    },
-    {
-      "route": "/finance/periods",
-      "type": "route-error",
-      "message": "page.goto: net::ERR_ABORTED at http://localhost:3000/finance/periods\nCall log:\n\u001b[2m  - navigating to \"http://localhost:3000/finance/periods\", waiting until \"domcontentloaded\"\u001b[22m\n",
-      "screenshot": "error--finance-periods-1768306867374.png"
-    },
-    {
-      "route": "/service-providers",
-      "type": "route-error",
-      "message": "Skipped due to time budget (188052ms elapsed)"
+      "type": "api-forbidden",
+      "message": "403 Forbidden: GET /billing/subscription",
+      "endpoint": "/billing/subscription",
+      "status": 403
     }
   ],
-  "screenshots": [
-    "error--analytics-1768306759445.png",
-    "error--finance-periods-1768306867374.png"
-  ],
+  "screenshots": [],
   "summary": {
-    "routesTotal": 11,
-    "routesSuccess": 9,
+    "routesTotal": 15,
+    "routesSuccess": 15,
     "routesForbidden": 0,
     "routesNotFound": 0,
-    "routesError": 2,
-    "controlsFound": 71,
-    "controlsClicked": 14,
-    "controlsSkipped": 57,
-    "endpointsHit": 16,
-    "endpoints2xx": 56,
-    "endpoints4xx": 19,
+    "routesError": 0,
+    "controlsFound": 88,
+    "controlsClicked": 19,
+    "controlsSkipped": 69,
+    "endpointsHit": 24,
+    "endpoints2xx": 91,
+    "endpoints4xx": 3,
     "endpoints5xx": 0,
-    "failuresTotal": 3
-  }
+    "failuresTotal": 1
+  },
+  "visibilityChecks": [
+    {
+      "name": "Dashboard header",
+      "passed": true,
+      "message": "Found: dashboard header",
+      "selector": "[data-testid=\"dashboard-header\"]"
+    },
+    {
+      "name": "Dashboard timestamp",
+      "passed": true,
+      "message": "Found: timestamp visible",
+      "selector": "[data-testid=\"dashboard-timestamp\"]"
+    },
+    {
+      "name": "Refresh button",
+      "passed": true,
+      "message": "Found: refresh button",
+      "selector": "[data-testid=\"dashboard-refresh-btn\"]"
+    }
+  ],
+  "visibilityPassed": 3,
+  "visibilityFailed": 0
 }

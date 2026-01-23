@@ -1,8 +1,8 @@
 # Role Audit Report: CAFESSERIE / PROCUREMENT
 
-**Date:** 2026-01-13  
+**Date:** 2026-01-19  
 **Status:** ⚠️ ISSUES  
-**Duration:** 181.2s  
+**Duration:** 197.7s  
 **Email:** procurement@cafesserie.demo.local
 
 ---
@@ -11,18 +11,18 @@
 
 | Metric | Value |
 |--------|-------|
-| Routes Visited | 9 / 10 |
+| Routes Visited | 13 / 13 |
 | Routes Forbidden | 0 |
 | Routes Not Found | 0 |
-| Routes Error | 1 |
-| Controls Found | 78 |
-| Controls Clicked | 17 |
-| Controls Skipped | 61 |
-| API Endpoints Hit | 25 |
-| 2xx Responses | 63 |
-| 4xx Responses | 22 |
+| Routes Error | 0 |
+| Controls Found | 102 |
+| Controls Clicked | 22 |
+| Controls Skipped | 80 |
+| API Endpoints Hit | 32 |
+| 2xx Responses | 82 |
+| 4xx Responses | 26 |
 | 5xx Responses | 0 |
-| Total Failures | 13 |
+| Total Failures | 0 |
 
 ---
 
@@ -30,16 +30,19 @@
 
 | Route | Status | Load Time |
 |-------|--------|-----------|
-| /dashboard | ✅ success | 2874ms |
-| /inventory | ✅ success | 1115ms |
-| /inventory/depletions | ❌ error | 10929ms |
-| /inventory/period-close | ✅ success | 3915ms |
-| /inventory/purchase-orders | ✅ success | 7539ms |
-| /inventory/receipts | ✅ success | 5364ms |
-| /inventory/recipes | ✅ success | 3273ms |
-| /inventory/transfers | ✅ success | 7312ms |
-| /inventory/waste | ✅ success | 6396ms |
-| /reports | ✅ success | 1067ms |
+| /dashboard | ✅ success | 6534ms |
+| /inventory | ✅ success | 1137ms |
+| /inventory/depletions | ✅ success | 1509ms |
+| /inventory/period-close | ✅ success | 3415ms |
+| /inventory/purchase-orders | ✅ success | 2331ms |
+| /inventory/receipts | ✅ success | 1341ms |
+| /inventory/recipes | ✅ success | 1132ms |
+| /inventory/transfers | ✅ success | 1884ms |
+| /inventory/waste | ✅ success | 4437ms |
+| /reports | ✅ success | 1066ms |
+| /service-providers | ✅ success | 1146ms |
+| /settings | ✅ success | 2697ms |
+| /workforce/my-availability | ✅ success | 3077ms |
 
 ---
 
@@ -47,31 +50,38 @@
 
 | Method | Path | Status | Count |
 |--------|------|--------|-------|
-| GET | /me |  200 | 19 |
-| GET | /branches |  200 | 19 |
+| GET | /branches |  200 | 27 |
+| GET | /me |  200 | 25 |
 | GET | /analytics/daily-metrics | ⚠️ 403 | 7 |
 | GET | /inventory/low-stock/alerts |  200 | 5 |
 | GET | /inventory/items |  200 | 3 |
 | GET | /analytics/daily |  200 | 2 |
+| GET | /analytics/payment-mix |  200 | 2 |
 | GET | /analytics/top-items |  200 | 2 |
 | GET | /analytics/category-mix |  200 | 2 |
-| GET | /analytics/peak-hours |  200 | 2 |
-| GET | /analytics/payment-mix |  200 | 2 |
-| GET | /franchise/rankings | ⚠️ 403 | 2 |
 | GET | /analytics/financial-summary | ⚠️ 403 | 2 |
+| GET | /analytics/peak-hours |  200 | 2 |
+| GET | /franchise/rankings | ⚠️ 403 | 2 |
 | GET | /org/branches | ⚠️ 404 | 2 |
 | GET | /inventory/procurement/purchase-orders | ⚠️ 404 | 2 |
 | GET | /inventory/procurement/receipts | ⚠️ 404 | 2 |
 | GET | /pos/menu-items | ⚠️ 404 | 2 |
 | GET | /inventory/foundation/uoms | ⚠️ 404 | 2 |
+| GET | /inventory/foundation/items | ⚠️ 404 | 2 |
+| GET | /service-providers/contracts | ⚠️ 404 | 2 |
 | GET | /inventory | ⚠️ 404 | 1 |
 | GET | /inventory/levels |  200 | 1 |
-| GET | /inventory/depletions |  200 | 1 |
 | GET | /inventory/depletions/stats |  200 | 1 |
+| GET | /inventory/depletions |  200 | 1 |
 | GET | /inventory/periods |  200 | 1 |
 | GET | /inventory/v2/recipes |  200 | 1 |
 | GET | /inventory/transfers |  200 | 1 |
 | GET | /inventory/waste |  200 | 1 |
+| GET | /service-providers |  200 | 1 |
+| GET | /finance/service-reminders/summary |  200 | 1 |
+| GET | /finance/service-reminders |  200 | 1 |
+| GET | /workforce/self/availability |  200 | 1 |
+| GET | /workforce/self/availability/exceptions |  200 | 1 |
 
 ---
 
@@ -79,21 +89,8 @@
 
 | Route | Type | Message |
 |-------|------|---------|
-| /dashboard | api-forbidden | 403 Forbidden: GET /analytics/daily-metrics |
-| /dashboard | api-forbidden | 403 Forbidden: GET /franchise/rankings |
-| /dashboard | api-forbidden | 403 Forbidden: GET /analytics/financial-summary |
-| /dashboard | api-forbidden | 403 Forbidden: GET /analytics/daily-metrics |
-| /dashboard | api-forbidden | 403 Forbidden: GET /analytics/daily-metrics |
-| /dashboard | api-forbidden | 403 Forbidden: GET /analytics/financial-summary |
-| /dashboard | api-forbidden | 403 Forbidden: GET /analytics/daily-metrics |
-| /dashboard | api-forbidden | 403 Forbidden: GET /franchise/rankings |
-| /dashboard | api-forbidden | 403 Forbidden: GET /analytics/daily-metrics |
-| /dashboard | api-forbidden | 403 Forbidden: GET /analytics/daily-metrics |
-| /dashboard | api-forbidden | 403 Forbidden: GET /analytics/daily-metrics |
-| /inventory/depletions | route-error | page.goto: Timeout 10000ms exceeded.
-Call log:
-[2m  - navigating to "http://loc |
-| /service-providers | route-error | Skipped due to time budget (181184ms elapsed) |
+| /workforce/my-swaps | route-skipped-time-limit | Skipped due to time budget (197688ms elapsed) |
+| /workforce/open-shifts | route-skipped-time-limit | Skipped due to time budget (197688ms elapsed) |
 
 ---
 
@@ -101,23 +98,38 @@ Call log:
 
 | Route | Label | Type | Outcome |
 |-------|-------|------|---------|
-| /dashboard | date-range-selector | dropdown | filter-applied |
-| /dashboard | date-range-selector | date-picker | no-op |
-| /dashboard | date-from-input | date-picker | no-op |
-| /dashboard | date-to-input | date-picker | no-op |
-| /dashboard | theme-toggle-btn | toggle | no-op |
+| /dashboard | Open Tanstack query devtools | button | no-op |
 | /inventory | theme-toggle-btn | toggle | no-op |
 | /inventory | user-menu-container | menu | menu-opened |
-| /inventory/period-close | theme-toggle-btn | toggle | no-op |
-| /inventory/period-close | user-menu-container | menu | menu-opened |
+| /inventory/depletions | theme-toggle-btn | button | no-op |
+| /inventory/depletions | user-menu-trigger | button | menu-opened |
+| /inventory/period-close | Close tanstack query devtools | button | no-op |
+| /inventory/period-close | Pre-Close Check | button | no-op |
 | /inventory/purchase-orders | Open Tanstack query devtools | button | no-op |
 | /inventory/receipts | theme-toggle-btn | toggle | no-op |
 | /inventory/receipts | user-menu-container | menu | menu-opened |
-| /inventory/recipes | Switch to dark mode | button | no-op |
-| /inventory/recipes | user-menu-trigger | button | menu-opened |
-| /inventory/transfers | User menu for Oscar Procuremen | button | menu-opened |
-| /inventory/waste | Close tanstack query devtools | button | no-op |
-| /reports | user-menu-trigger | button | menu-opened |
+| /inventory/recipes | theme-toggle-btn | toggle | no-op |
+| /inventory/recipes | user-menu-container | menu | menu-opened |
+| /inventory/transfers | Close tanstack query devtools | button | no-op |
+| /inventory/transfers | New Transfer | button | no-op |
+| /inventory/waste | theme-toggle-btn | toggle | no-op |
+| /inventory/waste | user-menu-container | menu | menu-opened |
+| /reports | Open Tanstack query devtools | button | no-op |
+| /service-providers | theme-toggle-btn | toggle | no-op |
+| /service-providers | user-menu-container | menu | menu-opened |
+| /settings | theme-toggle-btn | button | no-op |
+| /settings | user-menu-trigger | button | menu-opened |
+| /settings | Close tanstack query devtools | button | menu-opened |
+
+---
+
+## Landing Page Visibility Checks ✅
+
+| Check | Status | Details |
+|-------|--------|---------|
+| Inventory heading | ✅ | Found: heading visible |
+| Inventory table or list | ✅ | Found: data table |
+| Main content | ✅ | Found: main content |
 
 ---
 

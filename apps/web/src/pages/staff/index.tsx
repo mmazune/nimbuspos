@@ -158,7 +158,7 @@ export default function StaffPage() {
     {
       header: 'Actions',
       accessor: (row: Employee) => (
-        <Button variant="outline" size="sm" onClick={() => handleEdit(row)}>
+        <Button variant="outline" size="sm" onClick={() => handleEdit(row)} data-testid="staff-edit-btn">
           Edit
         </Button>
       ),
@@ -195,7 +195,7 @@ export default function StaffPage() {
         title="Staff Management"
         subtitle="Manage employees, contracts, and HR information"
         actions={
-          <Button onClick={handleCreate}>
+          <Button onClick={handleCreate} data-testid="staff-add-employee-btn">
             <Plus className="h-4 w-4 mr-2" />
             Add Employee
           </Button>

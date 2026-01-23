@@ -1,0 +1,199 @@
+{
+  "org": "tapas",
+  "role": "stock",
+  "email": "stock@tapas.demo.local",
+  "generatedAt": "2026-01-23T03:47:55.677Z",
+  "durationMs": 20136,
+  "summary": {
+    "totalFlows": 4,
+    "successfulFlows": 4,
+    "failedFlows": 0,
+    "uniqueEndpoints": 13,
+    "totalBlockedMutations": 0,
+    "flowsWithBlockedMutations": 0
+  },
+  "flows": [
+    {
+      "module": "Inventory",
+      "flow": "Load Inventory",
+      "testid": null,
+      "label": "",
+      "route": "/inventory",
+      "controlType": "link",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory",
+          "status": 404,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/levels",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "blockedMutation": false
+        }
+      ],
+      "success": true
+    },
+    {
+      "module": "Inventory",
+      "flow": "Load Depletions",
+      "testid": null,
+      "label": "",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory/depletions/stats",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "blockedMutation": false
+        }
+      ],
+      "success": true
+    },
+    {
+      "module": "Inventory",
+      "flow": "Load Period Close",
+      "testid": null,
+      "label": "",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/org/branches",
+          "status": 404,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/periods",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/org/branches",
+          "status": 404,
+          "blockedMutation": false
+        }
+      ],
+      "success": true
+    },
+    {
+      "module": "Inventory",
+      "flow": "Load Recipes",
+      "testid": null,
+      "label": "",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/pos/menu-items",
+          "status": 404,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/foundation/uoms",
+          "status": 404,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/v2/recipes",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/pos/menu-items",
+          "status": 404,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/foundation/uoms",
+          "status": 404,
+          "blockedMutation": false
+        }
+      ],
+      "success": true
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+anomaly_name,category,severity,trigger,endpoints,dashboard_surface,source_file
+API Health Check Failure,Health,CRITICAL,/health returns non-200 or unhealthy status,GET /health,K8s/Docker healthcheck failure → pod restart,services/api/src/health/health.controller.ts
+Database Connection Lost,Database,CRITICAL,Prisma query failure | Connection pool exhausted,ALL /api/*,Error logs → Sentry alert → 500 errors,services/api/src/prisma/prisma.service.ts
+Redis Connection Lost,Cache,HIGH,BullMQ job failure | Session read failure,ALL /api/* (session-based),Session errors → logout loops → Sentry alert,services/api/src/redis/redis.service.ts
+Rate Limit Exceeded,Security,MEDIUM,>100 requests/min from single IP,ALL /api/*,429 responses → Prometheus rate_limit_exceeded counter,services/api/src/common/rate-limit.guard.ts
+Auth Token Expired,Auth,LOW,JWT exp < now() | Session not found,ALL authenticated endpoints,401 responses → client logout → re-login prompt,services/api/src/auth/jwt.strategy.ts
+Auth Token Invalid,Auth,MEDIUM,JWT verification failure | Malformed token,ALL authenticated endpoints,401 responses → Sentry warning (potential attack),services/api/src/auth/jwt.strategy.ts
+Unauthorized Access Attempt,Security,HIGH,User lacks required role for endpoint,ALL protected endpoints,403 responses → AuditLog entry → Sentry alert,services/api/src/common/role.guard.ts
+WebAuthn Challenge Timeout,Auth,LOW,Challenge not verified within 5min,POST /webauthn/authentication/verify,User sees "Challenge expired" → retry prompt,services/api/src/webauthn/webauthn.service.ts
+MSR Badge Not Found,Auth,MEDIUM,MSR swipe with unknown track data,POST /auth/msr-swipe,Error message → retry swipe or manual login,services/api/src/auth/auth.controller.ts#L40
+KDS Ticket SLA Breach,Operations,HIGH,completedAt - firedAt > slaMinutes,GET /kds/queue | GET /kds/board,KDS UI shows red ticket → alert sound → manager notification,services/api/src/kds/kds.service.ts
+KDS Ticket Timeout (Critical),Operations,CRITICAL,completedAt - firedAt > criticalMinutes,GET /kds/queue | GET /kds/board,KDS UI shows pulsing red ticket → SMS/push alert,services/api/src/kds/kds.service.ts
+Order Void Without Reason,Operations,MEDIUM,POST /pos/orders/:id/void with empty reason,POST /pos/orders/:id/void,AuditLog entry → manager review queue,services/api/src/pos/pos.controller.ts#L81
+Payment Capture Failure,Payment,CRITICAL,Payment gateway returns error,POST /pos/payments/:id/capture,Error message → retry prompt → manual reconciliation,services/api/src/pos/services/payment.service.ts
+Payment Refund Failure,Payment,CRITICAL,Payment gateway refund API error,POST /pos/payments/:id/refund,Error message → support ticket → manual refund,services/api/src/pos/services/payment.service.ts
+Cash Session Variance High,Accounting,HIGH,abs(actualCash - expectedCash) > 100 currency units,POST /pos/cash-sessions/:id/close,Warning message → manager approval required → AuditLog,services/api/src/pos/controllers/pos-payments.controller.ts
+Inventory Stock Negative,Inventory,CRITICAL,BranchInventoryLevel.currentStock < 0,POST /pos/orders/:id/close | POST /inventory/production/:id/post,Error → transaction rollback → Sentry alert → data fix needed,services/api/src/inventory/inventory.service.ts
+Inventory Reorder Alert,Inventory,MEDIUM,currentStock <= reorderLevel,GET /inventory/levels,Web UI shows badge → email to PROCUREMENT role,services/api/src/inventory/inventory.controller.ts#L42
+Inventory Stockout,Inventory,HIGH,currentStock = 0,GET /inventory/levels | GET /menu/items/available,Menu item marked unavailable → POS shows "Out of Stock",services/api/src/menu/menu.service.ts
+Stocktake Variance High,Inventory,HIGH,abs(countedStock - systemStock) > 10% of systemStock,POST /inventory/stocktakes/:id/submit,Approval required → investigation notes mandatory,services/api/src/inventory/inventory-stocktake.service.ts
+Production Order Over-Yield,Inventory,LOW,actualYield > targetQuantity * 1.2,POST /inventory/production/:id/post,Warning log → no blocking (valid scenario),services/api/src/inventory/inventory-production.service.ts
+Production Order Under-Yield,Inventory,MEDIUM,actualYield < targetQuantity * 0.8,POST /inventory/production/:id/post,Warning message → waste investigation prompt,services/api/src/inventory/inventory-production.service.ts
+Transfer Quantity Mismatch,Inventory,HIGH,quantityReceived != quantityShipped,POST /inventory/transfers/:id/receive,Approval required → variance notes mandatory → AuditLog,services/api/src/inventory/inventory-transfers.controller.ts#L154
+Vendor Bill Duplicate,Accounting,HIGH,billNumber + vendorId already exists,POST /accounting/vendor-bills,Error → user must change billNumber or confirm duplicate,services/api/src/accounting/accounting.service.ts
+AP Aging Overdue,Accounting,MEDIUM,dueDate < now() AND status = OPEN,GET /accounting/ap/aging,Dashboard shows overdue count → email to ACCOUNTANT,services/api/src/accounting/accounting.controller.ts#L152
+AR Aging Overdue,Accounting,MEDIUM,dueDate < now() AND status = OPEN,GET /accounting/ar/aging,Dashboard shows overdue count → follow-up reminders,services/api/src/accounting/accounting.controller.ts#L281
+Journal Entry Imbalanced,Accounting,CRITICAL,sum(debit) != sum(credit),POST /accounting/journal,Error → transaction blocked → user must balance,services/api/src/accounting/accounting.service.ts
+Trial Balance Imbalanced,Accounting,CRITICAL,sum(debits) != sum(credits),GET /accounting/trial-balance,Report shows variance → Sentry alert → audit required,services/api/src/accounting/accounting.controller.ts#L287
+P&L Calculation Timeout,Accounting,HIGH,Query exceeds 30s timeout,GET /accounting/pnl,Error message → suggest narrower date range → Sentry alert,services/api/src/accounting/accounting.controller.ts#L299
+Balance Sheet Calculation Timeout,Accounting,HIGH,Query exceeds 30s timeout,GET /accounting/balance-sheet,Error message → suggest specific date → Sentry alert,services/api/src/accounting/accounting.controller.ts#L311
+Reservation Double-Booking,Reservations,CRITICAL,table + time conflict detected,POST /reservations,Error → user must choose different table/time,services/api/src/reservations/reservations.service.ts
+Reservation No-Show High Rate,Reservations,MEDIUM,No-show rate > 20% for customer,POST /reservations/:id/no-show,Warning message → deposit required for future bookings,services/api/src/reservations/reservations.controller.ts#L155
+Reservation Deposit Refund Failure,Reservations,CRITICAL,Payment gateway refund error,POST /reservations/:id/deposit/refund,Error → manual refund required → support ticket,services/api/src/reservations/reservations.controller.ts#L252
+Waitlist Entry Abandoned,Reservations,LOW,status = WAITING for >2 hours,GET /waitlist,Entry auto-marked as DROPPED → notification sent,services/api/src/waitlist/waitlist.service.ts
+Shift Schedule Conflict,Workforce,MEDIUM,User has overlapping shifts,POST /workforce/schedule/shifts,Error → user must resolve conflict,services/api/src/workforce/scheduling.service.ts
+Shift Schedule Understaffed,Workforce,HIGH,Scheduled staff < labor target for hour,GET /workforce/schedule,Dashboard shows warning → manager notification,services/api/src/workforce/scheduling.service.ts
+Shift Schedule Overstaffed,Workforce,MEDIUM,Scheduled staff > labor target * 1.5 for hour,GET /workforce/schedule,Dashboard shows warning → optimize suggestion,services/api/src/workforce/scheduling.service.ts
+Timeclock Missed Punch,Workforce,MEDIUM,Clock-in without clock-out after 12 hours,GET /workforce/time-entries,Time entry flagged → manager correction required,services/api/src/workforce/timeclock.service.ts
+Timeclock Geo-Fence Violation,Workforce,HIGH,Clock attempt outside geo-fence radius,POST /workforce/clock-in | POST /workforce/clock-out,Error → supervisor approval required → AuditLog,services/api/src/workforce/geofence.controller.ts#L110
+Timeclock Early Clock-In,Workforce,LOW,Clock-in >15 min before shift start,POST /workforce/clock-in,Warning message → manager approval may be required,services/api/src/workforce/timeclock.service.ts
+Timeclock Late Clock-In,Workforce,MEDIUM,Clock-in >5 min after shift start,POST /workforce/clock-in,AuditLog entry → attendance report → HR review,services/api/src/workforce/timeclock.service.ts
+Leave Request Overlap,Workforce,MEDIUM,User has approved leave for same dates,POST /workforce/leave/requests,Error → user must cancel existing leave first,services/api/src/workforce/leave-self.service.ts
+Leave Balance Exceeded,Workforce,HIGH,Requested days > remainingDays,POST /workforce/leave/requests,Error → unpaid leave option or rejection,services/api/src/workforce/leave-self.service.ts
+Shift Swap Circular Dependency,Workforce,LOW,Swap creates chain (A→B→C→A),POST /workforce/swaps,Error → simplify swap request,services/api/src/workforce/swaps.service.ts
+Payroll Run Calculation Error,Workforce,CRITICAL,grossPay calculation exception,POST /workforce/payroll-runs/:id/calculate,Error → Sentry alert → manual review required,services/api/src/workforce/payroll-runs.service.ts
+Payroll Run Imbalanced,Workforce,CRITICAL,sum(netPay) != expected total,POST /workforce/payroll-runs/:id/calculate,Error → calculation must be retried → audit,services/api/src/workforce/payroll-runs.service.ts
+Payslip Generation Failure,Workforce,HIGH,PDF generation error,GET /workforce/payslips/:id,Error → retry → fallback to HTML view,services/api/src/workforce/payslips.service.ts
+Labor Cost Overrun,Workforce,HIGH,Actual labor cost > labor target * 1.2,GET /workforce/labor/reports,Dashboard shows alert → manager notification,services/api/src/workforce/reports.service.ts
+Auto-Scheduler Constraints Unsatisfied,Workforce,MEDIUM,Cannot generate schedule meeting all constraints,POST /workforce/auto-scheduler/generate,Warning → partial schedule generated → manual fixes needed,services/api/src/workforce/workforce-auto-scheduler.service.ts
+Waiter Performance Drop,Analytics,MEDIUM,feedbackScore < 3.0 OR voidRate > 15%,GET /staff/waiters/risk-staff,Manager dashboard shows alert → coaching recommended,services/api/src/staff/staff.controller.ts#L101
+Feedback NPS Critical,Analytics,HIGH,NPS score < 0 for period,GET /feedback/nps-summary,Dashboard alert → management review → action plan,services/api/src/feedback/feedback.controller.ts
+Prometheus Scrape Failure,Monitoring,HIGH,Prometheus cannot scrape /ops/metrics,GET /ops/metrics,Prometheus alert → metrics gap in Grafana,services/api/src/observability/metrics.controller.ts
+OpenTelemetry Export Failure,Monitoring,MEDIUM,OTEL SDK export error,N/A (internal),Error logs → Sentry alert → tracing gaps,services/api/src/main.ts#L40-L60
+Sentry Event Dropped,Monitoring,LOW,Sentry rate limit or quota exceeded,N/A (internal),Error not captured → review Sentry quota,services/api/src/common/sentry.filter.ts
+Log Volume Spike,Monitoring,MEDIUM,Log entries > 10k/min,ALL endpoints,Pino logger overflow → potential disk space issue,services/api/src/common/logger.service.ts
+Database Query Slow,Performance,MEDIUM,Query execution time > 1000ms,ALL database queries,Slow query log → Prisma debug → index optimization,packages/db/prisma/schema.prisma
+API Response Time High,Performance,HIGH,P95 latency > 500ms OR P99 > 1000ms,ALL /api/* endpoints,Prometheus alert → Grafana dashboard → investigation,services/api/src/common/perf.interceptor.ts
+Memory Leak Detected,Performance,CRITICAL,Heap size grows continuously without GC,N/A (runtime),Node.js memory alert → heap snapshot → code review,services/api/src/main.ts
+CPU Usage High,Performance,HIGH,CPU > 80% for >5 min,N/A (runtime),Prometheus alert → profiling → optimization,services/api/src/main.ts
+Disk Space Low,Infrastructure,CRITICAL,Disk usage > 90%,N/A (OS-level),Docker/K8s alert → log rotation → volume expansion,infra/docker/Dockerfile
+Idempotency Key Collision,Concurrency,MEDIUM,Duplicate Idempotency-Key with different request body,ALL POST/PATCH endpoints,409 Conflict response → client retry with new key,services/api/src/common/idempotency.middleware.ts
+Webhook Delivery Failure,Integration,HIGH,MTN/Airtel/Billing webhook returns 500,POST /webhooks/mtn | POST /webhooks/airtel | POST /webhooks/billing,Retry queue → eventual manual reconciliation,services/api/src/webhooks.controller.ts

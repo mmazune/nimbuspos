@@ -1359,12 +1359,14 @@ export default function PosPage() {
                 placeholder="Search menu..."
                 value={menuSearch}
                 onChange={(e) => setMenuSearch(e.target.value)}
+                data-testid="pos-menu-search"
               />
               <div className="flex flex-wrap gap-2">
                 <Button
                   size="sm"
                   variant={selectedCategory === 'ALL' ? 'default' : 'outline'}
                   onClick={() => setSelectedCategory('ALL')}
+                  data-testid="pos-category-all"
                 >
                   All
                 </Button>
@@ -1374,6 +1376,7 @@ export default function PosPage() {
                     size="sm"
                     variant={selectedCategory === cat ? 'default' : 'outline'}
                     onClick={() => setSelectedCategory(cat)}
+                    data-testid={`pos-category-${cat.toLowerCase().replace(/\s+/g, '-')}`}
                   >
                     {cat}
                   </Button>
@@ -1399,6 +1402,7 @@ export default function PosPage() {
                   onClick={() => handleAddItemClick(item)}
                   disabled={addItemsMutation.isPending}
                   className="text-left rounded-lg border p-3 hover:bg-muted transition disabled:opacity-50"
+                  data-testid={`pos-menu-item-${item.id}`}
                 >
                   <div className="font-medium truncate text-sm">{item.name}</div>
                   {item.sku && (

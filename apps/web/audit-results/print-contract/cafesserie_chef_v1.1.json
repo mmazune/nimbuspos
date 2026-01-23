@@ -1,0 +1,17 @@
+{
+  "org": "cafesserie",
+  "role": "chef",
+  "email": "chef@cafesserie.demo.local",
+  "timestamp": "2026-01-22T17:03:10.357Z",
+  "receiptsChecked": [],
+  "asyncJobWatcher": {
+    "response202Count": 0,
+    "jobIdDetected": false
+  },
+  "summary": {
+    "receiptsChecked": 0,
+    "uiOnlyPrint": 0,
+    "asyncJob": 0,
+    "errors": 0
+  }
+}

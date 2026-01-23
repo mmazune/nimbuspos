@@ -175,12 +175,14 @@ export default function MyAvailabilityPage() {
         <Button
           variant={activeTab === 'weekly' ? 'default' : 'ghost'}
           onClick={() => setActiveTab('weekly')}
+          data-testid="availability-tab-weekly"
         >
           Weekly Availability
         </Button>
         <Button
           variant={activeTab === 'exceptions' ? 'default' : 'ghost'}
           onClick={() => setActiveTab('exceptions')}
+          data-testid="availability-tab-exceptions"
         >
           Date Exceptions
         </Button>
@@ -193,7 +195,7 @@ export default function MyAvailabilityPage() {
               <CardTitle>Weekly Availability</CardTitle>
               <CardDescription>Set your regular weekly working hours</CardDescription>
             </div>
-            <Button onClick={() => setShowAddSlotDialog(true)}>
+            <Button onClick={() => setShowAddSlotDialog(true)} data-testid="availability-add-slot">
               <Plus className="w-4 h-4 mr-2" />
               Add Slot
             </Button>

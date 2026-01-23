@@ -1,0 +1,110 @@
+model,domain,key_fields,key_relations,source_file
+Org,Multi-Tenancy,id | name | slug | code | tier,Branches | Users | Settings,packages/db/prisma/schema.prisma#L13-L39
+Branch,Multi-Tenancy,id | orgId | name | code | timezone | isActive,Org | Users | Operations | Events,packages/db/prisma/schema.prisma#L41-L71
+User,Auth,id | orgId | email | phoneNumber | role | roleHierarchyLevel,Org | Sessions | WebAuthnCredentials | EmployeeProfile,packages/db/prisma/schema.prisma#L73-L111
+Session,Auth,id | userId | token | expiresAt | mfaVerified,User,packages/db/prisma/schema.prisma#L113-L123
+WebAuthnCredential,Auth,id | userId | credentialId | publicKey | counter,User,packages/db/prisma/schema.prisma#L125-L138
+MSRCard,Auth,id | userId | orgId | encryptedTrackData | isActive,User | Org,packages/db/prisma/schema.prisma#L140-L152
+Pin,Auth,id | userId | orgId | hashedPin | iterations | isActive,User | Org,packages/db/prisma/schema.prisma#L154-L165
+MenuCategory,Menu,id | orgId | name | displayOrder | isActive,Org | MenuItems,packages/db/prisma/schema.prisma#L167-L182
+MenuItem,Menu,id | orgId | categoryId | sku | name | description | basePrice | costPrice,Org | MenuCategory | OrderItems | RecipePortion | InventoryItem,packages/db/prisma/schema.prisma#L184-L223
+ModifierGroup,Menu,id | orgId | name | isRequired | minSelections | maxSelections,Org | MenuItemModifierGroups | ModifierOptions,packages/db/prisma/schema.prisma#L225-L241
+ModifierOption,Menu,id | modifierGroupId | name | priceAdjustment | isDefault,ModifierGroup | OrderItemModifiers | InventoryItem,packages/db/prisma/schema.prisma#L243-L258
+MenuItemModifierGroup,Menu,menuItemId | modifierGroupId,MenuItem | ModifierGroup,packages/db/prisma/schema.prisma#L260-L270
+MenuAvailabilityRule,Menu,id | menuItemId | dayOfWeek | startTime | endTime,MenuItem,packages/db/prisma/schema.prisma#L272-L285
+Order,POS,id | branchId | orderNumber | status | total | tax | subtotal | customerId,Branch | Customer | OrderItems | Payments | Refunds | CashSession,packages/db/prisma/schema.prisma#L287-L331
+OrderItem,POS,id | orderId | menuItemId | quantity | unitPrice | subtotal | tax | status,Order | MenuItem | OrderItemModifiers,packages/db/prisma/schema.prisma#L333-L362
+OrderItemModifier,POS,id | orderItemId | modifierOptionId | quantity | priceAdjustment,OrderItem | ModifierOption,packages/db/prisma/schema.prisma#L364-L375
+Payment,POS,id | orderId | branchId | method | amount | status | processedBy,Order | Branch | User | RefundedPayments,packages/db/prisma/schema.prisma#L377-L407
+Refund,POS,id | orderId | branchId | amount | reason | status | processedBy,Order | Branch | User | RefundedPayments,packages/db/prisma/schema.prisma#L409-L433
+RefundedPayment,POS,refundId | paymentId | amount,Refund | Payment,packages/db/prisma/schema.prisma#L435-L446
+CashSession,POS,id | branchId | shiftId | startingCash | expectedCash | actualCash | status | openedBy,Branch | Shift | User | Orders | CashTenders,packages/db/prisma/schema.prisma#L448-L479
+CashTender,POS,id | cashSessionId | paymentId | amount | type,CashSession | Payment,packages/db/prisma/schema.prisma#L481-L493
+KDSTicket,KDS,id | orderId | branchId | station | status | slaMinutes | startedAt | completedAt,Order | Branch | KDSTicketItems,packages/db/prisma/schema.prisma#L495-L518
+KDSTicketItem,KDS,id | ticketId | orderItemId | status | firedAt | startedAt | completedAt,KDSTicket | OrderItem,packages/db/prisma/schema.prisma#L520-L536
+KDSSLAConfig,KDS,id | branchId | station | targetMinutes | alertMinutes | criticalMinutes,Branch,packages/db/prisma/schema.prisma#L538-L552
+Customer,CRM,id | orgId | name | email | phoneNumber | tier | notes,Org | Orders | Reservations | CustomerInvoices | Feedback,packages/db/prisma/schema.prisma#L554-L576
+Reservation,Reservations,id | branchId | customerId | guestName | phoneNumber | date | time | partySize | status | tableId | depositAmount | depositStatus,Branch | Customer | Table | ReservationDeposit | ReservationChangeLog,packages/db/prisma/schema.prisma#L578-L624
+ReservationPolicy,Reservations,id | branchId | requiresDeposit | depositPercentage | depositAmount | refundHoursNotice | maxPartySize | minPartySize,Branch,packages/db/prisma/schema.prisma#L626-L647
+ReservationDeposit,Reservations,id | reservationId | amount | method | status | refundedAt,Reservation,packages/db/prisma/schema.prisma#L649-L665
+ReservationChangeLog,Reservations,id | reservationId | field | oldValue | newValue | changedBy,Reservation | User,packages/db/prisma/schema.prisma#L667-L681
+WaitlistEntry,Reservations,id | branchId | guestName | phoneNumber | partySize | status | addedAt | seatedAt,Branch,packages/db/prisma/schema.prisma#L683-L703
+Table,Floor,id | branchId | tableNumber | seatingCapacity | isActive | status,Branch | Reservations | FloorLayout,packages/db/prisma/schema.prisma#L705-L723
+FloorLayout,Floor,id | branchId | name | isActive | svgData,Branch | Tables,packages/db/prisma/schema.prisma#L725-L738
+Event,Events,id | branchId | name | type | description | startDateTime | endDateTime | maxCapacity | depositRequired | depositAmount,Branch | EventBookings | Promotions,packages/db/prisma/schema.prisma#L740-L770
+EventBooking,Events,id | eventId | customerId | guestName | phoneNumber | partySize | status | totalAmount | depositPaid,Event | Customer,packages/db/prisma/schema.prisma#L772-L794
+Promotion,Events,id | orgId | branchId | code | name | type | discountType | discountValue | startDateTime | endDateTime | isActive,Org | Branch | Event | Orders,packages/db/prisma/schema.prisma#L796-L827
+FeedbackResponse,Feedback,id | branchId | customerId | orderId | rating | comment | source | respondedAt,Branch | Customer | Order,packages/db/prisma/schema.prisma#L829-L850
+FeedbackNPS,Feedback,id | branchId | customerId | score | comment | timestamp,Branch | Customer,packages/db/prisma/schema.prisma#L852-L866
+InventoryItem,Inventory,id | orgId | sku | name | description | itemType | currentStock | reorderLevel | unitOfMeasure | standardCost,Org | BranchInventoryLevels | PurchaseOrderItems | ProductionRecipes | MenuItem | ModifierOption | TransferItems | AdjustmentItems | StocktakeRecords | WasteEntries,packages/db/prisma/schema.prisma#L868-L909
+BranchInventoryLevel,Inventory,id | branchId | inventoryItemId | currentStock | reorderLevel | reorderQuantity,Branch | InventoryItem,packages/db/prisma/schema.prisma#L911-L927
+PurchaseOrder,Inventory,id | orgId | branchId | vendorId | poNumber | status | totalAmount | deliveryDate | createdBy | approvedBy,Org | Branch | Vendor | User | PurchaseOrderItems | Receipts,packages/db/prisma/schema.prisma#L929-L959
+PurchaseOrderItem,Inventory,id | purchaseOrderId | inventoryItemId | quantity | unitPrice | totalPrice,PurchaseOrder | InventoryItem,packages/db/prisma/schema.prisma#L961-L976
+Receipt,Inventory,id | branchId | vendorId | purchaseOrderId | receiptNumber | status | receivedDate | postedAt | receivedBy | postedBy,Branch | Vendor | PurchaseOrder | User | ReceiptItems,packages/db/prisma/schema.prisma#L978-L1007
+ReceiptItem,Inventory,id | receiptId | poItemId | inventoryItemId | quantityReceived | unitPrice | totalPrice,Receipt | PurchaseOrderItem | InventoryItem,packages/db/prisma/schema.prisma#L1009-L1026
+ProductionOrder,Inventory,id | branchId | productionNumber | status | totalCost | scheduledDate | startedAt | completedAt | postedAt | createdBy | postedBy,Branch | User | ProductionOrderRecipes,packages/db/prisma/schema.prisma#L1028-L1057
+ProductionOrderRecipe,Inventory,id | productionOrderId | recipeId | targetQuantity | actualYield | costPerUnit | totalCost,ProductionOrder | Recipe | ProductionOrderConsumptions,packages/db/prisma/schema.prisma#L1059-L1076
+ProductionOrderConsumption,Inventory,id | productionOrderRecipeId | inventoryItemId | quantityRequired | quantityActual | unitCost | totalCost,ProductionOrderRecipe | InventoryItem,packages/db/prisma/schema.prisma#L1078-L1096
+Recipe,Inventory,id | orgId | name | recipeType | targetYield | yieldUoM | costPerUnit | batchSize,Org | RecipeIngredients | ProductionOrders | RecipePortions,packages/db/prisma/schema.prisma#L1098-L1123
+RecipeIngredient,Inventory,id | recipeId | inventoryItemId | quantity | wastagePercentage,Recipe | InventoryItem,packages/db/prisma/schema.prisma#L1125-L1140
+RecipePortion,Menu-Inventory,id | recipeId | menuItemId | portionSize,Recipe | MenuItem,packages/db/prisma/schema.prisma#L1142-L1153
+Transfer,Inventory,id | fromBranchId | toBranchId | transferNumber | status | shipDate | receiveDate | shippedBy | receivedBy,Branch | Branch | User | TransferItems,packages/db/prisma/schema.prisma#L1155-L1186
+TransferItem,Inventory,id | transferId | inventoryItemId | quantityShipped | quantityReceived | unitCost | totalCost,Transfer | InventoryItem,packages/db/prisma/schema.prisma#L1188-L1207
+Adjustment,Inventory,id | branchId | adjustmentNumber | reason | status | adjustmentDate | postedAt | createdBy | postedBy,Branch | User | AdjustmentItems,packages/db/prisma/schema.prisma#L1209-L1235
+AdjustmentItem,Inventory,id | adjustmentId | inventoryItemId | quantityAdjustment | unitCost | totalCost | reason,Adjustment | InventoryItem,packages/db/prisma/schema.prisma#L1237-L1253
+WasteEntry,Inventory,id | branchId | wasteNumber | status | totalCost | wasteDate | postedAt | recordedBy | postedBy,Branch | User | WasteItems,packages/db/prisma/schema.prisma#L1255-L1281
+WasteItem,Inventory,id | wasteEntryId | inventoryItemId | quantity | unitCost | totalCost | reason,WasteEntry | InventoryItem,packages/db/prisma/schema.prisma#L1283-L1300
+Stocktake,Inventory,id | branchId | stocktakeNumber | status | startDate | submitDate | approvedDate | postedDate | createdBy | submittedBy | approvedBy | postedBy,Branch | User | StocktakeRecords | StocktakeVariances,packages/db/prisma/schema.prisma#L1302-L1338
+StocktakeRecord,Inventory,id | stocktakeId | inventoryItemId | systemStock | countedStock | variance | unitCost | varianceCost,Stocktake | InventoryItem,packages/db/prisma/schema.prisma#L1340-L1360
+StocktakeVariance,Inventory,id | stocktakeId | inventoryItemId | variance | varianceCost | reason,Stocktake | InventoryItem,packages/db/prisma/schema.prisma#L1362-L1378
+Vendor,Accounting,id | orgId | name | email | phoneNumber | contactPerson | terms | notes,Org | VendorBills | VendorPayments | PurchaseOrders | Receipts,packages/db/prisma/schema.prisma#L1380-L1406
+VendorBill,Accounting,id | branchId | vendorId | billNumber | referenceNumber | billDate | dueDate | totalAmount | paidAmount | status | createdBy | approvedBy,Branch | Vendor | User | VendorBillItems | VendorPayments,packages/db/prisma/schema.prisma#L1408-L1446
+VendorBillItem,Accounting,id | billId | inventoryItemId | description | quantity | unitPrice | totalAmount,VendorBill | InventoryItem,packages/db/prisma/schema.prisma#L1448-L1464
+VendorPayment,Accounting,id | branchId | vendorId | billId | paymentNumber | paymentDate | amount | method | notes | recordedBy,Branch | Vendor | VendorBill | User,packages/db/prisma/schema.prisma#L1466-L1491
+CustomerInvoice,Accounting,id | branchId | customerId | invoiceNumber | issueDate | dueDate | totalAmount | paidAmount | status | createdBy,Branch | Customer | User | CustomerInvoiceItems | CustomerReceipts,packages/db/prisma/schema.prisma#L1493-L1523
+CustomerInvoiceItem,Accounting,id | invoiceId | description | quantity | unitPrice | totalAmount,CustomerInvoice,packages/db/prisma/schema.prisma#L1525-L1538
+CustomerReceipt,Accounting,id | branchId | customerId | invoiceId | receiptNumber | receiptDate | amount | method | notes | recordedBy,Branch | Customer | CustomerInvoice | User,packages/db/prisma/schema.prisma#L1540-L1565
+Account,Accounting,id | orgId | accountCode | accountName | accountType | isSystem | balance,Org | JournalLines | SubAccounts,packages/db/prisma/schema.prisma#L1567-L1592
+JournalEntry,Accounting,id | branchId | journalNumber | description | journalDate | status | postedDate | createdBy | postedBy,Branch | User | JournalLines,packages/db/prisma/schema.prisma#L1594-L1620
+JournalLine,Accounting,id | journalEntryId | accountId | debit | credit | description,JournalEntry | Account,packages/db/prisma/schema.prisma#L1622-L1637
+PaymentMethod,Accounting,id | orgId | name | type | isActive | accountId,Org | Account,packages/db/prisma/schema.prisma#L1639-L1655
+EmployeeProfile,HR,userId | orgId | employeeNumber | hireDate | jobRole | department | status | terminationDate,User | Org | ScheduledShifts | TimeEntries | LeaveRequests | PerformanceReviews,packages/db/prisma/schema.prisma#L1657-L1687
+ScheduledShift,Workforce,id | branchId | userId | shiftDate | startTime | endTime | position | status | publishedAt | createdBy,Branch | User | EmployeeProfile | ShiftSwaps | OpenShiftClaims | TimeEntries,packages/db/prisma/schema.prisma#L1689-L1724
+TimeEntry,Workforce,id | userId | branchId | shiftId | clockIn | clockOut | breakMinutes | totalMinutes | status | approvedBy,User | Branch | EmployeeProfile | ScheduledShift | User | TimesheetSubmissions,packages/db/prisma/schema.prisma#L1726-L1760
+TimesheetSubmission,Workforce,id | userId | payPeriodId | status | submittedAt | approvedAt | approvedBy | rejectedAt | rejectionReason,User | PayPeriod | User | TimeEntries,packages/db/prisma/schema.prisma#L1762-L1785
+LeaveRequest,Workforce,id | userId | leaveType | startDate | endDate | totalDays | status | requestedAt | approvedByL3At | approvedByL4At | rejectedAt,User | EmployeeProfile | Users,packages/db/prisma/schema.prisma#L1787-L1820
+LeaveBalance,Workforce,id | userId | year | leaveType | entitledDays | usedDays | remainingDays,User,packages/db/prisma/schema.prisma#L1822-L1837
+ShiftSwap,Workforce,id | originalShiftId | proposedShiftId | initiatorId | recipientId | status | initiatedAt | acceptedAt | approvedAt | approvedBy,ScheduledShift | ScheduledShift | User | User | User,packages/db/prisma/schema.prisma#L1839-L1866
+OpenShift,Workforce,id | branchId | shiftDate | startTime | endTime | position | slots | status | publishedAt | createdBy,Branch | User | OpenShiftClaims,packages/db/prisma/schema.prisma#L1868-L1896
+OpenShiftClaim,Workforce,id | openShiftId | claimerId | scheduledShiftId | claimedAt | approvedAt | approvedBy,OpenShift | User | ScheduledShift | User,packages/db/prisma/schema.prisma#L1898-L1916
+AvailabilityPattern,Workforce,id | userId | dayOfWeek | startTime | endTime | isAvailable,User,packages/db/prisma/schema.prisma#L1918-L1932
+PerformanceReview,Workforce,id | employeeId | reviewerId | periodStart | periodEnd | overallScore | status | submittedAt,EmployeeProfile | User | PerformanceMetrics,packages/db/prisma/schema.prisma#L1934-L1957
+PerformanceMetric,Workforce,id | reviewId | metricType | score | notes,PerformanceReview,packages/db/prisma/schema.prisma#L1959-L1971
+PayPeriod,Workforce,id | orgId | periodNumber | startDate | endDate | status | closedAt | closedBy,Org | User | PayrollRuns | TimesheetSubmissions,packages/db/prisma/schema.prisma#L1973-L1996
+PayrollRun,Workforce,id | orgId | branchId | payPeriodId | runNumber | status | calculatedAt | paidAt | processedBy,Org | Branch | PayPeriod | User | PayrollRunItems | Payslips,packages/db/prisma/schema.prisma#L1998-L2025
+PayrollRunItem,Workforce,id | payrollRunId | userId | grossPay | taxAmount | netPay,PayrollRun | User | PayrollDeductions | PayrollEarnings,packages/db/prisma/schema.prisma#L2027-L2046
+PayrollDeduction,Workforce,id | payrollRunItemId | type | amount | description,PayrollRunItem,packages/db/prisma/schema.prisma#L2048-L2060
+PayrollEarning,Workforce,id | payrollRunItemId | type | amount | description,PayrollRunItem,packages/db/prisma/schema.prisma#L2062-L2074
+Payslip,Workforce,id | payrollRunId | userId | grossPay | taxAmount | netPay | periodStart | periodEnd | payDate | generatedAt,PayrollRun | User,packages/db/prisma/schema.prisma#L2076-L2101
+CompensationComponent,Workforce,id | orgId | name | componentType | calcMethod | calcValue | isActive,Org | CompensationProfiles,packages/db/prisma/schema.prisma#L2103-L2125
+CompensationProfile,Workforce,id | orgId | employeeId | effectiveDate | annualSalary | hourlyRate | status,Org | User | CompensationComponents,packages/db/prisma/schema.prisma#L2127-L2148
+WorkforcePolicy,Workforce,id | orgId | policyType | configJson,Org,packages/db/prisma/schema.prisma#L2150-L2162
+RemittanceEntry,Workforce,id | orgId | remittanceNumber | remittanceType | periodStart | periodEnd | totalAmount | dueDate | status | filePath,Org,packages/db/prisma/schema.prisma#L2164-L2186
+LaborTarget,Workforce,id | branchId | dayOfWeek | hour | targetLaborPercent | targetLaborCost | salesForecast,Branch,packages/db/prisma/schema.prisma#L2188-L2204
+AutoSchedulerRun,Workforce,id | branchId | weekStart | weekEnd | status | constraintsSatisfied | generatedAt | appliedAt,Branch,packages/db/prisma/schema.prisma#L2206-L2224
+KioskDevice,Workforce,id | branchId | deviceName | deviceType | ipAddress | macAddress | location | status,Branch | KioskSessions,packages/db/prisma/schema.prisma#L2226-L2248
+KioskSession,Workforce,id | kioskDeviceId | userId | action | timestamp | metadata,KioskDevice | User,packages/db/prisma/schema.prisma#L2250-L2265
+GeoFenceConfig,Workforce,id | branchId | centerLatitude | centerLongitude | radiusMeters | isActive,Branch | GeoFenceEvents,packages/db/prisma/schema.prisma#L2267-L2283
+GeoFenceEvent,Workforce,id | userId | geoFenceConfigId | eventType | latitude | longitude | distance | timestamp | action,User | GeoFenceConfig,packages/db/prisma/schema.prisma#L2285-L2304
+WaiterMetric,Staff Insights,id | branchId | userId | date | ordersProcessed | totalSales | avgOrderValue | avgServiceTime | tipTotal | feedbackScore | voidRate,Branch | User,packages/db/prisma/schema.prisma#L2306-L2332
+WaiterRanking,Staff Insights,id | branchId | userId | rankingDate | overallScore | salesRank | speedRank | qualityRank | period,Branch | User,packages/db/prisma/schema.prisma#L2334-L2357
+Shift,Operations,id | branchId | name | startTime | endTime | type | isActive,Branch | CashSessions,packages/db/prisma/schema.prisma#L2359-L2376
+ServiceProvider,Operations,id | orgId | name | providerType | contactPerson | email | phoneNumber | terms | isActive,Org,packages/db/prisma/schema.prisma#L2378-L2398
+Document,Operations,id | orgId | branchId | name | category | fileUrl | uploadedBy,Org | Branch | User,packages/db/prisma/schema.prisma#L2400-L2421
+Subscription,Subscriptions,id | orgId | planId | status | startDate | endDate | mrr | nextBillingDate,Org | SubscriptionPlan | SubscriptionEvents,packages/db/prisma/schema.prisma#L2423-L2445
+SubscriptionPlan,Subscriptions,id | name | tier | monthlyPrice | yearlyPrice | maxUsers | maxBranches | features,Subscriptions,packages/db/prisma/schema.prisma#L2447-L2466
+SubscriptionEvent,Subscriptions,id | subscriptionId | eventType | timestamp | metadata,Subscription,packages/db/prisma/schema.prisma#L2468-L2480
+AnalyticsSnapshot,Analytics,id | branchId | snapshotDate | metricType | metricValue | metadata,Branch,packages/db/prisma/schema.prisma#L2482-L2497
+AuditLog,Monitoring,id | userId | orgId | branchId | action | entityType | entityId | oldValue | newValue | timestamp | ipAddress,User | Org | Branch,packages/db/prisma/schema.prisma#L2499-L2523
+SystemAlert,Monitoring,id | alertType | severity | message | metadata | resolvedAt | resolvedBy,User,packages/db/prisma/schema.prisma#L2525-L2542
+ReportSubscription,Reporting,id | userId | reportType | frequency | nextRunAt | config | isActive,User,packages/db/prisma/schema.prisma#L2544-L2562

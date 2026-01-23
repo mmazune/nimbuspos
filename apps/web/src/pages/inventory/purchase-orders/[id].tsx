@@ -73,7 +73,7 @@ export default function PurchaseOrderDetailPage() {
   const { data: po, isLoading } = useQuery({
     queryKey: ['purchase-order', id],
     queryFn: async () => {
-      const response = await apiClient.get<PurchaseOrder>(`/inventory/procurement/purchase-orders/${id}`);
+      const response = await apiClient.get<PurchaseOrder>(`/inventory/purchase-orders/${id}`);
       return response.data;
     },
     enabled: !!id,
@@ -82,7 +82,7 @@ export default function PurchaseOrderDetailPage() {
   // Submit mutation
   const submitMutation = useMutation({
     mutationFn: async () => {
-      const response = await apiClient.post(`/inventory/procurement/purchase-orders/${id}/submit`);
+      const response = await apiClient.post(`/inventory/purchase-orders/${id}/submit`);
       return response.data;
     },
     onSuccess: () => {
@@ -93,7 +93,7 @@ export default function PurchaseOrderDetailPage() {
   // Approve mutation
   const approveMutation = useMutation({
     mutationFn: async () => {
-      const response = await apiClient.post(`/inventory/procurement/purchase-orders/${id}/approve`);
+      const response = await apiClient.post(`/inventory/purchase-orders/${id}/approve`);
       return response.data;
     },
     onSuccess: () => {
@@ -104,7 +104,7 @@ export default function PurchaseOrderDetailPage() {
   // Cancel mutation
   const cancelMutation = useMutation({
     mutationFn: async () => {
-      const response = await apiClient.post(`/inventory/procurement/purchase-orders/${id}/cancel`);
+      const response = await apiClient.post(`/inventory/purchase-orders/${id}/cancel`);
       return response.data;
     },
     onSuccess: () => {

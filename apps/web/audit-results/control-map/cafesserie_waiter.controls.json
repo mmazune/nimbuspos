@@ -1,0 +1,762 @@
+{
+  "org": "cafesserie",
+  "role": "waiter",
+  "email": "waiter@cafesserie.demo.local",
+  "extractedAt": "2026-01-20T01:40:09.530Z",
+  "durationMs": 20387,
+  "routesVisited": 6,
+  "controlsExtracted": 75,
+  "controlsMissingTestId": 63,
+  "controls": [
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "User menu for Rachel Waiter",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "⤢\nKiosk mode",
+      "testId": null,
+      "locatorStrategy": "getByText('⤢\nKiosk mode')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "ⓘ\nDiagnostics",
+      "testId": null,
+      "locatorStrategy": "getByText('ⓘ\nDiagnostics')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Open tabs sidebar",
+      "testId": null,
+      "locatorStrategy": "getByText('Open tabs sidebar')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "New Order",
+      "testId": "pos-new-order",
+      "locatorStrategy": "getByTestId('pos-new-order')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Walk-in\nSENT\nUGX 44,840\n9:16:42 PM",
+      "testId": null,
+      "locatorStrategy": "getByText('Walk-in\nSENT\nUGX 44,840\n9:16:42 PM')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Walk-in\nNEW\nUGX 9,440\n12:06:41 AM",
+      "testId": null,
+      "locatorStrategy": "getByText('Walk-in\nNEW\nUGX 9,440\n12:06:41 AM')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Takeaway\nNEW\nUGX 90,860\n11:18:53 PM",
+      "testId": null,
+      "locatorStrategy": "getByText('Takeaway\nNEW\nUGX 90,860\n11:18:53 PM')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Table 2\nSERVED\nUGX 33,040\n11:16:53 PM",
+      "testId": null,
+      "locatorStrategy": "getByText('Table 2\nSERVED\nUGX 33,040\n11:16:53 PM')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Walk-in\nSENT\nUGX 23,600\n11:06:41 PM",
+      "testId": null,
+      "locatorStrategy": "getByText('Walk-in\nSENT\nUGX 23,600\n11:06:41 PM')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Table 4\nNEW\nUGX 80,240\n9:16:53 PM",
+      "testId": null,
+      "locatorStrategy": "getByText('Table 4\nNEW\nUGX 80,240\n9:16:53 PM')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Table 4\nNEW\nUGX 101,480\n8:25:53 PM",
+      "testId": null,
+      "locatorStrategy": "getByText('Table 4\nNEW\nUGX 101,480\n8:25:53 PM')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Table 3\nSENT\nUGX 101,480\n7:06:53 PM",
+      "testId": null,
+      "locatorStrategy": "getByText('Table 3\nSENT\nUGX 101,480\n7:06:53 PM')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Table 3\nSENT\nUGX 28,320\n6:46:53 PM",
+      "testId": null,
+      "locatorStrategy": "getByText('Table 3\nSENT\nUGX 28,320\n6:46:53 PM')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Table 1\nNEW\nUGX 28,320\n5:21:53 PM",
+      "testId": null,
+      "locatorStrategy": "getByText('Table 1\nNEW\nUGX 28,320\n5:21:53 PM')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Table 2\nSERVED\nUGX 17,700\n5:18:53 PM",
+      "testId": null,
+      "locatorStrategy": "getByText('Table 2\nSERVED\nUGX 17,700\n5:18:53 PM')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Table 5\nNEW\nUGX 80,240\n2:11:53 PM",
+      "testId": null,
+      "locatorStrategy": "getByText('Table 5\nNEW\nUGX 80,240\n2:11:53 PM')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Table 4\nNEW\nUGX 88,500\n1:49:53 PM",
+      "testId": null,
+      "locatorStrategy": "getByText('Table 4\nNEW\nUGX 88,500\n1:49:53 PM')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Table 5\nSENT\nUGX 63,720\n1:12:53 PM",
+      "testId": null,
+      "locatorStrategy": "getByText('Table 5\nSENT\nUGX 63,720\n1:12:53 PM')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Table 5\nSERVED\nUGX 54,280\n2:27:53 AM",
+      "testId": null,
+      "locatorStrategy": "getByText('Table 5\nSERVED\nUGX 54,280\n2:27:53 AM')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "All",
+      "testId": null,
+      "locatorStrategy": "getByText('All')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "link",
+      "accessibleName": "POS",
+      "testId": null,
+      "locatorStrategy": "getByText('POS')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "link",
+      "accessibleName": "Reservations",
+      "testId": null,
+      "locatorStrategy": "getByText('Reservations')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "link",
+      "accessibleName": "Settings",
+      "testId": null,
+      "locatorStrategy": "getByText('Settings')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/pos",
+      "controlType": "link",
+      "accessibleName": "Device: Point of Sale",
+      "testId": null,
+      "locatorStrategy": "getByText('Device: Point of Sale')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "button",
+      "accessibleName": "User menu for Rachel Waiter",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "button",
+      "accessibleName": "⚙️ Policies",
+      "testId": "reservation-nav-policies",
+      "locatorStrategy": "getByTestId('reservation-nav-policies')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "button",
+      "accessibleName": "📅 Calendar View",
+      "testId": "reservation-nav-calendar",
+      "locatorStrategy": "getByTestId('reservation-nav-calendar')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "button",
+      "accessibleName": "All",
+      "testId": null,
+      "locatorStrategy": "getByText('All')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "button",
+      "accessibleName": "Held",
+      "testId": null,
+      "locatorStrategy": "getByText('Held')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "button",
+      "accessibleName": "Confirmed",
+      "testId": null,
+      "locatorStrategy": "getByText('Confirmed')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "button",
+      "accessibleName": "Seated",
+      "testId": null,
+      "locatorStrategy": "getByText('Seated')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "link",
+      "accessibleName": "POS",
+      "testId": null,
+      "locatorStrategy": "getByText('POS')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "link",
+      "accessibleName": "Reservations",
+      "testId": null,
+      "locatorStrategy": "getByText('Reservations')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reservations",
+      "controlType": "link",
+      "accessibleName": "Settings",
+      "testId": null,
+      "locatorStrategy": "getByText('Settings')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "button",
+      "accessibleName": "User menu for Rachel Waiter",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "POS",
+      "testId": null,
+      "locatorStrategy": "getByText('POS')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Reservations",
+      "testId": null,
+      "locatorStrategy": "getByText('Reservations')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Settings",
+      "testId": null,
+      "locatorStrategy": "getByText('Settings')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "accessibleName": "Refresh",
+      "testId": null,
+      "locatorStrategy": "getByText('Refresh')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "accessibleName": "Weekly Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('Weekly Availability')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "accessibleName": "Date Exceptions",
+      "testId": null,
+      "locatorStrategy": "getByText('Date Exceptions')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "accessibleName": "Add Slot",
+      "testId": null,
+      "locatorStrategy": "getByText('Add Slot')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "accessibleName": "Refresh",
+      "testId": null,
+      "locatorStrategy": "getByText('Refresh')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "accessibleName": "Request Swap",
+      "testId": null,
+      "locatorStrategy": "getByText('Request Swap')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "accessibleName": "Sent Requests (0)",
+      "testId": null,
+      "locatorStrategy": "getByText('Sent Requests (0)')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "accessibleName": "Received Requests (0)",
+      "testId": null,
+      "locatorStrategy": "getByText('Received Requests (0)')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "accessibleName": "Refresh",
+      "testId": null,
+      "locatorStrategy": "getByText('Refresh')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    }
+  ]
+}

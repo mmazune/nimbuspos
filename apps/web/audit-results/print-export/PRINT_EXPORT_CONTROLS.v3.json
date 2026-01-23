@@ -1,0 +1,592 @@
+{
+  "version": "3.0",
+  "timestamp": "2026-01-22T14:04:38.226Z",
+  "roles": [
+    {
+      "org": "cafesserie",
+      "role": "cashier",
+      "controls": 5,
+      "hasDownload": 0,
+      "uiOnlyPrint": 5,
+      "asyncJobDownload": 0,
+      "hasEndpoints": 0,
+      "errors": 0,
+      "receiptsSampled": 5,
+      "receiptsWithPrint": 5
+    },
+    {
+      "org": "cafesserie",
+      "role": "manager",
+      "controls": 5,
+      "hasDownload": 0,
+      "uiOnlyPrint": 5,
+      "asyncJobDownload": 0,
+      "hasEndpoints": 0,
+      "errors": 0,
+      "receiptsSampled": 5,
+      "receiptsWithPrint": 5
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "controls": 5,
+      "hasDownload": 0,
+      "uiOnlyPrint": 5,
+      "asyncJobDownload": 0,
+      "hasEndpoints": 0,
+      "errors": 0,
+      "receiptsSampled": 5,
+      "receiptsWithPrint": 5
+    },
+    {
+      "org": "tapas",
+      "role": "cashier",
+      "controls": 5,
+      "hasDownload": 0,
+      "uiOnlyPrint": 5,
+      "asyncJobDownload": 0,
+      "hasEndpoints": 0,
+      "errors": 0,
+      "receiptsSampled": 5,
+      "receiptsWithPrint": 5
+    },
+    {
+      "org": "tapas",
+      "role": "manager",
+      "controls": 5,
+      "hasDownload": 0,
+      "uiOnlyPrint": 5,
+      "asyncJobDownload": 0,
+      "hasEndpoints": 0,
+      "errors": 0,
+      "receiptsSampled": 5,
+      "receiptsWithPrint": 5
+    },
+    {
+      "org": "tapas",
+      "role": "owner",
+      "controls": 5,
+      "hasDownload": 0,
+      "uiOnlyPrint": 5,
+      "asyncJobDownload": 0,
+      "hasEndpoints": 0,
+      "errors": 0,
+      "receiptsSampled": 5,
+      "receiptsWithPrint": 5
+    }
+  ],
+  "allControls": [
+    {
+      "route": "/pos/receipts/cmknx7s8106d314b5ygjgcpbx",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7q06cz14b5ixx36rj0",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7k06cx14b5zdpitl59",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7e06cv14b5rerse2rk",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7906ct14b51x4czyol",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s8106d314b5ygjgcpbx",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7q06cz14b5ixx36rj0",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7k06cx14b5zdpitl59",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7e06cv14b5rerse2rk",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7906ct14b51x4czyol",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s8106d314b5ygjgcpbx",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7q06cz14b5ixx36rj0",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7k06cx14b5zdpitl59",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7e06cv14b5rerse2rk",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7906ct14b51x4czyol",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7rgm061l14b5tdruaqha",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7rgu061n14b5b8blqq73",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7rgy061p14b5jxwvzyb5",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7rh3061r14b5imwppdsj",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7rh7061t14b5r1oiwre4",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7rgm061l14b5tdruaqha",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7rgu061n14b5b8blqq73",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7rgy061p14b5jxwvzyb5",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7rh3061r14b5imwppdsj",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7rh7061t14b5r1oiwre4",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7rgm061l14b5tdruaqha",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7rgu061n14b5b8blqq73",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7rgy061p14b5jxwvzyb5",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7rh3061r14b5imwppdsj",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7rh7061t14b5r1oiwre4",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    }
+  ],
+  "allReceiptSamples": [
+    {
+      "receiptId": "cmknx7s8106d314b5ygjgcpbx",
+      "route": "/pos/receipts/cmknx7s8106d314b5ygjgcpbx",
+      "loadStatus": 200,
+      "payloadSize": 215436,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7q06cz14b5ixx36rj0",
+      "route": "/pos/receipts/cmknx7s7q06cz14b5ixx36rj0",
+      "loadStatus": 200,
+      "payloadSize": 215437,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7k06cx14b5zdpitl59",
+      "route": "/pos/receipts/cmknx7s7k06cx14b5zdpitl59",
+      "loadStatus": 200,
+      "payloadSize": 215437,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7e06cv14b5rerse2rk",
+      "route": "/pos/receipts/cmknx7s7e06cv14b5rerse2rk",
+      "loadStatus": 200,
+      "payloadSize": 215438,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7906ct14b51x4czyol",
+      "route": "/pos/receipts/cmknx7s7906ct14b51x4czyol",
+      "loadStatus": 200,
+      "payloadSize": 215438,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s8106d314b5ygjgcpbx",
+      "route": "/pos/receipts/cmknx7s8106d314b5ygjgcpbx",
+      "loadStatus": 200,
+      "payloadSize": 224875,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7q06cz14b5ixx36rj0",
+      "route": "/pos/receipts/cmknx7s7q06cz14b5ixx36rj0",
+      "loadStatus": 200,
+      "payloadSize": 224876,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7k06cx14b5zdpitl59",
+      "route": "/pos/receipts/cmknx7s7k06cx14b5zdpitl59",
+      "loadStatus": 200,
+      "payloadSize": 224876,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7e06cv14b5rerse2rk",
+      "route": "/pos/receipts/cmknx7s7e06cv14b5rerse2rk",
+      "loadStatus": 200,
+      "payloadSize": 224877,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7906ct14b51x4czyol",
+      "route": "/pos/receipts/cmknx7s7906ct14b51x4czyol",
+      "loadStatus": 200,
+      "payloadSize": 224877,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s8106d314b5ygjgcpbx",
+      "route": "/pos/receipts/cmknx7s8106d314b5ygjgcpbx",
+      "loadStatus": 200,
+      "payloadSize": 226321,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7q06cz14b5ixx36rj0",
+      "route": "/pos/receipts/cmknx7s7q06cz14b5ixx36rj0",
+      "loadStatus": 200,
+      "payloadSize": 226322,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7k06cx14b5zdpitl59",
+      "route": "/pos/receipts/cmknx7s7k06cx14b5zdpitl59",
+      "loadStatus": 200,
+      "payloadSize": 226322,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7e06cv14b5rerse2rk",
+      "route": "/pos/receipts/cmknx7s7e06cv14b5rerse2rk",
+      "loadStatus": 200,
+      "payloadSize": 226323,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7906ct14b51x4czyol",
+      "route": "/pos/receipts/cmknx7s7906ct14b51x4czyol",
+      "loadStatus": 200,
+      "payloadSize": 226323,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7rgm061l14b5tdruaqha",
+      "route": "/pos/receipts/cmknx7rgm061l14b5tdruaqha",
+      "loadStatus": 200,
+      "payloadSize": 215454,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7rgu061n14b5b8blqq73",
+      "route": "/pos/receipts/cmknx7rgu061n14b5b8blqq73",
+      "loadStatus": 200,
+      "payloadSize": 215453,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7rgy061p14b5jxwvzyb5",
+      "route": "/pos/receipts/cmknx7rgy061p14b5jxwvzyb5",
+      "loadStatus": 200,
+      "payloadSize": 215454,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7rh3061r14b5imwppdsj",
+      "route": "/pos/receipts/cmknx7rh3061r14b5imwppdsj",
+      "loadStatus": 200,
+      "payloadSize": 215454,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7rh7061t14b5r1oiwre4",
+      "route": "/pos/receipts/cmknx7rh7061t14b5r1oiwre4",
+      "loadStatus": 200,
+      "payloadSize": 215454,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7rgm061l14b5tdruaqha",
+      "route": "/pos/receipts/cmknx7rgm061l14b5tdruaqha",
+      "loadStatus": 200,
+      "payloadSize": 224891,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7rgu061n14b5b8blqq73",
+      "route": "/pos/receipts/cmknx7rgu061n14b5b8blqq73",
+      "loadStatus": 200,
+      "payloadSize": 224890,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7rgy061p14b5jxwvzyb5",
+      "route": "/pos/receipts/cmknx7rgy061p14b5jxwvzyb5",
+      "loadStatus": 200,
+      "payloadSize": 224891,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7rh3061r14b5imwppdsj",
+      "route": "/pos/receipts/cmknx7rh3061r14b5imwppdsj",
+      "loadStatus": 200,
+      "payloadSize": 224891,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7rh7061t14b5r1oiwre4",
+      "route": "/pos/receipts/cmknx7rh7061t14b5r1oiwre4",
+      "loadStatus": 200,
+      "payloadSize": 224891,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7rgm061l14b5tdruaqha",
+      "route": "/pos/receipts/cmknx7rgm061l14b5tdruaqha",
+      "loadStatus": 200,
+      "payloadSize": 226339,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7rgu061n14b5b8blqq73",
+      "route": "/pos/receipts/cmknx7rgu061n14b5b8blqq73",
+      "loadStatus": 200,
+      "payloadSize": 226338,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7rgy061p14b5jxwvzyb5",
+      "route": "/pos/receipts/cmknx7rgy061p14b5jxwvzyb5",
+      "loadStatus": 200,
+      "payloadSize": 226339,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7rh3061r14b5imwppdsj",
+      "route": "/pos/receipts/cmknx7rh3061r14b5imwppdsj",
+      "loadStatus": 200,
+      "payloadSize": 226339,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7rh7061t14b5r1oiwre4",
+      "route": "/pos/receipts/cmknx7rh7061t14b5r1oiwre4",
+      "loadStatus": 200,
+      "payloadSize": 226339,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    }
+  ]
+}

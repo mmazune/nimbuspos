@@ -170,7 +170,7 @@ export default function OpenShiftsPage() {
           <h1 className="text-3xl font-bold">Open Shifts</h1>
           <p className="text-muted-foreground">View and claim available shifts that need coverage</p>
         </div>
-        <Button variant="outline" size="sm" onClick={() => refetch()}>
+        <Button variant="outline" size="sm" onClick={() => refetch()} data-testid="open-shifts-refresh">
           <RefreshCw className="w-4 h-4 mr-2" />
           Refresh
         </Button>

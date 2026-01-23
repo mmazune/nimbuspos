@@ -1,0 +1,73 @@
+{
+  "generatedAt": "2026-01-23T07:34:38.853Z",
+  "orgs": {
+    "tapas": {
+      "owner": {
+        "posOrders": {
+          "total": 18,
+          "open": 10,
+          "closed": 0,
+          "gap": "PARTIAL"
+        },
+        "inventoryLevels": {
+          "total": 158,
+          "nonZeroQty": 158,
+          "gap": "OK"
+        },
+        "menuItems": {
+          "categories": 33,
+          "totalItems": 178,
+          "gap": "OK"
+        },
+        "staff": {
+          "total": 8,
+          "gap": "OK"
+        }
+      },
+      "procurement": {
+        "purchaseOrders": {
+          "total": 6,
+          "gap": "OK"
+        },
+        "receipts": {
+          "total": 0,
+          "gap": "EMPTY"
+        }
+      }
+    },
+    "cafesserie": {
+      "owner": {
+        "posOrders": {
+          "total": 16,
+          "open": 8,
+          "closed": 0,
+          "gap": "PARTIAL"
+        },
+        "inventoryLevels": {
+          "total": 77,
+          "nonZeroQty": 77,
+          "gap": "OK"
+        },
+        "menuItems": {
+          "categories": 12,
+          "totalItems": 80,
+          "gap": "OK"
+        },
+        "staff": {
+          "total": 5,
+          "gap": "OK"
+        }
+      },
+      "procurement": {
+        "purchaseOrders": {
+          "total": 6,
+          "gap": "OK"
+        },
+        "receipts": {
+          "total": 0,
+          "gap": "EMPTY"
+        }
+      }
+    }
+  }
+}

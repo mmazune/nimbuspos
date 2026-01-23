@@ -1,0 +1,86 @@
+{
+  "generatedAt": "2026-01-22T12:39:03.446Z",
+  "totalControls": 5,
+  "controls": [
+    {
+      "testId": "report-card-analytics-overview",
+      "text": "SalesFranchise AnalyticsSales, margins, rankings and multi-month trends across all branches.CSV expo",
+      "routes": [
+        "/reports"
+      ],
+      "roles": [
+        "tapas/owner",
+        "tapas/manager",
+        "tapas/accountant",
+        "cafesserie/owner",
+        "cafesserie/manager",
+        "cafesserie/accountant"
+      ],
+      "classification": "HAS_DOWNLOAD"
+    },
+    {
+      "testId": "report-card-finance-budgets",
+      "text": "FinanceBudgets & VarianceBudget vs actual sales, COGS and variance across branches.CSV exportPro+",
+      "routes": [
+        "/reports"
+      ],
+      "roles": [
+        "tapas/owner",
+        "tapas/manager",
+        "tapas/accountant",
+        "cafesserie/owner",
+        "cafesserie/manager",
+        "cafesserie/accountant"
+      ],
+      "classification": "HAS_DOWNLOAD"
+    },
+    {
+      "testId": "pnl-export",
+      "text": "Export CSV",
+      "routes": [
+        "/finance/pnl"
+      ],
+      "roles": [
+        "tapas/owner",
+        "tapas/manager",
+        "tapas/accountant",
+        "cafesserie/owner",
+        "cafesserie/manager",
+        "cafesserie/accountant"
+      ],
+      "classification": "HAS_DOWNLOAD"
+    },
+    {
+      "testId": "bs-export",
+      "text": "Export CSV",
+      "routes": [
+        "/finance/balance-sheet"
+      ],
+      "roles": [
+        "tapas/owner",
+        "tapas/manager",
+        "tapas/accountant",
+        "cafesserie/owner",
+        "cafesserie/manager",
+        "cafesserie/accountant"
+      ],
+      "classification": "HAS_DOWNLOAD"
+    },
+    {
+      "testId": "tb-export",
+      "text": "Export CSV",
+      "routes": [
+        "/finance/trial-balance"
+      ],
+      "roles": [
+        "tapas/owner",
+        "tapas/manager",
+        "tapas/accountant",
+        "cafesserie/owner",
+        "cafesserie/manager",
+        "cafesserie/accountant"
+      ],
+      "classification": "HAS_DOWNLOAD"
+    }
+  ]
+}

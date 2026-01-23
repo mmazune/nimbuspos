@@ -1,0 +1,135 @@
+route,app,nav_group,min_role_level,primary_roles,purpose,source_file
+/,web,N/A,L1,ALL,Root redirect based on device role/job role,apps/web/src/pages/index.tsx
+/dashboard,web,Overview,L2,"SUPERVISOR,STOCK_MANAGER,PROCUREMENT,OWNER,MANAGER,EVENT_MANAGER,CHEF,CASHIER",Main dashboard landing page,apps/web/src/pages/dashboard.tsx
+/analytics,web,Overview,L4,"OWNER,MANAGER,ACCOUNTANT",Business analytics & KPIs,apps/web/src/pages/analytics/index.tsx
+/analytics/franchise/[branchId],web,Overview,L5,OWNER,Franchise branch analytics,apps/web/src/pages/analytics/franchise/[branchId].tsx
+/reports,web,Reports,L3,"OWNER,MANAGER,ACCOUNTANT,PROCUREMENT,STOCK_MANAGER",Financial & operational reports,apps/web/src/pages/reports/index.tsx
+/reports/subscriptions,web,Reports,L4,OWNER,Report subscription management,apps/web/src/pages/reports/subscriptions.tsx
+/billing,web,Settings,L5,OWNER,Subscription billing management,apps/web/src/pages/billing.tsx
+/settings,web,Settings,L1,ALL,User & organization settings,apps/web/src/pages/settings.tsx
+/security,web,Security,L5,OWNER,Security & access control,apps/web/src/pages/security.tsx
+/login,web,Auth,PUBLIC,PUBLIC,User login page,apps/web/src/pages/login.tsx
+/no-access,web,Auth,PUBLIC,PUBLIC,Access denied page,apps/web/src/pages/no-access.tsx
+/launch,web,N/A,L1,ALL,Launch/startup page,apps/web/src/pages/launch.tsx
+/health,web,N/A,PUBLIC,PUBLIC,Frontend health check,apps/web/src/pages/health.tsx
+/workspaces/owner,web,My Workspace,L5,OWNER,Owner workspace landing,apps/web/src/pages/workspaces/owner.tsx
+/workspaces/manager,web,My Workspace,L4,MANAGER,Manager workspace landing,apps/web/src/pages/workspaces/manager.tsx
+/workspaces/accountant,web,My Workspace,L4,ACCOUNTANT,Accountant workspace landing,apps/web/src/pages/workspaces/accountant.tsx
+/workspaces/procurement,web,My Workspace,L4,PROCUREMENT,Procurement workspace landing,apps/web/src/pages/workspaces/procurement.tsx
+/workspaces/stock-manager,web,My Workspace,L3,STOCK_MANAGER,Stock manager workspace landing,apps/web/src/pages/workspaces/stock-manager.tsx
+/workspaces/supervisor,web,My Workspace,L2,SUPERVISOR,Supervisor workspace landing,apps/web/src/pages/workspaces/supervisor.tsx
+/workspaces/cashier,web,My Workspace,L2,CASHIER,Cashier workspace landing,apps/web/src/pages/workspaces/cashier.tsx
+/workspaces/chef,web,My Workspace,L3,CHEF,Chef workspace landing,apps/web/src/pages/workspaces/chef.tsx
+/workspaces/waiter,web,My Workspace,L1,WAITER,Waiter workspace landing,apps/web/src/pages/workspaces/waiter.tsx
+/workspaces/bartender,web,My Workspace,L1,BARTENDER,Bartender workspace landing,apps/web/src/pages/workspaces/bartender.tsx
+/workspaces/event-manager,web,My Workspace,L4,EVENT_MANAGER,Event manager workspace landing,apps/web/src/pages/workspaces/event-manager.tsx
+/pos,web,Operations,L1,"OWNER,MANAGER,SUPERVISOR,CASHIER,WAITER,BARTENDER,EVENT_MANAGER",Point of sale interface,apps/web/src/pages/pos/index.tsx
+/pos/checkout/[orderId],web,Operations,L1,"CASHIER,WAITER,BARTENDER",Order checkout flow,apps/web/src/pages/pos/checkout/[orderId].tsx
+/pos/cash-sessions,web,Operations,L2,"CASHIER,SUPERVISOR,MANAGER,OWNER",Cash session management (M13.4),apps/web/src/pages/pos/cash-sessions.tsx
+/pos/receipts/[id],web,Operations,L1,ALL_POS,POS receipt view,apps/web/src/pages/pos/receipts/[id].tsx
+/kds,web,Kitchen,L3,CHEF,Kitchen display system,apps/web/src/pages/kds.tsx
+/reservations,web,Events,L2,"OWNER,MANAGER,SUPERVISOR,WAITER,EVENT_MANAGER",Reservation management,apps/web/src/pages/reservations/index.tsx
+/reservations/today-board,web,Events,L2,"OWNER,EVENT_MANAGER",Today's reservation board (M9.1),apps/web/src/pages/reservations/today-board.tsx
+/reservations/calendar,web,Events,L2,"OWNER,EVENT_MANAGER",Reservation calendar view,apps/web/src/pages/reservations/calendar.tsx
+/reservations/policies,web,Events,L3,"OWNER,EVENT_MANAGER",Reservation policies (M9.2),apps/web/src/pages/reservations/policies.tsx
+/reservations/branch-hours,web,Events,L3,EVENT_MANAGER,Branch operating hours (M9.6),apps/web/src/pages/reservations/branch-hours.tsx
+/reservations/capacity,web,Events,L3,"OWNER,EVENT_MANAGER",Capacity management (M9.6),apps/web/src/pages/reservations/capacity.tsx
+/reservations/blackouts,web,Events,L3,"OWNER,EVENT_MANAGER",Blackout windows (M9.6),apps/web/src/pages/reservations/blackouts.tsx
+/reservations/reports,web,Events,L4,"OWNER,EVENT_MANAGER",Reservation reports,apps/web/src/pages/reservations/reports.tsx
+/reservations/sla-reports,web,Events,L4,EVENT_MANAGER,Reservation SLA reports,apps/web/src/pages/reservations/sla-reports.tsx
+/waitlist,web,Events,L2,"OWNER,MANAGER,SUPERVISOR,WAITER",Waitlist management (M9.1),apps/web/src/pages/waitlist.tsx
+/book/[branchSlug],web,Public,PUBLIC,PUBLIC,Public booking page (M9.4),apps/web/src/pages/book/[branchSlug].tsx
+/manage/reservation/[token],web,Public,PUBLIC,PUBLIC,Customer reservation management (M9.4),apps/web/src/pages/manage/reservation/[token].tsx
+/inventory,web,Inventory,L3,"STOCK_MANAGER,PROCUREMENT,OWNER,MANAGER,CHEF,BARTENDER",Inventory dashboard,apps/web/src/pages/inventory/index.tsx
+/inventory/items,web,Inventory,L3,"STOCK_MANAGER,PROCUREMENT,OWNER",Inventory items list,apps/web/src/pages/inventory/items.tsx
+/inventory/on-hand,web,Inventory,L3,"STOCK_MANAGER,PROCUREMENT,OWNER",On-hand inventory levels,apps/web/src/pages/inventory/on-hand.tsx
+/inventory/locations,web,Inventory,L3,"STOCK_MANAGER,PROCUREMENT,OWNER",Inventory locations,apps/web/src/pages/inventory/locations.tsx
+/inventory/suppliers,web,Inventory,L3,"STOCK_MANAGER,PROCUREMENT,OWNER",Supplier management,apps/web/src/pages/inventory/suppliers.tsx
+/inventory/purchase-orders,web,Procurement,L3,"STOCK_MANAGER,PROCUREMENT,OWNER",Purchase order list (M11.2),apps/web/src/pages/inventory/purchase-orders/index.tsx
+/inventory/purchase-orders/[id],web,Procurement,L3,"PROCUREMENT,OWNER",Purchase order detail (M11.2),apps/web/src/pages/inventory/purchase-orders/[id].tsx
+/inventory/receipts,web,Procurement,L3,"STOCK_MANAGER,PROCUREMENT,OWNER",Goods receipts list (M11.2),apps/web/src/pages/inventory/receipts/index.tsx
+/inventory/receipts/[id],web,Procurement,L3,"PROCUREMENT,OWNER",Goods receipt detail (M11.2),apps/web/src/pages/inventory/receipts/[id].tsx
+/inventory/transfers,web,Inventory,L3,"STOCK_MANAGER,PROCUREMENT,OWNER",Stock transfers list (M11.3),apps/web/src/pages/inventory/transfers/index.tsx
+/inventory/transfers/[id],web,Inventory,L3,"STOCK_MANAGER,OWNER",Stock transfer detail (M11.3),apps/web/src/pages/inventory/transfers/[id].tsx
+/inventory/waste,web,Inventory,L3,"STOCK_MANAGER,PROCUREMENT,OWNER",Waste tracking list (M11.3),apps/web/src/pages/inventory/waste/index.tsx
+/inventory/waste/[id],web,Inventory,L3,"STOCK_MANAGER,OWNER",Waste document detail (M11.3),apps/web/src/pages/inventory/waste/[id].tsx
+/inventory/adjustments,web,Inventory,L3,"STOCK_MANAGER,OWNER",Inventory adjustments,apps/web/src/pages/inventory/adjustments.tsx
+/inventory/stocktakes,web,Inventory,L3,"STOCK_MANAGER,OWNER",Stocktake sessions list (M11.10),apps/web/src/pages/inventory/stocktakes/index.tsx
+/inventory/stocktakes/[id],web,Inventory,L3,"STOCK_MANAGER,OWNER",Stocktake detail (M11.10),apps/web/src/pages/inventory/stocktakes/[id].tsx
+/inventory/recipes,web,Inventory,L3,"STOCK_MANAGER,PROCUREMENT,OWNER,CHEF",Recipe management (M11.4),apps/web/src/pages/inventory/recipes.tsx
+/inventory/lots,web,Inventory,L3,"STOCK_MANAGER,OWNER",Lot tracking (M11.7),apps/web/src/pages/inventory/lots.tsx
+/inventory/barcodes,web,Inventory,L3,"STOCK_MANAGER,OWNER",Barcode management (M11.11),apps/web/src/pages/inventory/barcodes.tsx
+/inventory/reorder-policies,web,Procurement,L3,"PROCUREMENT,OWNER",Reorder policies (M11.6),apps/web/src/pages/inventory/reorder-policies.tsx
+/inventory/reorder-suggestions,web,Procurement,L3,"PROCUREMENT,OWNER",Reorder suggestions (M11.6),apps/web/src/pages/inventory/reorder-suggestions.tsx
+/inventory/alerts,web,Inventory,L3,"STOCK_MANAGER,PROCUREMENT,OWNER",Inventory alerts (M11.12),apps/web/src/pages/inventory/alerts.tsx
+/inventory/analytics,web,Inventory,L4,OWNER,Inventory analytics,apps/web/src/pages/inventory/analytics.tsx
+/inventory/cogs,web,Inventory,L4,"OWNER,ACCOUNTANT",Cost of goods sold report (M11.5),apps/web/src/pages/inventory/cogs.tsx
+/inventory/valuation,web,Inventory,L4,"OWNER,ACCOUNTANT",Inventory valuation report (M11.5),apps/web/src/pages/inventory/valuation.tsx
+/inventory/depletions,web,Inventory,L3,"STOCK_MANAGER,PROCUREMENT,OWNER",Order depletions (M11.4),apps/web/src/pages/inventory/depletions.tsx
+/inventory/period-dashboard,web,Inventory,L3,"STOCK_MANAGER,PROCUREMENT,OWNER",Inventory period dashboard (M12.1),apps/web/src/pages/inventory/period-dashboard.tsx
+/inventory/period-close,web,Inventory,L3,"STOCK_MANAGER,PROCUREMENT,OWNER",Inventory period close (M12.1),apps/web/src/pages/inventory/period-close.tsx
+/inventory/close-requests,web,Inventory,L3,"STOCK_MANAGER,PROCUREMENT,OWNER",Period close requests (M12.4),apps/web/src/pages/inventory/close-requests.tsx
+/inventory/accounting-mappings,web,Inventory,L4,OWNER,Inventory-GL mappings (M11.13),apps/web/src/pages/inventory/accounting-mappings.tsx
+/inventory/accounting-postings,web,Inventory,L4,OWNER,Inventory journal postings (M11.13),apps/web/src/pages/inventory/accounting-postings.tsx
+/finance,web,Finance,L4,"OWNER,ACCOUNTANT",Finance dashboard,apps/web/src/pages/finance/index.tsx
+/finance/accounts,web,General Ledger,L4,"OWNER,ACCOUNTANT",Chart of accounts,apps/web/src/pages/finance/accounts.tsx
+/finance/journal,web,General Ledger,L4,"OWNER,ACCOUNTANT",Journal entries,apps/web/src/pages/finance/journal.tsx
+/finance/periods,web,General Ledger,L4,"OWNER,ACCOUNTANT",Fiscal periods,apps/web/src/pages/finance/periods.tsx
+/finance/vendors,web,Payables & Receivables,L4,OWNER,Vendor list,apps/web/src/pages/finance/vendors/index.tsx
+/finance/vendors/[id],web,Payables & Receivables,L4,OWNER,Vendor detail,apps/web/src/pages/finance/vendors/[id].tsx
+/finance/vendor-bills,web,Payables & Receivables,L4,OWNER,Vendor bills list (M8.2b),apps/web/src/pages/finance/vendor-bills/index.tsx
+/finance/vendor-bills/[id],web,Payables & Receivables,L4,OWNER,Vendor bill detail (M8.2b),apps/web/src/pages/finance/vendor-bills/[id].tsx
+/finance/customers,web,Payables & Receivables,L4,OWNER,Customer list,apps/web/src/pages/finance/customers/index.tsx
+/finance/customers/[id],web,Payables & Receivables,L4,OWNER,Customer detail,apps/web/src/pages/finance/customers/[id].tsx
+/finance/customer-invoices,web,Payables & Receivables,L4,OWNER,Customer invoices list (M8.2b),apps/web/src/pages/finance/customer-invoices/index.tsx
+/finance/customer-invoices/[id],web,Payables & Receivables,L4,OWNER,Customer invoice detail (M8.2b),apps/web/src/pages/finance/customer-invoices/[id].tsx
+/finance/credit-notes,web,Payables & Receivables,L4,OWNER,Credit notes (M8.5),apps/web/src/pages/finance/credit-notes.tsx
+/finance/payment-methods,web,Finance,L4,OWNER,Payment method mappings,apps/web/src/pages/finance/payment-methods.tsx
+/finance/pnl,web,Financial Statements,L4,"OWNER,ACCOUNTANT",Profit & loss statement,apps/web/src/pages/finance/pnl.tsx
+/finance/balance-sheet,web,Financial Statements,L4,"OWNER,ACCOUNTANT",Balance sheet,apps/web/src/pages/finance/balance-sheet.tsx
+/finance/trial-balance,web,Financial Statements,L4,"OWNER,ACCOUNTANT",Trial balance,apps/web/src/pages/finance/trial-balance.tsx
+/finance/ar-aging,web,Payables & Receivables,L4,"OWNER,ACCOUNTANT",Accounts receivable aging,apps/web/src/pages/finance/ar-aging.tsx
+/finance/ap-aging,web,Payables & Receivables,L4,"OWNER,ACCOUNTANT",Accounts payable aging,apps/web/src/pages/finance/ap-aging.tsx
+/hr,web,Team,L4,OWNER,HR management,apps/web/src/pages/hr.tsx
+/staff,web,Team,L3,"OWNER,MANAGER,SUPERVISOR,EVENT_MANAGER",Staff management,apps/web/src/pages/staff/index.tsx
+/staff/insights,web,Team,L4,"OWNER,MANAGER",Staff performance insights (M19),apps/web/src/pages/staff/insights.tsx
+/feedback,web,Team,L4,"OWNER,MANAGER",Customer feedback (M20 NPS),apps/web/src/pages/feedback.tsx
+/documents,web,Settings,L4,OWNER,Document storage (M18),apps/web/src/pages/documents.tsx
+/service-providers,web,Finance,L4,"PROCUREMENT,OWNER,ACCOUNTANT",Service provider management (M7),apps/web/src/pages/service-providers/index.tsx
+/service-providers/[id],web,Finance,L4,PROCUREMENT,Service provider detail (M7),apps/web/src/pages/service-providers/[id].tsx
+/workforce/schedule,web,Workforce,L4,"OWNER,MANAGER",Employee scheduling (M10.1),apps/web/src/pages/workforce/schedule.tsx
+/workforce/my-schedule,web,My Schedule,L1,ALL,My schedule (employee view),apps/web/src/pages/workforce/my-schedule.tsx
+/workforce/auto-scheduler,web,Workforce,L4,"OWNER,MANAGER",Auto-scheduler (M10.13),apps/web/src/pages/workforce/auto-scheduler.tsx
+/workforce/timeclock,web,Workforce,L2,"SUPERVISOR,OWNER,MANAGER,CHEF,CASHIER",Timeclock management (M10.1),apps/web/src/pages/workforce/timeclock.tsx
+/workforce/my-time,web,My Schedule,L1,ALL,My time entries,apps/web/src/pages/workforce/my-time.tsx
+/workforce/timesheets,web,Workforce,L4,OWNER,Timesheet management (M10.3),apps/web/src/pages/workforce/timesheets.tsx
+/workforce/my-timesheet,web,My Schedule,L1,ALL,My timesheet,apps/web/src/pages/workforce/my-timesheet.tsx
+/workforce/pay-periods,web,Workforce,L4,OWNER,Pay period management (M10.3),apps/web/src/pages/workforce/pay-periods.tsx
+/workforce/approvals,web,Workforce,L4,"OWNER,MANAGER",Leave & timesheet approvals (M10.17),apps/web/src/pages/workforce/approvals.tsx
+/workforce/swaps,web,Workforce,L3,"SUPERVISOR,OWNER,MANAGER",Shift swap approvals (M10.11),apps/web/src/pages/workforce/swaps.tsx
+/workforce/my-swaps,web,My Schedule,L1,ALL,My swap requests (M10.11),apps/web/src/pages/workforce/my-swaps.tsx
+/workforce/open-shifts,web,My Schedule,L1,ALL,Claim open shifts (M10.11),apps/web/src/pages/workforce/open-shifts.tsx
+/workforce/my-availability,web,My Schedule,L1,ALL,Set personal availability (M10.11),apps/web/src/pages/workforce/my-availability.tsx
+/workforce/payroll-runs,web,Workforce,L4,OWNER,Payroll runs list (M10.6),apps/web/src/pages/workforce/payroll-runs/index.tsx
+/workforce/payroll-runs/[id],web,Workforce,L4,OWNER,Payroll run detail (M10.6),apps/web/src/pages/workforce/payroll-runs/[id].tsx
+/workforce/payroll-runs/new,web,Workforce,L4,OWNER,Create payroll run (M10.6),apps/web/src/pages/workforce/payroll-runs/new.tsx
+/workforce/payroll-export,web,Workforce,L4,OWNER,Export payroll data,apps/web/src/pages/workforce/payroll-export.tsx
+/workforce/payroll-mapping,web,Workforce,L4,OWNER,Payroll posting mapping (M10.8),apps/web/src/pages/workforce/payroll-mapping.tsx
+/workforce/payslips,web,Workforce,L4,OWNER,Payslips list (M10.7),apps/web/src/pages/workforce/payslips/index.tsx
+/workforce/payslips/[id],web,Workforce,L4,OWNER,Payslip detail (M10.7),apps/web/src/pages/workforce/payslips/[id].tsx
+/my-payslips,web,My Schedule,L1,ALL,My payslips (employee view) (M10.7),apps/web/src/pages/my-payslips.tsx
+/workforce/compensation,web,Workforce,L4,OWNER,Compensation management (M10.7),apps/web/src/pages/workforce/compensation.tsx
+/workforce/remittances,web,Workforce,L4,OWNER,Remittance batches list (M10.9),apps/web/src/pages/workforce/remittances/index.tsx
+/workforce/remittances/[id],web,Workforce,L4,OWNER,Remittance batch detail (M10.9),apps/web/src/pages/workforce/remittances/[id].tsx
+/workforce/remittances/new,web,Workforce,L4,OWNER,Create remittance batch (M10.9),apps/web/src/pages/workforce/remittances/new.tsx
+/workforce/remittance-providers,web,Workforce,L4,OWNER,Remittance providers (M10.10),apps/web/src/pages/workforce/remittance-providers.tsx
+/workforce/remittance-mappings,web,Workforce,L4,OWNER,Remittance mappings (M10.10),apps/web/src/pages/workforce/remittance-mappings.tsx
+/workforce/labor,web,Workforce,L4,"OWNER,MANAGER",Labor cost reports (M10.12),apps/web/src/pages/workforce/labor.tsx
+/workforce/labor-targets,web,Workforce,L4,"OWNER,MANAGER",Labor budget targets (M10.12),apps/web/src/pages/workforce/labor-targets.tsx
+/workforce/staffing-planner,web,Workforce,L4,"OWNER,MANAGER",Staffing planner (M10.12),apps/web/src/pages/workforce/staffing-planner.tsx
+/workforce/staffing-alerts,web,Workforce,L4,"OWNER,MANAGER",Staffing alerts (M10.12),apps/web/src/pages/workforce/staffing-alerts.tsx
+/workforce/kiosk-devices,web,Workforce,L4,OWNER,Kiosk device management (M10.21),apps/web/src/pages/workforce/kiosk-devices.tsx
+/workforce/kiosk/[publicId],web,Public,PUBLIC,PUBLIC,Public kiosk interface (M10.22),apps/web/src/pages/workforce/kiosk/[publicId].tsx
+/workforce/geo-fence,web,Workforce,L4,OWNER,Geofencing configuration (M10.20),apps/web/src/pages/workforce/geo-fence.tsx
+/workforce/policies,web,Workforce,L4,OWNER,Workforce policies (M10.3),apps/web/src/pages/workforce/policies.tsx
+/dev,web,Developer,L5,OWNER,Developer portal (M14),apps/web/src/pages/dev.tsx

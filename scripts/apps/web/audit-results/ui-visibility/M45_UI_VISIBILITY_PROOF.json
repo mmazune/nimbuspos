@@ -1,0 +1,186 @@
+{
+  "timestamp": "2026-01-21T16:59:06.447Z",
+  "summary": {
+    "passed": 18,
+    "failed": 0,
+    "total": 18
+  },
+  "results": [
+    {
+      "org": "tapas",
+      "role": "owner",
+      "endpoint": "/inventory/levels",
+      "status": 200,
+      "rows": 20,
+      "valueGtZero": true,
+      "shape": "array[20]",
+      "rbacExpected403": false
+    },
+    {
+      "org": "tapas",
+      "role": "owner",
+      "endpoint": "/inventory/valuation",
+      "status": 200,
+      "rows": 158,
+      "valueGtZero": true,
+      "shape": "object{lines:158}",
+      "rbacExpected403": false
+    },
+    {
+      "org": "tapas",
+      "role": "owner",
+      "endpoint": "/inventory/cogs?fromDate=2025-10-23&toDate=2026-01-21",
+      "status": 200,
+      "rows": 5,
+      "valueGtZero": true,
+      "shape": "object{lines:5}",
+      "rbacExpected403": false
+    },
+    {
+      "org": "tapas",
+      "role": "accountant",
+      "endpoint": "/inventory/levels",
+      "status": 200,
+      "rows": 20,
+      "valueGtZero": true,
+      "shape": "array[20]",
+      "rbacExpected403": false
+    },
+    {
+      "org": "tapas",
+      "role": "accountant",
+      "endpoint": "/inventory/valuation",
+      "status": 200,
+      "rows": 158,
+      "valueGtZero": true,
+      "shape": "object{lines:158}",
+      "rbacExpected403": false
+    },
+    {
+      "org": "tapas",
+      "role": "accountant",
+      "endpoint": "/inventory/cogs?fromDate=2025-10-23&toDate=2026-01-21",
+      "status": 200,
+      "rows": 5,
+      "valueGtZero": true,
+      "shape": "object{lines:5}",
+      "rbacExpected403": false
+    },
+    {
+      "org": "tapas",
+      "role": "stock",
+      "endpoint": "/inventory/levels",
+      "status": 200,
+      "rows": 20,
+      "valueGtZero": true,
+      "shape": "array[20]",
+      "rbacExpected403": false
+    },
+    {
+      "org": "tapas",
+      "role": "stock",
+      "endpoint": "/inventory/valuation",
+      "status": 403,
+      "rows": 1,
+      "shape": "object",
+      "rbacExpected403": true
+    },
+    {
+      "org": "tapas",
+      "role": "stock",
+      "endpoint": "/inventory/cogs?fromDate=2025-10-23&toDate=2026-01-21",
+      "status": 403,
+      "rows": 1,
+      "shape": "object",
+      "rbacExpected403": true
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "endpoint": "/inventory/levels",
+      "status": 200,
+      "rows": 20,
+      "valueGtZero": true,
+      "shape": "array[20]",
+      "rbacExpected403": false
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "endpoint": "/inventory/valuation",
+      "status": 200,
+      "rows": 77,
+      "valueGtZero": true,
+      "shape": "object{lines:77}",
+      "rbacExpected403": false
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "endpoint": "/inventory/cogs?fromDate=2025-10-23&toDate=2026-01-21",
+      "status": 200,
+      "rows": 5,
+      "valueGtZero": true,
+      "shape": "object{lines:5}",
+      "rbacExpected403": false
+    },
+    {
+      "org": "cafesserie",
+      "role": "accountant",
+      "endpoint": "/inventory/levels",
+      "status": 200,
+      "rows": 20,
+      "valueGtZero": true,
+      "shape": "array[20]",
+      "rbacExpected403": false
+    },
+    {
+      "org": "cafesserie",
+      "role": "accountant",
+      "endpoint": "/inventory/valuation",
+      "status": 200,
+      "rows": 77,
+      "valueGtZero": true,
+      "shape": "object{lines:77}",
+      "rbacExpected403": false
+    },
+    {
+      "org": "cafesserie",
+      "role": "accountant",
+      "endpoint": "/inventory/cogs?fromDate=2025-10-23&toDate=2026-01-21",
+      "status": 200,
+      "rows": 5,
+      "valueGtZero": true,
+      "shape": "object{lines:5}",
+      "rbacExpected403": false
+    },
+    {
+      "org": "cafesserie",
+      "role": "procurement",
+      "endpoint": "/inventory/levels",
+      "status": 200,
+      "rows": 20,
+      "valueGtZero": true,
+      "shape": "array[20]",
+      "rbacExpected403": false
+    },
+    {
+      "org": "cafesserie",
+      "role": "procurement",
+      "endpoint": "/inventory/valuation",
+      "status": 403,
+      "rows": 1,
+      "shape": "object",
+      "rbacExpected403": true
+    },
+    {
+      "org": "cafesserie",
+      "role": "procurement",
+      "endpoint": "/inventory/cogs?fromDate=2025-10-23&toDate=2026-01-21",
+      "status": 403,
+      "rows": 1,
+      "shape": "object",
+      "rbacExpected403": true
+    }
+  ]
+}

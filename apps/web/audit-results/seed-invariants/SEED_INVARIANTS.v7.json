@@ -1,0 +1,92 @@
+[
+  {
+    "id": "INV-V7-1",
+    "name": "Valuation endpoint returns > 0 rows",
+    "org": "tapas",
+    "passed": true,
+    "value": 158,
+    "expected": "> 0",
+    "details": "158 lines returned"
+  },
+  {
+    "id": "INV-V7-2",
+    "name": "Valuation total amount > 0",
+    "org": "tapas",
+    "passed": true,
+    "value": "2,122,518,081",
+    "expected": "> 0",
+    "details": "totalValue=2,122,518,081, 0 lines with value > 0"
+  },
+  {
+    "id": "INV-V7-3",
+    "name": "COGS endpoint returns valid structure",
+    "org": "tapas",
+    "passed": true,
+    "value": "totalCogs=0, lines=0",
+    "expected": "valid structure",
+    "details": "COGS is 0 (no depletion yet)"
+  },
+  {
+    "id": "INV-V7-4",
+    "name": "At least 5 recipes have ingredients with non-zero WAC",
+    "org": "tapas",
+    "passed": true,
+    "value": 45,
+    "expected": ">= 5",
+    "details": "examples: Dirty Martini, Gin Sour, Absolut Vodka Citron 1Ltr (Shot)"
+  },
+  {
+    "id": "INV-V7-5",
+    "name": "Low-stock ingredient linkage still holds",
+    "org": "tapas",
+    "passed": true,
+    "value": "50 recipes, 123 lines",
+    "expected": "> 0 linked",
+    "details": "50 recipes have ingredient lines"
+  },
+  {
+    "id": "INV-V7-1",
+    "name": "Valuation endpoint returns > 0 rows",
+    "org": "cafesserie",
+    "passed": true,
+    "value": 77,
+    "expected": "> 0",
+    "details": "77 lines returned"
+  },
+  {
+    "id": "INV-V7-2",
+    "name": "Valuation total amount > 0",
+    "org": "cafesserie",
+    "passed": true,
+    "value": "256,226,153",
+    "expected": "> 0",
+    "details": "totalValue=256,226,153, 0 lines with value > 0"
+  },
+  {
+    "id": "INV-V7-3",
+    "name": "COGS endpoint returns valid structure",
+    "org": "cafesserie",
+    "passed": true,
+    "value": "totalCogs=0, lines=0",
+    "expected": "valid structure",
+    "details": "COGS is 0 (no depletion yet)"
+  },
+  {
+    "id": "INV-V7-4",
+    "name": "At least 5 recipes have ingredients with non-zero WAC",
+    "org": "cafesserie",
+    "passed": true,
+    "value": 38,
+    "expected": ">= 5",
+    "details": "examples: Vanilla Latte, Ice Cream Sundae, Croissant"
+  },
+  {
+    "id": "INV-V7-5",
+    "name": "Low-stock ingredient linkage still holds",
+    "org": "cafesserie",
+    "passed": true,
+    "value": "50 recipes, 150 lines",
+    "expected": "> 0 linked",
+    "details": "50 recipes have ingredient lines"
+  }
+]

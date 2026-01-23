@@ -12,6 +12,16 @@
 // =============================================================================
 
 /**
+ * Visibility check result (M11)
+ */
+export interface VisibilityCheck {
+  name: string;
+  passed: boolean;
+  message?: string;
+  selector?: string;
+}
+
+/**
  * Audit result for a role+org combination
  */
 export interface RoleAuditResult {
@@ -29,6 +39,10 @@ export interface RoleAuditResult {
   failures: AuditFailure[];
   screenshots: string[];
   summary: AuditSummary;
+  /** M11: Landing page visibility checks */
+  visibilityChecks?: VisibilityCheck[];
+  visibilityPassed?: number;
+  visibilityFailed?: number;
 }
 
 /**
@@ -88,6 +102,10 @@ export interface ControlClick {
   clicked: boolean;
   outcome: ClickOutcome;
   error?: string;
+  /** M28: Endpoint fingerprint (sorted unique method+path) */
+  fingerprint?: string;
+  /** M28: Was this control skipped due to redundant fingerprint? */
+  redundant?: boolean;
 }
 
 /**
@@ -154,6 +172,7 @@ export type FailureType =
   | 'route-forbidden'
   | 'route-not-found'
   | 'route-error'
+  | 'route-skipped-time-limit' // M17: Not a failure, just incomplete coverage
   | 'api-unauthorized'
   | 'api-forbidden'
   | 'api-server-error'
@@ -173,11 +192,124 @@ export interface AuditSummary {
   controlsFound: number;
   controlsClicked: number;
   controlsSkipped: number;
+  /** Controls skipped due to redundant fingerprint (M28) */
+  controlsRedundant?: number;
   endpointsHit: number;
   endpoints2xx: number;
   endpoints4xx: number;
   endpoints5xx: number;
   failuresTotal: number;
+}
+
+// =============================================================================
+// Bounded Audit Mode (M28)
+// =============================================================================
+
+/**
+ * Audit mode: 'full' (legacy) or 'bounded' (capped, predictable runtime)
+ */
+export type AuditMode = 'full' | 'bounded';
+
+/**
+ * Bounded mode configuration with sensible defaults
+ */
+export interface BoundedConfig {
+  mode: AuditMode;
+  maxRoutesPerRole: number;
+  maxControlsPerRoute: number;
+  maxReadSafeClicksPerRoute: number;
+  maxMutationRiskClicksPerRoute: number;
+  maxTotalClicksPerRole: number;
+  routeTimeBudgetMs: number;
+  /** Stop exploring route after N redundant fingerprints in a row */
+  maxRedundantInARow: number;
+}
+
+/**
+ * Default bounded mode configuration
+ */
+export const DEFAULT_BOUNDED_CONFIG: BoundedConfig = {
+  mode: 'bounded',
+  maxRoutesPerRole: 15,
+  maxControlsPerRoute: 80,
+  maxReadSafeClicksPerRoute: 25,
+  maxMutationRiskClicksPerRoute: 6,
+  maxTotalClicksPerRole: 250,
+  routeTimeBudgetMs: 15000,
+  maxRedundantInARow: 10,
+};
+
+/**
+ * Full mode configuration (no caps, but still has time budget)
+ */
+export const FULL_MODE_CONFIG: BoundedConfig = {
+  mode: 'full',
+  maxRoutesPerRole: 100,
+  maxControlsPerRoute: 500,
+  maxReadSafeClicksPerRoute: 200,
+  maxMutationRiskClicksPerRoute: 50,
+  maxTotalClicksPerRole: 2000,
+  routeTimeBudgetMs: 30000,
+  maxRedundantInARow: 50,
+};
+
+/**
+ * Get bounded config from environment variables
+ */
+export function getBoundedConfig(): BoundedConfig {
+  const mode = (process.env.AUDIT_MODE || 'full') as AuditMode;
+  const base = mode === 'bounded' ? DEFAULT_BOUNDED_CONFIG : FULL_MODE_CONFIG;
+
+  return {
+    mode,
+    maxRoutesPerRole: parseInt(process.env.MAX_ROUTES_PER_ROLE || String(base.maxRoutesPerRole), 10),
+    maxControlsPerRoute: parseInt(process.env.MAX_CONTROLS_PER_ROUTE || String(base.maxControlsPerRoute), 10),
+    maxReadSafeClicksPerRoute: parseInt(process.env.MAX_READ_SAFE_CLICKS_PER_ROUTE || String(base.maxReadSafeClicksPerRoute), 10),
+    maxMutationRiskClicksPerRoute: parseInt(process.env.MAX_MUTATION_RISK_CLICKS_PER_ROUTE || String(base.maxMutationRiskClicksPerRoute), 10),
+    maxTotalClicksPerRole: parseInt(process.env.MAX_TOTAL_CLICKS_PER_ROLE || String(base.maxTotalClicksPerRole), 10),
+    routeTimeBudgetMs: parseInt(process.env.ROUTE_TIME_BUDGET_MS || String(base.routeTimeBudgetMs), 10),
+    maxRedundantInARow: parseInt(process.env.MAX_REDUNDANT_IN_A_ROW || String(base.maxRedundantInARow), 10),
+  };
+}
+
+// =============================================================================
+// Expected Forbidden Endpoints (M16)
+// =============================================================================
+
+/**
+ * Map of role → list of endpoints that are expected to return 403.
+ * These 403s will be logged as warnings, not failures.
+ *
+ * Format: role → [endpoint patterns]
+ * Patterns are matched against the endpoint path (startsWith).
+ */
+export const EXPECTED_FORBIDDEN_ENDPOINTS: Record<RoleId, string[]> = {
+  // Owners have full access
+  owner: [],
+
+  // Managers cannot access billing/subscription or franchise/rankings
+  manager: ['/billing/subscription', '/franchise/rankings'],
+
+  // Accountants have limited access
+  accountant: ['/franchise/rankings'],
+
+  // Lower roles have more restrictions
+  procurement: ['/billing', '/franchise', '/analytics', '/workforce/approvals'],
+  stock: ['/billing', '/franchise', '/analytics', '/workforce/approvals'],
+  supervisor: ['/billing', '/franchise', '/analytics/financial', '/workforce/approvals'],
+  cashier: ['/billing', '/franchise', '/analytics', '/workforce'],
+  waiter: ['/billing', '/franchise', '/analytics', '/workforce'],
+  chef: ['/billing', '/franchise', '/analytics', '/workforce', '/pos'],
+  bartender: ['/billing', '/franchise', '/analytics', '/workforce'],
+  eventmgr: ['/billing', '/franchise'],
+};
+
+/**
+ * Check if a 403 on this endpoint is expected for the given role.
+ */
+export function isExpectedForbidden(role: RoleId, endpoint: string): boolean {
+  const forbiddenPatterns = EXPECTED_FORBIDDEN_ENDPOINTS[role] || [];
+  return forbiddenPatterns.some((pattern) => endpoint.startsWith(pattern));
 }
 
 // =============================================================================
@@ -265,7 +397,7 @@ export const ROLE_CONFIGS: RoleConfig[] = [
   // Tapas (single branch)
   { org: 'tapas', role: 'owner', email: 'owner@tapas.demo.local', level: 5, expectedLanding: '/dashboard' },
   { org: 'tapas', role: 'manager', email: 'manager@tapas.demo.local', level: 4, expectedLanding: '/dashboard' },
-  { org: 'tapas', role: 'accountant', email: 'accountant@tapas.demo.local', level: 4, expectedLanding: '/dashboard' },
+  { org: 'tapas', role: 'accountant', email: 'accountant@tapas.demo.local', level: 4, expectedLanding: '/finance/accounts' },
   { org: 'tapas', role: 'procurement', email: 'procurement@tapas.demo.local', level: 3, expectedLanding: '/inventory' },
   { org: 'tapas', role: 'stock', email: 'stock@tapas.demo.local', level: 3, expectedLanding: '/inventory' },
   { org: 'tapas', role: 'supervisor', email: 'supervisor@tapas.demo.local', level: 2, expectedLanding: '/pos' },
@@ -278,7 +410,7 @@ export const ROLE_CONFIGS: RoleConfig[] = [
   // Cafesserie (multi-branch)
   { org: 'cafesserie', role: 'owner', email: 'owner@cafesserie.demo.local', level: 5, expectedLanding: '/dashboard' },
   { org: 'cafesserie', role: 'manager', email: 'manager@cafesserie.demo.local', level: 4, expectedLanding: '/dashboard' },
-  { org: 'cafesserie', role: 'accountant', email: 'accountant@cafesserie.demo.local', level: 4, expectedLanding: '/dashboard' },
+  { org: 'cafesserie', role: 'accountant', email: 'accountant@cafesserie.demo.local', level: 4, expectedLanding: '/finance/accounts' },
   { org: 'cafesserie', role: 'procurement', email: 'procurement@cafesserie.demo.local', level: 3, expectedLanding: '/inventory' },
   { org: 'cafesserie', role: 'supervisor', email: 'supervisor@cafesserie.demo.local', level: 2, expectedLanding: '/pos' },
   { org: 'cafesserie', role: 'cashier', email: 'cashier@cafesserie.demo.local', level: 2, expectedLanding: '/pos' },
@@ -359,6 +491,9 @@ export function calculateSummary(result: RoleAuditResult): AuditSummary {
   const endpoints4xx = result.endpoints.filter((e) => e.status >= 400 && e.status < 500).reduce((sum, e) => sum + e.count, 0);
   const endpoints5xx = result.endpoints.filter((e) => e.status >= 500).reduce((sum, e) => sum + e.count, 0);
 
+  // M17: Exclude time-limit skips from failure count (they're incomplete coverage, not errors)
+  const realFailures = result.failures.filter((f) => f.type !== 'route-skipped-time-limit').length;
+
   return {
     routesTotal: result.routesVisited.length,
     routesSuccess,
@@ -372,6 +507,6 @@ export function calculateSummary(result: RoleAuditResult): AuditSummary {
     endpoints2xx,
     endpoints4xx,
     endpoints5xx,
-    failuresTotal: result.failures.length,
+    failuresTotal: realFailures,
   };
 }

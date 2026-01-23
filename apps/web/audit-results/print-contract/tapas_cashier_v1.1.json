@@ -1,0 +1,17 @@
+{
+  "org": "tapas",
+  "role": "cashier",
+  "email": "cashier@tapas.demo.local",
+  "timestamp": "2026-01-22T17:01:35.870Z",
+  "receiptsChecked": [],
+  "asyncJobWatcher": {
+    "response202Count": 0,
+    "jobIdDetected": false
+  },
+  "summary": {
+    "receiptsChecked": 0,
+    "uiOnlyPrint": 0,
+    "asyncJob": 0,
+    "errors": 0
+  }
+}

@@ -1,8 +1,8 @@
 # Role Audit Report: TAPAS / CHEF
 
-**Date:** 2026-01-13  
-**Status:** ⚠️ ISSUES  
-**Duration:** 5.7s  
+**Date:** 2026-01-21  
+**Status:** ✅ PASS  
+**Duration:** 17.1s  
 **Email:** chef@tapas.demo.local
 
 ---
@@ -11,18 +11,18 @@
 
 | Metric | Value |
 |--------|-------|
-| Routes Visited | 0 / 0 |
+| Routes Visited | 1 / 1 |
 | Routes Forbidden | 0 |
 | Routes Not Found | 0 |
 | Routes Error | 0 |
-| Controls Found | 0 |
-| Controls Clicked | 0 |
-| Controls Skipped | 0 |
-| API Endpoints Hit | 0 |
-| 2xx Responses | 0 |
+| Controls Found | 7 |
+| Controls Clicked | 1 |
+| Controls Skipped | 6 |
+| API Endpoints Hit | 2 |
+| 2xx Responses | 2 |
 | 4xx Responses | 0 |
 | 5xx Responses | 0 |
-| Total Failures | 1 |
+| Total Failures | 0 |
 
 ---
 
@@ -30,6 +30,7 @@
 
 | Route | Status | Load Time |
 |-------|--------|-----------|
+| /launch | ✅ success | 1124ms |
 
 ---
 
@@ -37,14 +38,29 @@
 
 | Method | Path | Status | Count |
 |--------|------|--------|-------|
+| GET | /me |  200 | 1 |
+| GET | /branches |  200 | 1 |
 
 ---
 
-## Failures
+## Controls Clicked (Sample)
 
-| Route | Type | Message |
-|-------|------|---------|
-| /login | login-failed | Redirected back to login after token injection. Cookie present: true, value leng |
+| Route | Label | Type | Outcome |
+|-------|-------|------|---------|
+| /launch | Open Tanstack query devtools | button | no-op |
+
+---
+
+## Landing Page Visibility Checks ⚠️
+
+| Check | Status | Details |
+|-------|--------|---------|
+| ChefCloud branding | ✅ | Found: ChefCloud KDS text |
+| Filter controls | ✅ | Found: filter buttons |
+| Refresh button | ✅ | Found: refresh button |
+| Settings button | ✅ | Found: settings button |
+| Online status indicator | ❌ | Not visible: connection status |
+| Main content area | ✅ | Found: main content |
 
 ---
 

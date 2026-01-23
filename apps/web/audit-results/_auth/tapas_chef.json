@@ -1,0 +1,29 @@
+{
+  "cookies": [
+    {
+      "name": "auth_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbWtucjc5aDcwMDN2OGUyaDZ1bWNjMHVkIiwiZW1haWwiOiJjaGVmQHRhcGFzLmRlbW8ubG9jYWwiLCJvcmdJZCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMDAwMSIsInJvbGVMZXZlbCI6IkwyIiwiam9iUm9sZSI6IkNIRUYiLCJzdiI6MCwianRpIjoiNDMwMzY2NzVkNzA2ZmFmOTkzZjFlNmZiMDYwNTExMDEiLCJzZXNzaW9uSWQiOiJjbWtuc3VqNmQwMDRmMTQ5ZmY3MWt5dDlvIiwicGxhdGZvcm0iOiJXRUJfQkFDS09GRklDRSIsImlhdCI6MTc2ODk4NjQzMiwiZXhwIjoxNzY5MDcyODMyfQ.Q6E11Wrf6K5w9Mn836_JEBja5TeuQMo9mbOiyPXLLtE",
+      "domain": "localhost",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "http://localhost:3000",
+      "localStorage": [
+        {
+          "name": "ally-supports-cache",
+          "value": "{\"userAgent\":\"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.4 Safari/537.36\",\"version\":\"1.4.1\",\"focusAreaImgTabindex\":false,\"focusAreaTabindex\":false,\"focusAreaWithoutHref\":false,\"focusAudioWithoutControls\":false,\"focusBrokenImageMap\":true,\"focusChildrenOfFocusableFlexbox\":false,\"focusFieldsetDisabled\":true,\"focusFieldset\":false,\"focusFlexboxContainer\":false,\"focusFormDisabled\":true,\"focusImgIsmap\":false,\"focusImgUsemapTabindex\":true,\"focusInHiddenIframe\":true,\"focusInvalidTabindex\":false,\"focusLabelTabindex\":true,\"focusObjectSvg\":true,\"focusObjectSvgHidden\":false,\"focusRedirectImgUsemap\":false,\"focusRedirectLegend\":\"\",\"focusScrollBody\":false,\"focusScrollContainerWithoutOverflow\":false,\"focusScrollContainer\":true,\"focusSummary\":true,\"focusSvgFocusableAttribute\":false,\"focusSvgTabindexAttribute\":true,\"focusSvgNegativeTabindexAttribute\":true,\"focusSvgUseTabindex\":true,\"focusSvgForeignobjectTabindex\":true,\"focusSvg\":false,\"focusTabindexTrailingCharacters\":true,\"focusTable\":false,\"focusVideoWithoutControls\":false,\"cssShadowPiercingDeepCombinator\":\"\",\"focusInZeroDimensionObject\":true,\"focusObjectSwf\":true,\"focusSvgInIframe\":false,\"tabsequenceAreaAtImgPosition\":false,\"time\":\"2026-01-21T09:07:10.115Z\"}"
+        },
+        {
+          "name": "chefcloud_activeBranchId",
+          "value": "00000000-0000-4000-8000-000000000101"
+        }
+      ]
+    }
+  ]
+}

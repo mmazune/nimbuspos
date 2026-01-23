@@ -1,0 +1,818 @@
+{
+  "version": "v2",
+  "generatedAt": "2026-01-22T17:25:48.556Z",
+  "summary": {
+    "totalControls": 3615,
+    "controlsWithEndpoints": 633,
+    "controlsNoNetworkEffect": 2679,
+    "controlsHasDownload": 0,
+    "controlsUiOnlyPrint": 0,
+    "controlsSkippedMutation": 276,
+    "controlsSkippedBudget": 27,
+    "controlsUnknown": 0,
+    "uniqueEndpoints": 63,
+    "attributionRate": 100
+  },
+  "topEndpoints": [
+    {
+      "endpoint": "GET /me",
+      "controlCount": 538,
+      "controls": [
+        "analytics_link_my_availability",
+        "analytics_link_my_swaps",
+        "analytics_link_open_shifts",
+        "sidebar-logo_1",
+        "sidebar-logo_2",
+        "finance_ap-aging_link_chart_of_accounts",
+        "finance_ap-aging_link_journal_entries",
+        "finance_ap-aging_link_fiscal_periods",
+        "finance_ap-aging_link_trial_balance",
+        "finance_ap-aging_link_profit_loss"
+      ]
+    },
+    {
+      "endpoint": "GET /branches",
+      "controlCount": 538,
+      "controls": [
+        "analytics_link_my_availability",
+        "analytics_link_my_swaps",
+        "analytics_link_open_shifts",
+        "sidebar-logo_1",
+        "sidebar-logo_2",
+        "finance_ap-aging_link_chart_of_accounts",
+        "finance_ap-aging_link_journal_entries",
+        "finance_ap-aging_link_fiscal_periods",
+        "finance_ap-aging_link_trial_balance",
+        "finance_ap-aging_link_profit_loss"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/low-stock/alerts",
+      "controlCount": 195,
+      "controls": [
+        "date-preset-7d_1",
+        "date-preset-30d_1",
+        "date-preset-90d_1",
+        "date-preset-180d_1",
+        "kpi-revenue_1",
+        "kpi-gross-margin_1",
+        "kpi-low-stock_1",
+        "sidebar-logo_13",
+        "dashboard_link_analytics",
+        "dashboard_link_pos_1"
+      ]
+    },
+    {
+      "endpoint": "GET /analytics/daily-metrics",
+      "controlCount": 174,
+      "controls": [
+        "analytics_link_my_availability",
+        "analytics_link_my_swaps",
+        "analytics_link_open_shifts",
+        "finance_ap-aging_link_analytics",
+        "finance_ar-aging_link_analytics",
+        "finance_pnl_link_analytics",
+        "analytics_link_timeclock",
+        "analytics_link_swap_approvals",
+        "analytics_link_labor_reports",
+        "analytics_link_labor_targets"
+      ]
+    },
+    {
+      "endpoint": "GET /analytics/top-items",
+      "controlCount": 145,
+      "controls": [
+        "date-preset-7d_1",
+        "date-preset-30d_1",
+        "date-preset-90d_1",
+        "date-preset-180d_1",
+        "kpi-revenue_1",
+        "kpi-gross-margin_1",
+        "kpi-low-stock_1",
+        "sidebar-logo_13",
+        "dashboard_link_analytics",
+        "dashboard_link_pos_1"
+      ]
+    },
+    {
+      "endpoint": "GET /analytics/daily",
+      "controlCount": 144,
+      "controls": [
+        "date-preset-7d_1",
+        "date-preset-30d_1",
+        "date-preset-90d_1",
+        "date-preset-180d_1",
+        "kpi-revenue_1",
+        "kpi-gross-margin_1",
+        "kpi-low-stock_1",
+        "sidebar-logo_13",
+        "dashboard_link_analytics",
+        "dashboard_link_pos_1"
+      ]
+    },
+    {
+      "endpoint": "GET /analytics/payment-mix",
+      "controlCount": 142,
+      "controls": [
+        "date-preset-7d_1",
+        "date-preset-30d_1",
+        "date-preset-90d_1",
+        "date-preset-180d_1",
+        "kpi-revenue_1",
+        "kpi-gross-margin_1",
+        "kpi-low-stock_1",
+        "sidebar-logo_13",
+        "dashboard_link_analytics",
+        "dashboard_link_pos_1"
+      ]
+    },
+    {
+      "endpoint": "GET /analytics/peak-hours",
+      "controlCount": 142,
+      "controls": [
+        "date-preset-7d_1",
+        "date-preset-30d_1",
+        "date-preset-90d_1",
+        "date-preset-180d_1",
+        "kpi-revenue_1",
+        "kpi-gross-margin_1",
+        "kpi-low-stock_1",
+        "sidebar-logo_13",
+        "dashboard_link_analytics",
+        "dashboard_link_pos_1"
+      ]
+    },
+    {
+      "endpoint": "GET /franchise/rankings",
+      "controlCount": 140,
+      "controls": [
+        "date-preset-7d_1",
+        "date-preset-30d_1",
+        "date-preset-90d_1",
+        "date-preset-180d_1",
+        "kpi-revenue_1",
+        "kpi-gross-margin_1",
+        "kpi-low-stock_1",
+        "sidebar-logo_13",
+        "dashboard_link_analytics",
+        "dashboard_link_pos_1"
+      ]
+    },
+    {
+      "endpoint": "GET /analytics/category-mix",
+      "controlCount": 134,
+      "controls": [
+        "date-preset-7d_1",
+        "date-preset-30d_1",
+        "date-preset-90d_1",
+        "date-preset-180d_1",
+        "kpi-revenue_1",
+        "kpi-gross-margin_1",
+        "kpi-low-stock_1",
+        "sidebar-logo_13",
+        "dashboard_link_analytics",
+        "dashboard_link_pos_1"
+      ]
+    },
+    {
+      "endpoint": "GET /analytics/financial-summary",
+      "controlCount": 123,
+      "controls": [
+        "analytics_button_financial",
+        "analytics_tab_financial",
+        "analytics_button_financial_1",
+        "analytics_tab_financial_1",
+        "date-preset-7d_1",
+        "date-preset-30d_1",
+        "date-preset-90d_1",
+        "date-preset-180d_1",
+        "kpi-revenue_1",
+        "kpi-gross-margin_1"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/items",
+      "controlCount": 118,
+      "controls": [
+        "kpi-low-stock_1",
+        "dashboard_link_inventory",
+        "alert-item-low-stock_1",
+        "feedback_link_inventory",
+        "sidebar-logo_15",
+        "inventory_link_dashboard",
+        "inventory_link_analytics",
+        "inventory_link_reservations",
+        "inventory_link_feedback",
+        "inventory_link_timeclock"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory",
+      "controlCount": 89,
+      "controls": [
+        "kpi-low-stock_1",
+        "dashboard_link_inventory",
+        "alert-item-low-stock_1",
+        "feedback_link_inventory",
+        "sidebar-logo_15",
+        "inventory_link_dashboard",
+        "inventory_link_analytics",
+        "inventory_link_reservations",
+        "inventory_link_feedback",
+        "inventory_link_timeclock"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/levels",
+      "controlCount": 87,
+      "controls": [
+        "kpi-low-stock_1",
+        "dashboard_link_inventory",
+        "alert-item-low-stock_1",
+        "feedback_link_inventory",
+        "sidebar-logo_15",
+        "inventory_link_dashboard",
+        "inventory_link_analytics",
+        "inventory_link_reservations",
+        "inventory_link_feedback",
+        "inventory_link_timeclock"
+      ]
+    },
+    {
+      "endpoint": "GET /feedback/analytics/nps-summary",
+      "controlCount": 68,
+      "controls": [
+        "dashboard_link_feedback",
+        "sidebar-logo_14",
+        "feedback_link_dashboard",
+        "feedback_link_pos",
+        "feedback_link_reservations",
+        "feedback_link_inventory",
+        "feedback_link_timeclock",
+        "feedback_link_swap_approvals",
+        "feedback_link_labor_reports",
+        "feedback_link_labor_targets"
+      ]
+    },
+    {
+      "endpoint": "GET /billing/subscription",
+      "controlCount": 67,
+      "controls": [
+        "analytics_link_my_availability",
+        "analytics_link_my_swaps",
+        "analytics_link_open_shifts",
+        "finance_ap-aging_link_analytics",
+        "finance_ar-aging_link_analytics",
+        "finance_balance-sheet_link_analytics",
+        "finance_pnl_link_analytics",
+        "analytics_link_timeclock",
+        "analytics_link_swap_approvals",
+        "analytics_link_labor_reports"
+      ]
+    },
+    {
+      "endpoint": "GET /orgs/branches",
+      "controlCount": 53,
+      "controls": [
+        "analytics_link_labor_targets",
+        "analytics_link_staffing_planner",
+        "analytics_link_staffing_alerts",
+        "analytics_link_auto_scheduler",
+        "dashboard_link_labor_targets",
+        "dashboard_link_staffing_planner",
+        "dashboard_link_staffing_alerts",
+        "dashboard_link_auto_scheduler",
+        "feedback_link_labor_targets",
+        "feedback_link_staffing_planner"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/depletions",
+      "controlCount": 44,
+      "controls": [
+        "inventory_link_depletions",
+        "sidebar-logo_32",
+        "inventory_depletions_link_purchase_orders",
+        "inventory_depletions_link_receipts",
+        "inventory_depletions_link_transfers",
+        "inventory_depletions_link_waste",
+        "inventory_depletions_link_recipes",
+        "inventory_depletions_link_service_providers",
+        "inventory_depletions_link_dashboard",
+        "inventory_depletions_link_my_availability"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/depletions/stats",
+      "controlCount": 44,
+      "controls": [
+        "inventory_link_depletions",
+        "sidebar-logo_32",
+        "inventory_depletions_link_purchase_orders",
+        "inventory_depletions_link_receipts",
+        "inventory_depletions_link_transfers",
+        "inventory_depletions_link_waste",
+        "inventory_depletions_link_recipes",
+        "inventory_depletions_link_service_providers",
+        "inventory_depletions_link_dashboard",
+        "inventory_depletions_link_my_availability"
+      ]
+    },
+    {
+      "endpoint": "GET /franchise/budgets/variance",
+      "controlCount": 41,
+      "controls": [
+        "analytics_link_my_availability",
+        "analytics_link_my_swaps",
+        "analytics_link_open_shifts",
+        "finance_ap-aging_link_analytics",
+        "finance_ar-aging_link_analytics",
+        "finance_balance-sheet_link_analytics",
+        "finance_pnl_link_analytics",
+        "analytics_link_timeclock",
+        "analytics_link_swap_approvals",
+        "analytics_link_labor_reports"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/self/open-shifts",
+      "controlCount": 41,
+      "controls": [
+        "analytics_link_open_shifts",
+        "finance_ap-aging_link_open_shifts",
+        "finance_ar-aging_link_open_shifts",
+        "finance_balance-sheet_link_open_shifts",
+        "finance_pnl_link_open_shifts",
+        "analytics_link_open_shifts_1",
+        "dashboard_link_open_shifts_1",
+        "feedback_link_open_shifts",
+        "dashboard_link_open_shifts_2",
+        "feedback_link_open_shifts_1"
+      ]
+    },
+    {
+      "endpoint": "GET /franchise/forecast",
+      "controlCount": 40,
+      "controls": [
+        "analytics_link_my_availability",
+        "analytics_link_my_swaps",
+        "analytics_link_open_shifts",
+        "finance_ap-aging_link_analytics",
+        "finance_ar-aging_link_analytics",
+        "finance_balance-sheet_link_analytics",
+        "finance_pnl_link_analytics",
+        "analytics_link_timeclock",
+        "analytics_link_swap_approvals",
+        "analytics_link_labor_reports"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/self/open-shifts/claims",
+      "controlCount": 40,
+      "controls": [
+        "analytics_link_open_shifts",
+        "finance_ap-aging_link_open_shifts",
+        "finance_ar-aging_link_open_shifts",
+        "finance_balance-sheet_link_open_shifts",
+        "finance_pnl_link_open_shifts",
+        "analytics_link_open_shifts_1",
+        "dashboard_link_open_shifts_1",
+        "feedback_link_open_shifts",
+        "dashboard_link_open_shifts_2",
+        "feedback_link_open_shifts_1"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/pnl",
+      "controlCount": 40,
+      "controls": [
+        "sidebar-logo_2",
+        "finance_ap-aging_link_profit_loss",
+        "finance_ar-aging_link_profit_loss",
+        "sidebar-logo_4",
+        "finance_balance-sheet_link_profit_loss",
+        "pnl-generate",
+        "sidebar-logo_5",
+        "finance_pnl_link_chart_of_accounts",
+        "finance_pnl_link_journal_entries",
+        "finance_pnl_link_fiscal_periods"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/self/availability",
+      "controlCount": 39,
+      "controls": [
+        "finance_ar-aging_link_my_availability",
+        "finance_balance-sheet_link_my_availability",
+        "finance_pnl_link_my_availability",
+        "analytics_link_my_availability_1",
+        "dashboard_link_my_availability_1",
+        "feedback_link_my_availability",
+        "inventory_link_my_availability",
+        "dashboard_link_my_availability_2",
+        "feedback_link_my_availability_1",
+        "finance_link_my_availability_1"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/self/availability/exceptions",
+      "controlCount": 39,
+      "controls": [
+        "finance_ar-aging_link_my_availability",
+        "finance_balance-sheet_link_my_availability",
+        "finance_pnl_link_my_availability",
+        "analytics_link_my_availability_1",
+        "dashboard_link_my_availability_1",
+        "feedback_link_my_availability",
+        "inventory_link_my_availability",
+        "dashboard_link_my_availability_2",
+        "feedback_link_my_availability_1",
+        "finance_link_my_availability_1"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/self/swaps",
+      "controlCount": 37,
+      "controls": [
+        "analytics_link_my_swaps",
+        "finance_ap-aging_link_my_swaps",
+        "finance_balance-sheet_link_my_swaps",
+        "finance_pnl_link_my_swaps",
+        "analytics_link_my_swaps_1",
+        "dashboard_link_my_swaps_1",
+        "inventory_link_my_swaps",
+        "feedback_link_my_swaps_1",
+        "dashboard_link_my_swaps_3",
+        "inventory_link_my_swaps_2"
+      ]
+    },
+    {
+      "endpoint": "GET /finance/budgets/summary",
+      "controlCount": 35,
+      "controls": [
+        "sidebar-logo_1",
+        "sidebar-logo_23",
+        "finance_link_dashboard",
+        "finance_link_pos",
+        "finance_link_reservations",
+        "finance_link_inventory",
+        "finance_link_service_providers_1",
+        "finance_link_feedback",
+        "finance_link_timeclock",
+        "finance_link_swap_approvals"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/ap/aging",
+      "controlCount": 33,
+      "controls": [
+        "sidebar-logo_2",
+        "finance_ap-aging_link_chart_of_accounts",
+        "finance_ap-aging_link_journal_entries",
+        "finance_ap-aging_link_fiscal_periods",
+        "finance_ap-aging_link_trial_balance",
+        "finance_ap-aging_link_profit_loss",
+        "finance_ap-aging_link_balance_sheet",
+        "finance_ap-aging_link_service_providers",
+        "finance_ap-aging_link_ar_aging",
+        "finance_ap-aging_link_analytics"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/balance-sheet",
+      "controlCount": 33,
+      "controls": [
+        "finance_ap-aging_link_balance_sheet",
+        "finance_ar-aging_link_balance_sheet",
+        "bs-generate",
+        "sidebar-logo_4",
+        "finance_balance-sheet_link_chart_of_accounts",
+        "finance_balance-sheet_link_journal_entries",
+        "finance_balance-sheet_link_fiscal_periods",
+        "finance_balance-sheet_link_trial_balance",
+        "finance_balance-sheet_link_profit_loss",
+        "finance_balance-sheet_link_service_providers"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/ar/aging",
+      "controlCount": 31,
+      "controls": [
+        "finance_ap-aging_link_ar_aging",
+        "sidebar-logo_3",
+        "finance_ar-aging_link_chart_of_accounts",
+        "finance_ar-aging_link_journal_entries",
+        "finance_ar-aging_link_fiscal_periods",
+        "finance_ar-aging_link_trial_balance",
+        "finance_ar-aging_link_profit_loss",
+        "finance_ar-aging_link_balance_sheet",
+        "finance_ar-aging_link_service_providers",
+        "finance_ar-aging_link_ap_aging"
+      ]
+    },
+    {
+      "endpoint": "GET /pos/menu-items",
+      "controlCount": 29,
+      "controls": [
+        "inventory_link_recipes",
+        "inventory_purchase-orders_link_recipes",
+        "inventory_receipts_link_recipes",
+        "inventory_link_recipes_1",
+        "inventory_depletions_link_recipes_1",
+        "inventory_purchase-orders_link_recipes_1",
+        "inventory_receipts_link_recipes_1",
+        "sidebar-logo_86",
+        "inventory_recipes_link_purchase_orders_1",
+        "inventory_recipes_link_receipts_1"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/foundation/uoms",
+      "controlCount": 29,
+      "controls": [
+        "inventory_link_recipes",
+        "inventory_purchase-orders_link_recipes",
+        "inventory_receipts_link_recipes",
+        "inventory_link_recipes_1",
+        "inventory_depletions_link_recipes_1",
+        "inventory_purchase-orders_link_recipes_1",
+        "inventory_receipts_link_recipes_1",
+        "sidebar-logo_86",
+        "inventory_recipes_link_purchase_orders_1",
+        "inventory_recipes_link_receipts_1"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/v2/recipes",
+      "controlCount": 29,
+      "controls": [
+        "inventory_link_recipes",
+        "inventory_purchase-orders_link_recipes",
+        "inventory_receipts_link_recipes",
+        "inventory_link_recipes_1",
+        "inventory_depletions_link_recipes_1",
+        "inventory_purchase-orders_link_recipes_1",
+        "inventory_receipts_link_recipes_1",
+        "sidebar-logo_86",
+        "inventory_recipes_link_purchase_orders_1",
+        "inventory_recipes_link_receipts_1"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/receipts",
+      "controlCount": 29,
+      "controls": [
+        "inventory_link_receipts_1",
+        "inventory_depletions_link_receipts_1",
+        "inventory_purchase-orders_link_receipts_1",
+        "sidebar-logo_85",
+        "inventory_receipts_link_inventory_1",
+        "inventory_receipts_link_transfers_1",
+        "inventory_receipts_link_waste_1",
+        "inventory_receipts_link_recipes_1",
+        "inventory_receipts_link_depletions_1",
+        "inventory_receipts_link_service_providers_1"
+      ]
+    },
+    {
+      "endpoint": "GET /menu/items",
+      "controlCount": 26,
+      "controls": [
+        "feedback_link_pos",
+        "dashboard_link_pos_2",
+        "finance_link_pos",
+        "sidebar-logo_59",
+        "dashboard_link_pos_4",
+        "pos_link_dashboard_4",
+        "pos_link_timeclock_4",
+        "pos_link_my_availability_5",
+        "pos_link_my_swaps_5",
+        "pos_link_open_shifts_5"
+      ]
+    },
+    {
+      "endpoint": "GET /pos/orders",
+      "controlCount": 26,
+      "controls": [
+        "feedback_link_pos",
+        "dashboard_link_pos_2",
+        "finance_link_pos",
+        "sidebar-logo_59",
+        "dashboard_link_pos_4",
+        "pos_link_dashboard_4",
+        "pos_link_timeclock_4",
+        "pos_link_my_availability_5",
+        "pos_link_my_swaps_5",
+        "pos_link_open_shifts_5"
+      ]
+    },
+    {
+      "endpoint": "GET /service-providers/contracts",
+      "controlCount": 24,
+      "controls": [
+        "finance_ap-aging_link_service_providers",
+        "finance_ar-aging_link_service_providers",
+        "finance_balance-sheet_link_service_providers",
+        "finance_pnl_link_service_providers",
+        "dashboard_link_service_providers",
+        "feedback_link_service_providers",
+        "inventory_link_service_providers",
+        "dashboard_link_service_providers_1",
+        "inventory_link_service_providers_1",
+        "inventory_depletions_link_service_providers"
+      ]
+    },
+    {
+      "endpoint": "GET /service-providers",
+      "controlCount": 24,
+      "controls": [
+        "finance_ap-aging_link_service_providers",
+        "finance_ar-aging_link_service_providers",
+        "finance_balance-sheet_link_service_providers",
+        "finance_pnl_link_service_providers",
+        "dashboard_link_service_providers",
+        "feedback_link_service_providers",
+        "inventory_link_service_providers",
+        "dashboard_link_service_providers_1",
+        "inventory_link_service_providers_1",
+        "inventory_depletions_link_service_providers"
+      ]
+    },
+    {
+      "endpoint": "GET /finance/service-reminders/summary",
+      "controlCount": 24,
+      "controls": [
+        "finance_ap-aging_link_service_providers",
+        "finance_ar-aging_link_service_providers",
+        "finance_balance-sheet_link_service_providers",
+        "finance_pnl_link_service_providers",
+        "dashboard_link_service_providers",
+        "feedback_link_service_providers",
+        "inventory_link_service_providers",
+        "dashboard_link_service_providers_1",
+        "inventory_link_service_providers_1",
+        "inventory_depletions_link_service_providers"
+      ]
+    },
+    {
+      "endpoint": "GET /finance/service-reminders",
+      "controlCount": 24,
+      "controls": [
+        "finance_ap-aging_link_service_providers",
+        "finance_ar-aging_link_service_providers",
+        "finance_balance-sheet_link_service_providers",
+        "finance_pnl_link_service_providers",
+        "dashboard_link_service_providers",
+        "feedback_link_service_providers",
+        "inventory_link_service_providers",
+        "dashboard_link_service_providers_1",
+        "inventory_link_service_providers_1",
+        "inventory_depletions_link_service_providers"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/purchase-orders",
+      "controlCount": 24,
+      "controls": [
+        "inventory_link_purchase_orders_1",
+        "inventory_depletions_link_purchase_orders_1",
+        "sidebar-logo_84",
+        "inventory_purchase-orders_link_receipts_1",
+        "inventory_purchase-orders_link_transfers_1",
+        "inventory_purchase-orders_link_waste_1",
+        "inventory_purchase-orders_link_recipes_1",
+        "inventory_purchase-orders_link_depletions_1",
+        "inventory_purchase-orders_link_service_providers_1",
+        "inventory_recipes_link_purchase_orders_1"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/trial-balance",
+      "controlCount": 23,
+      "controls": [
+        "sidebar-logo_2",
+        "finance_ap-aging_link_trial_balance",
+        "finance_ar-aging_link_trial_balance",
+        "sidebar-logo_4",
+        "finance_balance-sheet_link_trial_balance",
+        "sidebar-logo_5",
+        "finance_pnl_link_trial_balance",
+        "sidebar-logo_51",
+        "finance_ap-aging_link_trial_balance_1",
+        "finance_ar-aging_link_trial_balance_1"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/timeclock/entries",
+      "controlCount": 21,
+      "controls": [
+        "dashboard_link_timeclock_1",
+        "feedback_link_timeclock",
+        "inventory_link_timeclock",
+        "analytics_link_timeclock_1",
+        "feedback_link_timeclock_1",
+        "finance_link_timeclock",
+        "inventory_link_timeclock_1",
+        "dashboard_link_timeclock_4",
+        "pos_link_timeclock_4",
+        "settings_link_timeclock_2"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/timeclock/status",
+      "controlCount": 21,
+      "controls": [
+        "dashboard_link_timeclock_1",
+        "feedback_link_timeclock",
+        "inventory_link_timeclock",
+        "analytics_link_timeclock_1",
+        "feedback_link_timeclock_1",
+        "finance_link_timeclock",
+        "inventory_link_timeclock_1",
+        "dashboard_link_timeclock_4",
+        "pos_link_timeclock_4",
+        "settings_link_timeclock_2"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/accounts",
+      "controlCount": 20,
+      "controls": [
+        "finance_link_chart_of_accounts",
+        "finance_ap-aging_link_chart_of_accounts",
+        "finance_ap-aging_link_journal_entries",
+        "finance_ar-aging_link_chart_of_accounts",
+        "finance_ar-aging_link_journal_entries",
+        "finance_balance-sheet_link_chart_of_accounts",
+        "finance_balance-sheet_link_journal_entries",
+        "finance_pnl_link_chart_of_accounts",
+        "finance_pnl_link_journal_entries",
+        "finance_link_chart_of_accounts_1"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/swaps",
+      "controlCount": 18,
+      "controls": [
+        "analytics_link_swap_approvals",
+        "dashboard_link_swap_approvals",
+        "feedback_link_swap_approvals",
+        "inventory_link_swap_approvals",
+        "analytics_link_labor_reports_1",
+        "dashboard_link_swap_approvals_1",
+        "feedback_link_swap_approvals_1",
+        "finance_link_swap_approvals",
+        "inventory_link_swap_approvals_1",
+        "dashboard_link_swap_approvals_3"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/periods",
+      "controlCount": 16,
+      "controls": [
+        "sidebar-logo_2",
+        "finance_ap-aging_link_fiscal_periods",
+        "finance_ar-aging_link_fiscal_periods",
+        "sidebar-logo_4",
+        "finance_balance-sheet_link_fiscal_periods",
+        "sidebar-logo_5",
+        "finance_pnl_link_fiscal_periods",
+        "sidebar-logo_51",
+        "finance_ap-aging_link_fiscal_periods_1",
+        "finance_ar-aging_link_fiscal_periods_1"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/journal",
+      "controlCount": 16,
+      "controls": [
+        "sidebar-logo_2",
+        "finance_ap-aging_link_journal_entries",
+        "finance_ar-aging_link_journal_entries",
+        "sidebar-logo_4",
+        "finance_balance-sheet_link_journal_entries",
+        "sidebar-logo_5",
+        "finance_pnl_link_journal_entries",
+        "sidebar-logo_51",
+        "finance_ap-aging_link_journal_entries_1",
+        "finance_ar-aging_link_journal_entries_1"
+      ]
+    },
+    {
+      "endpoint": "GET /reservations",
+      "controlCount": 16,
+      "controls": [
+        "feedback_link_reservations",
+        "inventory_link_reservations",
+        "dashboard_link_reservations_1",
+        "feedback_link_reservations_1",
+        "finance_link_reservations",
+        "inventory_link_reservations_1",
+        "dashboard_link_reservations_3",
+        "feedback_link_reservations_2",
+        "pos_link_reservations_4",
+        "dashboard_link_reservations_4"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,443 @@
+{
+  "org": "tapas",
+  "role": "manager",
+  "email": "manager@tapas.demo.local",
+  "generatedAt": "2026-01-23T03:47:04.194Z",
+  "durationMs": 29867,
+  "summary": {
+    "totalFlows": 6,
+    "successfulFlows": 6,
+    "failedFlows": 0,
+    "uniqueEndpoints": 23,
+    "totalBlockedMutations": 0,
+    "flowsWithBlockedMutations": 0
+  },
+  "flows": [
+    {
+      "module": "Dashboard",
+      "flow": "Load Dashboard",
+      "testid": null,
+      "label": "",
+      "route": "/dashboard",
+      "controlType": "link",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "blockedMutation": false
+        }
+      ],
+      "success": true
+    },
+    {
+      "module": "Analytics",
+      "flow": "Load Analytics",
+      "testid": null,
+      "label": "",
+      "route": "/analytics",
+      "controlType": "link",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200,
+          "blockedMutation": false
+        }
+      ],
+      "success": true
+    },
+    {
+      "module": "POS",
+      "flow": "Load POS",
+      "testid": null,
+      "label": "",
+      "route": "/pos",
+      "controlType": "link",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200,
+          "blockedMutation": false
+        }
+      ],
+      "success": true
+    },
+    {
+      "module": "Inventory",
+      "flow": "Load Inventory",
+      "testid": null,
+      "label": "",
+      "route": "/inventory",
+      "controlType": "link",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory",
+          "status": 404,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/levels",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "blockedMutation": false
+        }
+      ],
+      "success": true
+    },
+    {
+      "module": "Staff",
+      "flow": "Load Staff",
+      "testid": null,
+      "label": "",
+      "route": "/staff",
+      "controlType": "link",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/hr/staff",
+          "status": 404,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/hr/employees",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "blockedMutation": false
+        }
+      ],
+      "success": true
+    },
+    {
+      "module": "Workforce",
+      "flow": "Load Timeclock",
+      "testid": null,
+      "label": "",
+      "route": "/workforce/timeclock",
+      "controlType": "link",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/status",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/entries",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "blockedMutation": false
+        }
+      ],
+      "success": true
+    }
+  ]
+}

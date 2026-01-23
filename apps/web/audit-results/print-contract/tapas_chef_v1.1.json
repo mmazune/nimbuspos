@@ -1,0 +1,17 @@
+{
+  "org": "tapas",
+  "role": "chef",
+  "email": "chef@tapas.demo.local",
+  "timestamp": "2026-01-22T17:02:24.844Z",
+  "receiptsChecked": [],
+  "asyncJobWatcher": {
+    "response202Count": 0,
+    "jobIdDetected": false
+  },
+  "summary": {
+    "receiptsChecked": 0,
+    "uiOnlyPrint": 0,
+    "asyncJob": 0,
+    "errors": 0
+  }
+}

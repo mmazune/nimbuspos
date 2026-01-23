@@ -1,0 +1,132 @@
+{
+  "version": "v2",
+  "generatedAt": "2026-01-20T08:09:27.060Z",
+  "summary": {
+    "total": 10,
+    "passed": 10,
+    "failed": 0,
+    "passRate": 100
+  },
+  "invariants": [
+    {
+      "id": "M1-tapas",
+      "org": "tapas",
+      "role": "manager",
+      "name": "Dashboard KPIs",
+      "description": "Manager can access dashboard analytics",
+      "endpoint": "/analytics/daily",
+      "status": "PASS",
+      "expected": "Analytics endpoint accessible (200)",
+      "actual": "Status 200",
+      "durationMs": 39
+    },
+    {
+      "id": "M1-cafesserie",
+      "org": "cafesserie",
+      "role": "manager",
+      "name": "Dashboard KPIs",
+      "description": "Manager can access dashboard analytics",
+      "endpoint": "/analytics/daily",
+      "status": "PASS",
+      "expected": "Analytics endpoint accessible (200)",
+      "actual": "Status 200",
+      "durationMs": 23
+    },
+    {
+      "id": "M2-tapas",
+      "org": "tapas",
+      "role": "manager",
+      "name": "Staff List",
+      "description": "Manager can view employee list",
+      "endpoint": "/hr/employees",
+      "status": "PASS",
+      "expected": "Employee list non-empty",
+      "actual": "8 employees",
+      "durationMs": 34
+    },
+    {
+      "id": "M2-cafesserie",
+      "org": "cafesserie",
+      "role": "manager",
+      "name": "Staff List",
+      "description": "Manager can view employee list",
+      "endpoint": "/hr/employees",
+      "status": "PASS",
+      "expected": "Employee list non-empty",
+      "actual": "5 employees",
+      "durationMs": 30
+    },
+    {
+      "id": "S1-tapas",
+      "org": "tapas",
+      "role": "stock",
+      "name": "Inventory Items",
+      "description": "Stock manager can view inventory items",
+      "endpoint": "/inventory/items",
+      "status": "PASS",
+      "expected": "Inventory items list non-empty",
+      "actual": "158 items",
+      "durationMs": 36
+    },
+    {
+      "id": "S2-tapas",
+      "org": "tapas",
+      "role": "stock",
+      "name": "Stock Levels",
+      "description": "Stock manager can view stock levels",
+      "endpoint": "/inventory/levels",
+      "status": "PASS",
+      "expected": "Stock levels endpoint accessible",
+      "actual": "158 levels",
+      "durationMs": 32
+    },
+    {
+      "id": "P1-tapas",
+      "org": "tapas",
+      "role": "procurement",
+      "name": "Suppliers List",
+      "description": "Procurement can view suppliers",
+      "endpoint": "/inventory/suppliers/items",
+      "status": "PASS",
+      "expected": "Suppliers endpoint accessible",
+      "actual": "0 suppliers",
+      "durationMs": 29
+    },
+    {
+      "id": "P1-cafesserie",
+      "org": "cafesserie",
+      "role": "procurement",
+      "name": "Suppliers List",
+      "description": "Procurement can view suppliers",
+      "endpoint": "/inventory/suppliers/items",
+      "status": "PASS",
+      "expected": "Suppliers endpoint accessible",
+      "actual": "0 suppliers",
+      "durationMs": 17
+    },
+    {
+      "id": "P2-tapas",
+      "org": "tapas",
+      "role": "procurement",
+      "name": "Purchase Orders",
+      "description": "Procurement can view purchase orders",
+      "endpoint": "/inventory/purchase-orders",
+      "status": "PASS",
+      "expected": "Purchase orders endpoint accessible",
+      "actual": "0 orders",
+      "durationMs": 23
+    },
+    {
+      "id": "P2-cafesserie",
+      "org": "cafesserie",
+      "role": "procurement",
+      "name": "Purchase Orders",
+      "description": "Procurement can view purchase orders",
+      "endpoint": "/inventory/purchase-orders",
+      "status": "PASS",
+      "expected": "Purchase orders endpoint accessible",
+      "actual": "0 orders",
+      "durationMs": 19
+    }
+  ]
+}

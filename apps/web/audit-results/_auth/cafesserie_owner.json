@@ -1,0 +1,25 @@
+{
+  "cookies": [
+    {
+      "name": "auth_token",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbWtucjdhY2wwMDVoOGUyaHd5aGZyaHkzIiwiZW1haWwiOiJvd25lckBjYWZlc3NlcmllLmRlbW8ubG9jYWwiLCJvcmdJZCI6IjAwMDAwMDAwLTAwMDAtNDAwMC04MDAwLTAwMDAwMDAwMDAwMiIsInJvbGVMZXZlbCI6Ikw1Iiwiam9iUm9sZSI6Ik9XTkVSIiwic3YiOjAsImp0aSI6IjMwMDRiYWUzNDhjOTkwMTU2OWQ3NjA5ZmZhYTRmY2JjIiwic2Vzc2lvbklkIjoiY21rbnN1dDNhMDA0ajE0OWZncm1yNGhueCIsInBsYXRmb3JtIjoiV0VCX0JBQ0tPRkZJQ0UiLCJpYXQiOjE3Njg5ODY0NDUsImV4cCI6MTc2OTA3Mjg0NX0.tBpGZfailCqkQgFbmdJVea7Xswm1zoBoM3GzubZ9ftU",
+      "domain": "localhost",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "http://localhost:3000",
+      "localStorage": [
+        {
+          "name": "chefcloud_activeBranchId",
+          "value": "00000000-0000-4000-8000-000000000201"
+        }
+      ]
+    }
+  ]
+}

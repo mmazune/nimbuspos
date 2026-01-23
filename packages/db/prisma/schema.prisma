@@ -553,6 +553,8 @@ model Org {
   categories                     Category[]
   menuItems                      MenuItem[]
   menuAvailabilityRules          MenuAvailabilityRule[]
+  // M80: Prep Items
+  prepItems                      PrepItem[]
 
   @@map("orgs")
 }
@@ -713,6 +715,8 @@ model Branch {
   inventoryPeriodCloseRequests InventoryPeriodCloseRequest[]
   // M13.1: Menu Availability Rules
   menuAvailabilityRules        MenuAvailabilityRule[]
+  // M80: Prep Items
+  prepItems                    PrepItem[]
 
   @@index([orgId, id])
   @@map("branches")
@@ -923,6 +927,8 @@ model User {
   cashSessionsOpened              CashSession[]                    @relation("CashSessionOpener")
   cashSessionsClosed              CashSession[]                    @relation("CashSessionCloser")
   receiptsIssued                  PosReceipt[]                     @relation("ReceiptIssuer")
+  // M80: Prep Items
+  prepItemsCreated                PrepItem[]
 
   @@index([orgId, id])
   @@map("users")
@@ -2396,6 +2402,9 @@ model InventoryItem {
   // M12.1: Period Snapshots + Movement Summaries
   valuationSnapshots     InventoryValuationSnapshot[]        @relation("ValuationSnapshotItem")
   movementSummaries      InventoryPeriodMovementSummary[]    @relation("MovementSummaryItem")
+  // M80: Prep Items
+  prepLines              PrepLine[]                          @relation("PrepLineItem")
+  prepItemOutputs        PrepItem[]                          @relation("PrepItemOutput")
 
   @@unique([orgId, sku])
   @@index([orgId])
@@ -5873,6 +5882,9 @@ model UnitOfMeasure {
   // M11.9: Production Batches
   productionBatchOutputUom ProductionBatch[]     @relation("ProductionBatchOutputUom")
   productionBatchLineUom   ProductionBatchLine[] @relation("ProductionLineUom")
+  // M80: Prep Items
+  prepItemYieldUom         PrepItem[]            @relation("PrepItemYieldUom")
+  prepLineUom              PrepLine[]            @relation("PrepLineUom")
 
   @@unique([orgId, code])
   @@index([orgId])
@@ -6301,6 +6313,11 @@ model GoodsReceiptLineV2 {
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
 
+  // M78: Soft delete for audit compliance
+  deletedAt    DateTime?
+  deletedBy    String?
+  deleteReason String?
+
   goodsReceipt GoodsReceiptV2       @relation(fields: [goodsReceiptId], references: [id], onDelete: Cascade)
   item         InventoryItem        @relation("ReceiptLineItem", fields: [itemId], references: [id], onDelete: Restrict)
   location     InventoryLocation    @relation("ReceiptLineLocation", fields: [locationId], references: [id], onDelete: Restrict)
@@ -6310,6 +6327,7 @@ model GoodsReceiptLineV2 {
   @@index([goodsReceiptId])
   @@index([itemId])
   @@index([poLineId])
+  @@index([deletedAt]) // M78: Fast filtering
   @@map("goods_receipt_lines_v2")
 }
 
@@ -6551,6 +6569,11 @@ model OrderInventoryDepletion {
   createdAt        DateTime         @default(now())
   postedAt         DateTime?
 
+  // M78: Soft delete for audit compliance
+  deletedAt    DateTime?
+  deletedBy    String?
+  deleteReason String?
+
   // Relations
   order          Order             @relation(fields: [orderId], references: [id], onDelete: Cascade)
   branch         Branch            @relation("DepletionBranch", fields: [branchId], references: [id], onDelete: Cascade)
@@ -6563,6 +6586,7 @@ model OrderInventoryDepletion {
   @@unique([orgId, orderId])
   @@index([orderId])
   @@index([branchId, status])
+  @@index([deletedAt]) // M78: Fast filtering
   @@map("order_inventory_depletions")
 }
 
@@ -6625,6 +6649,11 @@ model DepletionCostBreakdown {
   metadata    Json?
   createdAt   DateTime @default(now())
 
+  // M78: Soft delete for audit compliance (SOX, IFRS, tax audit trails)
+  deletedAt    DateTime?
+  deletedBy    String? // User ID who soft-deleted this record
+  deleteReason String? // CORRECTION, PERIOD_CLOSE, AUDIT_ADJUSTMENT
+
   // Relations
   depletion OrderInventoryDepletion @relation(fields: [depletionId], references: [id], onDelete: Cascade)
   item      InventoryItem           @relation("DepletionCostItem", fields: [itemId], references: [id], onDelete: Restrict)
@@ -6632,7 +6661,62 @@ model DepletionCostBreakdown {
   @@unique([depletionId, itemId])
   @@index([orgId, orderId])
   @@index([itemId])
+  @@index([deletedAt]) // M78: Fast filtering of active/deleted records
   @@map("depletion_cost_breakdowns")
+}
+
+// ============================================================================
+// M80: Prep Items Module Phase 1
+// ============================================================================
+
+// PrepItem - Semi-finished goods produced from raw ingredients
+// Used in recipes as intermediate components (e.g., tomato sauce, burger patties, pizza dough)
+model PrepItem {
+  id                      String   @id @default(cuid())
+  orgId                   String
+  branchId                String
+  name                    String
+  yieldQty                Decimal  @db.Decimal(12, 4) // Output quantity from one batch
+  yieldUomId              String // FK to UnitOfMeasure (output unit, e.g., "liter", "kg", "each")
+  prepMinutes             Int      @default(0) // Average prep time per batch
+  notes                   String?  @db.Text
+  isActive                Boolean  @default(true)
+  createdById             String
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+  outputInventoryItemId   String?  @map("output_inventory_item_id") // M80: Links prep output to inventory for recipe usage
+
+  // Relations
+  org            Org               @relation(fields: [orgId], references: [id], onDelete: Cascade)
+  branch         Branch            @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  yieldUom       UnitOfMeasure     @relation("PrepItemYieldUom", fields: [yieldUomId], references: [id], onDelete: Restrict)
+  createdBy      User              @relation(fields: [createdById], references: [id], onDelete: Restrict)
+  outputItem     InventoryItem?    @relation("PrepItemOutput", fields: [outputInventoryItemId], references: [id], onDelete: SetNull)
+  lines          PrepLine[]
+
+  @@index([orgId, branchId])
+  @@index([orgId, name])
+  @@map("prep_items")
+}
+
+// PrepLine - Ingredients required to make a PrepItem
+model PrepLine {
+  id                String   @id @default(cuid())
+  prepItemId        String
+  inventoryItemId   String
+  qty               Decimal  @db.Decimal(12, 4) // Quantity of ingredient needed
+  uomId             String // FK to UnitOfMeasure
+  notes             String?
+  createdAt         DateTime @default(now())
+
+  // Relations
+  prepItem      PrepItem      @relation(fields: [prepItemId], references: [id], onDelete: Cascade)
+  inventoryItem InventoryItem @relation("PrepLineItem", fields: [inventoryItemId], references: [id], onDelete: Restrict)
+  uom           UnitOfMeasure @relation("PrepLineUom", fields: [uomId], references: [id], onDelete: Restrict)
+
+  @@index([prepItemId])
+  @@index([inventoryItemId])
+  @@map("prep_lines")
 }
 
 // ============================================================================
@@ -7523,3 +7607,31 @@ model InventoryPeriodEvent {
   @@index([periodId])
   @@map("inventory_period_events")
 }
+
+// M79: Immutability Audit Event - Audit trail for denied mutations in closed fiscal periods
+// Records all attempts to mutate accounting data in closed periods
+// Includes SHA-256 payload hash for forensic analysis
+model ImmutabilityAuditEvent {
+  id          String   @id @default(cuid())
+  orgId       String
+  actorId     String
+  actorRole   String
+  entityType  String // DepletionCostBreakdown, OrderInventoryDepletion, GoodsReceiptLineV2
+  entityId    String
+  operation   String // CREATE, UPDATE, DELETE, SOFT_DELETE, RESTORE
+  periodId    String
+  periodStart DateTime
+  periodEnd   DateTime
+  reasonCode  String // PERIOD_CLOSED_IMMUTABLE
+  payloadHash String // SHA-256 of attempted change
+  ipAddress   String?
+  userAgent   String?
+  createdAt   DateTime @default(now())
+
+  @@index([orgId, createdAt])
+  @@index([entityType, entityId])
+  @@index([actorId])
+  @@index([periodId])
+  @@map("immutability_audit_events")
+}
+

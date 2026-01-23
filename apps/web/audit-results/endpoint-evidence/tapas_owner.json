@@ -1,0 +1,105 @@
+{
+  "org": "tapas",
+  "role": "owner",
+  "email": "owner@tapas.demo.local",
+  "generatedAt": "2026-01-22T18:52:24.363Z",
+  "durationMs": 58544,
+  "summary": {
+    "routesVisited": 15,
+    "routesWithEndpoints": 0,
+    "totalEndpoints": 0,
+    "uniqueEndpoints": 0
+  },
+  "routes": [
+    {
+      "route": "/dashboard",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:51:31.054Z"
+    },
+    {
+      "route": "/analytics",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:51:39.010Z"
+    },
+    {
+      "route": "/reports",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:51:42.512Z"
+    },
+    {
+      "route": "/pos",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:51:46.358Z"
+    },
+    {
+      "route": "/reservations",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:51:49.563Z"
+    },
+    {
+      "route": "/inventory",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:51:53.853Z"
+    },
+    {
+      "route": "/finance",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:51:56.995Z"
+    },
+    {
+      "route": "/service-providers",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:52:00.274Z"
+    },
+    {
+      "route": "/staff",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:52:03.606Z"
+    },
+    {
+      "route": "/feedback",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:52:06.904Z"
+    },
+    {
+      "route": "/workforce/schedule",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:52:10.989Z"
+    },
+    {
+      "route": "/workforce/timeclock",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:52:14.496Z"
+    },
+    {
+      "route": "/workforce/approvals",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:52:17.674Z"
+    },
+    {
+      "route": "/workforce/swaps",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:52:21.010Z"
+    },
+    {
+      "route": "/workforce/labor",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:52:24.361Z"
+    }
+  ]
+}

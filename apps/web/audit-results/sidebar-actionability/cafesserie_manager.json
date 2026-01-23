@@ -1,0 +1,68 @@
+{
+  "org": "cafesserie",
+  "role": "manager",
+  "email": "manager@cafesserie.demo.local",
+  "landingRoute": "/dashboard",
+  "generatedAt": "2026-01-22T23:17:51.822Z",
+  "sidebarExists": true,
+  "totalNavElements": 21,
+  "visibleNavElements": 21,
+  "enabledNavElements": 21,
+  "navElementIds": [
+    "nav-dashboard",
+    "nav-analytics",
+    "nav-reports",
+    "nav-pos",
+    "nav-reservations",
+    "nav-inventory",
+    "nav-staff",
+    "nav-feedback",
+    "nav-workforce-schedule",
+    "nav-workforce-timeclock",
+    "nav-workforce-approvals",
+    "nav-workforce-swaps",
+    "nav-workforce-labor",
+    "nav-workforce-labor-targets",
+    "nav-workforce-staffing-planner",
+    "nav-workforce-staffing-alerts",
+    "nav-workforce-auto-scheduler",
+    "nav-workforce-my-availability",
+    "nav-workforce-my-swaps",
+    "nav-workforce-open-shifts",
+    "nav-settings"
+  ],
+  "clickResults": [
+    {
+      "testId": "nav-dashboard",
+      "success": true,
+      "beforeUrl": "http://localhost:3000/dashboard",
+      "afterUrl": "http://localhost:3000/dashboard",
+      "note": "Already on this page - skipped"
+    },
+    {
+      "testId": "nav-analytics",
+      "success": true,
+      "beforeUrl": "http://localhost:3000/dashboard",
+      "afterUrl": "http://localhost:3000/analytics"
+    },
+    {
+      "testId": "nav-reports",
+      "success": true,
+      "beforeUrl": "http://localhost:3000/analytics",
+      "afterUrl": "http://localhost:3000/reports"
+    },
+    {
+      "testId": "nav-pos",
+      "success": true,
+      "beforeUrl": "http://localhost:3000/reports",
+      "afterUrl": "http://localhost:3000/pos"
+    },
+    {
+      "testId": "nav-reservations",
+      "success": true,
+      "beforeUrl": "http://localhost:3000/pos",
+      "afterUrl": "http://localhost:3000/reservations"
+    }
+  ],
+  "passed": true
+}

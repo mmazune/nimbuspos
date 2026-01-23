@@ -1,8 +1,8 @@
 # Role Audit Report: TAPAS / ACCOUNTANT
 
-**Date:** 2026-01-13  
+**Date:** 2026-01-19  
 **Status:** ⚠️ ISSUES  
-**Duration:** 188.2s  
+**Duration:** 194.9s  
 **Email:** accountant@tapas.demo.local
 
 ---
@@ -11,18 +11,18 @@
 
 | Metric | Value |
 |--------|-------|
-| Routes Visited | 9 / 11 |
+| Routes Visited | 15 / 15 |
 | Routes Forbidden | 0 |
 | Routes Not Found | 0 |
-| Routes Error | 2 |
-| Controls Found | 71 |
-| Controls Clicked | 14 |
-| Controls Skipped | 57 |
-| API Endpoints Hit | 16 |
-| 2xx Responses | 56 |
-| 4xx Responses | 19 |
+| Routes Error | 0 |
+| Controls Found | 88 |
+| Controls Clicked | 19 |
+| Controls Skipped | 69 |
+| API Endpoints Hit | 24 |
+| 2xx Responses | 91 |
+| 4xx Responses | 3 |
 | 5xx Responses | 0 |
-| Total Failures | 3 |
+| Total Failures | 1 |
 
 ---
 
@@ -30,17 +30,21 @@
 
 | Route | Status | Load Time |
 |-------|--------|-----------|
-| /analytics | ❌ error | 7786ms |
-| /finance | ✅ success | 2376ms |
-| /finance/accounts | ✅ success | 4591ms |
-| /finance/ap-aging | ✅ success | 5051ms |
-| /finance/ar-aging | ✅ success | 4332ms |
-| /finance/balance-sheet | ✅ success | 9756ms |
-| /finance/journal | ✅ success | 2916ms |
-| /finance/periods | ❌ error | 3429ms |
-| /finance/pnl | ✅ success | 3605ms |
-| /finance/trial-balance | ✅ success | 2992ms |
-| /reports | ✅ success | 2664ms |
+| /analytics | ✅ success | 2534ms |
+| /finance | ✅ success | 2059ms |
+| /finance/accounts | ✅ success | 2027ms |
+| /finance/ap-aging | ✅ success | 3311ms |
+| /finance/ar-aging | ✅ success | 2354ms |
+| /finance/balance-sheet | ✅ success | 2396ms |
+| /finance/journal | ✅ success | 2517ms |
+| /finance/periods | ✅ success | 3456ms |
+| /finance/pnl | ✅ success | 2922ms |
+| /finance/trial-balance | ✅ success | 2157ms |
+| /reports | ✅ success | 2316ms |
+| /service-providers | ✅ success | 2986ms |
+| /workforce/my-availability | ✅ success | 2581ms |
+| /workforce/my-swaps | ✅ success | 2300ms |
+| /workforce/open-shifts | ✅ success | 2553ms |
 
 ---
 
@@ -48,22 +52,30 @@
 
 | Method | Path | Status | Count |
 |--------|------|--------|-------|
-| GET | /me |  200 | 21 |
-| GET | /branches |  200 | 21 |
-| GET | /franchise/budgets/variance | ⚠️ 401 | 7 |
-| GET | /franchise/forecast | ⚠️ 401 | 7 |
-| GET | /billing/subscription | ⚠️ 401 | 3 |
+| GET | /me |  200 | 29 |
+| GET | /branches |  200 | 28 |
+| GET | /franchise/budgets/variance |  200 | 7 |
+| GET | /franchise/forecast |  200 | 7 |
 | GET | /accounting/accounts |  200 | 3 |
-| GET | /pos/orders | ⚠️ 401 | 2 |
-| GET | /menu/items |  200 | 2 |
-| GET | /accounting/trial-balance |  200 | 2 |
+| GET | /accounting/pnl |  200 | 2 |
+| GET | /billing/subscription | ⚠️ 403 | 1 |
 | GET | /analytics/daily-metrics |  200 | 1 |
 | GET | /finance/budgets/summary |  200 | 1 |
 | GET | /accounting/ap/aging |  200 | 1 |
 | GET | /accounting/ar/aging |  200 | 1 |
 | GET | /accounting/balance-sheet |  200 | 1 |
 | GET | /accounting/journal |  200 | 1 |
-| GET | /accounting/pnl |  200 | 1 |
+| GET | /accounting/periods |  200 | 1 |
+| GET | /accounting/trial-balance |  200 | 1 |
+| GET | /service-providers/contracts | ⚠️ 404 | 1 |
+| GET | /service-providers |  200 | 1 |
+| GET | /finance/service-reminders |  200 | 1 |
+| GET | /finance/service-reminders/summary |  200 | 1 |
+| GET | /workforce/self/availability/exceptions |  200 | 1 |
+| GET | /workforce/self/availability |  200 | 1 |
+| GET | /workforce/self/swaps |  200 | 1 |
+| GET | /workforce/self/open-shifts/claims | ⚠️ 404 | 1 |
+| GET | /workforce/self/open-shifts |  200 | 1 |
 
 ---
 
@@ -71,11 +83,7 @@
 
 | Route | Type | Message |
 |-------|------|---------|
-| /analytics | route-error | page.title: Execution context was destroyed, most likely because of a navigation |
-| /finance/periods | route-error | page.goto: net::ERR_ABORTED at http://localhost:3000/finance/periods
-Call log:
- |
-| /service-providers | route-error | Skipped due to time budget (188052ms elapsed) |
+| /analytics | api-forbidden | 403 Forbidden: GET /billing/subscription |
 
 ---
 
@@ -83,20 +91,35 @@ Call log:
 
 | Route | Label | Type | Outcome |
 |-------|-------|------|---------|
-| /finance | theme-toggle-btn | toggle | no-op |
-| /finance | user-menu-container | menu | menu-opened |
-| /finance/ap-aging | theme-toggle-btn | toggle | no-op |
-| /finance/ap-aging | user-menu-container | menu | menu-opened |
-| /finance/ar-aging | user-menu-trigger | button | menu-opened |
-| /finance/balance-sheet | Open Tanstack query devtools | button | no-op |
-| /finance/pnl | theme-toggle-btn | toggle | no-op |
-| /finance/pnl | user-menu-container | menu | menu-opened |
-| /finance/trial-balance | theme-toggle-btn | button | no-op |
-| /finance/trial-balance | user-menu-trigger | button | menu-opened |
-| /finance/trial-balance | tb-generate | button | menu-opened |
-| /finance/trial-balance | tb-export | button | menu-opened |
-| /reports | theme-toggle-btn | toggle | no-op |
-| /reports | user-menu-container | menu | menu-opened |
+| /analytics | Open Tanstack query devtools | button | no-op |
+| /finance | theme-toggle-btn | button | no-op |
+| /finance | user-menu-trigger | button | menu-opened |
+| /finance | Close tanstack query devtools | button | menu-opened |
+| /finance/accounts | Close | button | no-op |
+| /finance/ap-aging | theme-toggle-btn | button | no-op |
+| /finance/ap-aging | user-menu-trigger | button | menu-opened |
+| /finance/ap-aging | Open Tanstack query devtools | button | menu-opened |
+| /finance/ar-aging | theme-toggle-btn | toggle | no-op |
+| /finance/ar-aging | user-menu-container | menu | menu-opened |
+| /finance/balance-sheet | theme-toggle-btn | toggle | no-op |
+| /finance/balance-sheet | user-menu-container | menu | menu-opened |
+| /finance/journal | Close | button | no-op |
+| /finance/pnl | theme-toggle-btn | button | no-op |
+| /finance/pnl | user-menu-trigger | button | menu-opened |
+| /finance/pnl | pnl-generate | button | menu-opened |
+| /finance/pnl | pnl-export | button | menu-opened |
+| /finance/trial-balance | theme-toggle-btn | toggle | no-op |
+| /finance/trial-balance | user-menu-container | menu | menu-opened |
+
+---
+
+## Landing Page Visibility Checks ✅
+
+| Check | Status | Details |
+|-------|--------|---------|
+| Dashboard header | ✅ | Found: dashboard header |
+| Dashboard timestamp | ✅ | Found: timestamp visible |
+| Refresh button | ✅ | Found: refresh button |
 
 ---
 

@@ -1,0 +1,14 @@
+{
+  "org": "tapas",
+  "role": "procurement",
+  "email": "procurement@tapas.demo.local",
+  "landingRoute": "/inventory",
+  "generatedAt": "2026-01-22T20:15:58.151Z",
+  "sidebarExists": false,
+  "totalNavElements": 0,
+  "visibleNavElements": 0,
+  "enabledNavElements": 0,
+  "navElementIds": [],
+  "passed": false,
+  "error": "Sidebar not visible"
+}

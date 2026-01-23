@@ -1,8 +1,8 @@
 # Role Audit Report: CAFESSERIE / WAITER
 
-**Date:** 2026-01-13  
-**Status:** ✅ PASS  
-**Duration:** 7.1s  
+**Date:** 2026-01-19  
+**Status:** ⚠️ ISSUES  
+**Duration:** 102.1s  
 **Email:** waiter@cafesserie.demo.local
 
 ---
@@ -11,18 +11,18 @@
 
 | Metric | Value |
 |--------|-------|
-| Routes Visited | 0 / 0 |
+| Routes Visited | 6 / 6 |
 | Routes Forbidden | 0 |
 | Routes Not Found | 0 |
 | Routes Error | 0 |
-| Controls Found | 0 |
-| Controls Clicked | 0 |
-| Controls Skipped | 0 |
-| API Endpoints Hit | 0 |
-| 2xx Responses | 0 |
-| 4xx Responses | 0 |
+| Controls Found | 54 |
+| Controls Clicked | 12 |
+| Controls Skipped | 42 |
+| API Endpoints Hit | 12 |
+| 2xx Responses | 32 |
+| 4xx Responses | 9 |
 | 5xx Responses | 0 |
-| Total Failures | 0 |
+| Total Failures | 6 |
 
 ---
 
@@ -30,6 +30,12 @@
 
 | Route | Status | Load Time |
 |-------|--------|-----------|
+| /pos | ✅ success | 1173ms |
+| /reservations | ✅ success | 2255ms |
+| /settings | ✅ success | 1211ms |
+| /workforce/my-availability | ✅ success | 1106ms |
+| /workforce/my-swaps | ✅ success | 2146ms |
+| /workforce/open-shifts | ✅ success | 1806ms |
 
 ---
 
@@ -37,6 +43,60 @@
 
 | Method | Path | Status | Count |
 |--------|------|--------|-------|
+| GET | /me |  200 | 11 |
+| GET | /branches |  200 | 11 |
+| GET | /pos/orders |  200 | 2 |
+| GET | /menu/items | ⚠️ 403 | 2 |
+| GET | /reservations | ⚠️ 403 | 2 |
+| GET | /bookings/list | ⚠️ 403 | 2 |
+| GET | /workforce/self/availability |  200 | 2 |
+| GET | /workforce/self/availability/exceptions |  200 | 2 |
+| GET | /workforce/self/swaps |  200 | 2 |
+| GET | /workforce/self/open-shifts/claims | ⚠️ 404 | 2 |
+| GET | /workforce/self/open-shifts |  200 | 2 |
+| GET | /billing/subscription | ⚠️ 403 | 1 |
+
+---
+
+## Failures
+
+| Route | Type | Message |
+|-------|------|---------|
+| /pos | api-forbidden | 403 Forbidden: GET /menu/items |
+| /pos | api-forbidden | 403 Forbidden: GET /menu/items |
+| /reservations | api-forbidden | 403 Forbidden: GET /reservations |
+| /reservations | api-forbidden | 403 Forbidden: GET /bookings/list |
+| /reservations | api-forbidden | 403 Forbidden: GET /reservations |
+| /reservations | api-forbidden | 403 Forbidden: GET /bookings/list |
+
+---
+
+## Controls Clicked (Sample)
+
+| Route | Label | Type | Outcome |
+|-------|-------|------|---------|
+| /pos | theme-toggle-btn | toggle | no-op |
+| /pos | user-menu-container | menu | menu-opened |
+| /reservations | Open Tanstack query devtools | button | no-op |
+| /settings | theme-toggle-btn | toggle | no-op |
+| /settings | user-menu-container | menu | menu-opened |
+| /workforce/my-availability | Refresh | button | no-op |
+| /workforce/my-availability | Weekly Availability | button | no-op |
+| /workforce/my-availability | Date Exceptions | button | no-op |
+| /workforce/my-swaps | Refresh | button | no-op |
+| /workforce/my-swaps | Request Swap | button | no-op |
+| /workforce/open-shifts | Refresh | button | no-op |
+| /workforce/open-shifts | Close tanstack query devtools | button | no-op |
+
+---
+
+## Landing Page Visibility Checks ⚠️
+
+| Check | Status | Details |
+|-------|--------|---------|
+| POS interface | ❌ | Not visible: POS visible |
+| Menu items | ❌ | Not visible: menu items |
+| Cart or order area | ✅ | Found: cart/order area |
 
 ---
 

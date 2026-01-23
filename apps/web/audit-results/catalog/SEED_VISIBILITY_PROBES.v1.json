@@ -1,0 +1,43 @@
+{
+  "version": "v1",
+  "generatedAt": "2026-01-22T17:30:56.985Z",
+  "summary": {
+    "totalOrgs": 2,
+    "totalRoles": 2,
+    "totalProbes": 0,
+    "passed": 0,
+    "failed": 0,
+    "errors": 0,
+    "passRate": "NaN"
+  },
+  "results": {
+    "tapas_owner": {
+      "org": "tapas",
+      "role": "owner",
+      "email": "owner@tapas.demo.local",
+      "timestamp": "2026-01-22T17:30:56.931Z",
+      "probes": [],
+      "summary": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0,
+        "errors": 1
+      },
+      "error": "Login failed: 404"
+    },
+    "cafesserie_owner": {
+      "org": "cafesserie",
+      "role": "owner",
+      "email": "owner@cafesserie.demo.local",
+      "timestamp": "2026-01-22T17:30:56.985Z",
+      "probes": [],
+      "summary": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0,
+        "errors": 1
+      },
+      "error": "Login failed: 404"
+    }
+  }
+}

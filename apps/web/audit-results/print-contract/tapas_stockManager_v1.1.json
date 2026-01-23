@@ -1,0 +1,17 @@
+{
+  "org": "tapas",
+  "role": "stockManager",
+  "email": "stock-manager@tapas.demo.local",
+  "timestamp": "2026-01-22T17:01:56.151Z",
+  "receiptsChecked": [],
+  "asyncJobWatcher": {
+    "response202Count": 0,
+    "jobIdDetected": false
+  },
+  "summary": {
+    "receiptsChecked": 0,
+    "uiOnlyPrint": 0,
+    "asyncJob": 0,
+    "errors": 1
+  }
+}

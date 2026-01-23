@@ -1,0 +1,121 @@
+{
+  "generatedAt": "2026-01-20T04:31:31.940Z",
+  "durationMs": 1709,
+  "summary": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0,
+    "skipped": 0,
+    "passRate": 100
+  },
+  "probes": [
+    {
+      "name": "API Health",
+      "description": "API server is running and healthy",
+      "endpoint": "/api/health",
+      "status": "PASS",
+      "expected": "status=ok",
+      "actual": "status=ok",
+      "durationMs": 23
+    },
+    {
+      "name": "Tapas Org Exists",
+      "description": "Tapas demo organization exists",
+      "endpoint": "/me",
+      "status": "PASS",
+      "expected": "Tapas org in user profile",
+      "actual": "Found: Tapas Bar & Restaurant",
+      "durationMs": 65
+    },
+    {
+      "name": "Cafesserie Org Exists",
+      "description": "Cafesserie demo organization exists",
+      "endpoint": "/me",
+      "status": "PASS",
+      "expected": "Cafesserie org in user profile",
+      "actual": "Found: Cafesserie",
+      "durationMs": 49
+    },
+    {
+      "name": "Tapas Branch Exists",
+      "description": "Tapas has at least one branch",
+      "endpoint": "/me",
+      "status": "PASS",
+      "expected": "Branch in user profile",
+      "actual": "Found: Main Branch",
+      "durationMs": 43
+    },
+    {
+      "name": "Cafesserie Multi-Branch",
+      "description": "Cafesserie has a branch configured",
+      "endpoint": "/me",
+      "status": "PASS",
+      "expected": "Branch in user profile",
+      "actual": "Found: Village Mall",
+      "durationMs": 33
+    },
+    {
+      "name": "Tapas Top Items",
+      "description": "Tapas analytics top-items endpoint (proves menu exists)",
+      "endpoint": "/analytics/top-items",
+      "status": "PASS",
+      "expected": "Top items endpoint accessible",
+      "actual": "10 top items",
+      "durationMs": 140
+    },
+    {
+      "name": "Tapas Inventory Items",
+      "description": "Tapas has inventory items seeded",
+      "endpoint": "/inventory/items",
+      "status": "PASS",
+      "expected": "≥1 inventory item",
+      "actual": "158 items",
+      "durationMs": 433
+    },
+    {
+      "name": "Tapas Inventory Levels",
+      "description": "Tapas has inventory levels seeded",
+      "endpoint": "/inventory/levels",
+      "status": "PASS",
+      "expected": "Inventory levels endpoint accessible",
+      "actual": "158 levels",
+      "durationMs": 89
+    },
+    {
+      "name": "Low Stock Alerts",
+      "description": "Inventory low stock alerts endpoint accessible",
+      "endpoint": "/inventory/low-stock/alerts",
+      "status": "PASS",
+      "expected": "Low stock alerts endpoint accessible",
+      "actual": "26 alerts",
+      "durationMs": 97
+    },
+    {
+      "name": "Dashboard Endpoint",
+      "description": "Dashboard data endpoint is accessible",
+      "endpoint": "/analytics/daily",
+      "status": "PASS",
+      "expected": "Analytics data object",
+      "actual": "Valid analytics data",
+      "durationMs": 42
+    },
+    {
+      "name": "POS Orders Endpoint",
+      "description": "POS orders endpoint accessible",
+      "endpoint": "/pos/orders",
+      "status": "PASS",
+      "expected": "Orders endpoint accessible",
+      "actual": "Endpoint responded (0 orders)",
+      "durationMs": 27
+    },
+    {
+      "name": "Inventory Depletions",
+      "description": "Inventory depletions endpoint accessible",
+      "endpoint": "/inventory/depletions",
+      "status": "PASS",
+      "expected": "Depletions endpoint accessible",
+      "actual": "Endpoint responded (0 depletions)",
+      "durationMs": 39
+    }
+  ]
+}

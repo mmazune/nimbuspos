@@ -1,0 +1,4856 @@
+{
+  "org": "cafesserie",
+  "role": "owner",
+  "email": "owner@cafesserie.demo.local",
+  "generatedAt": "2026-01-20T00:28:52.489Z",
+  "durationMs": 92340,
+  "summary": {
+    "total": 408,
+    "covered": 252,
+    "skippedMutation": 17,
+    "skippedUnreachable": 139,
+    "skippedBudget": 0,
+    "coveragePercent": 61.8
+  },
+  "controls": [
+    {
+      "actionKey": "theme-toggle-btn_8",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "user-menu-trigger_8",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "analytics_button_overview_1",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Overview",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Tab clicked, panel switched"
+      }
+    },
+    {
+      "actionKey": "analytics_button_by_branch_1",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "By Branch",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Tab clicked, panel switched"
+      }
+    },
+    {
+      "actionKey": "analytics_button_financial_1",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Financial",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Tab clicked, panel switched"
+      }
+    },
+    {
+      "actionKey": "analytics_button_risk_1",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Risk",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Tab clicked, panel switched"
+      }
+    },
+    {
+      "actionKey": "analytics_button_franchise_1",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Franchise",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Tab clicked, panel switched"
+      }
+    },
+    {
+      "actionKey": "analytics_button_last_7_days_1",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 7 days",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "networkCall": "GET http://localhost:3001/franchise/branch-metrics"
+      }
+    },
+    {
+      "actionKey": "analytics_button_last_30_days_1",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 30 days",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "analytics_button_last_90_days_1",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 90 days",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "analytics_button_open_tanstack_query_devtools_1",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "analytics_link_skip_to_main_content_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: #main-content"
+      }
+    },
+    {
+      "actionKey": "sidebar-logo_8",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: /workspaces/owner"
+      }
+    },
+    {
+      "actionKey": "analytics_link_dashboard_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_analytics_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "analytics_link_reports_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "analytics_link_pos_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_reservations_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_inventory_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_finance",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "analytics_link_service_providers",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_staff_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "analytics_link_feedback_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_schedule_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "analytics_link_timeclock_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_approvals_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "analytics_link_swap_approvals_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_labor_reports_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_labor_targets_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_staffing_planner_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_staffing_alerts_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_auto_scheduler_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_my_availability_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_my_swaps_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_open_shifts_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "analytics_link_settings_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "analytics_tab_overview_1",
+      "route": "/analytics",
+      "controlType": "tab",
+      "label": "Overview",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Tab clicked, panel switched"
+      }
+    },
+    {
+      "actionKey": "analytics_tab_by_branch_1",
+      "route": "/analytics",
+      "controlType": "tab",
+      "label": "By Branch",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Tab clicked, panel switched"
+      }
+    },
+    {
+      "actionKey": "analytics_tab_financial_1",
+      "route": "/analytics",
+      "controlType": "tab",
+      "label": "Financial",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Tab clicked, panel switched"
+      }
+    },
+    {
+      "actionKey": "analytics_tab_risk_1",
+      "route": "/analytics",
+      "controlType": "tab",
+      "label": "Risk",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Tab clicked, panel switched"
+      }
+    },
+    {
+      "actionKey": "analytics_tab_franchise_1",
+      "route": "/analytics",
+      "controlType": "tab",
+      "label": "Franchise",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Tab clicked, panel switched"
+      }
+    },
+    {
+      "actionKey": "theme-toggle-btn_9",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "user-menu-trigger_9",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "dashboard-refresh-btn_1",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Refresh dashboard data",
+      "dataTestId": "dashboard-refresh-btn",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "date-preset-7d_1",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 7 Days date range",
+      "dataTestId": "date-preset-7d",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "networkCall": "GET http://localhost:3001/analytics/payment-mix, GET http://localhost:3001/analytics/daily-metrics, GET http://localhost:3001/analytics/peak-hours, GET http://localhost:3001/analytics/daily, GET http://localhost:3001/analytics/category-mix, GET http://localhost:3001/analytics/top-items, GET http://localhost:3001/franchise/rankings, GET http://localhost:3001/analytics/daily-metrics, GET http://localhost:3001/analytics/daily-metrics, GET http://localhost:3001/analytics/financial-summary, GET http://localhost:3001/inventory/low-stock/alerts"
+      }
+    },
+    {
+      "actionKey": "date-preset-30d_1",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 30 Days date range",
+      "dataTestId": "date-preset-30d",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "networkCall": "GET http://localhost:3001/franchise/rankings, GET http://localhost:3001/analytics/daily, GET http://localhost:3001/analytics/payment-mix, GET http://localhost:3001/analytics/daily-metrics, GET http://localhost:3001/analytics/top-items, GET http://localhost:3001/analytics/peak-hours, GET http://localhost:3001/analytics/daily-metrics, GET http://localhost:3001/analytics/daily-metrics, GET http://localhost:3001/analytics/category-mix, GET http://localhost:3001/analytics/financial-summary, GET http://localhost:3001/inventory/low-stock/alerts"
+      }
+    },
+    {
+      "actionKey": "date-preset-90d_1",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 90 Days date range",
+      "dataTestId": "date-preset-90d",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "networkCall": "GET http://localhost:3001/franchise/rankings, GET http://localhost:3001/analytics/daily, GET http://localhost:3001/analytics/payment-mix, GET http://localhost:3001/analytics/daily-metrics, GET http://localhost:3001/analytics/top-items, GET http://localhost:3001/analytics/peak-hours, GET http://localhost:3001/analytics/daily-metrics, GET http://localhost:3001/analytics/daily-metrics, GET http://localhost:3001/analytics/financial-summary, GET http://localhost:3001/analytics/category-mix"
+      }
+    },
+    {
+      "actionKey": "date-preset-180d_1",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 180 Days date range",
+      "dataTestId": "date-preset-180d",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "networkCall": "GET http://localhost:3001/analytics/daily, GET http://localhost:3001/franchise/rankings, GET http://localhost:3001/analytics/payment-mix, GET http://localhost:3001/analytics/daily-metrics, GET http://localhost:3001/analytics/top-items, GET http://localhost:3001/analytics/peak-hours, GET http://localhost:3001/analytics/daily-metrics, GET http://localhost:3001/analytics/daily-metrics, GET http://localhost:3001/analytics/financial-summary"
+      }
+    },
+    {
+      "actionKey": "dashboard_button_branch_00000000_0000_4000_8000_2",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Branch 00000000-0000-4000-8000-000000000202",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "dashboard_button_branch_00000000_0000_4000_8000_3",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Branch 00000000-0000-4000-8000-000000000203",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "dashboard_button_open_tanstack_query_devtools_1",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "kpi-revenue_1",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Revenue details",
+      "dataTestId": "kpi-revenue",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "http://localhost:3000/dashboard → http://localhost:3000/analytics"
+      }
+    },
+    {
+      "actionKey": "kpi-gross-margin_1",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Gross Margin details",
+      "dataTestId": "kpi-gross-margin",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "http://localhost:3000/dashboard → http://localhost:3000/analytics?view=financial",
+        "networkCall": "GET http://localhost:3001/franchise/budgets/variance, GET http://localhost:3001/franchise/budgets/variance, GET http://localhost:3001/franchise/budgets/variance, GET http://localhost:3001/franchise/forecast, GET http://localhost:3001/billing/subscription"
+      }
+    },
+    {
+      "actionKey": "kpi-low-stock_1",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Low Stock details",
+      "dataTestId": "kpi-low-stock",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "http://localhost:3000/dashboard → http://localhost:3000/inventory?filter=low-stock",
+        "networkCall": "GET http://localhost:3001/inventory/items, GET http://localhost:3001/inventory/low-stock/alerts, GET http://localhost:3001/inventory/levels, GET http://localhost:3001/inventory"
+      }
+    },
+    {
+      "actionKey": "kpi-payables-due_1",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Payables Due details",
+      "dataTestId": "kpi-payables-due",
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: View Payables Due details"
+    },
+    {
+      "actionKey": "dashboard_link_skip_to_main_content_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: #main-content"
+      }
+    },
+    {
+      "actionKey": "sidebar-logo_9",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: /workspaces/owner"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_dashboard_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "dashboard_link_analytics_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_reports_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "dashboard_link_pos_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_reservations_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_inventory_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_finance",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "dashboard_link_service_providers",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_staff_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "dashboard_link_feedback_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_schedule_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "dashboard_link_timeclock_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_approvals_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "dashboard_link_swap_approvals_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_labor_reports_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_labor_targets_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_staffing_planner_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_staffing_alerts_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_auto_scheduler_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_my_availability_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_my_swaps_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_open_shifts_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "dashboard_link_settings_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "alert-item-low-stock_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Low Stock Items\n\n16\n\n16 items below reorder level",
+      "dataTestId": "alert-item-low-stock",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: /inventory?filter=low-stock"
+      }
+    },
+    {
+      "actionKey": "top-items-view-all_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "View all",
+      "dataTestId": "top-items-view-all",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: /reports?view=top-items"
+      }
+    },
+    {
+      "actionKey": "date-from-input_1",
+      "route": "/dashboard",
+      "controlType": "input",
+      "label": "Start date",
+      "dataTestId": "date-from-input",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Input focused"
+      }
+    },
+    {
+      "actionKey": "date-to-input_1",
+      "route": "/dashboard",
+      "controlType": "input",
+      "label": "End date",
+      "dataTestId": "date-to-input",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Input focused"
+      }
+    },
+    {
+      "actionKey": "dashboard_select_all_branches_acacia_mall_arena_1",
+      "route": "/dashboard",
+      "controlType": "select",
+      "label": "All Branches\nAcacia Mall\nArena Mall\nMombasa\nVillage Mall",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "theme-toggle-btn_10",
+      "route": "/feedback",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "user-menu-trigger_10",
+      "route": "/feedback",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "feedback_button_open_tanstack_query_devtools_1",
+      "route": "/feedback",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "feedback_link_skip_to_main_content_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: #main-content"
+      }
+    },
+    {
+      "actionKey": "sidebar-logo_10",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: /workspaces/owner"
+      }
+    },
+    {
+      "actionKey": "feedback_link_dashboard_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "feedback_link_analytics_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "feedback_link_reports_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "feedback_link_pos_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "feedback_link_reservations_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "feedback_link_inventory_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "feedback_link_finance",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "feedback_link_service_providers",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "feedback_link_staff_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "feedback_link_feedback_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "feedback_link_schedule_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "feedback_link_timeclock_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "feedback_link_approvals_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "feedback_link_swap_approvals_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "feedback_link_labor_reports_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "feedback_link_labor_targets_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "feedback_link_staffing_planner_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "feedback_link_staffing_alerts_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "feedback_link_auto_scheduler_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "feedback_link_my_availability_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "feedback_link_my_swaps_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "feedback_link_open_shifts_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "feedback_link_settings_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "theme-toggle-btn_11",
+      "route": "/finance",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "user-menu-trigger_11",
+      "route": "/finance",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "finance_button_open_tanstack_query_devtools",
+      "route": "/finance",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "finance_link_skip_to_main_content",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: #main-content"
+      }
+    },
+    {
+      "actionKey": "sidebar-logo_11",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: /workspaces/owner"
+      }
+    },
+    {
+      "actionKey": "finance_link_dashboard",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_analytics",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_reports",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "finance_link_pos",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_reservations",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_inventory",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_finance",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "finance_link_service_providers",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_staff",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "finance_link_feedback",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_schedule",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "finance_link_timeclock",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_approvals",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "finance_link_swap_approvals",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_labor_reports",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_labor_targets",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_staffing_planner",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_staffing_alerts",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_auto_scheduler",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_my_availability",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_my_swaps",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_open_shifts",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "finance_link_settings",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "theme-toggle-btn_12",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "user-menu-trigger_12",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "inventory_button_all_items_1",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "All Items",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "inventory_button_low_stock_only_1",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "Low Stock Only",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "inventory_button_edit_1",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "Edit",
+      "dataTestId": null,
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: Edit"
+    },
+    {
+      "actionKey": "inventory_link_skip_to_main_content_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: #main-content"
+      }
+    },
+    {
+      "actionKey": "sidebar-logo_12",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: /workspaces/owner"
+      }
+    },
+    {
+      "actionKey": "inventory_link_dashboard_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_analytics_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_reports_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "inventory_link_pos_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_reservations_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_inventory_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "inventory_link_finance",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "inventory_link_service_providers",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_staff_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "inventory_link_feedback_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_schedule_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "inventory_link_timeclock_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_approvals_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "inventory_link_swap_approvals_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_labor_reports_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_labor_targets_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_staffing_planner_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_staffing_alerts_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_auto_scheduler_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_my_availability_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_my_swaps_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_open_shifts_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "inventory_link_settings_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "theme-toggle-btn_13",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "user-menu-trigger_13",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "pos_button_kiosk_mode_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "⤢\nKiosk mode",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_diagnostics_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "ⓘ\nDiagnostics",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_open_tabs_sidebar_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Open tabs sidebar",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos-new-order_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "New Order",
+      "dataTestId": "pos-new-order",
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: New Order"
+    },
+    {
+      "actionKey": "pos_button_walk_in_sent_ugx_44_840_9_16_4_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nSENT\nUGX 44,840\n9:16:42 PM",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_walk_in_new_ugx_9_440_12_06_41_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 9,440\n12:06:41 AM",
+      "dataTestId": null,
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: Walk-in\nNEW\nUGX 9,440\n12:06:41 AM"
+    },
+    {
+      "actionKey": "pos_button_takeaway_new_ugx_90_860_11_18_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 90,860\n11:18:53 PM",
+      "dataTestId": null,
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: Takeaway\nNEW\nUGX 90,860\n11:18:53 PM"
+    },
+    {
+      "actionKey": "pos_button_table_2_served_ugx_33_040_11_1_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 2\nSERVED\nUGX 33,040\n11:16:53 PM",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_walk_in_sent_ugx_23_600_11_06_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nSENT\nUGX 23,600\n11:06:41 PM",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_80_240_9_16_53_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 80,240\n9:16:53 PM",
+      "dataTestId": null,
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: Table 4\nNEW\nUGX 80,240\n9:16:53 PM"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_101_480_8_25_5_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 101,480\n8:25:53 PM",
+      "dataTestId": null,
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: Table 4\nNEW\nUGX 101,480\n8:25:53 PM"
+    },
+    {
+      "actionKey": "pos_button_table_3_sent_ugx_101_480_7_06_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 3\nSENT\nUGX 101,480\n7:06:53 PM",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_table_3_sent_ugx_28_320_6_46_5_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 3\nSENT\nUGX 28,320\n6:46:53 PM",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_table_1_new_ugx_28_320_5_21_53_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 1\nNEW\nUGX 28,320\n5:21:53 PM",
+      "dataTestId": null,
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: Table 1\nNEW\nUGX 28,320\n5:21:53 PM"
+    },
+    {
+      "actionKey": "pos_button_table_2_served_ugx_17_700_5_18_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 2\nSERVED\nUGX 17,700\n5:18:53 PM",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_table_5_new_ugx_80_240_2_11_53_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nNEW\nUGX 80,240\n2:11:53 PM",
+      "dataTestId": null,
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: Table 5\nNEW\nUGX 80,240\n2:11:53 PM"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_88_500_1_49_53_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 88,500\n1:49:53 PM",
+      "dataTestId": null,
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: Table 4\nNEW\nUGX 88,500\n1:49:53 PM"
+    },
+    {
+      "actionKey": "pos_button_table_5_sent_ugx_63_720_1_12_5_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nSENT\nUGX 63,720\n1:12:53 PM",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_table_5_served_ugx_54_280_2_27_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nSERVED\nUGX 54,280\n2:27:53 AM",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_all_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_breakfast_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Breakfast",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_coffee_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Coffee",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_cold_drinks_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Cold Drinks",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "pos_button_desserts_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Desserts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "pos_button_fresh_juices_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Fresh Juices",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "pos_button_fresh_salads_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Fresh Salads",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "pos_button_hot_meals_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Hot Meals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "pos_button_pastries_baked_goods_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Pastries & Baked Goods",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "pos_button_sandwiches_wraps_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Sandwiches & Wraps",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "pos_button_smoothies_shakes_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Smoothies & Shakes",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "pos_button_specialty_coffee_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Specialty Coffee",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "pos_button_tea_infusions_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Tea & Infusions",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "pos_button_espresso_ugx_6000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Espresso\nUGX 6000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_double_espresso_ugx_8000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Double Espresso\nUGX 8000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_americano_ugx_8000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Americano\nUGX 8000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_cappuccino_ugx_10000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Cappuccino\nUGX 10000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_latte_ugx_12000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Latte\nUGX 12000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_flat_white_ugx_12000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Flat White\nUGX 12000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_macchiato_ugx_9000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Macchiato\nUGX 9000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_mocha_ugx_14000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Mocha\nUGX 14000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_caramel_latte_ugx_15000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Caramel Latte\nUGX 15000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_vanilla_latte_ugx_15000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Vanilla Latte\nUGX 15000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_hazelnut_cappuccino_ugx_14000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Hazelnut Cappuccino\nUGX 14000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_iced_latte_ugx_14000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Iced Latte\nUGX 14000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_iced_mocha_ugx_16000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Iced Mocha\nUGX 16000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_affogato_ugx_18000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Affogato\nUGX 18000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_english_breakfast_tea_ugx_7000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "English Breakfast Tea\nUGX 7000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_button_earl_grey_ugx_7000_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Earl Grey\nUGX 7000",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_link_skip_to_main_content_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: #main-content"
+      }
+    },
+    {
+      "actionKey": "sidebar-logo_13",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: /workspaces/owner"
+      }
+    },
+    {
+      "actionKey": "pos_link_dashboard_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_analytics_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_reports_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_link_pos_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_link_reservations_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_inventory_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_finance",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_link_service_providers",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_staff_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_link_feedback_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_schedule_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_link_timeclock_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_approvals_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_link_swap_approvals_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_labor_reports_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_labor_targets_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_staffing_planner_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_staffing_alerts_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_auto_scheduler_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_my_availability_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_my_swaps_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_open_shifts_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "pos_link_settings_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "pos_link_device_point_of_sale_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Device: Point of Sale",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: /launch"
+      }
+    },
+    {
+      "actionKey": "theme-toggle-btn_14",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "user-menu-trigger_14",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "reports_button_open_tanstack_query_devtools_1",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_skip_to_main_content_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: #main-content"
+      }
+    },
+    {
+      "actionKey": "sidebar-logo_14",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: /workspaces/owner"
+      }
+    },
+    {
+      "actionKey": "reports_link_dashboard_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reports_link_analytics_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_reports_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_pos_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_reservations_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_inventory_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_finance",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_service_providers",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reports_link_staff_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_feedback_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_schedule_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_timeclock_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reports_link_approvals_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_swap_approvals_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reports_link_labor_reports_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reports_link_labor_targets_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reports_link_staffing_planner_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reports_link_staffing_alerts_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reports_link_auto_scheduler_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reports_link_my_availability_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reports_link_my_swaps_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reports_link_open_shifts_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reports_link_settings_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_sales_franchise_analytics_sale_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Sales\nFranchise Analytics\n\nSales, margins, rankings and multi-month trends across all branches.\n\nCSV",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_finance_budgets_variance_budge_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Finance\nBudgets & Variance\n\nBudget vs actual sales, COGS and variance across branches.\n\nCSV export\nP",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_operations_inventory_stock_cur_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Operations\nInventory & Stock\n\nCurrent stock levels, low-stock items, wastage and shrinkage.",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_hr_staff_insights_kpis_employe_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "HR\nStaff Insights\n\nKPIs, Employee of the Month awards and promotion suggestions.",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_customer_customer_feedback_nps_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Customer\nCustomer Feedback & NPS\n\nPromoters, passives, detractors and feedback comments.",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_admin_report_subscriptions_man_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Admin\nReport Subscriptions\n\nManage automated delivery of shift-end reports, daily/weekly/monthly dig",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_operations_reservations_events_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Operations\nReservations & Events\n\nReservation calendar, deposits and event management.",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_tech_api_usage_webhooks_api_ke_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Tech\nAPI Usage & Webhooks\n\nAPI key usage metrics, webhook delivery logs and failures.\n\nDev",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reports_link_finance_finance_overview_p_l_s_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Finance\nFinance Overview\n\nP&L summary, expense tracking and service provider payables.",
+      "dataTestId": null,
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: Finance\nFinance Overview\n\nP&L summary, expense tracking and service provider payables."
+    },
+    {
+      "actionKey": "theme-toggle-btn_15",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "user-menu-trigger_15",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "reservation-nav-policies_1",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "⚙️ Policies",
+      "dataTestId": "reservation-nav-policies",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "http://localhost:3000/reservations → http://localhost:3000/reservations/policies",
+        "networkCall": "GET http://localhost:3001/me, GET http://localhost:3001/branches, GET http://localhost:3001/reservations/policies"
+      }
+    },
+    {
+      "actionKey": "reservation-nav-calendar_1",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "📅 Calendar View",
+      "dataTestId": "reservation-nav-calendar",
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reservations_button_all_1",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "reservations_button_held_1",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Held",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reservations_button_confirmed_1",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Confirmed",
+      "dataTestId": null,
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: Confirmed"
+    },
+    {
+      "actionKey": "reservations_button_seated_1",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Seated",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reservations_button_open_tanstack_query_devtools_1",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reservations_link_skip_to_main_content_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: #main-content"
+      }
+    },
+    {
+      "actionKey": "sidebar-logo_15",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: /workspaces/owner"
+      }
+    },
+    {
+      "actionKey": "reservations_link_dashboard_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reservations_link_analytics_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reservations_link_reports_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reservations_link_pos_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reservations_link_reservations_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reservations_link_inventory_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reservations_link_finance",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reservations_link_service_providers",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reservations_link_staff_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reservations_link_feedback_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reservations_link_schedule_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reservations_link_timeclock_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reservations_link_approvals_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "reservations_link_swap_approvals_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reservations_link_labor_reports_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reservations_link_labor_targets_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reservations_link_staffing_planner_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reservations_link_staffing_alerts_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reservations_link_auto_scheduler_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reservations_link_my_availability_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reservations_link_my_swaps_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reservations_link_open_shifts_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "reservations_link_settings_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "theme-toggle-btn_16",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "user-menu-trigger_16",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "service-providers_button_all",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "service-providers_button_active_only",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Active Only",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "service-providers_button_edit",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Edit",
+      "dataTestId": null,
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: Edit"
+    },
+    {
+      "actionKey": "service-providers_button_open_tanstack_query_devtools",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "service-providers_link_skip_to_main_content",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: #main-content"
+      }
+    },
+    {
+      "actionKey": "sidebar-logo_16",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: /workspaces/owner"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_dashboard",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_analytics",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_reports",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "service-providers_link_pos",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_reservations",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_inventory",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_finance",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "service-providers_link_service_providers",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "service-providers_link_staff",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "service-providers_link_feedback",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_schedule",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "service-providers_link_timeclock",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_approvals",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "service-providers_link_swap_approvals",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_labor_reports",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_labor_targets",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_staffing_planner",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_staffing_alerts",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_auto_scheduler",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_my_availability",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_my_swaps",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_open_shifts",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "service-providers_link_settings",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "theme-toggle-btn_17",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "user-menu-trigger_17",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "staff_button_add_employee_1",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Add Employee",
+      "dataTestId": null,
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: Add Employee"
+    },
+    {
+      "actionKey": "staff_button_all_1",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "staff_button_active_1",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Active",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "staff_button_inactive_1",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Inactive",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "staff_button_edit_1",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Edit",
+      "dataTestId": null,
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: Edit"
+    },
+    {
+      "actionKey": "staff_button_previous_1",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Previous",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "staff_button_next_1",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Next",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "staff_button_open_tanstack_query_devtools_1",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "staff_link_skip_to_main_content_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: #main-content"
+      }
+    },
+    {
+      "actionKey": "sidebar-logo_17",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: /workspaces/owner"
+      }
+    },
+    {
+      "actionKey": "staff_link_dashboard_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_analytics_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_reports_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "staff_link_pos_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_reservations_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_inventory_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_finance",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "staff_link_service_providers",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_staff_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "staff_link_feedback_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_schedule_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "staff_link_timeclock_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_approvals_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "staff_link_swap_approvals_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_labor_reports_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_labor_targets_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_staffing_planner_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_staffing_alerts_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_auto_scheduler_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_my_availability_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_my_swaps_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_open_shifts_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: null"
+      }
+    },
+    {
+      "actionKey": "staff_link_settings_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "workforce_approvals_button_all_branches_1",
+      "route": "/workforce/approvals",
+      "controlType": "button",
+      "label": "All Branches",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "workforce_approvals_button_completed_1",
+      "route": "/workforce/approvals",
+      "controlType": "button",
+      "label": "COMPLETED",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "workforce_approvals_button_open_tanstack_query_devtools_1",
+      "route": "/workforce/approvals",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "workforce_approvals_link_skip_to_main_content_1",
+      "route": "/workforce/approvals",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: #main-content"
+      }
+    },
+    {
+      "actionKey": "workforce_auto-scheduler_button_generate_suggestions_1",
+      "route": "/workforce/auto-scheduler",
+      "controlType": "button",
+      "label": "Generate Suggestions",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "workforce_auto-scheduler_button_open_tanstack_query_devtools_1",
+      "route": "/workforce/auto-scheduler",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "workforce_auto-scheduler_link_skip_to_main_content_1",
+      "route": "/workforce/auto-scheduler",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: #main-content"
+      }
+    },
+    {
+      "actionKey": "workforce_labor_button_shifts_csv_1",
+      "route": "/workforce/labor",
+      "controlType": "button",
+      "label": "Shifts CSV",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "networkCall": "GET http://localhost:3001/workforce/reports/export/shifts"
+      }
+    },
+    {
+      "actionKey": "workforce_labor_button_time_entries_csv_1",
+      "route": "/workforce/labor",
+      "controlType": "button",
+      "label": "Time Entries CSV",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "networkCall": "GET http://localhost:3001/workforce/reports/export/timeentries"
+      }
+    },
+    {
+      "actionKey": "workforce_labor_button_labor_summary_csv_1",
+      "route": "/workforce/labor",
+      "controlType": "button",
+      "label": "Labor Summary CSV",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "networkCall": "GET http://localhost:3001/workforce/reports/export/labor"
+      }
+    },
+    {
+      "actionKey": "workforce_labor_button_all_branches_1",
+      "route": "/workforce/labor",
+      "controlType": "button",
+      "label": "All Branches",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "workforce_labor_button_show_audit",
+      "route": "/workforce/labor",
+      "controlType": "button",
+      "label": "Show Audit",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "workforce_labor_button_open_tanstack_query_devtools_1",
+      "route": "/workforce/labor",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "workforce_labor_link_skip_to_main_content_1",
+      "route": "/workforce/labor",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: #main-content"
+      }
+    },
+    {
+      "actionKey": "workforce_labor-targets_button_add_target_1",
+      "route": "/workforce/labor-targets",
+      "controlType": "button",
+      "label": "Add Target",
+      "dataTestId": null,
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: Add Target"
+    },
+    {
+      "actionKey": "workforce_labor-targets_button_all_branches_1",
+      "route": "/workforce/labor-targets",
+      "controlType": "button",
+      "label": "All branches",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "workforce_labor-targets_button_open_tanstack_query_devtools_1",
+      "route": "/workforce/labor-targets",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "workforce_labor-targets_link_skip_to_main_content_1",
+      "route": "/workforce/labor-targets",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: #main-content"
+      }
+    },
+    {
+      "actionKey": "workforce_my-availability_button_refresh_1",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "networkCall": "GET http://localhost:3001/workforce/self/availability/exceptions, GET http://localhost:3001/workforce/self/availability"
+      }
+    },
+    {
+      "actionKey": "workforce_my-availability_button_weekly_availability_1",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Weekly Availability",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "workforce_my-availability_button_date_exceptions_1",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Date Exceptions",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "domChange": "Button clicked (no observable side effect)"
+      }
+    },
+    {
+      "actionKey": "workforce_my-availability_button_add_slot_1",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Add Slot",
+      "dataTestId": null,
+      "riskLevel": "MUTATION_RISK",
+      "status": "SKIPPED_MUTATION_RISK",
+      "reason": "Mutation keyword detected in: Add Slot"
+    },
+    {
+      "actionKey": "workforce_my-availability_button_open_tanstack_query_devtools_1",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "SKIPPED_UNREACHABLE",
+      "reason": "Control not visible on page"
+    },
+    {
+      "actionKey": "workforce_my-availability_link_skip_to_main_content_1",
+      "route": "/workforce/my-availability",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "riskLevel": "READ_SAFE",
+      "status": "COVERED",
+      "reason": "Not yet visited",
+      "evidence": {
+        "urlChange": "Link to: #main-content"
+      }
+    }
+  ]
+}

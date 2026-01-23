@@ -1,0 +1,663 @@
+{
+  "version": "v2",
+  "generatedAt": "2026-01-23T03:31:52.614Z",
+  "summary": {
+    "totalEndpoints": 69,
+    "evidencedByUI": 69,
+    "evidencedByM68": 68,
+    "evidencedByM69": 29,
+    "evidencedByBoth": 28,
+    "notEvidenced": 0
+  },
+  "endpoints": [
+    {
+      "endpoint": "GET /analytics/financial-summary",
+      "method": "GET",
+      "path": "/analytics/financial-summary",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /analytics/risk-summary",
+      "method": "GET",
+      "path": "/analytics/risk-summary",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /analytics/risk-events",
+      "method": "GET",
+      "path": "/analytics/risk-events",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /franchise/branch-metrics",
+      "method": "GET",
+      "path": "/franchise/branch-metrics",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /analytics/daily",
+      "method": "GET",
+      "path": "/analytics/daily",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /franchise/budgets/variance",
+      "method": "GET",
+      "path": "/franchise/budgets/variance",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /franchise/forecast",
+      "method": "GET",
+      "path": "/franchise/forecast",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /billing/subscription",
+      "method": "GET",
+      "path": "/billing/subscription",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /me",
+      "method": "GET",
+      "path": "/me",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /branches",
+      "method": "GET",
+      "path": "/branches",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /analytics/daily-metrics",
+      "method": "GET",
+      "path": "/analytics/daily-metrics",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /analytics/peak-hours",
+      "method": "GET",
+      "path": "/analytics/peak-hours",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /analytics/payment-mix",
+      "method": "GET",
+      "path": "/analytics/payment-mix",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /analytics/top-items",
+      "method": "GET",
+      "path": "/analytics/top-items",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /franchise/rankings",
+      "method": "GET",
+      "path": "/franchise/rankings",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /analytics/category-mix",
+      "method": "GET",
+      "path": "/analytics/category-mix",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/low-stock/alerts",
+      "method": "GET",
+      "path": "/inventory/low-stock/alerts",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/items",
+      "method": "GET",
+      "path": "/inventory/items",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/levels",
+      "method": "GET",
+      "path": "/inventory/levels",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /menu/items",
+      "method": "GET",
+      "path": "/menu/items",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /pos/orders",
+      "method": "GET",
+      "path": "/pos/orders",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /reservations",
+      "method": "GET",
+      "path": "/reservations",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /bookings/list",
+      "method": "GET",
+      "path": "/bookings/list",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory",
+      "method": "GET",
+      "path": "/inventory",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /finance/service-reminders",
+      "method": "GET",
+      "path": "/finance/service-reminders",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /finance/service-reminders/summary",
+      "method": "GET",
+      "path": "/finance/service-reminders/summary",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /service-providers/contracts",
+      "method": "GET",
+      "path": "/service-providers/contracts",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /service-providers",
+      "method": "GET",
+      "path": "/service-providers",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/timeclock/status",
+      "method": "GET",
+      "path": "/workforce/timeclock/status",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/timeclock/entries",
+      "method": "GET",
+      "path": "/workforce/timeclock/entries",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/swaps",
+      "method": "GET",
+      "path": "/workforce/swaps",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/reports/labor",
+      "method": "GET",
+      "path": "/workforce/reports/labor",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /orgs/branches",
+      "method": "GET",
+      "path": "/orgs/branches",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/planning/targets",
+      "method": "GET",
+      "path": "/workforce/planning/targets",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/self/availability",
+      "method": "GET",
+      "path": "/workforce/self/availability",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/self/availability/exceptions",
+      "method": "GET",
+      "path": "/workforce/self/availability/exceptions",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/self/swaps",
+      "method": "GET",
+      "path": "/workforce/self/swaps",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/self/open-shifts/claims",
+      "method": "GET",
+      "path": "/workforce/self/open-shifts/claims",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/self/open-shifts",
+      "method": "GET",
+      "path": "/workforce/self/open-shifts",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /feedback/analytics/nps-summary",
+      "method": "GET",
+      "path": "/feedback/analytics/nps-summary",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /finance/budgets/summary",
+      "method": "GET",
+      "path": "/finance/budgets/summary",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/accounts",
+      "method": "GET",
+      "path": "/accounting/accounts",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/ar/aging",
+      "method": "GET",
+      "path": "/accounting/ar/aging",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/ap/aging",
+      "method": "GET",
+      "path": "/accounting/ap/aging",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/journal",
+      "method": "GET",
+      "path": "/accounting/journal",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/periods",
+      "method": "GET",
+      "path": "/accounting/periods",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/trial-balance",
+      "method": "GET",
+      "path": "/accounting/trial-balance",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/pnl",
+      "method": "GET",
+      "path": "/accounting/pnl",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /accounting/balance-sheet",
+      "method": "GET",
+      "path": "/accounting/balance-sheet",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/purchase-orders",
+      "method": "GET",
+      "path": "/inventory/purchase-orders",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/receipts",
+      "method": "GET",
+      "path": "/inventory/receipts",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/transfers",
+      "method": "GET",
+      "path": "/inventory/transfers",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/waste",
+      "method": "GET",
+      "path": "/inventory/waste",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /pos/menu-items",
+      "method": "GET",
+      "path": "/pos/menu-items",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/foundation/uoms",
+      "method": "GET",
+      "path": "/inventory/foundation/uoms",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/v2/recipes",
+      "method": "GET",
+      "path": "/inventory/v2/recipes",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/depletions/stats",
+      "method": "GET",
+      "path": "/inventory/depletions/stats",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/depletions",
+      "method": "GET",
+      "path": "/inventory/depletions",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /org/branches",
+      "method": "GET",
+      "path": "/org/branches",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/periods",
+      "method": "GET",
+      "path": "/inventory/periods",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /vendors",
+      "method": "GET",
+      "path": "/vendors",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/foundation/items",
+      "method": "GET",
+      "path": "/inventory/foundation/items",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /inventory/foundation/uom",
+      "method": "GET",
+      "path": "/inventory/foundation/uom",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "POST /pos/orders",
+      "method": "POST",
+      "path": "/pos/orders",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /hr/staff",
+      "method": "GET",
+      "path": "/hr/staff",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /hr/employees",
+      "method": "GET",
+      "path": "/hr/employees",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION",
+        "M69_CRITICAL_FLOWS"
+      ]
+    },
+    {
+      "endpoint": "GET /reservations/policies",
+      "method": "GET",
+      "path": "/reservations/policies",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "POST /workforce/timeclock/break/start",
+      "method": "POST",
+      "path": "/workforce/timeclock/break/start",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M68_ATTRIBUTION"
+      ]
+    },
+    {
+      "endpoint": "GET /workforce/scheduling/shifts",
+      "method": "GET",
+      "path": "/workforce/scheduling/shifts",
+      "classification": "EVIDENCED_BY_UI",
+      "evidenceSources": [
+        "M69_CRITICAL_FLOWS"
+      ]
+    }
+  ]
+}

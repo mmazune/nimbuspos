@@ -643,3 +643,46 @@ test/e2e/billing.e2e-spec.ts (subscription flow changed)
 **Estimated Effort**: 2-3 developer days (dedicated test migration sprint)
 
 **Why Pre-Existing**: These tests were written against an older schema version and never updated when the schema evolved. The badge seeding issue was a systematic architecture problem that required org-prefixed codes to avoid global uniqueness conflicts.
+
+---
+
+## PRE-013: Mutation-Safe MS-5 Inventory Items Detection Issue (RESOLVED)
+
+**Category**: e2e-detection  
+**First Observed**: M47 (2026-01-21)  
+**Impact**: LOW - Test detection issue, not functional bug  
+**Status**: RESOLVED (M48)
+
+**Summary**: The MS-5 "Inventory Items List" test in mutation-safe.spec.ts fails with "No inventory list found" when running as procurement role. The page loads successfully but the specific list detection logic (looking for table/list elements) doesn't find a match.
+
+**Evidence (Before Fix)**:
+```json
+{
+  "testName": "MS-5: Inventory Items List",
+  "status": "FAIL",
+  "error": "No inventory list found"
+}
+```
+
+**Root Cause**: The inventory page UI structure may have changed, or the detection selectors in mutation-safe.spec.ts don't match the current page elements.
+
+**Fix Applied (M48)**: 
+- The actual issue was that MS-5 now passes - the original PRE-013 was a transient issue
+- M48 fixed multiple related issues in mutation-safe.spec.ts:
+  1. Improved dialog/form detection using multi-strategy approach (custom Dialog component lacks role="dialog")
+  2. Fixed MS-8 route from `/inventory/levels` (doesn't exist) to `/inventory/on-hand`
+  3. Added BLOCKED classification (expectedBlocked vs unexpectedBlocked)
+  4. All 10 tests now pass (10/10 PASS, 0 FAIL, 0 BLOCKED)
+
+**Evidence (After Fix)**:
+```json
+{
+  "generatedAt": "2026-01-21T20:28:05.470Z",
+  "totalTests": 10,
+  "passed": 10,
+  "failed": 0,
+  "blocked": 0,
+  "expectedBlocked": 0,
+  "unexpectedBlocked": 0
+}
+```

@@ -9,8 +9,7 @@ import {
   FranchiseForecastResponseDto,
   FranchiseOverviewResponseDto,
 } from '@/types/franchise';
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+import { authenticatedFetch, API_BASE_URL } from '@/lib/api';
 
 interface DateParams {
   year: number;
@@ -38,9 +37,7 @@ export async function fetchFranchiseBudgets(
   params: DateParams,
 ): Promise<FranchiseBudgetDto[]> {
   const qs = buildQuery(params);
-  const res = await fetch(`${API_URL}/franchise/budgets?${qs}`, {
-    credentials: 'include',
-  });
+  const res = await authenticatedFetch(`${API_BASE_URL}/franchise/budgets?${qs}`);
   if (!res.ok) throw new Error('Failed to load budgets');
   return res.json();
 }
@@ -49,9 +46,7 @@ export async function fetchFranchiseBudgetVariance(
   params: DateParams,
 ): Promise<FranchiseBudgetVarianceResponseDto> {
   const qs = buildQuery(params);
-  const res = await fetch(`${API_URL}/franchise/budgets/variance?${qs}`, {
-    credentials: 'include',
-  });
+  const res = await authenticatedFetch(`${API_BASE_URL}/franchise/budgets/variance?${qs}`);
   if (!res.ok) throw new Error('Failed to load budget variance');
   return res.json();
 }
@@ -60,9 +55,7 @@ export async function fetchFranchiseForecast(
   params: DateParams & { lookbackMonths?: number },
 ): Promise<FranchiseForecastResponseDto> {
   const qs = buildQuery(params);
-  const res = await fetch(`${API_URL}/franchise/forecast?${qs}`, {
-    credentials: 'include',
-  });
+  const res = await authenticatedFetch(`${API_BASE_URL}/franchise/forecast?${qs}`);
   if (!res.ok) throw new Error('Failed to load forecast');
   return res.json();
 }
@@ -75,9 +68,7 @@ export async function fetchFranchiseOverview(params: {
   month: number;
 }): Promise<FranchiseOverviewResponseDto> {
   const qs = buildQuery(params);
-  const res = await fetch(`${API_URL}/franchise/overview?${qs}`, {
-    credentials: 'include',
-  });
+  const res = await authenticatedFetch(`${API_BASE_URL}/franchise/overview?${qs}`);
   if (!res.ok) throw new Error('Failed to load franchise overview');
   return res.json();
 }

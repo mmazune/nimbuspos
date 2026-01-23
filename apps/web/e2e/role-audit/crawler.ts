@@ -16,10 +16,28 @@ import {
   ControlType,
   ClickOutcome,
   HttpMethod,
+  RoleId,
   isUnsafe,
   isUnsafeSelector,
+  isExpectedForbidden,
+  BoundedConfig,
+  getBoundedConfig,
 } from './types';
 import { waitForPageReady } from './login';
+
+// Base URL for absolute navigation (required for page.goto with relative paths after context changes)
+// M20 fix: Use localhost so cookie domain matches what js-cookie expects in the web app
+const WEB_BASE = process.env.E2E_BASE_URL || 'http://localhost:3000';
+
+/**
+ * Convert relative route to absolute URL
+ */
+function toAbsoluteUrl(route: string): string {
+  if (route.startsWith('http')) {
+    return route;
+  }
+  return `${WEB_BASE}${route}`;
+}
 
 // =============================================================================
 // Helpers
@@ -69,11 +87,81 @@ async function safePageOperation<T>(
  */
 const MAX_ROUTES = 15;
 
-export async function discoverRoutes(page: Page): Promise<string[]> {
+/**
+ * Load route fallback from ROLE_CONTRACT.v1.json
+ * M56: Use sidebarMissingLinks as expected routes when DOM discovery fails
+ */
+export function loadRoleContractRoutes(org: string, role: string): string[] {
+  try {
+    const fs = require('fs');
+    const path = require('path');
+    const contractPath = path.resolve(__dirname, '../../audit-results/role-contract/ROLE_CONTRACT.v1.json');
+    
+    if (!fs.existsSync(contractPath)) {
+      console.log(`[DiscoverRoutes] ROLE_CONTRACT not found: ${contractPath}`);
+      return [];
+    }
+    
+    const contract = JSON.parse(fs.readFileSync(contractPath, 'utf-8'));
+    const roleEntry = contract.results?.find((r: any) => 
+      r.org === org && r.role === role
+    );
+    
+    if (!roleEntry) {
+      console.log(`[DiscoverRoutes] No entry for ${org}/${role} in ROLE_CONTRACT`);
+      return [];
+    }
+    
+    const expectedRoutes = roleEntry.sidebarMissingLinks || [];
+    console.log(`[DiscoverRoutes] Loaded ${expectedRoutes.length} routes from ROLE_CONTRACT for ${org}/${role}`);
+    
+    // Filter out dynamic routes and unsafe patterns
+    return expectedRoutes
+      .filter((r: string) => !r.includes('[') && !r.startsWith('/api'))
+      .slice(0, MAX_ROUTES);
+  } catch (error) {
+    console.log(`[DiscoverRoutes] Error loading ROLE_CONTRACT: ${error}`);
+    return [];
+  }
+}
+
+export async function discoverRoutes(page: Page, org?: string, role?: string): Promise<string[]> {
   const routes = new Set<string>();
 
   // Wait for sidebar to render (short timeout)
   await page.waitForSelector('nav, aside, [role="navigation"]', { timeout: 5000 }).catch(() => { });
+
+  // M56: Capture DOM debug info before selector attempts
+  const domDebug = await page.evaluate(() => {
+    return {
+      url: window.location.href,
+      title: document.title,
+      navCount: document.querySelectorAll('nav').length,
+      asideCount: document.querySelectorAll('aside').length,
+      roleNavCount: document.querySelectorAll('[role="navigation"]').length,
+      allLinksCount: document.querySelectorAll('a[href^="/"]').length,
+      navLinksCount: document.querySelectorAll('nav a[href^="/"]').length,
+      asideLinksCount: document.querySelectorAll('aside a[href^="/"]').length,
+      roleNavLinksCount: document.querySelectorAll('[role="navigation"] a[href^="/"]').length,
+      sidebarLinksCount: document.querySelectorAll('[data-testid*="sidebar"] a[href^="/"]').length,
+      navTestIdLinksCount: document.querySelectorAll('[data-testid*="nav"] a[href^="/"]').length,
+      headerLinksCount: document.querySelectorAll('header a[href^="/"]').length,
+      // M56: Try broader selectors
+      sidebarDivCount: document.querySelectorAll('[class*="sidebar"], [class*="Sidebar"]').length,
+      navDivCount: document.querySelectorAll('[class*="nav"], [class*="Nav"]').length,
+    };
+  }).catch(() => null);
+  
+  if (domDebug && domDebug.allLinksCount === 0) {
+    console.log(`[DiscoverRoutes] DOM Debug - No internal links found:`);
+    console.log(`  URL: ${domDebug.url}`);
+    console.log(`  Title: ${domDebug.title}`);
+    console.log(`  nav elements: ${domDebug.navCount}`);
+    console.log(`  aside elements: ${domDebug.asideCount}`);
+    console.log(`  [role=navigation]: ${domDebug.roleNavCount}`);
+    console.log(`  sidebar divs: ${domDebug.sidebarDivCount}`);
+    console.log(`  nav divs: ${domDebug.navDivCount}`);
+  }
 
   // Get all internal links from navigation areas
   const navSelectors = [
@@ -83,6 +171,13 @@ export async function discoverRoutes(page: Page): Promise<string[]> {
     '[data-testid*="sidebar"] a[href^="/"]',
     '[data-testid*="nav"] a[href^="/"]',
     'header a[href^="/"]',
+    // M56: Add broader class-based selectors
+    '[class*="sidebar"] a[href^="/"]',
+    '[class*="Sidebar"] a[href^="/"]',
+    '[class*="nav"] a[href^="/"]',
+    '[class*="Nav"] a[href^="/"]',
+    // M56: Try button-based navigation
+    'button[role="menuitem"]',
   ];
 
   for (const selector of navSelectors) {
@@ -97,6 +192,13 @@ export async function discoverRoutes(page: Page): Promise<string[]> {
     } catch {
       // Selector not found, continue
     }
+  }
+
+  // M56: Fallback to ROLE_CONTRACT if no routes discovered
+  if (routes.size === 0 && org && role) {
+    console.log(`[DiscoverRoutes] DOM discovery yielded 0 routes, trying ROLE_CONTRACT fallback for ${org}/${role}`);
+    const contractRoutes = loadRoleContractRoutes(org, role);
+    contractRoutes.forEach(r => routes.add(r));
   }
 
   // Limit routes to prevent timeout
@@ -165,22 +267,36 @@ const CONTROL_SELECTORS = [
 ];
 
 /**
- * Discover clickable controls on a page (limited to MAX_CONTROLS)
+ * Discover clickable controls on a page with bounded mode support (M28)
+ * Priority order for bounded mode:
+ * 1. Controls WITH data-testid
+ * 2. Navigation controls (tabs, filters, search, pagination, date)
+ * 3. Read-safe controls until caps reached
  */
-const MAX_CONTROLS_PER_PAGE = 10;
-
-export async function discoverControls(page: Page, route: string): Promise<DiscoveredControl[]> {
+export async function discoverControls(
+  page: Page,
+  route: string,
+  config?: BoundedConfig
+): Promise<DiscoveredControl[]> {
+  const boundedConfig = config || getBoundedConfig();
+  const maxControls = boundedConfig.maxControlsPerRoute;
+  
   const controls: DiscoveredControl[] = [];
   const seen = new Set<string>();
 
+  // Priority types for bounded mode sampling
+  const highPriorityTypes: ControlType[] = ['tab', 'filter', 'search', 'pagination', 'date-picker', 'dropdown'];
+
   for (const { selector, type } of CONTROL_SELECTORS) {
-    if (controls.length >= MAX_CONTROLS_PER_PAGE) break;
+    if (controls.length >= maxControls) break;
 
     try {
       const elements = await page.locator(selector).all();
+      // In bounded mode, limit elements checked per selector type
+      const maxPerSelector = boundedConfig.mode === 'bounded' ? 8 : 10;
 
-      for (let i = 0; i < Math.min(elements.length, 5); i++) {
-        if (controls.length >= MAX_CONTROLS_PER_PAGE) break;
+      for (let i = 0; i < Math.min(elements.length, maxPerSelector); i++) {
+        if (controls.length >= maxControls) break;
 
         const el = elements[i];
 
@@ -234,15 +350,21 @@ export async function discoverControls(page: Page, route: string): Promise<Disco
 interface NetworkCapture {
   requests: Map<string, EndpointRecord>;
   failures: AuditFailure[];
+  /** M16: 403s that were expected and skipped from failure recording */
+  expectedForbiddenSkipped: string[];
 }
 
 /**
  * Create a network watcher for API calls
+ * @param page Playwright page
+ * @param route Current route being audited
+ * @param role Current role being audited (for expected-forbidden checks)
  */
-export function createNetworkWatcher(page: Page, route: string): NetworkCapture {
+export function createNetworkWatcher(page: Page, route: string, role?: RoleId): NetworkCapture {
   const capture: NetworkCapture = {
     requests: new Map(),
     failures: [],
+    expectedForbiddenSkipped: [],
   };
 
   // Listen for API responses
@@ -291,13 +413,20 @@ export function createNetworkWatcher(page: Page, route: string): NetworkCapture 
         status,
       });
     } else if (status === 403) {
-      capture.failures.push({
-        route,
-        type: 'api-forbidden',
-        message: `403 Forbidden: ${method} ${path}`,
-        endpoint: path,
-        status,
-      });
+      // M16: Check if this 403 is expected for the role
+      if (role && isExpectedForbidden(role, path)) {
+        // Log as expected-forbidden skip, not failure
+        capture.expectedForbiddenSkipped.push(`${method} ${path}`);
+        console.log(`[Expected403] ${role} → ${method} ${path} (skipped from failures)`);
+      } else {
+        capture.failures.push({
+          route,
+          type: 'api-forbidden',
+          message: `403 Forbidden: ${method} ${path}`,
+          endpoint: path,
+          status,
+        });
+      }
     } else if (status >= 500) {
       capture.failures.push({
         route,
@@ -334,24 +463,52 @@ export function updateTrigger(capture: NetworkCapture, trigger: string): void {
 const ROUTE_TIMEOUT_MS = 15000; // 15 seconds per route
 
 /**
- * Visit a route and record results
+ * Compute endpoint fingerprint from network calls (M28)
+ * Format: sorted unique "METHOD /path" strings joined by "|"
+ */
+function computeFingerprint(endpoints: EndpointRecord[]): string {
+  const unique = new Set<string>();
+  for (const ep of endpoints) {
+    unique.add(`${ep.method} ${ep.path}`);
+  }
+  return Array.from(unique).sort().join('|') || 'NO_NETWORK';
+}
+
+/**
+ * Visit a route and record results with bounded mode support (M28)
  * Includes per-route timeout and safe error handling for context destruction
+ * @param role M16: Role for expected-forbidden classification
+ * @param config M28: Bounded mode configuration
+ * @param seenFingerprints M28: Set of already-seen fingerprints for this role+route (optional)
+ * @param totalClicksSoFar M28: Running total of clicks for the role (for cap enforcement)
  */
 export async function visitRoute(
   page: Page,
   route: string,
-  screenshotDir: string
+  screenshotDir: string,
+  role?: RoleId,
+  config?: BoundedConfig,
+  seenFingerprints?: Set<string>,
+  totalClicksSoFar = 0
 ): Promise<{
   visit: RouteVisit;
   controls: ControlClick[];
   endpoints: EndpointRecord[];
   failures: AuditFailure[];
   screenshot?: string;
+  totalClicksAfter: number;
+  redundantCount: number;
 }> {
+  const boundedConfig = config || getBoundedConfig();
+  const fingerprints = seenFingerprints || new Set<string>();
+  
   const startTime = Date.now();
   const controls: ControlClick[] = [];
   const failures: AuditFailure[] = [];
   let screenshot: string | undefined;
+  let clickCount = 0;
+  let redundantCount = 0;
+  let redundantInARow = 0;
 
   // Check if page is still valid before starting
   if (!isPageValid(page)) {
@@ -372,17 +529,20 @@ export async function visitRoute(
         type: 'route-error',
         message: 'Page context is closed - skipping route',
       }],
+      totalClicksAfter: totalClicksSoFar,
+      redundantCount: 0,
     };
   }
 
   // Set up network watcher
-  const capture = createNetworkWatcher(page, route);
+  const capture = createNetworkWatcher(page, route, role);
 
   try {
-    // Navigate to route (shorter timeout)
-    const response = await page.goto(route, {
+    // Navigate to route with moderate timeout (use absolute URL to avoid baseURL issues)
+    const absoluteUrl = toAbsoluteUrl(route);
+    const response = await page.goto(absoluteUrl, {
       waitUntil: 'domcontentloaded',
-      timeout: 10000,
+      timeout: 15000, // 15 seconds to match ROUTE_TIMEOUT_MS
     });
 
     const status = response?.status();
@@ -408,6 +568,8 @@ export async function visitRoute(
             message: `Route returned 403 or redirected to forbidden`,
           },
         ],
+        totalClicksAfter: totalClicksSoFar,
+        redundantCount: 0,
       };
     }
 
@@ -431,20 +593,45 @@ export async function visitRoute(
             message: `Route returned 404`,
           },
         ],
+        totalClicksAfter: totalClicksSoFar,
+        redundantCount: 0,
       };
     }
 
     // Wait for page to stabilize
     await waitForPageReady(page);
 
-    const title = await page.title();
+    // Get title with safe wrapper to handle context destruction
+    const title = await safePageOperation(page, () => page.title(), '');
     const loadTimeMs = Date.now() - startTime;
 
-    // Discover controls
-    const discovered = await discoverControls(page, route);
+    // Discover controls with bounded config
+    const discovered = await discoverControls(page, route, boundedConfig);
 
-    // Click safe controls
+    // M28: Track clicks for bounded mode caps
+    let readSafeClicks = 0;
+    let mutationRiskClicks = 0;
+
+    // Click safe controls with bounded mode caps (M28)
     for (const ctrl of discovered) {
+      // M28: Check bounded mode caps
+      if (boundedConfig.mode === 'bounded') {
+        // Check per-role total cap
+        if (totalClicksSoFar + clickCount >= boundedConfig.maxTotalClicksPerRole) {
+          console.log(`[Bounded] Per-role click cap (${boundedConfig.maxTotalClicksPerRole}) reached, stopping`);
+          break;
+        }
+        // Check per-route read-safe cap
+        if (ctrl.safeToClick && readSafeClicks >= boundedConfig.maxReadSafeClicksPerRoute) {
+          continue; // Skip but don't break - might have other control types
+        }
+        // Check redundant fingerprint cap
+        if (redundantInARow >= boundedConfig.maxRedundantInARow) {
+          console.log(`[Bounded] ${boundedConfig.maxRedundantInARow} redundant fingerprints in a row, stopping route`);
+          break;
+        }
+      }
+
       const clickRecord: ControlClick = {
         route,
         selector: ctrl.selector,
@@ -480,6 +667,9 @@ export async function visitRoute(
           break; // Exit control loop
         }
 
+        // M28: Capture network state before click for fingerprinting
+        const endpointsBefore = capture.requests.size;
+
         // Mark network capture trigger
         updateTrigger(capture, ctrl.selector);
 
@@ -487,6 +677,8 @@ export async function visitRoute(
         const urlBefore = page.url();
         await page.locator(ctrl.selector).first().click({ timeout: 2000 });
         clickRecord.clicked = true;
+        clickCount++;
+        readSafeClicks++;
 
         // Check page after click (some buttons can cause logout/redirect)
         if (!isPageValid(page)) {
@@ -505,6 +697,22 @@ export async function visitRoute(
           clickRecord.error = 'Page context closed during wait';
           controls.push(clickRecord);
           break;
+        }
+
+        // M28: Compute fingerprint from network calls triggered by this click
+        const endpointsAfter = Array.from(capture.requests.values());
+        const newEndpoints = endpointsAfter.slice(endpointsBefore);
+        const fingerprint = computeFingerprint(newEndpoints);
+        clickRecord.fingerprint = fingerprint;
+
+        // M28: Check if fingerprint is redundant
+        if (fingerprints.has(fingerprint) && fingerprint !== 'NO_NETWORK') {
+          clickRecord.redundant = true;
+          redundantCount++;
+          redundantInARow++;
+        } else {
+          fingerprints.add(fingerprint);
+          redundantInARow = 0; // Reset consecutive redundant counter
         }
 
         // Determine outcome
@@ -566,6 +774,8 @@ export async function visitRoute(
       endpoints: Array.from(capture.requests.values()),
       failures: [...failures, ...capture.failures],
       screenshot,
+      totalClicksAfter: totalClicksSoFar + clickCount,
+      redundantCount,
     };
   } catch (error) {
     // Take screenshot on error
@@ -587,7 +797,216 @@ export async function visitRoute(
         error: error instanceof Error ? error.message : String(error),
         apiCallsOnLoad: capture.requests.size,
       },
-      controls: [],
+      controls,
+      endpoints: Array.from(capture.requests.values()),
+      failures: [
+        {
+          route,
+          type: 'route-error',
+          message: error instanceof Error ? error.message : String(error),
+          screenshot,
+        },
+      ],
+      screenshot,
+      totalClicksAfter: totalClicksSoFar + clickCount,
+      redundantCount,
+    };
+  }
+}
+
+// =============================================================================
+// M18: Quick Route Visit (No Safe-Click)
+// =============================================================================
+
+/**
+ * Visit a route quickly without safe-click exploration.
+ * Used in Phase 2 to cover routes skipped in Phase 1 due to time budget.
+ *
+ * Bounded per-route budget: 18 seconds max (increased from 12s in M20).
+ * Ready condition: domcontentloaded + sidebar/heading/table visible.
+ */
+const QUICK_ROUTE_TIMEOUT_MS = 18000;
+
+export async function visitRouteQuick(
+  page: Page,
+  route: string,
+  screenshotDir: string,
+  role?: RoleId
+): Promise<{
+  visit: RouteVisit;
+  endpoints: EndpointRecord[];
+  failures: AuditFailure[];
+  screenshot?: string;
+}> {
+  const startTime = Date.now();
+  let screenshot: string | undefined;
+
+  // Check if page is still valid before starting
+  if (!isPageValid(page)) {
+    return {
+      visit: {
+        path: route,
+        title: '',
+        visitedAt: new Date().toISOString(),
+        loadTimeMs: 0,
+        status: 'error',
+        error: 'Page context is closed',
+        apiCallsOnLoad: 0,
+      },
+      endpoints: [],
+      failures: [{
+        route,
+        type: 'route-error',
+        message: 'Page context is closed - skipping route',
+      }],
+    };
+  }
+
+  // Set up network watcher
+  const capture = createNetworkWatcher(page, route, role);
+
+  try {
+    // Navigate to route with bounded timeout (use absolute URL to avoid baseURL issues)
+    const absoluteUrl = toAbsoluteUrl(route);
+    const response = await page.goto(absoluteUrl, {
+      waitUntil: 'domcontentloaded',
+      timeout: QUICK_ROUTE_TIMEOUT_MS,
+    });
+
+    const status = response?.status();
+
+    // Check for error responses
+    if (status === 403 || page.url().includes('forbidden')) {
+      const title = await safePageOperation(page, () => page.title(), '');
+      return {
+        visit: {
+          path: route,
+          title,
+          visitedAt: new Date().toISOString(),
+          loadTimeMs: Date.now() - startTime,
+          status: 'forbidden',
+          apiCallsOnLoad: capture.requests.size,
+        },
+        endpoints: Array.from(capture.requests.values()),
+        failures: [
+          {
+            route,
+            type: 'route-forbidden',
+            message: `Route returned 403 or redirected to forbidden`,
+          },
+        ],
+      };
+    }
+
+    if (status === 404) {
+      const title = await safePageOperation(page, () => page.title(), '');
+      return {
+        visit: {
+          path: route,
+          title,
+          visitedAt: new Date().toISOString(),
+          loadTimeMs: Date.now() - startTime,
+          status: 'not-found',
+          apiCallsOnLoad: capture.requests.size,
+        },
+        endpoints: Array.from(capture.requests.values()),
+        failures: [
+          {
+            route,
+            type: 'route-not-found',
+            message: `Route returned 404`,
+          },
+        ],
+      };
+    }
+
+    // Quick ready check: sidebar OR heading OR table visible (2s max)
+    const readySelectors = [
+      'nav, aside, [role="navigation"]',
+      'h1, h2, [data-testid*="header"], [data-testid*="title"]',
+      'table, [role="table"], [data-testid*="table"]',
+      '[data-testid*="chart"], [data-testid*="grid"]',
+    ];
+
+    let readyPassed = false;
+    for (const sel of readySelectors) {
+      try {
+        await page.waitForSelector(sel, { timeout: 2000, state: 'visible' });
+        readyPassed = true;
+        break;
+      } catch {
+        // Try next selector
+      }
+    }
+
+    if (!readyPassed) {
+      console.log(`[QuickVisit] Warning: No ready selector found for ${route}, proceeding anyway`);
+    }
+
+    // Get title with safe wrapper
+    const title = await safePageOperation(page, () => page.title(), '');
+    const loadTimeMs = Date.now() - startTime;
+
+    return {
+      visit: {
+        path: route,
+        title,
+        visitedAt: new Date().toISOString(),
+        loadTimeMs,
+        status: 'success',
+        apiCallsOnLoad: capture.requests.size,
+      },
+      endpoints: Array.from(capture.requests.values()),
+      failures: capture.failures,
+      screenshot,
+    };
+  } catch (error) {
+    const elapsed = Date.now() - startTime;
+    const isTimeout = elapsed >= QUICK_ROUTE_TIMEOUT_MS - 500;
+
+    // Take screenshot on error
+    try {
+      const filename = `error-quick-${route.replace(/\//g, '-')}-${Date.now()}.png`;
+      await page.screenshot({ path: `${screenshotDir}/${filename}` });
+      screenshot = filename;
+    } catch {
+      // Screenshot failed
+    }
+
+    // If timeout, record as time-limit skip, not error
+    if (isTimeout) {
+      return {
+        visit: {
+          path: route,
+          title: '',
+          visitedAt: new Date().toISOString(),
+          loadTimeMs: elapsed,
+          status: 'error',
+          error: `Quick visit timeout (${elapsed}ms)`,
+          apiCallsOnLoad: capture.requests.size,
+        },
+        endpoints: Array.from(capture.requests.values()),
+        failures: [
+          {
+            route,
+            type: 'route-skipped-time-limit',
+            message: `Quick visit timeout (${elapsed}ms elapsed)`,
+          },
+        ],
+        screenshot,
+      };
+    }
+
+    return {
+      visit: {
+        path: route,
+        title: '',
+        visitedAt: new Date().toISOString(),
+        loadTimeMs: elapsed,
+        status: 'error',
+        error: error instanceof Error ? error.message : String(error),
+        apiCallsOnLoad: capture.requests.size,
+      },
       endpoints: Array.from(capture.requests.values()),
       failures: [
         {

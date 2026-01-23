@@ -1,0 +1,17 @@
+{
+  "org": "cafesserie",
+  "role": "stockManager",
+  "email": "stock-manager@cafesserie.demo.local",
+  "timestamp": "2026-01-22T17:02:53.045Z",
+  "receiptsChecked": [],
+  "asyncJobWatcher": {
+    "response202Count": 0,
+    "jobIdDetected": false
+  },
+  "summary": {
+    "receiptsChecked": 0,
+    "uiOnlyPrint": 0,
+    "asyncJob": 0,
+    "errors": 1
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "version": "v8",
+  "timestamp": "2026-01-21T14:50:04.135Z",
+  "totalTests": 20,
+  "passed": 20,
+  "failed": 0,
+  "results": [
+    {
+      "id": "INV-O1",
+      "name": "POS open orders > 0",
+      "org": "tapas",
+      "passed": true,
+      "value": 17,
+      "expected": "> 0"
+    },
+    {
+      "id": "INV-O2",
+      "name": "At least 1 OPEN cash session",
+      "org": "tapas",
+      "passed": true,
+      "value": 1,
+      "expected": ">= 1"
+    },
+    {
+      "id": "INV-O3",
+      "name": "Workforce schedule entries > 0",
+      "org": "tapas",
+      "passed": true,
+      "value": 6,
+      "expected": "> 0"
+    },
+    {
+      "id": "INV-O4",
+      "name": "Timeclock entries exist",
+      "org": "tapas",
+      "passed": true,
+      "value": 51,
+      "expected": "> 0"
+    },
+    {
+      "id": "INV-O5",
+      "name": "Procurement POs exist",
+      "org": "tapas",
+      "passed": true,
+      "value": 6,
+      "expected": "> 0"
+    },
+    {
+      "id": "INV-O6",
+      "name": "GRs or PO lines exist",
+      "org": "tapas",
+      "passed": true,
+      "value": "receipts=0, POs=6",
+      "expected": "POs exist with lines"
+    },
+    {
+      "id": "INV-O7",
+      "name": "Reservations exist in mixed statuses",
+      "org": "tapas",
+      "passed": true,
+      "value": "22 reservations, 6 statuses",
+      "expected": "> 0 with varied statuses"
+    },
+    {
+      "id": "INV-O8",
+      "name": "Open vendor bills exist",
+      "org": "tapas",
+      "passed": true,
+      "value": 3,
+      "expected": "> 0"
+    },
+    {
+      "id": "INV-O9",
+      "name": "Total vendor bills > 0",
+      "org": "tapas",
+      "passed": true,
+      "value": 14,
+      "expected": "> 0"
+    },
+    {
+      "id": "INV-O10",
+      "name": "Cash session history exists (≥4)",
+      "org": "tapas",
+      "passed": true,
+      "value": 4,
+      "expected": ">= 4"
+    },
+    {
+      "id": "INV-O1",
+      "name": "POS open orders > 0",
+      "org": "cafesserie",
+      "passed": true,
+      "value": 14,
+      "expected": "> 0"
+    },
+    {
+      "id": "INV-O2",
+      "name": "At least 1 OPEN cash session",
+      "org": "cafesserie",
+      "passed": true,
+      "value": 1,
+      "expected": ">= 1"
+    },
+    {
+      "id": "INV-O3",
+      "name": "Workforce schedule entries > 0",
+      "org": "cafesserie",
+      "passed": true,
+      "value": 12,
+      "expected": "> 0"
+    },
+    {
+      "id": "INV-O4",
+      "name": "Timeclock entries exist",
+      "org": "cafesserie",
+      "passed": true,
+      "value": 14,
+      "expected": "> 0"
+    },
+    {
+      "id": "INV-O5",
+      "name": "Procurement POs exist",
+      "org": "cafesserie",
+      "passed": true,
+      "value": 6,
+      "expected": "> 0"
+    },
+    {
+      "id": "INV-O6",
+      "name": "GRs or PO lines exist",
+      "org": "cafesserie",
+      "passed": true,
+      "value": "receipts=0, POs=6",
+      "expected": "POs exist with lines"
+    },
+    {
+      "id": "INV-O7",
+      "name": "Reservations exist in mixed statuses",
+      "org": "cafesserie",
+      "passed": true,
+      "value": "12 reservations, 6 statuses",
+      "expected": "> 0 with varied statuses"
+    },
+    {
+      "id": "INV-O8",
+      "name": "Open vendor bills exist",
+      "org": "cafesserie",
+      "passed": true,
+      "value": 3,
+      "expected": "> 0"
+    },
+    {
+      "id": "INV-O9",
+      "name": "Total vendor bills > 0",
+      "org": "cafesserie",
+      "passed": true,
+      "value": 14,
+      "expected": "> 0"
+    },
+    {
+      "id": "INV-O10",
+      "name": "Cash session history exists (≥4)",
+      "org": "cafesserie",
+      "passed": true,
+      "value": 4,
+      "expected": ">= 4"
+    }
+  ]
+}

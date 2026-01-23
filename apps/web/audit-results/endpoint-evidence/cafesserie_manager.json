@@ -1,0 +1,105 @@
+{
+  "org": "cafesserie",
+  "role": "manager",
+  "email": "manager@cafesserie.demo.local",
+  "generatedAt": "2026-01-22T18:59:21.497Z",
+  "durationMs": 43602,
+  "summary": {
+    "routesVisited": 15,
+    "routesWithEndpoints": 0,
+    "totalEndpoints": 0,
+    "uniqueEndpoints": 0
+  },
+  "routes": [
+    {
+      "route": "/dashboard",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:58:42.290Z"
+    },
+    {
+      "route": "/analytics",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:58:45.009Z"
+    },
+    {
+      "route": "/reports",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:58:47.709Z"
+    },
+    {
+      "route": "/pos",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:58:50.441Z"
+    },
+    {
+      "route": "/reservations",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:58:53.127Z"
+    },
+    {
+      "route": "/inventory",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:58:55.808Z"
+    },
+    {
+      "route": "/staff",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:58:58.526Z"
+    },
+    {
+      "route": "/feedback",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:59:01.290Z"
+    },
+    {
+      "route": "/workforce/schedule",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:59:04.029Z"
+    },
+    {
+      "route": "/workforce/timeclock",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:59:06.756Z"
+    },
+    {
+      "route": "/workforce/approvals",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:59:09.459Z"
+    },
+    {
+      "route": "/workforce/swaps",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:59:12.128Z"
+    },
+    {
+      "route": "/workforce/labor",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:59:14.846Z"
+    },
+    {
+      "route": "/workforce/labor-targets",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:59:18.196Z"
+    },
+    {
+      "route": "/workforce/staffing-planner",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:59:21.497Z"
+    }
+  ]
+}

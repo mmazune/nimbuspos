@@ -1,0 +1,76 @@
+[
+  {
+    "route": "/dashboard",
+    "navigationStatus": 200,
+    "http500Count": 0,
+    "consoleErrorCount": 0,
+    "pageErrorCount": 0,
+    "errorBoundaryVisible": false,
+    "hasFailed": false,
+    "screenshotPath": "",
+    "htmlSnippet": "",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "http500s": []
+  },
+  {
+    "route": "/pos",
+    "navigationStatus": 200,
+    "http500Count": 0,
+    "consoleErrorCount": 1,
+    "pageErrorCount": 0,
+    "errorBoundaryVisible": false,
+    "hasFailed": true,
+    "screenshotPath": "C:\\Users\\arman\\Desktop\\nimbusPOS\\nimbuspos\\apps\\web\\audit-results\\m59-smoke\\_pos.png",
+    "htmlSnippet": "<body class=\"bg-slate-950\"><div id=\"__next\"><a href=\"#main-content\" class=\"   sr-only   focus:not-sr-only   focus:fixed   focus:top-2   focus:left-2   focus:z-50   focus:rounded-md   focus:bg-slate-900   focus:px-3   focus:py-2   focus:text-xs   focus:text-slate-50   focus:outline-none   focus:ring-2   focus:ring-emerald-500   \">Skip to main content</a><div class=\"flex h-screen overflow-hidden bg-background\"><aside class=\"fixed left-0 top-0 z-40 h-screen w-64 border-r bg-card flex flex-col\"><div class=\"flex h-16 items-center border-b px-6\"><a class=\"flex items-center space-x-2 hover:opacity-80 transition-opacity\" aria-label=\"Go to workspace home\" data-testid=\"sidebar-logo\" href=\"/dashboard\"><div class=\"flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-chefcloud-blue to-chefcloud-lavender text-white font-bold\">CC</div><div><h1 class=\"text-lg font-bold text-foreground\">ChefCloud</h1><p class=\"text-xs text-muted-foreground\">OWNER</p></div></a></div><nav aria-label",
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "pageErrors": [],
+    "http500s": []
+  },
+  {
+    "route": "/inventory",
+    "navigationStatus": 200,
+    "http500Count": 0,
+    "consoleErrorCount": 1,
+    "pageErrorCount": 0,
+    "errorBoundaryVisible": false,
+    "hasFailed": true,
+    "screenshotPath": "C:\\Users\\arman\\Desktop\\nimbusPOS\\nimbuspos\\apps\\web\\audit-results\\m59-smoke\\_inventory.png",
+    "htmlSnippet": "<body class=\"bg-slate-950\"><div id=\"__next\"><a href=\"#main-content\" class=\"   sr-only   focus:not-sr-only   focus:fixed   focus:top-2   focus:left-2   focus:z-50   focus:rounded-md   focus:bg-slate-900   focus:px-3   focus:py-2   focus:text-xs   focus:text-slate-50   focus:outline-none   focus:ring-2   focus:ring-emerald-500   \">Skip to main content</a><div class=\"flex h-screen overflow-hidden bg-background\"><aside class=\"fixed left-0 top-0 z-40 h-screen w-64 border-r bg-card flex flex-col\"><div class=\"flex h-16 items-center border-b px-6\"><a class=\"flex items-center space-x-2 hover:opacity-80 transition-opacity\" aria-label=\"Go to workspace home\" data-testid=\"sidebar-logo\" href=\"/dashboard\"><div class=\"flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-chefcloud-blue to-chefcloud-lavender text-white font-bold\">CC</div><div><h1 class=\"text-lg font-bold text-foreground\">ChefCloud</h1><p class=\"text-xs text-muted-foreground\">OWNER</p></div></a></div><nav aria-label",
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "pageErrors": [],
+    "http500s": []
+  },
+  {
+    "route": "/finance",
+    "navigationStatus": 200,
+    "http500Count": 0,
+    "consoleErrorCount": 0,
+    "pageErrorCount": 0,
+    "errorBoundaryVisible": false,
+    "hasFailed": false,
+    "screenshotPath": "",
+    "htmlSnippet": "",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "http500s": []
+  },
+  {
+    "route": "/workforce/schedule",
+    "navigationStatus": 200,
+    "http500Count": 0,
+    "consoleErrorCount": 0,
+    "pageErrorCount": 0,
+    "errorBoundaryVisible": false,
+    "hasFailed": false,
+    "screenshotPath": "",
+    "htmlSnippet": "",
+    "consoleErrors": [],
+    "pageErrors": [],
+    "http500s": []
+  }
+]

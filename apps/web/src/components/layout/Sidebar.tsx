@@ -87,6 +87,7 @@ export function Sidebar() {
                     key={item.href}
                     href={item.href}
                     aria-current={isActive(item.href) ? 'page' : undefined}
+                    data-testid={`nav${item.href.replace(/\//g, '-')}`}
                     className={cn(
                       'flex items-center space-x-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
                       isActive(item.href)

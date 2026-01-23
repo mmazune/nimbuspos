@@ -144,7 +144,7 @@ export default function ReportsHubPage() {
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {REPORTS.map((report) => (
-            <Link key={report.id} href={report.href}>
+            <Link key={report.id} href={report.href} data-testid={`report-card-${report.id}`}>
               <Card className="h-full p-6 flex flex-col justify-between hover:border-primary/60 transition-all hover:shadow-lg cursor-pointer">
                 <div>
                   <div className="flex items-start justify-between mb-3">

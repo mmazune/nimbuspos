@@ -1,0 +1,51 @@
+{
+  "org": "tapas",
+  "role": "bartender",
+  "email": "bartender@tapas.demo.local",
+  "generatedAt": "2026-01-22T18:57:25.456Z",
+  "durationMs": 18002,
+  "summary": {
+    "routesVisited": 6,
+    "routesWithEndpoints": 0,
+    "totalEndpoints": 0,
+    "uniqueEndpoints": 0
+  },
+  "routes": [
+    {
+      "route": "/pos",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:57:11.777Z"
+    },
+    {
+      "route": "/inventory",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:57:14.561Z"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:57:17.296Z"
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:57:19.995Z"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:57:22.721Z"
+    },
+    {
+      "route": "/settings",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:57:25.456Z"
+    }
+  ]
+}

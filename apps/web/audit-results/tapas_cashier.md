@@ -1,8 +1,8 @@
 # Role Audit Report: TAPAS / CASHIER
 
-**Date:** 2026-01-13  
+**Date:** 2026-01-21  
 **Status:** ✅ PASS  
-**Duration:** 6.8s  
+**Duration:** 196.9s  
 **Email:** cashier@tapas.demo.local
 
 ---
@@ -11,16 +11,16 @@
 
 | Metric | Value |
 |--------|-------|
-| Routes Visited | 0 / 0 |
+| Routes Visited | 7 / 7 |
 | Routes Forbidden | 0 |
 | Routes Not Found | 0 |
 | Routes Error | 0 |
-| Controls Found | 0 |
-| Controls Clicked | 0 |
-| Controls Skipped | 0 |
-| API Endpoints Hit | 0 |
-| 2xx Responses | 0 |
-| 4xx Responses | 0 |
+| Controls Found | 123 |
+| Controls Clicked | 21 |
+| Controls Skipped | 102 |
+| API Endpoints Hit | 20 |
+| 2xx Responses | 40 |
+| 4xx Responses | 23 |
 | 5xx Responses | 0 |
 | Total Failures | 0 |
 
@@ -30,6 +30,13 @@
 
 | Route | Status | Load Time |
 |-------|--------|-----------|
+| /dashboard | ✅ success | 2465ms |
+| /pos | ✅ success | 1259ms |
+| /settings | ✅ success | 7208ms |
+| /workforce/my-availability | ✅ success | 9606ms |
+| /workforce/my-swaps | ✅ success | 3293ms |
+| /workforce/open-shifts | ✅ success | 1934ms |
+| /workforce/timeclock | ✅ success | 5161ms |
 
 ---
 
@@ -37,6 +44,64 @@
 
 | Method | Path | Status | Count |
 |--------|------|--------|-------|
+| GET | /me |  200 | 13 |
+| GET | /branches |  200 | 13 |
+| GET | /analytics/daily | ⚠️ 403 | 3 |
+| GET | /analytics/daily-metrics | ⚠️ 403 | 3 |
+| GET | /analytics/top-items | ⚠️ 403 | 3 |
+| GET | /analytics/category-mix | ⚠️ 403 | 3 |
+| GET | /analytics/payment-mix | ⚠️ 403 | 3 |
+| GET | /analytics/peak-hours | ⚠️ 403 | 3 |
+| GET | /franchise/rankings | ⚠️ 403 | 2 |
+| GET | /inventory/low-stock/alerts |  200 | 2 |
+| GET | /menu/items |  200 | 2 |
+| GET | /pos/orders |  200 | 2 |
+| GET | /workforce/self/swaps |  200 | 2 |
+| GET | /workforce/self/open-shifts/claims | ⚠️ 404 | 2 |
+| GET | /workforce/self/open-shifts |  200 | 2 |
+| GET | /billing/subscription | ⚠️ 403 | 1 |
+| GET | /workforce/self/availability/exceptions |  200 | 1 |
+| GET | /workforce/self/availability |  200 | 1 |
+| GET | /workforce/timeclock/entries |  200 | 1 |
+| GET | /workforce/timeclock/status |  200 | 1 |
+
+---
+
+## Controls Clicked (Sample)
+
+| Route | Label | Type | Outcome |
+|-------|-------|------|---------|
+| /dashboard | date-range-selector | dropdown | filter-applied |
+| /dashboard | date-range-selector | date-picker | no-op |
+| /dashboard | date-custom-inputs | date-picker | no-op |
+| /dashboard | date-from-input | date-picker | no-op |
+| /dashboard | date-to-input | date-picker | no-op |
+| /dashboard | theme-toggle-btn | toggle | no-op |
+| /dashboard | user-menu-container | menu | menu-opened |
+| /dashboard | Open Tanstack query devtools | button | menu-opened |
+| /pos | theme-toggle-btn | toggle | no-op |
+| /pos | user-menu-container | menu | menu-opened |
+| /pos | Open tabs sidebar | button | menu-opened |
+| /settings | theme-toggle-btn | toggle | no-op |
+| /settings | user-menu-container | menu | menu-opened |
+| /settings | Close tanstack query devtools | button | menu-opened |
+| /workforce/my-availability | Open Tanstack query devtools | button | no-op |
+| /workforce/my-swaps | Refresh | button | no-op |
+| /workforce/my-swaps | Request Swap | button | no-op |
+| /workforce/my-swaps | Close tanstack query devtools | button | no-op |
+| /workforce/open-shifts | Refresh | button | no-op |
+| /workforce/open-shifts | Open Tanstack query devtools | button | no-op |
+| /workforce/timeclock | Close tanstack query devtools | button | no-op |
+
+---
+
+## Landing Page Visibility Checks ⚠️
+
+| Check | Status | Details |
+|-------|--------|---------|
+| POS interface | ❌ | Not visible: POS visible |
+| Menu items | ❌ | Not visible: menu items |
+| Cart or order area | ✅ | Found: cart/order area |
 
 ---
 

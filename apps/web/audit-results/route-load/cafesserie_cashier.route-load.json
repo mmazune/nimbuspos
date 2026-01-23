@@ -1,0 +1,391 @@
+{
+  "org": "cafesserie",
+  "role": "cashier",
+  "email": "cashier@cafesserie.demo.local",
+  "generatedAt": "2026-01-20T04:08:04.487Z",
+  "durationMs": 22936,
+  "summary": {
+    "routesVisited": 7,
+    "routesWithEndpoints": 7,
+    "routesNoEndpoints": 0,
+    "routesFailed": 0,
+    "totalApiCalls": 53,
+    "uniqueEndpoints": 20
+  },
+  "routes": [
+    {
+      "route": "/dashboard",
+      "actionId": "route-load::cafesserie::cashier::/dashboard",
+      "loadTimeMs": 4043,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403,
+          "timestamp": 1768882068388
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403,
+          "timestamp": 1768882068390
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403,
+          "timestamp": 1768882068415
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403,
+          "timestamp": 1768882068418
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403,
+          "timestamp": 1768882068424
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882068472
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403,
+          "timestamp": 1768882068562
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403,
+          "timestamp": 1768882068565
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768882068897
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882068898
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403,
+          "timestamp": 1768882069188
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403,
+          "timestamp": 1768882069193
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403,
+          "timestamp": 1768882069195
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403,
+          "timestamp": 1768882069198
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403,
+          "timestamp": 1768882069204
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403,
+          "timestamp": 1768882069206
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768882069209
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403,
+          "timestamp": 1768882069300
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403,
+          "timestamp": 1768882069304
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403,
+          "timestamp": 1768882069600
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403,
+          "timestamp": 1768882070587
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403,
+          "timestamp": 1768882070594
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403,
+          "timestamp": 1768882070597
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/pos",
+      "actionId": "route-load::cafesserie::cashier::/pos",
+      "loadTimeMs": 2395,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403,
+          "timestamp": 1768882070658
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403,
+          "timestamp": 1768882070661
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403,
+          "timestamp": 1768882070664
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403,
+          "timestamp": 1768882070666
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403,
+          "timestamp": 1768882070668
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200,
+          "timestamp": 1768882071793
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882071800
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200,
+          "timestamp": 1768882071830
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403,
+          "timestamp": 1768882071882
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882071903
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200,
+          "timestamp": 1768882071988
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200,
+          "timestamp": 1768882071998
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/settings",
+      "actionId": "route-load::cafesserie::cashier::/settings",
+      "loadTimeMs": 2855,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882074768
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882074855
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "actionId": "route-load::cafesserie::cashier::/workforce/my-availability",
+      "loadTimeMs": 2286,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882077049
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200,
+          "timestamp": 1768882077087
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200,
+          "timestamp": 1768882077124
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882077142
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "actionId": "route-load::cafesserie::cashier::/workforce/my-swaps",
+      "loadTimeMs": 2315,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882079157
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200,
+          "timestamp": 1768882079408
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882079447
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "actionId": "route-load::cafesserie::cashier::/workforce/open-shifts",
+      "loadTimeMs": 2196,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882081571
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200,
+          "timestamp": 1768882081607
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404,
+          "timestamp": 1768882081621
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882081660
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404,
+          "timestamp": 1768882082651
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/timeclock",
+      "actionId": "route-load::cafesserie::cashier::/workforce/timeclock",
+      "loadTimeMs": 1815,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882083258
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882083471
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/entries",
+          "status": 200,
+          "timestamp": 1768882083476
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/status",
+          "status": 200,
+          "timestamp": 1768882083477
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

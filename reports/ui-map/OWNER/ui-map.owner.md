@@ -1,1141 +1,438 @@
 # OWNER UI Interaction Map
 
-**Generated:** 2026-01-11T07:13:52.257Z
-**Base URL:** http://localhost:3000
+Generated: 2026-01-19T10:06:31.056Z
+Base URL: http://localhost:3000
 
 ## Coverage Summary
 
-| Metric | Count | Percentage |
-|--------|-------|------------|
-| Routes Visited | 39/84 | 46.4% |
-| Controls Mapped | 30/189 | 15.9% |
-| Controls Needing TestId | 144 | - |
-| Unsafe Controls (skipped) | 7 | - |
+| Metric | Value |
+|--------|-------|
+| Routes Total | 84 |
+| Routes Visited | 0 |
+| Route Coverage | 0.0% |
+| Controls Total | 0 |
+| Controls Mapped | 0 |
+| Controls Needing TestId | 0 |
+| Unsafe Controls | 0 |
 
 ## Routes
 
-### /dashboard
+### ❌ /workspaces/owner
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /dashboard
 
-### /analytics
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+### ❌ /analytics
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /reports
+### ❌ /reports
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /pos
 
-### /pos
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+### ❌ /reservations
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /reservations
+### ❌ /inventory
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /finance
 
-### /inventory
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+### ❌ /service-providers
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /finance
+### ❌ /staff
 
-**Title:** Access Denied
-**Visited:** ✅
+**Title:** N/A
+**Screenshot:** N/A
 
-#### Content Controls
+### ❌ /feedback
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /workforce/schedule
 
-### /service-providers
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+### ❌ /workforce/timeclock
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /staff
+### ❌ /workforce/approvals
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /workforce/swaps
 
-### /feedback
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** Access Denied
-**Visited:** ✅
+### ❌ /workforce/labor
 
-#### Content Controls
+**Title:** N/A
+**Screenshot:** N/A
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
+### ❌ /workforce/labor-targets
 
-#### API Calls on Load
+**Title:** N/A
+**Screenshot:** N/A
 
-| Method | Path | Status |
-|--------|------|--------|
-| GET | /feedback/analytics/nps-summary | 401 |
+### ❌ /workforce/staffing-planner
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /workforce/schedule
+### ❌ /workforce/staffing-alerts
 
-**Title:** Workforce Schedule
-**Visited:** ✅
+**Title:** N/A
+**Screenshot:** N/A
 
-#### Content Controls
+### ❌ /workforce/auto-scheduler
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Create Shift | button | ❌ | ✅ | toast |
-| Publish (0 Draft) | button | ❌ | ⚠️ | - |
-| Select Branch | button | ❌ | ✅ | blocked |
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| [input] | date-picker | ❌ | ✅ | - |
-| [input] | date-picker | ❌ | ✅ | - |
+**Title:** N/A
+**Screenshot:** N/A
 
-#### API Calls on Load
+### ❌ /workforce/my-availability
 
-| Method | Path | Status |
-|--------|------|--------|
-| GET | /feedback/analytics/nps-summary | 401 |
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /workforce/my-swaps
 
-### /workforce/timeclock
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** Timeclock
-**Visited:** ✅
+### ❌ /workforce/open-shifts
 
-#### Content Controls
+**Title:** N/A
+**Screenshot:** N/A
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Clock In | button | ❌ | ✅ | toast |
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
+### ❌ /settings
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /workforce/approvals
+### ❌ /reports/budgets
 
-**Title:** Shift Approvals
-**Visited:** ✅
+**Title:** N/A
+**Screenshot:** N/A
 
-#### Content Controls
+### ❌ /reports/subscriptions
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| All Branches | button | ❌ | ✅ | toast |
-| COMPLETED | button | ❌ | ✅ | blocked |
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| [input] | date-picker | ❌ | ✅ | - |
-| [input] | date-picker | ❌ | ✅ | - |
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /pos/cash-sessions
 
-### /workforce/swaps
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ✅
+### ❌ /reservations/calendar
 
-#### Content Controls
+**Title:** N/A
+**Screenshot:** N/A
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
+### ❌ /reservations/policies
 
-#### API Calls on Load
+**Title:** N/A
+**Screenshot:** N/A
 
-| Method | Path | Status |
-|--------|------|--------|
-| GET | /workforce/swaps | 401 |
+### ❌ /reservations/today-board
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /workforce/labor
+### ❌ /reservations/blackouts
 
-**Title:** Labor Reports
-**Visited:** ✅
+**Title:** N/A
+**Screenshot:** N/A
 
-#### Content Controls
+### ❌ /reservations/capacity
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Shifts CSV | button | ❌ | ✅ | toast |
-| Time Entries CSV | button | ❌ | ✅ | toast |
-| Labor Summary CSV | button | ❌ | ✅ | toast |
-| All Branches | button | ❌ | ✅ | toast |
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| [input] | date-picker | ❌ | ✅ | - |
-| [input] | date-picker | ❌ | ✅ | - |
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /waitlist
 
-### /workforce/labor-targets
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ✅
+### ❌ /inventory/items
 
-#### Content Controls
+**Title:** N/A
+**Screenshot:** N/A
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
+### ❌ /inventory/purchase-orders
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /workforce/staffing-planner
+### ❌ /inventory/receipts
 
-**Title:** 
-**Visited:** ✅
+**Title:** N/A
+**Screenshot:** N/A
 
-#### Content Controls
+### ❌ /inventory/transfers
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /inventory/waste
 
-### /workforce/staffing-alerts
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ✅
+### ❌ /inventory/stocktakes
 
-#### Content Controls
+**Title:** N/A
+**Screenshot:** N/A
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
+### ❌ /inventory/recipes
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /workforce/auto-scheduler
+### ❌ /inventory/depletions
 
-**Title:** 
-**Visited:** ✅
+**Title:** N/A
+**Screenshot:** N/A
 
-#### Content Controls
+### ❌ /inventory/period-close
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /inventory/lots
 
-### /workforce/my-availability
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ✅
+### ❌ /inventory/adjustments
 
-#### Content Controls
+**Title:** N/A
+**Screenshot:** N/A
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
+### ❌ /inventory/analytics
 
-#### API Calls on Load
+**Title:** N/A
+**Screenshot:** N/A
 
-| Method | Path | Status |
-|--------|------|--------|
-| GET | /workforce/self/availability | 401 |
-| GET | /workforce/self/availability/exceptions | 401 |
+### ❌ /inventory/valuation
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /workforce/my-swaps
+### ❌ /inventory/cogs
 
-**Title:** 
-**Visited:** ✅
+**Title:** N/A
+**Screenshot:** N/A
 
-#### Content Controls
+### ❌ /inventory/accounting-mappings
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
+**Title:** N/A
+**Screenshot:** N/A
 
-#### API Calls on Load
+### ❌ /inventory/accounting-postings
 
-| Method | Path | Status |
-|--------|------|--------|
-| GET | /workforce/self/swaps | 401 |
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /finance/accounts
 
-### /workforce/open-shifts
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ✅
+### ❌ /finance/journal
 
-#### Content Controls
+**Title:** N/A
+**Screenshot:** N/A
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
+### ❌ /finance/periods
 
-#### API Calls on Load
+**Title:** N/A
+**Screenshot:** N/A
 
-| Method | Path | Status |
-|--------|------|--------|
-| GET | /workforce/self/open-shifts | 401 |
-| GET | /workforce/self/open-shifts/claims | 404 |
+### ❌ /finance/trial-balance
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /settings
+### ❌ /finance/pnl
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /finance/balance-sheet
 
-### /workspaces/owner
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+### ❌ /finance/vendors
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /reports/budgets
+### ❌ /finance/vendor-bills
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /finance/customers
 
-### /reports/subscriptions
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+### ❌ /finance/customer-invoices
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /pos/cash-sessions
+### ❌ /finance/credit-notes
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /finance/payment-methods
 
-### /reservations/calendar
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+### ❌ /finance/ap-aging
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /reservations/policies
+### ❌ /finance/ar-aging
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /staff/insights
 
-### /reservations/today-board
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** Today's Board
-**Visited:** ✅
+### ❌ /workforce/timesheets
 
-#### Content Controls
+**Title:** N/A
+**Screenshot:** N/A
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Refresh | button | ❌ | ✅ | toast |
-| active | button | ❌ | ✅ | toast |
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
+### ❌ /workforce/pay-periods
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /reservations/blackouts
+### ❌ /workforce/payroll-runs
 
-**Title:** ChefCloud
-**Visited:** ✅
+**Title:** N/A
+**Screenshot:** N/A
 
-#### Content Controls
+### ❌ /workforce/payroll-runs/new
 
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Email / Password | button | ❌ | ✅ | toast |
-| PIN Login | button | ❌ | ✅ | toast |
-| Sign In | button | ❌ | ✅ | toast |
-| Tapas OwnerTapas Bar & Restaur | button | ❌ | ✅ | blocked |
-| Cafesserie ManagerCafesserie ( | button | ❌ | ✅ | blocked |
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| you@example.com | input | ❌ | ✅ | - |
-| •••••••• | input | ❌ | ✅ | - |
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /workforce/payslips
 
-### /reservations/capacity
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+### ❌ /workforce/compensation
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /waitlist
+### ❌ /workforce/remittances
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /workforce/remittances/new
 
-### /inventory/items
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+### ❌ /workforce/remittance-providers
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /inventory/purchase-orders
+### ❌ /workforce/remittance-mappings
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /workforce/payroll-export
 
-### /inventory/receipts
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+### ❌ /workforce/payroll-mapping
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /inventory/transfers
+### ❌ /workforce/policies
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /workforce/kiosk-devices
 
-### /inventory/waste
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+### ❌ /workforce/geo-fence
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /inventory/stocktakes
+### ❌ /kds
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /billing
 
-### /inventory/recipes
+**Title:** N/A
+**Screenshot:** N/A
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+### ❌ /security
 
----
+**Title:** N/A
+**Screenshot:** N/A
 
-### /inventory/depletions
+### ❌ /hr
 
-**Title:** 
-**Visited:** ❌ Redirected to /login
+**Title:** N/A
+**Screenshot:** N/A
 
----
+### ❌ /documents
 
-### /inventory/period-close
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /inventory/lots
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /inventory/adjustments
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /inventory/analytics
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /inventory/valuation
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /inventory/cogs
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /inventory/accounting-mappings
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /inventory/accounting-postings
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /finance/accounts
-
-**Title:** Access Denied
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
-
----
-
-### /finance/journal
-
-**Title:** Access Denied
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
-
----
-
-### /finance/periods
-
-**Title:** Access Denied
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
-
----
-
-### /finance/trial-balance
-
-**Title:** Access Denied
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
-
----
-
-### /finance/pnl
-
-**Title:** Access Denied
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
-
----
-
-### /finance/balance-sheet
-
-**Title:** Access Denied
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
-
----
-
-### /finance/vendors
-
-**Title:** Access Denied
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
-
----
-
-### /finance/vendor-bills
-
-**Title:** Access Denied
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
-
----
-
-### /finance/customers
-
-**Title:** Access Denied
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
-
----
-
-### /finance/customer-invoices
-
-**Title:** Access Denied
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
-
----
-
-### /finance/credit-notes
-
-**Title:** Access Denied
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
-
----
-
-### /finance/payment-methods
-
-**Title:** Access Denied
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
-
----
-
-### /finance/ap-aging
-
-**Title:** Access Denied
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
-
----
-
-### /finance/ar-aging
-
-**Title:** Access Denied
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| Go to Dashboard | link | ❌ | ✅ | - |
-
----
-
-### /staff/insights
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /workforce/timesheets
-
-**Title:** Timesheet Approvals
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Approve Selected (0) | button | ❌ | ⚠️ | - |
-| Reject Selected (0) | button | ❌ | ⚠️ | - |
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-
----
-
-### /workforce/pay-periods
-
-**Title:** Pay Periods
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| All Statuses | button | ❌ | ✅ | toast |
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-
----
-
-### /workforce/payroll-runs
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /workforce/payroll-runs/new
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /workforce/payslips
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /workforce/compensation
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /workforce/remittances
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /workforce/remittances/new
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /workforce/remittance-providers
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /workforce/remittance-mappings
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /workforce/payroll-export
-
-**Title:** Payroll Export
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Select a period... | button | ❌ | ✅ | toast |
-| Generate Export | button | ❌ | ⚠️ | - |
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-
----
-
-### /workforce/payroll-mapping
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /workforce/policies
-
-**Title:** Workforce Policies
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| NEAREST | button | ❌ | ✅ | toast |
-| Save Policy | button | ❌ | ⚠️ | - |
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| [input] | input | ❌ | ✅ | - |
-| [input] | input | ❌ | ✅ | - |
-
----
-
-### /workforce/kiosk-devices
-
-**Title:** 
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-
-#### API Calls on Load
-
-| Method | Path | Status |
-|--------|------|--------|
-| GET | /org/branches | 404 |
-
----
-
-### /workforce/geo-fence
-
-**Title:** Geo-Fence Management
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Export CSV | button | ❌ | ✅ | toast |
-| all | button | ❌ | ✅ | toast |
-| KPIs Dashboard | button | ❌ | ✅ | blocked |
-| Configurations | button | ❌ | ✅ | toast |
-| Event History | button | ❌ | ✅ | toast |
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-| KPIs Dashboard | tab | ❌ | ✅ | - |
-| Configurations | tab | ❌ | ✅ | - |
-| Event History | tab | ❌ | ✅ | - |
-| [input] | date-picker | ❌ | ✅ | - |
-| [input] | date-picker | ❌ | ✅ | - |
-
----
-
-### /kds
-
-**Title:** Unhandled Runtime Error
-**Visited:** ✅
-
-#### Topbar Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| All | button | ✅ | ✅ | blocked |
-| new | button | ✅ | ✅ | blocked |
-| in progress | button | ✅ | ✅ | blocked |
-| ready | button | ✅ | ✅ | blocked |
-| ⚙︎ | button | ✅ | ✅ | blocked |
-| Refresh | button | ✅ | ✅ | - |
-| ⓘDiagnostics | button | ❌ | ✅ | - |
-| ⤢Kiosk mode | button | ❌ | ✅ | - |
-| Device: Point of Sale | link | ❌ | ✅ | - |
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-
-#### API Calls on Load
-
-| Method | Path | Status |
-|--------|------|--------|
-| GET | /billing/org-subscription | 404 |
-| GET | /menu/items | 401 |
-| GET | /pos/orders | 401 |
-| GET | /kds/orders | 404 |
-
----
-
-### /billing
-
-**Title:** Billing & subscription
-**Visited:** ✅
-
-#### Topbar Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Refresh | button | ❌ | ✅ | toast |
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-
-#### API Calls on Load
-
-| Method | Path | Status |
-|--------|------|--------|
-| GET | /billing/plans | 404 |
-| GET | /billing/org-subscription | 404 |
-| GET | /billing/usage | 404 |
-
----
-
-### /security
-
-**Title:** Security Settings
-**Visited:** ✅
-
-#### Content Controls
-
-| Label | Type | Has TestId | Safe | Outcome |
-|-------|------|------------|------|---------|
-| 🔑 Register Passkey | button | ❌ | ⚠️ | - |
-| 🔓 Login with Passkey | button | ❌ | ⚠️ | - |
-| Open Debug Panel | icon-button | ❌ | ✅ | - |
-| Open Tanstack query devtools | icon-button | ❌ | ✅ | - |
-| Skip to main content | link | ❌ | ✅ | - |
-
----
-
-### /hr
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-### /documents
-
-**Title:** 
-**Visited:** ❌ Redirected to /login
-
----
-
-## Controls Needing data-testid (Top 30)
-
-| Route | Label | Type | Selector |
-|-------|-------|------|----------|
-| /finance | Open Debug Panel | icon-button | getByRole('icon-button', { name: 'Open D |
-| /finance | Skip to main content | link | a[href="#main-content"] |
-| /finance | Go to Dashboard | link | a[href="/dashboard"] |
-| /feedback | Open Debug Panel | icon-button | getByRole('icon-button', { name: 'Open D |
-| /feedback | Skip to main content | link | a[href="#main-content"] |
-| /feedback | Go to Dashboard | link | a[href="/dashboard"] |
-| /workforce/schedule | Create Shift | button | getByRole('button', { name: 'Create Shif |
-| /workforce/schedule | Publish (0 Draft) | button | getByRole('button', { name: 'Publish (0  |
-| /workforce/schedule | Select Branch | button | getByRole('button', { name: 'Select Bran |
-| /workforce/schedule | Open Debug Panel | icon-button | getByRole('icon-button', { name: 'Open D |
-| /workforce/schedule | Skip to main content | link | a[href="#main-content"] |
-| /workforce/schedule | [input] | date-picker | input:nth-of-type(7) |
-| /workforce/schedule | [input] | date-picker | input:nth-of-type(8) |
-| /workforce/timeclock | Clock In | button | getByRole('button', { name: 'Clock In' } |
-| /workforce/timeclock | Open Debug Panel | icon-button | getByRole('icon-button', { name: 'Open D |
-| /workforce/timeclock | Skip to main content | link | a[href="#main-content"] |
-| /workforce/approvals | All Branches | button | getByRole('button', { name: 'All Branche |
-| /workforce/approvals | COMPLETED | button | getByRole('button', { name: 'COMPLETED'  |
-| /workforce/approvals | Open Debug Panel | icon-button | getByRole('icon-button', { name: 'Open D |
-| /workforce/approvals | Skip to main content | link | a[href="#main-content"] |
-| /workforce/approvals | [input] | date-picker | input:nth-of-type(6) |
-| /workforce/approvals | [input] | date-picker | input:nth-of-type(7) |
-| /workforce/swaps | Open Debug Panel | icon-button | getByRole('icon-button', { name: 'Open D |
-| /workforce/swaps | Skip to main content | link | a[href="#main-content"] |
-| /workforce/labor | Shifts CSV | button | getByRole('button', { name: 'Shifts CSV' |
-| /workforce/labor | Time Entries CSV | button | getByRole('button', { name: 'Time Entrie |
-| /workforce/labor | Labor Summary CSV | button | getByRole('button', { name: 'Labor Summa |
-| /workforce/labor | All Branches | button | getByRole('button', { name: 'All Branche |
-| /workforce/labor | Open Debug Panel | icon-button | getByRole('icon-button', { name: 'Open D |
-| /workforce/labor | Skip to main content | link | a[href="#main-content"] |
-
-## Unmapped Routes
-
-- **/dashboard**: Redirected to /login
-- **/analytics**: Redirected to /login
-- **/reports**: Redirected to /login
-- **/pos**: Redirected to /login
-- **/reservations**: Redirected to /login
-- **/inventory**: Redirected to /login
-- **/service-providers**: Redirected to /login
-- **/staff**: Redirected to /login
-- **/settings**: Redirected to /login
-- **/workspaces/owner**: Redirected to /login
-- **/reports/budgets**: Redirected to /login
-- **/reports/subscriptions**: Redirected to /login
-- **/pos/cash-sessions**: Redirected to /login
-- **/reservations/calendar**: Redirected to /login
-- **/reservations/policies**: Redirected to /login
-- **/reservations/capacity**: Redirected to /login
-- **/waitlist**: Redirected to /login
-- **/inventory/items**: Redirected to /login
-- **/inventory/purchase-orders**: Redirected to /login
-- **/inventory/receipts**: Redirected to /login
-- **/inventory/transfers**: Redirected to /login
-- **/inventory/waste**: Redirected to /login
-- **/inventory/stocktakes**: Redirected to /login
-- **/inventory/recipes**: Redirected to /login
-- **/inventory/depletions**: Redirected to /login
-- **/inventory/period-close**: Redirected to /login
-- **/inventory/lots**: Redirected to /login
-- **/inventory/adjustments**: Redirected to /login
-- **/inventory/analytics**: Redirected to /login
-- **/inventory/valuation**: Redirected to /login
-- **/inventory/cogs**: Redirected to /login
-- **/inventory/accounting-mappings**: Redirected to /login
-- **/inventory/accounting-postings**: Redirected to /login
-- **/staff/insights**: Redirected to /login
-- **/workforce/payroll-runs**: Redirected to /login
-- **/workforce/payroll-runs/new**: Redirected to /login
-- **/workforce/payslips**: Redirected to /login
-- **/workforce/compensation**: Redirected to /login
-- **/workforce/remittances**: Redirected to /login
-- **/workforce/remittances/new**: Redirected to /login
-- **/workforce/remittance-providers**: Redirected to /login
-- **/workforce/remittance-mappings**: Redirected to /login
-- **/workforce/payroll-mapping**: Redirected to /login
-- **/hr**: Redirected to /login
-- **/documents**: Redirected to /login
+**Title:** N/A
+**Screenshot:** N/A

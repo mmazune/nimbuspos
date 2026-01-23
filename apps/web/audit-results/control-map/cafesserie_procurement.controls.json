@@ -1,0 +1,2872 @@
+{
+  "org": "cafesserie",
+  "role": "procurement",
+  "email": "procurement@cafesserie.demo.local",
+  "extractedAt": "2026-01-20T01:38:04.455Z",
+  "durationMs": 95222,
+  "routesVisited": 15,
+  "controlsExtracted": 286,
+  "controlsMissingTestId": 240,
+  "controls": [
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "User menu for Oscar Procurement",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "Refresh dashboard data",
+      "testId": "dashboard-refresh-btn",
+      "locatorStrategy": "getByTestId('dashboard-refresh-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "Select 7 Days date range",
+      "testId": "date-preset-7d",
+      "locatorStrategy": "getByTestId('date-preset-7d')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "Select 30 Days date range",
+      "testId": "date-preset-30d",
+      "locatorStrategy": "getByTestId('date-preset-30d')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "Select 90 Days date range",
+      "testId": "date-preset-90d",
+      "locatorStrategy": "getByTestId('date-preset-90d')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "Select 180 Days date range",
+      "testId": "date-preset-180d",
+      "locatorStrategy": "getByTestId('date-preset-180d')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "Acacia Mall",
+      "testId": null,
+      "locatorStrategy": "getByText('Acacia Mall')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "Arena Mall",
+      "testId": null,
+      "locatorStrategy": "getByText('Arena Mall')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "Mombasa",
+      "testId": null,
+      "locatorStrategy": "getByText('Mombasa')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "Village Mall",
+      "testId": null,
+      "locatorStrategy": "getByText('Village Mall')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "View Revenue details",
+      "testId": "kpi-revenue",
+      "locatorStrategy": "getByTestId('kpi-revenue')",
+      "riskClass": "unknown",
+      "tagName": "div",
+      "role": "button"
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "View Gross Margin details",
+      "testId": "kpi-gross-margin",
+      "locatorStrategy": "getByTestId('kpi-gross-margin')",
+      "riskClass": "unknown",
+      "tagName": "div",
+      "role": "button"
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "View Low Stock details",
+      "testId": "kpi-low-stock",
+      "locatorStrategy": "getByTestId('kpi-low-stock')",
+      "riskClass": "unknown",
+      "tagName": "div",
+      "role": "button"
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "button",
+      "accessibleName": "View Payables Due details",
+      "testId": "kpi-payables-due",
+      "locatorStrategy": "getByTestId('kpi-payables-due')",
+      "riskClass": "mutation",
+      "tagName": "div",
+      "role": "button"
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Inventory",
+      "testId": null,
+      "locatorStrategy": "getByText('Inventory')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Purchase Orders",
+      "testId": null,
+      "locatorStrategy": "getByText('Purchase Orders')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Receipts",
+      "testId": null,
+      "locatorStrategy": "getByText('Receipts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Transfers",
+      "testId": null,
+      "locatorStrategy": "getByText('Transfers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Waste",
+      "testId": null,
+      "locatorStrategy": "getByText('Waste')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Recipes",
+      "testId": null,
+      "locatorStrategy": "getByText('Recipes')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Depletions",
+      "testId": null,
+      "locatorStrategy": "getByText('Depletions')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Period Close",
+      "testId": null,
+      "locatorStrategy": "getByText('Period Close')",
+      "riskClass": "mutation",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Dashboard",
+      "testId": null,
+      "locatorStrategy": "getByText('Dashboard')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Settings",
+      "testId": null,
+      "locatorStrategy": "getByText('Settings')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "Low Stock Items\n\n16\n\n16 items below reorder level",
+      "testId": "alert-item-low-stock",
+      "locatorStrategy": "getByTestId('alert-item-low-stock')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "link",
+      "accessibleName": "View all",
+      "testId": "top-items-view-all",
+      "locatorStrategy": "getByTestId('top-items-view-all')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "input",
+      "accessibleName": "Start date",
+      "testId": "date-from-input",
+      "locatorStrategy": "getByTestId('date-from-input')",
+      "riskClass": "read-only",
+      "tagName": "input",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "input",
+      "accessibleName": "End date",
+      "testId": "date-to-input",
+      "locatorStrategy": "getByTestId('date-to-input')",
+      "riskClass": "read-only",
+      "tagName": "input",
+      "role": null
+    },
+    {
+      "route": "/dashboard",
+      "controlType": "select",
+      "accessibleName": "All Branches\nAcacia Mall\nArena Mall\nMombasa\nVillage Mall",
+      "testId": null,
+      "locatorStrategy": "locator('select')",
+      "riskClass": "read-only",
+      "tagName": "select",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "button",
+      "accessibleName": "User menu for Oscar Procurement",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "button",
+      "accessibleName": "All Items",
+      "testId": null,
+      "locatorStrategy": "getByText('All Items')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "button",
+      "accessibleName": "Low Stock Only",
+      "testId": null,
+      "locatorStrategy": "getByText('Low Stock Only')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "button",
+      "accessibleName": "Edit",
+      "testId": null,
+      "locatorStrategy": "getByText('Edit')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "Inventory",
+      "testId": null,
+      "locatorStrategy": "getByText('Inventory')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "Purchase Orders",
+      "testId": null,
+      "locatorStrategy": "getByText('Purchase Orders')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "Receipts",
+      "testId": null,
+      "locatorStrategy": "getByText('Receipts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "Transfers",
+      "testId": null,
+      "locatorStrategy": "getByText('Transfers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "Waste",
+      "testId": null,
+      "locatorStrategy": "getByText('Waste')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "Recipes",
+      "testId": null,
+      "locatorStrategy": "getByText('Recipes')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "Depletions",
+      "testId": null,
+      "locatorStrategy": "getByText('Depletions')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "Period Close",
+      "testId": null,
+      "locatorStrategy": "getByText('Period Close')",
+      "riskClass": "mutation",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "Dashboard",
+      "testId": null,
+      "locatorStrategy": "getByText('Dashboard')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "Settings",
+      "testId": null,
+      "locatorStrategy": "getByText('Settings')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "button",
+      "accessibleName": "User menu for Oscar Procurement",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "button",
+      "accessibleName": "Cancel",
+      "testId": null,
+      "locatorStrategy": "getByText('Cancel')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "button",
+      "accessibleName": "Skip Depletion",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip Depletion')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "button",
+      "accessibleName": "Close",
+      "testId": null,
+      "locatorStrategy": "getByText('Close')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "Inventory",
+      "testId": null,
+      "locatorStrategy": "getByText('Inventory')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "Purchase Orders",
+      "testId": null,
+      "locatorStrategy": "getByText('Purchase Orders')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "Receipts",
+      "testId": null,
+      "locatorStrategy": "getByText('Receipts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "Transfers",
+      "testId": null,
+      "locatorStrategy": "getByText('Transfers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "Waste",
+      "testId": null,
+      "locatorStrategy": "getByText('Waste')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "Recipes",
+      "testId": null,
+      "locatorStrategy": "getByText('Recipes')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "Depletions",
+      "testId": null,
+      "locatorStrategy": "getByText('Depletions')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "Period Close",
+      "testId": null,
+      "locatorStrategy": "getByText('Period Close')",
+      "riskClass": "mutation",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "Dashboard",
+      "testId": null,
+      "locatorStrategy": "getByText('Dashboard')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "Settings",
+      "testId": null,
+      "locatorStrategy": "getByText('Settings')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "accessibleName": "User menu for Oscar Procurement",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "accessibleName": "All Branches",
+      "testId": null,
+      "locatorStrategy": "getByText('All Branches')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "accessibleName": "Pre-Close Check",
+      "testId": null,
+      "locatorStrategy": "getByText('Pre-Close Check')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "accessibleName": "Generate Periods",
+      "testId": null,
+      "locatorStrategy": "getByText('Generate Periods')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "accessibleName": "Create Period",
+      "testId": null,
+      "locatorStrategy": "getByText('Create Period')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "accessibleName": "Close Period",
+      "testId": null,
+      "locatorStrategy": "getByText('Close Period')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "Inventory",
+      "testId": null,
+      "locatorStrategy": "getByText('Inventory')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "Purchase Orders",
+      "testId": null,
+      "locatorStrategy": "getByText('Purchase Orders')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "Receipts",
+      "testId": null,
+      "locatorStrategy": "getByText('Receipts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "Transfers",
+      "testId": null,
+      "locatorStrategy": "getByText('Transfers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "Waste",
+      "testId": null,
+      "locatorStrategy": "getByText('Waste')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "Recipes",
+      "testId": null,
+      "locatorStrategy": "getByText('Recipes')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "Depletions",
+      "testId": null,
+      "locatorStrategy": "getByText('Depletions')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "Period Close",
+      "testId": null,
+      "locatorStrategy": "getByText('Period Close')",
+      "riskClass": "mutation",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "Dashboard",
+      "testId": null,
+      "locatorStrategy": "getByText('Dashboard')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "Settings",
+      "testId": null,
+      "locatorStrategy": "getByText('Settings')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "button",
+      "accessibleName": "User menu for Oscar Procurement",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "button",
+      "accessibleName": "All Statuses",
+      "testId": null,
+      "locatorStrategy": "getByText('All Statuses')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "button",
+      "accessibleName": "Create PO",
+      "testId": null,
+      "locatorStrategy": "getByText('Create PO')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "Inventory",
+      "testId": null,
+      "locatorStrategy": "getByText('Inventory')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "Purchase Orders",
+      "testId": null,
+      "locatorStrategy": "getByText('Purchase Orders')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "Receipts",
+      "testId": null,
+      "locatorStrategy": "getByText('Receipts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "Transfers",
+      "testId": null,
+      "locatorStrategy": "getByText('Transfers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "Waste",
+      "testId": null,
+      "locatorStrategy": "getByText('Waste')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "Recipes",
+      "testId": null,
+      "locatorStrategy": "getByText('Recipes')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "Depletions",
+      "testId": null,
+      "locatorStrategy": "getByText('Depletions')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "Period Close",
+      "testId": null,
+      "locatorStrategy": "getByText('Period Close')",
+      "riskClass": "mutation",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "Dashboard",
+      "testId": null,
+      "locatorStrategy": "getByText('Dashboard')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "Settings",
+      "testId": null,
+      "locatorStrategy": "getByText('Settings')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "button",
+      "accessibleName": "User menu for Oscar Procurement",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "button",
+      "accessibleName": "All Statuses",
+      "testId": null,
+      "locatorStrategy": "getByText('All Statuses')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "button",
+      "accessibleName": "Create Receipt",
+      "testId": null,
+      "locatorStrategy": "getByText('Create Receipt')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "Inventory",
+      "testId": null,
+      "locatorStrategy": "getByText('Inventory')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "Purchase Orders",
+      "testId": null,
+      "locatorStrategy": "getByText('Purchase Orders')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "Receipts",
+      "testId": null,
+      "locatorStrategy": "getByText('Receipts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "Transfers",
+      "testId": null,
+      "locatorStrategy": "getByText('Transfers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "Waste",
+      "testId": null,
+      "locatorStrategy": "getByText('Waste')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "Recipes",
+      "testId": null,
+      "locatorStrategy": "getByText('Recipes')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "Depletions",
+      "testId": null,
+      "locatorStrategy": "getByText('Depletions')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "Period Close",
+      "testId": null,
+      "locatorStrategy": "getByText('Period Close')",
+      "riskClass": "mutation",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "Dashboard",
+      "testId": null,
+      "locatorStrategy": "getByText('Dashboard')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "Settings",
+      "testId": null,
+      "locatorStrategy": "getByText('Settings')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "button",
+      "accessibleName": "User menu for Oscar Procurement",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "button",
+      "accessibleName": "Create Recipe",
+      "testId": null,
+      "locatorStrategy": "getByText('Create Recipe')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "button",
+      "accessibleName": "Add Line",
+      "testId": null,
+      "locatorStrategy": "getByText('Add Line')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "button",
+      "accessibleName": "Cancel",
+      "testId": null,
+      "locatorStrategy": "getByText('Cancel')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "Inventory",
+      "testId": null,
+      "locatorStrategy": "getByText('Inventory')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "Purchase Orders",
+      "testId": null,
+      "locatorStrategy": "getByText('Purchase Orders')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "Receipts",
+      "testId": null,
+      "locatorStrategy": "getByText('Receipts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "Transfers",
+      "testId": null,
+      "locatorStrategy": "getByText('Transfers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "Waste",
+      "testId": null,
+      "locatorStrategy": "getByText('Waste')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "Recipes",
+      "testId": null,
+      "locatorStrategy": "getByText('Recipes')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "Depletions",
+      "testId": null,
+      "locatorStrategy": "getByText('Depletions')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "Period Close",
+      "testId": null,
+      "locatorStrategy": "getByText('Period Close')",
+      "riskClass": "mutation",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "Dashboard",
+      "testId": null,
+      "locatorStrategy": "getByText('Dashboard')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "Settings",
+      "testId": null,
+      "locatorStrategy": "getByText('Settings')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/transfers",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "button",
+      "accessibleName": "User menu for Oscar Procurement",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "button",
+      "accessibleName": "New Waste Document",
+      "testId": null,
+      "locatorStrategy": "getByText('New Waste Document')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "button",
+      "accessibleName": "All Statuses",
+      "testId": null,
+      "locatorStrategy": "getByText('All Statuses')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "button",
+      "accessibleName": "All Reasons",
+      "testId": null,
+      "locatorStrategy": "getByText('All Reasons')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "Inventory",
+      "testId": null,
+      "locatorStrategy": "getByText('Inventory')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "Purchase Orders",
+      "testId": null,
+      "locatorStrategy": "getByText('Purchase Orders')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "Receipts",
+      "testId": null,
+      "locatorStrategy": "getByText('Receipts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "Transfers",
+      "testId": null,
+      "locatorStrategy": "getByText('Transfers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "Waste",
+      "testId": null,
+      "locatorStrategy": "getByText('Waste')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "Recipes",
+      "testId": null,
+      "locatorStrategy": "getByText('Recipes')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "Depletions",
+      "testId": null,
+      "locatorStrategy": "getByText('Depletions')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "Period Close",
+      "testId": null,
+      "locatorStrategy": "getByText('Period Close')",
+      "riskClass": "mutation",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "Dashboard",
+      "testId": null,
+      "locatorStrategy": "getByText('Dashboard')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "Settings",
+      "testId": null,
+      "locatorStrategy": "getByText('Settings')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "button",
+      "accessibleName": "User menu for Oscar Procurement",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Inventory",
+      "testId": null,
+      "locatorStrategy": "getByText('Inventory')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Purchase Orders",
+      "testId": null,
+      "locatorStrategy": "getByText('Purchase Orders')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Receipts",
+      "testId": null,
+      "locatorStrategy": "getByText('Receipts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Transfers",
+      "testId": null,
+      "locatorStrategy": "getByText('Transfers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Waste",
+      "testId": null,
+      "locatorStrategy": "getByText('Waste')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Recipes",
+      "testId": null,
+      "locatorStrategy": "getByText('Recipes')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Depletions",
+      "testId": null,
+      "locatorStrategy": "getByText('Depletions')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Period Close",
+      "testId": null,
+      "locatorStrategy": "getByText('Period Close')",
+      "riskClass": "mutation",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Dashboard",
+      "testId": null,
+      "locatorStrategy": "getByText('Dashboard')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Settings",
+      "testId": null,
+      "locatorStrategy": "getByText('Settings')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Sales\nFranchise Analytics\n\nSales, margins, rankings and multi-month trends across all branches.\n\nCSV",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Finance\nBudgets & Variance\n\nBudget vs actual sales, COGS and variance across branches.\n\nCSV export\nP",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Operations\nInventory & Stock\n\nCurrent stock levels, low-stock items, wastage and shrinkage.",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "HR\nStaff Insights\n\nKPIs, Employee of the Month awards and promotion suggestions.",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Customer\nCustomer Feedback & NPS\n\nPromoters, passives, detractors and feedback comments.",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Admin\nReport Subscriptions\n\nManage automated delivery of shift-end reports, daily/weekly/monthly dig",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Operations\nReservations & Events\n\nReservation calendar, deposits and event management.",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Tech\nAPI Usage & Webhooks\n\nAPI key usage metrics, webhook delivery logs and failures.\n\nDev",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Finance\nFinance Overview\n\nP&L summary, expense tracking and service provider payables.",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "mutation",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "button",
+      "accessibleName": "User menu for Oscar Procurement",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "button",
+      "accessibleName": "All",
+      "testId": null,
+      "locatorStrategy": "getByText('All')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "button",
+      "accessibleName": "Active Only",
+      "testId": null,
+      "locatorStrategy": "getByText('Active Only')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "button",
+      "accessibleName": "Edit",
+      "testId": null,
+      "locatorStrategy": "getByText('Edit')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Inventory",
+      "testId": null,
+      "locatorStrategy": "getByText('Inventory')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Purchase Orders",
+      "testId": null,
+      "locatorStrategy": "getByText('Purchase Orders')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Receipts",
+      "testId": null,
+      "locatorStrategy": "getByText('Receipts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Transfers",
+      "testId": null,
+      "locatorStrategy": "getByText('Transfers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Waste",
+      "testId": null,
+      "locatorStrategy": "getByText('Waste')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Recipes",
+      "testId": null,
+      "locatorStrategy": "getByText('Recipes')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Depletions",
+      "testId": null,
+      "locatorStrategy": "getByText('Depletions')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Period Close",
+      "testId": null,
+      "locatorStrategy": "getByText('Period Close')",
+      "riskClass": "mutation",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Dashboard",
+      "testId": null,
+      "locatorStrategy": "getByText('Dashboard')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Settings",
+      "testId": null,
+      "locatorStrategy": "getByText('Settings')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "button",
+      "accessibleName": "User menu for Oscar Procurement",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Inventory",
+      "testId": null,
+      "locatorStrategy": "getByText('Inventory')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Purchase Orders",
+      "testId": null,
+      "locatorStrategy": "getByText('Purchase Orders')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Receipts",
+      "testId": null,
+      "locatorStrategy": "getByText('Receipts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Transfers",
+      "testId": null,
+      "locatorStrategy": "getByText('Transfers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Waste",
+      "testId": null,
+      "locatorStrategy": "getByText('Waste')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Recipes",
+      "testId": null,
+      "locatorStrategy": "getByText('Recipes')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Depletions",
+      "testId": null,
+      "locatorStrategy": "getByText('Depletions')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Period Close",
+      "testId": null,
+      "locatorStrategy": "getByText('Period Close')",
+      "riskClass": "mutation",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Dashboard",
+      "testId": null,
+      "locatorStrategy": "getByText('Dashboard')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Settings",
+      "testId": null,
+      "locatorStrategy": "getByText('Settings')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/settings",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "accessibleName": "Refresh",
+      "testId": null,
+      "locatorStrategy": "getByText('Refresh')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "accessibleName": "Weekly Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('Weekly Availability')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "accessibleName": "Date Exceptions",
+      "testId": null,
+      "locatorStrategy": "getByText('Date Exceptions')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "accessibleName": "Add Slot",
+      "testId": null,
+      "locatorStrategy": "getByText('Add Slot')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "accessibleName": "Refresh",
+      "testId": null,
+      "locatorStrategy": "getByText('Refresh')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "accessibleName": "Request Swap",
+      "testId": null,
+      "locatorStrategy": "getByText('Request Swap')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "accessibleName": "Sent Requests (0)",
+      "testId": null,
+      "locatorStrategy": "getByText('Sent Requests (0)')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "accessibleName": "Received Requests (0)",
+      "testId": null,
+      "locatorStrategy": "getByText('Received Requests (0)')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "accessibleName": "Refresh",
+      "testId": null,
+      "locatorStrategy": "getByText('Refresh')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    }
+  ]
+}

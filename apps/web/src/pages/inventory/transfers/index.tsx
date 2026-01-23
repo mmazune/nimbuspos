@@ -241,7 +241,7 @@ export default function InventoryTransfersPage() {
         subtitle="Manage inter-branch and intra-branch stock transfers"
         actions={
           isL3OrAbove && (
-            <Button onClick={() => setDialogOpen(true)}>
+            <Button onClick={() => setDialogOpen(true)} data-testid="transfer-create-btn">
               <Plus className="mr-2 h-4 w-4" />
               New Transfer
             </Button>

@@ -1,0 +1,104 @@
+{
+  "org": "cafesserie",
+  "role": "owner",
+  "timestamp": "2026-01-22T14:03:22.907Z",
+  "controls": [
+    {
+      "route": "/pos/receipts/cmknx7s8106d314b5ygjgcpbx",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7q06cz14b5ixx36rj0",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7k06cx14b5zdpitl59",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7e06cv14b5rerse2rk",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    },
+    {
+      "route": "/pos/receipts/cmknx7s7906ct14b51x4czyol",
+      "text": "Print button (receipt detail)",
+      "selector": "button:has-text(\"Print\")",
+      "classification": "UI_ONLY_PRINT",
+      "endpoints": [],
+      "windowPrintCalled": true,
+      "popupDetected": false
+    }
+  ],
+  "receiptSamples": [
+    {
+      "receiptId": "cmknx7s8106d314b5ygjgcpbx",
+      "route": "/pos/receipts/cmknx7s8106d314b5ygjgcpbx",
+      "loadStatus": 200,
+      "payloadSize": 226321,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7q06cz14b5ixx36rj0",
+      "route": "/pos/receipts/cmknx7s7q06cz14b5ixx36rj0",
+      "loadStatus": 200,
+      "payloadSize": 226322,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7k06cx14b5zdpitl59",
+      "route": "/pos/receipts/cmknx7s7k06cx14b5zdpitl59",
+      "loadStatus": 200,
+      "payloadSize": 226322,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7e06cv14b5rerse2rk",
+      "route": "/pos/receipts/cmknx7s7e06cv14b5rerse2rk",
+      "loadStatus": 200,
+      "payloadSize": 226323,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    },
+    {
+      "receiptId": "cmknx7s7906ct14b51x4czyol",
+      "route": "/pos/receipts/cmknx7s7906ct14b51x4czyol",
+      "loadStatus": 200,
+      "payloadSize": 226323,
+      "printControlFound": true,
+      "windowPrintCalled": true
+    }
+  ],
+  "summary": {
+    "totalControls": 5,
+    "hasDownload": 0,
+    "uiOnlyPrint": 5,
+    "asyncJobDownload": 0,
+    "hasEndpoints": 0,
+    "errors": 0,
+    "receiptsSampled": 5,
+    "receiptsWithPrint": 5
+  }
+}

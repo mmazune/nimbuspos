@@ -1,0 +1,216 @@
+{
+  "org": "tapas",
+  "role": "manager",
+  "email": "manager@tapas.demo.local",
+  "timestamp": "2026-01-22T13:09:18.404Z",
+  "duration": 82382,
+  "loginSuccess": true,
+  "routes": [
+    {
+      "route": "/pos",
+      "visited": true,
+      "status": "success",
+      "controls": []
+    },
+    {
+      "route": "/pos/cash-sessions",
+      "visited": true,
+      "status": "success",
+      "controls": []
+    },
+    {
+      "route": "/reports",
+      "visited": true,
+      "status": "success",
+      "controls": [
+        {
+          "route": "/reports",
+          "selector": "[data-testid=\"report-card-analytics-overview\"]",
+          "testId": "report-card-analytics-overview",
+          "text": "SalesFranchise AnalyticsSales, margins, rankings and multi-month trends across all branches.CSV expo",
+          "classification": "HAS_DOWNLOAD"
+        },
+        {
+          "route": "/reports",
+          "selector": "[data-testid=\"report-card-finance-budgets\"]",
+          "testId": "report-card-finance-budgets",
+          "text": "FinanceBudgets & VarianceBudget vs actual sales, COGS and variance across branches.CSV exportPro+",
+          "classification": "HAS_DOWNLOAD"
+        }
+      ]
+    },
+    {
+      "route": "/reports/daily",
+      "visited": true,
+      "status": "error",
+      "controls": [],
+      "error": "HTTP 404"
+    },
+    {
+      "route": "/reports/sales",
+      "visited": true,
+      "status": "error",
+      "controls": [],
+      "error": "HTTP 404"
+    },
+    {
+      "route": "/reports/x",
+      "visited": true,
+      "status": "error",
+      "controls": [],
+      "error": "HTTP 404"
+    },
+    {
+      "route": "/reports/inventory",
+      "visited": true,
+      "status": "error",
+      "controls": [],
+      "error": "HTTP 404"
+    },
+    {
+      "route": "/reports/workforce",
+      "visited": true,
+      "status": "error",
+      "controls": [],
+      "error": "HTTP 404"
+    },
+    {
+      "route": "/finance/pnl",
+      "visited": true,
+      "status": "success",
+      "controls": [
+        {
+          "route": "/finance/pnl",
+          "selector": "[data-testid=\"pnl-export\"]",
+          "testId": "pnl-export",
+          "text": "Export CSV",
+          "classification": "HAS_DOWNLOAD"
+        }
+      ]
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "visited": true,
+      "status": "success",
+      "controls": [
+        {
+          "route": "/finance/balance-sheet",
+          "selector": "[data-testid=\"bs-export\"]",
+          "testId": "bs-export",
+          "text": "Export CSV",
+          "classification": "HAS_DOWNLOAD"
+        }
+      ]
+    },
+    {
+      "route": "/finance/trial-balance",
+      "visited": true,
+      "status": "success",
+      "controls": [
+        {
+          "route": "/finance/trial-balance",
+          "selector": "[data-testid=\"tb-export\"]",
+          "testId": "tb-export",
+          "text": "Export CSV",
+          "classification": "HAS_DOWNLOAD"
+        }
+      ]
+    },
+    {
+      "route": "/finance/journal",
+      "visited": true,
+      "status": "success",
+      "controls": []
+    },
+    {
+      "route": "/finance/accounts",
+      "visited": true,
+      "status": "success",
+      "controls": []
+    },
+    {
+      "route": "/finance/ap-aging",
+      "visited": true,
+      "status": "success",
+      "controls": []
+    },
+    {
+      "route": "/finance/ar-aging",
+      "visited": true,
+      "status": "success",
+      "controls": []
+    },
+    {
+      "route": "/inventory",
+      "visited": true,
+      "status": "success",
+      "controls": []
+    },
+    {
+      "route": "/inventory/valuation",
+      "visited": true,
+      "status": "success",
+      "controls": []
+    },
+    {
+      "route": "/inventory/cogs",
+      "visited": true,
+      "status": "success",
+      "controls": []
+    },
+    {
+      "route": "/inventory/on-hand",
+      "visited": true,
+      "status": "success",
+      "controls": [
+        {
+          "route": "/inventory/on-hand",
+          "selector": "[data-testid=\"export-btn\"]",
+          "testId": "export-btn",
+          "text": "Export CSV",
+          "classification": "HAS_DOWNLOAD"
+        }
+      ]
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "visited": true,
+      "status": "success",
+      "controls": []
+    },
+    {
+      "route": "/inventory/receipts",
+      "visited": true,
+      "status": "success",
+      "controls": []
+    },
+    {
+      "route": "/inventory/stocktakes",
+      "visited": true,
+      "status": "success",
+      "controls": []
+    },
+    {
+      "route": "/workforce/payroll",
+      "visited": true,
+      "status": "error",
+      "controls": [],
+      "error": "HTTP 404"
+    },
+    {
+      "route": "/analytics",
+      "visited": true,
+      "status": "success",
+      "controls": []
+    }
+  ],
+  "totalControls": 6,
+  "byClassification": {
+    "HAS_DOWNLOAD": 6,
+    "HAS_EXPORT_ENDPOINTS": 0,
+    "UI_ONLY_PRINT": 0,
+    "SKIPPED_MUTATION_RISK": 0,
+    "NOT_FOUND": 0,
+    "ERROR": 0
+  }
+}

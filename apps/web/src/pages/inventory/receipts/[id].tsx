@@ -84,7 +84,7 @@ export default function ReceiptDetailPage() {
   const { data: receipt, isLoading } = useQuery({
     queryKey: ['receipt', id],
     queryFn: async () => {
-      const response = await apiClient.get<Receipt>(`/inventory/procurement/receipts/${id}`);
+      const response = await apiClient.get<Receipt>(`/inventory/receipts/${id}`);
       return response.data;
     },
     enabled: !!id,
@@ -103,7 +103,7 @@ export default function ReceiptDetailPage() {
   // Post mutation
   const postMutation = useMutation({
     mutationFn: async () => {
-      const response = await apiClient.post(`/inventory/procurement/receipts/${id}/post`);
+      const response = await apiClient.post(`/inventory/receipts/${id}/post`);
       return response.data;
     },
     onSuccess: () => {
@@ -115,7 +115,7 @@ export default function ReceiptDetailPage() {
   // Void mutation
   const voidMutation = useMutation({
     mutationFn: async () => {
-      const response = await apiClient.post(`/inventory/procurement/receipts/${id}/void`);
+      const response = await apiClient.post(`/inventory/receipts/${id}/void`);
       return response.data;
     },
     onSuccess: () => {

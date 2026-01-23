@@ -11,6 +11,7 @@
 
 import { useEffect, useState } from 'react';
 import { loadPosSnapshot, savePosSnapshot, isSnapshotStale, getSnapshotAgeMs } from '@/lib/posIndexedDb';
+import { authenticatedFetch, API_BASE_URL } from '@/lib/api';
 
 export interface PosOrder {
   id: string;
@@ -65,12 +66,7 @@ export function usePosCachedOpenOrders(): UsePosCachedOpenOrdersResult {
       }
 
       try {
-        const resp = await fetch(`${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001'}/pos/orders?status=OPEN`, {
-          headers: {
-            'Accept': 'application/json',
-          },
-          credentials: 'include',
-        });
+        const resp = await authenticatedFetch(`${API_BASE_URL}/pos/orders?status=OPEN`);
 
         if (!resp.ok) {
           throw new Error(`Failed to load POS open orders: ${resp.status}`);

@@ -1,0 +1,215 @@
+{
+  "org": "tapas",
+  "role": "waiter",
+  "email": "waiter@tapas.demo.local",
+  "generatedAt": "2026-01-20T04:05:10.801Z",
+  "durationMs": 18651,
+  "summary": {
+    "routesVisited": 6,
+    "routesWithEndpoints": 6,
+    "routesNoEndpoints": 0,
+    "routesFailed": 0,
+    "totalApiCalls": 25,
+    "uniqueEndpoints": 12
+  },
+  "routes": [
+    {
+      "route": "/pos",
+      "actionId": "route-load::tapas::waiter::/pos",
+      "loadTimeMs": 1688,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 403,
+          "timestamp": 1768881897096
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881897101
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200,
+          "timestamp": 1768881897116
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403,
+          "timestamp": 1768881897158
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881897158
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 403,
+          "timestamp": 1768881897338
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200,
+          "timestamp": 1768881897366
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/reservations",
+      "actionId": "route-load::tapas::waiter::/reservations",
+      "loadTimeMs": 3004,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881900011
+        },
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 403,
+          "timestamp": 1768881900378
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 403,
+          "timestamp": 1768881900383
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881900385
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/settings",
+      "actionId": "route-load::tapas::waiter::/settings",
+      "loadTimeMs": 2297,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881902283
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881902685
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "actionId": "route-load::tapas::waiter::/workforce/my-availability",
+      "loadTimeMs": 2213,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881904552
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200,
+          "timestamp": 1768881904573
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200,
+          "timestamp": 1768881904607
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881904891
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "actionId": "route-load::tapas::waiter::/workforce/my-swaps",
+      "loadTimeMs": 2515,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881907355
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200,
+          "timestamp": 1768881907357
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881907404
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "actionId": "route-load::tapas::waiter::/workforce/open-shifts",
+      "loadTimeMs": 2369,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404,
+          "timestamp": 1768881909323
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881909385
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200,
+          "timestamp": 1768881909387
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881909774
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404,
+          "timestamp": 1768881910341
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

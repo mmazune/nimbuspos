@@ -25,6 +25,7 @@ import { InventoryCostingService } from './inventory-costing.service';
 import { InventoryGlPostingService } from './inventory-gl-posting.service';
 import { InventoryPeriodsService } from './inventory-periods.service';
 import { Prisma, DepletionStatus, RecipeTargetType } from '@chefcloud/db';
+import { assertPeriodOpen, PeriodOperation } from '../utils/period-immutability.guard'; // M79
 
 const Decimal = Prisma.Decimal;
 type Decimal = Prisma.Decimal;
@@ -117,7 +118,24 @@ export class InventoryDepletionService {
         try {
             locationId = await this.resolveDepletionLocation(branchId);
         } catch (error: any) {
-            // Create FAILED depletion record
+            // M79: Guard against closed fiscal period BEFORE creating FAILED record
+            const effectiveAt = new Date();
+            try {
+                await assertPeriodOpen({
+                    prisma: this.prisma,
+                    orgId,
+                    recordDate: effectiveAt,
+                    operation: PeriodOperation.CREATE,
+                });
+            } catch (periodError: any) {
+                // Period is closed - don't create ANY record, throw immediately
+                this.logger.error(
+                    `Cannot create FAILED depletion for order ${orderId}: fiscal period is closed`,
+                );
+                throw periodError;
+            }
+
+            // Period is open - safe to create FAILED depletion record
             const failed = await this.prisma.client.orderInventoryDepletion.create({
                 data: {
                     orgId,
@@ -175,13 +193,19 @@ export class InventoryDepletionService {
             );
         }
 
-        // M12.3: Check period lock - use current date as the effective date for depletion
-        // Depletions happen when orders close, so we use now() as the effective date
+        // M79: Guard against closed fiscal period (replaces M12.3 period lock check)
+        // Use current date as the effective date for depletion (when order closes)
         const effectiveAt = new Date();
-        const periodLockCheck = await this.periodsService.checkPeriodLock(orgId, branchId, effectiveAt);
-        if (periodLockCheck.locked) {
-            // Create FAILED depletion record with PERIOD_LOCKED error
-            const failed = await this.prisma.client.orderInventoryDepletion.create({
+        try {
+            await assertPeriodOpen({
+                prisma: this.prisma,
+                orgId,
+                recordDate: effectiveAt,
+                operation: PeriodOperation.CREATE,
+            });
+        } catch (periodError: any) {
+            // Period is closed - create FAILED depletion record for audit trail
+            const _failed = await this.prisma.client.orderInventoryDepletion.create({
                 data: {
                     orgId,
                     orderId,
@@ -189,8 +213,14 @@ export class InventoryDepletionService {
                     locationId,
                     status: 'FAILED',
                     errorCode: DepletionErrorCode.PERIOD_LOCKED,
-                    errorMessage: `Period ${periodLockCheck.periodId} is locked from ${periodLockCheck.startDate?.toISOString()} to ${periodLockCheck.endDate?.toISOString()}`,
-                    metadata: { itemsProcessed: 0, itemsSkipped: 0, periodId: periodLockCheck.periodId },
+                    errorMessage: periodError.message || 'Cannot create depletion in closed fiscal period',
+                    metadata: {
+                        itemsProcessed: 0,
+                        itemsSkipped: 0,
+                        periodId: periodError.response?.periodId,
+                        periodStart: periodError.response?.periodStart?.toISOString(),
+                        periodEnd: periodError.response?.periodEnd?.toISOString(),
+                    },
                 },
             });
 
@@ -200,19 +230,13 @@ export class InventoryDepletionService {
                 action: 'depletion.failed',
                 resourceType: 'Order',
                 resourceId: orderId,
-                metadata: { errorCode: DepletionErrorCode.PERIOD_LOCKED, periodId: periodLockCheck.periodId },
+                metadata: {
+                    errorCode: DepletionErrorCode.PERIOD_LOCKED,
+                    periodId: periodError.response?.periodId,
+                },
             });
 
-            return {
-                depletionId: failed.id,
-                status: 'FAILED',
-                ledgerEntryCount: 0,
-                errorCode: DepletionErrorCode.PERIOD_LOCKED,
-                errorMessage: `Inventory period is locked`,
-                itemsProcessed: 0,
-                itemsSkipped: 0,
-                isIdempotent: false,
-            };
+            throw periodError; // M79: Throw error for audit trail capture
         }
 
         // Create PENDING depletion record
@@ -379,6 +403,15 @@ export class InventoryDepletionService {
                 glPostingStatus = 'SKIPPED';
                 glPostingError = 'No COGS value to post';
             }
+
+            // M79: Guard against closed fiscal period BEFORE updating depletion to POSTED
+            // Use the depletion's creation date as the effective date
+            await assertPeriodOpen({
+                prisma: this.prisma,
+                orgId,
+                recordDate: depletion.createdAt,
+                operation: PeriodOperation.UPDATE,
+            });
 
             // Update depletion record
             const updated = await this.prisma.client.orderInventoryDepletion.update({

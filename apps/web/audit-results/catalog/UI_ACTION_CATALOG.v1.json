@@ -1,0 +1,7652 @@
+{
+  "version": "v1",
+  "generatedAt": "2026-01-21T15:41:01.441Z",
+  "sources": {
+    "controlRegistry": "CONTROL_REGISTRY.v2.json",
+    "actionMap": "ACTION_ENDPOINT_MAP.v1.json",
+    "routeLoad": "ROUTE_LOAD_ENDPOINTS.v1.json",
+    "roleAudits": [
+      "cafesserie_accountant.json",
+      "cafesserie_cashier.json",
+      "cafesserie_chef.json",
+      "cafesserie_manager.json",
+      "cafesserie_owner.json",
+      "cafesserie_procurement.json",
+      "cafesserie_supervisor.json",
+      "cafesserie_waiter.json",
+      "tapas_accountant.json",
+      "tapas_bartender.json",
+      "tapas_cashier.json",
+      "tapas_chef.json",
+      "tapas_eventmgr.json",
+      "tapas_manager.json",
+      "tapas_owner.json",
+      "tapas_procurement.json",
+      "tapas_stock.json",
+      "tapas_supervisor.json",
+      "tapas_waiter.json"
+    ]
+  },
+  "summary": {
+    "totalRoles": 19,
+    "totalRoutes": [
+      "/analytics",
+      "/finance",
+      "/finance/accounts",
+      "/finance/ap-aging",
+      "/finance/ar-aging",
+      "/finance/balance-sheet",
+      "/finance/journal",
+      "/finance/periods",
+      "/finance/pnl",
+      "/finance/trial-balance",
+      "/reports",
+      "/service-providers",
+      "/workforce/my-availability",
+      "/dashboard",
+      "/pos",
+      "/settings",
+      "/feedback",
+      "/inventory",
+      "/reservations",
+      "/staff",
+      "/workforce/approvals",
+      "/inventory/depletions",
+      "/inventory/period-close",
+      "/inventory/purchase-orders",
+      "/inventory/receipts",
+      "/inventory/recipes",
+      "/inventory/transfers",
+      "/inventory/waste",
+      "/workforce/my-swaps",
+      "/workforce/open-shifts",
+      "/workforce/swaps",
+      "/workforce/timeclock",
+      "/workspaces/supervisor",
+      "/launch",
+      "/workspaces/event-manager"
+    ],
+    "totalControls": 1356,
+    "totalEndpoints": [
+      "GET /franchise/budgets/variance",
+      "GET /billing/subscription",
+      "GET /franchise/forecast",
+      "GET /me",
+      "GET /branches",
+      "GET /analytics/daily-metrics",
+      "GET /finance/budgets/summary",
+      "GET /accounting/accounts",
+      "GET /accounting/ap/aging",
+      "GET /accounting/ar/aging",
+      "GET /accounting/balance-sheet",
+      "GET /accounting/journal",
+      "GET /accounting/periods",
+      "GET /accounting/pnl",
+      "GET /accounting/trial-balance",
+      "GET /service-providers/contracts",
+      "GET /service-providers",
+      "GET /finance/service-reminders/summary",
+      "GET /finance/service-reminders",
+      "GET /workforce/self/availability",
+      "GET /analytics/daily",
+      "GET /analytics/top-items",
+      "GET /analytics/category-mix",
+      "GET /analytics/payment-mix",
+      "GET /analytics/peak-hours",
+      "GET /franchise/rankings",
+      "GET /inventory/low-stock/alerts",
+      "GET /pos/orders",
+      "GET /menu/items",
+      "GET /analytics/financial-summary",
+      "GET /analytics/risk-summary",
+      "GET /analytics/risk-events",
+      "GET /franchise/branch-metrics",
+      "GET /feedback/analytics/nps-summary",
+      "GET /inventory",
+      "GET /inventory/items",
+      "GET /inventory/levels",
+      "GET /reservations",
+      "GET /bookings/list",
+      "GET /hr/staff",
+      "GET /hr/employees",
+      "GET /workforce/scheduling/shifts",
+      "GET /inventory/depletions/stats",
+      "GET /inventory/depletions",
+      "GET /org/branches",
+      "GET /inventory/periods",
+      "GET /inventory/procurement/purchase-orders",
+      "GET /inventory/procurement/receipts",
+      "GET /inventory/v2/recipes",
+      "GET /pos/menu-items",
+      "GET /inventory/foundation/uoms",
+      "GET /inventory/transfers",
+      "GET /inventory/foundation/items",
+      "GET /inventory/waste",
+      "GET /workforce/self/availability/exceptions",
+      "GET /workforce/self/swaps",
+      "GET /workforce/self/open-shifts",
+      "GET /workforce/self/open-shifts/claims",
+      "GET /workforce/swaps",
+      "GET /workforce/timeclock/status",
+      "GET /workforce/timeclock/entries",
+      "GET /vendors",
+      "GET /inventory/foundation/uom",
+      "POST /workforce/timeclock/break/start",
+      "POST /workforce/timeclock/clock-out"
+    ],
+    "controlsWithEndpoints": 180,
+    "controlsNoNetworkEffect": 115,
+    "controlsSkipped": 0,
+    "uniqueRoutes": 35,
+    "uniqueEndpoints": 65,
+    "controlRegistryTotal": 3615,
+    "attributionRate": 8.2,
+    "actionMapControls": 524,
+    "actionMapEndpoints": 47
+  },
+  "roleStats": [
+    {
+      "org": "cafesserie",
+      "role": "accountant",
+      "email": "accountant@cafesserie.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 13,
+      "controlsClicked": 86,
+      "endpoints": 20,
+      "failures": 3,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "cafesserie",
+      "role": "cashier",
+      "email": "cashier@cafesserie.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 3,
+      "controlsClicked": 46,
+      "endpoints": 13,
+      "failures": 0,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "cafesserie",
+      "role": "chef",
+      "email": "chef@cafesserie.demo.local",
+      "loginSuccess": false,
+      "routesVisited": 0,
+      "controlsClicked": 0,
+      "endpoints": 0,
+      "failures": 1,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "cafesserie",
+      "role": "manager",
+      "email": "manager@cafesserie.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 9,
+      "controlsClicked": 120,
+      "endpoints": 28,
+      "failures": 6,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "email": "owner@cafesserie.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 7,
+      "controlsClicked": 109,
+      "endpoints": 21,
+      "failures": 8,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "cafesserie",
+      "role": "procurement",
+      "email": "procurement@cafesserie.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 13,
+      "controlsClicked": 102,
+      "endpoints": 32,
+      "failures": 2,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "cafesserie",
+      "role": "supervisor",
+      "email": "supervisor@cafesserie.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 11,
+      "controlsClicked": 91,
+      "endpoints": 25,
+      "failures": 30,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "cafesserie",
+      "role": "waiter",
+      "email": "waiter@cafesserie.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 6,
+      "controlsClicked": 54,
+      "endpoints": 12,
+      "failures": 6,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "tapas",
+      "role": "accountant",
+      "email": "accountant@tapas.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 15,
+      "controlsClicked": 88,
+      "endpoints": 24,
+      "failures": 1,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "tapas",
+      "role": "bartender",
+      "email": "bartender@tapas.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 6,
+      "controlsClicked": 42,
+      "endpoints": 14,
+      "failures": 6,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "tapas",
+      "role": "cashier",
+      "email": "cashier@tapas.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 7,
+      "controlsClicked": 123,
+      "endpoints": 20,
+      "failures": 0,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "tapas",
+      "role": "chef",
+      "email": "chef@tapas.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 1,
+      "controlsClicked": 7,
+      "endpoints": 2,
+      "failures": 0,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "tapas",
+      "role": "eventmgr",
+      "email": "eventmgr@tapas.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 9,
+      "controlsClicked": 72,
+      "endpoints": 23,
+      "failures": 5,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "tapas",
+      "role": "manager",
+      "email": "manager@tapas.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 5,
+      "controlsClicked": 65,
+      "endpoints": 23,
+      "failures": 0,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "tapas",
+      "role": "owner",
+      "email": "owner@tapas.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 0,
+      "controlsClicked": 0,
+      "endpoints": 0,
+      "failures": 0,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "tapas",
+      "role": "procurement",
+      "email": "procurement@tapas.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 15,
+      "controlsClicked": 86,
+      "endpoints": 34,
+      "failures": 0,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "tapas",
+      "role": "stock",
+      "email": "stock@tapas.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 6,
+      "controlsClicked": 121,
+      "endpoints": 23,
+      "failures": 0,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "tapas",
+      "role": "supervisor",
+      "email": "supervisor@tapas.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 11,
+      "controlsClicked": 90,
+      "endpoints": 27,
+      "failures": 26,
+      "error5xx": 0,
+      "error401": 0
+    },
+    {
+      "org": "tapas",
+      "role": "waiter",
+      "email": "waiter@tapas.demo.local",
+      "loginSuccess": true,
+      "routesVisited": 6,
+      "controlsClicked": 54,
+      "endpoints": 12,
+      "failures": 6,
+      "error5xx": 0,
+      "error401": 0
+    }
+  ],
+  "routeInventory": {
+    "/analytics": {
+      "path": "/analytics",
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "tapas/accountant",
+        "tapas/manager"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        6,
+        10,
+        6,
+        6,
+        10
+      ]
+    },
+    "/finance": {
+      "path": "/finance",
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/owner",
+        "tapas/accountant"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        3,
+        3,
+        3
+      ]
+    },
+    "/finance/accounts": {
+      "path": "/finance/accounts",
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "statuses": [
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        3,
+        3
+      ]
+    },
+    "/finance/ap-aging": {
+      "path": "/finance/ap-aging",
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "statuses": [
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        3,
+        3
+      ]
+    },
+    "/finance/ar-aging": {
+      "path": "/finance/ar-aging",
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "statuses": [
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        3,
+        3
+      ]
+    },
+    "/finance/balance-sheet": {
+      "path": "/finance/balance-sheet",
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "statuses": [
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        3,
+        3
+      ]
+    },
+    "/finance/journal": {
+      "path": "/finance/journal",
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "statuses": [
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        4,
+        4
+      ]
+    },
+    "/finance/periods": {
+      "path": "/finance/periods",
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "statuses": [
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        3,
+        3
+      ]
+    },
+    "/finance/pnl": {
+      "path": "/finance/pnl",
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "statuses": [
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        3,
+        3
+      ]
+    },
+    "/finance/trial-balance": {
+      "path": "/finance/trial-balance",
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "statuses": [
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        3,
+        3
+      ]
+    },
+    "/reports": {
+      "path": "/reports",
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "tapas/accountant",
+        "tapas/procurement"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        2,
+        2,
+        2,
+        2,
+        0,
+        2
+      ]
+    },
+    "/service-providers": {
+      "path": "/service-providers",
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/procurement",
+        "tapas/accountant",
+        "tapas/procurement"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        0,
+        6,
+        2,
+        6
+      ]
+    },
+    "/workforce/my-availability": {
+      "path": "/workforce/my-availability",
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/procurement",
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/accountant",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/procurement",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        7,
+        4,
+        4,
+        4,
+        8,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    "/dashboard": {
+      "path": "/dashboard",
+      "roles": [
+        "cafesserie/cashier",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "cafesserie/supervisor",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock",
+        "tapas/supervisor"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        10,
+        14,
+        14,
+        11,
+        10,
+        10,
+        11,
+        11,
+        11,
+        11,
+        10
+      ]
+    },
+    "/pos": {
+      "path": "/pos",
+      "roles": [
+        "cafesserie/cashier",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5,
+        5
+      ]
+    },
+    "/settings": {
+      "path": "/settings",
+      "roles": [
+        "cafesserie/cashier",
+        "cafesserie/procurement",
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/procurement",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        1,
+        2,
+        2
+      ]
+    },
+    "/feedback": {
+      "path": "/feedback",
+      "roles": [
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "tapas/manager"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        3,
+        3,
+        3
+      ]
+    },
+    "/inventory": {
+      "path": "/inventory",
+      "roles": [
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "tapas/bartender",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        6,
+        6,
+        6,
+        6,
+        6,
+        6,
+        6
+      ]
+    },
+    "/reservations": {
+      "path": "/reservations",
+      "roles": [
+        "cafesserie/manager",
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/eventmgr",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        1,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    "/staff": {
+      "path": "/staff",
+      "roles": [
+        "cafesserie/manager",
+        "cafesserie/supervisor",
+        "tapas/eventmgr",
+        "tapas/supervisor"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        6,
+        4,
+        4,
+        4
+      ]
+    },
+    "/workforce/approvals": {
+      "path": "/workforce/approvals",
+      "roles": [
+        "cafesserie/manager"
+      ],
+      "statuses": [
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        3
+      ]
+    },
+    "/inventory/depletions": {
+      "path": "/inventory/depletions",
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement",
+        "tapas/stock"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        4,
+        4,
+        4
+      ]
+    },
+    "/inventory/period-close": {
+      "path": "/inventory/period-close",
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement",
+        "tapas/stock"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        4,
+        4,
+        4
+      ]
+    },
+    "/inventory/purchase-orders": {
+      "path": "/inventory/purchase-orders",
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement",
+        "tapas/stock"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        3,
+        3,
+        6
+      ]
+    },
+    "/inventory/receipts": {
+      "path": "/inventory/receipts",
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement",
+        "tapas/stock"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        3,
+        3,
+        3
+      ]
+    },
+    "/inventory/recipes": {
+      "path": "/inventory/recipes",
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement"
+      ],
+      "statuses": [
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        6,
+        6
+      ]
+    },
+    "/inventory/transfers": {
+      "path": "/inventory/transfers",
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement"
+      ],
+      "statuses": [
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        4,
+        3
+      ]
+    },
+    "/inventory/waste": {
+      "path": "/inventory/waste",
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement"
+      ],
+      "statuses": [
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        3,
+        3
+      ]
+    },
+    "/workforce/my-swaps": {
+      "path": "/workforce/my-swaps",
+      "roles": [
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/accountant",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/procurement",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        3,
+        3,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ]
+    },
+    "/workforce/open-shifts": {
+      "path": "/workforce/open-shifts",
+      "roles": [
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/accountant",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/procurement",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        4,
+        4,
+        5,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ]
+    },
+    "/workforce/swaps": {
+      "path": "/workforce/swaps",
+      "roles": [
+        "cafesserie/supervisor",
+        "tapas/supervisor"
+      ],
+      "statuses": [
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        3,
+        3
+      ]
+    },
+    "/workforce/timeclock": {
+      "path": "/workforce/timeclock",
+      "roles": [
+        "cafesserie/supervisor",
+        "tapas/cashier",
+        "tapas/supervisor"
+      ],
+      "statuses": [
+        "success",
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        4,
+        4,
+        6
+      ]
+    },
+    "/workspaces/supervisor": {
+      "path": "/workspaces/supervisor",
+      "roles": [
+        "cafesserie/supervisor",
+        "tapas/supervisor"
+      ],
+      "statuses": [
+        "success",
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        2,
+        2
+      ]
+    },
+    "/launch": {
+      "path": "/launch",
+      "roles": [
+        "tapas/chef"
+      ],
+      "statuses": [
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        2
+      ]
+    },
+    "/workspaces/event-manager": {
+      "path": "/workspaces/event-manager",
+      "roles": [
+        "tapas/eventmgr"
+      ],
+      "statuses": [
+        "success"
+      ],
+      "apiCallsOnLoad": [
+        2
+      ]
+    }
+  },
+  "endpointCatalog": {
+    "GET /franchise/budgets/variance": {
+      "method": "GET",
+      "path": "/franchise/budgets/variance",
+      "statuses": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "tapas/accountant",
+        "tapas/manager"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 5
+    },
+    "GET /billing/subscription": {
+      "method": "GET",
+      "path": "/billing/subscription",
+      "statuses": [
+        403,
+        403,
+        403,
+        404,
+        403,
+        403,
+        403,
+        403,
+        403,
+        403,
+        403,
+        403,
+        403
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/cashier",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/accountant",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 13
+    },
+    "GET /franchise/forecast": {
+      "method": "GET",
+      "path": "/franchise/forecast",
+      "statuses": [
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "tapas/accountant",
+        "tapas/manager"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 5
+    },
+    "GET /me": {
+      "method": "GET",
+      "path": "/me",
+      "statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/cashier",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/accountant",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/chef",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 17
+    },
+    "GET /branches": {
+      "method": "GET",
+      "path": "/branches",
+      "statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/cashier",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/accountant",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/chef",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 17
+    },
+    "GET /analytics/daily-metrics": {
+      "method": "GET",
+      "path": "/analytics/daily-metrics",
+      "statuses": [
+        200,
+        403,
+        200,
+        200,
+        403,
+        403,
+        200,
+        403,
+        403,
+        200,
+        403,
+        403,
+        403
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/cashier",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "cafesserie/supervisor",
+        "tapas/accountant",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock",
+        "tapas/supervisor"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 13
+    },
+    "GET /finance/budgets/summary": {
+      "method": "GET",
+      "path": "/finance/budgets/summary",
+      "statuses": [
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/owner",
+        "tapas/accountant"
+      ],
+      "routes": [
+        null,
+        null,
+        null
+      ],
+      "counts": 3
+    },
+    "GET /accounting/accounts": {
+      "method": "GET",
+      "path": "/accounting/accounts",
+      "statuses": [
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /accounting/ap/aging": {
+      "method": "GET",
+      "path": "/accounting/ap/aging",
+      "statuses": [
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /accounting/ar/aging": {
+      "method": "GET",
+      "path": "/accounting/ar/aging",
+      "statuses": [
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /accounting/balance-sheet": {
+      "method": "GET",
+      "path": "/accounting/balance-sheet",
+      "statuses": [
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /accounting/journal": {
+      "method": "GET",
+      "path": "/accounting/journal",
+      "statuses": [
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /accounting/periods": {
+      "method": "GET",
+      "path": "/accounting/periods",
+      "statuses": [
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /accounting/pnl": {
+      "method": "GET",
+      "path": "/accounting/pnl",
+      "statuses": [
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /accounting/trial-balance": {
+      "method": "GET",
+      "path": "/accounting/trial-balance",
+      "statuses": [
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "tapas/accountant"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /service-providers/contracts": {
+      "method": "GET",
+      "path": "/service-providers/contracts",
+      "statuses": [
+        404,
+        404,
+        404,
+        404
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/procurement",
+        "tapas/accountant",
+        "tapas/procurement"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 4
+    },
+    "GET /service-providers": {
+      "method": "GET",
+      "path": "/service-providers",
+      "statuses": [
+        200,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/procurement",
+        "tapas/accountant",
+        "tapas/procurement"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 4
+    },
+    "GET /finance/service-reminders/summary": {
+      "method": "GET",
+      "path": "/finance/service-reminders/summary",
+      "statuses": [
+        200,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/procurement",
+        "tapas/accountant",
+        "tapas/procurement"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 4
+    },
+    "GET /finance/service-reminders": {
+      "method": "GET",
+      "path": "/finance/service-reminders",
+      "statuses": [
+        200,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/procurement",
+        "tapas/accountant",
+        "tapas/procurement"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 4
+    },
+    "GET /workforce/self/availability": {
+      "method": "GET",
+      "path": "/workforce/self/availability",
+      "statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/accountant",
+        "cafesserie/procurement",
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/accountant",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/procurement",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 11
+    },
+    "GET /analytics/daily": {
+      "method": "GET",
+      "path": "/analytics/daily",
+      "statuses": [
+        403,
+        200,
+        200,
+        200,
+        403,
+        403,
+        200,
+        200,
+        200,
+        200,
+        403
+      ],
+      "roles": [
+        "cafesserie/cashier",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "cafesserie/supervisor",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock",
+        "tapas/supervisor"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 11
+    },
+    "GET /analytics/top-items": {
+      "method": "GET",
+      "path": "/analytics/top-items",
+      "statuses": [
+        403,
+        200,
+        200,
+        200,
+        403,
+        403,
+        200,
+        200,
+        200,
+        200,
+        403
+      ],
+      "roles": [
+        "cafesserie/cashier",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "cafesserie/supervisor",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock",
+        "tapas/supervisor"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 11
+    },
+    "GET /analytics/category-mix": {
+      "method": "GET",
+      "path": "/analytics/category-mix",
+      "statuses": [
+        403,
+        200,
+        200,
+        200,
+        403,
+        403,
+        200,
+        200,
+        200,
+        200,
+        403
+      ],
+      "roles": [
+        "cafesserie/cashier",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "cafesserie/supervisor",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock",
+        "tapas/supervisor"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 11
+    },
+    "GET /analytics/payment-mix": {
+      "method": "GET",
+      "path": "/analytics/payment-mix",
+      "statuses": [
+        403,
+        200,
+        200,
+        200,
+        403,
+        403,
+        200,
+        200,
+        200,
+        200,
+        403
+      ],
+      "roles": [
+        "cafesserie/cashier",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "cafesserie/supervisor",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock",
+        "tapas/supervisor"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 11
+    },
+    "GET /analytics/peak-hours": {
+      "method": "GET",
+      "path": "/analytics/peak-hours",
+      "statuses": [
+        403,
+        200,
+        200,
+        200,
+        403,
+        403,
+        200,
+        200,
+        200,
+        200,
+        403
+      ],
+      "roles": [
+        "cafesserie/cashier",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "cafesserie/supervisor",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock",
+        "tapas/supervisor"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 11
+    },
+    "GET /franchise/rankings": {
+      "method": "GET",
+      "path": "/franchise/rankings",
+      "statuses": [
+        403,
+        403,
+        200,
+        403,
+        403,
+        403,
+        403,
+        403,
+        403,
+        403,
+        403
+      ],
+      "roles": [
+        "cafesserie/cashier",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "cafesserie/supervisor",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock",
+        "tapas/supervisor"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 11
+    },
+    "GET /inventory/low-stock/alerts": {
+      "method": "GET",
+      "path": "/inventory/low-stock/alerts",
+      "statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/cashier",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "cafesserie/supervisor",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock",
+        "tapas/supervisor"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 12
+    },
+    "GET /pos/orders": {
+      "method": "GET",
+      "path": "/pos/orders",
+      "statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/cashier",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 11
+    },
+    "GET /menu/items": {
+      "method": "GET",
+      "path": "/menu/items",
+      "statuses": [
+        200,
+        200,
+        200,
+        200,
+        403,
+        403,
+        200,
+        200,
+        200,
+        200,
+        403
+      ],
+      "roles": [
+        "cafesserie/cashier",
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 11
+    },
+    "GET /analytics/financial-summary": {
+      "method": "GET",
+      "path": "/analytics/financial-summary",
+      "statuses": [
+        200,
+        200,
+        403,
+        403,
+        200,
+        403,
+        403
+      ],
+      "roles": [
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "tapas/eventmgr",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 7
+    },
+    "GET /analytics/risk-summary": {
+      "method": "GET",
+      "path": "/analytics/risk-summary",
+      "statuses": [
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/manager",
+        "tapas/manager"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /analytics/risk-events": {
+      "method": "GET",
+      "path": "/analytics/risk-events",
+      "statuses": [
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/manager",
+        "tapas/manager"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /franchise/branch-metrics": {
+      "method": "GET",
+      "path": "/franchise/branch-metrics",
+      "statuses": [
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/manager",
+        "tapas/manager"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /feedback/analytics/nps-summary": {
+      "method": "GET",
+      "path": "/feedback/analytics/nps-summary",
+      "statuses": [
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "tapas/manager"
+      ],
+      "routes": [
+        null,
+        null,
+        null
+      ],
+      "counts": 3
+    },
+    "GET /inventory": {
+      "method": "GET",
+      "path": "/inventory",
+      "statuses": [
+        404,
+        404,
+        404,
+        404,
+        404,
+        404,
+        404
+      ],
+      "roles": [
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "tapas/bartender",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 7
+    },
+    "GET /inventory/items": {
+      "method": "GET",
+      "path": "/inventory/items",
+      "statuses": [
+        200,
+        200,
+        200,
+        403,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "tapas/bartender",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 7
+    },
+    "GET /inventory/levels": {
+      "method": "GET",
+      "path": "/inventory/levels",
+      "statuses": [
+        200,
+        200,
+        200,
+        403,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/manager",
+        "cafesserie/owner",
+        "cafesserie/procurement",
+        "tapas/bartender",
+        "tapas/manager",
+        "tapas/procurement",
+        "tapas/stock"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 7
+    },
+    "GET /reservations": {
+      "method": "GET",
+      "path": "/reservations",
+      "statuses": [
+        200,
+        200,
+        403,
+        200,
+        200,
+        403
+      ],
+      "roles": [
+        "cafesserie/manager",
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/eventmgr",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 6
+    },
+    "GET /bookings/list": {
+      "method": "GET",
+      "path": "/bookings/list",
+      "statuses": [
+        200,
+        200,
+        403,
+        200,
+        200,
+        403
+      ],
+      "roles": [
+        "cafesserie/manager",
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/eventmgr",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 6
+    },
+    "GET /hr/staff": {
+      "method": "GET",
+      "path": "/hr/staff",
+      "statuses": [
+        404,
+        404,
+        404,
+        404
+      ],
+      "roles": [
+        "cafesserie/manager",
+        "cafesserie/supervisor",
+        "tapas/eventmgr",
+        "tapas/supervisor"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 4
+    },
+    "GET /hr/employees": {
+      "method": "GET",
+      "path": "/hr/employees",
+      "statuses": [
+        200,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/manager",
+        "cafesserie/supervisor",
+        "tapas/eventmgr",
+        "tapas/supervisor"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 4
+    },
+    "GET /workforce/scheduling/shifts": {
+      "method": "GET",
+      "path": "/workforce/scheduling/shifts",
+      "statuses": [
+        200
+      ],
+      "roles": [
+        "cafesserie/manager"
+      ],
+      "routes": [
+        null
+      ],
+      "counts": 1
+    },
+    "GET /inventory/depletions/stats": {
+      "method": "GET",
+      "path": "/inventory/depletions/stats",
+      "statuses": [
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement",
+        "tapas/stock"
+      ],
+      "routes": [
+        null,
+        null,
+        null
+      ],
+      "counts": 3
+    },
+    "GET /inventory/depletions": {
+      "method": "GET",
+      "path": "/inventory/depletions",
+      "statuses": [
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement",
+        "tapas/stock"
+      ],
+      "routes": [
+        null,
+        null,
+        null
+      ],
+      "counts": 3
+    },
+    "GET /org/branches": {
+      "method": "GET",
+      "path": "/org/branches",
+      "statuses": [
+        404,
+        404,
+        404
+      ],
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement",
+        "tapas/stock"
+      ],
+      "routes": [
+        null,
+        null,
+        null
+      ],
+      "counts": 3
+    },
+    "GET /inventory/periods": {
+      "method": "GET",
+      "path": "/inventory/periods",
+      "statuses": [
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement",
+        "tapas/stock"
+      ],
+      "routes": [
+        null,
+        null,
+        null
+      ],
+      "counts": 3
+    },
+    "GET /inventory/procurement/purchase-orders": {
+      "method": "GET",
+      "path": "/inventory/procurement/purchase-orders",
+      "statuses": [
+        404,
+        404,
+        404
+      ],
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement",
+        "tapas/stock"
+      ],
+      "routes": [
+        null,
+        null,
+        null
+      ],
+      "counts": 3
+    },
+    "GET /inventory/procurement/receipts": {
+      "method": "GET",
+      "path": "/inventory/procurement/receipts",
+      "statuses": [
+        404,
+        404,
+        404
+      ],
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement",
+        "tapas/stock"
+      ],
+      "routes": [
+        null,
+        null,
+        null
+      ],
+      "counts": 3
+    },
+    "GET /inventory/v2/recipes": {
+      "method": "GET",
+      "path": "/inventory/v2/recipes",
+      "statuses": [
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /pos/menu-items": {
+      "method": "GET",
+      "path": "/pos/menu-items",
+      "statuses": [
+        404,
+        404
+      ],
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /inventory/foundation/uoms": {
+      "method": "GET",
+      "path": "/inventory/foundation/uoms",
+      "statuses": [
+        404,
+        404
+      ],
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /inventory/transfers": {
+      "method": "GET",
+      "path": "/inventory/transfers",
+      "statuses": [
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /inventory/foundation/items": {
+      "method": "GET",
+      "path": "/inventory/foundation/items",
+      "statuses": [
+        404,
+        404
+      ],
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/stock"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /inventory/waste": {
+      "method": "GET",
+      "path": "/inventory/waste",
+      "statuses": [
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/procurement",
+        "tapas/procurement"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /workforce/self/availability/exceptions": {
+      "method": "GET",
+      "path": "/workforce/self/availability/exceptions",
+      "statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/procurement",
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/accountant",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/procurement",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 10
+    },
+    "GET /workforce/self/swaps": {
+      "method": "GET",
+      "path": "/workforce/self/swaps",
+      "statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/accountant",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/procurement",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 9
+    },
+    "GET /workforce/self/open-shifts": {
+      "method": "GET",
+      "path": "/workforce/self/open-shifts",
+      "statuses": [
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/accountant",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/procurement",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 9
+    },
+    "GET /workforce/self/open-shifts/claims": {
+      "method": "GET",
+      "path": "/workforce/self/open-shifts/claims",
+      "statuses": [
+        404,
+        404,
+        404,
+        404,
+        404,
+        404,
+        404,
+        404,
+        404
+      ],
+      "roles": [
+        "cafesserie/supervisor",
+        "cafesserie/waiter",
+        "tapas/accountant",
+        "tapas/bartender",
+        "tapas/cashier",
+        "tapas/eventmgr",
+        "tapas/procurement",
+        "tapas/supervisor",
+        "tapas/waiter"
+      ],
+      "routes": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "counts": 9
+    },
+    "GET /workforce/swaps": {
+      "method": "GET",
+      "path": "/workforce/swaps",
+      "statuses": [
+        403,
+        403
+      ],
+      "roles": [
+        "cafesserie/supervisor",
+        "tapas/supervisor"
+      ],
+      "routes": [
+        null,
+        null
+      ],
+      "counts": 2
+    },
+    "GET /workforce/timeclock/status": {
+      "method": "GET",
+      "path": "/workforce/timeclock/status",
+      "statuses": [
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/supervisor",
+        "tapas/cashier",
+        "tapas/supervisor"
+      ],
+      "routes": [
+        null,
+        null,
+        null
+      ],
+      "counts": 3
+    },
+    "GET /workforce/timeclock/entries": {
+      "method": "GET",
+      "path": "/workforce/timeclock/entries",
+      "statuses": [
+        200,
+        200,
+        200
+      ],
+      "roles": [
+        "cafesserie/supervisor",
+        "tapas/cashier",
+        "tapas/supervisor"
+      ],
+      "routes": [
+        null,
+        null,
+        null
+      ],
+      "counts": 3
+    },
+    "GET /vendors": {
+      "method": "GET",
+      "path": "/vendors",
+      "statuses": [
+        404
+      ],
+      "roles": [
+        "tapas/stock"
+      ],
+      "routes": [
+        null
+      ],
+      "counts": 1
+    },
+    "GET /inventory/foundation/uom": {
+      "method": "GET",
+      "path": "/inventory/foundation/uom",
+      "statuses": [
+        200
+      ],
+      "roles": [
+        "tapas/stock"
+      ],
+      "routes": [
+        null
+      ],
+      "counts": 1
+    },
+    "POST /workforce/timeclock/break/start": {
+      "method": "POST",
+      "path": "/workforce/timeclock/break/start",
+      "statuses": [
+        400
+      ],
+      "roles": [
+        "tapas/supervisor"
+      ],
+      "routes": [
+        null
+      ],
+      "counts": 1
+    },
+    "POST /workforce/timeclock/clock-out": {
+      "method": "POST",
+      "path": "/workforce/timeclock/clock-out",
+      "statuses": [
+        400
+      ],
+      "roles": [
+        "tapas/supervisor"
+      ],
+      "routes": [
+        null
+      ],
+      "counts": 1
+    }
+  },
+  "controlRegistry": [
+    {
+      "route": "/pos",
+      "total": 614,
+      "withTestId": 40,
+      "readSafe": 514,
+      "mutationRisk": 100,
+      "missingTestId": 574,
+      "testIdPercent": "6.5"
+    },
+    {
+      "route": "/reports",
+      "total": 288,
+      "withTestId": 27,
+      "readSafe": 276,
+      "mutationRisk": 12,
+      "missingTestId": 261,
+      "testIdPercent": "9.4"
+    },
+    {
+      "route": "/dashboard",
+      "total": 375,
+      "withTestId": 166,
+      "readSafe": 361,
+      "mutationRisk": 14,
+      "missingTestId": 209,
+      "testIdPercent": "44.3"
+    },
+    {
+      "route": "/analytics",
+      "total": 226,
+      "withTestId": 18,
+      "readSafe": 226,
+      "mutationRisk": 0,
+      "missingTestId": 208,
+      "testIdPercent": "8.0"
+    },
+    {
+      "route": "/reservations",
+      "total": 208,
+      "withTestId": 40,
+      "readSafe": 200,
+      "mutationRisk": 8,
+      "missingTestId": 168,
+      "testIdPercent": "19.2"
+    },
+    {
+      "route": "/staff",
+      "total": 180,
+      "withTestId": 18,
+      "readSafe": 168,
+      "mutationRisk": 12,
+      "missingTestId": 162,
+      "testIdPercent": "10.0"
+    },
+    {
+      "route": "/inventory",
+      "total": 181,
+      "withTestId": 21,
+      "readSafe": 171,
+      "mutationRisk": 10,
+      "missingTestId": 160,
+      "testIdPercent": "11.6"
+    },
+    {
+      "route": "/service-providers",
+      "total": 154,
+      "withTestId": 18,
+      "readSafe": 146,
+      "mutationRisk": 8,
+      "missingTestId": 136,
+      "testIdPercent": "11.7"
+    },
+    {
+      "route": "/settings",
+      "total": 135,
+      "withTestId": 27,
+      "readSafe": 132,
+      "mutationRisk": 3,
+      "missingTestId": 108,
+      "testIdPercent": "20.0"
+    },
+    {
+      "route": "/feedback",
+      "total": 108,
+      "withTestId": 12,
+      "readSafe": 108,
+      "mutationRisk": 0,
+      "missingTestId": 96,
+      "testIdPercent": "11.1"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "total": 86,
+      "withTestId": 0,
+      "readSafe": 72,
+      "mutationRisk": 14,
+      "missingTestId": 86,
+      "testIdPercent": "0.0"
+    },
+    {
+      "route": "/finance",
+      "total": 96,
+      "withTestId": 12,
+      "readSafe": 96,
+      "mutationRisk": 0,
+      "missingTestId": 84,
+      "testIdPercent": "12.5"
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "total": 78,
+      "withTestId": 0,
+      "readSafe": 78,
+      "mutationRisk": 0,
+      "missingTestId": 78,
+      "testIdPercent": "0.0"
+    },
+    {
+      "route": "/inventory/period-close",
+      "total": 74,
+      "withTestId": 9,
+      "readSafe": 62,
+      "mutationRisk": 12,
+      "missingTestId": 65,
+      "testIdPercent": "12.2"
+    },
+    {
+      "route": "/inventory/depletions",
+      "total": 68,
+      "withTestId": 9,
+      "readSafe": 59,
+      "mutationRisk": 9,
+      "missingTestId": 59,
+      "testIdPercent": "13.2"
+    },
+    {
+      "route": "/inventory/recipes",
+      "total": 68,
+      "withTestId": 9,
+      "readSafe": 56,
+      "mutationRisk": 12,
+      "missingTestId": 59,
+      "testIdPercent": "13.2"
+    },
+    {
+      "route": "/inventory/waste",
+      "total": 68,
+      "withTestId": 9,
+      "readSafe": 62,
+      "mutationRisk": 6,
+      "missingTestId": 59,
+      "testIdPercent": "13.2"
+    },
+    {
+      "route": "/inventory/receipts",
+      "total": 65,
+      "withTestId": 9,
+      "readSafe": 59,
+      "mutationRisk": 6,
+      "missingTestId": 56,
+      "testIdPercent": "13.8"
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "total": 64,
+      "withTestId": 9,
+      "readSafe": 58,
+      "mutationRisk": 6,
+      "missingTestId": 55,
+      "testIdPercent": "14.1"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "total": 39,
+      "withTestId": 0,
+      "readSafe": 39,
+      "mutationRisk": 0,
+      "missingTestId": 39,
+      "testIdPercent": "0.0"
+    },
+    {
+      "route": "/inventory/transfers",
+      "total": 44,
+      "withTestId": 6,
+      "readSafe": 40,
+      "mutationRisk": 4,
+      "missingTestId": 38,
+      "testIdPercent": "13.6"
+    },
+    {
+      "route": "/workspaces/supervisor",
+      "total": 42,
+      "withTestId": 6,
+      "readSafe": 38,
+      "mutationRisk": 4,
+      "missingTestId": 36,
+      "testIdPercent": "14.3"
+    },
+    {
+      "route": "/finance/ap-aging",
+      "total": 40,
+      "withTestId": 6,
+      "readSafe": 40,
+      "mutationRisk": 0,
+      "missingTestId": 34,
+      "testIdPercent": "15.0"
+    },
+    {
+      "route": "/finance/ar-aging",
+      "total": 40,
+      "withTestId": 6,
+      "readSafe": 40,
+      "mutationRisk": 0,
+      "missingTestId": 34,
+      "testIdPercent": "15.0"
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "total": 44,
+      "withTestId": 10,
+      "readSafe": 44,
+      "mutationRisk": 0,
+      "missingTestId": 34,
+      "testIdPercent": "22.7"
+    },
+    {
+      "route": "/finance/pnl",
+      "total": 44,
+      "withTestId": 10,
+      "readSafe": 44,
+      "mutationRisk": 0,
+      "missingTestId": 34,
+      "testIdPercent": "22.7"
+    },
+    {
+      "route": "/finance/trial-balance",
+      "total": 44,
+      "withTestId": 10,
+      "readSafe": 44,
+      "mutationRisk": 0,
+      "missingTestId": 34,
+      "testIdPercent": "22.7"
+    },
+    {
+      "route": "/workspaces/stock-manager",
+      "total": 26,
+      "withTestId": 3,
+      "readSafe": 25,
+      "mutationRisk": 1,
+      "missingTestId": 23,
+      "testIdPercent": "11.5"
+    },
+    {
+      "route": "/workforce/labor",
+      "total": 19,
+      "withTestId": 0,
+      "readSafe": 19,
+      "mutationRisk": 0,
+      "missingTestId": 19,
+      "testIdPercent": "0.0"
+    },
+    {
+      "route": "/workforce/approvals",
+      "total": 16,
+      "withTestId": 0,
+      "readSafe": 16,
+      "mutationRisk": 0,
+      "missingTestId": 16,
+      "testIdPercent": "0.0"
+    },
+    {
+      "route": "/workforce/timeclock",
+      "total": 14,
+      "withTestId": 0,
+      "readSafe": 14,
+      "mutationRisk": 0,
+      "missingTestId": 14,
+      "testIdPercent": "0.0"
+    },
+    {
+      "route": "/workforce/labor-targets",
+      "total": 12,
+      "withTestId": 0,
+      "readSafe": 9,
+      "mutationRisk": 3,
+      "missingTestId": 12,
+      "testIdPercent": "0.0"
+    },
+    {
+      "route": "/workforce/auto-scheduler",
+      "total": 11,
+      "withTestId": 0,
+      "readSafe": 11,
+      "mutationRisk": 0,
+      "missingTestId": 11,
+      "testIdPercent": "0.0"
+    },
+    {
+      "route": "/launch",
+      "total": 10,
+      "withTestId": 0,
+      "readSafe": 6,
+      "mutationRisk": 4,
+      "missingTestId": 10,
+      "testIdPercent": "0.0"
+    },
+    {
+      "route": "/workforce/swaps",
+      "total": 10,
+      "withTestId": 0,
+      "readSafe": 10,
+      "mutationRisk": 0,
+      "missingTestId": 10,
+      "testIdPercent": "0.0"
+    },
+    {
+      "route": "/finance/accounts",
+      "total": 8,
+      "withTestId": 0,
+      "readSafe": 6,
+      "mutationRisk": 2,
+      "missingTestId": 8,
+      "testIdPercent": "0.0"
+    },
+    {
+      "route": "/finance/journal",
+      "total": 8,
+      "withTestId": 0,
+      "readSafe": 6,
+      "mutationRisk": 2,
+      "missingTestId": 8,
+      "testIdPercent": "0.0"
+    },
+    {
+      "route": "/finance/periods",
+      "total": 8,
+      "withTestId": 0,
+      "readSafe": 6,
+      "mutationRisk": 2,
+      "missingTestId": 8,
+      "testIdPercent": "0.0"
+    }
+  ],
+  "actionEndpointMap": {
+    "analytics_button_financial": [
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 200
+      }
+    ],
+    "analytics_button_risk": [
+      {
+        "method": "GET",
+        "path": "/analytics/risk-summary",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/risk-events",
+        "status": 200
+      }
+    ],
+    "analytics_button_franchise": [
+      {
+        "method": "GET",
+        "path": "/franchise/branch-metrics",
+        "status": 200
+      }
+    ],
+    "analytics_link_my_availability": [
+      {
+        "method": "GET",
+        "path": "/billing/subscription",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/budgets/variance",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/forecast",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 200
+      }
+    ],
+    "analytics_link_my_swaps": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/swaps",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/budgets/variance",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/billing/subscription",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/forecast",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 200
+      }
+    ],
+    "analytics_link_open_shifts": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts/claims",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/budgets/variance",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/billing/subscription",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/forecast",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 200
+      }
+    ],
+    "analytics_tab_financial": [
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 200
+      }
+    ],
+    "analytics_tab_risk": [
+      {
+        "method": "GET",
+        "path": "/analytics/risk-summary",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/risk-events",
+        "status": 200
+      }
+    ],
+    "sidebar-logo_1": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/finance/budgets/summary",
+        "status": 200
+      }
+    ],
+    "finance_link_chart_of_accounts": [
+      {
+        "method": "GET",
+        "path": "/accounting/accounts",
+        "status": 200
+      }
+    ],
+    "sidebar-logo_2": [
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/periods",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/trial-balance",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/journal",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      }
+    ],
+    "finance_ap-aging_link_chart_of_accounts": [
+      {
+        "method": "GET",
+        "path": "/accounting/accounts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      }
+    ],
+    "finance_ap-aging_link_journal_entries": [
+      {
+        "method": "GET",
+        "path": "/accounting/accounts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/journal",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      }
+    ],
+    "finance_ap-aging_link_fiscal_periods": [
+      {
+        "method": "GET",
+        "path": "/accounting/periods",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "finance_ap-aging_link_trial_balance": [
+      {
+        "method": "GET",
+        "path": "/accounting/trial-balance",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      }
+    ],
+    "finance_ap-aging_link_profit_loss": [
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      }
+    ],
+    "finance_ap-aging_link_balance_sheet": [
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      }
+    ],
+    "finance_ap-aging_link_service_providers": [
+      {
+        "method": "GET",
+        "path": "/service-providers/contracts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders/summary",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      }
+    ],
+    "finance_ap-aging_link_ar_aging": [
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      }
+    ],
+    "finance_ap-aging_link_analytics": [
+      {
+        "method": "GET",
+        "path": "/billing/subscription",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/budgets/variance",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/forecast",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      }
+    ],
+    "finance_ap-aging_link_my_availability": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "finance_ap-aging_link_my_swaps": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/swaps",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "finance_ap-aging_link_open_shifts": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts/claims",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "sidebar-logo_3": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "finance_ar-aging_link_chart_of_accounts": [
+      {
+        "method": "GET",
+        "path": "/accounting/accounts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      }
+    ],
+    "finance_ar-aging_link_journal_entries": [
+      {
+        "method": "GET",
+        "path": "/accounting/accounts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/journal",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      }
+    ],
+    "finance_ar-aging_link_fiscal_periods": [
+      {
+        "method": "GET",
+        "path": "/accounting/periods",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "finance_ar-aging_link_trial_balance": [
+      {
+        "method": "GET",
+        "path": "/accounting/trial-balance",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      }
+    ],
+    "finance_ar-aging_link_profit_loss": [
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      }
+    ],
+    "finance_ar-aging_link_balance_sheet": [
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "finance_ar-aging_link_service_providers": [
+      {
+        "method": "GET",
+        "path": "/service-providers",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders/summary",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers/contracts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "finance_ar-aging_link_ap_aging": [
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "finance_ar-aging_link_analytics": [
+      {
+        "method": "GET",
+        "path": "/billing/subscription",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/budgets/variance",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/forecast",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      }
+    ],
+    "finance_ar-aging_link_my_availability": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability/exceptions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      }
+    ],
+    "finance_ar-aging_link_my_swaps": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "finance_ar-aging_link_open_shifts": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts/claims",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "bs-generate": [
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      }
+    ],
+    "sidebar-logo_4": [
+      {
+        "method": "GET",
+        "path": "/accounting/periods",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/journal",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/trial-balance",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "finance_balance-sheet_link_chart_of_accounts": [
+      {
+        "method": "GET",
+        "path": "/accounting/accounts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      }
+    ],
+    "finance_balance-sheet_link_journal_entries": [
+      {
+        "method": "GET",
+        "path": "/accounting/accounts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/journal",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      }
+    ],
+    "finance_balance-sheet_link_fiscal_periods": [
+      {
+        "method": "GET",
+        "path": "/accounting/periods",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      }
+    ],
+    "finance_balance-sheet_link_trial_balance": [
+      {
+        "method": "GET",
+        "path": "/accounting/trial-balance",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      }
+    ],
+    "finance_balance-sheet_link_profit_loss": [
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      }
+    ],
+    "finance_balance-sheet_link_service_providers": [
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders/summary",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers/contracts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "finance_balance-sheet_link_ap_aging": [
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      }
+    ],
+    "finance_balance-sheet_link_ar_aging": [
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      }
+    ],
+    "finance_balance-sheet_link_analytics": [
+      {
+        "method": "GET",
+        "path": "/billing/subscription",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/budgets/variance",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/forecast",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      }
+    ],
+    "finance_balance-sheet_link_my_availability": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability/exceptions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      }
+    ],
+    "finance_balance-sheet_link_my_swaps": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/swaps",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      }
+    ],
+    "finance_balance-sheet_link_open_shifts": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts/claims",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      }
+    ],
+    "pnl-generate": [
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      }
+    ],
+    "sidebar-logo_5": [
+      {
+        "method": "GET",
+        "path": "/accounting/journal",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/trial-balance",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/periods",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      }
+    ],
+    "finance_pnl_link_chart_of_accounts": [
+      {
+        "method": "GET",
+        "path": "/accounting/accounts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      }
+    ],
+    "finance_pnl_link_journal_entries": [
+      {
+        "method": "GET",
+        "path": "/accounting/accounts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/journal",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      }
+    ],
+    "finance_pnl_link_fiscal_periods": [
+      {
+        "method": "GET",
+        "path": "/accounting/periods",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      }
+    ],
+    "finance_pnl_link_trial_balance": [
+      {
+        "method": "GET",
+        "path": "/accounting/trial-balance",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      }
+    ],
+    "finance_pnl_link_balance_sheet": [
+      {
+        "method": "GET",
+        "path": "/accounting/balance-sheet",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      }
+    ],
+    "finance_pnl_link_service_providers": [
+      {
+        "method": "GET",
+        "path": "/service-providers/contracts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders/summary",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      }
+    ],
+    "finance_pnl_link_ap_aging": [
+      {
+        "method": "GET",
+        "path": "/accounting/ap/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      }
+    ],
+    "finance_pnl_link_ar_aging": [
+      {
+        "method": "GET",
+        "path": "/accounting/ar/aging",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      }
+    ],
+    "finance_pnl_link_analytics": [
+      {
+        "method": "GET",
+        "path": "/billing/subscription",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/budgets/variance",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/forecast",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      }
+    ],
+    "finance_pnl_link_my_availability": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability/exceptions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      }
+    ],
+    "finance_pnl_link_my_swaps": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/swaps",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      }
+    ],
+    "finance_pnl_link_open_shifts": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts/claims",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/accounting/pnl",
+        "status": 200
+      }
+    ],
+    "date-preset-7d_3": [
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      }
+    ],
+    "date-preset-30d_3": [
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 200
+      }
+    ],
+    "date-preset-90d_3": [
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      }
+    ],
+    "date-preset-180d_3": [
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 200
+      }
+    ],
+    "kpi-revenue_3": [
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "kpi-gross-margin_3": [
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/budgets/variance",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/billing/subscription",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/forecast",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "kpi-low-stock_3": [
+      {
+        "method": "GET",
+        "path": "/inventory",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/levels",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "dashboard_link_service_providers_1": [
+      {
+        "method": "GET",
+        "path": "/service-providers",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers/contracts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders/summary",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "dashboard_link_my_availability_3": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability/exceptions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "dashboard_link_my_swaps_3": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/swaps",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "dashboard_link_open_shifts_3": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts/claims",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "alert-item-low-stock_3": [
+      {
+        "method": "GET",
+        "path": "/inventory",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/levels",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "sidebar-logo_31": [
+      {
+        "method": "GET",
+        "path": "/inventory",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/levels",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_link_purchase_orders": [
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/purchase-orders",
+        "status": 404
+      }
+    ],
+    "inventory_link_receipts": [
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404
+      }
+    ],
+    "inventory_link_transfers": [
+      {
+        "method": "GET",
+        "path": "/inventory/transfers",
+        "status": 200
+      }
+    ],
+    "inventory_link_waste": [
+      {
+        "method": "GET",
+        "path": "/inventory/waste",
+        "status": 200
+      }
+    ],
+    "inventory_link_recipes": [
+      {
+        "method": "GET",
+        "path": "/pos/menu-items",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/foundation/uoms",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/v2/recipes",
+        "status": 200
+      }
+    ],
+    "inventory_link_depletions": [
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200
+      }
+    ],
+    "inventory_link_service_providers_1": [
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders/summary",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers/contracts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/levels",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      }
+    ],
+    "inventory_link_dashboard_2": [
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/levels",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_link_my_availability_2": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability/exceptions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/levels",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      }
+    ],
+    "inventory_link_my_swaps_2": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/swaps",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/levels",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      }
+    ],
+    "inventory_link_open_shifts_2": [
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/levels",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      }
+    ],
+    "sidebar-logo_32": [
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_depletions_link_purchase_orders": [
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/purchase-orders",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_depletions_link_receipts": [
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_depletions_link_transfers": [
+      {
+        "method": "GET",
+        "path": "/inventory/transfers",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_depletions_link_waste": [
+      {
+        "method": "GET",
+        "path": "/inventory/waste",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_depletions_link_recipes": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_depletions_link_service_providers": [
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders/summary",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers/contracts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_depletions_link_dashboard": [
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_depletions_link_my_availability": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability/exceptions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_depletions_link_my_swaps": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/swaps",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_depletions_link_open_shifts": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts/claims",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "sidebar-logo_34": [
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/purchase-orders",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_purchase-orders_link_receipts": [
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/purchase-orders",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_purchase-orders_link_transfers": [
+      {
+        "method": "GET",
+        "path": "/inventory/transfers",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/purchase-orders",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_purchase-orders_link_waste": [
+      {
+        "method": "GET",
+        "path": "/inventory/waste",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/purchase-orders",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_purchase-orders_link_recipes": [
+      {
+        "method": "GET",
+        "path": "/pos/menu-items",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/foundation/uoms",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/v2/recipes",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/purchase-orders",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_purchase-orders_link_depletions": [
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/purchase-orders",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_purchase-orders_link_service_providers": [
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders/summary",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers/contracts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/purchase-orders",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_purchase-orders_link_dashboard": [
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/purchase-orders",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_purchase-orders_link_my_availability": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability/exceptions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/purchase-orders",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_purchase-orders_link_my_swaps": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/swaps",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/purchase-orders",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_purchase-orders_link_open_shifts": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts/claims",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/purchase-orders",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "sidebar-logo_35": [
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_receipts_link_inventory": [
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/levels",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_receipts_link_transfers": [
+      {
+        "method": "GET",
+        "path": "/inventory/transfers",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_receipts_link_waste": [
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_receipts_link_recipes": [
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/pos/menu-items",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/foundation/uoms",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/v2/recipes",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_receipts_link_depletions": [
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_receipts_link_service_providers": [
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers/contracts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders/summary",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_receipts_link_dashboard": [
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 403
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_receipts_link_my_availability": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability/exceptions",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_receipts_link_my_swaps": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/swaps",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ],
+    "inventory_receipts_link_open_shifts": [
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts/claims",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200
+      }
+    ]
+  },
+  "routeLoadEndpoints": {
+    "/dashboard": [
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 403,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/cashier"
+        ]
+      }
+    ],
+    "/inventory": [
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/levels",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/inventory/depletions": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/inventory/period-close": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/org/branches",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/periods",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/inventory/purchase-orders": [
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/purchase-orders",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/inventory/receipts": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/inventory/recipes": [
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/v2/recipes",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/pos/menu-items",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/foundation/uoms",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/inventory/transfers": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/transfers",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/inventory/waste": [
+      {
+        "method": "GET",
+        "path": "/inventory/waste",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/reports": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/service-providers": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers/contracts",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders/summary",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/settings": [
+      {
+        "method": "GET",
+        "path": "/service-providers/contracts",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/reservations",
+        "status": 403,
+        "roles": [
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/bookings/list",
+        "status": 403,
+        "roles": [
+          "cafesserie/waiter"
+        ]
+      }
+    ],
+    "/workforce/my-availability": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability/exceptions",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/hr/staff",
+        "status": 404,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      }
+    ],
+    "/workforce/my-swaps": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/swaps",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      }
+    ],
+    "/workforce/open-shifts": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts/claims",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      }
+    ],
+    "/pos": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 403,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 403,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 403,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 403,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/pos/orders",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/billing/subscription",
+        "status": 403,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/menu/items",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403,
+        "roles": [
+          "cafesserie/cashier"
+        ]
+      }
+    ],
+    "/reservations": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/reservations",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/bookings/list",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/waiter"
+        ]
+      }
+    ],
+    "/staff": [],
+    "/workforce/swaps": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/swaps",
+        "status": 403,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      }
+    ],
+    "/workforce/timeclock": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/timeclock/status",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/timeclock/entries",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      }
+    ],
+    "/workspaces/supervisor": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      }
+    ],
+    "/launch": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/chef"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/chef"
+        ]
+      }
+    ]
+  }
+}

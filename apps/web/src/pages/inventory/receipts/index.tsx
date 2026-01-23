@@ -105,7 +105,7 @@ export default function ReceiptsPage() {
     queryFn: async () => {
       const params = new URLSearchParams();
       if (statusFilter) params.append('status', statusFilter);
-      const response = await apiClient.get<Receipt[]>(`/inventory/procurement/receipts?${params}`);
+      const response = await apiClient.get<Receipt[]>(`/inventory/receipts?${params}`);
       return response.data;
     },
   });
@@ -115,7 +115,7 @@ export default function ReceiptsPage() {
     queryKey: ['receivable-pos'],
     queryFn: async () => {
       const response = await apiClient.get<PurchaseOrder[]>(
-        '/inventory/procurement/purchase-orders?status=APPROVED&status=PARTIALLY_RECEIVED'
+        '/inventory/purchase-orders?status=APPROVED&status=PARTIALLY_RECEIVED'
       );
       return response.data;
     },
@@ -140,7 +140,7 @@ export default function ReceiptsPage() {
       notes?: string;
       lines: { itemId: string; locationId: string; poLineId?: string; qtyReceivedInput: number; inputUomId: string }[];
     }) => {
-      const response = await apiClient.post('/inventory/procurement/receipts', data);
+      const response = await apiClient.post('/inventory/receipts', data);
       return response.data;
     },
     onSuccess: () => {
@@ -152,7 +152,7 @@ export default function ReceiptsPage() {
   // Post mutation
   const postMutation = useMutation({
     mutationFn: async (receiptId: string) => {
-      const response = await apiClient.post(`/inventory/procurement/receipts/${receiptId}/post`);
+      const response = await apiClient.post(`/inventory/receipts/${receiptId}/post`);
       return response.data;
     },
     onSuccess: () => {
@@ -163,7 +163,7 @@ export default function ReceiptsPage() {
   // Void mutation
   const voidMutation = useMutation({
     mutationFn: async (receiptId: string) => {
-      const response = await apiClient.post(`/inventory/procurement/receipts/${receiptId}/void`);
+      const response = await apiClient.post(`/inventory/receipts/${receiptId}/void`);
       return response.data;
     },
     onSuccess: () => {
@@ -267,7 +267,7 @@ export default function ReceiptsPage() {
             </SelectContent>
           </Select>
           {isL3OrAbove && (
-            <Button onClick={() => setDialogOpen(true)}>
+            <Button onClick={() => setDialogOpen(true)} data-testid="receipt-create-btn">
               <Plus className="h-4 w-4 mr-2" /> Create Receipt
             </Button>
           )}

@@ -1,0 +1,2392 @@
+{
+  "org": "tapas",
+  "role": "accountant",
+  "email": "accountant@tapas.demo.local",
+  "extractedAt": "2026-01-20T01:28:16.354Z",
+  "durationMs": 88158,
+  "routesVisited": 15,
+  "controlsExtracted": 238,
+  "controlsMissingTestId": 205,
+  "controls": [
+    {
+      "route": "/analytics",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "button",
+      "accessibleName": "User menu for Carol Accountant",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "button",
+      "accessibleName": "Overview",
+      "testId": null,
+      "locatorStrategy": "getByRole('tab', { name: 'Overview' })",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": "tab"
+    },
+    {
+      "route": "/analytics",
+      "controlType": "button",
+      "accessibleName": "By Branch",
+      "testId": null,
+      "locatorStrategy": "getByRole('tab', { name: 'By Branch' })",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": "tab"
+    },
+    {
+      "route": "/analytics",
+      "controlType": "button",
+      "accessibleName": "Financial",
+      "testId": null,
+      "locatorStrategy": "getByRole('tab', { name: 'Financial' })",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": "tab"
+    },
+    {
+      "route": "/analytics",
+      "controlType": "button",
+      "accessibleName": "Risk",
+      "testId": null,
+      "locatorStrategy": "getByRole('tab', { name: 'Risk' })",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": "tab"
+    },
+    {
+      "route": "/analytics",
+      "controlType": "button",
+      "accessibleName": "Franchise",
+      "testId": null,
+      "locatorStrategy": "getByRole('tab', { name: 'Franchise' })",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": "tab"
+    },
+    {
+      "route": "/analytics",
+      "controlType": "button",
+      "accessibleName": "Last 7 days",
+      "testId": null,
+      "locatorStrategy": "getByText('Last 7 days')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "button",
+      "accessibleName": "Last 30 days",
+      "testId": null,
+      "locatorStrategy": "getByText('Last 30 days')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "button",
+      "accessibleName": "Last 90 days",
+      "testId": null,
+      "locatorStrategy": "getByText('Last 90 days')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "Chart of Accounts",
+      "testId": null,
+      "locatorStrategy": "getByText('Chart of Accounts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "Journal Entries",
+      "testId": null,
+      "locatorStrategy": "getByText('Journal Entries')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "Fiscal Periods",
+      "testId": null,
+      "locatorStrategy": "getByText('Fiscal Periods')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "Trial Balance",
+      "testId": null,
+      "locatorStrategy": "getByText('Trial Balance')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "Profit & Loss",
+      "testId": null,
+      "locatorStrategy": "getByText('Profit & Loss')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "Balance Sheet",
+      "testId": null,
+      "locatorStrategy": "getByText('Balance Sheet')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "AP Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AP Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "AR Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AR Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "Budgets",
+      "testId": null,
+      "locatorStrategy": "getByText('Budgets')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "Analytics",
+      "testId": null,
+      "locatorStrategy": "getByText('Analytics')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/analytics",
+      "controlType": "tab",
+      "accessibleName": "Overview",
+      "testId": null,
+      "locatorStrategy": "getByRole('tab', { name: 'Overview' })",
+      "riskClass": "read-only",
+      "tagName": "button",
+      "role": "tab"
+    },
+    {
+      "route": "/analytics",
+      "controlType": "tab",
+      "accessibleName": "By Branch",
+      "testId": null,
+      "locatorStrategy": "getByRole('tab', { name: 'By Branch' })",
+      "riskClass": "read-only",
+      "tagName": "button",
+      "role": "tab"
+    },
+    {
+      "route": "/analytics",
+      "controlType": "tab",
+      "accessibleName": "Financial",
+      "testId": null,
+      "locatorStrategy": "getByRole('tab', { name: 'Financial' })",
+      "riskClass": "read-only",
+      "tagName": "button",
+      "role": "tab"
+    },
+    {
+      "route": "/analytics",
+      "controlType": "tab",
+      "accessibleName": "Risk",
+      "testId": null,
+      "locatorStrategy": "getByRole('tab', { name: 'Risk' })",
+      "riskClass": "read-only",
+      "tagName": "button",
+      "role": "tab"
+    },
+    {
+      "route": "/analytics",
+      "controlType": "tab",
+      "accessibleName": "Franchise",
+      "testId": null,
+      "locatorStrategy": "getByRole('tab', { name: 'Franchise' })",
+      "riskClass": "read-only",
+      "tagName": "button",
+      "role": "tab"
+    },
+    {
+      "route": "/finance",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "button",
+      "accessibleName": "User menu for Carol Accountant",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "Chart of Accounts",
+      "testId": null,
+      "locatorStrategy": "getByText('Chart of Accounts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "Journal Entries",
+      "testId": null,
+      "locatorStrategy": "getByText('Journal Entries')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "Fiscal Periods",
+      "testId": null,
+      "locatorStrategy": "getByText('Fiscal Periods')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "Trial Balance",
+      "testId": null,
+      "locatorStrategy": "getByText('Trial Balance')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "Profit & Loss",
+      "testId": null,
+      "locatorStrategy": "getByText('Profit & Loss')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "Balance Sheet",
+      "testId": null,
+      "locatorStrategy": "getByText('Balance Sheet')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "AP Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AP Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "AR Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AR Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "Budgets",
+      "testId": null,
+      "locatorStrategy": "getByText('Budgets')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "Analytics",
+      "testId": null,
+      "locatorStrategy": "getByText('Analytics')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/accounts",
+      "controlType": "button",
+      "accessibleName": "Reload app",
+      "testId": null,
+      "locatorStrategy": "getByText('Reload app')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/accounts",
+      "controlType": "button",
+      "accessibleName": "Go to POS",
+      "testId": null,
+      "locatorStrategy": "getByText('Go to POS')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/accounts",
+      "controlType": "button",
+      "accessibleName": "Close",
+      "testId": null,
+      "locatorStrategy": "getByText('Close')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/accounts",
+      "controlType": "button",
+      "accessibleName": "Show collapsed frames",
+      "testId": null,
+      "locatorStrategy": "getByText('Show collapsed frames')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "button",
+      "accessibleName": "User menu for Carol Accountant",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "Chart of Accounts",
+      "testId": null,
+      "locatorStrategy": "getByText('Chart of Accounts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "Journal Entries",
+      "testId": null,
+      "locatorStrategy": "getByText('Journal Entries')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "Fiscal Periods",
+      "testId": null,
+      "locatorStrategy": "getByText('Fiscal Periods')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "Trial Balance",
+      "testId": null,
+      "locatorStrategy": "getByText('Trial Balance')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "Profit & Loss",
+      "testId": null,
+      "locatorStrategy": "getByText('Profit & Loss')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "Balance Sheet",
+      "testId": null,
+      "locatorStrategy": "getByText('Balance Sheet')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "AP Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AP Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "AR Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AR Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "Budgets",
+      "testId": null,
+      "locatorStrategy": "getByText('Budgets')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "Analytics",
+      "testId": null,
+      "locatorStrategy": "getByText('Analytics')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "button",
+      "accessibleName": "User menu for Carol Accountant",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "Chart of Accounts",
+      "testId": null,
+      "locatorStrategy": "getByText('Chart of Accounts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "Journal Entries",
+      "testId": null,
+      "locatorStrategy": "getByText('Journal Entries')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "Fiscal Periods",
+      "testId": null,
+      "locatorStrategy": "getByText('Fiscal Periods')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "Trial Balance",
+      "testId": null,
+      "locatorStrategy": "getByText('Trial Balance')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "Profit & Loss",
+      "testId": null,
+      "locatorStrategy": "getByText('Profit & Loss')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "Balance Sheet",
+      "testId": null,
+      "locatorStrategy": "getByText('Balance Sheet')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "AP Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AP Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "AR Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AR Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "Budgets",
+      "testId": null,
+      "locatorStrategy": "getByText('Budgets')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "Analytics",
+      "testId": null,
+      "locatorStrategy": "getByText('Analytics')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "button",
+      "accessibleName": "User menu for Carol Accountant",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "button",
+      "accessibleName": "Generate Report",
+      "testId": "bs-generate",
+      "locatorStrategy": "getByTestId('bs-generate')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "button",
+      "accessibleName": "Export CSV",
+      "testId": "bs-export",
+      "locatorStrategy": "getByTestId('bs-export')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "Chart of Accounts",
+      "testId": null,
+      "locatorStrategy": "getByText('Chart of Accounts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "Journal Entries",
+      "testId": null,
+      "locatorStrategy": "getByText('Journal Entries')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "Fiscal Periods",
+      "testId": null,
+      "locatorStrategy": "getByText('Fiscal Periods')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "Trial Balance",
+      "testId": null,
+      "locatorStrategy": "getByText('Trial Balance')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "Profit & Loss",
+      "testId": null,
+      "locatorStrategy": "getByText('Profit & Loss')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "Balance Sheet",
+      "testId": null,
+      "locatorStrategy": "getByText('Balance Sheet')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "AP Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AP Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "AR Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AR Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "Budgets",
+      "testId": null,
+      "locatorStrategy": "getByText('Budgets')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "Analytics",
+      "testId": null,
+      "locatorStrategy": "getByText('Analytics')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/journal",
+      "controlType": "button",
+      "accessibleName": "Reload app",
+      "testId": null,
+      "locatorStrategy": "getByText('Reload app')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/journal",
+      "controlType": "button",
+      "accessibleName": "Go to POS",
+      "testId": null,
+      "locatorStrategy": "getByText('Go to POS')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/journal",
+      "controlType": "button",
+      "accessibleName": "Close",
+      "testId": null,
+      "locatorStrategy": "getByText('Close')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/journal",
+      "controlType": "button",
+      "accessibleName": "Show collapsed frames",
+      "testId": null,
+      "locatorStrategy": "getByText('Show collapsed frames')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/periods",
+      "controlType": "button",
+      "accessibleName": "Reload app",
+      "testId": null,
+      "locatorStrategy": "getByText('Reload app')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/periods",
+      "controlType": "button",
+      "accessibleName": "Go to POS",
+      "testId": null,
+      "locatorStrategy": "getByText('Go to POS')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/periods",
+      "controlType": "button",
+      "accessibleName": "Close",
+      "testId": null,
+      "locatorStrategy": "getByText('Close')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/periods",
+      "controlType": "button",
+      "accessibleName": "Show collapsed frames",
+      "testId": null,
+      "locatorStrategy": "getByText('Show collapsed frames')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "button",
+      "accessibleName": "User menu for Carol Accountant",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "button",
+      "accessibleName": "Generate Report",
+      "testId": "pnl-generate",
+      "locatorStrategy": "getByTestId('pnl-generate')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "button",
+      "accessibleName": "Export CSV",
+      "testId": "pnl-export",
+      "locatorStrategy": "getByTestId('pnl-export')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "Chart of Accounts",
+      "testId": null,
+      "locatorStrategy": "getByText('Chart of Accounts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "Journal Entries",
+      "testId": null,
+      "locatorStrategy": "getByText('Journal Entries')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "Fiscal Periods",
+      "testId": null,
+      "locatorStrategy": "getByText('Fiscal Periods')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "Trial Balance",
+      "testId": null,
+      "locatorStrategy": "getByText('Trial Balance')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "Profit & Loss",
+      "testId": null,
+      "locatorStrategy": "getByText('Profit & Loss')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "Balance Sheet",
+      "testId": null,
+      "locatorStrategy": "getByText('Balance Sheet')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "AP Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AP Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "AR Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AR Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "Budgets",
+      "testId": null,
+      "locatorStrategy": "getByText('Budgets')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "Analytics",
+      "testId": null,
+      "locatorStrategy": "getByText('Analytics')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "button",
+      "accessibleName": "User menu for Carol Accountant",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "button",
+      "accessibleName": "Generate Report",
+      "testId": "tb-generate",
+      "locatorStrategy": "getByTestId('tb-generate')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "button",
+      "accessibleName": "Export CSV",
+      "testId": "tb-export",
+      "locatorStrategy": "getByTestId('tb-export')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "Chart of Accounts",
+      "testId": null,
+      "locatorStrategy": "getByText('Chart of Accounts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "Journal Entries",
+      "testId": null,
+      "locatorStrategy": "getByText('Journal Entries')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "Fiscal Periods",
+      "testId": null,
+      "locatorStrategy": "getByText('Fiscal Periods')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "Trial Balance",
+      "testId": null,
+      "locatorStrategy": "getByText('Trial Balance')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "Profit & Loss",
+      "testId": null,
+      "locatorStrategy": "getByText('Profit & Loss')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "Balance Sheet",
+      "testId": null,
+      "locatorStrategy": "getByText('Balance Sheet')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "AP Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AP Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "AR Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AR Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "Budgets",
+      "testId": null,
+      "locatorStrategy": "getByText('Budgets')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "Analytics",
+      "testId": null,
+      "locatorStrategy": "getByText('Analytics')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "button",
+      "accessibleName": "User menu for Carol Accountant",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Chart of Accounts",
+      "testId": null,
+      "locatorStrategy": "getByText('Chart of Accounts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Journal Entries",
+      "testId": null,
+      "locatorStrategy": "getByText('Journal Entries')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Fiscal Periods",
+      "testId": null,
+      "locatorStrategy": "getByText('Fiscal Periods')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Trial Balance",
+      "testId": null,
+      "locatorStrategy": "getByText('Trial Balance')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Profit & Loss",
+      "testId": null,
+      "locatorStrategy": "getByText('Profit & Loss')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Balance Sheet",
+      "testId": null,
+      "locatorStrategy": "getByText('Balance Sheet')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "AP Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AP Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "AR Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AR Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Budgets",
+      "testId": null,
+      "locatorStrategy": "getByText('Budgets')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Analytics",
+      "testId": null,
+      "locatorStrategy": "getByText('Analytics')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Sales\nFranchise Analytics\n\nSales, margins, rankings and multi-month trends across all branches.\n\nCSV",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Finance\nBudgets & Variance\n\nBudget vs actual sales, COGS and variance across branches.\n\nCSV export\nP",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Operations\nInventory & Stock\n\nCurrent stock levels, low-stock items, wastage and shrinkage.",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "HR\nStaff Insights\n\nKPIs, Employee of the Month awards and promotion suggestions.",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Customer\nCustomer Feedback & NPS\n\nPromoters, passives, detractors and feedback comments.",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Admin\nReport Subscriptions\n\nManage automated delivery of shift-end reports, daily/weekly/monthly dig",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Operations\nReservations & Events\n\nReservation calendar, deposits and event management.",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Tech\nAPI Usage & Webhooks\n\nAPI key usage metrics, webhook delivery logs and failures.\n\nDev",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/reports",
+      "controlType": "link",
+      "accessibleName": "Finance\nFinance Overview\n\nP&L summary, expense tracking and service provider payables.",
+      "testId": null,
+      "locatorStrategy": "locator('a')",
+      "riskClass": "mutation",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "button",
+      "accessibleName": "Switch to dark mode",
+      "testId": "theme-toggle-btn",
+      "locatorStrategy": "getByTestId('theme-toggle-btn')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "button",
+      "accessibleName": "User menu for Carol Accountant",
+      "testId": "user-menu-trigger",
+      "locatorStrategy": "getByTestId('user-menu-trigger')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "button",
+      "accessibleName": "All",
+      "testId": null,
+      "locatorStrategy": "getByText('All')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "button",
+      "accessibleName": "Active Only",
+      "testId": null,
+      "locatorStrategy": "getByText('Active Only')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "button",
+      "accessibleName": "Edit",
+      "testId": null,
+      "locatorStrategy": "getByText('Edit')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Go to workspace home",
+      "testId": "sidebar-logo",
+      "locatorStrategy": "getByTestId('sidebar-logo')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Chart of Accounts",
+      "testId": null,
+      "locatorStrategy": "getByText('Chart of Accounts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Journal Entries",
+      "testId": null,
+      "locatorStrategy": "getByText('Journal Entries')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Fiscal Periods",
+      "testId": null,
+      "locatorStrategy": "getByText('Fiscal Periods')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Trial Balance",
+      "testId": null,
+      "locatorStrategy": "getByText('Trial Balance')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Profit & Loss",
+      "testId": null,
+      "locatorStrategy": "getByText('Profit & Loss')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Balance Sheet",
+      "testId": null,
+      "locatorStrategy": "getByText('Balance Sheet')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Service Providers",
+      "testId": null,
+      "locatorStrategy": "getByText('Service Providers')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "AP Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AP Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "AR Aging",
+      "testId": null,
+      "locatorStrategy": "getByText('AR Aging')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Budgets",
+      "testId": null,
+      "locatorStrategy": "getByText('Budgets')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Reports",
+      "testId": null,
+      "locatorStrategy": "getByText('Reports')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Analytics",
+      "testId": null,
+      "locatorStrategy": "getByText('Analytics')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "My Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('My Availability')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "My Swaps",
+      "testId": null,
+      "locatorStrategy": "getByText('My Swaps')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/service-providers",
+      "controlType": "link",
+      "accessibleName": "Open Shifts",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Shifts')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "accessibleName": "Refresh",
+      "testId": null,
+      "locatorStrategy": "getByText('Refresh')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "accessibleName": "Weekly Availability",
+      "testId": null,
+      "locatorStrategy": "getByText('Weekly Availability')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "accessibleName": "Date Exceptions",
+      "testId": null,
+      "locatorStrategy": "getByText('Date Exceptions')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "accessibleName": "Add Slot",
+      "testId": null,
+      "locatorStrategy": "getByText('Add Slot')",
+      "riskClass": "mutation",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-availability",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "accessibleName": "Refresh",
+      "testId": null,
+      "locatorStrategy": "getByText('Refresh')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "accessibleName": "Request Swap",
+      "testId": null,
+      "locatorStrategy": "getByText('Request Swap')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "accessibleName": "Sent Requests (0)",
+      "testId": null,
+      "locatorStrategy": "getByText('Sent Requests (0)')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "accessibleName": "Received Requests (0)",
+      "testId": null,
+      "locatorStrategy": "getByText('Received Requests (0)')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "accessibleName": "Refresh",
+      "testId": null,
+      "locatorStrategy": "getByText('Refresh')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "accessibleName": "Open Tanstack query devtools",
+      "testId": null,
+      "locatorStrategy": "getByText('Open Tanstack query devtools')",
+      "riskClass": "unknown",
+      "tagName": "button",
+      "role": null
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "controlType": "link",
+      "accessibleName": "Skip to main content",
+      "testId": null,
+      "locatorStrategy": "getByText('Skip to main content')",
+      "riskClass": "read-only",
+      "tagName": "a",
+      "role": null
+    }
+  ]
+}

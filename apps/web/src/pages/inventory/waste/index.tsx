@@ -207,7 +207,7 @@ export default function InventoryWastePage() {
         subtitle="Document and track inventory losses"
         actions={
           isL3OrAbove && (
-            <Button onClick={() => setDialogOpen(true)}>
+            <Button onClick={() => setDialogOpen(true)} data-testid="waste-create-btn">
               <Plus className="mr-2 h-4 w-4" />
               New Waste Document
             </Button>

@@ -1,8 +1,8 @@
 # Role Audit Report: CAFESSERIE / ACCOUNTANT
 
-**Date:** 2026-01-13  
+**Date:** 2026-01-19  
 **Status:** ⚠️ ISSUES  
-**Duration:** 190.5s  
+**Duration:** 196.5s  
 **Email:** accountant@cafesserie.demo.local
 
 ---
@@ -11,18 +11,18 @@
 
 | Metric | Value |
 |--------|-------|
-| Routes Visited | 9 / 10 |
+| Routes Visited | 13 / 13 |
 | Routes Forbidden | 0 |
 | Routes Not Found | 0 |
-| Routes Error | 1 |
-| Controls Found | 72 |
-| Controls Clicked | 11 |
-| Controls Skipped | 61 |
-| API Endpoints Hit | 15 |
-| 2xx Responses | 54 |
-| 4xx Responses | 15 |
+| Routes Error | 0 |
+| Controls Found | 86 |
+| Controls Clicked | 13 |
+| Controls Skipped | 73 |
+| API Endpoints Hit | 20 |
+| 2xx Responses | 80 |
+| 4xx Responses | 2 |
 | 5xx Responses | 0 |
-| Total Failures | 2 |
+| Total Failures | 1 |
 
 ---
 
@@ -30,16 +30,19 @@
 
 | Route | Status | Load Time |
 |-------|--------|-----------|
-| /analytics | ❌ error | 10731ms |
-| /finance | ✅ success | 2620ms |
-| /finance/accounts | ✅ success | 4556ms |
-| /finance/ap-aging | ✅ success | 1916ms |
-| /finance/ar-aging | ✅ success | 1939ms |
-| /finance/balance-sheet | ✅ success | 3769ms |
-| /finance/journal | ✅ success | 4804ms |
-| /finance/periods | ✅ success | 2345ms |
-| /finance/pnl | ✅ success | 8561ms |
-| /finance/trial-balance | ✅ success | 5064ms |
+| /analytics | ✅ success | 4141ms |
+| /finance | ✅ success | 2184ms |
+| /finance/accounts | ✅ success | 2816ms |
+| /finance/ap-aging | ✅ success | 1606ms |
+| /finance/ar-aging | ✅ success | 3422ms |
+| /finance/balance-sheet | ✅ success | 4058ms |
+| /finance/journal | ✅ success | 8758ms |
+| /finance/periods | ✅ success | 1836ms |
+| /finance/pnl | ✅ success | 6131ms |
+| /finance/trial-balance | ✅ success | 1122ms |
+| /reports | ✅ success | 1209ms |
+| /service-providers | ✅ success | 1530ms |
+| /workforce/my-availability | ✅ success | 3019ms |
 
 ---
 
@@ -47,12 +50,12 @@
 
 | Method | Path | Status | Count |
 |--------|------|--------|-------|
-| GET | /me |  200 | 21 |
-| GET | /branches |  200 | 21 |
-| GET | /franchise/budgets/variance | ⚠️ 401 | 7 |
-| GET | /franchise/forecast | ⚠️ 401 | 7 |
+| GET | /me |  200 | 25 |
+| GET | /branches |  200 | 25 |
+| GET | /franchise/budgets/variance |  200 | 7 |
+| GET | /franchise/forecast |  200 | 7 |
 | GET | /accounting/accounts |  200 | 3 |
-| GET | /billing/subscription | ⚠️ 401 | 1 |
+| GET | /billing/subscription | ⚠️ 403 | 1 |
 | GET | /analytics/daily-metrics |  200 | 1 |
 | GET | /finance/budgets/summary |  200 | 1 |
 | GET | /accounting/ap/aging |  200 | 1 |
@@ -62,6 +65,11 @@
 | GET | /accounting/periods |  200 | 1 |
 | GET | /accounting/pnl |  200 | 1 |
 | GET | /accounting/trial-balance |  200 | 1 |
+| GET | /service-providers/contracts | ⚠️ 404 | 1 |
+| GET | /service-providers |  200 | 1 |
+| GET | /finance/service-reminders/summary |  200 | 1 |
+| GET | /finance/service-reminders |  200 | 1 |
+| GET | /workforce/self/availability |  200 | 1 |
 
 ---
 
@@ -69,8 +77,9 @@
 
 | Route | Type | Message |
 |-------|------|---------|
-| /analytics | route-error | page.title: Execution context was destroyed, most likely because of a navigation |
-| /reports | route-error | Skipped due to time budget (190466ms elapsed) |
+| /analytics | api-forbidden | 403 Forbidden: GET /billing/subscription |
+| /workforce/my-swaps | route-skipped-time-limit | Skipped due to time budget (196436ms elapsed) |
+| /workforce/open-shifts | route-skipped-time-limit | Skipped due to time budget (196437ms elapsed) |
 
 ---
 
@@ -78,17 +87,29 @@
 
 | Route | Label | Type | Outcome |
 |-------|-------|------|---------|
-| /finance | theme-toggle-btn | toggle | no-op |
-| /finance | user-menu-container | menu | menu-opened |
-| /finance/ap-aging | Open Tanstack query devtools | button | no-op |
-| /finance/ar-aging | theme-toggle-btn | button | no-op |
-| /finance/ar-aging | user-menu-trigger | button | menu-opened |
-| /finance/ar-aging | Close tanstack query devtools | button | menu-opened |
-| /finance/balance-sheet | Open Tanstack query devtools | button | no-op |
+| /analytics | Open Tanstack query devtools | button | no-op |
+| /finance | theme-toggle-btn | button | no-op |
+| /finance | user-menu-trigger | button | menu-opened |
+| /finance | Close tanstack query devtools | button | menu-opened |
+| /finance/ap-aging | theme-toggle-btn | toggle | no-op |
+| /finance/ap-aging | user-menu-container | menu | menu-opened |
+| /finance/ar-aging | Open Tanstack query devtools | button | no-op |
+| /finance/balance-sheet | theme-toggle-btn | toggle | no-op |
+| /finance/balance-sheet | user-menu-container | menu | menu-opened |
 | /finance/pnl | Close tanstack query devtools | button | no-op |
-| /finance/pnl | Export CSV | button | no-op |
-| /finance/trial-balance | theme-toggle-btn | toggle | no-op |
-| /finance/trial-balance | user-menu-container | menu | menu-opened |
+| /finance/trial-balance | Open Tanstack query devtools | button | no-op |
+| /reports | theme-toggle-btn | toggle | no-op |
+| /reports | user-menu-container | menu | menu-opened |
+
+---
+
+## Landing Page Visibility Checks ✅
+
+| Check | Status | Details |
+|-------|--------|---------|
+| Dashboard header | ✅ | Found: dashboard header |
+| Dashboard timestamp | ✅ | Found: timestamp visible |
+| Refresh button | ✅ | Found: refresh button |
 
 ---
 

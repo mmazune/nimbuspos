@@ -1,0 +1,4292 @@
+{
+  "org": "cafesserie",
+  "role": "procurement",
+  "email": "procurement@cafesserie.demo.local",
+  "generatedAt": "2026-01-23T02:49:01.190Z",
+  "durationMs": 200384,
+  "summary": {
+    "total": 286,
+    "hasEndpoints": 22,
+    "noNetworkEffect": 60,
+    "skipped": 204,
+    "uniqueEndpoints": 30,
+    "attributionPercent": 28.7,
+    "mutationBlockingEnabled": true,
+    "totalBlockedMutations": 0,
+    "controlsWithBlockedMutations": 0
+  },
+  "controls": [
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/Switch-to-dark-mode",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/User-menu-for-Oscar-Procurement",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "User menu for Oscar Procurement",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/Refresh-dashboard-data",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Refresh dashboard data",
+      "dataTestId": "dashboard-refresh-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/Select-7-Days-date-range",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 7 Days date range",
+      "dataTestId": "date-preset-7d",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/Select-30-Days-date-range",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 30 Days date range",
+      "dataTestId": "date-preset-30d",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/Select-90-Days-date-range",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 90 Days date range",
+      "dataTestId": "date-preset-90d",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/Select-180-Days-date-range",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 180 Days date range",
+      "dataTestId": "date-preset-180d",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/Acacia-Mall",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Acacia Mall",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/Arena-Mall",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Arena Mall",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/Mombasa",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Mombasa",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/Village-Mall",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Village Mall",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/Open-Tanstack-query-devtools",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/View-Revenue-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Revenue details",
+      "dataTestId": "kpi-revenue",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/View-Gross-Margin-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Gross Margin details",
+      "dataTestId": "kpi-gross-margin",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/View-Low-Stock-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Low Stock details",
+      "dataTestId": "kpi-low-stock",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/levels",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/button/View-Payables-Due-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Payables Due details",
+      "dataTestId": "kpi-payables-due",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Skip-to-main-content",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Go-to-workspace-home",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/levels",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Inventory",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/levels",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Purchase-Orders",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Purchase Orders",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Receipts",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Receipts",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Transfers",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Transfers",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Waste",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Waste",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Recipes",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Recipes",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Depletions",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Depletions",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Period-Close",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Period Close",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Service-Providers",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Reports",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Dashboard",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Settings",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/My-Availability",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/My-Swaps",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Open-Shifts",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/Low-Stock-Items-16-16-items-below-reorder-level",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Low Stock Items\n\n16\n\n16 items below reorder level",
+      "dataTestId": "alert-item-low-stock",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/link/View-all",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "View all",
+      "dataTestId": "top-items-view-all",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/input/Start-date",
+      "route": "/dashboard",
+      "controlType": "input",
+      "label": "Start date",
+      "dataTestId": "date-from-input",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/input/End-date",
+      "route": "/dashboard",
+      "controlType": "input",
+      "label": "End date",
+      "dataTestId": "date-to-input",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//dashboard/select/All-Branches-Acacia-Mall-Arena-Mall-Mombasa-Village-Mall",
+      "route": "/dashboard",
+      "controlType": "select",
+      "label": "All Branches\nAcacia Mall\nArena Mall\nMombasa\nVillage Mall",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/button/Switch-to-dark-mode",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/button/User-menu-for-Oscar-Procurement",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "User menu for Oscar Procurement",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/button/All-Items",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "All Items",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/button/Low-Stock-Only",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "Low Stock Only",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/button/Edit",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "Edit",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/Skip-to-main-content",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/Go-to-workspace-home",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/Inventory",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/Purchase-Orders",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Purchase Orders",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/Receipts",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Receipts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/Transfers",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Transfers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/Waste",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Waste",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/Recipes",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Recipes",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/Depletions",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Depletions",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/Period-Close",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Period Close",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/Service-Providers",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/Reports",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/Dashboard",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/Settings",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/My-Availability",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/My-Swaps",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/link/Open-Shifts",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/button/Switch-to-dark-mode",
+      "route": "/inventory/depletions",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/button/User-menu-for-Oscar-Procurement",
+      "route": "/inventory/depletions",
+      "controlType": "button",
+      "label": "User menu for Oscar Procurement",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/button/Cancel",
+      "route": "/inventory/depletions",
+      "controlType": "button",
+      "label": "Cancel",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/button/Skip-Depletion",
+      "route": "/inventory/depletions",
+      "controlType": "button",
+      "label": "Skip Depletion",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/button/Close",
+      "route": "/inventory/depletions",
+      "controlType": "button",
+      "label": "Close",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/button/Open-Tanstack-query-devtools",
+      "route": "/inventory/depletions",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/Skip-to-main-content",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/Go-to-workspace-home",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions/stats",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/Inventory",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/Purchase-Orders",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "Purchase Orders",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory/depletions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions/stats",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/Receipts",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "Receipts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory/receipts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions/stats",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/Transfers",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "Transfers",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory/transfers",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions/stats",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/Waste",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "Waste",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory/depletions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions/stats",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/Recipes",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "Recipes",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/pos/menu-items",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/foundation/uoms",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/v2/recipes",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions/stats",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/Depletions",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "Depletions",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/Period-Close",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "Period Close",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/org/branches",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/periods",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions/stats",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/Service-Providers",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders/summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers/contracts",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions/stats",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/Reports",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/Dashboard",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/Settings",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/My-Availability",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions/stats",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/My-Swaps",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions/stats",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/depletions/link/Open-Shifts",
+      "route": "/inventory/depletions",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions/stats",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/button/Switch-to-dark-mode",
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/button/User-menu-for-Oscar-Procurement",
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "label": "User menu for Oscar Procurement",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/button/All-Branches",
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "label": "All Branches",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/button/Pre-Close-Check",
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "label": "Pre-Close Check",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/button/Generate-Periods",
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "label": "Generate Periods",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/button/Create-Period",
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "label": "Create Period",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/button/Close-Period",
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "label": "Close Period",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/button/Open-Tanstack-query-devtools",
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/Skip-to-main-content",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/Go-to-workspace-home",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/Inventory",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/Purchase-Orders",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "Purchase Orders",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/Receipts",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "Receipts",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/Transfers",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "Transfers",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/Waste",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "Waste",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/Recipes",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "Recipes",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/Depletions",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "Depletions",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/Period-Close",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "Period Close",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/Service-Providers",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/Reports",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/Dashboard",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/Settings",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/My-Availability",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/My-Swaps",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/period-close/link/Open-Shifts",
+      "route": "/inventory/period-close",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/button/Switch-to-dark-mode",
+      "route": "/inventory/purchase-orders",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/button/User-menu-for-Oscar-Procurement",
+      "route": "/inventory/purchase-orders",
+      "controlType": "button",
+      "label": "User menu for Oscar Procurement",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/button/All-Statuses",
+      "route": "/inventory/purchase-orders",
+      "controlType": "button",
+      "label": "All Statuses",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/button/Create-PO",
+      "route": "/inventory/purchase-orders",
+      "controlType": "button",
+      "label": "Create PO",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/button/Open-Tanstack-query-devtools",
+      "route": "/inventory/purchase-orders",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/Skip-to-main-content",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/Go-to-workspace-home",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/Inventory",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/Purchase-Orders",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "Purchase Orders",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/Receipts",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "Receipts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/Transfers",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "Transfers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/Waste",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "Waste",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/Recipes",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "Recipes",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/Depletions",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "Depletions",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/Period-Close",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "Period Close",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/Service-Providers",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/Reports",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/Dashboard",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/Settings",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/My-Availability",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/My-Swaps",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/purchase-orders/link/Open-Shifts",
+      "route": "/inventory/purchase-orders",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/button/Switch-to-dark-mode",
+      "route": "/inventory/receipts",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/button/User-menu-for-Oscar-Procurement",
+      "route": "/inventory/receipts",
+      "controlType": "button",
+      "label": "User menu for Oscar Procurement",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/button/All-Statuses",
+      "route": "/inventory/receipts",
+      "controlType": "button",
+      "label": "All Statuses",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/button/Create-Receipt",
+      "route": "/inventory/receipts",
+      "controlType": "button",
+      "label": "Create Receipt",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/button/Open-Tanstack-query-devtools",
+      "route": "/inventory/receipts",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/Skip-to-main-content",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/Go-to-workspace-home",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/Inventory",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/Purchase-Orders",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "Purchase Orders",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/Receipts",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "Receipts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/Transfers",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "Transfers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/Waste",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "Waste",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/Recipes",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "Recipes",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/Depletions",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "Depletions",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/Period-Close",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "Period Close",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/Service-Providers",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/Reports",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/Dashboard",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/Settings",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/My-Availability",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/My-Swaps",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/receipts/link/Open-Shifts",
+      "route": "/inventory/receipts",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/button/Switch-to-dark-mode",
+      "route": "/inventory/recipes",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/button/User-menu-for-Oscar-Procurement",
+      "route": "/inventory/recipes",
+      "controlType": "button",
+      "label": "User menu for Oscar Procurement",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/button/Create-Recipe",
+      "route": "/inventory/recipes",
+      "controlType": "button",
+      "label": "Create Recipe",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/button/Add-Line",
+      "route": "/inventory/recipes",
+      "controlType": "button",
+      "label": "Add Line",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/button/Cancel",
+      "route": "/inventory/recipes",
+      "controlType": "button",
+      "label": "Cancel",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/button/Open-Tanstack-query-devtools",
+      "route": "/inventory/recipes",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/Skip-to-main-content",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/Go-to-workspace-home",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/Inventory",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/Purchase-Orders",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "Purchase Orders",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/Receipts",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "Receipts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/Transfers",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "Transfers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/Waste",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "Waste",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/Recipes",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "Recipes",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/Depletions",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "Depletions",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/Period-Close",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "Period Close",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/Service-Providers",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/Reports",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/Dashboard",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/Settings",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/My-Availability",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/My-Swaps",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/recipes/link/Open-Shifts",
+      "route": "/inventory/recipes",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/transfers/link/Skip-to-main-content",
+      "route": "/inventory/transfers",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/button/Switch-to-dark-mode",
+      "route": "/inventory/waste",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/button/User-menu-for-Oscar-Procurement",
+      "route": "/inventory/waste",
+      "controlType": "button",
+      "label": "User menu for Oscar Procurement",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/button/New-Waste-Document",
+      "route": "/inventory/waste",
+      "controlType": "button",
+      "label": "New Waste Document",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/button/All-Statuses",
+      "route": "/inventory/waste",
+      "controlType": "button",
+      "label": "All Statuses",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/button/All-Reasons",
+      "route": "/inventory/waste",
+      "controlType": "button",
+      "label": "All Reasons",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/button/Open-Tanstack-query-devtools",
+      "route": "/inventory/waste",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/Skip-to-main-content",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/Go-to-workspace-home",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/Inventory",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/Purchase-Orders",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "Purchase Orders",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/Receipts",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "Receipts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/Transfers",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "Transfers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/Waste",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "Waste",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/Recipes",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "Recipes",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/Depletions",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "Depletions",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/Period-Close",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "Period Close",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/Service-Providers",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/Reports",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/Dashboard",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/Settings",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/My-Availability",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/My-Swaps",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//inventory/waste/link/Open-Shifts",
+      "route": "/inventory/waste",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/button/Switch-to-dark-mode",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/button/User-menu-for-Oscar-Procurement",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "User menu for Oscar Procurement",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/button/Open-Tanstack-query-devtools",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Skip-to-main-content",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Go-to-workspace-home",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Inventory",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Purchase-Orders",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Purchase Orders",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Receipts",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Receipts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Transfers",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Transfers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Waste",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Waste",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Recipes",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Recipes",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Depletions",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Depletions",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Period-Close",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Period Close",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Service-Providers",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Reports",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Dashboard",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Settings",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/My-Availability",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/My-Swaps",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Open-Shifts",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Sales-Franchise-Analytics-Sales,-margins,-rankings-and-multi-month-trends-across-all-branches.-CSV",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Sales\nFranchise Analytics\n\nSales, margins, rankings and multi-month trends across all branches.\n\nCSV",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Finance-Budgets-&-Variance-Budget-vs-actual-sales,-COGS-and-variance-across-branches.-CSV-export-P",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Finance\nBudgets & Variance\n\nBudget vs actual sales, COGS and variance across branches.\n\nCSV export\nP",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Operations-Inventory-&-Stock-Current-stock-levels,-low-stock-items,-wastage-and-shrinkage.",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Operations\nInventory & Stock\n\nCurrent stock levels, low-stock items, wastage and shrinkage.",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/HR-Staff-Insights-KPIs,-Employee-of-the-Month-awards-and-promotion-suggestions.",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "HR\nStaff Insights\n\nKPIs, Employee of the Month awards and promotion suggestions.",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Customer-Customer-Feedback-&-NPS-Promoters,-passives,-detractors-and-feedback-comments.",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Customer\nCustomer Feedback & NPS\n\nPromoters, passives, detractors and feedback comments.",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Admin-Report-Subscriptions-Manage-automated-delivery-of-shift-end-reports,-daily/weekly/monthly-dig",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Admin\nReport Subscriptions\n\nManage automated delivery of shift-end reports, daily/weekly/monthly dig",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Operations-Reservations-&-Events-Reservation-calendar,-deposits-and-event-management.",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Operations\nReservations & Events\n\nReservation calendar, deposits and event management.",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Tech-API-Usage-&-Webhooks-API-key-usage-metrics,-webhook-delivery-logs-and-failures.-Dev",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Tech\nAPI Usage & Webhooks\n\nAPI key usage metrics, webhook delivery logs and failures.\n\nDev",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//reports/link/Finance-Finance-Overview-P&L-summary,-expense-tracking-and-service-provider-payables.",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Finance\nFinance Overview\n\nP&L summary, expense tracking and service provider payables.",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/button/Switch-to-dark-mode",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/button/User-menu-for-Oscar-Procurement",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "User menu for Oscar Procurement",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/button/All",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/button/Active-Only",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Active Only",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/button/Edit",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Edit",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/button/Open-Tanstack-query-devtools",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/Skip-to-main-content",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/Go-to-workspace-home",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/Inventory",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/Purchase-Orders",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Purchase Orders",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/Receipts",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Receipts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/Transfers",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Transfers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/Waste",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Waste",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/Recipes",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Recipes",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/Depletions",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Depletions",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/Period-Close",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Period Close",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/Service-Providers",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/Reports",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/Dashboard",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/Settings",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/My-Availability",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/My-Swaps",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//service-providers/link/Open-Shifts",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/button/Switch-to-dark-mode",
+      "route": "/settings",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/button/User-menu-for-Oscar-Procurement",
+      "route": "/settings",
+      "controlType": "button",
+      "label": "User menu for Oscar Procurement",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/button/Open-Tanstack-query-devtools",
+      "route": "/settings",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/Skip-to-main-content",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/Go-to-workspace-home",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/Inventory",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/Purchase-Orders",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Purchase Orders",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/Receipts",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Receipts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/Transfers",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Transfers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/Waste",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Waste",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/Recipes",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Recipes",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/Depletions",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Depletions",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/Period-Close",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Period Close",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/Service-Providers",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/Reports",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/Dashboard",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/Settings",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/My-Availability",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/My-Swaps",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//settings/link/Open-Shifts",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//workforce/my-availability/button/Refresh",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//workforce/my-availability/button/Weekly-Availability",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Weekly Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//workforce/my-availability/button/Date-Exceptions",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Date Exceptions",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//workforce/my-availability/button/Add-Slot",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Add Slot",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//workforce/my-availability/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//workforce/my-availability/link/Skip-to-main-content",
+      "route": "/workforce/my-availability",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//workforce/my-swaps/button/Refresh",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//workforce/my-swaps/button/Request-Swap",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Request Swap",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//workforce/my-swaps/button/Sent-Requests-(0)",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Sent Requests (0)",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//workforce/my-swaps/button/Received-Requests-(0)",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Received Requests (0)",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//workforce/my-swaps/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//workforce/my-swaps/link/Skip-to-main-content",
+      "route": "/workforce/my-swaps",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//workforce/open-shifts/button/Refresh",
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//workforce/open-shifts/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/procurement//workforce/open-shifts/link/Skip-to-main-content",
+      "route": "/workforce/open-shifts",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    }
+  ]
+}

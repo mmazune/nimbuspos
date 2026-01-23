@@ -1,0 +1,99 @@
+{
+  "org": "tapas",
+  "role": "stock",
+  "email": "stock@tapas.demo.local",
+  "generatedAt": "2026-01-22T18:55:25.242Z",
+  "durationMs": 39680,
+  "summary": {
+    "routesVisited": 14,
+    "routesWithEndpoints": 0,
+    "totalEndpoints": 0,
+    "uniqueEndpoints": 0
+  },
+  "routes": [
+    {
+      "route": "/inventory",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:54:50.039Z"
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:54:52.777Z"
+    },
+    {
+      "route": "/inventory/receipts",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:54:55.460Z"
+    },
+    {
+      "route": "/inventory/transfers",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:54:58.152Z"
+    },
+    {
+      "route": "/inventory/waste",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:55:00.876Z"
+    },
+    {
+      "route": "/inventory/recipes",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:55:03.575Z"
+    },
+    {
+      "route": "/inventory/depletions",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:55:06.293Z"
+    },
+    {
+      "route": "/inventory/period-close",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:55:09.042Z"
+    },
+    {
+      "route": "/reports",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:55:11.745Z"
+    },
+    {
+      "route": "/dashboard",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:55:14.476Z"
+    },
+    {
+      "route": "/settings",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:55:17.174Z"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:55:19.857Z"
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:55:22.541Z"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:55:25.242Z"
+    }
+  ]
+}

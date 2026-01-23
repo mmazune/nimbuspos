@@ -1,0 +1,9 @@
+{
+  "generatedAt": "2026-01-20T00:18:41.533Z",
+  "totalControls": 1490,
+  "withTestId": 170,
+  "withoutTestId": 1320,
+  "testIdPercent": 11.4,
+  "readSafe": 1416,
+  "mutationRisk": 74
+}

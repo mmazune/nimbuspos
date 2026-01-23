@@ -1,0 +1,17 @@
+{
+  "org": "cafesserie",
+  "role": "owner",
+  "email": "owner@cafesserie.demo.local",
+  "timestamp": "2026-01-22T16:51:00.152Z",
+  "controls": [],
+  "receiptsSampled": [],
+  "summary": {
+    "totalControls": 0,
+    "hasDownload": 0,
+    "uiOnlyPrint": 0,
+    "asyncJob": 0,
+    "errors": 0,
+    "receiptsChecked": 0,
+    "receiptsWithPrint": 0
+  }
+}

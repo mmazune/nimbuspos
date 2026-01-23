@@ -1,0 +1,109 @@
+{
+  "results": [
+    {
+      "id": "INV9-1",
+      "name": "Valuation has lines and non-zero total",
+      "org": "tapas",
+      "passed": true,
+      "value": "158 lines, total=2122518081",
+      "expected": "lines > 0, totalValue > 0"
+    },
+    {
+      "id": "INV9-2",
+      "name": "At least 10 items have non-zero WAC",
+      "org": "tapas",
+      "passed": true,
+      "value": 158,
+      "expected": ">= 10"
+    },
+    {
+      "id": "INV9-3",
+      "name": "At least 10 recipes have ingredient lines",
+      "org": "tapas",
+      "passed": true,
+      "value": 15,
+      "expected": ">= 10"
+    },
+    {
+      "id": "INV9-4",
+      "name": "At least 5 recipes have computable costs",
+      "org": "tapas",
+      "passed": true,
+      "value": 15,
+      "expected": ">= 5",
+      "details": "1926: 1594000, 21 Devils: 1594000, Absolut Vodka Citron 1Ltr (Shot): 3220000"
+    },
+    {
+      "id": "INV9-5",
+      "name": "COGS endpoint returns valid structure",
+      "org": "tapas",
+      "passed": true,
+      "value": "status=200, hasLines=true, totalCogs=0",
+      "expected": "valid response structure"
+    },
+    {
+      "id": "INV9-6",
+      "name": "At least 2 reporting endpoints return valid data",
+      "org": "tapas",
+      "passed": true,
+      "value": 3,
+      "expected": ">= 2",
+      "details": "X Report: OK, Vendor Bills: OK, Valuation: OK"
+    },
+    {
+      "id": "INV9-1",
+      "name": "Valuation has lines and non-zero total",
+      "org": "cafesserie",
+      "passed": true,
+      "value": "77 lines, total=256226153",
+      "expected": "lines > 0, totalValue > 0"
+    },
+    {
+      "id": "INV9-2",
+      "name": "At least 10 items have non-zero WAC",
+      "org": "cafesserie",
+      "passed": true,
+      "value": 77,
+      "expected": ">= 10"
+    },
+    {
+      "id": "INV9-3",
+      "name": "At least 10 recipes have ingredient lines",
+      "org": "cafesserie",
+      "passed": true,
+      "value": 15,
+      "expected": ">= 10"
+    },
+    {
+      "id": "INV9-4",
+      "name": "At least 5 recipes have computable costs",
+      "org": "cafesserie",
+      "passed": true,
+      "value": 15,
+      "expected": ">= 5",
+      "details": "Affogato: 1712814, Almond Croissant: 872000, Americano: 2012814"
+    },
+    {
+      "id": "INV9-5",
+      "name": "COGS endpoint returns valid structure",
+      "org": "cafesserie",
+      "passed": true,
+      "value": "status=200, hasLines=true, totalCogs=0",
+      "expected": "valid response structure"
+    },
+    {
+      "id": "INV9-6",
+      "name": "At least 2 reporting endpoints return valid data",
+      "org": "cafesserie",
+      "passed": true,
+      "value": 3,
+      "expected": ">= 2",
+      "details": "X Report: OK, Vendor Bills: OK, Valuation: OK"
+    }
+  ],
+  "summary": {
+    "total": 12,
+    "passed": 12,
+    "failed": 0
+  }
+}

@@ -1,8 +1,8 @@
 # Role Audit Report: CAFESSERIE / CHEF
 
-**Date:** 2026-01-13  
-**Status:** ✅ PASS  
-**Duration:** 9.7s  
+**Date:** 2026-01-21  
+**Status:** ⚠️ ISSUES  
+**Duration:** 0.0s  
 **Email:** chef@cafesserie.demo.local
 
 ---
@@ -22,7 +22,7 @@
 | 2xx Responses | 0 |
 | 4xx Responses | 0 |
 | 5xx Responses | 0 |
-| Total Failures | 0 |
+| Total Failures | 1 |
 
 ---
 
@@ -37,6 +37,16 @@
 
 | Method | Path | Status | Count |
 |--------|------|--------|-------|
+
+---
+
+## Failures
+
+| Route | Type | Message |
+|-------|------|---------|
+| /login | login-failed | apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3001
+Call log:
+[2m  - →  |
 
 ---
 

@@ -573,16 +573,16 @@ export default function PeriodClosePage() {
             </Select>
           </div>
           <div className="flex-1" />
-          <Button variant="outline" onClick={() => setPreCloseDialogOpen(true)}>
+          <Button variant="outline" onClick={() => setPreCloseDialogOpen(true)} data-testid="inv-pre-close-check-btn">
             <CheckCircle2 className="w-4 h-4 mr-2" /> Pre-Close Check
           </Button>
-          <Button variant="outline" onClick={() => setGenerateDialogOpen(true)}>
+          <Button variant="outline" onClick={() => setGenerateDialogOpen(true)} data-testid="inv-generate-periods-btn">
             <Calendar className="w-4 h-4 mr-2" /> Generate Periods
           </Button>
-          <Button variant="outline" onClick={() => setCreateDialogOpen(true)}>
+          <Button variant="outline" onClick={() => setCreateDialogOpen(true)} data-testid="inv-create-period-btn">
             <Plus className="w-4 h-4 mr-2" /> Create Period
           </Button>
-          <Button onClick={() => setCloseDialogOpen(true)}>
+          <Button onClick={() => setCloseDialogOpen(true)} data-testid="inv-close-period-btn">
             <FileCheck className="w-4 h-4 mr-2" /> Close Period
           </Button>
         </div>

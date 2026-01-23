@@ -4,6 +4,8 @@ import { seedDemo, printDemoCredentials } from './demo/seedDemo';
 import { seedCatalog } from './demo/seedCatalog';
 import { seedOpenOrders } from './demo/seedOrders';
 import { seedComprehensive } from './demo/seedComprehensive';
+import { seedOperationalState } from './demo/seedOperationalState';
+import { seedInventoryGaps } from './demo/seedInventoryGaps';
 
 async function hashPassword(password: string): Promise<string> {
   return argon2.hash(password, {
@@ -341,8 +343,11 @@ async function main() {
 
   // Clean up old inventory data before seeding
   // CRITICAL: Delete in FK dependency order (children before parents)
+  // M77 AUDIT SAFETY: Hard delete used ONLY for demo seed. Production must use soft delete
+  // with deletedAt/deletedBy for accounting compliance (SOX, IFRS, tax audit trails).
   await prisma.recipeIngredient.deleteMany({});
   await prisma.wastage.deleteMany({});
+  await prisma.depletionCostBreakdown.deleteMany({}); // ← M76/M77: Must delete before inventoryItem (FK constraint on itemId)
   await prisma.inventoryPeriodMovementSummary.deleteMany({}); // ← Must delete before inventoryItem (FK constraint)
   await prisma.inventoryValuationSnapshot.deleteMany({}); // ← Must delete before inventoryItem (FK constraint)
   await prisma.inventoryLedgerEntry.deleteMany({}); // ← Must delete before inventoryItem (FK constraint)
@@ -350,8 +355,12 @@ async function main() {
   await prisma.stockBatch.deleteMany({});
   await prisma.goodsReceiptLine.deleteMany({});
   await prisma.goodsReceipt.deleteMany({});
+  await prisma.goodsReceiptLineV2.deleteMany({}); // ← M76: Must delete before inventoryItem (FK constraint on itemId)
   await prisma.purchaseOrderItem.deleteMany({});
+  await prisma.purchaseOrderLineV2.deleteMany({}); // ← M71: Must delete before inventoryItem (FK constraint on itemId)
   await prisma.purchaseOrder.deleteMany({});
+  await prisma.recipeLine.deleteMany({}); // ← M71: Must delete before inventoryItem (FK constraint on inventoryItemId)
+  await prisma.inventoryCostLayer.deleteMany({}); // ← M71: Must delete before inventoryItem (FK constraint on itemId)
   await prisma.inventoryItem.deleteMany({});
   await prisma.supplier.deleteMany({});
 
@@ -788,6 +797,12 @@ async function main() {
   // ===== Comprehensive Demo Data (V2.1.2) =====
   // Tables, Reservations, Completed Orders, Service Providers, Finance, Staff
   await seedComprehensive(prisma);
+
+  // ===== M39: Operational State (Paused Business) =====
+  await seedOperationalState(prisma);
+
+  // ===== M44/M45: Inventory Gaps (Stock Levels + COGS) =====
+  await seedInventoryGaps(prisma);
 
   console.log('\n🎉 Seed completed successfully!');
   console.log('\n📝 Test Credentials:');

@@ -90,7 +90,7 @@ export interface RoleCapability {
  */
 export const ROLE_CAPABILITIES: Record<JobRole, RoleCapability> = {
   OWNER: {
-    defaultRoute: '/workspaces/owner',
+    defaultRoute: '/dashboard',
     dashboardVariant: 'owner',
     workspaceTitle: 'Owner Dashboard',
     workspaceDescription: 'Full visibility across all operations, finances, and staff',
@@ -157,7 +157,7 @@ export const ROLE_CAPABILITIES: Record<JobRole, RoleCapability> = {
   },
 
   MANAGER: {
-    defaultRoute: '/workspaces/manager',
+    defaultRoute: '/dashboard',
     dashboardVariant: 'manager',
     workspaceTitle: 'Manager Dashboard',
     workspaceDescription: 'Operational oversight, staff management, and daily performance',
@@ -217,7 +217,7 @@ export const ROLE_CAPABILITIES: Record<JobRole, RoleCapability> = {
   },
 
   ACCOUNTANT: {
-    defaultRoute: '/workspaces/accountant',
+    defaultRoute: '/finance/accounts',
     dashboardVariant: 'accountant',
     workspaceTitle: 'Accountant Workspace',
     workspaceDescription: 'General ledger, financial statements, and expense tracking',
@@ -255,6 +255,14 @@ export const ROLE_CAPABILITIES: Record<JobRole, RoleCapability> = {
         ],
       },
       {
+        title: 'Inventory Costing',
+        items: [
+          { label: 'Prep Items', href: '/inventory/prep-items', icon: Package, description: 'Semi-finished goods and prep recipes' },
+          { label: 'Valuation', href: '/inventory/valuation', icon: Package, description: 'Inventory valuation report' },
+          { label: 'COGS Report', href: '/inventory/cogs', icon: TrendingUp, description: 'Cost of goods sold' },
+        ],
+      },
+      {
         title: 'My Schedule',
         items: [
           { label: 'My Availability', href: '/workforce/my-availability', icon: CalendarClock },
@@ -266,7 +274,7 @@ export const ROLE_CAPABILITIES: Record<JobRole, RoleCapability> = {
   },
 
   PROCUREMENT: {
-    defaultRoute: '/workspaces/procurement',
+    defaultRoute: '/inventory',
     dashboardVariant: 'procurement',
     workspaceTitle: 'Procurement Dashboard',
     workspaceDescription: 'Purchase orders, supplier management, and inventory replenishment',
@@ -310,7 +318,7 @@ export const ROLE_CAPABILITIES: Record<JobRole, RoleCapability> = {
   },
 
   STOCK_MANAGER: {
-    defaultRoute: '/workspaces/stock-manager',
+    defaultRoute: '/inventory',
     dashboardVariant: 'stock',
     workspaceTitle: 'Stock Manager Dashboard',
     workspaceDescription: 'Inventory levels, stock movements, and waste tracking',
@@ -353,7 +361,7 @@ export const ROLE_CAPABILITIES: Record<JobRole, RoleCapability> = {
   },
 
   SUPERVISOR: {
-    defaultRoute: '/workspaces/supervisor',
+    defaultRoute: '/pos',
     dashboardVariant: 'supervisor',
     workspaceTitle: 'Supervisor Dashboard',
     workspaceDescription: 'Shift oversight, staff coordination, and floor management',
@@ -433,7 +441,7 @@ export const ROLE_CAPABILITIES: Record<JobRole, RoleCapability> = {
   },
 
   CHEF: {
-    defaultRoute: '/workspaces/chef',
+    defaultRoute: '/kds',
     dashboardVariant: 'chef',
     workspaceTitle: 'Chef Dashboard',
     workspaceDescription: 'Kitchen display, order queue, and prep management',
@@ -444,6 +452,9 @@ export const ROLE_CAPABILITIES: Record<JobRole, RoleCapability> = {
           { label: 'KDS', href: '/kds', icon: ClipboardList },
           { label: 'Dashboard', href: '/dashboard', icon: LayoutDashboard },
           { label: 'Inventory', href: '/inventory', icon: Package },
+          { label: 'Prep Items', href: '/inventory/prep-items', icon: ClipboardList },
+          { label: 'Recipes', href: '/inventory/recipes', icon: ClipboardList },
+          { label: 'Waste', href: '/inventory/waste', icon: Trash2 },
         ],
       },
       {
@@ -530,7 +541,7 @@ export const ROLE_CAPABILITIES: Record<JobRole, RoleCapability> = {
   },
 
   EVENT_MANAGER: {
-    defaultRoute: '/workspaces/event-manager',
+    defaultRoute: '/reservations',
     dashboardVariant: 'events',
     workspaceTitle: 'Event Manager Dashboard',
     workspaceDescription: 'Event planning, reservations, and special occasions',

@@ -1,0 +1,14 @@
+{
+  "org": "tapas",
+  "role": "chef",
+  "email": "chef@tapas.demo.local",
+  "landingRoute": "/kds",
+  "generatedAt": "2026-01-22T20:15:51.845Z",
+  "sidebarExists": false,
+  "totalNavElements": 0,
+  "visibleNavElements": 0,
+  "enabledNavElements": 0,
+  "navElementIds": [],
+  "passed": false,
+  "error": "Sidebar not visible"
+}

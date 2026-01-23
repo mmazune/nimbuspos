@@ -248,7 +248,7 @@ export default function InventoryPage() {
     {
       header: 'Actions',
       accessor: (row: any) => (
-        <Button variant="outline" size="sm" onClick={() => handleEdit(row)}>
+        <Button variant="outline" size="sm" onClick={() => handleEdit(row)} data-testid="inventory-edit-btn">
           Edit
         </Button>
       ),
@@ -356,6 +356,7 @@ export default function InventoryPage() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="pl-10"
+              data-testid="inventory-search"
             />
           </div>
 
@@ -363,12 +364,14 @@ export default function InventoryPage() {
             <Button
               variant={!showLowStockOnly ? 'default' : 'outline'}
               onClick={() => setShowLowStockOnly(false)}
+              data-testid="inventory-filter-all"
             >
               All Items
             </Button>
             <Button
               variant={showLowStockOnly ? 'default' : 'outline'}
               onClick={() => setShowLowStockOnly(true)}
+              data-testid="inventory-filter-low-stock"
             >
               Low Stock Only
             </Button>

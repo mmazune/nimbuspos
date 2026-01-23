@@ -2,14 +2,20 @@
   "org": "cafesserie",
   "role": "chef",
   "email": "chef@cafesserie.demo.local",
-  "startedAt": "2026-01-13T12:23:30.375Z",
-  "completedAt": "2026-01-13T12:23:40.075Z",
-  "durationMs": 9700,
-  "loginSuccess": true,
+  "startedAt": "2026-01-21T07:18:34.140Z",
+  "completedAt": "2026-01-21T07:18:34.188Z",
+  "durationMs": 48,
+  "loginSuccess": false,
   "routesVisited": [],
   "controlsClicked": [],
   "endpoints": [],
-  "failures": [],
+  "failures": [
+    {
+      "route": "/login",
+      "type": "login-failed",
+      "message": "apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3001\nCall log:\n\u001b[2m  - → POST http://127.0.0.1:3001/auth/login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.4 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 60\u001b[22m\n"
+    }
+  ],
   "screenshots": [],
   "summary": {
     "routesTotal": 0,
@@ -24,6 +30,7 @@
     "endpoints2xx": 0,
     "endpoints4xx": 0,
     "endpoints5xx": 0,
-    "failuresTotal": 0
-  }
+    "failuresTotal": 1
+  },
+  "loginError": "apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3001\nCall log:\n\u001b[2m  - → POST http://127.0.0.1:3001/auth/login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.4 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 60\u001b[22m\n"
 }

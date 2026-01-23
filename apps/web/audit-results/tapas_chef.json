@@ -2,35 +2,163 @@
   "org": "tapas",
   "role": "chef",
   "email": "chef@tapas.demo.local",
-  "startedAt": "2026-01-13T12:06:48.672Z",
-  "completedAt": "2026-01-13T12:06:54.411Z",
-  "durationMs": 5739,
-  "loginSuccess": false,
-  "routesVisited": [],
-  "controlsClicked": [],
-  "endpoints": [],
-  "failures": [
+  "startedAt": "2026-01-21T09:07:07.377Z",
+  "completedAt": "2026-01-21T09:07:24.447Z",
+  "durationMs": 17070,
+  "loginSuccess": true,
+  "routesVisited": [
     {
-      "route": "/login",
-      "type": "login-failed",
-      "message": "Redirected back to login after token injection. Cookie present: true, value length: 479"
+      "path": "/launch",
+      "title": "",
+      "visitedAt": "2026-01-21T09:07:24.439Z",
+      "loadTimeMs": 1124,
+      "status": "success",
+      "apiCallsOnLoad": 2
     }
   ],
+  "controlsClicked": [
+    {
+      "route": "/launch",
+      "selector": "button svg:has-text(\"[icon-button-0]\")",
+      "label": "[icon-button-0]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-0]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/launch",
+      "selector": "button svg:has-text(\"[icon-button-1]\")",
+      "label": "[icon-button-1]",
+      "type": "icon-button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button svg:has-text(\"[icon-button-1]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/launch",
+      "selector": "button:not([type=\"submit\"]):has-text(\"POS\n\nTables, orders, payments,\")",
+      "label": "POS\n\nTables, orders, payments, offline queue.\n\nDef",
+      "type": "button",
+      "safeToClick": false,
+      "clicked": false,
+      "outcome": "skipped-unsafe"
+    },
+    {
+      "route": "/launch",
+      "selector": "button:not([type=\"submit\"]):has-text(\"Kitchen Display\n\nTickets, stat\")",
+      "label": "Kitchen Display\n\nTickets, stations, live updates &",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"button:not([type=\"submit\"]):has-text(\"Kitchen Display\n\nTickets, stat\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for button:not([type=\"submit\"]):has-text(\"Kitchen Display\u001b[22m\n\n\u001b[2mTickets, stat\") >> nth=0\u001b[22m\n"
+    },
+    {
+      "route": "/launch",
+      "selector": "button:not([type=\"submit\"]):has-text(\"Backoffice\n\nReports, inventory\")",
+      "label": "Backoffice\n\nReports, inventory, staff, configurati",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Unsupported token \"BADSTRING\" while parsing css selector \"button:not([type=\"submit\"]):has-text(\"Backoffice\n\nReports, inventory\")\". Did you mean to CSS.escape it?\nCall log:\n\u001b[2m  - waiting for button:not([type=\"submit\"]):has-text(\"Backoffice\u001b[22m\n\n\u001b[2mReports, inventory\") >> nth=0\u001b[22m\n"
+    },
+    {
+      "route": "/launch",
+      "selector": "button:not([type=\"submit\"]):has-text(\"[button-3]\")",
+      "label": "[button-3]",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": false,
+      "outcome": "error",
+      "error": "locator.click: Timeout 2000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('button:not([type=\"submit\"]):has-text(\"[button-3]\")').first()\u001b[22m\n"
+    },
+    {
+      "route": "/launch",
+      "selector": "[aria-label=\"Open Tanstack query devtools\"]",
+      "label": "Open Tanstack query devtools",
+      "type": "button",
+      "safeToClick": true,
+      "clicked": true,
+      "outcome": "no-op",
+      "fingerprint": "NO_NETWORK"
+    }
+  ],
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/me",
+      "status": 200,
+      "count": 1,
+      "triggeredBy": "button svg:has-text(\"[icon-button-0]\")"
+    },
+    {
+      "method": "GET",
+      "path": "/branches",
+      "status": 200,
+      "count": 1,
+      "triggeredBy": "button svg:has-text(\"[icon-button-0]\")"
+    }
+  ],
+  "failures": [],
   "screenshots": [],
   "summary": {
-    "routesTotal": 0,
-    "routesSuccess": 0,
+    "routesTotal": 1,
+    "routesSuccess": 1,
     "routesForbidden": 0,
     "routesNotFound": 0,
     "routesError": 0,
-    "controlsFound": 0,
-    "controlsClicked": 0,
-    "controlsSkipped": 0,
-    "endpointsHit": 0,
-    "endpoints2xx": 0,
+    "controlsFound": 7,
+    "controlsClicked": 1,
+    "controlsSkipped": 6,
+    "endpointsHit": 2,
+    "endpoints2xx": 2,
     "endpoints4xx": 0,
     "endpoints5xx": 0,
-    "failuresTotal": 1
+    "failuresTotal": 0,
+    "controlsRedundant": 0
   },
-  "loginError": "Redirected back to login after token injection. Cookie present: true, value length: 479"
+  "visibilityChecks": [
+    {
+      "name": "ChefCloud branding",
+      "passed": true,
+      "message": "Found: ChefCloud KDS text",
+      "selector": "text=\"ChefCloud KDS\""
+    },
+    {
+      "name": "Filter controls",
+      "passed": true,
+      "message": "Found: filter buttons",
+      "selector": "[data-testid=\"kds-filter\"]"
+    },
+    {
+      "name": "Refresh button",
+      "passed": true,
+      "message": "Found: refresh button",
+      "selector": "[data-testid=\"kds-refresh\"]"
+    },
+    {
+      "name": "Settings button",
+      "passed": true,
+      "message": "Found: settings button",
+      "selector": "[data-testid=\"kds-settings\"]"
+    },
+    {
+      "name": "Online status indicator",
+      "passed": false,
+      "message": "Not visible: connection status",
+      "selector": "text=\"Online\", text=\"Offline\""
+    },
+    {
+      "name": "Main content area",
+      "passed": true,
+      "message": "Found: main content",
+      "selector": "#main-content, [role=\"main\"]"
+    }
+  ],
+  "visibilityPassed": 5,
+  "visibilityFailed": 1
 }

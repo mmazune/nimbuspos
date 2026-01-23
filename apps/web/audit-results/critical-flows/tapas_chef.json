@@ -1,0 +1,64 @@
+{
+  "org": "tapas",
+  "role": "chef",
+  "email": "chef@tapas.demo.local",
+  "generatedAt": "2026-01-23T03:48:13.424Z",
+  "durationMs": 7865,
+  "summary": {
+    "totalFlows": 1,
+    "successfulFlows": 1,
+    "failedFlows": 0,
+    "uniqueEndpoints": 6,
+    "totalBlockedMutations": 0,
+    "flowsWithBlockedMutations": 0
+  },
+  "flows": [
+    {
+      "module": "KDS",
+      "flow": "Load KDS",
+      "testid": null,
+      "label": "",
+      "route": "/kds",
+      "controlType": "link",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/kds/orders",
+          "status": 404,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "blockedMutation": false
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200,
+          "blockedMutation": false
+        }
+      ],
+      "success": true
+    }
+  ]
+}

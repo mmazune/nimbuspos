@@ -50,11 +50,13 @@ export default function FinancePage() {
           label="Total Budget"
           value={data ? formatCurrency(data.totalBudget) : '—'}
           icon={<DollarSign className="h-4 w-4" />}
+          data-testid="finance-total-budget"
         />
         <StatCard
           label="Actual Spending"
           value={data ? formatCurrency(data.totalActual) : '—'}
           icon={<TrendingUp className="h-4 w-4" />}
+          data-testid="finance-actual-spending"
         />
         <StatCard
           label="Variance"
@@ -62,6 +64,7 @@ export default function FinancePage() {
           delta={data?.totalVariancePercent}
           trend={data && data.totalVariance < 0 ? 'down' : 'up'}
           icon={<TrendingDown className="h-4 w-4" />}
+          data-testid="finance-variance"
         />
       </div>
 

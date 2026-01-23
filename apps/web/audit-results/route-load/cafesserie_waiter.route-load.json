@@ -1,0 +1,227 @@
+{
+  "org": "cafesserie",
+  "role": "waiter",
+  "email": "waiter@cafesserie.demo.local",
+  "generatedAt": "2026-01-20T04:08:23.212Z",
+  "durationMs": 18096,
+  "summary": {
+    "routesVisited": 6,
+    "routesWithEndpoints": 6,
+    "routesNoEndpoints": 0,
+    "routesFailed": 0,
+    "totalApiCalls": 27,
+    "uniqueEndpoints": 12
+  },
+  "routes": [
+    {
+      "route": "/pos",
+      "actionId": "route-load::cafesserie::waiter::/pos",
+      "loadTimeMs": 2245,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 403,
+          "timestamp": 1768882090570
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882090577
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200,
+          "timestamp": 1768882090656
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403,
+          "timestamp": 1768882090675
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882090677
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 403,
+          "timestamp": 1768882090715
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200,
+          "timestamp": 1768882090730
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/reservations",
+      "actionId": "route-load::cafesserie::waiter::/reservations",
+      "loadTimeMs": 2496,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882093106
+        },
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 403,
+          "timestamp": 1768882093269
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 403,
+          "timestamp": 1768882093275
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882093277
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/settings",
+      "actionId": "route-load::cafesserie::waiter::/settings",
+      "loadTimeMs": 2118,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 403,
+          "timestamp": 1768882094314
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 403,
+          "timestamp": 1768882094327
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882095002
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882095392
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "actionId": "route-load::cafesserie::waiter::/workforce/my-availability",
+      "loadTimeMs": 2249,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882097344
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882097558
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200,
+          "timestamp": 1768882097634
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200,
+          "timestamp": 1768882097639
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "actionId": "route-load::cafesserie::waiter::/workforce/my-swaps",
+      "loadTimeMs": 1888,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200,
+          "timestamp": 1768882099318
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882099324
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882099519
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "actionId": "route-load::cafesserie::waiter::/workforce/open-shifts",
+      "loadTimeMs": 2664,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882102011
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200,
+          "timestamp": 1768882102112
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404,
+          "timestamp": 1768882102140
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882102179
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404,
+          "timestamp": 1768882103160
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

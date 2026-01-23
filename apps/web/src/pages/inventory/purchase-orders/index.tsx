@@ -118,7 +118,7 @@ export default function PurchaseOrdersPage() {
     queryFn: async () => {
       const params = new URLSearchParams();
       if (statusFilter) params.append('status', statusFilter);
-      const response = await apiClient.get<PurchaseOrder[]>(`/inventory/procurement/purchase-orders?${params}`);
+      const response = await apiClient.get<PurchaseOrder[]>(`/inventory/purchase-orders?${params}`);
       return response.data;
     },
   });
@@ -161,7 +161,7 @@ export default function PurchaseOrdersPage() {
       notes?: string;
       lines: { itemId: string; qtyOrderedInput: number; inputUomId: string; unitCost: number }[];
     }) => {
-      const response = await apiClient.post('/inventory/procurement/purchase-orders', data);
+      const response = await apiClient.post('/inventory/purchase-orders', data);
       return response.data;
     },
     onSuccess: () => {
@@ -173,7 +173,7 @@ export default function PurchaseOrdersPage() {
   // Submit mutation
   const submitMutation = useMutation({
     mutationFn: async (id: string) => {
-      const response = await apiClient.post(`/inventory/procurement/purchase-orders/${id}/submit`);
+      const response = await apiClient.post(`/inventory/purchase-orders/${id}/submit`);
       return response.data;
     },
     onSuccess: () => {
@@ -184,7 +184,7 @@ export default function PurchaseOrdersPage() {
   // Approve mutation
   const approveMutation = useMutation({
     mutationFn: async (id: string) => {
-      const response = await apiClient.post(`/inventory/procurement/purchase-orders/${id}/approve`);
+      const response = await apiClient.post(`/inventory/purchase-orders/${id}/approve`);
       return response.data;
     },
     onSuccess: () => {
@@ -195,7 +195,7 @@ export default function PurchaseOrdersPage() {
   // Cancel mutation
   const cancelMutation = useMutation({
     mutationFn: async (id: string) => {
-      const response = await apiClient.post(`/inventory/procurement/purchase-orders/${id}/cancel`);
+      const response = await apiClient.post(`/inventory/purchase-orders/${id}/cancel`);
       return response.data;
     },
     onSuccess: () => {
@@ -291,7 +291,7 @@ export default function PurchaseOrdersPage() {
             </SelectContent>
           </Select>
           {isL3OrAbove && (
-            <Button onClick={() => setDialogOpen(true)}>
+            <Button onClick={() => setDialogOpen(true)} data-testid="po-create-btn">
               <Plus className="h-4 w-4 mr-2" /> Create PO
             </Button>
           )}

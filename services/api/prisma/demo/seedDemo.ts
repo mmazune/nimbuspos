@@ -121,6 +121,18 @@ async function cleanupOldDemoData(prisma: PrismaClient): Promise<void> {
   });
   console.log(`    ✅ Deleted vendor bills`);
 
+  // M74: Delete goods receipts v2 before purchase orders (FK constraint)
+  await prisma.goodsReceiptV2.deleteMany({
+    where: { orgId: { in: orgIds } },
+  });
+  console.log(`    ✅ Deleted goods receipts v2`);
+
+  // M71: Delete purchase orders v2 before vendors
+  await prisma.purchaseOrderV2.deleteMany({
+    where: { orgId: { in: orgIds } },
+  });
+  console.log(`    ✅ Deleted purchase orders v2`);
+
   // M8.3: Delete vendors
   await prisma.vendor.deleteMany({
     where: { orgId: { in: orgIds } },
@@ -144,6 +156,24 @@ async function cleanupOldDemoData(prisma: PrismaClient): Promise<void> {
     where: { orgId: { in: orgIds } },
   });
   console.log(`    ✅ Deleted customer accounts`);
+
+  // M32: Delete POS receipts before users
+  await prisma.posReceipt.deleteMany({
+    where: { orgId: { in: orgIds } },
+  });
+  console.log(`    ✅ Deleted POS receipts`);
+
+  // M71: Delete recipes before users (FK constraint on createdById)
+  await prisma.recipe.deleteMany({
+    where: { orgId: { in: orgIds } },
+  });
+  console.log(`    ✅ Deleted recipes`);
+
+  // M71: Delete cash sessions before users (FK constraint on openedById)
+  await prisma.cashSession.deleteMany({
+    where: { orgId: { in: orgIds } },
+  });
+  console.log(`    ✅ Deleted cash sessions`);
 
   // Users (cascades to many relations via onDelete: Cascade)
   const deletedUsers = await prisma.user.deleteMany({

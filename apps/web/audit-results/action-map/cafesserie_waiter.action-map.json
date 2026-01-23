@@ -1,0 +1,977 @@
+{
+  "org": "cafesserie",
+  "role": "waiter",
+  "email": "waiter@cafesserie.demo.local",
+  "generatedAt": "2026-01-23T02:57:09.825Z",
+  "durationMs": 91035,
+  "summary": {
+    "total": 75,
+    "hasEndpoints": 12,
+    "noNetworkEffect": 26,
+    "skipped": 37,
+    "uniqueEndpoints": 14,
+    "attributionPercent": 50.7,
+    "mutationBlockingEnabled": true,
+    "totalBlockedMutations": 1,
+    "controlsWithBlockedMutations": 1
+  },
+  "controls": [
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Switch-to-dark-mode",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/User-menu-for-Rachel-Waiter",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "User menu for Rachel Waiter",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/⤢-Kiosk-mode",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "⤢\nKiosk mode",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/ⓘ-Diagnostics",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "ⓘ\nDiagnostics",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Open-tabs-sidebar",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Open tabs sidebar",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/New-Order",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "New Order",
+      "dataTestId": "pos-new-order",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "POST",
+          "path": "/pos/orders",
+          "status": 999
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Walk-in-SENT-UGX-44,840-9:16:42-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nSENT\nUGX 44,840\n9:16:42 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Walk-in-NEW-UGX-9,440-12:06:41-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 9,440\n12:06:41 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Takeaway-NEW-UGX-90,860-11:18:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 90,860\n11:18:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Table-2-SERVED-UGX-33,040-11:16:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 2\nSERVED\nUGX 33,040\n11:16:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Walk-in-SENT-UGX-23,600-11:06:41-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nSENT\nUGX 23,600\n11:06:41 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Table-4-NEW-UGX-80,240-9:16:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 80,240\n9:16:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Table-4-NEW-UGX-101,480-8:25:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 101,480\n8:25:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Table-3-SENT-UGX-101,480-7:06:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 3\nSENT\nUGX 101,480\n7:06:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Table-3-SENT-UGX-28,320-6:46:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 3\nSENT\nUGX 28,320\n6:46:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Table-1-NEW-UGX-28,320-5:21:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 1\nNEW\nUGX 28,320\n5:21:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Table-2-SERVED-UGX-17,700-5:18:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 2\nSERVED\nUGX 17,700\n5:18:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Table-5-NEW-UGX-80,240-2:11:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nNEW\nUGX 80,240\n2:11:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Table-4-NEW-UGX-88,500-1:49:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 88,500\n1:49:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Table-5-SENT-UGX-63,720-1:12:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nSENT\nUGX 63,720\n1:12:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Table-5-SERVED-UGX-54,280-2:27:53-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nSERVED\nUGX 54,280\n2:27:53 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/All",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/button/Open-Tanstack-query-devtools",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/link/Skip-to-main-content",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/link/Go-to-workspace-home",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/link/POS",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/link/Reservations",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/link/My-Availability",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/link/My-Swaps",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/link/Open-Shifts",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/link/Settings",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//pos/link/Device:-Point-of-Sale",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Device: Point of Sale",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/button/Switch-to-dark-mode",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/button/User-menu-for-Rachel-Waiter",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "User menu for Rachel Waiter",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/button/⚙️-Policies",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "⚙️ Policies",
+      "dataTestId": "reservation-nav-policies",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "page.evaluate: Execution context was destroyed, most likely because of a navigation"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/button/📅-Calendar-View",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "📅 Calendar View",
+      "dataTestId": "reservation-nav-calendar",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/button/All",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/button/Held",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Held",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/button/Confirmed",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Confirmed",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/button/Seated",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Seated",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/button/Open-Tanstack-query-devtools",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/link/Skip-to-main-content",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/reservations/policies",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/reservations/policies",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/link/Go-to-workspace-home",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/link/POS",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/link/Reservations",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/link/My-Availability",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/link/My-Swaps",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/link/Open-Shifts",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//reservations/link/Settings",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//settings/button/Switch-to-dark-mode",
+      "route": "/settings",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//settings/button/User-menu-for-Rachel-Waiter",
+      "route": "/settings",
+      "controlType": "button",
+      "label": "User menu for Rachel Waiter",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//settings/button/Open-Tanstack-query-devtools",
+      "route": "/settings",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//settings/link/Skip-to-main-content",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//settings/link/Go-to-workspace-home",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/waiter//settings/link/POS",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/waiter//settings/link/Reservations",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/waiter//settings/link/My-Availability",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/waiter//settings/link/My-Swaps",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/waiter//settings/link/Open-Shifts",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/waiter//settings/link/Settings",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//workforce/my-availability/button/Refresh",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/waiter//workforce/my-availability/button/Weekly-Availability",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Weekly Availability",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//workforce/my-availability/button/Date-Exceptions",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Date Exceptions",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//workforce/my-availability/button/Add-Slot",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Add Slot",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//workforce/my-availability/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//workforce/my-availability/link/Skip-to-main-content",
+      "route": "/workforce/my-availability",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//workforce/my-swaps/button/Refresh",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/waiter//workforce/my-swaps/button/Request-Swap",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Request Swap",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//workforce/my-swaps/button/Sent-Requests-(0)",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Sent Requests (0)",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//workforce/my-swaps/button/Received-Requests-(0)",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Received Requests (0)",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//workforce/my-swaps/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//workforce/my-swaps/link/Skip-to-main-content",
+      "route": "/workforce/my-swaps",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/waiter//workforce/open-shifts/button/Refresh",
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/waiter//workforce/open-shifts/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/waiter//workforce/open-shifts/link/Skip-to-main-content",
+      "route": "/workforce/open-shifts",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    }
+  ]
+}

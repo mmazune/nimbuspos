@@ -1,0 +1,3724 @@
+{
+  "org": "tapas",
+  "role": "accountant",
+  "generatedAt": "2026-01-20T19:39:20.483Z",
+  "durationMs": 189707,
+  "summary": {
+    "total": 238,
+    "urlChanged": 12,
+    "domChanged": 7,
+    "chartVisible": 1,
+    "noChange": 37,
+    "hasNetwork": 11,
+    "skipped": 170,
+    "uiOnlyTotal": 20
+  },
+  "controls": [
+    {
+      "actionKey": "theme-toggle-btn_50",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "56d0b578",
+        "tableRowCount": 0,
+        "chartCount": 10,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "56d0b578",
+        "tableRowCount": 0,
+        "chartCount": 10,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_50",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "User menu for Carol Accountant",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "56d0b578",
+        "tableRowCount": 0,
+        "chartCount": 10,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "56d0b578",
+        "tableRowCount": 0,
+        "chartCount": 10,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_overview_3",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Overview",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "56d0b578",
+        "tableRowCount": 0,
+        "chartCount": 10,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "56d0b578",
+        "tableRowCount": 0,
+        "chartCount": 10,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_by_branch_3",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "By Branch",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "56d0b578",
+        "tableRowCount": 0,
+        "chartCount": 10,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "62e9ba9a",
+        "tableRowCount": 0,
+        "chartCount": 8,
+        "headingText": "Analytics",
+        "tabActiveIndex": 1
+      },
+      "classification": "DOM_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_financial_3",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Financial",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "62e9ba9a",
+        "tableRowCount": 0,
+        "chartCount": 8,
+        "headingText": "Analytics",
+        "tabActiveIndex": 1
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "62e9ba9a",
+        "tableRowCount": 0,
+        "chartCount": 8,
+        "headingText": "Analytics",
+        "tabActiveIndex": 1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_risk_3",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Risk",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "62e9ba9a",
+        "tableRowCount": 0,
+        "chartCount": 8,
+        "headingText": "Analytics",
+        "tabActiveIndex": 1
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-7e29366f",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 3
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 2,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_franchise_3",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Franchise",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-7e29366f",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 3
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-3e31f828",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "DOM_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_last_7_days_3",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 7 days",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-3e31f828",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "DOM_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_last_30_days_3",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 30 days",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-3e31f828",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "DOM_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_last_90_days_3",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 90 days",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-3e31f828",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "DOM_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_open_tanstack_query_devtools_3",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "analytics_link_skip_to_main_content_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_50",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_chart_of_accounts_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_journal_entries_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_fiscal_periods_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_trial_balance_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_profit_loss_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_balance_sheet_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_service_providers_2",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_ap_aging_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "AP Aging",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_ar_aging_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "AR Aging",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_budgets_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Budgets",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_reports_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Reports",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_analytics_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_my_availability_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_my_swaps_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_open_shifts_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_tab_overview_3",
+      "route": "/analytics",
+      "controlType": "tab",
+      "label": "Overview",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-3567b66e",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "classification": "DOM_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_tab_by_branch_3",
+      "route": "/analytics",
+      "controlType": "tab",
+      "label": "By Branch",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-3567b66e",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-115f2a48",
+        "tableRowCount": 0,
+        "chartCount": 8,
+        "headingText": "Analytics",
+        "tabActiveIndex": 1
+      },
+      "classification": "CHART_VISIBLE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_tab_financial_3",
+      "route": "/analytics",
+      "controlType": "tab",
+      "label": "Financial",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-115f2a48",
+        "tableRowCount": 0,
+        "chartCount": 8,
+        "headingText": "Analytics",
+        "tabActiveIndex": 1
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "74f9ed86",
+        "tableRowCount": 0,
+        "chartCount": 8,
+        "headingText": "Analytics",
+        "tabActiveIndex": 1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_tab_risk_3",
+      "route": "/analytics",
+      "controlType": "tab",
+      "label": "Risk",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "74f9ed86",
+        "tableRowCount": 0,
+        "chartCount": 8,
+        "headingText": "Analytics",
+        "tabActiveIndex": 1
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "61be047d",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 3
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 2,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_tab_franchise_3",
+      "route": "/analytics",
+      "controlType": "tab",
+      "label": "Franchise",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "61be047d",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 3
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-5668af94",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "DOM_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "theme-toggle-btn_51",
+      "route": "/finance",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": {
+        "url": "http://localhost:3000/finance",
+        "query": "",
+        "contentHash": "-4ec01b84",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Finance",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance",
+        "query": "",
+        "contentHash": "-4ec01b84",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Finance",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_51",
+      "route": "/finance",
+      "controlType": "button",
+      "label": "User menu for Carol Accountant",
+      "before": {
+        "url": "http://localhost:3000/finance",
+        "query": "",
+        "contentHash": "-4ec01b84",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Finance",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance",
+        "query": "",
+        "contentHash": "-4ec01b84",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Finance",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_button_open_tanstack_query_devtools_2",
+      "route": "/finance",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_link_skip_to_main_content_2",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": {
+        "url": "http://localhost:3000/finance",
+        "query": "",
+        "contentHash": "-4ec01b84",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Finance",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance",
+        "query": "",
+        "contentHash": "-4ec01b84",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Finance",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_51",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": {
+        "url": "http://localhost:3000/finance",
+        "query": "",
+        "contentHash": "-4ec01b84",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Finance",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workspaces/accountant",
+        "query": "",
+        "contentHash": "12312c08",
+        "tableRowCount": 0,
+        "chartCount": 11,
+        "headingText": "Accountant Workspace",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_chart_of_accounts_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "before": {
+        "url": "http://localhost:3000/finance",
+        "query": "",
+        "contentHash": "-4ec01b84",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Finance",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/accounts",
+        "query": "",
+        "contentHash": "76bb9cb0",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Something went wrong",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_journal_entries_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_link_fiscal_periods_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_link_trial_balance_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_link_profit_loss_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_link_balance_sheet_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_link_service_providers_2",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_link_ap_aging_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "AP Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_link_ar_aging_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "AR Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_link_budgets_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Budgets",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_link_reports_2",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_link_analytics_2",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_link_my_availability_2",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_link_my_swaps_2",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_link_open_shifts_2",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_accounts_button_reload_app_1",
+      "route": "/finance/accounts",
+      "controlType": "button",
+      "label": "Reload app",
+      "before": {
+        "url": "http://localhost:3000/finance/accounts",
+        "query": "",
+        "contentHash": "-14a8588a",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Something went wrong",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/accounts",
+        "query": "",
+        "contentHash": "-14a8588a",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Something went wrong",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_accounts_button_go_to_pos_1",
+      "route": "/finance/accounts",
+      "controlType": "button",
+      "label": "Go to POS",
+      "before": {
+        "url": "http://localhost:3000/finance/accounts",
+        "query": "",
+        "contentHash": "-14a8588a",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Something went wrong",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/accounts",
+        "query": "",
+        "contentHash": "-14a8588a",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Something went wrong",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_accounts_button_close_1",
+      "route": "/finance/accounts",
+      "controlType": "button",
+      "label": "Close",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Mutation risk"
+    },
+    {
+      "actionKey": "finance_accounts_button_show_collapsed_frames_1",
+      "route": "/finance/accounts",
+      "controlType": "button",
+      "label": "Show collapsed frames",
+      "before": {
+        "url": "http://localhost:3000/finance/accounts",
+        "query": "",
+        "contentHash": "-14a8588a",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Something went wrong",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/accounts",
+        "query": "",
+        "contentHash": "-14a8588a",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Something went wrong",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "theme-toggle-btn_52",
+      "route": "/finance/ap-aging",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": {
+        "url": "http://localhost:3000/finance/ap-aging",
+        "query": "",
+        "contentHash": "ce1233d",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Payable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/ap-aging",
+        "query": "",
+        "contentHash": "ce1233d",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Payable Aging",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_52",
+      "route": "/finance/ap-aging",
+      "controlType": "button",
+      "label": "User menu for Carol Accountant",
+      "before": {
+        "url": "http://localhost:3000/finance/ap-aging",
+        "query": "",
+        "contentHash": "ce1233d",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Payable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/ap-aging",
+        "query": "",
+        "contentHash": "ce1233d",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Payable Aging",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_ap-aging_button_open_tanstack_query_devtools_1",
+      "route": "/finance/ap-aging",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_skip_to_main_content_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": {
+        "url": "http://localhost:3000/finance/ap-aging",
+        "query": "",
+        "contentHash": "ce1233d",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Payable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/ap-aging",
+        "query": "",
+        "contentHash": "ce1233d",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Payable Aging",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_52",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": {
+        "url": "http://localhost:3000/finance/ap-aging",
+        "query": "",
+        "contentHash": "ce1233d",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Payable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workspaces/accountant",
+        "query": "",
+        "contentHash": "12312c08",
+        "tableRowCount": 0,
+        "chartCount": 11,
+        "headingText": "Accountant Workspace",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_chart_of_accounts_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "before": {
+        "url": "http://localhost:3000/finance/ap-aging",
+        "query": "",
+        "contentHash": "ce1233d",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Payable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/accounts",
+        "query": "",
+        "contentHash": "-7a575748",
+        "tableRowCount": 0,
+        "chartCount": 3,
+        "headingText": "Chart of Accounts",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_journal_entries_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "before": {
+        "url": "http://localhost:3000/finance/ap-aging",
+        "query": "",
+        "contentHash": "ce1233d",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Payable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/journal",
+        "query": "",
+        "contentHash": "50c41280",
+        "tableRowCount": 0,
+        "chartCount": 3,
+        "headingText": "Journal Entries",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_fiscal_periods_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "before": {
+        "url": "http://localhost:3000/finance/ap-aging",
+        "query": "",
+        "contentHash": "ce1233d",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Payable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/periods",
+        "query": "",
+        "contentHash": "-4bac0abf",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Something went wrong",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_trial_balance_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "before": {
+        "url": "http://localhost:3000/finance/ap-aging",
+        "query": "",
+        "contentHash": "ce1233d",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Payable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/trial-balance",
+        "query": "",
+        "contentHash": "-ba54eb6",
+        "tableRowCount": 0,
+        "chartCount": 3,
+        "headingText": "Trial Balance",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_profit_loss_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "before": {
+        "url": "http://localhost:3000/finance/ap-aging",
+        "query": "",
+        "contentHash": "ce1233d",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Payable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/pnl",
+        "query": "",
+        "contentHash": "1e89691e",
+        "tableRowCount": 0,
+        "chartCount": 5,
+        "headingText": "Profit & Loss Statement",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_balance_sheet_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "before": {
+        "url": "http://localhost:3000/finance/ap-aging",
+        "query": "",
+        "contentHash": "ce1233d",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Payable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/balance-sheet",
+        "query": "",
+        "contentHash": "35f75ea5",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_service_providers_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_ap_aging_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "AP Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_ar_aging_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "AR Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_budgets_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Budgets",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_reports_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_analytics_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_my_availability_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_my_swaps_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ap-aging_link_open_shifts_1",
+      "route": "/finance/ap-aging",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "theme-toggle-btn_53",
+      "route": "/finance/ar-aging",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": {
+        "url": "http://localhost:3000/finance/ar-aging",
+        "query": "",
+        "contentHash": "5897a96e",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Receivable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/ar-aging",
+        "query": "",
+        "contentHash": "5897a96e",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Receivable Aging",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_53",
+      "route": "/finance/ar-aging",
+      "controlType": "button",
+      "label": "User menu for Carol Accountant",
+      "before": {
+        "url": "http://localhost:3000/finance/ar-aging",
+        "query": "",
+        "contentHash": "5897a96e",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Receivable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/ar-aging",
+        "query": "",
+        "contentHash": "5897a96e",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Receivable Aging",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_ar-aging_button_open_tanstack_query_devtools_1",
+      "route": "/finance/ar-aging",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_skip_to_main_content_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": {
+        "url": "http://localhost:3000/finance/ar-aging",
+        "query": "",
+        "contentHash": "5897a96e",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Receivable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/ar-aging",
+        "query": "",
+        "contentHash": "5897a96e",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Receivable Aging",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_53",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": {
+        "url": "http://localhost:3000/finance/ar-aging",
+        "query": "",
+        "contentHash": "5897a96e",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Receivable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workspaces/accountant",
+        "query": "",
+        "contentHash": "12312c08",
+        "tableRowCount": 0,
+        "chartCount": 11,
+        "headingText": "Accountant Workspace",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_chart_of_accounts_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "before": {
+        "url": "http://localhost:3000/finance/ar-aging",
+        "query": "",
+        "contentHash": "35b827e8",
+        "tableRowCount": 0,
+        "chartCount": 1,
+        "headingText": "Accounts Receivable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/accounts",
+        "query": "",
+        "contentHash": "5897a96e",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Receivable Aging",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_journal_entries_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "before": {
+        "url": "http://localhost:3000/finance/ar-aging",
+        "query": "",
+        "contentHash": "5897a96e",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Receivable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/journal",
+        "query": "",
+        "contentHash": "50c41280",
+        "tableRowCount": 0,
+        "chartCount": 3,
+        "headingText": "Journal Entries",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_fiscal_periods_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "before": {
+        "url": "http://localhost:3000/finance/ar-aging",
+        "query": "",
+        "contentHash": "5897a96e",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Receivable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/periods",
+        "query": "",
+        "contentHash": "5897a96e",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Receivable Aging",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_trial_balance_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "before": {
+        "url": "http://localhost:3000/finance/ar-aging",
+        "query": "",
+        "contentHash": "5897a96e",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Receivable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/trial-balance",
+        "query": "",
+        "contentHash": "-ba54eb6",
+        "tableRowCount": 0,
+        "chartCount": 3,
+        "headingText": "Trial Balance",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_profit_loss_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "before": {
+        "url": "http://localhost:3000/finance/ar-aging",
+        "query": "",
+        "contentHash": "5897a96e",
+        "tableRowCount": 1,
+        "chartCount": 1,
+        "headingText": "Accounts Receivable Aging",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/pnl",
+        "query": "",
+        "contentHash": "1e89691e",
+        "tableRowCount": 0,
+        "chartCount": 5,
+        "headingText": "Profit & Loss Statement",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_balance_sheet_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_service_providers_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_ap_aging_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "AP Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_ar_aging_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "AR Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_budgets_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Budgets",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_reports_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_analytics_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_my_availability_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_my_swaps_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_ar-aging_link_open_shifts_1",
+      "route": "/finance/ar-aging",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "theme-toggle-btn_54",
+      "route": "/finance/balance-sheet",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": {
+        "url": "http://localhost:3000/finance/balance-sheet",
+        "query": "",
+        "contentHash": "-55218a21",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/balance-sheet",
+        "query": "",
+        "contentHash": "-55218a21",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_54",
+      "route": "/finance/balance-sheet",
+      "controlType": "button",
+      "label": "User menu for Carol Accountant",
+      "before": {
+        "url": "http://localhost:3000/finance/balance-sheet",
+        "query": "",
+        "contentHash": "-55218a21",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/balance-sheet",
+        "query": "",
+        "contentHash": "-55218a21",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "bs-generate_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "button",
+      "label": "Generate Report",
+      "before": {
+        "url": "http://localhost:3000/finance/balance-sheet",
+        "query": "",
+        "contentHash": "-55218a21",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/balance-sheet",
+        "query": "",
+        "contentHash": "-55218a21",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "bs-export_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "button",
+      "label": "Export CSV",
+      "before": {
+        "url": "http://localhost:3000/finance/balance-sheet",
+        "query": "",
+        "contentHash": "-55218a21",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/balance-sheet",
+        "query": "",
+        "contentHash": "-55218a21",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_balance-sheet_button_open_tanstack_query_devtools_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_skip_to_main_content_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": {
+        "url": "http://localhost:3000/finance/balance-sheet",
+        "query": "",
+        "contentHash": "-55218a21",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/balance-sheet",
+        "query": "",
+        "contentHash": "-55218a21",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_54",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": {
+        "url": "http://localhost:3000/finance/balance-sheet",
+        "query": "",
+        "contentHash": "-55218a21",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workspaces/accountant",
+        "query": "",
+        "contentHash": "12312c08",
+        "tableRowCount": 0,
+        "chartCount": 11,
+        "headingText": "Accountant Workspace",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_chart_of_accounts_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "before": {
+        "url": "http://localhost:3000/finance/balance-sheet",
+        "query": "",
+        "contentHash": "-55218a21",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/accounts",
+        "query": "",
+        "contentHash": "425b6cb1",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Something went wrong",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_journal_entries_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "before": {
+        "url": "http://localhost:3000/finance/balance-sheet",
+        "query": "",
+        "contentHash": "-55218a21",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/balance-sheet",
+        "query": "",
+        "contentHash": "-55218a21",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_fiscal_periods_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "before": {
+        "url": "http://localhost:3000/finance/journal",
+        "query": "",
+        "contentHash": "-55218a21",
+        "tableRowCount": 0,
+        "chartCount": 2,
+        "headingText": "Balance Sheet",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/finance/periods",
+        "query": "",
+        "contentHash": "425b6cb1",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Something went wrong",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 2,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_trial_balance_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_profit_loss_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_balance_sheet_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_service_providers_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_ap_aging_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "AP Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_ar_aging_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "AR Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_budgets_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Budgets",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_reports_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_analytics_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_my_availability_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_my_swaps_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_balance-sheet_link_open_shifts_1",
+      "route": "/finance/balance-sheet",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_journal_button_reload_app_1",
+      "route": "/finance/journal",
+      "controlType": "button",
+      "label": "Reload app",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_journal_button_go_to_pos_1",
+      "route": "/finance/journal",
+      "controlType": "button",
+      "label": "Go to POS",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_journal_button_close_1",
+      "route": "/finance/journal",
+      "controlType": "button",
+      "label": "Close",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Mutation risk"
+    },
+    {
+      "actionKey": "finance_journal_button_show_collapsed_frames_1",
+      "route": "/finance/journal",
+      "controlType": "button",
+      "label": "Show collapsed frames",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_periods_button_reload_app_1",
+      "route": "/finance/periods",
+      "controlType": "button",
+      "label": "Reload app",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_periods_button_go_to_pos_1",
+      "route": "/finance/periods",
+      "controlType": "button",
+      "label": "Go to POS",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "finance_periods_button_close_1",
+      "route": "/finance/periods",
+      "controlType": "button",
+      "label": "Close",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Mutation risk"
+    },
+    {
+      "actionKey": "finance_periods_button_show_collapsed_frames_1",
+      "route": "/finance/periods",
+      "controlType": "button",
+      "label": "Show collapsed frames",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "theme-toggle-btn_55",
+      "route": "/finance/pnl",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_55",
+      "route": "/finance/pnl",
+      "controlType": "button",
+      "label": "User menu for Carol Accountant",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pnl-generate_1",
+      "route": "/finance/pnl",
+      "controlType": "button",
+      "label": "Generate Report",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pnl-export_1",
+      "route": "/finance/pnl",
+      "controlType": "button",
+      "label": "Export CSV",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_button_open_tanstack_query_devtools_1",
+      "route": "/finance/pnl",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_skip_to_main_content_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_55",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_chart_of_accounts_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_journal_entries_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_fiscal_periods_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_trial_balance_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_profit_loss_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_balance_sheet_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_service_providers_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_ap_aging_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "AP Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_ar_aging_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "AR Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_budgets_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Budgets",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_reports_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_analytics_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_my_availability_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_my_swaps_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_pnl_link_open_shifts_1",
+      "route": "/finance/pnl",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "theme-toggle-btn_56",
+      "route": "/finance/trial-balance",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_56",
+      "route": "/finance/trial-balance",
+      "controlType": "button",
+      "label": "User menu for Carol Accountant",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tb-generate_1",
+      "route": "/finance/trial-balance",
+      "controlType": "button",
+      "label": "Generate Report",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tb-export_1",
+      "route": "/finance/trial-balance",
+      "controlType": "button",
+      "label": "Export CSV",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_button_open_tanstack_query_devtools_1",
+      "route": "/finance/trial-balance",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_skip_to_main_content_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_56",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_chart_of_accounts_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_journal_entries_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_fiscal_periods_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_trial_balance_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_profit_loss_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_balance_sheet_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_service_providers_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_ap_aging_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "AP Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_ar_aging_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "AR Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_budgets_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Budgets",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_reports_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_analytics_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_my_availability_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_my_swaps_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_trial-balance_link_open_shifts_1",
+      "route": "/finance/trial-balance",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "theme-toggle-btn_57",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_57",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "User menu for Carol Accountant",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_button_open_tanstack_query_devtools_4",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_skip_to_main_content_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_57",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_chart_of_accounts_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_journal_entries_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_fiscal_periods_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_trial_balance_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_profit_loss_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_balance_sheet_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_service_providers_3",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_ap_aging_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "AP Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_ar_aging_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "AR Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_budgets_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Budgets",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_reports_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_analytics_3",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_my_availability_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_my_swaps_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_open_shifts_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_sales_franchise_analytics_sale_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Sales\nFranchise Analytics\n\nSales, margins, rankings and multi-month trends across all branches.\n\nCSV",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_finance_budgets_variance_budge_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Finance\nBudgets & Variance\n\nBudget vs actual sales, COGS and variance across branches.\n\nCSV export\nP",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_operations_inventory_stock_cur_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Operations\nInventory & Stock\n\nCurrent stock levels, low-stock items, wastage and shrinkage.",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_hr_staff_insights_kpis_employe_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "HR\nStaff Insights\n\nKPIs, Employee of the Month awards and promotion suggestions.",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_customer_customer_feedback_nps_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Customer\nCustomer Feedback & NPS\n\nPromoters, passives, detractors and feedback comments.",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_admin_report_subscriptions_man_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Admin\nReport Subscriptions\n\nManage automated delivery of shift-end reports, daily/weekly/monthly dig",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_operations_reservations_events_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Operations\nReservations & Events\n\nReservation calendar, deposits and event management.",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_tech_api_usage_webhooks_api_ke_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Tech\nAPI Usage & Webhooks\n\nAPI key usage metrics, webhook delivery logs and failures.\n\nDev",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_finance_finance_overview_p_l_s_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Finance\nFinance Overview\n\nP&L summary, expense tracking and service provider payables.",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "theme-toggle-btn_58",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_58",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "User menu for Carol Accountant",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_button_all_3",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "All",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_button_active_only_3",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Active Only",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_button_edit_3",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Edit",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_button_open_tanstack_query_devtools_3",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_skip_to_main_content_3",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_58",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_chart_of_accounts_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Chart of Accounts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_journal_entries_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Journal Entries",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_fiscal_periods_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Fiscal Periods",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_trial_balance_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Trial Balance",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_profit_loss_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Profit & Loss",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_balance_sheet_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Balance Sheet",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_service_providers_3",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_ap_aging_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "AP Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_ar_aging_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "AR Aging",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_budgets_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Budgets",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_reports_3",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_analytics_2",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_my_availability_3",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_my_swaps_3",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_open_shifts_3",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_my-availability_button_refresh_7",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Refresh",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_my-availability_button_weekly_availability_7",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Weekly Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_my-availability_button_date_exceptions_7",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Date Exceptions",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_my-availability_button_add_slot_7",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Add Slot",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_my-availability_button_open_tanstack_query_devtools_7",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_my-availability_link_skip_to_main_content_7",
+      "route": "/workforce/my-availability",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_my-swaps_button_refresh_6",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Refresh",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_my-swaps_button_request_swap_6",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Request Swap",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_my-swaps_button_sent_requests_0_6",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Sent Requests (0)",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_my-swaps_button_received_requests_0_6",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Received Requests (0)",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_my-swaps_button_open_tanstack_query_devtools_6",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_my-swaps_link_skip_to_main_content_6",
+      "route": "/workforce/my-swaps",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_open-shifts_button_refresh_6",
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "label": "Refresh",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_open-shifts_button_open_tanstack_query_devtools_6",
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_open-shifts_link_skip_to_main_content_6",
+      "route": "/workforce/open-shifts",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    }
+  ]
+}

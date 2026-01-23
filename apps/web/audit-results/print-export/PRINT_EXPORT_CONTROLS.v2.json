@@ -1,0 +1,109 @@
+{
+  "generatedAt": "2026-01-22T13:14:31.352Z",
+  "totalControls": 7,
+  "controls": [
+    {
+      "testId": "report-card-analytics-overview",
+      "text": "SalesFranchise AnalyticsSales, margins, rankings and multi-month trends across all branches.CSV expo",
+      "routes": [
+        "/reports"
+      ],
+      "roles": [
+        "tapas/owner",
+        "tapas/manager",
+        "tapas/cashier",
+        "cafesserie/owner",
+        "cafesserie/manager",
+        "cafesserie/cashier"
+      ],
+      "classification": "HAS_DOWNLOAD"
+    },
+    {
+      "testId": "report-card-finance-budgets",
+      "text": "FinanceBudgets & VarianceBudget vs actual sales, COGS and variance across branches.CSV exportPro+",
+      "routes": [
+        "/reports"
+      ],
+      "roles": [
+        "tapas/owner",
+        "tapas/manager",
+        "tapas/cashier",
+        "cafesserie/owner",
+        "cafesserie/manager",
+        "cafesserie/cashier"
+      ],
+      "classification": "HAS_DOWNLOAD"
+    },
+    {
+      "testId": "pnl-export",
+      "text": "Export CSV",
+      "routes": [
+        "/finance/pnl"
+      ],
+      "roles": [
+        "tapas/owner",
+        "tapas/manager",
+        "cafesserie/owner",
+        "cafesserie/manager"
+      ],
+      "classification": "HAS_DOWNLOAD"
+    },
+    {
+      "testId": "bs-export",
+      "text": "Export CSV",
+      "routes": [
+        "/finance/balance-sheet"
+      ],
+      "roles": [
+        "tapas/owner",
+        "tapas/manager",
+        "cafesserie/owner",
+        "cafesserie/manager"
+      ],
+      "classification": "HAS_DOWNLOAD"
+    },
+    {
+      "testId": "tb-export",
+      "text": "Export CSV",
+      "routes": [
+        "/finance/trial-balance"
+      ],
+      "roles": [
+        "tapas/owner",
+        "tapas/manager",
+        "cafesserie/owner",
+        "cafesserie/manager"
+      ],
+      "classification": "HAS_DOWNLOAD"
+    },
+    {
+      "testId": "export-btn",
+      "text": "Export CSV",
+      "routes": [
+        "/inventory/on-hand"
+      ],
+      "roles": [
+        "tapas/owner",
+        "tapas/manager",
+        "tapas/cashier",
+        "cafesserie/owner",
+        "cafesserie/manager",
+        "cafesserie/cashier"
+      ],
+      "classification": "HAS_DOWNLOAD"
+    },
+    {
+      "testId": null,
+      "text": "Export CSV",
+      "routes": [
+        "/inventory/valuation",
+        "/inventory/cogs"
+      ],
+      "roles": [
+        "tapas/cashier",
+        "cafesserie/cashier"
+      ],
+      "classification": "HAS_DOWNLOAD"
+    }
+  ]
+}

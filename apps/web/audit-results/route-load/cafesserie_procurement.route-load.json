@@ -1,0 +1,563 @@
+{
+  "org": "cafesserie",
+  "role": "procurement",
+  "email": "procurement@cafesserie.demo.local",
+  "generatedAt": "2026-01-20T04:07:01.956Z",
+  "durationMs": 61834,
+  "summary": {
+    "routesVisited": 15,
+    "routesWithEndpoints": 15,
+    "routesNoEndpoints": 0,
+    "routesFailed": 0,
+    "totalApiCalls": 71,
+    "uniqueEndpoints": 34
+  },
+  "routes": [
+    {
+      "route": "/dashboard",
+      "actionId": "route-load::cafesserie::procurement::/dashboard",
+      "loadTimeMs": 8381,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403,
+          "timestamp": 1768881976070
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200,
+          "timestamp": 1768881976137
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200,
+          "timestamp": 1768881976145
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403,
+          "timestamp": 1768881976200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200,
+          "timestamp": 1768881976226
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881976233
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200,
+          "timestamp": 1768881976363
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403,
+          "timestamp": 1768881976363
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200,
+          "timestamp": 1768881976368
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768881976370
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory",
+      "actionId": "route-load::cafesserie::procurement::/inventory",
+      "loadTimeMs": 3023,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881977577
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200,
+          "timestamp": 1768881979157
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/levels",
+          "status": 200,
+          "timestamp": 1768881979174
+        },
+        {
+          "method": "GET",
+          "path": "/inventory",
+          "status": 404,
+          "timestamp": 1768881979201
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881979204
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881979396
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768881979397
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory/depletions",
+      "actionId": "route-load::cafesserie::procurement::/inventory/depletions",
+      "loadTimeMs": 3399,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881982706
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions",
+          "status": 200,
+          "timestamp": 1768881982748
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions/stats",
+          "status": 200,
+          "timestamp": 1768881982750
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881982801
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory/period-close",
+      "actionId": "route-load::cafesserie::procurement::/inventory/period-close",
+      "loadTimeMs": 3516,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881986193
+        },
+        {
+          "method": "GET",
+          "path": "/org/branches",
+          "status": 404,
+          "timestamp": 1768881986193
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/periods",
+          "status": 200,
+          "timestamp": 1768881986292
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881986322
+        },
+        {
+          "method": "GET",
+          "path": "/org/branches",
+          "status": 404,
+          "timestamp": 1768881987222
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "actionId": "route-load::cafesserie::procurement::/inventory/purchase-orders",
+      "loadTimeMs": 2669,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/inventory/procurement/purchase-orders",
+          "status": 404,
+          "timestamp": 1768881988598
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881988644
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881988999
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/procurement/purchase-orders",
+          "status": 404,
+          "timestamp": 1768881989605
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory/receipts",
+      "actionId": "route-load::cafesserie::procurement::/inventory/receipts",
+      "loadTimeMs": 2280,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881991211
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/procurement/receipts",
+          "status": 404,
+          "timestamp": 1768881991240
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881991288
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/procurement/receipts",
+          "status": 404,
+          "timestamp": 1768881992254
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory/recipes",
+      "actionId": "route-load::cafesserie::procurement::/inventory/recipes",
+      "loadTimeMs": 2248,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200,
+          "timestamp": 1768881993257
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/v2/recipes",
+          "status": 200,
+          "timestamp": 1768881993261
+        },
+        {
+          "method": "GET",
+          "path": "/pos/menu-items",
+          "status": 404,
+          "timestamp": 1768881993266
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881993269
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/foundation/uoms",
+          "status": 404,
+          "timestamp": 1768881993309
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881993520
+        },
+        {
+          "method": "GET",
+          "path": "/pos/menu-items",
+          "status": 404,
+          "timestamp": 1768881994279
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/foundation/uoms",
+          "status": 404,
+          "timestamp": 1768881994322
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory/transfers",
+      "actionId": "route-load::cafesserie::procurement::/inventory/transfers",
+      "loadTimeMs": 2769,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881995960
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/transfers",
+          "status": 200,
+          "timestamp": 1768881996012
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881996291
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory/waste",
+      "actionId": "route-load::cafesserie::procurement::/inventory/waste",
+      "loadTimeMs": 2559,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/inventory/waste",
+          "status": 200,
+          "timestamp": 1768881998497
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881998503
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881998855
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/reports",
+      "actionId": "route-load::cafesserie::procurement::/reports",
+      "loadTimeMs": 2987,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882001702
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882001837
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/service-providers",
+      "actionId": "route-load::cafesserie::procurement::/service-providers",
+      "loadTimeMs": 2562,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882004128
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882004402
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers/contracts",
+          "status": 404,
+          "timestamp": 1768882004403
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers",
+          "status": 200,
+          "timestamp": 1768882004405
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders/summary",
+          "status": 200,
+          "timestamp": 1768882004406
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders",
+          "status": 200,
+          "timestamp": 1768882004407
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/settings",
+      "actionId": "route-load::cafesserie::procurement::/settings",
+      "loadTimeMs": 3088,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/service-providers/contracts",
+          "status": 404,
+          "timestamp": 1768882005761
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882007324
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882007476
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "actionId": "route-load::cafesserie::procurement::/workforce/my-availability",
+      "loadTimeMs": 4103,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882011427
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200,
+          "timestamp": 1768882011502
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882011556
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200,
+          "timestamp": 1768882011584
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "actionId": "route-load::cafesserie::procurement::/workforce/my-swaps",
+      "loadTimeMs": 4944,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882016482
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200,
+          "timestamp": 1768882016512
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882016538
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "actionId": "route-load::cafesserie::procurement::/workforce/open-shifts",
+      "loadTimeMs": 4387,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882020804
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200,
+          "timestamp": 1768882020879
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404,
+          "timestamp": 1768882020899
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882020924
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404,
+          "timestamp": 1768882021921
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

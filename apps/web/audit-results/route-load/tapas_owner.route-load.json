@@ -1,0 +1,695 @@
+{
+  "org": "tapas",
+  "role": "owner",
+  "email": "owner@tapas.demo.local",
+  "generatedAt": "2026-01-20T04:00:07.031Z",
+  "durationMs": 81277,
+  "summary": {
+    "routesVisited": 15,
+    "routesWithEndpoints": 15,
+    "routesNoEndpoints": 0,
+    "routesFailed": 0,
+    "totalApiCalls": 93,
+    "uniqueEndpoints": 35
+  },
+  "routes": [
+    {
+      "route": "/analytics",
+      "actionId": "route-load::tapas::owner::/analytics",
+      "loadTimeMs": 8197,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768881545903
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768881545908
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768881545908
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 404,
+          "timestamp": 1768881545912
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768881545934
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768881545949
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768881545990
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768881545992
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768881546006
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768881546022
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768881546032
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768881546040
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768881546071
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768881546078
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881546088
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768881546152
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881546601
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200,
+          "timestamp": 1768881546609
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/dashboard",
+      "actionId": "route-load::tapas::owner::/dashboard",
+      "loadTimeMs": 2899,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200,
+          "timestamp": 1768881548786
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200,
+          "timestamp": 1768881548788
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881548790
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200,
+          "timestamp": 1768881548791
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200,
+          "timestamp": 1768881548792
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200,
+          "timestamp": 1768881548794
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200,
+          "timestamp": 1768881548796
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200,
+          "timestamp": 1768881548796
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768881548800
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200,
+          "timestamp": 1768881549078
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881549078
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200,
+          "timestamp": 1768881549189
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200,
+          "timestamp": 1768881549203
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200,
+          "timestamp": 1768881549205
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200,
+          "timestamp": 1768881549331
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200,
+          "timestamp": 1768881549332
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200,
+          "timestamp": 1768881549334
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768881549339
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200,
+          "timestamp": 1768881549393
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768881549517
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/feedback",
+      "actionId": "route-load::tapas::owner::/feedback",
+      "loadTimeMs": 4450,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881553837
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200,
+          "timestamp": 1768881553894
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881553956
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/finance",
+      "actionId": "route-load::tapas::owner::/finance",
+      "loadTimeMs": 6378,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881560079
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200,
+          "timestamp": 1768881560292
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881560348
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory",
+      "actionId": "route-load::tapas::owner::/inventory",
+      "loadTimeMs": 6591,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881565588
+        },
+        {
+          "method": "GET",
+          "path": "/inventory",
+          "status": 404,
+          "timestamp": 1768881565748
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200,
+          "timestamp": 1768881565782
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/levels",
+          "status": 200,
+          "timestamp": 1768881566318
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881566321
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768881566622
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/pos",
+      "actionId": "route-load::tapas::owner::/pos",
+      "loadTimeMs": 4142,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881570361
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200,
+          "timestamp": 1768881570686
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200,
+          "timestamp": 1768881570687
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881570689
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 404,
+          "timestamp": 1768881570689
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200,
+          "timestamp": 1768881571061
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200,
+          "timestamp": 1768881571079
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/reports",
+      "actionId": "route-load::tapas::owner::/reports",
+      "loadTimeMs": 2836,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881573534
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881573912
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/reservations",
+      "actionId": "route-load::tapas::owner::/reservations",
+      "loadTimeMs": 4033,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881577783
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881577891
+        },
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 200,
+          "timestamp": 1768881577900
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 200,
+          "timestamp": 1768881577952
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/service-providers",
+      "actionId": "route-load::tapas::owner::/service-providers",
+      "loadTimeMs": 2599,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881580266
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers/contracts",
+          "status": 404,
+          "timestamp": 1768881580541
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers",
+          "status": 200,
+          "timestamp": 1768881580551
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders/summary",
+          "status": 200,
+          "timestamp": 1768881580552
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders",
+          "status": 200,
+          "timestamp": 1768881580553
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881580555
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/staff",
+      "actionId": "route-load::tapas::owner::/staff",
+      "loadTimeMs": 3550,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/service-providers/contracts",
+          "status": 404,
+          "timestamp": 1768881581585
+        },
+        {
+          "method": "GET",
+          "path": "/hr/employees",
+          "status": 200,
+          "timestamp": 1768881583943
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881583945
+        },
+        {
+          "method": "GET",
+          "path": "/hr/staff",
+          "status": 404,
+          "timestamp": 1768881583946
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881584090
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/approvals",
+      "actionId": "route-load::tapas::owner::/workforce/approvals",
+      "loadTimeMs": 4898,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881588435
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881588913
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/scheduling/shifts",
+          "status": 200,
+          "timestamp": 1768881588976
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/auto-scheduler",
+      "actionId": "route-load::tapas::owner::/workforce/auto-scheduler",
+      "loadTimeMs": 4740,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881593651
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881593739
+        },
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404,
+          "timestamp": 1768881593743
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/labor",
+      "actionId": "route-load::tapas::owner::/workforce/labor",
+      "loadTimeMs": 4446,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404,
+          "timestamp": 1768881594835
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881597791
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881598196
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/reports/labor",
+          "status": 200,
+          "timestamp": 1768881598256
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/labor-targets",
+      "actionId": "route-load::tapas::owner::/workforce/labor-targets",
+      "loadTimeMs": 4031,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881602121
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881602181
+        },
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404,
+          "timestamp": 1768881602200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/planning/targets",
+          "status": 200,
+          "timestamp": 1768881602284
+        },
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404,
+          "timestamp": 1768881603233
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "actionId": "route-load::tapas::owner::/workforce/my-availability",
+      "loadTimeMs": 3715,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200,
+          "timestamp": 1768881605781
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200,
+          "timestamp": 1768881605785
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881605953
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881605996
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "org": "cafesserie",
+  "role": "chef",
+  "email": "chef@cafesserie.demo.local",
+  "generatedAt": "2026-01-23T02:57:38.125Z",
+  "durationMs": 27237,
+  "summary": {
+    "total": 5,
+    "hasEndpoints": 0,
+    "noNetworkEffect": 1,
+    "skipped": 4,
+    "uniqueEndpoints": 0,
+    "attributionPercent": 20,
+    "mutationBlockingEnabled": true,
+    "totalBlockedMutations": 0,
+    "controlsWithBlockedMutations": 0
+  },
+  "controls": [
+    {
+      "actionKey": "cafesserie/chef//launch/button/POS-Tables,-orders,-payments,-offline-queue.-Default-on-this-device-Go",
+      "route": "/launch",
+      "controlType": "button",
+      "label": "POS\n\nTables, orders, payments, offline queue.\n\nDefault on this device\nGo",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/chef//launch/button/Kitchen-Display-Tickets,-stations,-live-updates-&-alerts.-Set-as-default-Go",
+      "route": "/launch",
+      "controlType": "button",
+      "label": "Kitchen Display\n\nTickets, stations, live updates & alerts.\n\nSet as default\nGo",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/chef//launch/button/Backoffice-Reports,-inventory,-staff,-configuration.-Set-as-default-Go",
+      "route": "/launch",
+      "controlType": "button",
+      "label": "Backoffice\n\nReports, inventory, staff, configuration.\n\nSet as default\nGo",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/chef//launch/button/Open-Tanstack-query-devtools",
+      "route": "/launch",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/chef//launch/link/Skip-to-main-content",
+      "route": "/launch",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    }
+  ]
+}

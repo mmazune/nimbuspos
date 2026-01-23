@@ -1,0 +1,587 @@
+{
+  "org": "tapas",
+  "role": "stock",
+  "email": "stock@tapas.demo.local",
+  "generatedAt": "2026-01-20T04:03:49.575Z",
+  "durationMs": 51710,
+  "summary": {
+    "routesVisited": 15,
+    "routesWithEndpoints": 15,
+    "routesNoEndpoints": 0,
+    "routesFailed": 0,
+    "totalApiCalls": 75,
+    "uniqueEndpoints": 30
+  },
+  "routes": [
+    {
+      "route": "/dashboard",
+      "actionId": "route-load::tapas::stock::/dashboard",
+      "loadTimeMs": 5633,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403,
+          "timestamp": 1768881785570
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200,
+          "timestamp": 1768881785582
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200,
+          "timestamp": 1768881785586
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881785590
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200,
+          "timestamp": 1768881785592
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200,
+          "timestamp": 1768881785594
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403,
+          "timestamp": 1768881785596
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768881785694
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200,
+          "timestamp": 1768881785696
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403,
+          "timestamp": 1768881785855
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881786798
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403,
+          "timestamp": 1768881787247
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200,
+          "timestamp": 1768881787297
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768881787314
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403,
+          "timestamp": 1768881787339
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200,
+          "timestamp": 1768881787414
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200,
+          "timestamp": 1768881787439
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200,
+          "timestamp": 1768881787570
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200,
+          "timestamp": 1768881787573
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 403,
+          "timestamp": 1768881787573
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768881787899
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403,
+          "timestamp": 1768881788422
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory",
+      "actionId": "route-load::tapas::stock::/inventory",
+      "loadTimeMs": 3379,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/inventory",
+          "status": 404,
+          "timestamp": 1768881790964
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200,
+          "timestamp": 1768881791080
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/levels",
+          "status": 200,
+          "timestamp": 1768881791381
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881791381
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881791790
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768881791792
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory/depletions",
+      "actionId": "route-load::tapas::stock::/inventory/depletions",
+      "loadTimeMs": 2651,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/inventory/depletions",
+          "status": 200,
+          "timestamp": 1768881794099
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881794340
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/depletions/stats",
+          "status": 200,
+          "timestamp": 1768881794341
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881794446
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory/period-close",
+      "actionId": "route-load::tapas::stock::/inventory/period-close",
+      "loadTimeMs": 2583,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/org/branches",
+          "status": 404,
+          "timestamp": 1768881796834
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881796914
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/periods",
+          "status": 200,
+          "timestamp": 1768881796960
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881797042
+        },
+        {
+          "method": "GET",
+          "path": "/org/branches",
+          "status": 404,
+          "timestamp": 1768881797861
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory/purchase-orders",
+      "actionId": "route-load::tapas::stock::/inventory/purchase-orders",
+      "loadTimeMs": 2725,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/inventory/procurement/purchase-orders",
+          "status": 404,
+          "timestamp": 1768881799354
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881799415
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881799751
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/procurement/purchase-orders",
+          "status": 404,
+          "timestamp": 1768881800330
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory/receipts",
+      "actionId": "route-load::tapas::stock::/inventory/receipts",
+      "loadTimeMs": 3207,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/inventory/procurement/receipts",
+          "status": 404,
+          "timestamp": 1768881802716
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881802879
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881802965
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/procurement/receipts",
+          "status": 404,
+          "timestamp": 1768881803728
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory/recipes",
+      "actionId": "route-load::tapas::stock::/inventory/recipes",
+      "loadTimeMs": 2330,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200,
+          "timestamp": 1768881805137
+        },
+        {
+          "method": "GET",
+          "path": "/pos/menu-items",
+          "status": 404,
+          "timestamp": 1768881805138
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/foundation/uoms",
+          "status": 404,
+          "timestamp": 1768881805140
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881805142
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/v2/recipes",
+          "status": 200,
+          "timestamp": 1768881805144
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881805287
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory/transfers",
+      "actionId": "route-load::tapas::stock::/inventory/transfers",
+      "loadTimeMs": 2275,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881807217
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881807530
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/transfers",
+          "status": 200,
+          "timestamp": 1768881807572
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory/waste",
+      "actionId": "route-load::tapas::stock::/inventory/waste",
+      "loadTimeMs": 2496,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881809701
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/waste",
+          "status": 200,
+          "timestamp": 1768881809755
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881810076
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/reports",
+      "actionId": "route-load::tapas::stock::/reports",
+      "loadTimeMs": 2564,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881812195
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881812616
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/settings",
+      "actionId": "route-load::tapas::stock::/settings",
+      "loadTimeMs": 2097,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881814430
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881814735
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "actionId": "route-load::tapas::stock::/workforce/my-availability",
+      "loadTimeMs": 2920,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881817544
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200,
+          "timestamp": 1768881817580
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200,
+          "timestamp": 1768881817608
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881817627
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "actionId": "route-load::tapas::stock::/workforce/my-swaps",
+      "loadTimeMs": 1786,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881819302
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200,
+          "timestamp": 1768881819313
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881819446
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "actionId": "route-load::tapas::stock::/workforce/open-shifts",
+      "loadTimeMs": 2432,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404,
+          "timestamp": 1768881821454
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881821523
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200,
+          "timestamp": 1768881821563
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881821849
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404,
+          "timestamp": 1768881822474
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workspaces/stock-manager",
+      "actionId": "route-load::tapas::stock::/workspaces/stock-manager",
+      "loadTimeMs": 6683,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881828378
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881828526
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "org": "cafesserie",
+  "role": "owner",
+  "email": "owner@cafesserie.demo.local",
+  "generatedAt": "2026-01-22T18:21:19.090Z",
+  "durationMs": 30872,
+  "summary": {
+    "totalRoutes": 15,
+    "passed": 9,
+    "failed": 6,
+    "passRate": 60
+  },
+  "routes": [
+    {
+      "route": "/dashboard",
+      "status": "PASS",
+      "navigationStatus": 200,
+      "http500Count": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "hasErrorBoundary": false
+    },
+    {
+      "route": "/analytics",
+      "status": "FAIL",
+      "navigationStatus": 200,
+      "http500Count": 0,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "hasErrorBoundary": false,
+      "errorSignature": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "screenshotPath": "C:\\Users\\arman\\Desktop\\nimbusPOS\\nimbuspos\\apps\\web\\audit-results\\render-contract\\screenshots\\cafesserie_owner__-analytics.png",
+      "htmlSnippet": "<div id=\"__next\"><a href=\"#main-content\" class=\"   sr-only   focus:not-sr-only   focus:fixed   focus:top-2   focus:left-2   focus:z-50   focus:rounded-md   focus:bg-slate-900   focus:px-3   focus:py-2   focus:text-xs   focus:text-slate-50   focus:outline-none   focus:ring-2   focus:ring-emerald-500   \">Skip to main content</a><div class=\"flex h-screen overflow-hidden bg-background\"><aside class=\"fixed left-0 top-0 z-40 h-screen w-64 border-r bg-card flex flex-col\"><div class=\"flex h-16 items-center border-b px-6\"><a class=\"flex items-center space-x-2 hover:opacity-80 transition-opacity\" aria-label=\"Go to workspace home\" data-testid=\"sidebar-logo\" href=\"/dashboard\"><div class=\"flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-chefcloud-blue to-chefcloud-lavender text-white font-bold\">CC</div><div><h1 class=\"text-lg font-bold text-foreground\">ChefCloud</h1><p class=\"text-xs text-muted-foreground\">OWNER</p></div></a></div><nav aria-label=\"Primary\" class=\"flex-1 ov..."
+    },
+    {
+      "route": "/reports",
+      "status": "PASS",
+      "navigationStatus": 200,
+      "http500Count": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "hasErrorBoundary": false
+    },
+    {
+      "route": "/pos",
+      "status": "FAIL",
+      "navigationStatus": 200,
+      "http500Count": 0,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "hasErrorBoundary": false,
+      "errorSignature": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "screenshotPath": "C:\\Users\\arman\\Desktop\\nimbusPOS\\nimbuspos\\apps\\web\\audit-results\\render-contract\\screenshots\\cafesserie_owner__-pos.png",
+      "htmlSnippet": "<div id=\"__next\"><a href=\"#main-content\" class=\"   sr-only   focus:not-sr-only   focus:fixed   focus:top-2   focus:left-2   focus:z-50   focus:rounded-md   focus:bg-slate-900   focus:px-3   focus:py-2   focus:text-xs   focus:text-slate-50   focus:outline-none   focus:ring-2   focus:ring-emerald-500   \">Skip to main content</a><div class=\"flex h-screen overflow-hidden bg-background\"><aside class=\"fixed left-0 top-0 z-40 h-screen w-64 border-r bg-card flex flex-col\"><div class=\"flex h-16 items-center border-b px-6\"><a class=\"flex items-center space-x-2 hover:opacity-80 transition-opacity\" aria-label=\"Go to workspace home\" data-testid=\"sidebar-logo\" href=\"/dashboard\"><div class=\"flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-chefcloud-blue to-chefcloud-lavender text-white font-bold\">CC</div><div><h1 class=\"text-lg font-bold text-foreground\">ChefCloud</h1><p class=\"text-xs text-muted-foreground\">OWNER</p></div></a></div><nav aria-label=\"Primary\" class=\"flex-1 ov..."
+    },
+    {
+      "route": "/reservations",
+      "status": "PASS",
+      "navigationStatus": 200,
+      "http500Count": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "hasErrorBoundary": false
+    },
+    {
+      "route": "/inventory",
+      "status": "FAIL",
+      "navigationStatus": 200,
+      "http500Count": 0,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "hasErrorBoundary": false,
+      "errorSignature": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "screenshotPath": "C:\\Users\\arman\\Desktop\\nimbusPOS\\nimbuspos\\apps\\web\\audit-results\\render-contract\\screenshots\\cafesserie_owner__-inventory.png",
+      "htmlSnippet": "<div id=\"__next\"><a href=\"#main-content\" class=\"   sr-only   focus:not-sr-only   focus:fixed   focus:top-2   focus:left-2   focus:z-50   focus:rounded-md   focus:bg-slate-900   focus:px-3   focus:py-2   focus:text-xs   focus:text-slate-50   focus:outline-none   focus:ring-2   focus:ring-emerald-500   \">Skip to main content</a><div class=\"flex h-screen overflow-hidden bg-background\"><aside class=\"fixed left-0 top-0 z-40 h-screen w-64 border-r bg-card flex flex-col\"><div class=\"flex h-16 items-center border-b px-6\"><a class=\"flex items-center space-x-2 hover:opacity-80 transition-opacity\" aria-label=\"Go to workspace home\" data-testid=\"sidebar-logo\" href=\"/dashboard\"><div class=\"flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-chefcloud-blue to-chefcloud-lavender text-white font-bold\">CC</div><div><h1 class=\"text-lg font-bold text-foreground\">ChefCloud</h1><p class=\"text-xs text-muted-foreground\">OWNER</p></div></a></div><nav aria-label=\"Primary\" class=\"flex-1 ov..."
+    },
+    {
+      "route": "/finance",
+      "status": "PASS",
+      "navigationStatus": 200,
+      "http500Count": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "hasErrorBoundary": false
+    },
+    {
+      "route": "/service-providers",
+      "status": "FAIL",
+      "navigationStatus": 200,
+      "http500Count": 0,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)",
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "hasErrorBoundary": false,
+      "errorSignature": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "screenshotPath": "C:\\Users\\arman\\Desktop\\nimbusPOS\\nimbuspos\\apps\\web\\audit-results\\render-contract\\screenshots\\cafesserie_owner__-service-providers.png",
+      "htmlSnippet": "<div id=\"__next\"><a href=\"#main-content\" class=\"   sr-only   focus:not-sr-only   focus:fixed   focus:top-2   focus:left-2   focus:z-50   focus:rounded-md   focus:bg-slate-900   focus:px-3   focus:py-2   focus:text-xs   focus:text-slate-50   focus:outline-none   focus:ring-2   focus:ring-emerald-500   \">Skip to main content</a><div class=\"flex h-screen overflow-hidden bg-background\"><aside class=\"fixed left-0 top-0 z-40 h-screen w-64 border-r bg-card flex flex-col\"><div class=\"flex h-16 items-center border-b px-6\"><a class=\"flex items-center space-x-2 hover:opacity-80 transition-opacity\" aria-label=\"Go to workspace home\" data-testid=\"sidebar-logo\" href=\"/dashboard\"><div class=\"flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-chefcloud-blue to-chefcloud-lavender text-white font-bold\">CC</div><div><h1 class=\"text-lg font-bold text-foreground\">ChefCloud</h1><p class=\"text-xs text-muted-foreground\">OWNER</p></div></a></div><nav aria-label=\"Primary\" class=\"flex-1 ov..."
+    },
+    {
+      "route": "/staff",
+      "status": "FAIL",
+      "navigationStatus": 200,
+      "http500Count": 0,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 404 (Not Found)"
+      ],
+      "pageErrors": [],
+      "hasErrorBoundary": false,
+      "errorSignature": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "screenshotPath": "C:\\Users\\arman\\Desktop\\nimbusPOS\\nimbuspos\\apps\\web\\audit-results\\render-contract\\screenshots\\cafesserie_owner__-staff.png",
+      "htmlSnippet": "<div id=\"__next\"><a href=\"#main-content\" class=\"   sr-only   focus:not-sr-only   focus:fixed   focus:top-2   focus:left-2   focus:z-50   focus:rounded-md   focus:bg-slate-900   focus:px-3   focus:py-2   focus:text-xs   focus:text-slate-50   focus:outline-none   focus:ring-2   focus:ring-emerald-500   \">Skip to main content</a><div class=\"flex h-screen overflow-hidden bg-background\"><aside class=\"fixed left-0 top-0 z-40 h-screen w-64 border-r bg-card flex flex-col\"><div class=\"flex h-16 items-center border-b px-6\"><a class=\"flex items-center space-x-2 hover:opacity-80 transition-opacity\" aria-label=\"Go to workspace home\" data-testid=\"sidebar-logo\" href=\"/dashboard\"><div class=\"flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-chefcloud-blue to-chefcloud-lavender text-white font-bold\">CC</div><div><h1 class=\"text-lg font-bold text-foreground\">ChefCloud</h1><p class=\"text-xs text-muted-foreground\">OWNER</p></div></a></div><nav aria-label=\"Primary\" class=\"flex-1 ov..."
+    },
+    {
+      "route": "/feedback",
+      "status": "PASS",
+      "navigationStatus": 200,
+      "http500Count": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "hasErrorBoundary": false
+    },
+    {
+      "route": "/workforce/schedule",
+      "status": "PASS",
+      "navigationStatus": 200,
+      "http500Count": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "hasErrorBoundary": false
+    },
+    {
+      "route": "/workforce/timeclock",
+      "status": "PASS",
+      "navigationStatus": 200,
+      "http500Count": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "hasErrorBoundary": false
+    },
+    {
+      "route": "/workforce/approvals",
+      "status": "PASS",
+      "navigationStatus": 200,
+      "http500Count": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "hasErrorBoundary": false
+    },
+    {
+      "route": "/workforce/swaps",
+      "status": "FAIL",
+      "navigationStatus": 200,
+      "http500Count": 4,
+      "consoleErrors": [
+        "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+        "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+        "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+        "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+      ],
+      "pageErrors": [],
+      "hasErrorBoundary": false,
+      "errorSignature": "HTTP 500 in responses: GET http://localhost:3001/workforce/swaps?status=pending",
+      "screenshotPath": "C:\\Users\\arman\\Desktop\\nimbusPOS\\nimbuspos\\apps\\web\\audit-results\\render-contract\\screenshots\\cafesserie_owner__-workforce-swaps.png",
+      "htmlSnippet": "<div id=\"__next\"><a href=\"#main-content\" class=\"   sr-only   focus:not-sr-only   focus:fixed   focus:top-2   focus:left-2   focus:z-50   focus:rounded-md   focus:bg-slate-900   focus:px-3   focus:py-2   focus:text-xs   focus:text-slate-50   focus:outline-none   focus:ring-2   focus:ring-emerald-500   \">Skip to main content</a><div class=\"container mx-auto py-6 space-y-6\"><div class=\"flex items-center justify-between\"><div><h1 class=\"text-3xl font-bold\">Swap Approvals</h1><p class=\"text-muted-foreground\">Review and manage staff shift swap requests</p></div><button class=\"inline-flex items-center justify-center whitespace-nowrap text-sm font-bold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-nimbus-navy/20 bg-background hover:bg-nimbus-mist hover:text-nimbus-navy h-9 rounded-lg px-3\"><svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24..."
+    },
+    {
+      "route": "/workforce/labor",
+      "status": "PASS",
+      "navigationStatus": 200,
+      "http500Count": 0,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "hasErrorBoundary": false
+    }
+  ],
+  "topFailures": [
+    {
+      "route": "/analytics",
+      "errorSignature": "Console error: Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "count": 5
+    },
+    {
+      "route": "/workforce/swaps",
+      "errorSignature": "HTTP 500 in responses: GET http://localhost:3001/workforce/swaps?status=pending",
+      "count": 1
+    }
+  ]
+}

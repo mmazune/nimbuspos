@@ -1,0 +1,102 @@
+{
+  "generatedAt": "2026-01-23T10:38:08.468Z",
+  "totalTests": 10,
+  "passed": 0,
+  "failed": 10,
+  "blocked": 0,
+  "skipped": 0,
+  "expectedBlocked": 0,
+  "unexpectedBlocked": 0,
+  "tests": [
+    {
+      "testName": "MS-1: PO Create Form",
+      "org": "tapas",
+      "role": "procurement",
+      "action": "Navigate to PO create form",
+      "status": "FAIL",
+      "duration": 31,
+      "error": "Login failed: apiRequestContext.post: connect ECONNREFUSED 127.0.0.1:3001\nCall log:\n\u001b[2m  - → POST http://127.0.0.1:3001/auth/login\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.7499.4 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - content-type: application/json\u001b[22m\n\u001b[2m    - content-length: 62\u001b[22m\n\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m"
+    },
+    {
+      "testName": "MS-2: Transfer Create Form",
+      "org": "tapas",
+      "role": "procurement",
+      "action": "Navigate to transfer create form",
+      "status": "FAIL",
+      "duration": 8,
+      "error": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m"
+    },
+    {
+      "testName": "MS-3: Waste Create Form",
+      "org": "tapas",
+      "role": "procurement",
+      "action": "Navigate to waste create form",
+      "status": "FAIL",
+      "duration": 6,
+      "error": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m"
+    },
+    {
+      "testName": "MS-4: Receipt Create Form",
+      "org": "tapas",
+      "role": "procurement",
+      "action": "Navigate to receipt create form",
+      "status": "FAIL",
+      "duration": 8,
+      "error": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m"
+    },
+    {
+      "testName": "MS-5: Inventory Items List",
+      "org": "tapas",
+      "role": "procurement",
+      "action": "Load inventory items list",
+      "status": "FAIL",
+      "duration": 7,
+      "error": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m"
+    },
+    {
+      "testName": "MS-6: Suppliers List",
+      "org": "tapas",
+      "role": "procurement",
+      "action": "Load suppliers list",
+      "status": "FAIL",
+      "duration": 6,
+      "error": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m"
+    },
+    {
+      "testName": "MS-7: Purchase Orders List",
+      "org": "tapas",
+      "role": "procurement",
+      "action": "Load purchase orders list",
+      "status": "FAIL",
+      "duration": 6,
+      "error": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m"
+    },
+    {
+      "testName": "MS-8: Stock Levels",
+      "org": "tapas",
+      "role": "procurement",
+      "action": "Load stock levels page",
+      "status": "FAIL",
+      "duration": 7,
+      "error": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m"
+    },
+    {
+      "testName": "MS-9: Dashboard KPIs",
+      "org": "tapas",
+      "role": "procurement",
+      "action": "Load dashboard with KPIs",
+      "status": "FAIL",
+      "duration": 7,
+      "error": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m"
+    },
+    {
+      "testName": "MS-10: Reports Page",
+      "org": "tapas",
+      "role": "procurement",
+      "action": "Load reports page",
+      "status": "FAIL",
+      "duration": 7,
+      "error": "\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32mtrue\u001b[39m\nReceived: \u001b[31mfalse\u001b[39m"
+    }
+  ]
+}

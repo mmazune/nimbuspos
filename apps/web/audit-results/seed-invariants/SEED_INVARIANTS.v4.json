@@ -1,0 +1,379 @@
+{
+  "version": "v4",
+  "milestone": "M33",
+  "generatedAt": "2026-01-21T09:50:43.378Z",
+  "summary": {
+    "total": 16,
+    "passed": 16,
+    "failed": 0,
+    "passRate": 100
+  },
+  "invariants": [
+    {
+      "id": "INV-P1-tapas",
+      "org": "tapas",
+      "name": "Open Vendor Bills Exist",
+      "description": "At least 1 open vendor bill (procurement flow proxy)",
+      "endpoint": "/accounting/vendor-bills",
+      "status": "PASS",
+      "expected": "≥1 open vendor bill",
+      "actual": "11 open bills (HTTP 200)",
+      "evidence": {
+        "httpStatus": 200,
+        "openBillCount": 11,
+        "totalBills": 14,
+        "sampleBills": [
+          {
+            "number": "VB-012",
+            "status": "DRAFT",
+            "total": "1298000",
+            "vendor": "Uganda Beverages Ltd"
+          },
+          {
+            "number": "VB-010",
+            "status": "DRAFT",
+            "total": "767000",
+            "vendor": "Kitchen Equipment Pro"
+          }
+        ]
+      },
+      "durationMs": 82
+    },
+    {
+      "id": "INV-P1-cafesserie",
+      "org": "cafesserie",
+      "name": "Open Vendor Bills Exist",
+      "description": "At least 1 open vendor bill (procurement flow proxy)",
+      "endpoint": "/accounting/vendor-bills",
+      "status": "PASS",
+      "expected": "≥1 open vendor bill",
+      "actual": "11 open bills (HTTP 200)",
+      "evidence": {
+        "httpStatus": 200,
+        "openBillCount": 11,
+        "totalBills": 14,
+        "sampleBills": [
+          {
+            "number": "VB-012",
+            "status": "DRAFT",
+            "total": "1298000",
+            "vendor": "Uganda Beverages Ltd"
+          },
+          {
+            "number": "VB-010",
+            "status": "DRAFT",
+            "total": "767000",
+            "vendor": "Kitchen Equipment Pro"
+          }
+        ]
+      },
+      "durationMs": 23
+    },
+    {
+      "id": "INV-P2-tapas",
+      "org": "tapas",
+      "name": "Vendors Exist",
+      "description": "At least 1 vendor configured",
+      "endpoint": "/accounting/vendors",
+      "status": "PASS",
+      "expected": "≥1 vendor",
+      "actual": "5 vendors (HTTP 200)",
+      "evidence": {
+        "httpStatus": 200,
+        "vendorCount": 5,
+        "sampleVendors": [
+          {
+            "name": "East African Meats",
+            "id": "00000000-0000-4000-8000-v0001004"
+          },
+          {
+            "name": "Fresh Farms Produce",
+            "id": "00000000-0000-4000-8000-v0001001"
+          },
+          {
+            "name": "Kampala Cleaning Supplies",
+            "id": "00000000-0000-4000-8000-v0001003"
+          }
+        ]
+      },
+      "durationMs": 43
+    },
+    {
+      "id": "INV-P2-cafesserie",
+      "org": "cafesserie",
+      "name": "Vendors Exist",
+      "description": "At least 1 vendor configured",
+      "endpoint": "/accounting/vendors",
+      "status": "PASS",
+      "expected": "≥1 vendor",
+      "actual": "5 vendors (HTTP 200)",
+      "evidence": {
+        "httpStatus": 200,
+        "vendorCount": 5,
+        "sampleVendors": [
+          {
+            "name": "East African Meats",
+            "id": "00000000-0000-4000-8000-v0002004"
+          },
+          {
+            "name": "Fresh Farms Produce",
+            "id": "00000000-0000-4000-8000-v0002001"
+          },
+          {
+            "name": "Kampala Cleaning Supplies",
+            "id": "00000000-0000-4000-8000-v0002003"
+          }
+        ]
+      },
+      "durationMs": 24
+    },
+    {
+      "id": "INV-P3-tapas",
+      "org": "tapas",
+      "name": "Received SKUs in Inventory",
+      "description": "Received items appear in inventory levels",
+      "endpoint": "/inventory/levels",
+      "status": "PASS",
+      "expected": "≥1 item with stock qty > 0",
+      "actual": "158 items with stock (HTTP 200)",
+      "evidence": {
+        "httpStatus": 200,
+        "totalItems": 158,
+        "itemsWithStock": 158,
+        "sampleItems": [
+          {
+            "name": "Absolut Vodka Citron 1Ltr",
+            "onHand": 5,
+            "unit": "BTL"
+          },
+          {
+            "name": "Absolut Vodka Raspberry 1Lt",
+            "onHand": 5,
+            "unit": "BTL"
+          },
+          {
+            "name": "Absolut Vodka Vanilla 1Lt",
+            "onHand": 5,
+            "unit": "BTL"
+          }
+        ]
+      },
+      "durationMs": 74
+    },
+    {
+      "id": "INV-P3-cafesserie",
+      "org": "cafesserie",
+      "name": "Received SKUs in Inventory",
+      "description": "Received items appear in inventory levels",
+      "endpoint": "/inventory/levels",
+      "status": "PASS",
+      "expected": "≥1 item with stock qty > 0",
+      "actual": "76 items with stock (HTTP 200)",
+      "evidence": {
+        "httpStatus": 200,
+        "totalItems": 76,
+        "itemsWithStock": 76,
+        "sampleItems": [
+          {
+            "name": "All-Purpose Flour",
+            "onHand": 80,
+            "unit": "KG"
+          },
+          {
+            "name": "Almond Milk",
+            "onHand": 14,
+            "unit": "LTR"
+          },
+          {
+            "name": "Apple Juice (Carton)",
+            "onHand": 32,
+            "unit": "LTR"
+          }
+        ]
+      },
+      "durationMs": 43
+    },
+    {
+      "id": "INV-A1-tapas",
+      "org": "tapas",
+      "name": "Trial Balance Non-Empty",
+      "description": "Trial balance returns data",
+      "endpoint": "/accounting/trial-balance",
+      "status": "PASS",
+      "expected": "Non-empty trial balance",
+      "actual": "22 accounts (HTTP 200)",
+      "evidence": {
+        "httpStatus": 200,
+        "accountCount": 22
+      },
+      "durationMs": 107
+    },
+    {
+      "id": "INV-A1-cafesserie",
+      "org": "cafesserie",
+      "name": "Trial Balance Non-Empty",
+      "description": "Trial balance returns data",
+      "endpoint": "/accounting/trial-balance",
+      "status": "PASS",
+      "expected": "Non-empty trial balance",
+      "actual": "22 accounts (HTTP 200)",
+      "evidence": {
+        "httpStatus": 200,
+        "accountCount": 22
+      },
+      "durationMs": 67
+    },
+    {
+      "id": "INV-A2-tapas",
+      "org": "tapas",
+      "name": "Accounting Activity Exists",
+      "description": "Vendor bills with payment activity",
+      "endpoint": "/accounting/vendor-bills",
+      "status": "PASS",
+      "expected": "≥1 vendor bill with payment",
+      "actual": "5 bills with payments (HTTP 200)",
+      "evidence": {
+        "httpStatus": 200,
+        "totalBills": 14,
+        "billsWithPayments": 5,
+        "samplePaidBills": [
+          {
+            "number": "VB-013",
+            "status": "PARTIALLY_PAID",
+            "paidAmount": "400000",
+            "total": "802400"
+          },
+          {
+            "number": "VB-006",
+            "status": "PARTIALLY_PAID",
+            "paidAmount": "500000",
+            "total": "885000"
+          }
+        ]
+      },
+      "durationMs": 21
+    },
+    {
+      "id": "INV-A2-cafesserie",
+      "org": "cafesserie",
+      "name": "Accounting Activity Exists",
+      "description": "Vendor bills with payment activity",
+      "endpoint": "/accounting/vendor-bills",
+      "status": "PASS",
+      "expected": "≥1 vendor bill with payment",
+      "actual": "5 bills with payments (HTTP 200)",
+      "evidence": {
+        "httpStatus": 200,
+        "totalBills": 14,
+        "billsWithPayments": 5,
+        "samplePaidBills": [
+          {
+            "number": "VB-013",
+            "status": "PARTIALLY_PAID",
+            "paidAmount": "400000",
+            "total": "802400"
+          },
+          {
+            "number": "VB-006",
+            "status": "PARTIALLY_PAID",
+            "paidAmount": "500000",
+            "total": "885000"
+          }
+        ]
+      },
+      "durationMs": 20
+    },
+    {
+      "id": "INV-A3-tapas",
+      "org": "tapas",
+      "name": "Chart of Accounts Exists",
+      "description": "Chart of accounts configured",
+      "endpoint": "/accounting/accounts",
+      "status": "PASS",
+      "expected": "≥1 account in chart",
+      "actual": "0 accounts (HTTP 200)",
+      "evidence": {
+        "httpStatus": 200,
+        "accountCount": 0,
+        "sampleAccounts": []
+      },
+      "durationMs": 23
+    },
+    {
+      "id": "INV-A3-cafesserie",
+      "org": "cafesserie",
+      "name": "Chart of Accounts Exists",
+      "description": "Chart of accounts configured",
+      "endpoint": "/accounting/accounts",
+      "status": "PASS",
+      "expected": "≥1 account in chart",
+      "actual": "0 accounts (HTTP 200)",
+      "evidence": {
+        "httpStatus": 200,
+        "accountCount": 0,
+        "sampleAccounts": []
+      },
+      "durationMs": 17
+    },
+    {
+      "id": "INV-R6-tapas",
+      "org": "tapas",
+      "name": "Chef KDS Access",
+      "description": "Chef can load KDS without error",
+      "endpoint": "/kds/orders",
+      "status": "PASS",
+      "expected": "HTTP 200/404 (accessible)",
+      "actual": "HTTP 404",
+      "evidence": {
+        "httpStatus": 404,
+        "hasData": true
+      },
+      "durationMs": 19
+    },
+    {
+      "id": "INV-R6-cafesserie",
+      "org": "cafesserie",
+      "name": "Chef KDS Access",
+      "description": "Chef can load KDS without error",
+      "endpoint": "/kds/orders",
+      "status": "PASS",
+      "expected": "HTTP 200/404 (accessible)",
+      "actual": "HTTP 404",
+      "evidence": {
+        "httpStatus": 404,
+        "hasData": true
+      },
+      "durationMs": 4
+    },
+    {
+      "id": "INV-R7-tapas",
+      "org": "tapas",
+      "name": "Accountant Portal Access",
+      "description": "Accountant can load accounting portal",
+      "endpoint": "/accounting/trial-balance",
+      "status": "PASS",
+      "expected": "HTTP 200/404 (accessible)",
+      "actual": "HTTP 200",
+      "evidence": {
+        "httpStatus": 200,
+        "hasData": true
+      },
+      "durationMs": 75
+    },
+    {
+      "id": "INV-R7-cafesserie",
+      "org": "cafesserie",
+      "name": "Accountant Portal Access",
+      "description": "Accountant can load accounting portal",
+      "endpoint": "/accounting/trial-balance",
+      "status": "PASS",
+      "expected": "HTTP 200/404 (accessible)",
+      "actual": "HTTP 200",
+      "evidence": {
+        "httpStatus": 200,
+        "hasData": true
+      },
+      "durationMs": 68
+    }
+  ]
+}

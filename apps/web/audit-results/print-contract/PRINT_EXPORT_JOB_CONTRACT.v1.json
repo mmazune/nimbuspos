@@ -1,0 +1,112 @@
+{
+  "generatedAt": "2026-01-22T16:52:37.897Z",
+  "source": "Consolidated from M50/M51/M52 results",
+  "totalRoles": 6,
+  "classifications": {
+    "hasDownload": 34,
+    "uiOnlyPrint": 30,
+    "asyncJob": 0,
+    "errors": 0
+  },
+  "receiptsSampled": 30,
+  "receiptsWithPrint": 30,
+  "roles": [
+    {
+      "org": "tapas",
+      "role": "owner",
+      "controls": 11,
+      "hasDownload": 6,
+      "uiOnlyPrint": 5,
+      "asyncJob": 0,
+      "errors": 0,
+      "receiptsChecked": 5,
+      "receiptsWithPrint": 5
+    },
+    {
+      "org": "tapas",
+      "role": "manager",
+      "controls": 11,
+      "hasDownload": 6,
+      "uiOnlyPrint": 5,
+      "asyncJob": 0,
+      "errors": 0,
+      "receiptsChecked": 5,
+      "receiptsWithPrint": 5
+    },
+    {
+      "org": "tapas",
+      "role": "cashier",
+      "controls": 10,
+      "hasDownload": 5,
+      "uiOnlyPrint": 5,
+      "asyncJob": 0,
+      "errors": 0,
+      "receiptsChecked": 5,
+      "receiptsWithPrint": 5
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "controls": 11,
+      "hasDownload": 6,
+      "uiOnlyPrint": 5,
+      "asyncJob": 0,
+      "errors": 0,
+      "receiptsChecked": 5,
+      "receiptsWithPrint": 5
+    },
+    {
+      "org": "cafesserie",
+      "role": "manager",
+      "controls": 11,
+      "hasDownload": 6,
+      "uiOnlyPrint": 5,
+      "asyncJob": 0,
+      "errors": 0,
+      "receiptsChecked": 5,
+      "receiptsWithPrint": 5
+    },
+    {
+      "org": "cafesserie",
+      "role": "cashier",
+      "controls": 10,
+      "hasDownload": 5,
+      "uiOnlyPrint": 5,
+      "asyncJob": 0,
+      "errors": 0,
+      "receiptsChecked": 5,
+      "receiptsWithPrint": 5
+    }
+  ],
+  "asyncJobEvidence": {
+    "detected": false,
+    "instances": 0,
+    "message": "ASYNC_JOB pattern not detected in M51 audit. No 202 responses with jobId/taskId observed across all tested controls."
+  },
+  "detailsByClassification": {
+    "hasDownload": {
+      "source": "M50",
+      "distinctControls": 7,
+      "totalInstances": 34,
+      "controls": [
+        "report-card-analytics-overview",
+        "report-card-finance-budgets",
+        "pnl-export",
+        "bs-export",
+        "tb-export",
+        "export-btn (inventory)",
+        "export-btn (stocktakes)"
+      ]
+    },
+    "uiOnlyPrint": {
+      "source": "M52",
+      "distinctControls": 1,
+      "totalInstances": 30,
+      "controls": [
+        "Print button on receipt detail pages (/pos/receipts/[id])"
+      ],
+      "implementation": "window.print() at receipts/[id].tsx line 62-64"
+    }
+  },
+  "totalControls": 64
+}

@@ -1,8 +1,8 @@
 # Role Audit Report: TAPAS / STOCK
 
-**Date:** 2026-01-13  
-**Status:** ⚠️ ISSUES  
-**Duration:** 199.1s  
+**Date:** 2026-01-21  
+**Status:** ✅ PASS  
+**Duration:** 210.2s  
 **Email:** stock@tapas.demo.local
 
 ---
@@ -11,18 +11,18 @@
 
 | Metric | Value |
 |--------|-------|
-| Routes Visited | 11 / 11 |
+| Routes Visited | 6 / 6 |
 | Routes Forbidden | 0 |
 | Routes Not Found | 0 |
 | Routes Error | 0 |
-| Controls Found | 92 |
-| Controls Clicked | 20 |
-| Controls Skipped | 72 |
-| API Endpoints Hit | 25 |
-| 2xx Responses | 67 |
+| Controls Found | 121 |
+| Controls Clicked | 25 |
+| Controls Skipped | 96 |
+| API Endpoints Hit | 23 |
+| 2xx Responses | 43 |
 | 4xx Responses | 18 |
 | 5xx Responses | 0 |
-| Total Failures | 8 |
+| Total Failures | 0 |
 
 ---
 
@@ -30,17 +30,12 @@
 
 | Route | Status | Load Time |
 |-------|--------|-----------|
-| /dashboard | ✅ success | 3094ms |
-| /inventory | ✅ success | 1403ms |
-| /inventory/depletions | ✅ success | 9788ms |
-| /inventory/period-close | ✅ success | 6460ms |
-| /inventory/purchase-orders | ✅ success | 4204ms |
-| /inventory/receipts | ✅ success | 2736ms |
-| /inventory/recipes | ✅ success | 6178ms |
-| /inventory/transfers | ✅ success | 3878ms |
-| /inventory/waste | ✅ success | 2059ms |
-| /reports | ✅ success | 2784ms |
-| /settings | ✅ success | 9033ms |
+| /dashboard | ✅ success | 1944ms |
+| /inventory | ✅ success | 2100ms |
+| /inventory/depletions | ✅ success | 2436ms |
+| /inventory/period-close | ✅ success | 4087ms |
+| /inventory/purchase-orders | ✅ success | 2931ms |
+| /inventory/receipts | ✅ success | 1670ms |
 
 ---
 
@@ -48,46 +43,29 @@
 
 | Method | Path | Status | Count |
 |--------|------|--------|-------|
-| GET | /me |  200 | 21 |
-| GET | /branches |  200 | 21 |
+| GET | /me |  200 | 11 |
+| GET | /branches |  200 | 11 |
 | GET | /inventory/low-stock/alerts |  200 | 5 |
 | GET | /analytics/daily-metrics | ⚠️ 403 | 3 |
-| GET | /inventory/items |  200 | 3 |
+| GET | /analytics/payment-mix |  200 | 2 |
+| GET | /analytics/peak-hours |  200 | 2 |
 | GET | /analytics/daily |  200 | 2 |
 | GET | /analytics/top-items |  200 | 2 |
 | GET | /analytics/category-mix |  200 | 2 |
 | GET | /franchise/rankings | ⚠️ 403 | 2 |
-| GET | /analytics/peak-hours |  200 | 2 |
-| GET | /analytics/payment-mix |  200 | 2 |
 | GET | /analytics/financial-summary | ⚠️ 403 | 2 |
 | GET | /org/branches | ⚠️ 404 | 2 |
 | GET | /inventory/procurement/purchase-orders | ⚠️ 404 | 2 |
+| GET | /vendors | ⚠️ 404 | 2 |
+| GET | /inventory/foundation/items | ⚠️ 404 | 2 |
 | GET | /inventory/procurement/receipts | ⚠️ 404 | 2 |
-| GET | /pos/menu-items | ⚠️ 404 | 2 |
-| GET | /inventory/foundation/uoms | ⚠️ 404 | 2 |
 | GET | /inventory | ⚠️ 404 | 1 |
+| GET | /inventory/items |  200 | 1 |
 | GET | /inventory/levels |  200 | 1 |
 | GET | /inventory/depletions/stats |  200 | 1 |
 | GET | /inventory/depletions |  200 | 1 |
 | GET | /inventory/periods |  200 | 1 |
-| GET | /inventory/v2/recipes |  200 | 1 |
-| GET | /inventory/transfers |  200 | 1 |
-| GET | /inventory/waste |  200 | 1 |
-
----
-
-## Failures
-
-| Route | Type | Message |
-|-------|------|---------|
-| /dashboard | api-forbidden | 403 Forbidden: GET /analytics/daily-metrics |
-| /dashboard | api-forbidden | 403 Forbidden: GET /franchise/rankings |
-| /dashboard | api-forbidden | 403 Forbidden: GET /analytics/financial-summary |
-| /dashboard | api-forbidden | 403 Forbidden: GET /analytics/daily-metrics |
-| /dashboard | api-forbidden | 403 Forbidden: GET /analytics/financial-summary |
-| /dashboard | api-forbidden | 403 Forbidden: GET /franchise/rankings |
-| /dashboard | api-forbidden | 403 Forbidden: GET /analytics/daily-metrics |
-| /workforce/my-availability | route-error | Skipped due to time budget (198944ms elapsed) |
+| GET | /inventory/foundation/uom |  200 | 1 |
 
 ---
 
@@ -97,24 +75,39 @@
 |-------|-------|------|---------|
 | /dashboard | date-range-selector | dropdown | filter-applied |
 | /dashboard | date-range-selector | date-picker | no-op |
+| /dashboard | date-custom-inputs | date-picker | no-op |
 | /dashboard | date-from-input | date-picker | no-op |
 | /dashboard | date-to-input | date-picker | no-op |
 | /dashboard | theme-toggle-btn | toggle | no-op |
 | /dashboard | user-menu-container | menu | menu-opened |
-| /inventory | theme-toggle-btn | toggle | no-op |
-| /inventory | user-menu-container | menu | menu-opened |
-| /inventory/depletions | Open Tanstack query devtools | button | no-op |
-| /inventory/period-close | user-menu-trigger | button | menu-opened |
-| /inventory/purchase-orders | Close tanstack query devtools | button | no-op |
-| /inventory/receipts | Open Tanstack query devtools | button | no-op |
-| /inventory/recipes | Close tanstack query devtools | button | no-op |
-| /inventory/transfers | Open Tanstack query devtools | button | no-op |
-| /inventory/waste | theme-toggle-btn | button | no-op |
-| /inventory/waste | user-menu-trigger | button | menu-opened |
-| /reports | theme-toggle-btn | toggle | no-op |
-| /reports | user-menu-container | menu | menu-opened |
-| /settings | theme-toggle-btn | toggle | no-op |
-| /settings | user-menu-container | menu | menu-opened |
+| /dashboard | Open Tanstack query devtools | button | menu-opened |
+| /dashboard | kpi-revenue | button | menu-opened |
+| /dashboard | kpi-gross-margin | button | menu-opened |
+| /inventory | Close tanstack query devtools | button | no-op |
+| /inventory/depletions | theme-toggle-btn | toggle | no-op |
+| /inventory/depletions | user-menu-container | menu | menu-opened |
+| /inventory/depletions | Close | button | menu-opened |
+| /inventory/depletions | Open Tanstack query devtools | button | menu-opened |
+| /inventory/period-close | user-menu-trigger | menu | menu-opened |
+| /inventory/period-close | Close tanstack query devtools | button | menu-opened |
+| /inventory/purchase-orders | theme-toggle-btn | button | no-op |
+| /inventory/purchase-orders | user-menu-trigger | button | menu-opened |
+| /inventory/purchase-orders | All Statuses | button | menu-opened |
+| /inventory/purchase-orders | po-create-btn | button | menu-opened |
+| /inventory/purchase-orders | Open Tanstack query devtools | button | menu-opened |
+| /inventory/receipts | theme-toggle-btn | toggle | no-op |
+| /inventory/receipts | user-menu-container | menu | menu-opened |
+| /inventory/receipts | Close tanstack query devtools | button | menu-opened |
+
+---
+
+## Landing Page Visibility Checks ✅
+
+| Check | Status | Details |
+|-------|--------|---------|
+| Inventory heading | ✅ | Found: heading visible |
+| Inventory table or list | ✅ | Found: data table |
+| Main content | ✅ | Found: main content |
 
 ---
 

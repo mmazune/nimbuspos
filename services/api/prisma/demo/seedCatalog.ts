@@ -12,6 +12,7 @@ import { seedTapasRecipes } from './tapas/recipes';
 import { seedCafesserieMenu } from './cafesserie/menu';
 import { seedCafesserieInventory } from './cafesserie/inventory';
 import { seedCafesserieRecipes } from './cafesserie/recipes';
+import { seedCosting } from './seedCosting';
 
 /**
  * Seeds complete product catalog (menu + inventory) for demo orgs
@@ -39,6 +40,9 @@ export async function seedCatalog(prisma: PrismaClient): Promise<void> {
     await seedCafesserieMenu(prisma);
     await seedCafesserieInventory(prisma);
     await seedCafesserieRecipes(prisma);
+
+    // M35: Seed costing data (Recipe v2 + Cost Layers)
+    await seedCosting(prisma);
 
     console.log('\n✅ Demo catalog seeded successfully!');
     

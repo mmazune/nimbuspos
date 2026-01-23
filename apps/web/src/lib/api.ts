@@ -1,6 +1,7 @@
 import axios, { AxiosInstance, InternalAxiosRequestConfig } from 'axios';
 import Cookies from 'js-cookie';
 import { recordApiCall, isApiCaptureEnabled } from '@/lib/navmap/apiCapture';
+import { getCurrentAction, isActionTraceEnabled } from '@/lib/e2e/actionContext';
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
 
@@ -49,6 +50,7 @@ function decodeJwtPayload(token: string): { orgId?: string; sub?: string } | nul
 
 /**
  * Request interceptor to attach auth token and org-id header
+ * Also attaches x-action-id header when E2E action tracing is enabled
  */
 apiClient.interceptors.request.use(
   (config: InternalAxiosRequestConfig) => {
@@ -63,6 +65,15 @@ apiClient.interceptors.request.use(
         config.headers['x-org-id'] = payload.orgId;
       }
     }
+    
+    // M21: Action attribution for E2E testing
+    if (isActionTraceEnabled()) {
+      const actionId = getCurrentAction();
+      if (actionId) {
+        config.headers['x-action-id'] = actionId;
+      }
+    }
+    
     return config;
   },
   (error) => {

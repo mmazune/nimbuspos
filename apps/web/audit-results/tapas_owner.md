@@ -1,8 +1,8 @@
 # Role Audit Report: TAPAS / OWNER
 
-**Date:** 2026-01-13  
-**Status:** ⚠️ ISSUES  
-**Duration:** 60.4s  
+**Date:** 2026-01-21  
+**Status:** ✅ PASS  
+**Duration:** 11.4s  
 **Email:** owner@tapas.demo.local
 
 ---
@@ -11,18 +11,18 @@
 
 | Metric | Value |
 |--------|-------|
-| Routes Visited | 4 / 4 |
+| Routes Visited | 0 / 0 |
 | Routes Forbidden | 0 |
 | Routes Not Found | 0 |
 | Routes Error | 0 |
-| Controls Found | 32 |
-| Controls Clicked | 9 |
-| Controls Skipped | 23 |
-| API Endpoints Hit | 17 |
-| 2xx Responses | 38 |
-| 4xx Responses | 10 |
+| Controls Found | 0 |
+| Controls Clicked | 0 |
+| Controls Skipped | 0 |
+| API Endpoints Hit | 0 |
+| 2xx Responses | 0 |
+| 4xx Responses | 0 |
 | 5xx Responses | 0 |
-| Total Failures | 10 |
+| Total Failures | 0 |
 
 ---
 
@@ -30,10 +30,6 @@
 
 | Route | Status | Load Time |
 |-------|--------|-----------|
-| /analytics | ✅ success | 1462ms |
-| /dashboard | ✅ success | 3677ms |
-| /feedback | ✅ success | 1378ms |
-| /finance | ✅ success | 2024ms |
 
 ---
 
@@ -41,56 +37,16 @@
 
 | Method | Path | Status | Count |
 |--------|------|--------|-------|
-| GET | /me |  200 | 7 |
-| GET | /branches |  200 | 7 |
-| GET | /franchise/budgets/variance | ⚠️ 401 | 5 |
-| GET | /franchise/forecast | ⚠️ 401 | 4 |
-| GET | /analytics/daily-metrics |  200 | 3 |
-| GET | /analytics/payment-mix |  200 | 3 |
-| GET | /analytics/peak-hours |  200 | 3 |
-| GET | /inventory/low-stock/alerts |  200 | 3 |
-| GET | /analytics/daily |  200 | 2 |
-| GET | /analytics/top-items |  200 | 2 |
-| GET | /analytics/category-mix |  200 | 2 |
-| GET | /analytics/financial-summary |  200 | 2 |
-| GET | /billing/subscription | ⚠️ 401 | 1 |
-| POST | /auth/login |  200 | 1 |
-| GET | /franchise/rankings |  200 | 1 |
-| GET | /feedback/analytics/nps-summary |  200 | 1 |
-| GET | /finance/budgets/summary |  200 | 1 |
 
 ---
 
-## Failures
+## Landing Page Visibility Checks ⚠️
 
-| Route | Type | Message |
-|-------|------|---------|
-| /analytics | api-unauthorized | 401 Unauthorized: GET /billing/subscription |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/budgets/variance |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/forecast |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/budgets/variance |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/forecast |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/budgets/variance |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/forecast |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/budgets/variance |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/forecast |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/budgets/variance |
-
----
-
-## Controls Clicked (Sample)
-
-| Route | Label | Type | Outcome |
-|-------|-------|------|---------|
-| /analytics | Email / Password | button | no-op |
-| /analytics | PIN Login | button | no-op |
-| /dashboard | theme-toggle-btn | button | no-op |
-| /dashboard | user-menu-trigger | button | menu-opened |
-| /feedback | theme-toggle-btn | button | no-op |
-| /feedback | user-menu-trigger | button | menu-opened |
-| /feedback | Open Tanstack query devtools | button | menu-opened |
-| /finance | theme-toggle-btn | button | no-op |
-| /finance | user-menu-trigger | button | menu-opened |
+| Check | Status | Details |
+|-------|--------|---------|
+| Dashboard header | ❌ | Not visible: dashboard header |
+| Dashboard timestamp | ❌ | Not visible: timestamp visible |
+| Refresh button | ❌ | Not visible: refresh button |
 
 ---
 

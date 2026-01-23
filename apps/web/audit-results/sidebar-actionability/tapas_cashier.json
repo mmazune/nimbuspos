@@ -1,0 +1,14 @@
+{
+  "org": "tapas",
+  "role": "cashier",
+  "email": "cashier@tapas.demo.local",
+  "landingRoute": "/pos",
+  "generatedAt": "2026-01-22T20:15:40.529Z",
+  "sidebarExists": false,
+  "totalNavElements": 0,
+  "visibleNavElements": 0,
+  "enabledNavElements": 0,
+  "navElementIds": [],
+  "passed": false,
+  "error": "Sidebar not visible"
+}

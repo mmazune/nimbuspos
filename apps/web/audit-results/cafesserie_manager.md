@@ -1,8 +1,8 @@
 # Role Audit Report: CAFESSERIE / MANAGER
 
-**Date:** 2026-01-13  
+**Date:** 2026-01-21  
 **Status:** ⚠️ ISSUES  
-**Duration:** 193.9s  
+**Duration:** 198.2s  
 **Email:** manager@cafesserie.demo.local
 
 ---
@@ -11,18 +11,18 @@
 
 | Metric | Value |
 |--------|-------|
-| Routes Visited | 11 / 11 |
+| Routes Visited | 9 / 9 |
 | Routes Forbidden | 0 |
 | Routes Not Found | 0 |
 | Routes Error | 0 |
-| Controls Found | 95 |
-| Controls Clicked | 17 |
-| Controls Skipped | 78 |
-| API Endpoints Hit | 27 |
-| 2xx Responses | 77 |
-| 4xx Responses | 22 |
+| Controls Found | 120 |
+| Controls Clicked | 34 |
+| Controls Skipped | 86 |
+| API Endpoints Hit | 28 |
+| 2xx Responses | 137 |
+| 4xx Responses | 11 |
 | 5xx Responses | 0 |
-| Total Failures | 18 |
+| Total Failures | 0 |
 
 ---
 
@@ -30,17 +30,15 @@
 
 | Route | Status | Load Time |
 |-------|--------|-----------|
-| /analytics | ✅ success | 1516ms |
-| /dashboard | ✅ success | 1969ms |
-| /feedback | ✅ success | 5862ms |
-| /inventory | ✅ success | 1801ms |
-| /pos | ✅ success | 3073ms |
-| /reports | ✅ success | 2734ms |
-| /reservations | ✅ success | 2423ms |
-| /staff | ✅ success | 4133ms |
-| /workforce/approvals | ✅ success | 2279ms |
-| /workforce/auto-scheduler | ✅ success | 2796ms |
-| /workforce/labor | ✅ success | 5625ms |
+| /analytics | ✅ success | 2135ms |
+| /dashboard | ✅ success | 1978ms |
+| /feedback | ✅ success | 5091ms |
+| /inventory | ✅ success | 3017ms |
+| /pos | ✅ success | 4109ms |
+| /reports | ✅ success | 3422ms |
+| /reservations | ✅ success | 5026ms |
+| /staff | ✅ success | 3505ms |
+| /workforce/approvals | ✅ success | 3401ms |
 
 ---
 
@@ -48,23 +46,25 @@
 
 | Method | Path | Status | Count |
 |--------|------|--------|-------|
-| GET | /me |  200 | 23 |
-| GET | /branches |  200 | 23 |
-| GET | /franchise/budgets/variance | ⚠️ 401 | 6 |
-| GET | /franchise/forecast | ⚠️ 401 | 5 |
-| GET | /inventory/low-stock/alerts |  200 | 5 |
-| GET | /analytics/daily-metrics |  200 | 4 |
-| GET | /billing/subscription | ⚠️ 401 | 3 |
-| GET | /analytics/peak-hours |  200 | 2 |
-| GET | /analytics/payment-mix |  200 | 2 |
-| GET | /analytics/daily |  200 | 2 |
-| GET | /analytics/top-items |  200 | 2 |
-| GET | /analytics/category-mix |  200 | 2 |
-| GET | /franchise/rankings | ⚠️ 403 | 2 |
-| GET | /analytics/financial-summary |  200 | 2 |
-| GET | /pos/orders | ⚠️ 401 | 2 |
+| GET | /franchise/budgets/variance |  200 | 21 |
+| GET | /franchise/forecast |  200 | 21 |
+| GET | /analytics/daily-metrics |  200 | 19 |
+| GET | /me |  200 | 17 |
+| GET | /branches |  200 | 17 |
+| GET | /analytics/financial-summary |  200 | 7 |
+| GET | /inventory/low-stock/alerts |  200 | 6 |
+| GET | /billing/subscription | ⚠️ 403 | 5 |
+| GET | /franchise/rankings | ⚠️ 403 | 4 |
+| GET | /analytics/daily |  200 | 3 |
+| GET | /analytics/top-items |  200 | 3 |
+| GET | /analytics/category-mix |  200 | 3 |
+| GET | /analytics/payment-mix |  200 | 3 |
+| GET | /analytics/peak-hours |  200 | 3 |
+| GET | /pos/orders |  200 | 2 |
 | GET | /menu/items |  200 | 2 |
-| GET | /orgs/branches | ⚠️ 404 | 2 |
+| GET | /analytics/risk-summary |  200 | 1 |
+| GET | /analytics/risk-events |  200 | 1 |
+| GET | /franchise/branch-metrics |  200 | 1 |
 | GET | /feedback/analytics/nps-summary |  200 | 1 |
 | GET | /inventory | ⚠️ 404 | 1 |
 | GET | /inventory/items |  200 | 1 |
@@ -74,7 +74,6 @@
 | GET | /hr/staff | ⚠️ 404 | 1 |
 | GET | /hr/employees |  200 | 1 |
 | GET | /workforce/scheduling/shifts |  200 | 1 |
-| GET | /workforce/reports/labor |  200 | 1 |
 
 ---
 
@@ -82,24 +81,12 @@
 
 | Route | Type | Message |
 |-------|------|---------|
-| /analytics | api-unauthorized | 401 Unauthorized: GET /billing/subscription |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/budgets/variance |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/forecast |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/budgets/variance |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/forecast |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/budgets/variance |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/forecast |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/budgets/variance |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/forecast |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/budgets/variance |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/forecast |
-| /analytics | api-unauthorized | 401 Unauthorized: GET /franchise/budgets/variance |
-| /dashboard | api-forbidden | 403 Forbidden: GET /franchise/rankings |
-| /dashboard | api-forbidden | 403 Forbidden: GET /franchise/rankings |
-| /pos | api-unauthorized | 401 Unauthorized: GET /pos/orders |
-| /pos | api-unauthorized | 401 Unauthorized: GET /billing/subscription |
-| /pos | api-unauthorized | 401 Unauthorized: GET /pos/orders |
-| /workforce/labor-targets | route-error | Skipped due to time budget (193790ms elapsed) |
+| /workforce/auto-scheduler | route-skipped-time-limit | Skipped due to time budget (198189ms elapsed) |
+| /workforce/labor | route-skipped-time-limit | Skipped due to time budget (198190ms elapsed) |
+| /workforce/labor-targets | route-skipped-time-limit | Skipped due to time budget (198190ms elapsed) |
+| /workforce/my-availability | route-skipped-time-limit | Skipped due to time budget (198190ms elapsed) |
+| /workforce/my-swaps | route-skipped-time-limit | Skipped due to time budget (198190ms elapsed) |
+| /workforce/open-shifts | route-skipped-time-limit | Skipped due to time budget (198190ms elapsed) |
 
 ---
 
@@ -107,23 +94,46 @@
 
 | Route | Label | Type | Outcome |
 |-------|-------|------|---------|
-| /analytics | Email / Password | button | no-op |
-| /analytics | PIN Login | button | no-op |
-| /dashboard | Open Tanstack query devtools | button | no-op |
+| /analytics | theme-toggle-btn | button | no-op |
+| /analytics | user-menu-trigger | button | menu-opened |
+| /analytics | analytics-tab-overview | button | menu-opened |
+| /analytics | analytics-tab-branches | button | menu-opened |
+| /analytics | analytics-tab-financial | button | menu-opened |
+| /analytics | analytics-tab-risk | button | menu-opened |
+| /analytics | analytics-tab-franchise | button | menu-opened |
+| /analytics | Last 7 days | button | menu-opened |
+| /analytics | Last 30 days | button | menu-opened |
+| /analytics | Last 90 days | button | menu-opened |
+| /dashboard | date-range-selector | dropdown | filter-applied |
+| /dashboard | date-range-selector | date-picker | no-op |
+| /dashboard | date-custom-inputs | date-picker | no-op |
+| /dashboard | date-from-input | date-picker | no-op |
+| /dashboard | date-to-input | date-picker | no-op |
+| /dashboard | theme-toggle-btn | toggle | no-op |
+| /dashboard | user-menu-container | menu | menu-opened |
+| /dashboard | Branch 00000000-0000-4000-8000 | button | menu-opened |
+| /dashboard | kpi-revenue | button | menu-opened |
+| /dashboard | kpi-gross-margin | button | navigated |
 | /feedback | theme-toggle-btn | toggle | no-op |
 | /feedback | user-menu-container | menu | menu-opened |
-| /inventory | user-menu-trigger | menu | menu-opened |
+| /feedback | Open Tanstack query devtools | button | menu-opened |
+| /inventory | theme-toggle-btn | button | no-op |
+| /inventory | user-menu-trigger | button | menu-opened |
 | /inventory | All Items | button | menu-opened |
-| /pos | Email / Password | button | no-op |
-| /pos | PIN Login | button | no-op |
-| /reports | Close tanstack query devtools | button | no-op |
-| /reservations | theme-toggle-btn | toggle | no-op |
-| /reservations | user-menu-container | menu | menu-opened |
-| /staff | Open Tanstack query devtools | button | no-op |
-| /workforce/auto-scheduler | Close tanstack query devtools | button | no-op |
-| /workforce/labor | Shifts CSV | button | no-op |
-| /workforce/labor | Time Entries CSV | button | no-op |
-| /workforce/labor | Labor Summary CSV | button | no-op |
+| /inventory | Low Stock Only | button | menu-opened |
+| /inventory | inventory-edit-btn | button | menu-opened |
+| /pos | theme-toggle-btn | toggle | no-op |
+| /pos | user-menu-container | menu | menu-opened |
+
+---
+
+## Landing Page Visibility Checks ✅
+
+| Check | Status | Details |
+|-------|--------|---------|
+| Dashboard header | ✅ | Found: dashboard header |
+| Dashboard timestamp | ✅ | Found: timestamp visible |
+| Refresh button | ✅ | Found: refresh button |
 
 ---
 

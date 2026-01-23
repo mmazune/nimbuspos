@@ -1,0 +1,1100 @@
+{
+  "version": "1.1",
+  "generated": "2026-01-22T17:07:53.789Z",
+  "milestones": [
+    "M50",
+    "M52",
+    "M54"
+  ],
+  "coverage": {
+    "totalRoles": 19,
+    "rolesWithControls": 8
+  },
+  "summary": {
+    "totalControls": 74,
+    "hasDownload": 44,
+    "uiOnlyPrint": 30,
+    "asyncJob": 0
+  },
+  "asyncJobAbsenceProof": {
+    "runtime": {
+      "rolesChecked": 19,
+      "response202Count": 0,
+      "jobIdDetected": false,
+      "evidence": "All 19 roles tested with network watcher in M54 v1.1 spec. Zero 202 responses or jobId/taskId fields detected across all roles."
+    },
+    "static": {
+      "status": "complete",
+      "frontend": {
+        "patterns": ["\\b202\\b", "jobId", "taskId", "/jobs", "exports/jobs", "queue"],
+        "filesScanned": "apps/web/src/**/*.{ts,tsx}",
+        "matches": {
+          "total": 50,
+          "falsePositives": 50,
+          "actualAsyncJobPatterns": 0
+        },
+        "analysis": "All 50 matches are false positives: 'queue' matches are POS offline queue (localStorage, not async jobs), 'status' matches are data model fields (not HTTP status codes). No 202 status codes, jobId fields, or async job polling patterns found in export/report controls."
+      },
+      "backend": {
+        "patterns": ["\\b202\\b", "@HttpCode(202)", "HttpStatus.ACCEPTED", "jobId", "taskId"],
+        "filesScanned": "services/api/src/**/*.ts",
+        "matches": {
+          "total": 5,
+          "asyncJobEndpoints": 1,
+          "exportEndpoints": 0
+        },
+        "analysis": "5 jobId references found: 1 in efris.controller.ts (tax integration retry, unrelated to exports), 2 in franchise.service.ts (procurement job, unrelated), 2 in test files. Zero export/report endpoints return 202 or use async jobs. All CSV exports use synchronous 200 responses with Content-Disposition headers."
+      }
+    }
+  },
+  "controls": [
+    {
+      "org": "tapas",
+      "role": "owner",
+      "controlId": "report-card-analytics-overview",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-analytics-overview",
+        "buttonText": "SalesFranchise AnalyticsSales, margins, rankings and multi-month trends across all branches.CSV expo",
+        "selector": "[data-testid=\"report-card-analytics-overview\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "owner",
+      "controlId": "report-card-finance-budgets",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-finance-budgets",
+        "buttonText": "FinanceBudgets & VarianceBudget vs actual sales, COGS and variance across branches.CSV exportPro+",
+        "selector": "[data-testid=\"report-card-finance-budgets\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "owner",
+      "controlId": "pnl-export",
+      "route": "/finance/pnl",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "pnl-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"pnl-export\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "owner",
+      "controlId": "bs-export",
+      "route": "/finance/balance-sheet",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "bs-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"bs-export\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "owner",
+      "controlId": "tb-export",
+      "route": "/finance/trial-balance",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "tb-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"tb-export\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "owner",
+      "controlId": "export-btn",
+      "route": "/inventory/on-hand",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "export-btn",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"export-btn\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "owner",
+      "controlId": "receipt-print-1",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-1"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "owner",
+      "controlId": "receipt-print-2",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-2"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "owner",
+      "controlId": "receipt-print-3",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-3"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "owner",
+      "controlId": "receipt-print-4",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-4"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "owner",
+      "controlId": "receipt-print-5",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-5"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "manager",
+      "controlId": "report-card-analytics-overview",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-analytics-overview",
+        "buttonText": "SalesFranchise AnalyticsSales, margins, rankings and multi-month trends across all branches.CSV expo",
+        "selector": "[data-testid=\"report-card-analytics-overview\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "manager",
+      "controlId": "report-card-finance-budgets",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-finance-budgets",
+        "buttonText": "FinanceBudgets & VarianceBudget vs actual sales, COGS and variance across branches.CSV exportPro+",
+        "selector": "[data-testid=\"report-card-finance-budgets\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "manager",
+      "controlId": "pnl-export",
+      "route": "/finance/pnl",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "pnl-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"pnl-export\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "manager",
+      "controlId": "bs-export",
+      "route": "/finance/balance-sheet",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "bs-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"bs-export\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "manager",
+      "controlId": "tb-export",
+      "route": "/finance/trial-balance",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "tb-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"tb-export\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "manager",
+      "controlId": "export-btn",
+      "route": "/inventory/on-hand",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "export-btn",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"export-btn\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "manager",
+      "controlId": "receipt-print-1",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-1"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "manager",
+      "controlId": "receipt-print-2",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-2"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "manager",
+      "controlId": "receipt-print-3",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-3"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "manager",
+      "controlId": "receipt-print-4",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-4"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "manager",
+      "controlId": "receipt-print-5",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-5"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "cashier",
+      "controlId": "report-card-analytics-overview",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-analytics-overview",
+        "buttonText": "SalesFranchise AnalyticsSales, margins, rankings and multi-month trends across all branches.CSV expo",
+        "selector": "[data-testid=\"report-card-analytics-overview\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "cashier",
+      "controlId": "report-card-finance-budgets",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-finance-budgets",
+        "buttonText": "FinanceBudgets & VarianceBudget vs actual sales, COGS and variance across branches.CSV exportPro+",
+        "selector": "[data-testid=\"report-card-finance-budgets\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "cashier",
+      "controlId": "/inventory/valuation-download",
+      "route": "/inventory/valuation",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": null,
+        "buttonText": "Export CSV",
+        "selector": "button.inline-flex"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "cashier",
+      "controlId": "/inventory/cogs-download",
+      "route": "/inventory/cogs",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": null,
+        "buttonText": "Export CSV",
+        "selector": "button.inline-flex"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "cashier",
+      "controlId": "export-btn",
+      "route": "/inventory/on-hand",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "export-btn",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"export-btn\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "cashier",
+      "controlId": "receipt-print-1",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-1"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "cashier",
+      "controlId": "receipt-print-2",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-2"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "cashier",
+      "controlId": "receipt-print-3",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-3"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "cashier",
+      "controlId": "receipt-print-4",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-4"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "cashier",
+      "controlId": "receipt-print-5",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-5"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "accountant",
+      "controlId": "report-card-analytics-overview",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-analytics-overview",
+        "buttonText": "SalesFranchise AnalyticsSales, margins, rankings and multi-month trends across all branches.CSV expo",
+        "selector": "[data-testid=\"report-card-analytics-overview\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "accountant",
+      "controlId": "report-card-finance-budgets",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-finance-budgets",
+        "buttonText": "FinanceBudgets & VarianceBudget vs actual sales, COGS and variance across branches.CSV exportPro+",
+        "selector": "[data-testid=\"report-card-finance-budgets\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "accountant",
+      "controlId": "pnl-export",
+      "route": "/finance/pnl",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "pnl-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"pnl-export\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "accountant",
+      "controlId": "bs-export",
+      "route": "/finance/balance-sheet",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "bs-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"bs-export\"]"
+      }
+    },
+    {
+      "org": "tapas",
+      "role": "accountant",
+      "controlId": "tb-export",
+      "route": "/finance/trial-balance",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "tb-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"tb-export\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "controlId": "report-card-analytics-overview",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-analytics-overview",
+        "buttonText": "SalesFranchise AnalyticsSales, margins, rankings and multi-month trends across all branches.CSV expo",
+        "selector": "[data-testid=\"report-card-analytics-overview\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "controlId": "report-card-finance-budgets",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-finance-budgets",
+        "buttonText": "FinanceBudgets & VarianceBudget vs actual sales, COGS and variance across branches.CSV exportPro+",
+        "selector": "[data-testid=\"report-card-finance-budgets\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "controlId": "pnl-export",
+      "route": "/finance/pnl",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "pnl-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"pnl-export\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "controlId": "bs-export",
+      "route": "/finance/balance-sheet",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "bs-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"bs-export\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "controlId": "tb-export",
+      "route": "/finance/trial-balance",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "tb-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"tb-export\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "controlId": "export-btn",
+      "route": "/inventory/on-hand",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "export-btn",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"export-btn\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "controlId": "receipt-print-1",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-1"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "controlId": "receipt-print-2",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-2"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "controlId": "receipt-print-3",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-3"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "controlId": "receipt-print-4",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-4"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "owner",
+      "controlId": "receipt-print-5",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-5"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "manager",
+      "controlId": "report-card-analytics-overview",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-analytics-overview",
+        "buttonText": "SalesFranchise AnalyticsSales, margins, rankings and multi-month trends across all branches.CSV expo",
+        "selector": "[data-testid=\"report-card-analytics-overview\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "manager",
+      "controlId": "report-card-finance-budgets",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-finance-budgets",
+        "buttonText": "FinanceBudgets & VarianceBudget vs actual sales, COGS and variance across branches.CSV exportPro+",
+        "selector": "[data-testid=\"report-card-finance-budgets\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "manager",
+      "controlId": "pnl-export",
+      "route": "/finance/pnl",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "pnl-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"pnl-export\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "manager",
+      "controlId": "bs-export",
+      "route": "/finance/balance-sheet",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "bs-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"bs-export\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "manager",
+      "controlId": "tb-export",
+      "route": "/finance/trial-balance",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "tb-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"tb-export\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "manager",
+      "controlId": "export-btn",
+      "route": "/inventory/on-hand",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "export-btn",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"export-btn\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "manager",
+      "controlId": "receipt-print-1",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-1"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "manager",
+      "controlId": "receipt-print-2",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-2"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "manager",
+      "controlId": "receipt-print-3",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-3"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "manager",
+      "controlId": "receipt-print-4",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-4"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "manager",
+      "controlId": "receipt-print-5",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-5"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "cashier",
+      "controlId": "report-card-analytics-overview",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-analytics-overview",
+        "buttonText": "SalesFranchise AnalyticsSales, margins, rankings and multi-month trends across all branches.CSV expo",
+        "selector": "[data-testid=\"report-card-analytics-overview\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "cashier",
+      "controlId": "report-card-finance-budgets",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-finance-budgets",
+        "buttonText": "FinanceBudgets & VarianceBudget vs actual sales, COGS and variance across branches.CSV exportPro+",
+        "selector": "[data-testid=\"report-card-finance-budgets\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "cashier",
+      "controlId": "/inventory/valuation-download",
+      "route": "/inventory/valuation",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": null,
+        "buttonText": "Export CSV",
+        "selector": "button.inline-flex"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "cashier",
+      "controlId": "/inventory/cogs-download",
+      "route": "/inventory/cogs",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": null,
+        "buttonText": "Export CSV",
+        "selector": "button.inline-flex"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "cashier",
+      "controlId": "export-btn",
+      "route": "/inventory/on-hand",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "export-btn",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"export-btn\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "cashier",
+      "controlId": "receipt-print-1",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-1"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "cashier",
+      "controlId": "receipt-print-2",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-2"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "cashier",
+      "controlId": "receipt-print-3",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-3"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "cashier",
+      "controlId": "receipt-print-4",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-4"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "cashier",
+      "controlId": "receipt-print-5",
+      "route": "/pos/receipts/:id",
+      "classification": "UI_ONLY_PRINT",
+      "evidence": {
+        "source": "M52_v3",
+        "printCalls": 1,
+        "receiptId": "receipt-5"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "accountant",
+      "controlId": "report-card-analytics-overview",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-analytics-overview",
+        "buttonText": "SalesFranchise AnalyticsSales, margins, rankings and multi-month trends across all branches.CSV expo",
+        "selector": "[data-testid=\"report-card-analytics-overview\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "accountant",
+      "controlId": "report-card-finance-budgets",
+      "route": "/reports",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "report-card-finance-budgets",
+        "buttonText": "FinanceBudgets & VarianceBudget vs actual sales, COGS and variance across branches.CSV exportPro+",
+        "selector": "[data-testid=\"report-card-finance-budgets\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "accountant",
+      "controlId": "pnl-export",
+      "route": "/finance/pnl",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "pnl-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"pnl-export\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "accountant",
+      "controlId": "bs-export",
+      "route": "/finance/balance-sheet",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "bs-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"bs-export\"]"
+      }
+    },
+    {
+      "org": "cafesserie",
+      "role": "accountant",
+      "controlId": "tb-export",
+      "route": "/finance/trial-balance",
+      "classification": "HAS_DOWNLOAD",
+      "evidence": {
+        "source": "M50_per_role",
+        "testId": "tb-export",
+        "buttonText": "Export CSV",
+        "selector": "[data-testid=\"tb-export\"]"
+      }
+    }
+  ],
+  "roleSummaries": {
+    "tapas/owner": {
+      "total": 11,
+      "hasDownload": 6,
+      "uiOnlyPrint": 5,
+      "asyncJob": 0
+    },
+    "tapas/manager": {
+      "total": 11,
+      "hasDownload": 6,
+      "uiOnlyPrint": 5,
+      "asyncJob": 0
+    },
+    "tapas/cashier": {
+      "total": 10,
+      "hasDownload": 5,
+      "uiOnlyPrint": 5,
+      "asyncJob": 0
+    },
+    "tapas/accountant": {
+      "total": 5,
+      "hasDownload": 5,
+      "uiOnlyPrint": 0,
+      "asyncJob": 0
+    },
+    "tapas/stockManager": {
+      "total": 0,
+      "hasDownload": 0,
+      "uiOnlyPrint": 0,
+      "asyncJob": 0
+    },
+    "tapas/procurement": {
+      "total": 0,
+      "hasDownload": 0,
+      "uiOnlyPrint": 0,
+      "asyncJob": 0
+    },
+    "tapas/supervisor": {
+      "total": 0,
+      "hasDownload": 0,
+      "uiOnlyPrint": 0,
+      "asyncJob": 0
+    },
+    "tapas/chef": {
+      "total": 0,
+      "hasDownload": 0,
+      "uiOnlyPrint": 0,
+      "asyncJob": 0
+    },
+    "tapas/waiter": {
+      "total": 0,
+      "hasDownload": 0,
+      "uiOnlyPrint": 0,
+      "asyncJob": 0
+    },
+    "tapas/bartender": {
+      "total": 0,
+      "hasDownload": 0,
+      "uiOnlyPrint": 0,
+      "asyncJob": 0
+    },
+    "cafesserie/owner": {
+      "total": 11,
+      "hasDownload": 6,
+      "uiOnlyPrint": 5,
+      "asyncJob": 0
+    },
+    "cafesserie/manager": {
+      "total": 11,
+      "hasDownload": 6,
+      "uiOnlyPrint": 5,
+      "asyncJob": 0
+    },
+    "cafesserie/cashier": {
+      "total": 10,
+      "hasDownload": 5,
+      "uiOnlyPrint": 5,
+      "asyncJob": 0
+    },
+    "cafesserie/accountant": {
+      "total": 5,
+      "hasDownload": 5,
+      "uiOnlyPrint": 0,
+      "asyncJob": 0
+    },
+    "cafesserie/stockManager": {
+      "total": 0,
+      "hasDownload": 0,
+      "uiOnlyPrint": 0,
+      "asyncJob": 0
+    },
+    "cafesserie/procurement": {
+      "total": 0,
+      "hasDownload": 0,
+      "uiOnlyPrint": 0,
+      "asyncJob": 0
+    },
+    "cafesserie/supervisor": {
+      "total": 0,
+      "hasDownload": 0,
+      "uiOnlyPrint": 0,
+      "asyncJob": 0
+    },
+    "cafesserie/chef": {
+      "total": 0,
+      "hasDownload": 0,
+      "uiOnlyPrint": 0,
+      "asyncJob": 0
+    },
+    "cafesserie/eventManager": {
+      "total": 0,
+      "hasDownload": 0,
+      "uiOnlyPrint": 0,
+      "asyncJob": 0
+    }
+  }
+}

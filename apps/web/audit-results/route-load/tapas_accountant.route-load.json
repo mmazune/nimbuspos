@@ -1,0 +1,539 @@
+{
+  "org": "tapas",
+  "role": "accountant",
+  "email": "accountant@tapas.demo.local",
+  "generatedAt": "2026-01-20T04:01:52.691Z",
+  "durationMs": 56562,
+  "summary": {
+    "routesVisited": 15,
+    "routesWithEndpoints": 15,
+    "routesNoEndpoints": 0,
+    "routesFailed": 0,
+    "totalApiCalls": 67,
+    "uniqueEndpoints": 24
+  },
+  "routes": [
+    {
+      "route": "/analytics",
+      "actionId": "route-load::tapas::accountant::/analytics",
+      "loadTimeMs": 3026,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768881664102
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403,
+          "timestamp": 1768881664105
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768881664114
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768881664115
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768881664135
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768881664155
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768881664196
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768881664200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768881664212
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768881664214
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768881664217
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768881664219
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768881664264
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768881664269
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881664275
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768881664320
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881664404
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200,
+          "timestamp": 1768881664406
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/finance",
+      "actionId": "route-load::tapas::accountant::/finance",
+      "loadTimeMs": 3887,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881668055
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881668288
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200,
+          "timestamp": 1768881668289
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/finance/accounts",
+      "actionId": "route-load::tapas::accountant::/finance/accounts",
+      "loadTimeMs": 7665,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881675250
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/accounts",
+          "status": 200,
+          "timestamp": 1768881675370
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881675437
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/finance/ap-aging",
+      "actionId": "route-load::tapas::accountant::/finance/ap-aging",
+      "loadTimeMs": 5636,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881681384
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ap/aging",
+          "status": 200,
+          "timestamp": 1768881681556
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881681602
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/finance/ar-aging",
+      "actionId": "route-load::tapas::accountant::/finance/ar-aging",
+      "loadTimeMs": 2817,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881684231
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881684423
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/ar/aging",
+          "status": 200,
+          "timestamp": 1768881684424
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/finance/balance-sheet",
+      "actionId": "route-load::tapas::accountant::/finance/balance-sheet",
+      "loadTimeMs": 3015,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881687286
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/balance-sheet",
+          "status": 200,
+          "timestamp": 1768881687405
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881687427
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/finance/journal",
+      "actionId": "route-load::tapas::accountant::/finance/journal",
+      "loadTimeMs": 2833,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881689806
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/accounts",
+          "status": 200,
+          "timestamp": 1768881690018
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881690020
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/journal",
+          "status": 200,
+          "timestamp": 1768881690021
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/finance/periods",
+      "actionId": "route-load::tapas::accountant::/finance/periods",
+      "loadTimeMs": 2703,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881692581
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881692783
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/periods",
+          "status": 200,
+          "timestamp": 1768881692784
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/finance/pnl",
+      "actionId": "route-load::tapas::accountant::/finance/pnl",
+      "loadTimeMs": 2384,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881695153
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881695351
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/pnl",
+          "status": 200,
+          "timestamp": 1768881695352
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/finance/trial-balance",
+      "actionId": "route-load::tapas::accountant::/finance/trial-balance",
+      "loadTimeMs": 2293,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881697440
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881697641
+        },
+        {
+          "method": "GET",
+          "path": "/accounting/trial-balance",
+          "status": 200,
+          "timestamp": 1768881697642
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/reports",
+      "actionId": "route-load::tapas::accountant::/reports",
+      "loadTimeMs": 2472,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881699930
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881700041
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/service-providers",
+      "actionId": "route-load::tapas::accountant::/service-providers",
+      "loadTimeMs": 3614,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881703103
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881703237
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers/contracts",
+          "status": 404,
+          "timestamp": 1768881703629
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers",
+          "status": 200,
+          "timestamp": 1768881703646
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders/summary",
+          "status": 200,
+          "timestamp": 1768881703707
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders",
+          "status": 200,
+          "timestamp": 1768881703732
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers/contracts",
+          "status": 404,
+          "timestamp": 1768881704684
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "actionId": "route-load::tapas::accountant::/workforce/my-availability",
+      "loadTimeMs": 2115,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200,
+          "timestamp": 1768881705614
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881705618
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200,
+          "timestamp": 1768881705632
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881705841
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "actionId": "route-load::tapas::accountant::/workforce/my-swaps",
+      "loadTimeMs": 2382,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881707939
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200,
+          "timestamp": 1768881707973
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881708233
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "actionId": "route-load::tapas::accountant::/workforce/open-shifts",
+      "loadTimeMs": 3439,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404,
+          "timestamp": 1768881710603
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881710955
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200,
+          "timestamp": 1768881710961
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881711651
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404,
+          "timestamp": 1768881711656
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

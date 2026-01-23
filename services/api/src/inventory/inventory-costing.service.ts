@@ -22,6 +22,9 @@ import {
 import { PrismaService } from '../prisma.service';
 import { AuditLogService } from '../audit/audit-log.service';
 import { Prisma, CostMethod, CostSourceType } from '@chefcloud/db';
+import { calculateCOGSMetrics, evaluateCOGSAlerts, logCOGSMetrics } from '../utils/cogs-observability'; // M78
+import { excludeDeleted } from '../utils/soft-delete.helper'; // M78
+import { assertPeriodOpen, PeriodOperation } from '../utils/period-immutability.guard'; // M79
 
 const Decimal = Prisma.Decimal;
 type Decimal = Prisma.Decimal;
@@ -275,6 +278,15 @@ export class InventoryCostingService {
             // Calculate line COGS: qtyDepleted × WAC
             const lineCogs = qtyDepleted.times(wac);
 
+            // M79: Guard against closed fiscal period
+            const recordDate = new Date(); // COGS breakdown uses current timestamp (computedAt)
+            await assertPeriodOpen({
+                prisma: this.prisma,
+                orgId,
+                recordDate,
+                operation: PeriodOperation.CREATE,
+            });
+
             // Create breakdown record
             await client.depletionCostBreakdown.create({
                 data: {
@@ -407,12 +419,14 @@ export class InventoryCostingService {
         // Build filter
         const where: Prisma.DepletionCostBreakdownWhereInput = {
             orgId,
+            ...excludeDeleted(), // M78: Exclude soft-deleted records by default
             depletion: {
                 branchId,
                 postedAt: {
                     gte: fromDate,
                     lte: toDate,
                 },
+                ...excludeDeleted(), // M78: Also exclude deleted depletions
             },
         };
 
@@ -464,6 +478,19 @@ export class InventoryCostingService {
 
             totalCogs = totalCogs.plus(lineCogs);
         }
+
+        // M78: Calculate observability metrics
+        const metrics = calculateCOGSMetrics({
+            orgId,
+            branchId,
+            periodStart: fromDate,
+            periodEnd: toDate,
+            cogsLines: lines.map(line => ({ lineCogs: line.lineCogs })),
+        });
+
+        // M78: Evaluate and log alerts
+        const alerts = evaluateCOGSAlerts(metrics);
+        logCOGSMetrics(metrics, alerts);
 
         return {
             branchId: branch.id,

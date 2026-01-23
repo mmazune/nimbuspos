@@ -1,0 +1,413 @@
+{
+  "version": "v3",
+  "milestone": "M32",
+  "generatedAt": "2026-01-21T08:57:59.332Z",
+  "summary": {
+    "total": 10,
+    "passed": 10,
+    "failed": 0,
+    "passRate": 100
+  },
+  "invariants": [
+    {
+      "id": "INV-R1-tapas",
+      "org": "tapas",
+      "name": "Recipes Reference Ingredients",
+      "description": "Recipes exist and reference ≥1 ingredient inventory item",
+      "endpoint": "/pos/menu + /inventory/items",
+      "status": "PASS",
+      "expected": "≥1 menu item + ≥1 ingredient inventory item",
+      "actual": "178 menu items, 99 ingredient items",
+      "evidence": {
+        "categoriesCount": 33,
+        "menuItemCount": 178,
+        "inventoryItemCount": 158,
+        "ingredientItemCount": 99,
+        "sampleMenuItems": [
+          {
+            "name": "Full English Breakfast",
+            "price": 29000
+          },
+          {
+            "name": "Healthy Breakfast",
+            "price": 19000
+          },
+          {
+            "name": "Skillet Breakfast",
+            "price": 29000
+          }
+        ],
+        "sampleIngredients": [
+          {
+            "name": "Apple - Green",
+            "sku": "INV-FRUT-0001",
+            "category": "Fruits"
+          },
+          {
+            "name": "Avocado",
+            "sku": "INV-VEGT-0007",
+            "category": "Vegetables"
+          },
+          {
+            "name": "Bacon Streaky 400G",
+            "sku": "INV-PORK-0001",
+            "category": "Pork"
+          }
+        ]
+      },
+      "durationMs": 2606
+    },
+    {
+      "id": "INV-R1-cafesserie",
+      "org": "cafesserie",
+      "name": "Recipes Reference Ingredients",
+      "description": "Recipes exist and reference ≥1 ingredient inventory item",
+      "endpoint": "/pos/menu + /inventory/items",
+      "status": "PASS",
+      "expected": "≥1 menu item + ≥1 ingredient inventory item",
+      "actual": "80 menu items, 30 ingredient items",
+      "evidence": {
+        "categoriesCount": 12,
+        "menuItemCount": 80,
+        "inventoryItemCount": 77,
+        "ingredientItemCount": 30,
+        "sampleMenuItems": [
+          {
+            "name": "Espresso",
+            "price": 6000
+          },
+          {
+            "name": "Double Espresso",
+            "price": 8000
+          },
+          {
+            "name": "Americano",
+            "price": 8000
+          }
+        ],
+        "sampleIngredients": [
+          {
+            "name": "All-Purpose Flour",
+            "sku": "CAF-INV-BAKF-0001",
+            "category": "Baking"
+          },
+          {
+            "name": "Almond Milk",
+            "sku": "CAF-INV-DARY-0002",
+            "category": "Dairy"
+          },
+          {
+            "name": "Apples",
+            "sku": "CAF-INV-FRUT-0005",
+            "category": "Fruits"
+          }
+        ]
+      },
+      "durationMs": 1191
+    },
+    {
+      "id": "INV-R2-tapas",
+      "org": "tapas",
+      "name": "Active Inventory Ingredients",
+      "description": "For at least 3 menu items, recipe ingredients exist in inventory and are active",
+      "endpoint": "/inventory/items",
+      "status": "PASS",
+      "expected": "≥3 active ingredient inventory items",
+      "actual": "91 active ingredient items (158 total)",
+      "evidence": {
+        "totalInventoryItems": 158,
+        "activeItems": 158,
+        "ingredientItems": 91,
+        "sampleIngredients": [
+          {
+            "name": "Apple - Green",
+            "sku": "INV-FRUT-0001",
+            "category": "Fruits",
+            "isActive": true
+          },
+          {
+            "name": "Avocado",
+            "sku": "INV-VEGT-0007",
+            "category": "Vegetables",
+            "isActive": true
+          },
+          {
+            "name": "Bacon Streaky 400G",
+            "sku": "INV-PORK-0001",
+            "category": "Pork",
+            "isActive": true
+          },
+          {
+            "name": "Baking Powder",
+            "sku": "INV-BAKF-0003",
+            "category": "Baking",
+            "isActive": true
+          },
+          {
+            "name": "Basil",
+            "sku": "INV-VEGT-0013",
+            "category": "Vegetables",
+            "isActive": true
+          }
+        ]
+      },
+      "durationMs": 51
+    },
+    {
+      "id": "INV-R2-cafesserie",
+      "org": "cafesserie",
+      "name": "Active Inventory Ingredients",
+      "description": "For at least 3 menu items, recipe ingredients exist in inventory and are active",
+      "endpoint": "/inventory/items",
+      "status": "PASS",
+      "expected": "≥3 active ingredient inventory items",
+      "actual": "48 active ingredient items (77 total)",
+      "evidence": {
+        "totalInventoryItems": 77,
+        "activeItems": 77,
+        "ingredientItems": 48,
+        "sampleIngredients": [
+          {
+            "name": "All-Purpose Flour",
+            "sku": "CAF-INV-BAKF-0001",
+            "category": "Baking",
+            "isActive": true
+          },
+          {
+            "name": "Almond Milk",
+            "sku": "CAF-INV-DARY-0002",
+            "category": "Dairy",
+            "isActive": true
+          },
+          {
+            "name": "Apple Juice (Carton)",
+            "sku": "CAF-INV-BEV-0006",
+            "category": "Beverages",
+            "isActive": true
+          },
+          {
+            "name": "Apples",
+            "sku": "CAF-INV-FRUT-0005",
+            "category": "Fruits",
+            "isActive": true
+          },
+          {
+            "name": "Avocado",
+            "sku": "CAF-INV-PROD-0004",
+            "category": "Produce",
+            "isActive": true
+          }
+        ]
+      },
+      "durationMs": 304
+    },
+    {
+      "id": "INV-R3-tapas",
+      "org": "tapas",
+      "name": "Completed Orders Exist",
+      "description": "Completed orders exist containing recipe-backed menu items (≥5)",
+      "endpoint": "/pos/orders?status=CLOSED&limit=100",
+      "status": "PASS",
+      "expected": "≥5 completed orders",
+      "actual": "280 completed orders",
+      "evidence": {
+        "totalOrders": 280,
+        "closedOrders": 280,
+        "sampleOrders": [
+          {
+            "status": "CLOSED",
+            "total": 186440,
+            "createdAt": "2026-01-21T08:21:42.546Z",
+            "itemCount": "N/A"
+          },
+          {
+            "status": "CLOSED",
+            "total": 208860,
+            "createdAt": "2026-01-21T08:21:42.546Z",
+            "itemCount": "N/A"
+          },
+          {
+            "status": "CLOSED",
+            "total": 252520,
+            "createdAt": "2026-01-21T08:21:42.546Z",
+            "itemCount": "N/A"
+          }
+        ]
+      },
+      "durationMs": 130
+    },
+    {
+      "id": "INV-R3-cafesserie",
+      "org": "cafesserie",
+      "name": "Completed Orders Exist",
+      "description": "Completed orders exist containing recipe-backed menu items (≥5)",
+      "endpoint": "/pos/orders?status=CLOSED&limit=100",
+      "status": "PASS",
+      "expected": "≥5 completed orders",
+      "actual": "280 completed orders",
+      "evidence": {
+        "totalOrders": 280,
+        "closedOrders": 280,
+        "sampleOrders": [
+          {
+            "status": "CLOSED",
+            "total": 76700,
+            "createdAt": "2026-01-21T08:21:59.024Z",
+            "itemCount": "N/A"
+          },
+          {
+            "status": "CLOSED",
+            "total": 43660,
+            "createdAt": "2026-01-21T08:21:59.024Z",
+            "itemCount": "N/A"
+          },
+          {
+            "status": "CLOSED",
+            "total": 59000,
+            "createdAt": "2026-01-21T08:21:59.024Z",
+            "itemCount": "N/A"
+          }
+        ]
+      },
+      "durationMs": 70
+    },
+    {
+      "id": "INV-R4-tapas",
+      "org": "tapas",
+      "name": "Low Stock Exists",
+      "description": "Inventory levels for ≥1 ingredient is below reorder threshold / low-stock",
+      "endpoint": "/inventory/levels",
+      "status": "PASS",
+      "expected": "≥1 low stock item",
+      "actual": "158 low stock items",
+      "evidence": {
+        "totalLevels": 158,
+        "lowStockCount": 158,
+        "lowStockItems": [
+          {
+            "name": "Absolut Vodka Citron 1Ltr",
+            "reorderLevel": 2
+          },
+          {
+            "name": "Absolut Vodka Raspberry 1Lt",
+            "reorderLevel": 2
+          },
+          {
+            "name": "Absolut Vodka Vanilla 1Lt",
+            "reorderLevel": 2
+          },
+          {
+            "name": "Amarula 1Lt",
+            "reorderLevel": 1
+          },
+          {
+            "name": "Angostura Bitters 200Mls",
+            "reorderLevel": 1
+          }
+        ]
+      },
+      "durationMs": 58
+    },
+    {
+      "id": "INV-R4-cafesserie",
+      "org": "cafesserie",
+      "name": "Low Stock Exists",
+      "description": "Inventory levels for ≥1 ingredient is below reorder threshold / low-stock",
+      "endpoint": "/inventory/levels",
+      "status": "PASS",
+      "expected": "≥1 low stock item",
+      "actual": "76 low stock items",
+      "evidence": {
+        "totalLevels": 76,
+        "lowStockCount": 76,
+        "lowStockItems": [
+          {
+            "name": "All-Purpose Flour",
+            "reorderLevel": 10
+          },
+          {
+            "name": "Almond Milk",
+            "reorderLevel": 5
+          },
+          {
+            "name": "Apple Juice (Carton)",
+            "reorderLevel": 2
+          },
+          {
+            "name": "Apples",
+            "reorderLevel": 3
+          },
+          {
+            "name": "Avocado",
+            "reorderLevel": 10
+          }
+        ]
+      },
+      "durationMs": 59
+    },
+    {
+      "id": "INV-R5-tapas",
+      "org": "tapas",
+      "name": "POS Receipts Exist",
+      "description": "POS receipts endpoint returns ≥5 receipts for completed orders",
+      "endpoint": "/pos/export/receipts.csv",
+      "status": "PASS",
+      "expected": "≥5 receipts",
+      "actual": "50 receipts",
+      "evidence": {
+        "csvLines": 51,
+        "receiptCount": 50,
+        "sampleReceipts": [
+          {
+            "receiptNumber": "TPR-20260121-0277",
+            "orderId": "00000000-0000-4000-8000-000000050004",
+            "issuedAt": "2026-01-21T08:21:42.546Z"
+          },
+          {
+            "receiptNumber": "TPR-20260121-0279",
+            "orderId": "00000000-0000-4000-8000-000000050006",
+            "issuedAt": "2026-01-21T08:21:42.546Z"
+          },
+          {
+            "receiptNumber": "TPR-20260121-0274",
+            "orderId": "00000000-0000-4000-8000-000000050001",
+            "issuedAt": "2026-01-21T08:21:42.546Z"
+          }
+        ]
+      },
+      "durationMs": 44
+    },
+    {
+      "id": "INV-R5-cafesserie",
+      "org": "cafesserie",
+      "name": "POS Receipts Exist",
+      "description": "POS receipts endpoint returns ≥5 receipts for completed orders",
+      "endpoint": "/pos/export/receipts.csv",
+      "status": "PASS",
+      "expected": "≥5 receipts",
+      "actual": "200 receipts",
+      "evidence": {
+        "csvLines": 201,
+        "receiptCount": 200,
+        "sampleReceipts": [
+          {
+            "receiptNumber": "CMR-20260121-0280",
+            "orderId": "00000000-0000-4000-8000-000040050007",
+            "issuedAt": "2026-01-21T08:22:46.178Z"
+          },
+          {
+            "receiptNumber": "CMR-20260121-0273",
+            "orderId": "00000000-0000-4000-8000-000040050000",
+            "issuedAt": "2026-01-21T08:22:46.178Z"
+          },
+          {
+            "receiptNumber": "CMR-20260121-0275",
+            "orderId": "00000000-0000-4000-8000-000040050002",
+            "issuedAt": "2026-01-21T08:22:46.178Z"
+          }
+        ]
+      },
+      "durationMs": 36
+    }
+  ]
+}

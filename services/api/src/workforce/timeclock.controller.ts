@@ -14,6 +14,8 @@ import {
   Query,
   UseGuards,
   Request,
+  BadRequestException,
+  HttpException,
 } from '@nestjs/common';
 import { WorkforceTimeclockService } from './workforce-timeclock.service';
 import { WorkforceAuditService } from './workforce-audit.service';
@@ -58,22 +60,33 @@ export class TimeclockController {
     },
     @Request() req: any,
   ) {
-    const entry = await this.timeclockService.clockIn({
-      userId: req.user.id,
-      orgId: req.user.orgId,
-      branchId: body.branchId,
-      shiftId: body.shiftId,
-      method: body.method,
-    });
+    try {
+      const entry = await this.timeclockService.clockIn({
+        userId: req.user.id,
+        orgId: req.user.orgId,
+        branchId: body.branchId,
+        shiftId: body.shiftId,
+        method: body.method,
+      });
 
-    // Audit log
-    await this.auditService.logClockIn(req.user.orgId, req.user.id, entry.id, {
-      branchId: body.branchId,
-      shiftId: body.shiftId,
-      method: body.method,
-    });
+      // Audit log
+      await this.auditService.logClockIn(req.user.orgId, req.user.id, entry.id, {
+        branchId: body.branchId,
+        shiftId: body.shiftId,
+        method: body.method,
+      });
 
-    return entry;
+      return entry;
+    } catch (error) {
+      // Re-throw HTTP exceptions as-is
+      if (error instanceof HttpException) {
+        throw error;
+      }
+      // Convert unexpected errors to 400 to prevent 500
+      throw new BadRequestException(
+        error?.message || 'Unable to clock in - invalid state',
+      );
+    }
   }
 
   // ===== Clock Out =====
@@ -85,18 +98,29 @@ export class TimeclockController {
   @Post('clock-out')
   @Roles('L2', 'L3', 'L4', 'L5')
   async clockOut(@Request() req: any) {
-    const entry = await this.timeclockService.clockOut(
-      req.user.id,
-      req.user.orgId,
-    );
+    try {
+      const entry = await this.timeclockService.clockOut(
+        req.user.id,
+        req.user.orgId,
+      );
 
-    // Audit log
-    await this.auditService.logClockOut(req.user.orgId, req.user.id, entry.id, {
-      clockOutAt: entry.clockOutAt,
-      overtimeMinutes: entry.overtimeMinutes,
-    });
+      // Audit log
+      await this.auditService.logClockOut(req.user.orgId, req.user.id, entry.id, {
+        clockOutAt: entry.clockOutAt,
+        overtimeMinutes: entry.overtimeMinutes,
+      });
 
-    return entry;
+      return entry;
+    } catch (error) {
+      // Re-throw HTTP exceptions as-is
+      if (error instanceof HttpException) {
+        throw error;
+      }
+      // Convert unexpected errors to 400 to prevent 500
+      throw new BadRequestException(
+        error?.message || 'Unable to clock out - invalid state',
+      );
+    }
   }
 
   // ===== Break Management =====
@@ -108,20 +132,31 @@ export class TimeclockController {
   @Post('break/start')
   @Roles('L2', 'L3', 'L4', 'L5')
   async startBreak(@Request() req: any) {
-    const breakEntry = await this.timeclockService.startBreak(
-      req.user.id,
-      req.user.orgId,
-    );
+    try {
+      const breakEntry = await this.timeclockService.startBreak(
+        req.user.id,
+        req.user.orgId,
+      );
 
-    // Audit log
-    await this.auditService.logBreakStart(
-      req.user.orgId,
-      req.user.id,
-      breakEntry.id,
-      { startedAt: breakEntry.startedAt },
-    );
+      // Audit log
+      await this.auditService.logBreakStart(
+        req.user.orgId,
+        req.user.id,
+        breakEntry.id,
+        { startedAt: breakEntry.startedAt },
+      );
 
-    return breakEntry;
+      return breakEntry;
+    } catch (error) {
+      // Re-throw HTTP exceptions as-is
+      if (error instanceof HttpException) {
+        throw error;
+      }
+      // Convert unexpected errors to 400 to prevent 500
+      throw new BadRequestException(
+        error?.message || 'Unable to start break - invalid state',
+      );
+    }
   }
 
   /**
@@ -131,23 +166,34 @@ export class TimeclockController {
   @Post('break/end')
   @Roles('L2', 'L3', 'L4', 'L5')
   async endBreak(@Request() req: any) {
-    const breakEntry = await this.timeclockService.endActiveBreak(
-      req.user.id,
-      req.user.orgId,
-    );
+    try {
+      const breakEntry = await this.timeclockService.endActiveBreak(
+        req.user.id,
+        req.user.orgId,
+      );
 
-    // Audit log
-    await this.auditService.logBreakEnd(
-      req.user.orgId,
-      req.user.id,
-      breakEntry.id,
-      {
-        endedAt: breakEntry.endedAt,
-        minutes: breakEntry.minutes,
-      },
-    );
+      // Audit log
+      await this.auditService.logBreakEnd(
+        req.user.orgId,
+        req.user.id,
+        breakEntry.id,
+        {
+          endedAt: breakEntry.endedAt,
+          minutes: breakEntry.minutes,
+        },
+      );
 
-    return breakEntry;
+      return breakEntry;
+    } catch (error) {
+      // Re-throw HTTP exceptions as-is
+      if (error instanceof HttpException) {
+        throw error;
+      }
+      // Convert unexpected errors to 400 to prevent 500
+      throw new BadRequestException(
+        error?.message || 'Unable to end break - invalid state',
+      );
+    }
   }
 
   // ===== Time Entries Query =====

@@ -1,0 +1,57 @@
+{
+  "org": "tapas",
+  "role": "cashier",
+  "email": "cashier@tapas.demo.local",
+  "generatedAt": "2026-01-22T18:56:18.059Z",
+  "durationMs": 20569,
+  "summary": {
+    "routesVisited": 7,
+    "routesWithEndpoints": 0,
+    "totalEndpoints": 0,
+    "uniqueEndpoints": 0
+  },
+  "routes": [
+    {
+      "route": "/pos",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:56:01.809Z"
+    },
+    {
+      "route": "/dashboard",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:56:04.570Z"
+    },
+    {
+      "route": "/workforce/timeclock",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:56:07.294Z"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:56:09.989Z"
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:56:12.658Z"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:56:15.345Z"
+    },
+    {
+      "route": "/settings",
+      "navigationStatus": 500,
+      "endpoints": [],
+      "capturedAt": "2026-01-22T18:56:18.059Z"
+    }
+  ]
+}

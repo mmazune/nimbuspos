@@ -127,6 +127,10 @@ import { InventoryCloseNotificationsController } from './inventory-close-notific
 import { InventoryBlockersEngineService } from './inventory-blockers-engine.service';
 import { InventoryBlockerResolutionService } from './inventory-blocker-resolution.service';
 
+// M80 Prep Items imports
+import { PrepItemsController } from './prep-items.controller';
+import { PrepItemsService } from './prep-items.service';
+
 @Module({
   imports: [KpisModule, AuditModule],
   controllers: [
@@ -155,6 +159,7 @@ import { InventoryBlockerResolutionService } from './inventory-blocker-resolutio
     InventoryPeriodsController, // M12.1
     InventoryCloseRequestsController, // M12.4
     InventoryCloseNotificationsController, // M12.6
+    PrepItemsController, // M80
     RecipesController,
     WastageController,
     CountsController,
@@ -211,6 +216,7 @@ import { InventoryBlockerResolutionService } from './inventory-blocker-resolutio
     InventoryCloseNotificationsService, // M12.6
     InventoryBlockersEngineService, // M12.7
     InventoryBlockerResolutionService, // M12.7
+    PrepItemsService, // M80
     RecipesService,
     WastageService,
     CountsService,
@@ -269,6 +275,7 @@ import { InventoryBlockerResolutionService } from './inventory-blocker-resolutio
     InventoryPeriodDashboardService, // M12.4
     InventoryBlockersEngineService, // M12.7
     InventoryBlockerResolutionService, // M12.7
+    PrepItemsService, // M80
     RecipesService,
     WastageService,
     CountsService,

@@ -1,0 +1,114 @@
+[
+  {
+    "id": "INV-C1",
+    "name": "Recipe v2 count > 0",
+    "org": "tapas",
+    "passed": true,
+    "value": 100,
+    "expected": "> 0"
+  },
+  {
+    "id": "INV-C2",
+    "name": "Recipe lines reference valid inventory items",
+    "org": "tapas",
+    "passed": true,
+    "value": "9/9 valid",
+    "expected": "all lines valid"
+  },
+  {
+    "id": "INV-C3",
+    "name": "InventoryCostLayer count > 0",
+    "org": "tapas",
+    "passed": false,
+    "value": 0,
+    "expected": "> 0"
+  },
+  {
+    "id": "INV-C4",
+    "name": "Valuation endpoint returns valid structure",
+    "org": "tapas",
+    "passed": true,
+    "value": "valid",
+    "expected": "valid structure"
+  },
+  {
+    "id": "INV-C5",
+    "name": "COGS endpoint returns valid structure",
+    "org": "tapas",
+    "passed": true,
+    "value": "valid",
+    "expected": "valid structure"
+  },
+  {
+    "id": "INV-C6",
+    "name": "Chef can access recipes page",
+    "org": "tapas",
+    "passed": true,
+    "value": 200,
+    "expected": "200"
+  },
+  {
+    "id": "INV-C7",
+    "name": "Accountant can access valuation page",
+    "org": "tapas",
+    "passed": true,
+    "value": 200,
+    "expected": "200"
+  },
+  {
+    "id": "INV-C1",
+    "name": "Recipe v2 count > 0",
+    "org": "cafesserie",
+    "passed": true,
+    "value": 80,
+    "expected": "> 0"
+  },
+  {
+    "id": "INV-C2",
+    "name": "Recipe lines reference valid inventory items",
+    "org": "cafesserie",
+    "passed": true,
+    "value": "15/15 valid",
+    "expected": "all lines valid"
+  },
+  {
+    "id": "INV-C3",
+    "name": "InventoryCostLayer count > 0",
+    "org": "cafesserie",
+    "passed": false,
+    "value": 0,
+    "expected": "> 0"
+  },
+  {
+    "id": "INV-C4",
+    "name": "Valuation endpoint returns valid structure",
+    "org": "cafesserie",
+    "passed": true,
+    "value": "valid",
+    "expected": "valid structure"
+  },
+  {
+    "id": "INV-C5",
+    "name": "COGS endpoint returns valid structure",
+    "org": "cafesserie",
+    "passed": true,
+    "value": "valid",
+    "expected": "valid structure"
+  },
+  {
+    "id": "INV-C6",
+    "name": "Chef can access recipes page",
+    "org": "cafesserie",
+    "passed": true,
+    "value": 200,
+    "expected": "200"
+  },
+  {
+    "id": "INV-C7",
+    "name": "Accountant can access valuation page",
+    "org": "cafesserie",
+    "passed": true,
+    "value": 200,
+    "expected": "200"
+  }
+]

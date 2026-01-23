@@ -1,0 +1,913 @@
+{
+  "generatedAt": "2026-01-20T07:40:06.446Z",
+  "baseline": {
+    "totalControls": 3615,
+    "withTestId": 510,
+    "mutationRiskWithoutTestId": 233,
+    "readSafeWithoutTestId": 2872
+  },
+  "top50MutationRisk": [
+    {
+      "actionKey": "finance_accounts_button_close",
+      "route": "/finance/accounts",
+      "controlType": "button",
+      "label": "Close",
+      "suggestedTestId": "finance-accounts-button-close",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Close\")"
+    },
+    {
+      "actionKey": "finance_journal_button_close",
+      "route": "/finance/journal",
+      "controlType": "button",
+      "label": "Close",
+      "suggestedTestId": "finance-journal-button-close",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Close\")"
+    },
+    {
+      "actionKey": "finance_periods_button_close",
+      "route": "/finance/periods",
+      "controlType": "button",
+      "label": "Close",
+      "suggestedTestId": "finance-periods-button-close",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Close\")"
+    },
+    {
+      "actionKey": "pos_button_walk_in_new_ugx_9_440_12_06_41",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 9,440\n12:06:41 AM",
+      "suggestedTestId": "pos-button-walk-in-new-ugx-9-440-12-06-41",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Walk-in\nNEW\nUGX 9,440\n12:06:41\")"
+    },
+    {
+      "actionKey": "pos_button_takeaway_new_ugx_90_860_11_18",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 90,860\n11:18:53 PM",
+      "suggestedTestId": "pos-button-takeaway-new-ugx-90-860-11-18",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Takeaway\nNEW\nUGX 90,860\n11:18:\")"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_80_240_9_16_53",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 80,240\n9:16:53 PM",
+      "suggestedTestId": "pos-button-table-4-new-ugx-80-240-9-16-53",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 4\nNEW\nUGX 80,240\n9:16:53\")"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_101_480_8_25_5",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 101,480\n8:25:53 PM",
+      "suggestedTestId": "pos-button-table-4-new-ugx-101-480-8-25-5",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 4\nNEW\nUGX 101,480\n8:25:5\")"
+    },
+    {
+      "actionKey": "pos_button_table_1_new_ugx_28_320_5_21_53",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 1\nNEW\nUGX 28,320\n5:21:53 PM",
+      "suggestedTestId": "pos-button-table-1-new-ugx-28-320-5-21-53",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 1\nNEW\nUGX 28,320\n5:21:53\")"
+    },
+    {
+      "actionKey": "pos_button_table_5_new_ugx_80_240_2_11_53",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nNEW\nUGX 80,240\n2:11:53 PM",
+      "suggestedTestId": "pos-button-table-5-new-ugx-80-240-2-11-53",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 5\nNEW\nUGX 80,240\n2:11:53\")"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_88_500_1_49_53",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 88,500\n1:49:53 PM",
+      "suggestedTestId": "pos-button-table-4-new-ugx-88-500-1-49-53",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 4\nNEW\nUGX 88,500\n1:49:53\")"
+    },
+    {
+      "actionKey": "inventory_button_edit",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "Edit",
+      "suggestedTestId": "inventory-button-edit",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Edit\")"
+    },
+    {
+      "actionKey": "pos_button_walk_in_new_ugx_9_440_12_06_41_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 9,440\n12:06:41 AM",
+      "suggestedTestId": "pos-button-walk-in-new-ugx-9-440-12-06-41-1",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Walk-in\nNEW\nUGX 9,440\n12:06:41\")"
+    },
+    {
+      "actionKey": "pos_button_takeaway_new_ugx_90_860_11_18_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 90,860\n11:18:53 PM",
+      "suggestedTestId": "pos-button-takeaway-new-ugx-90-860-11-18-1",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Takeaway\nNEW\nUGX 90,860\n11:18:\")"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_80_240_9_16_53_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 80,240\n9:16:53 PM",
+      "suggestedTestId": "pos-button-table-4-new-ugx-80-240-9-16-53-1",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 4\nNEW\nUGX 80,240\n9:16:53\")"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_101_480_8_25_5_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 101,480\n8:25:53 PM",
+      "suggestedTestId": "pos-button-table-4-new-ugx-101-480-8-25-5-1",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 4\nNEW\nUGX 101,480\n8:25:5\")"
+    },
+    {
+      "actionKey": "pos_button_table_1_new_ugx_28_320_5_21_53_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 1\nNEW\nUGX 28,320\n5:21:53 PM",
+      "suggestedTestId": "pos-button-table-1-new-ugx-28-320-5-21-53-1",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 1\nNEW\nUGX 28,320\n5:21:53\")"
+    },
+    {
+      "actionKey": "pos_button_table_5_new_ugx_80_240_2_11_53_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nNEW\nUGX 80,240\n2:11:53 PM",
+      "suggestedTestId": "pos-button-table-5-new-ugx-80-240-2-11-53-1",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 5\nNEW\nUGX 80,240\n2:11:53\")"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_88_500_1_49_53_1",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 88,500\n1:49:53 PM",
+      "suggestedTestId": "pos-button-table-4-new-ugx-88-500-1-49-53-1",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 4\nNEW\nUGX 88,500\n1:49:53\")"
+    },
+    {
+      "actionKey": "staff_button_add_employee",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Add Employee",
+      "suggestedTestId": "staff-button-add-employee",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Add Employee\")"
+    },
+    {
+      "actionKey": "staff_button_edit",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Edit",
+      "suggestedTestId": "staff-button-edit",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Edit\")"
+    },
+    {
+      "actionKey": "inventory_button_edit_1",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "Edit",
+      "suggestedTestId": "inventory-button-edit-1",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Edit\")"
+    },
+    {
+      "actionKey": "pos_button_walk_in_new_ugx_9_440_12_06_41_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 9,440\n12:06:41 AM",
+      "suggestedTestId": "pos-button-walk-in-new-ugx-9-440-12-06-41-2",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Walk-in\nNEW\nUGX 9,440\n12:06:41\")"
+    },
+    {
+      "actionKey": "pos_button_takeaway_new_ugx_90_860_11_18_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 90,860\n11:18:53 PM",
+      "suggestedTestId": "pos-button-takeaway-new-ugx-90-860-11-18-2",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Takeaway\nNEW\nUGX 90,860\n11:18:\")"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_80_240_9_16_53_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 80,240\n9:16:53 PM",
+      "suggestedTestId": "pos-button-table-4-new-ugx-80-240-9-16-53-2",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 4\nNEW\nUGX 80,240\n9:16:53\")"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_101_480_8_25_5_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 101,480\n8:25:53 PM",
+      "suggestedTestId": "pos-button-table-4-new-ugx-101-480-8-25-5-2",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 4\nNEW\nUGX 101,480\n8:25:5\")"
+    },
+    {
+      "actionKey": "pos_button_table_1_new_ugx_28_320_5_21_53_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 1\nNEW\nUGX 28,320\n5:21:53 PM",
+      "suggestedTestId": "pos-button-table-1-new-ugx-28-320-5-21-53-2",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 1\nNEW\nUGX 28,320\n5:21:53\")"
+    },
+    {
+      "actionKey": "pos_button_table_5_new_ugx_80_240_2_11_53_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nNEW\nUGX 80,240\n2:11:53 PM",
+      "suggestedTestId": "pos-button-table-5-new-ugx-80-240-2-11-53-2",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 5\nNEW\nUGX 80,240\n2:11:53\")"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_88_500_1_49_53_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 88,500\n1:49:53 PM",
+      "suggestedTestId": "pos-button-table-4-new-ugx-88-500-1-49-53-2",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 4\nNEW\nUGX 88,500\n1:49:53\")"
+    },
+    {
+      "actionKey": "staff_button_add_employee_1",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Add Employee",
+      "suggestedTestId": "staff-button-add-employee-1",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Add Employee\")"
+    },
+    {
+      "actionKey": "staff_button_edit_1",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Edit",
+      "suggestedTestId": "staff-button-edit-1",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Edit\")"
+    },
+    {
+      "actionKey": "inventory_button_edit_2",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "Edit",
+      "suggestedTestId": "inventory-button-edit-2",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Edit\")"
+    },
+    {
+      "actionKey": "inventory_depletions_button_cancel",
+      "route": "/inventory/depletions",
+      "controlType": "button",
+      "label": "Cancel",
+      "suggestedTestId": "inventory-depletions-button-cancel",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Cancel\")"
+    },
+    {
+      "actionKey": "inventory_depletions_button_close",
+      "route": "/inventory/depletions",
+      "controlType": "button",
+      "label": "Close",
+      "suggestedTestId": "inventory-depletions-button-close",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Close\")"
+    },
+    {
+      "actionKey": "inventory_period-close_button_pre_close_check",
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "label": "Pre-Close Check",
+      "suggestedTestId": "inventory-period-close-button-pre-close-check",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Pre-Close Check\")"
+    },
+    {
+      "actionKey": "inventory_period-close_button_create_period",
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "label": "Create Period",
+      "suggestedTestId": "inventory-period-close-button-create-period",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Create Period\")"
+    },
+    {
+      "actionKey": "inventory_period-close_button_close_period",
+      "route": "/inventory/period-close",
+      "controlType": "button",
+      "label": "Close Period",
+      "suggestedTestId": "inventory-period-close-button-close-period",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Close Period\")"
+    },
+    {
+      "actionKey": "inventory_purchase-orders_button_create_po",
+      "route": "/inventory/purchase-orders",
+      "controlType": "button",
+      "label": "Create PO",
+      "suggestedTestId": "inventory-purchase-orders-button-create-po",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Create PO\")"
+    },
+    {
+      "actionKey": "inventory_receipts_button_create_receipt",
+      "route": "/inventory/receipts",
+      "controlType": "button",
+      "label": "Create Receipt",
+      "suggestedTestId": "inventory-receipts-button-create-receipt",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Create Receipt\")"
+    },
+    {
+      "actionKey": "inventory_recipes_button_create_recipe",
+      "route": "/inventory/recipes",
+      "controlType": "button",
+      "label": "Create Recipe",
+      "suggestedTestId": "inventory-recipes-button-create-recipe",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Create Recipe\")"
+    },
+    {
+      "actionKey": "inventory_recipes_button_add_line",
+      "route": "/inventory/recipes",
+      "controlType": "button",
+      "label": "Add Line",
+      "suggestedTestId": "inventory-recipes-button-add-line",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Add Line\")"
+    },
+    {
+      "actionKey": "inventory_recipes_button_cancel",
+      "route": "/inventory/recipes",
+      "controlType": "button",
+      "label": "Cancel",
+      "suggestedTestId": "inventory-recipes-button-cancel",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Cancel\")"
+    },
+    {
+      "actionKey": "inventory_waste_button_new_waste_document",
+      "route": "/inventory/waste",
+      "controlType": "button",
+      "label": "New Waste Document",
+      "suggestedTestId": "inventory-waste-button-new-waste-document",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"New Waste Document\")"
+    },
+    {
+      "actionKey": "pos_button_walk_in_new_ugx_9_440_12_06_41_3",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 9,440\n12:06:41 AM",
+      "suggestedTestId": "pos-button-walk-in-new-ugx-9-440-12-06-41-3",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Walk-in\nNEW\nUGX 9,440\n12:06:41\")"
+    },
+    {
+      "actionKey": "pos_button_takeaway_new_ugx_90_860_11_18_3",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 90,860\n11:18:53 PM",
+      "suggestedTestId": "pos-button-takeaway-new-ugx-90-860-11-18-3",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Takeaway\nNEW\nUGX 90,860\n11:18:\")"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_80_240_9_16_53_3",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 80,240\n9:16:53 PM",
+      "suggestedTestId": "pos-button-table-4-new-ugx-80-240-9-16-53-3",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 4\nNEW\nUGX 80,240\n9:16:53\")"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_101_480_8_25_5_3",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 101,480\n8:25:53 PM",
+      "suggestedTestId": "pos-button-table-4-new-ugx-101-480-8-25-5-3",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 4\nNEW\nUGX 101,480\n8:25:5\")"
+    },
+    {
+      "actionKey": "pos_button_table_1_new_ugx_28_320_5_21_53_3",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 1\nNEW\nUGX 28,320\n5:21:53 PM",
+      "suggestedTestId": "pos-button-table-1-new-ugx-28-320-5-21-53-3",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 1\nNEW\nUGX 28,320\n5:21:53\")"
+    },
+    {
+      "actionKey": "pos_button_table_5_new_ugx_80_240_2_11_53_3",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nNEW\nUGX 80,240\n2:11:53 PM",
+      "suggestedTestId": "pos-button-table-5-new-ugx-80-240-2-11-53-3",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 5\nNEW\nUGX 80,240\n2:11:53\")"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_88_500_1_49_53_3",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 88,500\n1:49:53 PM",
+      "suggestedTestId": "pos-button-table-4-new-ugx-88-500-1-49-53-3",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Table 4\nNEW\nUGX 88,500\n1:49:53\")"
+    },
+    {
+      "actionKey": "staff_button_add_employee_2",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Add Employee",
+      "suggestedTestId": "staff-button-add-employee-2",
+      "score": 10,
+      "selectorFingerprint": "button:text(\"Add Employee\")"
+    }
+  ],
+  "top50ReadSafe": [
+    {
+      "actionKey": "analytics_button_financial",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Financial",
+      "suggestedTestId": "analytics-button-financial",
+      "score": 20,
+      "selectorFingerprint": "button[role=\"tab\"]:text(\"Financial\")"
+    },
+    {
+      "actionKey": "analytics_button_risk",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Risk",
+      "suggestedTestId": "analytics-button-risk",
+      "score": 20,
+      "selectorFingerprint": "button[role=\"tab\"]:text(\"Risk\")"
+    },
+    {
+      "actionKey": "analytics_button_last_7_days",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 7 days",
+      "suggestedTestId": "analytics-button-last-7-days",
+      "score": 20,
+      "selectorFingerprint": "button:text(\"Last 7 days\")"
+    },
+    {
+      "actionKey": "analytics_button_financial_1",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Financial",
+      "suggestedTestId": "analytics-button-financial-1",
+      "score": 20,
+      "selectorFingerprint": "button[role=\"tab\"]:text(\"Financial\")"
+    },
+    {
+      "actionKey": "analytics_button_risk_1",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Risk",
+      "suggestedTestId": "analytics-button-risk-1",
+      "score": 20,
+      "selectorFingerprint": "button[role=\"tab\"]:text(\"Risk\")"
+    },
+    {
+      "actionKey": "analytics_button_last_7_days_1",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 7 days",
+      "suggestedTestId": "analytics-button-last-7-days-1",
+      "score": 20,
+      "selectorFingerprint": "button:text(\"Last 7 days\")"
+    },
+    {
+      "actionKey": "analytics_button_financial_2",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Financial",
+      "suggestedTestId": "analytics-button-financial-2",
+      "score": 20,
+      "selectorFingerprint": "button[role=\"tab\"]:text(\"Financial\")"
+    },
+    {
+      "actionKey": "analytics_button_risk_2",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Risk",
+      "suggestedTestId": "analytics-button-risk-2",
+      "score": 20,
+      "selectorFingerprint": "button[role=\"tab\"]:text(\"Risk\")"
+    },
+    {
+      "actionKey": "analytics_button_last_90_days_2",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 90 days",
+      "suggestedTestId": "analytics-button-last-90-days-2",
+      "score": 20,
+      "selectorFingerprint": "button:text(\"Last 90 days\")"
+    },
+    {
+      "actionKey": "analytics_link_my_availability",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "My Availability",
+      "suggestedTestId": "analytics-link-my-availability",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"My Availability\")"
+    },
+    {
+      "actionKey": "analytics_link_my_swaps",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "My Swaps",
+      "suggestedTestId": "analytics-link-my-swaps",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"My Swaps\")"
+    },
+    {
+      "actionKey": "analytics_link_open_shifts",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "suggestedTestId": "analytics-link-open-shifts",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Open Shifts\")"
+    },
+    {
+      "actionKey": "finance_link_service_providers",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Service Providers",
+      "suggestedTestId": "finance-link-service-providers",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Service Providers\")"
+    },
+    {
+      "actionKey": "finance_link_my_availability",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "My Availability",
+      "suggestedTestId": "finance-link-my-availability",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"My Availability\")"
+    },
+    {
+      "actionKey": "finance_link_my_swaps",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "My Swaps",
+      "suggestedTestId": "finance-link-my-swaps",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"My Swaps\")"
+    },
+    {
+      "actionKey": "finance_link_open_shifts",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "suggestedTestId": "finance-link-open-shifts",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Open Shifts\")"
+    },
+    {
+      "actionKey": "dashboard_link_pos",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "POS",
+      "suggestedTestId": "dashboard-link-pos",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"POS\")"
+    },
+    {
+      "actionKey": "dashboard_link_timeclock",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Timeclock",
+      "suggestedTestId": "dashboard-link-timeclock",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Timeclock\")"
+    },
+    {
+      "actionKey": "dashboard_link_my_availability",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Availability",
+      "suggestedTestId": "dashboard-link-my-availability",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"My Availability\")"
+    },
+    {
+      "actionKey": "dashboard_link_my_swaps",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Swaps",
+      "suggestedTestId": "dashboard-link-my-swaps",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"My Swaps\")"
+    },
+    {
+      "actionKey": "dashboard_link_open_shifts",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "suggestedTestId": "dashboard-link-open-shifts",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Open Shifts\")"
+    },
+    {
+      "actionKey": "analytics_link_swap_approvals",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "suggestedTestId": "analytics-link-swap-approvals",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Swap Approvals\")"
+    },
+    {
+      "actionKey": "analytics_link_labor_reports",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "suggestedTestId": "analytics-link-labor-reports",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Labor Reports\")"
+    },
+    {
+      "actionKey": "analytics_link_labor_targets",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "suggestedTestId": "analytics-link-labor-targets",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Labor Targets\")"
+    },
+    {
+      "actionKey": "analytics_link_staffing_planner",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "suggestedTestId": "analytics-link-staffing-planner",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Staffing Planner\")"
+    },
+    {
+      "actionKey": "analytics_link_staffing_alerts",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "suggestedTestId": "analytics-link-staffing-alerts",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Staffing Alerts\")"
+    },
+    {
+      "actionKey": "analytics_link_auto_scheduler",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "suggestedTestId": "analytics-link-auto-scheduler",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Auto-Scheduler\")"
+    },
+    {
+      "actionKey": "dashboard_link_analytics",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Analytics",
+      "suggestedTestId": "dashboard-link-analytics",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Analytics\")"
+    },
+    {
+      "actionKey": "dashboard_link_pos_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "POS",
+      "suggestedTestId": "dashboard-link-pos-1",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"POS\")"
+    },
+    {
+      "actionKey": "dashboard_link_reservations",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Reservations",
+      "suggestedTestId": "dashboard-link-reservations",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Reservations\")"
+    },
+    {
+      "actionKey": "dashboard_link_inventory",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Inventory",
+      "suggestedTestId": "dashboard-link-inventory",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Inventory\")"
+    },
+    {
+      "actionKey": "dashboard_link_feedback",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Feedback",
+      "suggestedTestId": "dashboard-link-feedback",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Feedback\")"
+    },
+    {
+      "actionKey": "dashboard_link_timeclock_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Timeclock",
+      "suggestedTestId": "dashboard-link-timeclock-1",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Timeclock\")"
+    },
+    {
+      "actionKey": "dashboard_link_swap_approvals",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "suggestedTestId": "dashboard-link-swap-approvals",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Swap Approvals\")"
+    },
+    {
+      "actionKey": "dashboard_link_labor_reports",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "suggestedTestId": "dashboard-link-labor-reports",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Labor Reports\")"
+    },
+    {
+      "actionKey": "dashboard_link_labor_targets",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "suggestedTestId": "dashboard-link-labor-targets",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Labor Targets\")"
+    },
+    {
+      "actionKey": "dashboard_link_staffing_planner",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "suggestedTestId": "dashboard-link-staffing-planner",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Staffing Planner\")"
+    },
+    {
+      "actionKey": "dashboard_link_staffing_alerts",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "suggestedTestId": "dashboard-link-staffing-alerts",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Staffing Alerts\")"
+    },
+    {
+      "actionKey": "dashboard_link_auto_scheduler",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "suggestedTestId": "dashboard-link-auto-scheduler",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Auto-Scheduler\")"
+    },
+    {
+      "actionKey": "dashboard_link_my_availability_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Availability",
+      "suggestedTestId": "dashboard-link-my-availability-1",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"My Availability\")"
+    },
+    {
+      "actionKey": "dashboard_link_my_swaps_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Swaps",
+      "suggestedTestId": "dashboard-link-my-swaps-1",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"My Swaps\")"
+    },
+    {
+      "actionKey": "dashboard_link_open_shifts_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "suggestedTestId": "dashboard-link-open-shifts-1",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Open Shifts\")"
+    },
+    {
+      "actionKey": "inventory_link_dashboard",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Dashboard",
+      "suggestedTestId": "inventory-link-dashboard",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Dashboard\")"
+    },
+    {
+      "actionKey": "inventory_link_analytics",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Analytics",
+      "suggestedTestId": "inventory-link-analytics",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Analytics\")"
+    },
+    {
+      "actionKey": "inventory_link_reservations",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Reservations",
+      "suggestedTestId": "inventory-link-reservations",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Reservations\")"
+    },
+    {
+      "actionKey": "inventory_link_feedback",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Feedback",
+      "suggestedTestId": "inventory-link-feedback",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Feedback\")"
+    },
+    {
+      "actionKey": "inventory_link_timeclock",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Timeclock",
+      "suggestedTestId": "inventory-link-timeclock",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Timeclock\")"
+    },
+    {
+      "actionKey": "inventory_link_swap_approvals",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "suggestedTestId": "inventory-link-swap-approvals",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Swap Approvals\")"
+    },
+    {
+      "actionKey": "inventory_link_labor_reports",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "suggestedTestId": "inventory-link-labor-reports",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Labor Reports\")"
+    },
+    {
+      "actionKey": "inventory_link_labor_targets",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "suggestedTestId": "inventory-link-labor-targets",
+      "score": 19,
+      "selectorFingerprint": "a:text(\"Labor Targets\")"
+    }
+  ]
+}

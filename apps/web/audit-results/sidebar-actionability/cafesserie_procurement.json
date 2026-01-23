@@ -1,0 +1,14 @@
+{
+  "org": "cafesserie",
+  "role": "procurement",
+  "email": "procurement@cafesserie.demo.local",
+  "landingRoute": "/inventory",
+  "generatedAt": "2026-01-22T20:16:10.041Z",
+  "sidebarExists": false,
+  "totalNavElements": 0,
+  "visibleNavElements": 0,
+  "enabledNavElements": 0,
+  "navElementIds": [],
+  "passed": false,
+  "error": "Sidebar not visible"
+}

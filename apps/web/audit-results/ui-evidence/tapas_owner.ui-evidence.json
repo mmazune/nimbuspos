@@ -1,0 +1,5854 @@
+{
+  "org": "tapas",
+  "role": "owner",
+  "generatedAt": "2026-01-20T19:36:08.793Z",
+  "durationMs": 187136,
+  "summary": {
+    "total": 388,
+    "urlChanged": 19,
+    "domChanged": 7,
+    "chartVisible": 1,
+    "noChange": 47,
+    "hasNetwork": 24,
+    "skipped": 290,
+    "uiOnlyTotal": 27
+  },
+  "controls": [
+    {
+      "actionKey": "theme-toggle-btn_70",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "56d0b578",
+        "tableRowCount": 0,
+        "chartCount": 10,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "56d0b578",
+        "tableRowCount": 0,
+        "chartCount": 10,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_70",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "56d0b578",
+        "tableRowCount": 0,
+        "chartCount": 10,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "56d0b578",
+        "tableRowCount": 0,
+        "chartCount": 10,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_overview_5",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Overview",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "56d0b578",
+        "tableRowCount": 0,
+        "chartCount": 10,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "56d0b578",
+        "tableRowCount": 0,
+        "chartCount": 10,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_by_branch_5",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "By Branch",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "56d0b578",
+        "tableRowCount": 0,
+        "chartCount": 10,
+        "headingText": "Analytics",
+        "tabActiveIndex": 0
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "62e9ba9a",
+        "tableRowCount": 0,
+        "chartCount": 8,
+        "headingText": "Analytics",
+        "tabActiveIndex": 1
+      },
+      "classification": "DOM_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_financial_5",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Financial",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "62e9ba9a",
+        "tableRowCount": 0,
+        "chartCount": 8,
+        "headingText": "Analytics",
+        "tabActiveIndex": 1
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-49808d7a",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 2
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_risk_5",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Risk",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-49808d7a",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 2
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-7e29366f",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 3
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 2,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_franchise_5",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Franchise",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-7e29366f",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 3
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-3e31f828",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "DOM_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_last_7_days_5",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 7 days",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-3e31f828",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "DOM_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_last_30_days_5",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 30 days",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-3e31f828",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "DOM_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_last_90_days_5",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 90 days",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-3e31f828",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "DOM_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_button_open_tanstack_query_devtools_5",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "analytics_link_skip_to_main_content_5",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_70",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_dashboard_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Dashboard",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_analytics_5",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_reports_5",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Reports",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_pos_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "POS",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_reservations_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Reservations",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_inventory_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Inventory",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_finance_1",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Finance",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_service_providers_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_staff_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Staff",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_feedback_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Feedback",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_schedule_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Schedule",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_timeclock_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Timeclock",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_approvals_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Approvals",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_swap_approvals_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_labor_reports_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_labor_targets_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_staffing_planner_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_staffing_alerts_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_auto_scheduler_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_my_availability_5",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_my_swaps_5",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_open_shifts_5",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_link_settings_3",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Settings",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_tab_overview_5",
+      "route": "/analytics",
+      "controlType": "tab",
+      "label": "Overview",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_tab_by_branch_5",
+      "route": "/analytics",
+      "controlType": "tab",
+      "label": "By Branch",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-106be542",
+        "tableRowCount": 0,
+        "chartCount": 8,
+        "headingText": "Analytics",
+        "tabActiveIndex": 1
+      },
+      "classification": "CHART_VISIBLE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_tab_financial_5",
+      "route": "/analytics",
+      "controlType": "tab",
+      "label": "Financial",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-106be542",
+        "tableRowCount": 0,
+        "chartCount": 8,
+        "headingText": "Analytics",
+        "tabActiveIndex": 1
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-49c435d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 2
+      },
+      "classification": "DOM_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_tab_risk_5",
+      "route": "/analytics",
+      "controlType": "tab",
+      "label": "Risk",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-49c435d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 2
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-2bf1a37",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 3
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "analytics_tab_franchise_5",
+      "route": "/analytics",
+      "controlType": "tab",
+      "label": "Franchise",
+      "before": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-22217e4b",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 3
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "-75c609cc",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Analytics",
+        "tabActiveIndex": 4
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 2,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "theme-toggle-btn_71",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "user-menu-trigger_71",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard-refresh-btn_7",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Refresh dashboard data",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "date-preset-7d_7",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 7 Days date range",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "date-preset-30d_7",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 30 Days date range",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "date-preset-90d_7",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 90 Days date range",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_button_open_tanstack_query_devtools_7",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "kpi-revenue_7",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Revenue details",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "kpi-gross-margin_7",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Gross Margin details",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "kpi-low-stock_7",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Low Stock details",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "kpi-payables-due_7",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Payables Due details",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Mutation risk"
+    },
+    {
+      "actionKey": "dashboard_link_skip_to_main_content_7",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": {
+        "url": "http://localhost:3000/dashboard",
+        "query": "",
+        "contentHash": "364e2bd8",
+        "tableRowCount": 0,
+        "chartCount": 1,
+        "headingText": "",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/dashboard",
+        "query": "",
+        "contentHash": "35219631",
+        "tableRowCount": 0,
+        "chartCount": 24,
+        "headingText": "Dashboard",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 19,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_71",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": {
+        "url": "http://localhost:3000/dashboard",
+        "query": "",
+        "contentHash": "8c7d781",
+        "tableRowCount": 0,
+        "chartCount": 35,
+        "headingText": "Dashboard",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workspaces/owner",
+        "query": "",
+        "contentHash": "-6db9f571",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Owner Dashboard",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "dashboard_link_dashboard_7",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Dashboard",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_analytics_3",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_reports_4",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_pos_6",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "POS",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_reservations_4",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Reservations",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_inventory_4",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Inventory",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_finance_1",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Finance",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_service_providers_2",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_staff_4",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Staff",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_feedback_3",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Feedback",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_schedule_3",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Schedule",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_timeclock_6",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Timeclock",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_approvals_3",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Approvals",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_swap_approvals_4",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_labor_reports_3",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_labor_targets_3",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_staffing_planner_3",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_staffing_alerts_3",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_auto_scheduler_3",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_my_availability_7",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_my_swaps_7",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_open_shifts_7",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "dashboard_link_settings_7",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Settings",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "alert-item-low-stock_7",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Low Stock Items\n\n26\n\n26 items below reorder level",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "top-items-view-all_4",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "View all",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "date-from-input_7",
+      "route": "/dashboard",
+      "controlType": "input",
+      "label": "Start date",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "date-to-input_7",
+      "route": "/dashboard",
+      "controlType": "input",
+      "label": "End date",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "theme-toggle-btn_72",
+      "route": "/feedback",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_72",
+      "route": "/feedback",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_button_open_tanstack_query_devtools_3",
+      "route": "/feedback",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not visible"
+    },
+    {
+      "actionKey": "feedback_link_skip_to_main_content_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_72",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workspaces/owner",
+        "query": "",
+        "contentHash": "-6db9f571",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Owner Dashboard",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_dashboard_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Dashboard",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_analytics_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_reports_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Reports",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/reports",
+        "query": "",
+        "contentHash": "49ed7296",
+        "tableRowCount": 0,
+        "chartCount": 9,
+        "headingText": "Reports & Digests",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_pos_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "POS",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/pos",
+        "query": "",
+        "contentHash": "2b3f9f28",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "POS – Dining Room",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_reservations_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Reservations",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/reservations",
+        "query": "",
+        "contentHash": "-52c75e72",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Reservations & Events",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_inventory_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Inventory",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "76079cb7",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_finance_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Finance",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_service_providers_1",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/service-providers",
+        "query": "",
+        "contentHash": "13119a40",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Service Providers",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_staff_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Staff",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/staff",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_feedback_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Feedback",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_schedule_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Schedule",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/schedule",
+        "query": "",
+        "contentHash": "2d88c257",
+        "tableRowCount": 0,
+        "chartCount": 8,
+        "headingText": "Workforce Schedule",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_timeclock_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Timeclock",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/timeclock",
+        "query": "",
+        "contentHash": "-4b1b38e1",
+        "tableRowCount": 0,
+        "chartCount": 3,
+        "headingText": "",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_approvals_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Approvals",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/approvals",
+        "query": "",
+        "contentHash": "-24b03491",
+        "tableRowCount": 0,
+        "chartCount": 9,
+        "headingText": "Shift Approvals",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_swap_approvals_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/swaps",
+        "query": "",
+        "contentHash": "-43eb404d",
+        "tableRowCount": 0,
+        "chartCount": 7,
+        "headingText": "Swap Approvals",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_labor_reports_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/labor",
+        "query": "",
+        "contentHash": "-19551370",
+        "tableRowCount": 0,
+        "chartCount": 9,
+        "headingText": "Labor Reports",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_labor_targets_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/labor-targets",
+        "query": "",
+        "contentHash": "68905873",
+        "tableRowCount": 0,
+        "chartCount": 6,
+        "headingText": "Labor Targets",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_staffing_planner_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/staffing-planner",
+        "query": "",
+        "contentHash": "-7b5e9ecb",
+        "tableRowCount": 0,
+        "chartCount": 5,
+        "headingText": "Staffing Planner",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_staffing_alerts_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/staffing-alerts",
+        "query": "",
+        "contentHash": "-71a1ce93",
+        "tableRowCount": 0,
+        "chartCount": 5,
+        "headingText": "Staffing Alerts",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_auto_scheduler_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/auto-scheduler",
+        "query": "",
+        "contentHash": "-63380c50",
+        "tableRowCount": 0,
+        "chartCount": 7,
+        "headingText": "Auto-Scheduler",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_my_availability_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_my_swaps_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_open_shifts_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "feedback_link_settings_3",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Settings",
+      "before": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "theme-toggle-btn_73",
+      "route": "/finance",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_73",
+      "route": "/finance",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_button_open_tanstack_query_devtools_3",
+      "route": "/finance",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_skip_to_main_content_3",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_73",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_dashboard_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Dashboard",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_analytics_3",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_reports_3",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_pos_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "POS",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_reservations_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Reservations",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_inventory_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Inventory",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_finance_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Finance",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_service_providers_3",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_staff_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Staff",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_feedback_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Feedback",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_schedule_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Schedule",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_timeclock_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Timeclock",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_approvals_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Approvals",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_swap_approvals_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_labor_reports_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_labor_targets_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_staffing_planner_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_staffing_alerts_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_auto_scheduler_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_my_availability_3",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_my_swaps_3",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_open_shifts_3",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "finance_link_settings_1",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Settings",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "theme-toggle-btn_74",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_74",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_button_all_items_4",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "All Items",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_button_low_stock_only_4",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "Low Stock Only",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "6ca04cc7",
+        "tableRowCount": 26,
+        "chartCount": 30,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "classification": "DOM_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_button_edit_4",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "Edit",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Mutation risk"
+    },
+    {
+      "actionKey": "inventory_link_skip_to_main_content_4",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "6ca04cc7",
+        "tableRowCount": 26,
+        "chartCount": 30,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "6ca04cc7",
+        "tableRowCount": 26,
+        "chartCount": 30,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_74",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "6ca04cc7",
+        "tableRowCount": 26,
+        "chartCount": 30,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workspaces/owner",
+        "query": "",
+        "contentHash": "-6db9f571",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Owner Dashboard",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_dashboard_4",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Dashboard",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/dashboard",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_analytics_3",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/analytics",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_reports_4",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Reports",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/reports",
+        "query": "",
+        "contentHash": "49ed7296",
+        "tableRowCount": 0,
+        "chartCount": 9,
+        "headingText": "Reports & Digests",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_pos_3",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "POS",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/pos",
+        "query": "",
+        "contentHash": "-614e5cab",
+        "tableRowCount": 0,
+        "chartCount": 1,
+        "headingText": "POS – Dining Room",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 5,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_reservations_3",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Reservations",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/reservations",
+        "query": "",
+        "contentHash": "7d1850df",
+        "tableRowCount": 0,
+        "chartCount": 0,
+        "headingText": "Reservations & Events",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 2,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_inventory_4",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Inventory",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_finance_1",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Finance",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_service_providers_2",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/service-providers",
+        "query": "",
+        "contentHash": "22a213b1",
+        "tableRowCount": 5,
+        "chartCount": 0,
+        "headingText": "Service Providers",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 4,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_staff_3",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Staff",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/staff",
+        "query": "",
+        "contentHash": "-360653",
+        "tableRowCount": 8,
+        "chartCount": 2,
+        "headingText": "Staff Management",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 2,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_feedback_3",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Feedback",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/feedback",
+        "query": "",
+        "contentHash": "-493c60d1",
+        "tableRowCount": 0,
+        "chartCount": 4,
+        "headingText": "Customer Feedback",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_schedule_3",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Schedule",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/schedule",
+        "query": "",
+        "contentHash": "33873104",
+        "tableRowCount": 0,
+        "chartCount": 8,
+        "headingText": "Workforce Schedule",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_timeclock_3",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Timeclock",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/timeclock",
+        "query": "",
+        "contentHash": "-3bb43726",
+        "tableRowCount": 0,
+        "chartCount": 7,
+        "headingText": "Timeclock",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 2,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_approvals_3",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Approvals",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/approvals",
+        "query": "",
+        "contentHash": "-75ee9f67",
+        "tableRowCount": 0,
+        "chartCount": 9,
+        "headingText": "Shift Approvals",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_swap_approvals_3",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/swaps",
+        "query": "",
+        "contentHash": "-3523940c",
+        "tableRowCount": 0,
+        "chartCount": 7,
+        "headingText": "Swap Approvals",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_labor_reports_3",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/labor",
+        "query": "",
+        "contentHash": "3d04e96d",
+        "tableRowCount": 0,
+        "chartCount": 9,
+        "headingText": "Labor Reports",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_labor_targets_3",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/labor-targets",
+        "query": "",
+        "contentHash": "59f575ef",
+        "tableRowCount": 0,
+        "chartCount": 6,
+        "headingText": "Labor Targets",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 2,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_staffing_planner_3",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/staffing-planner",
+        "query": "",
+        "contentHash": "73399934",
+        "tableRowCount": 0,
+        "chartCount": 5,
+        "headingText": "Staffing Planner",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_staffing_alerts_3",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/staffing-alerts",
+        "query": "",
+        "contentHash": "-64ddbc84",
+        "tableRowCount": 0,
+        "chartCount": 5,
+        "headingText": "Staffing Alerts",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_auto_scheduler_3",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/auto-scheduler",
+        "query": "",
+        "contentHash": "44b7e80b",
+        "tableRowCount": 0,
+        "chartCount": 7,
+        "headingText": "Auto-Scheduler",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_my_availability_4",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "classification": "HAS_NETWORK",
+      "networkCalls": 1,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_my_swaps_4",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_open_shifts_4",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/workforce/my-swaps",
+        "query": "",
+        "contentHash": "-1c2dc07f",
+        "tableRowCount": 0,
+        "chartCount": 5,
+        "headingText": "My Swaps",
+        "tabActiveIndex": -1
+      },
+      "classification": "URL_CHANGED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "inventory_link_settings_4",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Settings",
+      "before": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "after": {
+        "url": "http://localhost:3000/inventory",
+        "query": "",
+        "contentHash": "3caafec8",
+        "tableRowCount": 158,
+        "chartCount": 162,
+        "headingText": "Inventory",
+        "tabActiveIndex": -1
+      },
+      "classification": "NO_CHANGE",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "theme-toggle-btn_75",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_75",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_kiosk_mode_7",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "⤢\nKiosk mode",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_diagnostics_7",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "ⓘ\nDiagnostics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_open_tabs_sidebar_7",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Open tabs sidebar",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos-new-order_7",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "New Order",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_walk_in_new_ugx_0_6_01_21_pm_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 0\n6:01:21 PM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_walk_in_new_ugx_0_1_59_52_am_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 0\n1:59:52 AM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_walk_in_new_ugx_21_240_12_06_4_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 21,240\n12:06:41 AM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_walk_in_new_ugx_63_720_12_06_4_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 63,720\n12:06:41 AM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_table_3_served_ugx_108_560_12_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 3\nSERVED\nUGX 108,560\n12:02:53 AM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_table_8_new_ugx_81_420_11_54_5_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 8\nNEW\nUGX 81,420\n11:54:53 PM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_walk_in_sent_ugx_102_660_11_06_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nSENT\nUGX 102,660\n11:06:41 PM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_takeaway_new_ugx_224_200_10_06_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 224,200\n10:06:53 PM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_walk_in_sent_ugx_90_860_10_06_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nSENT\nUGX 90,860\n10:06:41 PM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_walk_in_served_ugx_167_560_9_0_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nSERVED\nUGX 167,560\n9:06:41 PM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_table_3_new_ugx_195_880_8_39_5_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 3\nNEW\nUGX 195,880\n8:39:53 PM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_table_10_sent_ugx_87_320_6_59_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 10\nSENT\nUGX 87,320\n6:59:53 PM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_takeaway_served_ugx_128_620_4_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nSERVED\nUGX 128,620\n4:04:53 PM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_takeaway_sent_ugx_120_360_1_47_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nSENT\nUGX 120,360\n1:47:53 PM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_table_5_sent_ugx_231_280_1_22_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nSENT\nUGX 231,280\n1:22:53 PM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_table_4_new_ugx_205_320_9_55_5_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 205,320\n9:55:53 AM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_takeaway_new_ugx_161_660_8_33_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 161,660\n8:33:53 AM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_table_3_new_ugx_101_480_8_06_5_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 3\nNEW\nUGX 101,480\n8:06:53 AM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_takeaway_new_ugx_71_980_5_44_5_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 71,980\n5:44:53 AM",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_all_7",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "All",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_beers_ciders_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Beers & Ciders",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_breakfast_6",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Breakfast",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_burgers_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Burgers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_cocktails_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Cocktails",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_curries_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Curries",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_desserts_6",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Desserts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_extras_sides_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Extras & Sides",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_fish_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Fish",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_flat_breads_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Flat Breads",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_grills_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Grills",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_hot_beverages_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Hot Beverages",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_milkshakes_smoothies_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Milkshakes & Smoothies",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_mocktails_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Mocktails",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_pasta_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Pasta",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_salads_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Salads",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_sandwiches_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Sandwiches",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_soft_drinks_juices_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Soft Drinks & Juices",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_soups_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Soups",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_spirits_brandy_cognac_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Brandy & Cognac",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_spirits_creams_liqueurs_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Creams & Liqueurs",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_spirits_gin_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Gin",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_spirits_rum_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Rum",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_spirits_tequila_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Tequila",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_button_spirits_vodka_2",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Vodka",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_skip_to_main_content_7",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_75",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_dashboard_6",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Dashboard",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_analytics_3",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_reports_3",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_pos_7",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "POS",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_reservations_5",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Reservations",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_inventory_3",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Inventory",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_finance_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Finance",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_service_providers_1",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_staff_4",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Staff",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_feedback_3",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Feedback",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_schedule_3",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Schedule",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_timeclock_6",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Timeclock",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_approvals_3",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Approvals",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_swap_approvals_4",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_labor_reports_3",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_labor_targets_3",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_staffing_planner_3",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_staffing_alerts_3",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_auto_scheduler_3",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_my_availability_7",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_my_swaps_7",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_open_shifts_7",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_settings_7",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Settings",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "pos_link_device_point_of_sale_7",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Device: Point of Sale",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "theme-toggle-btn_76",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_76",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_button_open_tanstack_query_devtools_6",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_skip_to_main_content_6",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_76",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_dashboard_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Dashboard",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_analytics_5",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_reports_6",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_pos_3",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "POS",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_reservations_3",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Reservations",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_inventory_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Inventory",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_finance_1",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Finance",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_service_providers_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_staff_3",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Staff",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_feedback_3",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Feedback",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_schedule_3",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Schedule",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_timeclock_3",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Timeclock",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_approvals_3",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Approvals",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_swap_approvals_3",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_labor_reports_3",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_labor_targets_3",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_staffing_planner_3",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_staffing_alerts_3",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_auto_scheduler_3",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_my_availability_6",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_my_swaps_6",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_open_shifts_6",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_settings_4",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Settings",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_sales_franchise_analytics_sale_6",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Sales\nFranchise Analytics\n\nSales, margins, rankings and multi-month trends across all branches.\n\nCSV",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_finance_budgets_variance_budge_6",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Finance\nBudgets & Variance\n\nBudget vs actual sales, COGS and variance across branches.\n\nCSV export\nP",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_operations_inventory_stock_cur_6",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Operations\nInventory & Stock\n\nCurrent stock levels, low-stock items, wastage and shrinkage.",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_hr_staff_insights_kpis_employe_6",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "HR\nStaff Insights\n\nKPIs, Employee of the Month awards and promotion suggestions.",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_customer_customer_feedback_nps_6",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Customer\nCustomer Feedback & NPS\n\nPromoters, passives, detractors and feedback comments.",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_admin_report_subscriptions_man_6",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Admin\nReport Subscriptions\n\nManage automated delivery of shift-end reports, daily/weekly/monthly dig",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_operations_reservations_events_6",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Operations\nReservations & Events\n\nReservation calendar, deposits and event management.",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_tech_api_usage_webhooks_api_ke_6",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Tech\nAPI Usage & Webhooks\n\nAPI key usage metrics, webhook delivery logs and failures.\n\nDev",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reports_link_finance_finance_overview_p_l_s_6",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Finance\nFinance Overview\n\nP&L summary, expense tracking and service provider payables.",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "theme-toggle-btn_77",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_77",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservation-nav-policies_5",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "⚙️ Policies",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservation-nav-calendar_5",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "📅 Calendar View",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_button_all_5",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "All",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_button_held_5",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Held",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_button_confirmed_5",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Confirmed",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_button_seated_5",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Seated",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_button_open_tanstack_query_devtools_5",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_skip_to_main_content_5",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_77",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_dashboard_4",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Dashboard",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_analytics_3",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_reports_3",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_pos_5",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "POS",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_reservations_5",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Reservations",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_inventory_3",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Inventory",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_finance_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Finance",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_service_providers_1",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_staff_4",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Staff",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_feedback_3",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Feedback",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_schedule_3",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Schedule",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_timeclock_4",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Timeclock",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_approvals_3",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Approvals",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_swap_approvals_4",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_labor_reports_3",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_labor_targets_3",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_staffing_planner_3",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_staffing_alerts_3",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_auto_scheduler_3",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_my_availability_5",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_my_swaps_5",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_open_shifts_5",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "reservations_link_settings_5",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Settings",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "theme-toggle-btn_78",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_78",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_button_all_4",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "All",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_button_active_only_4",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Active Only",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_button_edit_4",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Edit",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_button_open_tanstack_query_devtools_4",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_skip_to_main_content_4",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_78",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_dashboard_2",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Dashboard",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_analytics_3",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_reports_4",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_pos_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "POS",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_reservations_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Reservations",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_inventory_2",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Inventory",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_finance_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Finance",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_service_providers_4",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_staff_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Staff",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_feedback_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Feedback",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_schedule_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Schedule",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_timeclock_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Timeclock",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_approvals_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Approvals",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_swap_approvals_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_labor_reports_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_labor_targets_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_staffing_planner_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_staffing_alerts_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_auto_scheduler_1",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_my_availability_4",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_my_swaps_4",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_open_shifts_4",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "service-providers_link_settings_2",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Settings",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "theme-toggle-btn_79",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "user-menu-trigger_79",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_button_add_employee_4",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Add Employee",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_button_all_4",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "All",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_button_active_4",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Active",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_button_inactive_4",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Inactive",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_button_edit_4",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Edit",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_button_previous_4",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Previous",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_button_next_4",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Next",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_button_open_tanstack_query_devtools_4",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_skip_to_main_content_4",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "sidebar-logo_79",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_dashboard_4",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Dashboard",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_analytics_3",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Analytics",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_reports_3",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_pos_4",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "POS",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_reservations_4",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Reservations",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_inventory_3",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Inventory",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_finance_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Finance",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_service_providers_1",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Service Providers",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_staff_4",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Staff",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_feedback_3",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Feedback",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_schedule_3",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Schedule",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_timeclock_4",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Timeclock",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_approvals_3",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Approvals",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_swap_approvals_4",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_labor_reports_3",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_labor_targets_3",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_staffing_planner_3",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_staffing_alerts_3",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_auto_scheduler_3",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_my_availability_4",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "My Availability",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_my_swaps_4",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "My Swaps",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_open_shifts_4",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "staff_link_settings_4",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Settings",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_approvals_button_all_branches_3",
+      "route": "/workforce/approvals",
+      "controlType": "button",
+      "label": "All Branches",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_approvals_button_completed_3",
+      "route": "/workforce/approvals",
+      "controlType": "button",
+      "label": "COMPLETED",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_approvals_button_open_tanstack_query_devtools_3",
+      "route": "/workforce/approvals",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_approvals_link_skip_to_main_content_3",
+      "route": "/workforce/approvals",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_auto-scheduler_button_open_tanstack_query_devtools_3",
+      "route": "/workforce/auto-scheduler",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_auto-scheduler_link_skip_to_main_content_3",
+      "route": "/workforce/auto-scheduler",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_my-availability_button_open_tanstack_query_devtools_10",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "workforce_my-availability_link_skip_to_main_content_10",
+      "route": "/workforce/my-availability",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "before": null,
+      "after": null,
+      "classification": "SKIPPED",
+      "networkCalls": 0,
+      "reason": "Not yet visited"
+    }
+  ]
+}

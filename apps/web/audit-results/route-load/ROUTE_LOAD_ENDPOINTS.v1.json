@@ -1,0 +1,1069 @@
+{
+  "version": "v1",
+  "generatedAt": "2026-01-20T04:08:33.128Z",
+  "summary": {
+    "totalRoles": 5,
+    "totalRoutes": 22,
+    "uniqueEndpoints": 43,
+    "routesWithEndpoints": 21,
+    "avgEndpointsPerRoute": 2
+  },
+  "endpointsByRoute": {
+    "/dashboard": [
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/financial-summary",
+        "status": 403,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/cashier"
+        ]
+      }
+    ],
+    "/inventory": [
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/levels",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/inventory/depletions": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/depletions/stats",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/inventory/period-close": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/org/branches",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/periods",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/inventory/purchase-orders": [
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/purchase-orders",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/inventory/receipts": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/procurement/receipts",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/inventory/recipes": [
+      {
+        "method": "GET",
+        "path": "/inventory/items",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/v2/recipes",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/pos/menu-items",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/foundation/uoms",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/inventory/transfers": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/transfers",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/inventory/waste": [
+      {
+        "method": "GET",
+        "path": "/inventory/waste",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/reports": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/service-providers": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers/contracts",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/service-providers",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders/summary",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/finance/service-reminders",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      }
+    ],
+    "/settings": [
+      {
+        "method": "GET",
+        "path": "/service-providers/contracts",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/reservations",
+        "status": 403,
+        "roles": [
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/bookings/list",
+        "status": 403,
+        "roles": [
+          "cafesserie/waiter"
+        ]
+      }
+    ],
+    "/workforce/my-availability": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/availability/exceptions",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/hr/staff",
+        "status": 404,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      }
+    ],
+    "/workforce/my-swaps": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/swaps",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      }
+    ],
+    "/workforce/open-shifts": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/self/open-shifts/claims",
+        "status": 404,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/procurement",
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      }
+    ],
+    "/pos": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/top-items",
+        "status": 403,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/payment-mix",
+        "status": 403,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/peak-hours",
+        "status": 403,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/franchise/rankings",
+        "status": 403,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/category-mix",
+        "status": 403,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/inventory/low-stock/alerts",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/pos/orders",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/billing/subscription",
+        "status": 403,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/menu/items",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/analytics/daily-metrics",
+        "status": 403,
+        "roles": [
+          "cafesserie/cashier"
+        ]
+      }
+    ],
+    "/reservations": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/reservations",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/waiter"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/bookings/list",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/waiter"
+        ]
+      }
+    ],
+    "/staff": [],
+    "/workforce/swaps": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/swaps",
+        "status": 403,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      }
+    ],
+    "/workforce/timeclock": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/timeclock/status",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/workforce/timeclock/entries",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor",
+          "cafesserie/cashier"
+        ]
+      }
+    ],
+    "/workspaces/supervisor": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/supervisor"
+        ]
+      }
+    ],
+    "/launch": [
+      {
+        "method": "GET",
+        "path": "/me",
+        "status": 200,
+        "roles": [
+          "cafesserie/chef"
+        ]
+      },
+      {
+        "method": "GET",
+        "path": "/branches",
+        "status": 200,
+        "roles": [
+          "cafesserie/chef"
+        ]
+      }
+    ]
+  },
+  "routesByEndpoint": {
+    "GET /analytics/daily-metrics": [
+      "/dashboard",
+      "/pos"
+    ],
+    "GET /analytics/daily": [
+      "/dashboard"
+    ],
+    "GET /analytics/peak-hours": [
+      "/dashboard",
+      "/pos"
+    ],
+    "GET /franchise/rankings": [
+      "/dashboard",
+      "/pos"
+    ],
+    "GET /analytics/top-items": [
+      "/dashboard",
+      "/pos"
+    ],
+    "GET /me": [
+      "/dashboard",
+      "/inventory",
+      "/inventory/depletions",
+      "/inventory/period-close",
+      "/inventory/purchase-orders",
+      "/inventory/receipts",
+      "/inventory/recipes",
+      "/inventory/transfers",
+      "/inventory/waste",
+      "/reports",
+      "/service-providers",
+      "/settings",
+      "/workforce/my-availability",
+      "/workforce/my-swaps",
+      "/workforce/open-shifts",
+      "/pos",
+      "/reservations",
+      "/workforce/swaps",
+      "/workforce/timeclock",
+      "/workspaces/supervisor",
+      "/launch"
+    ],
+    "GET /analytics/category-mix": [
+      "/dashboard",
+      "/pos"
+    ],
+    "GET /analytics/financial-summary": [
+      "/dashboard"
+    ],
+    "GET /analytics/payment-mix": [
+      "/dashboard",
+      "/pos"
+    ],
+    "GET /inventory/low-stock/alerts": [
+      "/dashboard",
+      "/inventory",
+      "/pos"
+    ],
+    "GET /branches": [
+      "/inventory",
+      "/inventory/depletions",
+      "/inventory/period-close",
+      "/inventory/purchase-orders",
+      "/inventory/receipts",
+      "/inventory/recipes",
+      "/inventory/transfers",
+      "/inventory/waste",
+      "/reports",
+      "/service-providers",
+      "/settings",
+      "/workforce/my-availability",
+      "/workforce/my-swaps",
+      "/workforce/open-shifts",
+      "/pos",
+      "/reservations",
+      "/workforce/swaps",
+      "/workforce/timeclock",
+      "/workspaces/supervisor",
+      "/dashboard",
+      "/launch"
+    ],
+    "GET /inventory/items": [
+      "/inventory",
+      "/inventory/recipes"
+    ],
+    "GET /inventory/levels": [
+      "/inventory"
+    ],
+    "GET /inventory": [
+      "/inventory"
+    ],
+    "GET /inventory/depletions": [
+      "/inventory/depletions"
+    ],
+    "GET /inventory/depletions/stats": [
+      "/inventory/depletions"
+    ],
+    "GET /org/branches": [
+      "/inventory/period-close"
+    ],
+    "GET /inventory/periods": [
+      "/inventory/period-close"
+    ],
+    "GET /inventory/procurement/purchase-orders": [
+      "/inventory/purchase-orders"
+    ],
+    "GET /inventory/procurement/receipts": [
+      "/inventory/receipts"
+    ],
+    "GET /inventory/v2/recipes": [
+      "/inventory/recipes"
+    ],
+    "GET /pos/menu-items": [
+      "/inventory/recipes"
+    ],
+    "GET /inventory/foundation/uoms": [
+      "/inventory/recipes"
+    ],
+    "GET /inventory/transfers": [
+      "/inventory/transfers"
+    ],
+    "GET /inventory/waste": [
+      "/inventory/waste"
+    ],
+    "GET /service-providers/contracts": [
+      "/service-providers",
+      "/settings"
+    ],
+    "GET /service-providers": [
+      "/service-providers"
+    ],
+    "GET /finance/service-reminders/summary": [
+      "/service-providers"
+    ],
+    "GET /finance/service-reminders": [
+      "/service-providers"
+    ],
+    "GET /workforce/self/availability": [
+      "/workforce/my-availability"
+    ],
+    "GET /workforce/self/availability/exceptions": [
+      "/workforce/my-availability"
+    ],
+    "GET /workforce/self/swaps": [
+      "/workforce/my-swaps"
+    ],
+    "GET /workforce/self/open-shifts": [
+      "/workforce/open-shifts"
+    ],
+    "GET /workforce/self/open-shifts/claims": [
+      "/workforce/open-shifts"
+    ],
+    "GET /pos/orders": [
+      "/pos"
+    ],
+    "GET /billing/subscription": [
+      "/pos"
+    ],
+    "GET /menu/items": [
+      "/pos"
+    ],
+    "GET /reservations": [
+      "/reservations",
+      "/settings"
+    ],
+    "GET /bookings/list": [
+      "/reservations",
+      "/settings"
+    ],
+    "GET /hr/staff": [
+      "/workforce/my-availability"
+    ],
+    "GET /workforce/swaps": [
+      "/workforce/swaps"
+    ],
+    "GET /workforce/timeclock/status": [
+      "/workforce/timeclock"
+    ],
+    "GET /workforce/timeclock/entries": [
+      "/workforce/timeclock"
+    ]
+  }
+}

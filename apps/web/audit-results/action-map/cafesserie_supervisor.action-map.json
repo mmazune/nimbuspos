@@ -1,0 +1,3309 @@
+{
+  "org": "cafesserie",
+  "role": "supervisor",
+  "email": "supervisor@cafesserie.demo.local",
+  "generatedAt": "2026-01-23T02:52:39.165Z",
+  "durationMs": 216460,
+  "summary": {
+    "total": 198,
+    "hasEndpoints": 39,
+    "noNetworkEffect": 69,
+    "skipped": 90,
+    "uniqueEndpoints": 27,
+    "attributionPercent": 54.5,
+    "mutationBlockingEnabled": true,
+    "totalBlockedMutations": 1,
+    "controlsWithBlockedMutations": 1
+  },
+  "controls": [
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/Switch-to-dark-mode",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/User-menu-for-Paula-Supervisor",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "User menu for Paula Supervisor",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/Refresh-dashboard-data",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Refresh dashboard data",
+      "dataTestId": "dashboard-refresh-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/Select-7-Days-date-range",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 7 Days date range",
+      "dataTestId": "date-preset-7d",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/Select-30-Days-date-range",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 30 Days date range",
+      "dataTestId": "date-preset-30d",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/Select-90-Days-date-range",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 90 Days date range",
+      "dataTestId": "date-preset-90d",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/Select-180-Days-date-range",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 180 Days date range",
+      "dataTestId": "date-preset-180d",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/Acacia-Mall",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Acacia Mall",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/Arena-Mall",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Arena Mall",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/Mombasa",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Mombasa",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/Village-Mall",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Village Mall",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/Open-Tanstack-query-devtools",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/View-Revenue-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Revenue details",
+      "dataTestId": "kpi-revenue",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/View-Gross-Margin-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Gross Margin details",
+      "dataTestId": "kpi-gross-margin",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/View-Low-Stock-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Low Stock details",
+      "dataTestId": "kpi-low-stock",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/button/View-Payables-Due-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Payables Due details",
+      "dataTestId": "kpi-payables-due",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/link/Skip-to-main-content",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/link/Go-to-workspace-home",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/link/POS",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/link/Reservations",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/link/Staff",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/link/Timeclock",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/link/Swap-Approvals",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/link/Dashboard",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/link/My-Availability",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/link/My-Swaps",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/link/Open-Shifts",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/link/Settings",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/link/Low-Stock-Items-16-16-items-below-reorder-level",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Low Stock Items\n\n16\n\n16 items below reorder level",
+      "dataTestId": "alert-item-low-stock",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/input/Start-date",
+      "route": "/dashboard",
+      "controlType": "input",
+      "label": "Start date",
+      "dataTestId": "date-from-input",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/input/End-date",
+      "route": "/dashboard",
+      "controlType": "input",
+      "label": "End date",
+      "dataTestId": "date-to-input",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//dashboard/select/All-Branches-Acacia-Mall-Arena-Mall-Mombasa-Village-Mall",
+      "route": "/dashboard",
+      "controlType": "select",
+      "label": "All Branches\nAcacia Mall\nArena Mall\nMombasa\nVillage Mall",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Switch-to-dark-mode",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/User-menu-for-Paula-Supervisor",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "User menu for Paula Supervisor",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/⤢-Kiosk-mode",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "⤢\nKiosk mode",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/ⓘ-Diagnostics",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "ⓘ\nDiagnostics",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Open-tabs-sidebar",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Open tabs sidebar",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/New-Order",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "New Order",
+      "dataTestId": "pos-new-order",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "POST",
+          "path": "/pos/orders",
+          "status": 999
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Walk-in-SENT-UGX-44,840-9:16:42-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nSENT\nUGX 44,840\n9:16:42 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Walk-in-NEW-UGX-9,440-12:06:41-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 9,440\n12:06:41 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Takeaway-NEW-UGX-90,860-11:18:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 90,860\n11:18:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Table-2-SERVED-UGX-33,040-11:16:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 2\nSERVED\nUGX 33,040\n11:16:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Walk-in-SENT-UGX-23,600-11:06:41-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nSENT\nUGX 23,600\n11:06:41 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Table-4-NEW-UGX-80,240-9:16:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 80,240\n9:16:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Table-4-NEW-UGX-101,480-8:25:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 101,480\n8:25:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Table-3-SENT-UGX-101,480-7:06:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 3\nSENT\nUGX 101,480\n7:06:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Table-3-SENT-UGX-28,320-6:46:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 3\nSENT\nUGX 28,320\n6:46:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Table-1-NEW-UGX-28,320-5:21:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 1\nNEW\nUGX 28,320\n5:21:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Table-2-SERVED-UGX-17,700-5:18:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 2\nSERVED\nUGX 17,700\n5:18:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Table-5-NEW-UGX-80,240-2:11:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nNEW\nUGX 80,240\n2:11:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Table-4-NEW-UGX-88,500-1:49:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 88,500\n1:49:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Table-5-SENT-UGX-63,720-1:12:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nSENT\nUGX 63,720\n1:12:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Table-5-SERVED-UGX-54,280-2:27:53-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nSERVED\nUGX 54,280\n2:27:53 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/All",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Breakfast",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Breakfast",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Coffee",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Coffee",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Cold-Drinks",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Cold Drinks",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Desserts",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Desserts",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Fresh-Juices",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Fresh Juices",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Fresh-Salads",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Fresh Salads",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Hot-Meals",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Hot Meals",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Pastries-&-Baked-Goods",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Pastries & Baked Goods",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Sandwiches-&-Wraps",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Sandwiches & Wraps",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Smoothies-&-Shakes",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Smoothies & Shakes",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Specialty-Coffee",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Specialty Coffee",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Tea-&-Infusions",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Tea & Infusions",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Espresso-UGX-6000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Espresso\nUGX 6000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Double-Espresso-UGX-8000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Double Espresso\nUGX 8000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Americano-UGX-8000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Americano\nUGX 8000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Cappuccino-UGX-10000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Cappuccino\nUGX 10000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Latte-UGX-12000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Latte\nUGX 12000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Flat-White-UGX-12000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Flat White\nUGX 12000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Macchiato-UGX-9000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Macchiato\nUGX 9000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Mocha-UGX-14000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Mocha\nUGX 14000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Caramel-Latte-UGX-15000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Caramel Latte\nUGX 15000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Vanilla-Latte-UGX-15000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Vanilla Latte\nUGX 15000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Hazelnut-Cappuccino-UGX-14000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Hazelnut Cappuccino\nUGX 14000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Iced-Latte-UGX-14000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Iced Latte\nUGX 14000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Iced-Mocha-UGX-16000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Iced Mocha\nUGX 16000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Affogato-UGX-18000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Affogato\nUGX 18000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/English-Breakfast-Tea-UGX-7000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "English Breakfast Tea\nUGX 7000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/button/Earl-Grey-UGX-7000",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Earl Grey\nUGX 7000",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/link/Skip-to-main-content",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/link/Go-to-workspace-home",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/link/POS",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/link/Reservations",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/link/Staff",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/hr/staff",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/link/Timeclock",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/entries",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/status",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/link/Swap-Approvals",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/link/Dashboard",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/link/My-Availability",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/link/My-Swaps",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/link/Open-Shifts",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/link/Settings",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//pos/link/Device:-Point-of-Sale",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Device: Point of Sale",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/button/Switch-to-dark-mode",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/button/User-menu-for-Paula-Supervisor",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "User menu for Paula Supervisor",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/button/⚙️-Policies",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "⚙️ Policies",
+      "dataTestId": "reservation-nav-policies",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "page.evaluate: Execution context was destroyed, most likely because of a navigation"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/button/📅-Calendar-View",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "📅 Calendar View",
+      "dataTestId": "reservation-nav-calendar",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/button/All",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/button/Held",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Held",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/button/Confirmed",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Confirmed",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/button/Seated",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Seated",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/button/Open-Tanstack-query-devtools",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/link/Skip-to-main-content",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/reservations/policies",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/reservations/policies",
+          "status": 404
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/link/Go-to-workspace-home",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/link/POS",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/link/Reservations",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/link/Staff",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/link/Timeclock",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/entries",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/status",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/link/Swap-Approvals",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/link/Dashboard",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/link/My-Availability",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/link/My-Swaps",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/link/Open-Shifts",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//reservations/link/Settings",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//settings/button/Switch-to-dark-mode",
+      "route": "/settings",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//settings/button/User-menu-for-Paula-Supervisor",
+      "route": "/settings",
+      "controlType": "button",
+      "label": "User menu for Paula Supervisor",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//settings/button/Open-Tanstack-query-devtools",
+      "route": "/settings",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//settings/link/Skip-to-main-content",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//settings/link/Go-to-workspace-home",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//settings/link/POS",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//settings/link/Reservations",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//settings/link/Staff",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/hr/staff",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//settings/link/Timeclock",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/status",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/entries",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//settings/link/Swap-Approvals",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//settings/link/Dashboard",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//settings/link/My-Availability",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//settings/link/My-Swaps",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//settings/link/Open-Shifts",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//settings/link/Settings",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/button/Switch-to-dark-mode",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/button/User-menu-for-Paula-Supervisor",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "User menu for Paula Supervisor",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/button/Add-Employee",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Add Employee",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/button/All",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/button/Active",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Active",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/button/Inactive",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Inactive",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/hr/employees",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/button/Edit",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Edit",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/button/Previous",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Previous",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/button/Next",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Next",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/button/Open-Tanstack-query-devtools",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/link/Skip-to-main-content",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/link/Go-to-workspace-home",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/hr/staff",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/hr/employees",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/link/POS",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/link/Reservations",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/link/Staff",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/link/Timeclock",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/hr/staff",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/hr/employees",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/link/Swap-Approvals",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/hr/staff",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/hr/employees",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/link/Dashboard",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/link/My-Availability",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/hr/staff",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/hr/employees",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/link/My-Swaps",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/hr/staff",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/hr/employees",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/link/Open-Shifts",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/hr/employees",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/hr/staff",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//staff/link/Settings",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/my-availability/button/Refresh",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/my-availability/button/Weekly-Availability",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Weekly Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/my-availability/button/Date-Exceptions",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Date Exceptions",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/my-availability/button/Add-Slot",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Add Slot",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/my-availability/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/my-availability/link/Skip-to-main-content",
+      "route": "/workforce/my-availability",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/my-swaps/button/Refresh",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/my-swaps/button/Request-Swap",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Request Swap",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/my-swaps/button/Sent-Requests-(0)",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Sent Requests (0)",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/my-swaps/button/Received-Requests-(0)",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Received Requests (0)",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/my-swaps/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/my-swaps/link/Skip-to-main-content",
+      "route": "/workforce/my-swaps",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/open-shifts/button/Refresh",
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/open-shifts/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/open-shifts/link/Skip-to-main-content",
+      "route": "/workforce/open-shifts",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/swaps/button/Refresh",
+      "route": "/workforce/swaps",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/swaps/button/Pending-(0)",
+      "route": "/workforce/swaps",
+      "controlType": "button",
+      "label": "Pending (0)",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/swaps/button/History",
+      "route": "/workforce/swaps",
+      "controlType": "button",
+      "label": "History",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/swaps/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/swaps",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/swaps/link/Skip-to-main-content",
+      "route": "/workforce/swaps",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/timeclock/button/Start-Break",
+      "route": "/workforce/timeclock",
+      "controlType": "button",
+      "label": "Start Break",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/timeclock/button/Clock-Out",
+      "route": "/workforce/timeclock",
+      "controlType": "button",
+      "label": "Clock Out",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/timeclock/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/timeclock",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workforce/timeclock/link/Skip-to-main-content",
+      "route": "/workforce/timeclock",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/button/Switch-to-dark-mode",
+      "route": "/workspaces/supervisor",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/button/User-menu-for-Paula-Supervisor",
+      "route": "/workspaces/supervisor",
+      "controlType": "button",
+      "label": "User menu for Paula Supervisor",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/button/Open-Tanstack-query-devtools",
+      "route": "/workspaces/supervisor",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/Skip-to-main-content",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/Go-to-workspace-home",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/POS",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/Reservations",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/Staff",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/Timeclock",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/Swap-Approvals",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/Dashboard",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/My-Availability",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/My-Swaps",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/Open-Shifts",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/Settings",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/Dashboard-Shift-overview",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "Dashboard\n\nShift overview",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/POS-Access-point-of-sale",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "POS\n\nAccess point of sale",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/Staff-View-team-schedule",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "Staff\n\nView team schedule",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/Reservations-Manage-bookings",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "Reservations\n\nManage bookings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/Voids-&-Discounts-Approve-transactions",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "Voids & Discounts\n\nApprove transactions",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "cafesserie/supervisor//workspaces/supervisor/link/End-of-Day-Close-out-the-day",
+      "route": "/workspaces/supervisor",
+      "controlType": "link",
+      "label": "End of Day\n\nClose out the day",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    }
+  ]
+}

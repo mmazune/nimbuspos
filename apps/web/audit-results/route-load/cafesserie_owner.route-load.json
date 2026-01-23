@@ -1,0 +1,707 @@
+{
+  "org": "cafesserie",
+  "role": "owner",
+  "email": "owner@cafesserie.demo.local",
+  "generatedAt": "2026-01-20T03:01:14.387Z",
+  "durationMs": 47405,
+  "summary": {
+    "routesVisited": 15,
+    "routesWithEndpoints": 15,
+    "routesNoEndpoints": 0,
+    "routesFailed": 0,
+    "totalApiCalls": 95,
+    "uniqueEndpoints": 35
+  },
+  "routes": [
+    {
+      "route": "/analytics",
+      "actionId": "route-load::cafesserie::owner::/analytics",
+      "loadTimeMs": 3070,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 404,
+          "timestamp": 1768878036963
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768878036993
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768878036996
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768878037000
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768878037019
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768878037022
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768878037070
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768878037081
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768878037084
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768878037106
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768878037110
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768878037113
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200,
+          "timestamp": 1768878037138
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768878037148
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768878037156
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200,
+          "timestamp": 1768878037206
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768878037277
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200,
+          "timestamp": 1768878037279
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/dashboard",
+      "actionId": "route-load::cafesserie::owner::/dashboard",
+      "loadTimeMs": 3598,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200,
+          "timestamp": 1768878039406
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200,
+          "timestamp": 1768878039408
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200,
+          "timestamp": 1768878039410
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200,
+          "timestamp": 1768878039411
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200,
+          "timestamp": 1768878039412
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768878039413
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200,
+          "timestamp": 1768878039415
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200,
+          "timestamp": 1768878039417
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768878039418
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200,
+          "timestamp": 1768878039880
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768878039881
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200,
+          "timestamp": 1768878040000
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200,
+          "timestamp": 1768878040048
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200,
+          "timestamp": 1768878040049
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200,
+          "timestamp": 1768878040162
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200,
+          "timestamp": 1768878040164
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200,
+          "timestamp": 1768878040164
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200,
+          "timestamp": 1768878040300
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768878040301
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200,
+          "timestamp": 1768878040302
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200,
+          "timestamp": 1768878040475
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768878040861
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/feedback",
+      "actionId": "route-load::cafesserie::owner::/feedback",
+      "loadTimeMs": 2188,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200,
+          "timestamp": 1768878042962
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768878042963
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768878043060
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/finance",
+      "actionId": "route-load::cafesserie::owner::/finance",
+      "loadTimeMs": 3774,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768878046450
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768878046523
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200,
+          "timestamp": 1768878046838
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/inventory",
+      "actionId": "route-load::cafesserie::owner::/inventory",
+      "loadTimeMs": 2040,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200,
+          "timestamp": 1768878048513
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/levels",
+          "status": 200,
+          "timestamp": 1768878048699
+        },
+        {
+          "method": "GET",
+          "path": "/inventory",
+          "status": 404,
+          "timestamp": 1768878048699
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768878048700
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768878048872
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768878048873
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/pos",
+      "actionId": "route-load::cafesserie::owner::/pos",
+      "loadTimeMs": 2073,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768878050587
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200,
+          "timestamp": 1768878050865
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200,
+          "timestamp": 1768878050866
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768878050867
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 404,
+          "timestamp": 1768878050868
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200,
+          "timestamp": 1768878050926
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200,
+          "timestamp": 1768878050952
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/reports",
+      "actionId": "route-load::cafesserie::owner::/reports",
+      "loadTimeMs": 1698,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768878052430
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768878052649
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/reservations",
+      "actionId": "route-load::cafesserie::owner::/reservations",
+      "loadTimeMs": 1847,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768878054233
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768878054493
+        },
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 200,
+          "timestamp": 1768878054495
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 200,
+          "timestamp": 1768878054497
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/service-providers",
+      "actionId": "route-load::cafesserie::owner::/service-providers",
+      "loadTimeMs": 3137,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768878057100
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768878057178
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers/contracts",
+          "status": 404,
+          "timestamp": 1768878057534
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers",
+          "status": 200,
+          "timestamp": 1768878057544
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders/summary",
+          "status": 200,
+          "timestamp": 1768878057610
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders",
+          "status": 200,
+          "timestamp": 1768878057633
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers/contracts",
+          "status": 404,
+          "timestamp": 1768878058594
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/staff",
+      "actionId": "route-load::cafesserie::owner::/staff",
+      "loadTimeMs": 2435,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/hr/staff",
+          "status": 404,
+          "timestamp": 1768878059653
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768878059723
+        },
+        {
+          "method": "GET",
+          "path": "/hr/employees",
+          "status": 200,
+          "timestamp": 1768878059766
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768878060047
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/approvals",
+      "actionId": "route-load::cafesserie::owner::/workforce/approvals",
+      "loadTimeMs": 3350,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768878063036
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768878063086
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/scheduling/shifts",
+          "status": 200,
+          "timestamp": 1768878063427
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/auto-scheduler",
+      "actionId": "route-load::cafesserie::owner::/workforce/auto-scheduler",
+      "loadTimeMs": 2866,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768878065843
+        },
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404,
+          "timestamp": 1768878066239
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768878066285
+        },
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404,
+          "timestamp": 1768878067264
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/labor",
+      "actionId": "route-load::cafesserie::owner::/workforce/labor",
+      "loadTimeMs": 2547,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768878068462
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768878068827
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/reports/labor",
+          "status": 200,
+          "timestamp": 1768878068837
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/labor-targets",
+      "actionId": "route-load::cafesserie::owner::/workforce/labor-targets",
+      "loadTimeMs": 2266,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768878071003
+        },
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404,
+          "timestamp": 1768878071023
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768878071042
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/planning/targets",
+          "status": 200,
+          "timestamp": 1768878071084
+        },
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404,
+          "timestamp": 1768878072037
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "actionId": "route-load::cafesserie::owner::/workforce/my-availability",
+      "loadTimeMs": 2265,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200,
+          "timestamp": 1768878073065
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768878073300
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200,
+          "timestamp": 1768878073301
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768878073363
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

@@ -23,6 +23,7 @@ The main seed entry point (`services/api/prisma/seed.ts`) executes seeds in the 
 
 ### 2. Demo Organizations (seedDemo)
 **File**: `services/api/prisma/demo/seedDemo.ts`
+**File**: `services/api/prisma/demo/seedDemo.ts`
 
 **Cleanup Phase** (`cleanupOldDemoData`):
 1. Find demo orgs by slug/ID
@@ -103,6 +104,21 @@ Executes in order:
 13. `seedEmployees`: Employee records
 14. `seedStaffAwards`: Monthly staff awards (uses `SEED_DATE_ANCHOR`, spans 3 months)
 15. `seedFeedback`: Customer NPS feedback (uses `SEED_DATE_ANCHOR`, spans 30 days)
+
+### 6. Operational State (seedOperationalState)
+**File**: `services/api/prisma/demo/seedOperationalState.ts`
+
+- Cash sessions (≥1 OPEN + ≥3 closed per org)
+- Purchase Orders (≥6 OPEN + partial GRs per org)
+- Reservations (≥20 with varied statuses, including today)
+- Timeclock entries with breaks (≥6 clock-ins, ≥3 breaks)
+
+### 7. Inventory Gaps (seedInventoryGaps) — M44/M45
+**File**: `services/api/prisma/demo/seedInventoryGaps.ts`
+
+Fixes remaining seed coverage gaps:
+1. `seedStockBatches`: StockBatch records with remainingQty > 0 (for `/inventory/levels`)
+2. `seedDepletions`: DepletionCostBreakdown records (for `/inventory/cogs`)
 
 ## Key Dependencies
 

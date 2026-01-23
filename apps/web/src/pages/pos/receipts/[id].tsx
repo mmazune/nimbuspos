@@ -101,7 +101,27 @@ export default function ReceiptPage() {
     );
   }
 
-  const { totalsSnapshot: totals } = receipt;
+  // Defensive: Ensure totalsSnapshot exists and has required structure
+  const rawTotals = receipt.totalsSnapshot || {
+    subtotal: 0,
+    tax: 0,
+    discount: 0,
+    total: 0,
+    items: [],
+    payments: [],
+  };
+
+  // Ensure items and payments are arrays
+  const items = Array.isArray(rawTotals.items) ? rawTotals.items : [];
+  const payments = Array.isArray(rawTotals.payments) ? rawTotals.payments : [];
+
+  // Coerce totals to numbers (API may return strings)
+  const totals = {
+    subtotal: Number(rawTotals.subtotal) || 0,
+    tax: Number(rawTotals.tax) || 0,
+    discount: Number(rawTotals.discount) || 0,
+    total: Number(rawTotals.total) || 0,
+  };
 
   return (
     <AppShell>
@@ -142,14 +162,18 @@ export default function ReceiptPage() {
 
           {/* Line Items */}
           <div className="mb-4 space-y-2">
-            {totals.items.map((item, idx) => (
-              <div key={idx} className="flex justify-between text-sm">
-                <span>
-                  {item.qty} x {item.name}
-                </span>
-                <span>${item.lineTotal.toFixed(2)}</span>
-              </div>
-            ))}
+            {items.length > 0 ? (
+              items.map((item, idx) => (
+                <div key={idx} className="flex justify-between text-sm">
+                  <span>
+                    {item.qty} x {item.name}
+                  </span>
+                  <span>${item.lineTotal.toFixed(2)}</span>
+                </div>
+              ))
+            ) : (
+              <div className="text-sm text-gray-500">No items</div>
+            )}
           </div>
 
           {/* Divider */}
@@ -183,20 +207,26 @@ export default function ReceiptPage() {
           {/* Payment Methods */}
           <div className="mb-4">
             <h3 className="mb-2 text-sm font-medium text-gray-600">Payment</h3>
-            {totals.payments.map((p, idx) => (
-              <div key={idx} className="flex justify-between text-sm">
-                <span>{p.method}</span>
-                <span>${p.amount.toFixed(2)}</span>
-              </div>
-            ))}
+            {payments.length > 0 ? (
+              payments.map((p, idx) => (
+                <div key={idx} className="flex justify-between text-sm">
+                  <span>{p.method}</span>
+                  <span>${p.amount.toFixed(2)}</span>
+                </div>
+              ))
+            ) : (
+              <div className="text-sm text-gray-500">No payment info</div>
+            )}
           </div>
 
           {/* Footer */}
           <div className="mt-6 text-center">
             <div className="mb-2 border-b border-dashed border-gray-300" />
-            <p className="text-xs text-gray-500">
-              Served by: {receipt.issuedBy.firstName} {receipt.issuedBy.lastName}
-            </p>
+            {receipt.issuedBy && (
+              <p className="text-xs text-gray-500">
+                Served by: {receipt.issuedBy.firstName} {receipt.issuedBy.lastName}
+              </p>
+            )}
             <p className="mt-4 text-sm font-medium">Thank you for your visit!</p>
           </div>
         </Card>

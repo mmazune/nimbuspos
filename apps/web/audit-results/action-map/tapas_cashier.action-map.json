@@ -1,0 +1,2408 @@
+{
+  "org": "tapas",
+  "role": "cashier",
+  "email": "cashier@tapas.demo.local",
+  "generatedAt": "2026-01-23T02:31:31.777Z",
+  "durationMs": 110921,
+  "summary": {
+    "total": 113,
+    "hasEndpoints": 28,
+    "noNetworkEffect": 52,
+    "skipped": 33,
+    "uniqueEndpoints": 21,
+    "attributionPercent": 70.8,
+    "mutationBlockingEnabled": true,
+    "totalBlockedMutations": 1,
+    "controlsWithBlockedMutations": 1
+  },
+  "controls": [
+    {
+      "actionKey": "tapas/cashier//dashboard/button/Switch-to-dark-mode",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/button/User-menu-for-Grace-Cashier",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "User menu for Grace Cashier",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/button/Refresh-dashboard-data",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Refresh dashboard data",
+      "dataTestId": "dashboard-refresh-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/button/Select-7-Days-date-range",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 7 Days date range",
+      "dataTestId": "date-preset-7d",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/button/Select-30-Days-date-range",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 30 Days date range",
+      "dataTestId": "date-preset-30d",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/button/Select-90-Days-date-range",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 90 Days date range",
+      "dataTestId": "date-preset-90d",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/button/Open-Tanstack-query-devtools",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/button/View-Revenue-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Revenue details",
+      "dataTestId": "kpi-revenue",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/button/View-Gross-Margin-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Gross Margin details",
+      "dataTestId": "kpi-gross-margin",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/button/View-Low-Stock-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Low Stock details",
+      "dataTestId": "kpi-low-stock",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/button/View-Payables-Due-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Payables Due details",
+      "dataTestId": "kpi-payables-due",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/link/Skip-to-main-content",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/link/Go-to-workspace-home",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/link/POS",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/link/Dashboard",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/link/Timeclock",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/status",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/entries",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/link/My-Availability",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/link/My-Swaps",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/link/Open-Shifts",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/link/Settings",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/link/Low-Stock-Items-26-26-items-below-reorder-level",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Low Stock Items\n\n26\n\n26 items below reorder level",
+      "dataTestId": "alert-item-low-stock",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/input/Start-date",
+      "route": "/dashboard",
+      "controlType": "input",
+      "label": "Start date",
+      "dataTestId": "date-from-input",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//dashboard/input/End-date",
+      "route": "/dashboard",
+      "controlType": "input",
+      "label": "End date",
+      "dataTestId": "date-to-input",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Switch-to-dark-mode",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/User-menu-for-Grace-Cashier",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "User menu for Grace Cashier",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/⤢-Kiosk-mode",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "⤢\nKiosk mode",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/ⓘ-Diagnostics",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "ⓘ\nDiagnostics",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Open-tabs-sidebar",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Open tabs sidebar",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/New-Order",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "New Order",
+      "dataTestId": "pos-new-order",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "POST",
+          "path": "/pos/orders",
+          "status": 999
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Walk-in-NEW-UGX-0-6:01:21-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 0\n6:01:21 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Walk-in-NEW-UGX-0-1:59:52-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 0\n1:59:52 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Walk-in-NEW-UGX-21,240-12:06:41-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 21,240\n12:06:41 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Walk-in-NEW-UGX-63,720-12:06:41-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 63,720\n12:06:41 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Table-3-SERVED-UGX-108,560-12:02:53-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 3\nSERVED\nUGX 108,560\n12:02:53 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Table-8-NEW-UGX-81,420-11:54:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 8\nNEW\nUGX 81,420\n11:54:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Walk-in-SENT-UGX-102,660-11:06:41-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nSENT\nUGX 102,660\n11:06:41 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Takeaway-NEW-UGX-224,200-10:06:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 224,200\n10:06:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Walk-in-SENT-UGX-90,860-10:06:41-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nSENT\nUGX 90,860\n10:06:41 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Walk-in-SERVED-UGX-167,560-9:06:41-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nSERVED\nUGX 167,560\n9:06:41 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Table-3-NEW-UGX-195,880-8:39:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 3\nNEW\nUGX 195,880\n8:39:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Table-10-SENT-UGX-87,320-6:59:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 10\nSENT\nUGX 87,320\n6:59:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Takeaway-SERVED-UGX-128,620-4:04:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nSERVED\nUGX 128,620\n4:04:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Takeaway-SENT-UGX-120,360-1:47:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nSENT\nUGX 120,360\n1:47:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Table-5-SENT-UGX-231,280-1:22:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nSENT\nUGX 231,280\n1:22:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Table-4-NEW-UGX-205,320-9:55:53-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 205,320\n9:55:53 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Takeaway-NEW-UGX-161,660-8:33:53-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 161,660\n8:33:53 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Table-3-NEW-UGX-101,480-8:06:53-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 3\nNEW\nUGX 101,480\n8:06:53 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Takeaway-NEW-UGX-71,980-5:44:53-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 71,980\n5:44:53 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/All",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Beers-&-Ciders",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Beers & Ciders",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Breakfast",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Breakfast",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Burgers",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Burgers",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Cocktails",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Cocktails",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Curries",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Curries",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Desserts",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Desserts",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Extras-&-Sides",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Extras & Sides",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Fish",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Fish",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Flat-Breads",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Flat Breads",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Grills",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Grills",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Hot-Beverages",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Hot Beverages",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Milkshakes-&-Smoothies",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Milkshakes & Smoothies",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Mocktails",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Mocktails",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Pasta",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Pasta",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Salads",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Salads",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Sandwiches",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Sandwiches",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Soft-Drinks-&-Juices",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Soft Drinks & Juices",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Soups",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Soups",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Spirits---Brandy-&-Cognac",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Brandy & Cognac",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Spirits---Creams-&-Liqueurs",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Creams & Liqueurs",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Spirits---Gin",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Gin",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Spirits---Rum",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Rum",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Spirits---Tequila",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Tequila",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/button/Spirits---Vodka",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Vodka",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/link/Skip-to-main-content",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/link/Go-to-workspace-home",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/link/POS",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/link/Dashboard",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/link/Timeclock",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/status",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/entries",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/link/My-Availability",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/link/My-Swaps",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/link/Open-Shifts",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/link/Settings",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//pos/link/Device:-Point-of-Sale",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Device: Point of Sale",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//settings/button/Switch-to-dark-mode",
+      "route": "/settings",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//settings/button/User-menu-for-Grace-Cashier",
+      "route": "/settings",
+      "controlType": "button",
+      "label": "User menu for Grace Cashier",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//settings/button/Open-Tanstack-query-devtools",
+      "route": "/settings",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//settings/link/Skip-to-main-content",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//settings/link/Go-to-workspace-home",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//settings/link/POS",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//settings/link/Dashboard",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//settings/link/Timeclock",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/entries",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/status",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//settings/link/My-Availability",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//settings/link/My-Swaps",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//settings/link/Open-Shifts",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//settings/link/Settings",
+      "route": "/settings",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/my-availability/button/Refresh",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/my-availability/button/Weekly-Availability",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Weekly Availability",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/my-availability/button/Date-Exceptions",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Date Exceptions",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/my-availability/button/Add-Slot",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Add Slot",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/my-availability/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/my-availability/link/Skip-to-main-content",
+      "route": "/workforce/my-availability",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/my-swaps/button/Refresh",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/my-swaps/button/Request-Swap",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Request Swap",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/my-swaps/button/Sent-Requests-(0)",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Sent Requests (0)",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/my-swaps/button/Received-Requests-(0)",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Received Requests (0)",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/my-swaps/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/my-swaps",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/my-swaps/link/Skip-to-main-content",
+      "route": "/workforce/my-swaps",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/open-shifts/button/Refresh",
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "label": "Refresh",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/open-shifts/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/open-shifts",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/open-shifts/link/Skip-to-main-content",
+      "route": "/workforce/open-shifts",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/timeclock/button/Clock-In",
+      "route": "/workforce/timeclock",
+      "controlType": "button",
+      "label": "Clock In",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/timeclock/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/timeclock",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/cashier//workforce/timeclock/link/Skip-to-main-content",
+      "route": "/workforce/timeclock",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    }
+  ]
+}

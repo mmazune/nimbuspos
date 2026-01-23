@@ -369,6 +369,7 @@ export default function AnalyticsPage() {
           tabIndex={view === 'overview' ? 0 : -1}
           variant={view === 'overview' ? 'default' : 'outline'}
           onClick={() => setView('overview')}
+          data-testid="analytics-tab-overview"
         >
           Overview
         </Button>
@@ -380,6 +381,7 @@ export default function AnalyticsPage() {
           tabIndex={view === 'branches' ? 0 : -1}
           variant={view === 'branches' ? 'default' : 'outline'}
           onClick={() => setView('branches')}
+          data-testid="analytics-tab-branches"
         >
           By Branch
         </Button>
@@ -391,6 +393,7 @@ export default function AnalyticsPage() {
           tabIndex={view === 'financial' ? 0 : -1}
           variant={view === 'financial' ? 'default' : 'outline'}
           onClick={() => setView('financial')}
+          data-testid="analytics-tab-financial"
         >
           Financial
         </Button>
@@ -402,6 +405,7 @@ export default function AnalyticsPage() {
           tabIndex={view === 'risk' ? 0 : -1}
           variant={view === 'risk' ? 'default' : 'outline'}
           onClick={() => setView('risk')}
+          data-testid="analytics-tab-risk"
         >
           Risk
         </Button>
@@ -413,6 +417,7 @@ export default function AnalyticsPage() {
           tabIndex={view === 'franchise' ? 0 : -1}
           variant={view === 'franchise' ? 'default' : 'outline'}
           onClick={() => setView('franchise')}
+          data-testid="analytics-tab-franchise"
         >
           Franchise
         </Button>
@@ -445,6 +450,7 @@ export default function AnalyticsPage() {
                   size="sm"
                   variant="outline"
                   onClick={() => setQuickRange(7)}
+                  data-testid="date-preset-7d"
                 >
                   Last 7 days
                 </Button>
@@ -452,6 +458,7 @@ export default function AnalyticsPage() {
                   size="sm"
                   variant="outline"
                   onClick={() => setQuickRange(30)}
+                  data-testid="date-preset-30d"
                 >
                   Last 30 days
                 </Button>
@@ -459,6 +466,7 @@ export default function AnalyticsPage() {
                   size="sm"
                   variant="outline"
                   onClick={() => setQuickRange(90)}
+                  data-testid="date-preset-90d"
                 >
                   Last 90 days
                 </Button>

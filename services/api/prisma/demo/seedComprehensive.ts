@@ -27,6 +27,9 @@ import { seedTapasInventory } from './tapas/inventory';
 import { seedCafesserieInventory } from './cafesserie/inventory';
 import { seedInventoryLocations } from './seedLocations';
 import { seedInventoryPostingMappings } from './seedPostingMappings';
+import { seedPosReceipts, seedCustomerReceipts } from './seedPosReceipts';
+import { seedInventoryGaps } from './seedInventoryGaps'; // M76: Depletions + COGS
+import { seedPrepItems } from './seedPrepItems'; // M80: Prep Items
 
 // Deterministic IDs for comprehensive data
 const TABLE_IDS = {
@@ -83,6 +86,31 @@ const SUPPLIER_IDS = {
     '00000000-0000-4000-8000-000000003101',
     '00000000-0000-4000-8000-000000003102',
     '00000000-0000-4000-8000-000000003103',
+  ],
+};
+
+// M33: Procurement IDs for purchase orders and goods receipts
+const PO_IDS = {
+  TAPAS: [
+    '00000000-0000-4000-8000-000000004001',
+    '00000000-0000-4000-8000-000000004002',
+    '00000000-0000-4000-8000-000000004003',
+  ],
+  CAFESSERIE: [
+    '00000000-0000-4000-8000-000000004101',
+    '00000000-0000-4000-8000-000000004102',
+    '00000000-0000-4000-8000-000000004103',
+  ],
+};
+
+const GR_IDS = {
+  TAPAS: [
+    '00000000-0000-4000-8000-000000005001',
+    '00000000-0000-4000-8000-000000005002',
+  ],
+  CAFESSERIE: [
+    '00000000-0000-4000-8000-000000005101',
+    '00000000-0000-4000-8000-000000005102',
   ],
 };
 
@@ -480,6 +508,322 @@ async function seedSuppliers(prisma: PrismaClient): Promise<void> {
     });
   }
   console.log(`  ✅ Created ${suppliers.length} suppliers`);
+}
+
+/**
+ * M33: Seed procurement data - Purchase Orders + Goods Receipts
+ */
+async function seedProcurement(prisma: PrismaClient): Promise<void> {
+  console.log('\n📋 Seeding Procurement (POs + GRs)...');
+
+  // Get inventory items for both orgs to reference in PO lines
+  const tapasItems = await prisma.inventoryItem.findMany({
+    where: { orgId: ORG_TAPAS_ID },
+    take: 10,
+    orderBy: { sku: 'asc' },
+  });
+
+  const cafeItems = await prisma.inventoryItem.findMany({
+    where: { orgId: ORG_CAFESSERIE_ID },
+    take: 10,
+    orderBy: { sku: 'asc' },
+  });
+
+  if (tapasItems.length < 3 || cafeItems.length < 3) {
+    console.log('  ⚠️ Not enough inventory items, skipping procurement seeding');
+    return;
+  }
+
+  const now = new Date();
+  const oneWeekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
+  const twoWeeksAgo = new Date(now.getTime() - 14 * 24 * 60 * 60 * 1000);
+
+  // Tapas POs: 1 RECEIVED, 1 PLACED (open), 1 DRAFT
+  const tapasPOs = [
+    {
+      id: PO_IDS.TAPAS[0],
+      orgId: ORG_TAPAS_ID,
+      branchId: BRANCH_TAPAS_MAIN_ID,
+      vendorId: `00000000-0000-4000-8000-v0001001`, // M73: Fresh Farms Produce vendor
+      poNumber: 'PO-TAP-0001',
+      status: 'received',
+      totalAmount: 2500000, // 2.5M UGX
+      placedAt: twoWeeksAgo,
+    },
+    {
+      id: PO_IDS.TAPAS[1],
+      orgId: ORG_TAPAS_ID,
+      branchId: BRANCH_TAPAS_MAIN_ID,
+      vendorId: `00000000-0000-4000-8000-v0001002`, // M73: Uganda Beverages vendor
+      poNumber: 'PO-TAP-0002',
+      status: 'placed',
+      totalAmount: 1800000, // 1.8M UGX - open
+      placedAt: oneWeekAgo,
+    },
+    {
+      id: PO_IDS.TAPAS[2],
+      orgId: ORG_TAPAS_ID,
+      branchId: BRANCH_TAPAS_MAIN_ID,
+      vendorId: `00000000-0000-4000-8000-v0001004`, // M73: East African Meats vendor
+      poNumber: 'PO-TAP-0003',
+      status: 'draft',
+      totalAmount: 950000, // 950K UGX - draft
+      placedAt: null,
+    },
+  ];
+
+  // Cafesserie POs: 1 RECEIVED, 1 PLACED (open), 1 DRAFT
+  const cafePOs = [
+    {
+      id: PO_IDS.CAFESSERIE[0],
+      orgId: ORG_CAFESSERIE_ID,
+      branchId: BRANCH_CAFE_VILLAGE_MALL_ID,
+      vendorId: `00000000-0000-4000-8000-v0002001`, // M73: Fresh Farms Produce vendor
+      poNumber: 'PO-CAF-0001',
+      status: 'received',
+      totalAmount: 3200000, // 3.2M UGX
+      placedAt: twoWeeksAgo,
+    },
+    {
+      id: PO_IDS.CAFESSERIE[1],
+      orgId: ORG_CAFESSERIE_ID,
+      branchId: BRANCH_CAFE_VILLAGE_MALL_ID,
+      vendorId: `00000000-0000-4000-8000-v0002003`, // M73: Kampala Cleaning Supplies vendor
+      poNumber: 'PO-CAF-0002',
+      status: 'placed',
+      totalAmount: 1500000, // 1.5M UGX - open
+      placedAt: oneWeekAgo,
+    },
+    {
+      id: PO_IDS.CAFESSERIE[2],
+      orgId: ORG_CAFESSERIE_ID,
+      branchId: BRANCH_CAFE_ACACIA_MALL_ID,
+      vendorId: `00000000-0000-4000-8000-v0002002`, // M73: Uganda Beverages vendor
+      poNumber: 'PO-CAF-0003',
+      status: 'draft',
+      totalAmount: 780000, // 780K UGX - draft
+      placedAt: null,
+    },
+  ];
+
+  // Get owner user IDs for createdById
+  const tapasOwner = await prisma.user.findFirst({
+    where: { orgId: ORG_TAPAS_ID, roleLevel: 'L5' },
+  });
+  const cafeOwner = await prisma.user.findFirst({
+    where: { orgId: ORG_CAFESSERIE_ID, roleLevel: 'L5' },
+  });
+
+  if (!tapasOwner || !cafeOwner) {
+    console.log('  ⚠️  Owners not found, skipping procurement');
+    return;
+  }
+
+  // Create POs (M73: Use purchaseOrderV2)
+  for (const po of [...tapasPOs, ...cafePOs]) {
+    const ownerId = po.orgId === ORG_TAPAS_ID ? tapasOwner.id : cafeOwner.id;
+    await prisma.purchaseOrderV2.upsert({
+      where: { id: po.id },
+      update: {},
+      create: {
+        id: po.id,
+        orgId: po.orgId,
+        branchId: po.branchId,
+        vendorId: po.vendorId, // M73: Use vendorId from data structure
+        poNumber: po.poNumber,
+        status: po.status === 'received' ? 'APPROVED' : (po.status === 'draft' ? 'DRAFT' : 'SUBMITTED'),
+        totalAmount: po.totalAmount,
+        expectedAt: po.placedAt || oneWeekAgo,
+        createdById: ownerId,
+        approvedById: po.status === 'received' ? ownerId : null,
+        approvedAt: po.status === 'received' ? oneWeekAgo : null,
+      },
+    });
+  }
+  console.log(`  ✅ Created ${tapasPOs.length + cafePOs.length} purchase orders (V2)`);
+
+  // Create PO Items (3 items per PO)
+  const poItemId = (poIdx: number, itemIdx: number) =>
+    `00000000-0000-4000-8000-0000000060${String(poIdx).padStart(2, '0')}${itemIdx}`;
+
+  // Get or create default UOM for both orgs
+  const tapasUom = await prisma.unitOfMeasure.upsert({
+    where: { orgId_code: { orgId: ORG_TAPAS_ID, code: 'pcs' } },
+    update: {},
+    create: { orgId: ORG_TAPAS_ID, code: 'pcs', name: 'Pieces', symbol: 'pcs' },
+  });
+  const cafeUom = await prisma.unitOfMeasure.upsert({
+    where: { orgId_code: { orgId: ORG_CAFESSERIE_ID, code: 'pcs' } },
+    update: {},
+    create: { orgId: ORG_CAFESSERIE_ID, code: 'pcs', name: 'Pieces', symbol: 'pcs' },
+  });
+
+  // Tapas PO items (M73: Use purchaseOrderLineV2)
+  for (let p = 0; p < tapasPOs.length; p++) {
+    for (let i = 0; i < 3; i++) {
+      const item = tapasItems[p * 3 + i] || tapasItems[i];
+      await prisma.purchaseOrderLineV2.upsert({
+        where: { id: poItemId(p, i) },
+        update: {},
+        create: {
+          id: poItemId(p, i),
+          purchaseOrderId: tapasPOs[p].id,
+          itemId: item.id,
+          qtyOrderedInput: 50 + i * 10,
+          inputUomId: tapasUom.id,
+          qtyOrderedBase: 50 + i * 10,
+          unitCost: 15000 + i * 2000,
+          qtyReceivedBase: p === 0 ? (50 + i * 10) * 0.8 : 0, // First PO partially received
+        },
+      });
+    }
+  }
+
+  // Cafesserie PO items (M73: Use purchaseOrderLineV2)
+  for (let p = 0; p < cafePOs.length; p++) {
+    for (let i = 0; i < 3; i++) {
+      const item = cafeItems[p * 3 + i] || cafeItems[i];
+      await prisma.purchaseOrderLineV2.upsert({
+        where: { id: poItemId(10 + p, i) },
+        update: {},
+        create: {
+          id: poItemId(10 + p, i),
+          purchaseOrderId: cafePOs[p].id,
+          itemId: item.id,
+          qtyOrderedInput: 30 + i * 5,
+          inputUomId: cafeUom.id,
+          qtyOrderedBase: 30 + i * 5,
+          unitCost: 20000 + i * 3000,
+          qtyReceivedBase: p === 0 ? (30 + i * 5) * 0.8 : 0, // First PO partially received
+        },
+      });
+    }
+  }
+  console.log('  ✅ Created PO line items (V2)');
+
+  // Create Goods Receipts for RECEIVED POs only (M73: Use GoodsReceiptV2)
+  const tapasGRs = [
+    {
+      id: GR_IDS.TAPAS[0],
+      orgId: ORG_TAPAS_ID,
+      branchId: BRANCH_TAPAS_MAIN_ID,
+      purchaseOrderId: PO_IDS.TAPAS[0], // received PO
+      receiptNumber: 'GR-TAP-0001',
+      status: 'DRAFT' as const, // M73: Add required status field
+      receivedAt: oneWeekAgo,
+      referenceNumber: 'REF-TAP-001',
+      notes: 'Initial stock delivery',
+    },
+    {
+      id: GR_IDS.TAPAS[1],
+      orgId: ORG_TAPAS_ID,
+      branchId: BRANCH_TAPAS_MAIN_ID,
+      purchaseOrderId: PO_IDS.TAPAS[1], // M73: V2 requires purchaseOrderId (not nullable)
+      receiptNumber: 'GR-TAP-0002',
+      status: 'DRAFT' as const,
+      receivedAt: now,
+      referenceNumber: 'REF-TAP-002',
+      notes: 'Direct receipt',
+    },
+  ];
+
+  const cafeGRs = [
+    {
+      id: GR_IDS.CAFESSERIE[0],
+      orgId: ORG_CAFESSERIE_ID,
+      branchId: BRANCH_CAFE_VILLAGE_MALL_ID,
+      purchaseOrderId: PO_IDS.CAFESSERIE[0], // received PO
+      receiptNumber: 'GR-CAF-0001',
+      status: 'DRAFT' as const,
+      receivedAt: oneWeekAgo,
+      referenceNumber: 'REF-CAF-001',
+      notes: 'Village Mall delivery',
+    },
+    {
+      id: GR_IDS.CAFESSERIE[1],
+      orgId: ORG_CAFESSERIE_ID,
+      branchId: BRANCH_CAFE_ACACIA_MALL_ID,
+      purchaseOrderId: PO_IDS.CAFESSERIE[1], // Acacia delivery
+      receiptNumber: 'GR-CAF-0002',
+      status: 'DRAFT' as const,
+      receivedAt: now,
+      referenceNumber: 'REF-CAF-002',
+      notes: 'Acacia Mall direct receipt',
+    },
+  ];
+
+  for (const gr of [...tapasGRs, ...cafeGRs]) {
+    await prisma.goodsReceiptV2.upsert({
+      where: { id: gr.id },
+      update: {},
+      create: gr,
+    });
+  }
+  console.log(`  ✅ Created ${tapasGRs.length + cafeGRs.length} goods receipts (V2)`);
+
+  // Get inventory locations
+  const tapasLoc = await prisma.inventoryLocation.findFirst({
+    where: { branchId: BRANCH_TAPAS_MAIN_ID, name: 'Main Storage' },
+  });
+  const cafeLoc = await prisma.inventoryLocation.findFirst({
+    where: { branchId: BRANCH_CAFE_VILLAGE_MALL_ID, name: 'Main Storage' },
+  });
+
+  if (!tapasLoc || !cafeLoc) {
+    console.log('  ⚠️  Locations not found, skipping GR lines');
+    return;
+  }
+
+  // Create GR Lines (M73: Use goodsReceiptLineV2)
+  const grLineId = (grIdx: number, itemIdx: number) =>
+    `00000000-0000-4000-8000-0000000070${String(grIdx).padStart(2, '0')}${itemIdx}`;
+
+  for (let g = 0; g < tapasGRs.length; g++) {
+    for (let i = 0; i < 3; i++) {
+      const item = tapasItems[g * 3 + i] || tapasItems[i];
+      const poLineId = poItemId(g, i);
+      await prisma.goodsReceiptLineV2.upsert({
+        where: { id: grLineId(g, i) },
+        update: {},
+        create: {
+          id: grLineId(g, i),
+          goodsReceiptId: tapasGRs[g].id,
+          itemId: item.id,
+          locationId: tapasLoc.id,
+          poLineId: poLineId,
+          qtyReceivedInput: 40 + i * 5,
+          inputUomId: tapasUom.id,
+          qtyReceivedBase: 40 + i * 5,
+          unitCost: 15000 + i * 2000,
+          notes: `Batch ${g}-${i}`,
+        },
+      });
+    }
+  }
+
+  for (let g = 0; g < cafeGRs.length; g++) {
+    for (let i = 0; i < 3; i++) {
+      const item = cafeItems[g * 3 + i] || cafeItems[i];
+      const poLineId = poItemId(10 + g, i);
+      await prisma.goodsReceiptLineV2.upsert({
+        where: { id: grLineId(10 + g, i) },
+        update: {},
+        create: {
+          id: grLineId(10 + g, i),
+          goodsReceiptId: cafeGRs[g].id,
+          itemId: item.id,
+          locationId: cafeLoc.id,
+          poLineId: poLineId,
+          qtyReceivedInput: 25 + i * 3,
+          inputUomId: cafeUom.id,
+          qtyReceivedBase: 25 + i * 3,
+          unitCost: 20000 + i * 3000,
+          notes: `Batch C${g}-${i}`,
+        },
+      });
+    }
+  }
+  console.log('  ✅ Created GR line items (V2)');
 }
 
 /**
@@ -1628,12 +1972,17 @@ export async function seedComprehensive(prisma: PrismaClient): Promise<void> {
     await seedTables(prisma);
     await seedReservations(prisma);
     await seedSuppliers(prisma);
+    await seedInventoryLocations(prisma); // M74: MOVED BEFORE procurement (GR lines need locations)
+    await seedProcurement(prisma);        // M33: POs + GRs
     await seedServiceProviders(prisma);
-    await seedInventoryLocations(prisma); // NEW: Inventory locations for waste/receipts
     await seedInventoryPostingMappings(prisma); // NEW: GL posting mappings for inventory
     await seedInventory(prisma);          // NEW: Inventory items + stock batches
+    await seedPrepItems(prisma);          // M80: Prep items
     await seedCompletedOrders(prisma);
     await seedLiveOrders(prisma);         // NEW: OPEN orders for POS
+    await seedInventoryGaps(prisma);      // M76: Depletions + COGS breakdowns (depends on orders + inventory)
+    await seedPosReceipts(prisma);        // M32: POS receipts for closed orders
+    await seedCustomerReceipts(prisma);   // M32: Customer receipts for AR
     await seedJournalEntries(prisma);
     await seedEmployeeProfiles(prisma);
     await seedTimeEntries(prisma);

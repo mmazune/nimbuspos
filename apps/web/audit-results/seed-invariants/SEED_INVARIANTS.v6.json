@@ -1,0 +1,88 @@
+[
+  {
+    "id": "INV-V6-1",
+    "name": "Recipes visible to Chef > 0",
+    "org": "tapas",
+    "passed": true,
+    "value": 100,
+    "expected": "> 0"
+  },
+  {
+    "id": "INV-V6-2",
+    "name": "Valuation endpoint returns rows with cost layers",
+    "org": "tapas",
+    "passed": false,
+    "value": "0 lines, $0.00",
+    "expected": "> 0 lines",
+    "details": "No valuation lines found"
+  },
+  {
+    "id": "INV-V6-3",
+    "name": "COGS endpoint returns valid breakdown structure",
+    "org": "tapas",
+    "passed": true,
+    "value": "0 lines, $0.00",
+    "expected": "valid structure with lines"
+  },
+  {
+    "id": "INV-V6-4",
+    "name": "Recipe lines have non-zero cost (via inventory WAC)",
+    "org": "tapas",
+    "passed": false,
+    "value": "0/5 items with cost",
+    "expected": "> 0 items with cost",
+    "details": "checked 18 lines across 10 recipes"
+  },
+  {
+    "id": "INV-V6-5",
+    "name": "Low-stock ingredient exists in recipe linkage",
+    "org": "tapas",
+    "passed": true,
+    "value": "38 linked / 158 low-stock",
+    "expected": "structure check",
+    "details": "linked items: Absolut Vodka Citron 1Ltr, Absolut Vodka Raspberry 1Lt, Absolut Vodka Vanilla 1Lt..."
+  },
+  {
+    "id": "INV-V6-1",
+    "name": "Recipes visible to Chef > 0",
+    "org": "cafesserie",
+    "passed": true,
+    "value": 80,
+    "expected": "> 0"
+  },
+  {
+    "id": "INV-V6-2",
+    "name": "Valuation endpoint returns rows with cost layers",
+    "org": "cafesserie",
+    "passed": false,
+    "value": "0 lines, $0.00",
+    "expected": "> 0 lines",
+    "details": "No valuation lines found"
+  },
+  {
+    "id": "INV-V6-3",
+    "name": "COGS endpoint returns valid breakdown structure",
+    "org": "cafesserie",
+    "passed": true,
+    "value": "0 lines, $0.00",
+    "expected": "valid structure with lines"
+  },
+  {
+    "id": "INV-V6-4",
+    "name": "Recipe lines have non-zero cost (via inventory WAC)",
+    "org": "cafesserie",
+    "passed": false,
+    "value": "0/5 items with cost",
+    "expected": "> 0 items with cost",
+    "details": "checked 34 lines across 10 recipes"
+  },
+  {
+    "id": "INV-V6-5",
+    "name": "Low-stock ingredient exists in recipe linkage",
+    "org": "cafesserie",
+    "passed": true,
+    "value": "46 linked / 77 low-stock",
+    "expected": "structure check",
+    "details": "linked items: All-Purpose Flour, Apples, Avocado..."
+  }
+]

@@ -264,6 +264,7 @@ export default function ReservationsPage() {
                 size="sm"
                 variant={statusFilter === 'ALL' ? 'default' : 'outline'}
                 onClick={() => setStatusFilter('ALL')}
+                data-testid="reservation-filter-all"
               >
                 All
               </Button>
@@ -271,6 +272,7 @@ export default function ReservationsPage() {
                 size="sm"
                 variant={statusFilter === 'HELD' ? 'default' : 'outline'}
                 onClick={() => setStatusFilter('HELD')}
+                data-testid="reservation-filter-held"
               >
                 Held
               </Button>
@@ -278,6 +280,7 @@ export default function ReservationsPage() {
                 size="sm"
                 variant={statusFilter === 'CONFIRMED' ? 'default' : 'outline'}
                 onClick={() => setStatusFilter('CONFIRMED')}
+                data-testid="reservation-filter-confirmed"
               >
                 Confirmed
               </Button>
@@ -285,6 +288,7 @@ export default function ReservationsPage() {
                 size="sm"
                 variant={statusFilter === 'SEATED' ? 'default' : 'outline'}
                 onClick={() => setStatusFilter('SEATED')}
+                data-testid="reservation-filter-seated"
               >
                 Seated
               </Button>

@@ -20,12 +20,13 @@ import {
   OrgId,
   RoleId,
   ROLE_CONFIGS,
-  getRolesForOrg,
   createEmptyAuditResult,
   calculateSummary,
+  getBoundedConfig,
 } from './types';
-import { loginAsRole, logout, waitForPageReady } from './login';
-import { discoverRoutes, visitRoute } from './crawler';
+import { loginAsRole, logout, loginWithCache, blockNonEssentialResources } from './login';
+import { discoverRoutes, visitRoute, visitRouteQuick } from './crawler';
+import { verifyLandingPage, formatVisibilityResult, VisibilityResult } from './visibility';
 
 // =============================================================================
 // Configuration
@@ -199,6 +200,23 @@ function generateMarkdownReport(result: RoleAuditResult): string {
     }
   }
 
+  // M11: Add visibility checks section
+  if (result.visibilityChecks && result.visibilityChecks.length > 0) {
+    const visStatus = result.visibilityFailed === 0 ? '✅' : '⚠️';
+    md += `
+---
+
+## Landing Page Visibility Checks ${visStatus}
+
+| Check | Status | Details |
+|-------|--------|---------|
+`;
+    for (const check of result.visibilityChecks) {
+      const icon = check.passed ? '✅' : '❌';
+      md += `| ${check.name} | ${icon} | ${check.message || '-'} |\n`;
+    }
+  }
+
   md += `
 ---
 
@@ -235,8 +253,11 @@ test.describe('Role Audit Harness', () => {
         fs.mkdirSync(screenshotDir, { recursive: true });
       }
 
-      // Login
-      const loginResult = await loginAsRole(page, config);
+      // M30: Block non-essential resources (images, media, fonts) for speed
+      await blockNonEssentialResources(page);
+
+      // M30: Login with storage state caching for speed + stability
+      const loginResult = await loginWithCache(page, config);
       result.loginSuccess = loginResult.success;
 
       if (!loginResult.success) {
@@ -254,24 +275,59 @@ test.describe('Role Audit Harness', () => {
         return;
       }
 
+      // M11: Run visibility checks on landing page
+      let visibilityResult: VisibilityResult | undefined;
+      try {
+        visibilityResult = await verifyLandingPage(page, config);
+        result.visibilityChecks = visibilityResult.checks;
+        result.visibilityPassed = visibilityResult.passed;
+        result.visibilityFailed = visibilityResult.failed;
+        console.log(formatVisibilityResult(visibilityResult));
+      } catch (err) {
+        console.log(`[Visibility] Check failed: ${err instanceof Error ? err.message : String(err)}`);
+      }
+
       // Discover routes
       const routes = await discoverRoutes(page);
+
+      // M28: Get bounded config and log mode
+      const boundedConfig = getBoundedConfig();
+      console.log(`[Config] Audit mode: ${boundedConfig.mode}, maxRoutesPerRole: ${boundedConfig.maxRoutesPerRole}`);
+
+      // M28: Limit routes in bounded mode
+      const routesToVisit = boundedConfig.mode === 'bounded' 
+        ? routes.slice(0, boundedConfig.maxRoutesPerRole)
+        : routes;
 
       // Time budget: leave 30s for cleanup (logout, finalize, write)
       const testStartTime = new Date(result.startedAt).getTime();
       const maxTestDuration = 180_000; // 180s (leaving 30s buffer from 210s timeout)
 
-      // Visit each route
-      for (const route of routes) {
+      // Track routes visited in Phase 1 for Phase 2 skip detection
+      const visitedRoutes = new Set<string>();
+
+      // M28: Track fingerprints and total clicks for bounded mode
+      const seenFingerprints = new Set<string>();
+      let totalClicks = 0;
+      let totalRedundant = 0;
+
+      // =========================================================================
+      // Phase 1: Full crawl with safe-click exploration
+      // =========================================================================
+      let phase1Exhausted = false;
+
+      for (const route of routesToVisit) {
         // Check time budget - stop if we're running low
         const elapsed = Date.now() - testStartTime;
         if (elapsed > maxTestDuration) {
-          console.log(`[TimeLimit] Stopping route crawl at ${elapsed}ms - time budget exhausted`);
-          result.failures.push({
-            route: route,
-            type: 'route-error',
-            message: `Skipped due to time budget (${elapsed}ms elapsed)`,
-          });
+          console.log(`[Phase1] Stopping route crawl at ${elapsed}ms - entering Phase 2`);
+          phase1Exhausted = true;
+          break;
+        }
+
+        // M28: Check bounded mode per-role click cap
+        if (boundedConfig.mode === 'bounded' && totalClicks >= boundedConfig.maxTotalClicksPerRole) {
+          console.log(`[Bounded] Per-role click cap (${boundedConfig.maxTotalClicksPerRole}) reached, stopping Phase 1`);
           break;
         }
 
@@ -285,12 +341,21 @@ test.describe('Role Audit Harness', () => {
           break;
         }
 
-        const { visit, controls, endpoints, failures, screenshot } = await visitRoute(
+        const { visit, controls, endpoints, failures, screenshot, totalClicksAfter, redundantCount } = await visitRoute(
           page,
           route,
-          screenshotDir
+          screenshotDir,
+          config.role, // M16: Pass role for expected-forbidden classification
+          boundedConfig, // M28: Pass bounded config
+          seenFingerprints, // M28: Pass fingerprint set
+          totalClicks // M28: Pass current click count
         );
 
+        // M28: Update click tracking
+        totalClicks = totalClicksAfter;
+        totalRedundant += redundantCount;
+
+        visitedRoutes.add(route);
         result.routesVisited.push(visit);
         result.controlsClicked.push(...controls);
 
@@ -324,6 +389,67 @@ test.describe('Role Audit Harness', () => {
         }
       }
 
+      // =========================================================================
+      // Phase 2: Quick visit skipped routes (M18)
+      // =========================================================================
+      if (phase1Exhausted) {
+        const skippedRoutes = routes.filter((r) => !visitedRoutes.has(r));
+        console.log(`[Phase2] ${skippedRoutes.length} routes skipped in Phase 1, attempting quick visits...`);
+
+        for (const route of skippedRoutes) {
+          // Check overall time budget - stop if we're at 195s (leaving 15s for cleanup)
+          const elapsed = Date.now() - testStartTime;
+          if (elapsed > 195_000) {
+            console.log(`[Phase2] Time budget exhausted at ${elapsed}ms, recording remaining as skipped`);
+            result.failures.push({
+              route: route,
+              type: 'route-skipped-time-limit',
+              message: `Skipped due to time budget (${elapsed}ms elapsed)`,
+            });
+            continue; // Record remaining as skipped
+          }
+
+          // Check if page is still valid
+          try {
+            if (page.isClosed()) {
+              console.log(`[Phase2] Page context closed, stopping quick visits`);
+              break;
+            }
+          } catch {
+            break;
+          }
+
+          console.log(`[Phase2] Quick visiting: ${route}`);
+          const { visit, endpoints, failures, screenshot } = await visitRouteQuick(
+            page,
+            route,
+            screenshotDir,
+            config.role
+          );
+
+          visitedRoutes.add(route);
+          result.routesVisited.push(visit);
+
+          // Merge endpoints
+          for (const ep of endpoints) {
+            const existing = result.endpoints.find(
+              (e) => e.method === ep.method && e.path === ep.path
+            );
+            if (existing) {
+              existing.count += ep.count;
+            } else {
+              result.endpoints.push(ep);
+            }
+          }
+
+          result.failures.push(...failures);
+
+          if (screenshot) {
+            result.screenshots.push(screenshot);
+          }
+        }
+      }
+
       // Logout (wrapped in try-catch as page might be closed)
       try {
         if (!page.isClosed()) {
@@ -337,17 +463,22 @@ test.describe('Role Audit Harness', () => {
       result.completedAt = new Date().toISOString();
       result.durationMs = Date.now() - new Date(result.startedAt).getTime();
       result.summary = calculateSummary(result);
+      // M28: Add redundant count to summary
+      result.summary.controlsRedundant = totalRedundant;
 
       // Write result
       writeAuditResult(result);
 
       // Log summary (soft assertions - don't fail, just log)
       console.log(`\n=== ${config.org}/${config.role} Audit Complete ===`);
+      console.log(`Mode: ${boundedConfig.mode}`);
       console.log(`Login: ${result.loginSuccess ? 'SUCCESS' : 'FAILED'}`);
       console.log(`Routes: ${result.summary.routesSuccess}/${result.summary.routesTotal} success`);
       console.log(`Route Errors: ${result.summary.routesError}`);
+      console.log(`Controls Clicked: ${result.summary.controlsClicked} (${totalRedundant} redundant fingerprints)`);
       console.log(`Endpoints: ${result.summary.endpointsHit}`);
       console.log(`5xx Errors: ${result.summary.endpoints5xx}`);
+      console.log(`Visibility: ${result.visibilityPassed ?? 0}/${(result.visibilityChecks?.length) ?? 0} checks passed`);
       console.log(`Failures: ${result.summary.failuresTotal}`);
       console.log(`Report: audit-results/${config.org}_${config.role}.md`);
 

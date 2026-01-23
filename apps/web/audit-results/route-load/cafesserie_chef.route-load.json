@@ -1,0 +1,37 @@
+{
+  "org": "cafesserie",
+  "role": "chef",
+  "email": "chef@cafesserie.demo.local",
+  "generatedAt": "2026-01-20T04:08:32.969Z",
+  "durationMs": 9117,
+  "summary": {
+    "routesVisited": 1,
+    "routesWithEndpoints": 1,
+    "routesNoEndpoints": 0,
+    "routesFailed": 0,
+    "totalApiCalls": 2,
+    "uniqueEndpoints": 2
+  },
+  "routes": [
+    {
+      "route": "/launch",
+      "actionId": "route-load::cafesserie::chef::/launch",
+      "loadTimeMs": 2746,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768882111923
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768882111948
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}

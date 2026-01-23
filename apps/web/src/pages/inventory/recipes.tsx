@@ -282,7 +282,7 @@ export default function RecipesPage() {
                 title="Recipes (BOM)"
                 subtitle="Manage recipes and bills of materials for menu items"
                 actions={
-                    <Button onClick={handleOpenCreate}>
+                    <Button onClick={handleOpenCreate} data-testid="recipe-create-btn">
                         <Plus className="mr-2 h-4 w-4" />
                         Create Recipe
                     </Button>

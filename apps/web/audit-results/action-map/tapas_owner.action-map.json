@@ -1,0 +1,7356 @@
+{
+  "org": "tapas",
+  "role": "owner",
+  "email": "owner@tapas.demo.local",
+  "generatedAt": "2026-01-23T02:12:39.937Z",
+  "durationMs": 222443,
+  "summary": {
+    "total": 383,
+    "hasEndpoints": 61,
+    "noNetworkEffect": 67,
+    "skipped": 255,
+    "uniqueEndpoints": 41,
+    "attributionPercent": 33.4,
+    "mutationBlockingEnabled": true,
+    "totalBlockedMutations": 0,
+    "controlsWithBlockedMutations": 0
+  },
+  "controls": [
+    {
+      "actionKey": "tapas/owner//analytics/button/Switch-to-dark-mode",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/button/User-menu-for-Joshua-Owner",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/button/Overview",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Overview",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/button/By-Branch",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "By Branch",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/button/Financial",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Financial",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/button/Risk",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Risk",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/risk-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/risk-events",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/button/Franchise",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Franchise",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/button/Last-7-days",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 7 days",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/button/Last-30-days",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 30 days",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/button/Last-90-days",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Last 90 days",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/button/Open-Tanstack-query-devtools",
+      "route": "/analytics",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Skip-to-main-content",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/franchise/branch-metrics",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Go-to-workspace-home",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Dashboard",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Analytics",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Reports",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/POS",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Reservations",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Inventory",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Finance",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Service-Providers",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Staff",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Feedback",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Schedule",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Timeclock",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Approvals",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Swap-Approvals",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Labor-Reports",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Labor-Targets",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Staffing-Planner",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Staffing-Alerts",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Auto-Scheduler",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/My-Availability",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/My-Swaps",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Open-Shifts",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//analytics/link/Settings",
+      "route": "/analytics",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/button/Switch-to-dark-mode",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/button/User-menu-for-Joshua-Owner",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/button/Refresh-dashboard-data",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Refresh dashboard data",
+      "dataTestId": "dashboard-refresh-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/button/Select-7-Days-date-range",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 7 Days date range",
+      "dataTestId": "date-preset-7d",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/button/Select-30-Days-date-range",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 30 Days date range",
+      "dataTestId": "date-preset-30d",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/button/Select-90-Days-date-range",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Select 90 Days date range",
+      "dataTestId": "date-preset-90d",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/button/Open-Tanstack-query-devtools",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/button/View-Revenue-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Revenue details",
+      "dataTestId": "kpi-revenue",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/button/View-Gross-Margin-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Gross Margin details",
+      "dataTestId": "kpi-gross-margin",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/button/View-Low-Stock-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Low Stock details",
+      "dataTestId": "kpi-low-stock",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/levels",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/button/View-Payables-Due-details",
+      "route": "/dashboard",
+      "controlType": "button",
+      "label": "View Payables Due details",
+      "dataTestId": "kpi-payables-due",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Skip-to-main-content",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Go-to-workspace-home",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Dashboard",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Analytics",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Reports",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/POS",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Reservations",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Inventory",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/levels",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Finance",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Service-Providers",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders/summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers/contracts",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Staff",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Feedback",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Schedule",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Timeclock",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Approvals",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/status",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/entries",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Swap-Approvals",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 500
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 500
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Labor-Reports",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/reports/labor",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Labor-Targets",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/planning/targets",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Staffing-Planner",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Staffing-Alerts",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Auto-Scheduler",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/My-Availability",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/My-Swaps",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Open-Shifts",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Settings",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/Low-Stock-Items-26-26-items-below-reorder-level",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "Low Stock Items\n\n26\n\n26 items below reorder level",
+      "dataTestId": "alert-item-low-stock",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/levels",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/link/View-all",
+      "route": "/dashboard",
+      "controlType": "link",
+      "label": "View all",
+      "dataTestId": "top-items-view-all",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/input/Start-date",
+      "route": "/dashboard",
+      "controlType": "input",
+      "label": "Start date",
+      "dataTestId": "date-from-input",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//dashboard/input/End-date",
+      "route": "/dashboard",
+      "controlType": "input",
+      "label": "End date",
+      "dataTestId": "date-to-input",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/button/Switch-to-dark-mode",
+      "route": "/feedback",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/button/User-menu-for-Joshua-Owner",
+      "route": "/feedback",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/button/Open-Tanstack-query-devtools",
+      "route": "/feedback",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Skip-to-main-content",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Go-to-workspace-home",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Dashboard",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/financial-summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Analytics",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/forecast",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Reports",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/POS",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Reservations",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Inventory",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/levels",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Finance",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Service-Providers",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/service-providers",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders/summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers/contracts",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Staff",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Feedback",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Schedule",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Timeclock",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/status",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/entries",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Approvals",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Swap-Approvals",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 500
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 500
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Labor-Reports",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/reports/labor",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Labor-Targets",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/planning/targets",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Staffing-Planner",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Staffing-Alerts",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Auto-Scheduler",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/My-Availability",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/My-Swaps",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Open-Shifts",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//feedback/link/Settings",
+      "route": "/feedback",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//finance/button/Switch-to-dark-mode",
+      "route": "/finance",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//finance/button/User-menu-for-Joshua-Owner",
+      "route": "/finance",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//finance/button/Open-Tanstack-query-devtools",
+      "route": "/finance",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Control not found in DOM"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Skip-to-main-content",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Go-to-workspace-home",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Dashboard",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Analytics",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/franchise/budgets/variance",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Reports",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/POS",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Reservations",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Inventory",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/inventory",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/items",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/levels",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Finance",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Service-Providers",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers/contracts",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/finance/service-reminders/summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/service-providers",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Staff",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Feedback",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/feedback/analytics/nps-summary",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Schedule",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Timeclock",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/status",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/entries",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Approvals",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Swap-Approvals",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 500
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 500
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Labor-Reports",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/reports/labor",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Labor-Targets",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/planning/targets",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Staffing-Planner",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Staffing-Alerts",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Auto-Scheduler",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/orgs/branches",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/My-Availability",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/My-Swaps",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Open-Shifts",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "HAS_ENDPOINTS",
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200
+        },
+        {
+          "method": "GET",
+          "path": "/finance/budgets/summary",
+          "status": 200
+        }
+      ],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//finance/link/Settings",
+      "route": "/finance",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "NO_NETWORK_EFFECT",
+      "endpoints": [],
+      "reason": "No API calls triggered"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/button/Switch-to-dark-mode",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/button/User-menu-for-Joshua-Owner",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/button/All-Items",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "All Items",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/button/Low-Stock-Only",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "Low Stock Only",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/button/Edit",
+      "route": "/inventory",
+      "controlType": "button",
+      "label": "Edit",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Skip-to-main-content",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Go-to-workspace-home",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Dashboard",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Analytics",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Reports",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/POS",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Reservations",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Inventory",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Finance",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Service-Providers",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Staff",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Feedback",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Schedule",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Timeclock",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Approvals",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Swap-Approvals",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Labor-Reports",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Labor-Targets",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Staffing-Planner",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Staffing-Alerts",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Auto-Scheduler",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/My-Availability",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/My-Swaps",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Open-Shifts",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//inventory/link/Settings",
+      "route": "/inventory",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Switch-to-dark-mode",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/User-menu-for-Joshua-Owner",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/⤢-Kiosk-mode",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "⤢\nKiosk mode",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/ⓘ-Diagnostics",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "ⓘ\nDiagnostics",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Open-tabs-sidebar",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Open tabs sidebar",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/New-Order",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "New Order",
+      "dataTestId": "pos-new-order",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Walk-in-NEW-UGX-0-6:01:21-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 0\n6:01:21 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Walk-in-NEW-UGX-0-1:59:52-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 0\n1:59:52 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Walk-in-NEW-UGX-21,240-12:06:41-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 21,240\n12:06:41 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Walk-in-NEW-UGX-63,720-12:06:41-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nNEW\nUGX 63,720\n12:06:41 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Table-3-SERVED-UGX-108,560-12:02:53-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 3\nSERVED\nUGX 108,560\n12:02:53 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Table-8-NEW-UGX-81,420-11:54:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 8\nNEW\nUGX 81,420\n11:54:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Walk-in-SENT-UGX-102,660-11:06:41-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nSENT\nUGX 102,660\n11:06:41 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Takeaway-NEW-UGX-224,200-10:06:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 224,200\n10:06:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Walk-in-SENT-UGX-90,860-10:06:41-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nSENT\nUGX 90,860\n10:06:41 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Walk-in-SERVED-UGX-167,560-9:06:41-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Walk-in\nSERVED\nUGX 167,560\n9:06:41 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Table-3-NEW-UGX-195,880-8:39:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 3\nNEW\nUGX 195,880\n8:39:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Table-10-SENT-UGX-87,320-6:59:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 10\nSENT\nUGX 87,320\n6:59:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Takeaway-SERVED-UGX-128,620-4:04:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nSERVED\nUGX 128,620\n4:04:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Takeaway-SENT-UGX-120,360-1:47:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nSENT\nUGX 120,360\n1:47:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Table-5-SENT-UGX-231,280-1:22:53-PM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 5\nSENT\nUGX 231,280\n1:22:53 PM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Table-4-NEW-UGX-205,320-9:55:53-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 4\nNEW\nUGX 205,320\n9:55:53 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Takeaway-NEW-UGX-161,660-8:33:53-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 161,660\n8:33:53 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Table-3-NEW-UGX-101,480-8:06:53-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Table 3\nNEW\nUGX 101,480\n8:06:53 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Takeaway-NEW-UGX-71,980-5:44:53-AM",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Takeaway\nNEW\nUGX 71,980\n5:44:53 AM",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/All",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Beers-&-Ciders",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Beers & Ciders",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Breakfast",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Breakfast",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Burgers",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Burgers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Cocktails",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Cocktails",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Curries",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Curries",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Desserts",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Desserts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Extras-&-Sides",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Extras & Sides",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Fish",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Fish",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Flat-Breads",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Flat Breads",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Grills",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Grills",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Hot-Beverages",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Hot Beverages",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Milkshakes-&-Smoothies",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Milkshakes & Smoothies",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Mocktails",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Mocktails",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Pasta",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Pasta",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Salads",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Salads",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Sandwiches",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Sandwiches",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Soft-Drinks-&-Juices",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Soft Drinks & Juices",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Soups",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Soups",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Spirits---Brandy-&-Cognac",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Brandy & Cognac",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Spirits---Creams-&-Liqueurs",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Creams & Liqueurs",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Spirits---Gin",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Gin",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Spirits---Rum",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Rum",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Spirits---Tequila",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Tequila",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/button/Spirits---Vodka",
+      "route": "/pos",
+      "controlType": "button",
+      "label": "Spirits - Vodka",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Skip-to-main-content",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Go-to-workspace-home",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Dashboard",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Analytics",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Reports",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/POS",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Reservations",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Inventory",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Finance",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Service-Providers",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Staff",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Feedback",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Schedule",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Timeclock",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Approvals",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Swap-Approvals",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Labor-Reports",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Labor-Targets",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Staffing-Planner",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Staffing-Alerts",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Auto-Scheduler",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/My-Availability",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/My-Swaps",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Open-Shifts",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Settings",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//pos/link/Device:-Point-of-Sale",
+      "route": "/pos",
+      "controlType": "link",
+      "label": "Device: Point of Sale",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/button/Switch-to-dark-mode",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/button/User-menu-for-Joshua-Owner",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/button/Open-Tanstack-query-devtools",
+      "route": "/reports",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Skip-to-main-content",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Go-to-workspace-home",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Dashboard",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Analytics",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Reports",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/POS",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Reservations",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Inventory",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Finance",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Service-Providers",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Staff",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Feedback",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Schedule",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Timeclock",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Approvals",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Swap-Approvals",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Labor-Reports",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Labor-Targets",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Staffing-Planner",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Staffing-Alerts",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Auto-Scheduler",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/My-Availability",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/My-Swaps",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Open-Shifts",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Settings",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Sales-Franchise-Analytics-Sales,-margins,-rankings-and-multi-month-trends-across-all-branches.-CSV",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Sales\nFranchise Analytics\n\nSales, margins, rankings and multi-month trends across all branches.\n\nCSV",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Finance-Budgets-&-Variance-Budget-vs-actual-sales,-COGS-and-variance-across-branches.-CSV-export-P",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Finance\nBudgets & Variance\n\nBudget vs actual sales, COGS and variance across branches.\n\nCSV export\nP",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Operations-Inventory-&-Stock-Current-stock-levels,-low-stock-items,-wastage-and-shrinkage.",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Operations\nInventory & Stock\n\nCurrent stock levels, low-stock items, wastage and shrinkage.",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/HR-Staff-Insights-KPIs,-Employee-of-the-Month-awards-and-promotion-suggestions.",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "HR\nStaff Insights\n\nKPIs, Employee of the Month awards and promotion suggestions.",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Customer-Customer-Feedback-&-NPS-Promoters,-passives,-detractors-and-feedback-comments.",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Customer\nCustomer Feedback & NPS\n\nPromoters, passives, detractors and feedback comments.",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Admin-Report-Subscriptions-Manage-automated-delivery-of-shift-end-reports,-daily/weekly/monthly-dig",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Admin\nReport Subscriptions\n\nManage automated delivery of shift-end reports, daily/weekly/monthly dig",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Operations-Reservations-&-Events-Reservation-calendar,-deposits-and-event-management.",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Operations\nReservations & Events\n\nReservation calendar, deposits and event management.",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Tech-API-Usage-&-Webhooks-API-key-usage-metrics,-webhook-delivery-logs-and-failures.-Dev",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Tech\nAPI Usage & Webhooks\n\nAPI key usage metrics, webhook delivery logs and failures.\n\nDev",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reports/link/Finance-Finance-Overview-P&L-summary,-expense-tracking-and-service-provider-payables.",
+      "route": "/reports",
+      "controlType": "link",
+      "label": "Finance\nFinance Overview\n\nP&L summary, expense tracking and service provider payables.",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/button/Switch-to-dark-mode",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/button/User-menu-for-Joshua-Owner",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/button/⚙️-Policies",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "⚙️ Policies",
+      "dataTestId": "reservation-nav-policies",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/button/📅-Calendar-View",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "📅 Calendar View",
+      "dataTestId": "reservation-nav-calendar",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/button/All",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/button/Held",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Held",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/button/Confirmed",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Confirmed",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/button/Seated",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Seated",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/button/Open-Tanstack-query-devtools",
+      "route": "/reservations",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Skip-to-main-content",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Go-to-workspace-home",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Dashboard",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Analytics",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Reports",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/POS",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Reservations",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Inventory",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Finance",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Service-Providers",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Staff",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Feedback",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Schedule",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Timeclock",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Approvals",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Swap-Approvals",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Labor-Reports",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Labor-Targets",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Staffing-Planner",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Staffing-Alerts",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Auto-Scheduler",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/My-Availability",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/My-Swaps",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Open-Shifts",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//reservations/link/Settings",
+      "route": "/reservations",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/button/Switch-to-dark-mode",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/button/User-menu-for-Joshua-Owner",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/button/All",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/button/Active-Only",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Active Only",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/button/Edit",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Edit",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/button/Open-Tanstack-query-devtools",
+      "route": "/service-providers",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Skip-to-main-content",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Go-to-workspace-home",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Dashboard",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Analytics",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Reports",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/POS",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Reservations",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Inventory",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Finance",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Service-Providers",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Staff",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Feedback",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Schedule",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Timeclock",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Approvals",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Swap-Approvals",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Labor-Reports",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Labor-Targets",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Staffing-Planner",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Staffing-Alerts",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Auto-Scheduler",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/My-Availability",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/My-Swaps",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Open-Shifts",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//service-providers/link/Settings",
+      "route": "/service-providers",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/button/Switch-to-dark-mode",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Switch to dark mode",
+      "dataTestId": "theme-toggle-btn",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/button/User-menu-for-Joshua-Owner",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "User menu for Joshua Owner",
+      "dataTestId": "user-menu-trigger",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/button/Add-Employee",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Add Employee",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/button/All",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "All",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/button/Active",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Active",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/button/Inactive",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Inactive",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/button/Edit",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Edit",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/button/Previous",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Previous",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/button/Next",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Next",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/button/Open-Tanstack-query-devtools",
+      "route": "/staff",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Skip-to-main-content",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Go-to-workspace-home",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Go to workspace home",
+      "dataTestId": "sidebar-logo",
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Dashboard",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Dashboard",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Analytics",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Analytics",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Reports",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/POS",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "POS",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Reservations",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Reservations",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Inventory",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Inventory",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Finance",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Finance",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Service-Providers",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Service Providers",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Staff",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Staff",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Feedback",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Feedback",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Schedule",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Schedule",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Timeclock",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Timeclock",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Approvals",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Approvals",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Swap-Approvals",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Swap Approvals",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Labor-Reports",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Labor Reports",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Labor-Targets",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Labor Targets",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Staffing-Planner",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Staffing Planner",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Staffing-Alerts",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Staffing Alerts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Auto-Scheduler",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Auto-Scheduler",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/My-Availability",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "My Availability",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/My-Swaps",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "My Swaps",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Open-Shifts",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Open Shifts",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//staff/link/Settings",
+      "route": "/staff",
+      "controlType": "link",
+      "label": "Settings",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//workforce/approvals/button/All-Branches",
+      "route": "/workforce/approvals",
+      "controlType": "button",
+      "label": "All Branches",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//workforce/approvals/button/COMPLETED",
+      "route": "/workforce/approvals",
+      "controlType": "button",
+      "label": "COMPLETED",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//workforce/approvals/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/approvals",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//workforce/approvals/link/Skip-to-main-content",
+      "route": "/workforce/approvals",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//workforce/auto-scheduler/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/auto-scheduler",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//workforce/auto-scheduler/link/Skip-to-main-content",
+      "route": "/workforce/auto-scheduler",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//workforce/my-availability/button/Open-Tanstack-query-devtools",
+      "route": "/workforce/my-availability",
+      "controlType": "button",
+      "label": "Open Tanstack query devtools",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    },
+    {
+      "actionKey": "tapas/owner//workforce/my-availability/link/Skip-to-main-content",
+      "route": "/workforce/my-availability",
+      "controlType": "link",
+      "label": "Skip to main content",
+      "dataTestId": null,
+      "attribution": "SKIPPED",
+      "endpoints": [],
+      "reason": "Not yet visited"
+    }
+  ]
+}

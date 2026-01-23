@@ -60,21 +60,25 @@ export default function FeedbackPage() {
           label="Current NPS"
           value={data?.nps !== undefined ? Math.round(data.nps) : '—'}
           icon={<Star className="h-4 w-4" />}
+          data-testid="feedback-nps-score"
         />
         <StatCard
           label="Total Responses"
           value={data?.totalCount ?? '—'}
           icon={<ThumbsUp className="h-4 w-4" />}
+          data-testid="feedback-total-responses"
         />
         <StatCard
           label="Promoters"
           value={data?.promoterCount ?? '—'}
           icon={<ThumbsUp className="h-4 w-4 text-green-500" />}
+          data-testid="feedback-promoters"
         />
         <StatCard
           label="Detractors"
           value={data?.detractorCount ?? '—'}
           icon={<ThumbsDown className="h-4 w-4 text-red-500" />}
+          data-testid="feedback-detractors"
         />
       </div>
 

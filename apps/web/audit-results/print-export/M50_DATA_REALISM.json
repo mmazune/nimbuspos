@@ -1,0 +1,83 @@
+{
+  "timestamp": "2026-01-22T13:07:29.525Z",
+  "apiBase": "http://127.0.0.1:3001",
+  "checks": [
+    {
+      "name": "Receipts: Export endpoint exists",
+      "passed": true,
+      "evidence": {
+        "rows": 51,
+        "sizeBytes": 9080
+      },
+      "message": "Receipts CSV has 51 rows"
+    },
+    {
+      "name": "Orders: Can export orders CSV",
+      "passed": true,
+      "evidence": {
+        "sizeBytes": 61295,
+        "rows": 298,
+        "contentType": "text/csv; charset=utf-8"
+      },
+      "message": "Orders CSV export: 298 rows"
+    },
+    {
+      "name": "Cash Sessions: At least 1 exists",
+      "passed": true,
+      "evidence": {
+        "total": 4,
+        "open": 1,
+        "closed": 3
+      },
+      "message": "Found 4 sessions (1 open, 3 closed)"
+    },
+    {
+      "name": "Cash Session Export: Non-empty CSV",
+      "passed": true,
+      "evidence": {
+        "sizeBytes": 1000,
+        "sizeKB": 0.98,
+        "rows": 5,
+        "contentType": "text/csv; charset=utf-8"
+      },
+      "message": "CSV export: 0.98 KB, ~5 rows"
+    },
+    {
+      "name": "Orders Export: Non-empty CSV (row count >1)",
+      "passed": true,
+      "evidence": {
+        "sizeBytes": 61295,
+        "rows": 298,
+        "contentType": "text/csv; charset=utf-8"
+      },
+      "message": "CSV export: 298 rows"
+    },
+    {
+      "name": "Inventory Export: Non-empty CSV (row count >1)",
+      "passed": true,
+      "evidence": {
+        "itemCount": 158,
+        "sampleItems": [
+          {
+            "id": "cmknx5zny00rx14b5422emqsq",
+            "name": "Absolut Vodka Citron 1Ltr"
+          },
+          {
+            "id": "cmknx5zoc00s314b550pq8ml9",
+            "name": "Absolut Vodka Raspberry 1Lt"
+          },
+          {
+            "id": "cmknx5zo500s014b5dj9gpidp",
+            "name": "Absolut Vodka Vanilla 1Lt"
+          }
+        ]
+      },
+      "message": "Inventory has 158 items"
+    }
+  ],
+  "summary": {
+    "total": 6,
+    "passed": 6,
+    "failed": 0
+  }
+}

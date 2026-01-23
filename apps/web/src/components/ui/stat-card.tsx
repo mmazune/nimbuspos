@@ -11,6 +11,7 @@ interface StatCardProps {
   format?: 'number' | 'currency' | 'percentage';
   icon?: React.ReactNode;
   className?: string;
+  'data-testid'?: string;
 }
 
 export function StatCard({
@@ -20,12 +21,13 @@ export function StatCard({
   trend,
   icon,
   className,
+  'data-testid': testId,
 }: StatCardProps) {
   // Auto-determine trend from delta if not provided
   const determinedTrend = trend || (delta !== undefined ? (delta > 0 ? 'up' : delta < 0 ? 'down' : 'neutral') : undefined);
 
   return (
-    <Card className={cn('relative overflow-hidden', className)}>
+    <Card className={cn('relative overflow-hidden', className)} data-testid={testId}>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <CardTitle className="text-sm font-medium text-muted-foreground">{label}</CardTitle>
         {icon && <div className="text-muted-foreground">{icon}</div>}

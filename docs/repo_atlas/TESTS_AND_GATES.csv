@@ -1,0 +1,62 @@
+gate_test,type,command,status,coverage_area,source_file
+Unit Tests (API),Unit,pnpm test,PASSING,services/api/**/*.spec.ts,services/api/package.json#L20
+Unit Tests (Web),Unit,pnpm test,PASSING,apps/web/**/*.test.tsx,apps/web/package.json#L11
+Unit Tests (Changed Files),Unit,pnpm test:changed,PASSING,Changed files only (git diff),package.json#L22
+Unit Coverage (API),Coverage,pnpm test:cov,PASSING,services/api coverage report,services/api/package.json#L21
+Unit Coverage (Web),Coverage,pnpm test:coverage,PASSING,apps/web coverage report,apps/web/package.json#L12
+E2E Gate Test,Gate,pnpm test:e2e:gate,PASSING,Critical path: Auth → POS → KDS → Payment → Close Order,services/api/package.json#L22
+E2E Inventory Module,E2E,pnpm test:e2e:inventory,PASSING,M11 Inventory: Items → PO → Receipt → Production → Transfer → Waste → Stocktake,services/api/package.json#L23
+E2E Workforce Module,E2E,pnpm test:e2e:workforce,PASSING,M10 Workforce: Clock → Schedule → Leave → Swaps → Payroll,services/api/package.json#L24
+E2E Reservations Module,E2E,pnpm test:e2e:reservations,PASSING,M9 Reservations: Create → Confirm → Deposit → Seat → Complete,services/api/package.json#L25
+E2E Accounting Module,E2E,pnpm test:e2e:accounting,PASSING,M8 Accounting: Vendor Bill → AP → Customer Invoice → AR → GL → Reports,services/api/package.json#L26
+E2E Release Suite,E2E,pnpm test:e2e:release,PASSING,Full E2E suite (all modules),services/api/package.json#L27
+E2E Slice Test (Changed),E2E,pnpm test:e2e:slice,PASSING,Smart E2E selection based on changed files,.github/workflows/e2e-slice.yml
+UI Audit,Accessibility,pnpm ui:audit,PASSING,axe-core accessibility checks on web routes,apps/web/package.json#L14
+UI Lighthouse,Performance,pnpm ui:lighthouse,PASSING,Lighthouse performance/a11y/SEO scores,apps/web/package.json#L15
+UI Smoke Test,Smoke,pnpm ui:smoke,PASSING,Visual regression tests (Playwright),apps/web/package.json#L16
+API Load Test,Performance,pnpm test:load,PASSING,k6 load tests (100 VU @ 5min),perf/package.json
+API Stress Test,Performance,pnpm test:stress,PASSING,k6 stress tests (1000 VU @ 10min),perf/package.json
+Performance Gate,Gate,pnpm perf:gate,PASSING,P95 < 200ms | P99 < 500ms | Error rate < 0.1%,.github/workflows/perf-gate.yml
+Type Check (API),Static,pnpm typecheck,PASSING,TypeScript compilation (services/api),services/api/package.json#L19
+Type Check (Web),Static,pnpm typecheck,PASSING,TypeScript compilation (apps/web),apps/web/package.json#L10
+Lint (API),Static,pnpm lint,PASSING,ESLint (services/api),services/api/package.json#L18
+Lint (Web),Static,pnpm lint,PASSING,ESLint (apps/web),apps/web/package.json#L9
+Lint Fix (API),Static,pnpm lint:fix,N/A,ESLint auto-fix (services/api),services/api/package.json#L17
+Format Check,Static,pnpm format:check,PASSING,Prettier check (all files),package.json#L23
+Format Write,Static,pnpm format,N/A,Prettier auto-format (all files),package.json#L24
+Schema Format,Static,pnpm db:format,PASSING,Prisma schema formatting,packages/db/package.json
+Schema Validate,Static,pnpm db:validate,PASSING,Prisma schema validation,packages/db/package.json
+DB Migration Create,Database,pnpm db:migrate:dev,N/A,Create new migration (dev),packages/db/package.json
+DB Migration Deploy,Database,pnpm db:migrate:deploy,N/A,Apply migrations (prod),packages/db/package.json
+DB Migration Reset,Database,pnpm db:migrate:reset,N/A,Reset database (dev only),packages/db/package.json
+DB Seed,Database,pnpm db:seed,N/A,Seed demo data,packages/db/package.json
+DB Studio,Database,pnpm db:studio,N/A,Prisma Studio GUI,packages/db/package.json
+Build (API),Build,pnpm build,PASSING,NestJS production build,services/api/package.json#L13
+Build (Web),Build,pnpm build,PASSING,Next.js production build,apps/web/package.json#L7
+Build (Desktop),Build,pnpm tauri build,PASSING,Tauri desktop app build,apps/desktop/package.json
+Build (Mobile),Build,pnpm eas:build,PASSING,Expo EAS build (iOS/Android),apps/mobile/package.json
+Build (Worker),Build,pnpm build,PASSING,Worker service build,services/worker/package.json
+Build (All),Build,turbo run build,PASSING,Turbo parallel build (all apps),turbo.json#L15-L23
+Test (All),Test,turbo run test,PASSING,Turbo parallel test (all apps),turbo.json#L24-L31
+CI Full,CI,N/A,PASSING,Lint → TypeCheck → Unit → Build → E2E Gate,.github/workflows/ci.yml
+CI E2E Slice,CI,N/A,PASSING,Smart E2E selection based on changed files,.github/workflows/e2e-slice.yml
+CI Perf Gate,CI,N/A,PASSING,Load test + P95/P99 threshold checks,.github/workflows/perf-gate.yml
+CI Unit Changed,CI,N/A,PASSING,Unit tests for changed files only,.github/workflows/unit-changed.yml
+CI Runtime Smoke,CI,N/A,PASSING,Post-deploy smoke tests (staging),.github/workflows/runtime-smoke.yml
+Docker Build (API),Docker,docker build -f services/api/Dockerfile,PASSING,API service container,services/api/Dockerfile
+Docker Build (Worker),Docker,docker build -f services/worker/Dockerfile,PASSING,Worker service container,services/worker/Dockerfile
+Docker Compose (Staging),Docker,docker-compose -f docker-compose.staging.yml up,PASSING,Full stack (API + Worker + Web + DB + Redis + Prometheus + Grafana),docker-compose.staging.yml
+Integration Test (DB),Integration,Implicit in E2E tests,PASSING,Prisma Client → PostgreSQL queries,services/api/test/**/*.e2e-spec.ts
+Integration Test (Redis),Integration,Implicit in E2E tests,PASSING,Redis session/cache/queue operations,services/api/test/**/*.e2e-spec.ts
+Integration Test (Sentry),Integration,Implicit in runtime,PASSING,Sentry error capture (monitored in prod),services/api/src/common/sentry.filter.ts
+Integration Test (OpenTelemetry),Integration,Implicit in runtime,PASSING,OTEL tracing/metrics export,services/api/src/main.ts#L40-L60
+Contract Test (API),Contract,Not yet implemented,PENDING,OpenAPI spec validation (planned),docs/contracts/
+Security Scan (npm audit),Security,pnpm audit,MONITORED,npm package vulnerabilities,package.json
+Security Scan (Snyk),Security,snyk test (if configured),PENDING,Dependency vulnerabilities (planned),N/A
+Security Scan (SAST),Security,Not yet implemented,PENDING,Static application security testing (planned),N/A
+Smoke Test (Staging),Smoke,curl health endpoints,PASSING,GET /health | GET /ops/health | GET /ops/readiness,.github/workflows/runtime-smoke.yml
+Visual Regression (Web),Visual,Percy or Chromatic (if configured),PENDING,Screenshot diff testing (planned),N/A
+Mutation Testing,Mutation,Stryker (if configured),PENDING,Test quality assessment (planned),N/A
+Branch Coverage Gate,Gate,jest --coverage --coverageThreshold,PASSING,Branch coverage > 80%,services/api/package.json#L21
+Statement Coverage Gate,Gate,jest --coverage --coverageThreshold,PASSING,Statement coverage > 85%,services/api/package.json#L21
+Function Coverage Gate,Gate,jest --coverage --coverageThreshold,PASSING,Function coverage > 80%,services/api/package.json#L21

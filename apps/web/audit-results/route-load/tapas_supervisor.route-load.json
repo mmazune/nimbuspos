@@ -1,0 +1,465 @@
+{
+  "org": "tapas",
+  "role": "supervisor",
+  "email": "supervisor@tapas.demo.local",
+  "generatedAt": "2026-01-20T04:04:33.033Z",
+  "durationMs": 41355,
+  "summary": {
+    "routesVisited": 11,
+    "routesWithEndpoints": 11,
+    "routesNoEndpoints": 0,
+    "routesFailed": 0,
+    "totalApiCalls": 60,
+    "uniqueEndpoints": 25
+  },
+  "routes": [
+    {
+      "route": "/dashboard",
+      "actionId": "route-load::tapas::supervisor::/dashboard",
+      "loadTimeMs": 3585,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403,
+          "timestamp": 1768881842332
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403,
+          "timestamp": 1768881842354
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403,
+          "timestamp": 1768881842361
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403,
+          "timestamp": 1768881842364
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403,
+          "timestamp": 1768881842366
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403,
+          "timestamp": 1768881842368
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403,
+          "timestamp": 1768881842408
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881842430
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768881842504
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881842646
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403,
+          "timestamp": 1768881842789
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/peak-hours",
+          "status": 403,
+          "timestamp": 1768881842811
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily-metrics",
+          "status": 403,
+          "timestamp": 1768881842812
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/top-items",
+          "status": 403,
+          "timestamp": 1768881842814
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/category-mix",
+          "status": 403,
+          "timestamp": 1768881842817
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/payment-mix",
+          "status": 403,
+          "timestamp": 1768881842820
+        },
+        {
+          "method": "GET",
+          "path": "/inventory/low-stock/alerts",
+          "status": 200,
+          "timestamp": 1768881842876
+        },
+        {
+          "method": "GET",
+          "path": "/franchise/rankings",
+          "status": 403,
+          "timestamp": 1768881843448
+        },
+        {
+          "method": "GET",
+          "path": "/analytics/daily",
+          "status": 403,
+          "timestamp": 1768881843822
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/pos",
+      "actionId": "route-load::tapas::supervisor::/pos",
+      "loadTimeMs": 2310,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881844810
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200,
+          "timestamp": 1768881844850
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200,
+          "timestamp": 1768881845114
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881845115
+        },
+        {
+          "method": "GET",
+          "path": "/billing/subscription",
+          "status": 403,
+          "timestamp": 1768881845116
+        },
+        {
+          "method": "GET",
+          "path": "/pos/orders",
+          "status": 200,
+          "timestamp": 1768881845179
+        },
+        {
+          "method": "GET",
+          "path": "/menu/items",
+          "status": 200,
+          "timestamp": 1768881845186
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/reservations",
+      "actionId": "route-load::tapas::supervisor::/reservations",
+      "loadTimeMs": 2967,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881847764
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881848140
+        },
+        {
+          "method": "GET",
+          "path": "/reservations",
+          "status": 200,
+          "timestamp": 1768881848140
+        },
+        {
+          "method": "GET",
+          "path": "/bookings/list",
+          "status": 200,
+          "timestamp": 1768881848145
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/settings",
+      "actionId": "route-load::tapas::supervisor::/settings",
+      "loadTimeMs": 1859,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881849733
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881849977
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/staff",
+      "actionId": "route-load::tapas::supervisor::/staff",
+      "loadTimeMs": 4354,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/hr/staff",
+          "status": 404,
+          "timestamp": 1768881853988
+        },
+        {
+          "method": "GET",
+          "path": "/hr/employees",
+          "status": 200,
+          "timestamp": 1768881854157
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881854196
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881854356
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-availability",
+      "actionId": "route-load::tapas::supervisor::/workforce/my-availability",
+      "loadTimeMs": 2499,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability",
+          "status": 200,
+          "timestamp": 1768881856465
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/availability/exceptions",
+          "status": 200,
+          "timestamp": 1768881856467
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881856765
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881856849
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/my-swaps",
+      "actionId": "route-load::tapas::supervisor::/workforce/my-swaps",
+      "loadTimeMs": 2200,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881858869
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/swaps",
+          "status": 200,
+          "timestamp": 1768881858887
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881859063
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/open-shifts",
+      "actionId": "route-load::tapas::supervisor::/workforce/open-shifts",
+      "loadTimeMs": 2251,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404,
+          "timestamp": 1768881860967
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881861027
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts",
+          "status": 200,
+          "timestamp": 1768881861067
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881861326
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/self/open-shifts/claims",
+          "status": 404,
+          "timestamp": 1768881861990
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/swaps",
+      "actionId": "route-load::tapas::supervisor::/workforce/swaps",
+      "loadTimeMs": 4596,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881865576
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881865877
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 403,
+          "timestamp": 1768881865879
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 403,
+          "timestamp": 1768881865882
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workforce/timeclock",
+      "actionId": "route-load::tapas::supervisor::/workforce/timeclock",
+      "loadTimeMs": 3453,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 403,
+          "timestamp": 1768881867235
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/swaps",
+          "status": 403,
+          "timestamp": 1768881867242
+        },
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881869183
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881869311
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/status",
+          "status": 200,
+          "timestamp": 1768881869338
+        },
+        {
+          "method": "GET",
+          "path": "/workforce/timeclock/entries",
+          "status": 200,
+          "timestamp": 1768881869355
+        }
+      ],
+      "status": "success"
+    },
+    {
+      "route": "/workspaces/supervisor",
+      "actionId": "route-load::tapas::supervisor::/workspaces/supervisor",
+      "loadTimeMs": 2652,
+      "apiCalls": [
+        {
+          "method": "GET",
+          "path": "/me",
+          "status": 200,
+          "timestamp": 1768881871950
+        },
+        {
+          "method": "GET",
+          "path": "/branches",
+          "status": 200,
+          "timestamp": 1768881872024
+        }
+      ],
+      "status": "success"
+    }
+  ]
+}
