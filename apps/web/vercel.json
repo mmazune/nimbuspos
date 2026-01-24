@@ -6,7 +6,7 @@
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://chefcloud-api-production.up.railway.app/api/:path*"
+      "destination": "https://api-production-5ffe.up.railway.app/api/:path*"
     }
   ],
   "headers": [
@@ -29,6 +29,6 @@
     }
   ],
   "env": {
-    "NEXT_PUBLIC_API_BASE_URL": "https://chefcloud-api-production.up.railway.app"
+    "NEXT_PUBLIC_API_BASE_URL": "https://api-production-5ffe.up.railway.app"
   }
 }
