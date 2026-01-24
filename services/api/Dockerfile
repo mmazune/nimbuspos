@@ -22,7 +22,7 @@ WORKDIR /app
 FROM base AS deps
 
 # Copy workspace config files
-COPY pnpm-lock.yaml pnpm-workspace.yaml package.json ./
+COPY pnpm-lock.yaml pnpm-workspace.yaml package.json tsconfig.json tsconfig.base.json ./
 COPY packages/ ./packages/
 COPY services/api/package.json ./services/api/
 COPY services/api/prisma/ ./services/api/prisma/
@@ -38,10 +38,19 @@ FROM deps AS builder
 # Copy source code
 COPY services/api/ ./services/api/
 
+# Install all dependencies in builder (needed for Prisma CLI and build tools)
+RUN pnpm install --frozen-lockfile
+
+# Build the contracts package first (dependency for API)
+RUN cd /app/packages/contracts && pnpm build
+
+# Build the db package (includes Prisma generation)
+RUN cd /app/packages/db && pnpm build
+
 WORKDIR /app/services/api
 
-# Generate Prisma client
-RUN pnpm prisma generate
+# Generate Prisma client from the db package
+RUN cd /app/packages/db && pnpm prisma generate --schema=./prisma/schema.prisma
 
 # Build the NestJS application
 RUN pnpm build
@@ -68,13 +77,21 @@ COPY pnpm-lock.yaml pnpm-workspace.yaml package.json ./
 COPY packages/ ./packages/
 COPY services/api/package.json ./services/api/
 
+# Install all dependencies first (needed for prepare scripts)
+RUN pnpm install --frozen-lockfile
+
 # Install production dependencies only
 RUN pnpm install --frozen-lockfile --prod
 
 # Copy built output
 COPY --from=builder /app/services/api/dist ./services/api/dist
 COPY --from=builder /app/services/api/prisma ./services/api/prisma
-COPY --from=builder /app/services/api/node_modules/.prisma ./services/api/node_modules/.prisma
+# Copy built packages
+COPY --from=builder /app/packages/db/dist ./packages/db/dist
+COPY --from=builder /app/packages/contracts/dist ./packages/contracts/dist
+# Copy Prisma client from the monorepo node_modules (including .prisma generated files)
+COPY --from=builder /app/node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/@prisma/client ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/@prisma/client
+COPY --from=builder /app/node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma ./node_modules/.pnpm/@prisma+client@5.22.0_prisma@5.22.0/node_modules/.prisma
 
 # Set ownership
 RUN chown -R chefcloud:nodejs /app
