@@ -22,6 +22,8 @@ import {
   BRANCH_CAFE_ACACIA_MALL_ID,
   BRANCH_CAFE_ARENA_MALL_ID,
   BRANCH_CAFE_MOMBASA_ID,
+  SEED_DATE_ANCHOR,
+  getSeedDate,
 } from './constants';
 import { seedTapasInventory } from './tapas/inventory';
 import { seedCafesserieInventory } from './cafesserie/inventory';
@@ -30,6 +32,7 @@ import { seedInventoryPostingMappings } from './seedPostingMappings';
 import { seedPosReceipts, seedCustomerReceipts } from './seedPosReceipts';
 import { seedInventoryGaps } from './seedInventoryGaps'; // M76: Depletions + COGS
 import { seedPrepItems } from './seedPrepItems'; // M80: Prep Items
+import { seedReportData } from './seedReportData'; // Report data: movements, waste, KDS, costs
 
 // Deterministic IDs for comprehensive data
 const TABLE_IDS = {
@@ -222,7 +225,8 @@ function createDateTime(baseDate: Date, timeStr: string): Date {
 async function seedReservations(prisma: PrismaClient): Promise<void> {
   console.log('\n📅 Seeding Reservations...');
 
-  const now = new Date();
+  // Use SEED_DATE_ANCHOR for consistent reservation dates
+  const anchor = SEED_DATE_ANCHOR;
   
   // Helper to create reservation data
   const createReservation = (
@@ -260,7 +264,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'John Smith',
       '+256700111222',
       2,
-      new Date(now.getTime() - 3 * 24 * 60 * 60 * 1000), // 3 days ago
+      getSeedDate(-3), // 3 days ago relative to anchor
       '19:00',
       '21:00',
       'SEATED',
@@ -273,7 +277,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'Mary Johnson',
       '+256700222333',
       4,
-      new Date(now.getTime() - 2 * 24 * 60 * 60 * 1000), // 2 days ago
+      getSeedDate(-2), // 2 days ago relative to anchor
       '18:30',
       '20:30',
       'SEATED',
@@ -286,7 +290,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'David Williams',
       '+256700333444',
       6,
-      new Date(now.getTime() - 1 * 24 * 60 * 60 * 1000), // Yesterday
+      getSeedDate(-1), // Yesterday relative to anchor
       '20:00',
       '22:00',
       'CANCELLED',
@@ -300,7 +304,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'Sarah Brown',
       '+256700444555',
       2,
-      now,
+      anchor, // Today (anchor date)
       '12:00',
       '14:00',
       'CONFIRMED',
@@ -313,7 +317,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'Michael Davis',
       '+256700555666',
       4,
-      now,
+      anchor, // Today (anchor date)
       '19:00',
       '21:00',
       'CONFIRMED',
@@ -327,7 +331,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'Emily Wilson',
       '+256700666777',
       8,
-      new Date(now.getTime() + 2 * 24 * 60 * 60 * 1000), // 2 days from now
+      getSeedDate(2), // 2 days from anchor
       '18:00',
       '21:00',
       'HELD',
@@ -340,7 +344,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'Robert Taylor',
       '+256700777888',
       2,
-      new Date(now.getTime() + 5 * 24 * 60 * 60 * 1000), // 5 days from now
+      getSeedDate(5), // 5 days from anchor
       '20:00',
       '22:00',
       'CONFIRMED',
@@ -354,7 +358,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'Alice Thompson',
       '+256700888999',
       2,
-      now,
+      anchor, // Today (anchor date)
       '10:00',
       '11:30',
       'CONFIRMED',
@@ -367,7 +371,7 @@ async function seedReservations(prisma: PrismaClient): Promise<void> {
       'James Anderson',
       '+256700999000',
       4,
-      new Date(now.getTime() + 1 * 24 * 60 * 60 * 1000), // Tomorrow
+      getSeedDate(1), // Tomorrow relative to anchor
       '15:00',
       '17:00',
       'HELD',
@@ -534,9 +538,10 @@ async function seedProcurement(prisma: PrismaClient): Promise<void> {
     return;
   }
 
-  const now = new Date();
-  const oneWeekAgo = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
-  const twoWeeksAgo = new Date(now.getTime() - 14 * 24 * 60 * 60 * 1000);
+  // Use SEED_DATE_ANCHOR for procurement dates
+  const anchor = SEED_DATE_ANCHOR;
+  const oneWeekAgo = getSeedDate(-7);
+  const twoWeeksAgo = getSeedDate(-14);
 
   // Tapas POs: 1 RECEIVED, 1 PLACED (open), 1 DRAFT
   const tapasPOs = [
@@ -721,7 +726,7 @@ async function seedProcurement(prisma: PrismaClient): Promise<void> {
       purchaseOrderId: PO_IDS.TAPAS[1], // M73: V2 requires purchaseOrderId (not nullable)
       receiptNumber: 'GR-TAP-0002',
       status: 'DRAFT' as const,
-      receivedAt: now,
+      receivedAt: anchor, // Use anchor for current date
       referenceNumber: 'REF-TAP-002',
       notes: 'Direct receipt',
     },
@@ -735,7 +740,7 @@ async function seedProcurement(prisma: PrismaClient): Promise<void> {
       purchaseOrderId: PO_IDS.CAFESSERIE[0], // received PO
       receiptNumber: 'GR-CAF-0001',
       status: 'DRAFT' as const,
-      receivedAt: oneWeekAgo,
+      receivedAt: oneWeekAgo, // Already uses getSeedDate(-7)
       referenceNumber: 'REF-CAF-001',
       notes: 'Village Mall delivery',
     },
@@ -746,7 +751,7 @@ async function seedProcurement(prisma: PrismaClient): Promise<void> {
       purchaseOrderId: PO_IDS.CAFESSERIE[1], // Acacia delivery
       receiptNumber: 'GR-CAF-0002',
       status: 'DRAFT' as const,
-      receivedAt: now,
+      receivedAt: anchor, // Use anchor for current date
       referenceNumber: 'REF-CAF-002',
       notes: 'Acacia Mall direct receipt',
     },
@@ -948,6 +953,142 @@ async function seedServiceProviders(prisma: PrismaClient): Promise<void> {
     });
   }
   console.log(`  ✅ Created ${serviceProviders.length} service providers`);
+
+  // Seed service contracts for each provider
+  console.log('\n📋 Seeding Service Contracts...');
+  const contracts = [
+    // Tapas contracts
+    { id: '00000000-0000-4000-8000-00000000c001', providerId: SERVICE_PROVIDER_IDS.TAPAS[0], branchId: BRANCH_TAPAS_MAIN_ID, frequency: 'MONTHLY', amount: 8500000, dueDay: 1, startDate: getSeedDate(-365), notes: 'Monthly rent - Kololo premises' },
+    { id: '00000000-0000-4000-8000-00000000c002', providerId: SERVICE_PROVIDER_IDS.TAPAS[1], branchId: BRANCH_TAPAS_MAIN_ID, frequency: 'MONTHLY', amount: 450000, dueDay: 15, startDate: getSeedDate(-365), notes: 'MTN 100Mbps fiber' },
+    { id: '00000000-0000-4000-8000-00000000c003', providerId: SERVICE_PROVIDER_IDS.TAPAS[2], branchId: BRANCH_TAPAS_MAIN_ID, frequency: 'MONTHLY', amount: 1200000, dueDay: 20, startDate: getSeedDate(-365), notes: 'Electricity pre-paid top-up' },
+    { id: '00000000-0000-4000-8000-00000000c004', providerId: SERVICE_PROVIDER_IDS.TAPAS[3], branchId: BRANCH_TAPAS_MAIN_ID, frequency: 'WEEKLY', amount: 350000, dueDay: 1, startDate: getSeedDate(-180), notes: 'Weekly deep clean - Monday' },
+    { id: '00000000-0000-4000-8000-00000000c005', providerId: SERVICE_PROVIDER_IDS.TAPAS[4], branchId: BRANCH_TAPAS_MAIN_ID, frequency: 'MONTHLY', amount: 2800000, dueDay: 5, startDate: getSeedDate(-365), notes: '24/7 security guards (3 shifts)' },
+    // Cafesserie contracts
+    { id: '00000000-0000-4000-8000-00000000c101', providerId: SERVICE_PROVIDER_IDS.CAFESSERIE[0], branchId: BRANCH_CAFE_VILLAGE_MALL_ID, frequency: 'MONTHLY', amount: 12000000, dueDay: 1, startDate: getSeedDate(-365), notes: 'Mall rent + CAM fees' },
+    { id: '00000000-0000-4000-8000-00000000c102', providerId: SERVICE_PROVIDER_IDS.CAFESSERIE[1], branchId: BRANCH_CAFE_VILLAGE_MALL_ID, frequency: 'MONTHLY', amount: 350000, dueDay: 10, startDate: getSeedDate(-180), notes: 'Airtel 50Mbps dedicated line' },
+    { id: '00000000-0000-4000-8000-00000000c103', providerId: SERVICE_PROVIDER_IDS.CAFESSERIE[2], branchId: BRANCH_CAFE_VILLAGE_MALL_ID, frequency: 'MONTHLY', amount: 180000, dueDay: 25, startDate: getSeedDate(-365), notes: 'Water utility bill' },
+  ];
+
+  for (const c of contracts) {
+    await prisma.serviceContract.upsert({
+      where: { id: c.id },
+      update: {},
+      create: {
+        id: c.id,
+        providerId: c.providerId,
+        branchId: c.branchId,
+        frequency: c.frequency as any,
+        amount: c.amount,
+        currency: 'UGX',
+        dueDay: c.dueDay,
+        startDate: c.startDate,
+        status: 'ACTIVE',
+        notes: c.notes,
+      },
+    });
+  }
+  console.log(`  ✅ Created ${contracts.length} service contracts`);
+
+  // Seed service payable reminders (overdue + due today + due soon)
+  console.log('\n🔔 Seeding Service Payable Reminders...');
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const reminders: Array<{
+    id: string; contractId: string; branchId: string | null; orgId: string;
+    dueDate: Date; status: string; severity: string;
+  }> = [];
+
+  // For each contract, create a reminder for this month's billing cycle
+  for (const c of contracts) {
+    const orgId = c.providerId.startsWith('00000000-0000-4000-8000-000000008001') ||
+                  c.providerId.startsWith('00000000-0000-4000-8000-000000008002') ||
+                  c.providerId.startsWith('00000000-0000-4000-8000-000000008003') ||
+                  c.providerId.startsWith('00000000-0000-4000-8000-000000008004') ||
+                  c.providerId.startsWith('00000000-0000-4000-8000-000000008005')
+                  ? ORG_TAPAS_ID : ORG_CAFESSERIE_ID;
+    
+    if (c.frequency === 'MONTHLY') {
+      // Create current month's reminder
+      const dueDate = new Date(today.getFullYear(), today.getMonth(), c.dueDay || 1);
+      const daysUntilDue = Math.floor((dueDate.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+      let severity: string;
+      let status: string;
+      if (daysUntilDue < 0) {
+        severity = 'OVERDUE'; status = 'PENDING';
+      } else if (daysUntilDue === 0) {
+        severity = 'DUE_TODAY'; status = 'PENDING';
+      } else if (daysUntilDue <= 7) {
+        severity = 'DUE_SOON'; status = 'PENDING';
+      } else {
+        severity = 'DUE_SOON'; status = 'PAID'; // Future - already paid
+      }
+
+      reminders.push({
+        id: `${c.id}-rem-${today.getMonth() + 1}`,
+        contractId: c.id,
+        branchId: c.branchId,
+        orgId,
+        dueDate,
+        status,
+        severity,
+      });
+
+      // Also create last month's reminder (marked as PAID)
+      const lastMonthDue = new Date(today.getFullYear(), today.getMonth() - 1, c.dueDay || 1);
+      reminders.push({
+        id: `${c.id}-rem-${today.getMonth()}`,
+        contractId: c.id,
+        branchId: c.branchId,
+        orgId,
+        dueDate: lastMonthDue,
+        status: 'PAID',
+        severity: 'OVERDUE',
+      });
+    } else if (c.frequency === 'WEEKLY') {
+      // Create this week's + last week's
+      const thisWeekDue = new Date(today);
+      thisWeekDue.setDate(today.getDate() + ((c.dueDay || 1) - today.getDay() + 7) % 7);
+      const daysUntilDue = Math.floor((thisWeekDue.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+      
+      reminders.push({
+        id: `${c.id}-rem-w-${Math.floor(today.getTime() / (7 * 86400000))}`,
+        contractId: c.id,
+        branchId: c.branchId,
+        orgId,
+        dueDate: thisWeekDue,
+        status: 'PENDING',
+        severity: daysUntilDue <= 0 ? 'OVERDUE' : daysUntilDue <= 2 ? 'DUE_TODAY' : 'DUE_SOON',
+      });
+    }
+  }
+
+  for (const r of reminders) {
+    try {
+      await prisma.servicePayableReminder.upsert({
+        where: {
+          contractId_dueDate_severity: {
+            contractId: r.contractId,
+            dueDate: r.dueDate,
+            severity: r.severity as any,
+          },
+        },
+        update: {},
+        create: {
+          id: r.id,
+          contractId: r.contractId,
+          branchId: r.branchId,
+          orgId: r.orgId,
+          dueDate: r.dueDate,
+          status: r.status as any,
+          severity: r.severity as any,
+        },
+      });
+    } catch (e: any) {
+      // Skip duplicates
+      if (!e.message?.includes('Unique constraint')) throw e;
+    }
+  }
+  console.log(`  ✅ Created ${reminders.length} service payable reminders`);
 }
 
 /**
@@ -979,10 +1120,10 @@ async function seedOrdersForBranch(
     ordersPerWeekend = 12,
   } = config;
 
-  // Get menu items for this branch
+  // Get ALL menu items for this branch with category info for weighted selection
   const menuItems = await prisma.menuItem.findMany({
-    where: { branchId },
-    take: 20,
+    where: { branchId, isActive: true },
+    include: { category: { select: { name: true } } },
   });
 
   if (menuItems.length === 0) {
@@ -990,36 +1131,102 @@ async function seedOrdersForBranch(
     return 0;
   }
 
-  // Get users for this org
-  const users = await prisma.user.findMany({
+  // Assign weights by category to make top items realistic
+  // Tapas (bar): spirits/cocktails/beer > food | Cafesserie (café): coffee/tea/pastries > mains
+  const isTapas = orgId === ORG_TAPAS_ID;
+  const categoryWeights: Record<string, number> = {};
+  for (const item of menuItems) {
+    const catName = (item.category?.name || '').toLowerCase();
+    let w = 1;
+    if (isTapas) {
+      // Bar: spirits, cocktails, beer should dominate
+      if (catName.includes('spirit') || catName.includes('vodka') || catName.includes('gin') || catName.includes('whiskey') || catName.includes('rum') || catName.includes('tequila') || catName.includes('brandy') || catName.includes('cream')) w = 6;
+      else if (catName.includes('cocktail')) w = 5;
+      else if (catName.includes('beer') || catName.includes('cider')) w = 4;
+      else if (catName.includes('wine')) w = 3;
+      else if (catName.includes('mocktail') || catName.includes('soft') || catName.includes('juice')) w = 2;
+      else if (catName.includes('grill') || catName.includes('starter') || catName.includes('flat bread')) w = 2;
+      else w = 1; // breakfast, desserts, etc.
+    } else {
+      // Café: coffee, specialty, tea, pastries dominate
+      if (catName.includes('coffee') || catName.includes('specialty')) w = 6;
+      else if (catName.includes('tea')) w = 4;
+      else if (catName.includes('pastry') || catName.includes('pastries') || catName.includes('baked')) w = 4;
+      else if (catName.includes('sandwich') || catName.includes('wrap')) w = 3;
+      else if (catName.includes('breakfast')) w = 3;
+      else if (catName.includes('smoothie') || catName.includes('juice') || catName.includes('cold drink')) w = 2;
+      else w = 1;
+    }
+    categoryWeights[item.id] = w;
+  }
+
+  // Build weighted selection pool
+  const weightedPool: typeof menuItems = [];
+  for (const item of menuItems) {
+    const w = categoryWeights[item.id] || 1;
+    for (let i = 0; i < w; i++) weightedPool.push(item);
+  }
+
+  // Get users for this org — prefer service staff (waiters, bartenders, cashiers, supervisors)
+  const allUsers = await prisma.user.findMany({
     where: { orgId },
-    take: 5,
+    select: { id: true, jobRole: true },
   });
+  const serviceRoles = ['WAITER', 'BARTENDER', 'CASHIER', 'SUPERVISOR'];
+  const serviceStaff = allUsers.filter((u: any) => serviceRoles.includes(u.jobRole));
+  // Fallback: if no service staff found, use all non-backoffice users
+  const users = serviceStaff.length >= 2
+    ? serviceStaff
+    : allUsers.filter((u: any) => !['OWNER', 'ACCOUNTANT'].includes(u.jobRole)).slice(0, 5);
 
   if (users.length === 0) {
     console.log(`  ⚠️  No users found for org ${orgId}, skipping`);
     return 0;
   }
 
-  const now = new Date();
   let orderCount = 0;
 
-  // Create orders for the last N days
+  // Realistic hour distribution for restaurant orders:
+  // Breakfast (7-10): 10%, Lunch (11-14): 35%, Afternoon (15-17): 10%, Dinner (18-22): 40%, Late (23): 5%
+  const hourWeights = [
+    // hour, weight
+    { hour: 7, weight: 2 }, { hour: 8, weight: 4 }, { hour: 9, weight: 3 }, { hour: 10, weight: 2 },
+    { hour: 11, weight: 5 }, { hour: 12, weight: 10 }, { hour: 13, weight: 9 }, { hour: 14, weight: 6 },
+    { hour: 15, weight: 3 }, { hour: 16, weight: 3 }, { hour: 17, weight: 4 },
+    { hour: 18, weight: 7 }, { hour: 19, weight: 10 }, { hour: 20, weight: 9 }, { hour: 21, weight: 7 }, { hour: 22, weight: 4 },
+    { hour: 23, weight: 2 },
+  ];
+  const hourPool: number[] = [];
+  for (const hw of hourWeights) {
+    for (let i = 0; i < hw.weight; i++) hourPool.push(hw.hour);
+  }
+
+  // Create orders for the last N days relative to SEED_DATE_ANCHOR
   for (let daysAgo = daysBack; daysAgo >= 0; daysAgo--) {
-    const orderDate = new Date(now.getTime() - daysAgo * 24 * 60 * 60 * 1000);
-    
     // Vary orders by weekday
-    const dayOfWeek = orderDate.getDay();
+    const sampleDate = getSeedDate(-daysAgo);
+    const dayOfWeek = sampleDate.getDay();
     const ordersToday = dayOfWeek === 0 || dayOfWeek === 6 ? ordersPerWeekend : ordersPerWeekday;
     
     for (let orderNum = 0; orderNum < ordersToday; orderNum++) {
+      // Pick a realistic hour from the weighted pool and add random minutes
+      const hour = hourPool[Math.floor(Math.random() * hourPool.length)];
+      const minute = Math.floor(Math.random() * 60);
+      const orderDate = getSeedDate(-daysAgo, hour);
+      orderDate.setMinutes(minute, Math.floor(Math.random() * 60), 0);
       const orderId = `00000000-0000-4000-8000-0000${orderIdPrefix}${String(daysAgo).padStart(2, '0')}${String(orderNum).padStart(2, '0')}`;
       
-      // Select random items for this order (2-5 items)
+      // Select random items using weighted pool (2-5 items, deduplicated)
       const numItems = 2 + Math.floor(Math.random() * 4);
-      const selectedItems = menuItems
-        .sort(() => Math.random() - 0.5)
-        .slice(0, numItems);
+      const seen = new Set<string>();
+      const selectedItems: typeof menuItems = [];
+      for (let attempts = 0; attempts < numItems * 5 && selectedItems.length < numItems; attempts++) {
+        const pick = weightedPool[Math.floor(Math.random() * weightedPool.length)];
+        if (!seen.has(pick.id)) {
+          seen.add(pick.id);
+          selectedItems.push(pick);
+        }
+      }
       
       // Calculate total
       let subtotal = 0;
@@ -1138,29 +1345,35 @@ async function seedOpenOrders(
     return 0;
   }
 
-  // Get users for this org
-  const users = await prisma.user.findMany({
+  // Get users for this org — prefer service staff
+  const allUsers = await prisma.user.findMany({
     where: { orgId },
-    take: 5,
+    select: { id: true, jobRole: true },
   });
+  const svcRoles = ['WAITER', 'BARTENDER', 'CASHIER', 'SUPERVISOR'];
+  const svcStaff = allUsers.filter((u: any) => svcRoles.includes(u.jobRole));
+  const users = svcStaff.length >= 2
+    ? svcStaff
+    : allUsers.filter((u: any) => !['OWNER', 'ACCOUNTANT'].includes(u.jobRole)).slice(0, 5);
 
   if (users.length === 0) {
     console.log(`  ⚠️  No users found for org ${orgId}, skipping open orders`);
     return 0;
   }
 
-  const now = new Date();
+  // Use SEED_DATE_ANCHOR for consistent open order timing
+  const anchor = SEED_DATE_ANCHOR;
   let createdCount = 0;
   
   // Statuses for active orders (not CLOSED)
   const activeStatuses = ['NEW', 'SENT', 'SERVED'];
 
-  // Create open orders from last 24 hours
+  // Create open orders from last 24 hours relative to anchor
   for (let i = 0; i < ordersCount; i++) {
-    // Random time within last 24 hours
+    // Random time within last 24 hours of anchor
     const hoursAgo = Math.floor(Math.random() * 24);
     const minutesAgo = Math.floor(Math.random() * 60);
-    const orderDate = new Date(now.getTime() - (hoursAgo * 60 * 60 * 1000) - (minutesAgo * 60 * 1000));
+    const orderDate = new Date(anchor.getTime() - (hoursAgo * 60 * 60 * 1000) - (minutesAgo * 60 * 1000));
     
     const orderId = `00000000-0000-4000-8000-0000${orderIdPrefix}${String(i).padStart(4, '0')}`;
     
@@ -1244,48 +1457,63 @@ async function seedOpenOrders(
 async function seedCompletedOrders(prisma: PrismaClient): Promise<void> {
   console.log('\n💰 Seeding Completed Orders with Payments...');
 
-  // Seed Tapas orders
+  // Seed Tapas orders (bar: higher volume, 60 orders/weekday, 90 orders/weekend)
   const tapasCount = await seedOrdersForBranch(prisma, {
     branchId: BRANCH_TAPAS_MAIN_ID,
     orgId: ORG_TAPAS_ID,
     tableIds: TABLE_IDS.TAPAS,
     orderIdPrefix: '0005',
+    daysBack: 90,
+    ordersPerWeekday: 60,
+    ordersPerWeekend: 90,
   });
   console.log(`  ✅ Tapas: Created ${tapasCount} completed orders`);
 
-  // Seed Cafesserie Village Mall orders
+  // Seed Cafesserie Village Mall orders (flagship: 50 orders/weekday, 75 orders/weekend)
   const villageCount = await seedOrdersForBranch(prisma, {
     branchId: BRANCH_CAFE_VILLAGE_MALL_ID,
     orgId: ORG_CAFESSERIE_ID,
     tableIds: TABLE_IDS.CAFESSERIE_VILLAGE,
     orderIdPrefix: '1005',
+    daysBack: 90,
+    ordersPerWeekday: 50,
+    ordersPerWeekend: 75,
   });
   console.log(`  ✅ Village Mall: Created ${villageCount} completed orders`);
 
-  // Seed Cafesserie Acacia Mall orders
+  // Seed Cafesserie Acacia Mall orders (45 orders/weekday, 65 orders/weekend)
   const acaciaCount = await seedOrdersForBranch(prisma, {
     branchId: BRANCH_CAFE_ACACIA_MALL_ID,
     orgId: ORG_CAFESSERIE_ID,
     tableIds: TABLE_IDS.CAFESSERIE_ACACIA,
     orderIdPrefix: '2005',
+    daysBack: 90,
+    ordersPerWeekday: 45,
+    ordersPerWeekend: 65,
   });
   console.log(`  ✅ Acacia Mall: Created ${acaciaCount} completed orders`);
 
-  // Seed Cafesserie Arena Mall orders
+  // Seed Cafesserie Arena Mall orders (35 orders/weekday, 55 orders/weekend)
   const arenaCount = await seedOrdersForBranch(prisma, {
     branchId: BRANCH_CAFE_ARENA_MALL_ID,
     orgId: ORG_CAFESSERIE_ID,
     tableIds: TABLE_IDS.CAFESSERIE_ARENA,
     orderIdPrefix: '3005',
+    daysBack: 90,
+    ordersPerWeekday: 35,
+    ordersPerWeekend: 55,
   });
   console.log(`  ✅ Arena Mall: Created ${arenaCount} completed orders`);
 
-  // Seed Cafesserie Mombasa orders
+  // Seed Cafesserie Mombasa orders (25 orders/weekday, 40 orders/weekend)
   const mombasaCount = await seedOrdersForBranch(prisma, {
     branchId: BRANCH_CAFE_MOMBASA_ID,
     orgId: ORG_CAFESSERIE_ID,
     tableIds: TABLE_IDS.CAFESSERIE_MOMBASA,
     orderIdPrefix: '4005',
+    daysBack: 90,
+    ordersPerWeekday: 25,
+    ordersPerWeekend: 40,
   });
   console.log(`  ✅ Mombasa: Created ${mombasaCount} completed orders`);
 
@@ -1395,197 +1623,149 @@ async function seedJournalEntries(prisma: PrismaClient): Promise<void> {
       continue;
     }
 
-    const cashAccount = accounts.find(a => a.code === '1000');
-    const arAccount = accounts.find(a => a.code === '1100');
-    const inventoryAccount = accounts.find(a => a.code === '1200');
-    const apAccount = accounts.find(a => a.code === '2000');
-    const salesAccount = accounts.find(a => a.code === '4000');
-    const cogsAccount = accounts.find(a => a.code === '5000');
-    const salariesAccount = accounts.find(a => a.code === '6100');
-    const rentAccount = accounts.find(a => a.code === '6200');
+    const cashAccount = accounts.find((a: { code: string }) => a.code === '1000');
+    const bankAccount = accounts.find((a: { code: string }) => a.code === '1010');
+    const arAccount = accounts.find((a: { code: string }) => a.code === '1100');
+    const inventoryAccount = accounts.find((a: { code: string }) => a.code === '1200');
+    const apAccount = accounts.find((a: { code: string }) => a.code === '2000');
+    const salesAccount = accounts.find((a: { code: string }) => a.code === '4000');
+    const serviceChargesAccount = accounts.find((a: { code: string }) => a.code === '4100');
+    const cogsAccount = accounts.find((a: { code: string }) => a.code === '5000');
+    const wastageAccount = accounts.find((a: { code: string }) => a.code === '5100');
+    const payrollAccount = accounts.find((a: { code: string }) => a.code === '6000');
+    const utilitiesAccount = accounts.find((a: { code: string }) => a.code === '6100');
+    const rentAccount = accounts.find((a: { code: string }) => a.code === '6400');
+    const suppliesAccount = accounts.find((a: { code: string }) => a.code === '6500');
+    const marketingAccount = accounts.find((a: { code: string }) => a.code === '6600');
 
     if (!cashAccount || !salesAccount) {
       console.log(`  ⚠️  Required accounts not found for ${org.name}, skipping journal entries`);
       continue;
     }
 
-    const now = new Date();
     let orgEntryCount = 0;
+
+    // Helper to upsert a journal entry with lines (always forces POSTED)
+    async function upsertJE(id: string, data: { orgId: string; branchId: string; date: Date; memo: string; source: string; sourceId: string }, lines: Array<{ id: string; accountId: string; debit: number; credit: number }>) {
+      await prisma.journalEntry.upsert({
+        where: { id },
+        update: { status: 'POSTED', postedAt: data.date, branchId: data.branchId, memo: data.memo, source: data.source },
+        create: { id, ...data, status: 'POSTED', postedAt: data.date, createdAt: data.date },
+      });
+      for (const line of lines) {
+        await prisma.journalLine.upsert({
+          where: { id: line.id },
+          update: { accountId: line.accountId, debit: line.debit, credit: line.credit, branchId: data.branchId },
+          create: { id: line.id, entryId: id, accountId: line.accountId, debit: line.debit, credit: line.credit, branchId: data.branchId },
+        });
+      }
+      orgEntryCount++;
+    }
 
     for (const branch of org.branches) {
       const branchIndex = org.branches.indexOf(branch);
+      const pfx = `00000000-0000-4000-8000-0000000${org.prefix}${branchIndex}`;
       
-      // Create journal entries for last 30 days
+      // Create journal entries for last 30 days relative to SEED_DATE_ANCHOR
       for (let daysAgo = 30; daysAgo >= 0; daysAgo--) {
-        const entryDate = new Date(now.getTime() - daysAgo * 24 * 60 * 60 * 1000);
+        const entryDate = getSeedDate(-daysAgo);
         const dateStr = entryDate.toISOString().split('T')[0];
+        const pad = String(daysAgo).padStart(2, '0');
         
-        // Daily sales entry with COGS
-        const salesAmount = Math.floor((500000 + Math.random() * 1000000) * branch.multiplier); // 500k - 1.5m UGX * multiplier
-        const cogsAmount = Math.floor(salesAmount * 0.35); // 35% cost of goods
-        const salesEntryId = `00000000-0000-4000-8000-0000000${org.prefix}${branchIndex}${String(daysAgo).padStart(2, '0')}01`;
-        
-        await prisma.journalEntry.upsert({
-          where: { id: salesEntryId },
-          update: {},
-          create: {
-            id: salesEntryId,
-            orgId: org.id,
-            branchId: branch.id,
-            date: entryDate,
-            memo: `Daily sales - ${branch.name} - ${dateStr}`,
-            source: 'POS_SALE',
-            sourceId: `SALES-${branch.name.substring(0, 3).toUpperCase()}-${dateStr}`,
-            createdAt: entryDate,
-          },
-        });
-
-        // Lines: Debit Cash, Credit Sales, Debit COGS, Credit Inventory
-        const salesLines = [
-          { id: `${salesEntryId}-L1`, accountId: cashAccount.id, debit: salesAmount, credit: 0 },
-          { id: `${salesEntryId}-L2`, accountId: salesAccount.id, debit: 0, credit: salesAmount },
+        // === 01: Daily sales (Cash + COGS) ===
+        const salesAmount = Math.floor((5000000 + Math.random() * 15000000) * branch.multiplier);
+        const cogsAmount = Math.floor(salesAmount * 0.35);
+        const salesLines: Array<{ id: string; accountId: string; debit: number; credit: number }> = [
+          { id: `${pfx}${pad}01-L1`, accountId: cashAccount.id, debit: salesAmount, credit: 0 },
+          { id: `${pfx}${pad}01-L2`, accountId: salesAccount.id, debit: 0, credit: salesAmount },
         ];
-        
         if (cogsAccount && inventoryAccount) {
           salesLines.push(
-            { id: `${salesEntryId}-L3`, accountId: cogsAccount.id, debit: cogsAmount, credit: 0 },
-            { id: `${salesEntryId}-L4`, accountId: inventoryAccount.id, debit: 0, credit: cogsAmount },
+            { id: `${pfx}${pad}01-L3`, accountId: cogsAccount.id, debit: cogsAmount, credit: 0 },
+            { id: `${pfx}${pad}01-L4`, accountId: inventoryAccount.id, debit: 0, credit: cogsAmount },
           );
         }
+        await upsertJE(`${pfx}${pad}01`, { orgId: org.id, branchId: branch.id, date: entryDate, memo: `Daily sales - ${branch.name} - ${dateStr}`, source: 'POS_SALE', sourceId: `SALES-${branch.name.substring(0, 3).toUpperCase()}-${dateStr}` }, salesLines);
 
-        for (const line of salesLines) {
-          await prisma.journalLine.upsert({
-            where: { id: line.id },
-            update: {},
-            create: {
-              id: line.id,
-              entryId: salesEntryId,
-              accountId: line.accountId,
-              debit: line.debit,
-              credit: line.credit,
-            },
-          });
+        // === 05: Daily service charges (10-15% of sales, goes to bank) ===
+        if (serviceChargesAccount && bankAccount) {
+          const svcAmount = Math.floor(salesAmount * (0.10 + Math.random() * 0.05));
+          await upsertJE(`${pfx}${pad}05`, { orgId: org.id, branchId: branch.id, date: entryDate, memo: `Service charges - ${branch.name} - ${dateStr}`, source: 'POS_SALE', sourceId: `SVC-${branch.name.substring(0, 3).toUpperCase()}-${dateStr}` }, [
+            { id: `${pfx}${pad}05-L1`, accountId: bankAccount.id, debit: svcAmount, credit: 0 },
+            { id: `${pfx}${pad}05-L2`, accountId: serviceChargesAccount.id, debit: 0, credit: svcAmount },
+          ]);
         }
-        orgEntryCount++;
 
-        // Weekly inventory purchase (every Monday)
+        // === 06: Daily wastage (1-3% of COGS) ===
+        if (wastageAccount && inventoryAccount) {
+          const wasteAmount = Math.floor(cogsAmount * (0.01 + Math.random() * 0.02));
+          await upsertJE(`${pfx}${pad}06`, { orgId: org.id, branchId: branch.id, date: entryDate, memo: `Kitchen wastage - ${branch.name} - ${dateStr}`, source: 'WASTAGE', sourceId: `WST-${branch.name.substring(0, 3).toUpperCase()}-${dateStr}` }, [
+            { id: `${pfx}${pad}06-L1`, accountId: wastageAccount.id, debit: wasteAmount, credit: 0 },
+            { id: `${pfx}${pad}06-L2`, accountId: inventoryAccount.id, debit: 0, credit: wasteAmount },
+          ]);
+        }
+
+        // === 02: Weekly inventory purchase (every 7 days) ===
         if (daysAgo % 7 === 0 && inventoryAccount && apAccount) {
           const purchaseAmount = Math.floor((200000 + Math.random() * 300000) * branch.multiplier);
-          const purchaseEntryId = `00000000-0000-4000-8000-0000000${org.prefix}${branchIndex}${String(daysAgo).padStart(2, '0')}02`;
-          
-          await prisma.journalEntry.upsert({
-            where: { id: purchaseEntryId },
-            update: {},
-            create: {
-              id: purchaseEntryId,
-              orgId: org.id,
-              branchId: branch.id,
-              date: entryDate,
-              memo: `Inventory purchase - ${branch.name} - ${dateStr}`,
-              source: 'VENDOR_PAYMENT',
-              sourceId: `INV-${branch.name.substring(0, 3).toUpperCase()}-${dateStr}`,
-              createdAt: entryDate,
-            },
-          });
-
-          // Debit Inventory, Credit AP
-          for (const line of [
-            { id: `${purchaseEntryId}-L1`, accountId: inventoryAccount.id, debit: purchaseAmount, credit: 0 },
-            { id: `${purchaseEntryId}-L2`, accountId: apAccount.id, debit: 0, credit: purchaseAmount },
-          ]) {
-            await prisma.journalLine.upsert({
-              where: { id: line.id },
-              update: {},
-              create: {
-                id: line.id,
-                entryId: purchaseEntryId,
-                accountId: line.accountId,
-                debit: line.debit,
-                credit: line.credit,
-              },
-            });
-          }
-          orgEntryCount++;
+          await upsertJE(`${pfx}${pad}02`, { orgId: org.id, branchId: branch.id, date: entryDate, memo: `Inventory purchase - ${branch.name} - ${dateStr}`, source: 'VENDOR_PAYMENT', sourceId: `INV-${branch.name.substring(0, 3).toUpperCase()}-${dateStr}` }, [
+            { id: `${pfx}${pad}02-L1`, accountId: inventoryAccount.id, debit: purchaseAmount, credit: 0 },
+            { id: `${pfx}${pad}02-L2`, accountId: apAccount.id, debit: 0, credit: purchaseAmount },
+          ]);
         }
 
-        // Bi-weekly payroll (every 14 days)
-        if (daysAgo % 14 === 0 && salariesAccount) {
-          const payrollAmount = Math.floor((800000 + Math.random() * 400000) * branch.multiplier);
-          const payrollEntryId = `00000000-0000-4000-8000-0000000${org.prefix}${branchIndex}${String(daysAgo).padStart(2, '0')}03`;
-          
-          await prisma.journalEntry.upsert({
-            where: { id: payrollEntryId },
-            update: {},
-            create: {
-              id: payrollEntryId,
-              orgId: org.id,
-              branchId: branch.id,
-              date: entryDate,
-              memo: `Payroll - ${branch.name} - ${dateStr}`,
-              source: 'PAYROLL',
-              sourceId: `PAY-${branch.name.substring(0, 3).toUpperCase()}-${dateStr}`,
-              createdAt: entryDate,
-            },
-          });
-
-          // Debit Salaries, Credit Cash
-          for (const line of [
-            { id: `${payrollEntryId}-L1`, accountId: salariesAccount.id, debit: payrollAmount, credit: 0 },
-            { id: `${payrollEntryId}-L2`, accountId: cashAccount.id, debit: 0, credit: payrollAmount },
-          ]) {
-            await prisma.journalLine.upsert({
-              where: { id: line.id },
-              update: {},
-              create: {
-                id: line.id,
-                entryId: payrollEntryId,
-                accountId: line.accountId,
-                debit: line.debit,
-                credit: line.credit,
-              },
-            });
-          }
-          orgEntryCount++;
+        // === 03: Bi-weekly payroll (every 14 days) ===
+        if (daysAgo % 14 === 0 && payrollAccount) {
+          const payrollAmount = Math.floor((3500000 + Math.random() * 1500000) * branch.multiplier);
+          await upsertJE(`${pfx}${pad}03`, { orgId: org.id, branchId: branch.id, date: entryDate, memo: `Payroll - ${branch.name} - ${dateStr}`, source: 'PAYROLL', sourceId: `PAY-${branch.name.substring(0, 3).toUpperCase()}-${dateStr}` }, [
+            { id: `${pfx}${pad}03-L1`, accountId: payrollAccount.id, debit: payrollAmount, credit: 0 },
+            { id: `${pfx}${pad}03-L2`, accountId: cashAccount.id, debit: 0, credit: payrollAmount },
+          ]);
         }
 
-        // Monthly rent (1st of month)
+        // === 04: Monthly rent (1st of month) ===
         if (entryDate.getDate() === 1 && rentAccount) {
-          const rentAmount = Math.floor(1500000 * branch.multiplier);
-          const rentEntryId = `00000000-0000-4000-8000-0000000${org.prefix}${branchIndex}${String(daysAgo).padStart(2, '0')}04`;
-          
-          await prisma.journalEntry.upsert({
-            where: { id: rentEntryId },
-            update: {},
-            create: {
-              id: rentEntryId,
-              orgId: org.id,
-              branchId: branch.id,
-              date: entryDate,
-              memo: `Monthly rent - ${branch.name} - ${dateStr}`,
-              source: 'EXPENSE',
-              sourceId: `RENT-${branch.name.substring(0, 3).toUpperCase()}-${entryDate.getMonth() + 1}`,
-              createdAt: entryDate,
-            },
-          });
+          const rentAmount = Math.floor(3000000 * branch.multiplier);
+          await upsertJE(`${pfx}${pad}04`, { orgId: org.id, branchId: branch.id, date: entryDate, memo: `Monthly rent - ${branch.name} - ${dateStr}`, source: 'EXPENSE', sourceId: `RENT-${branch.name.substring(0, 3).toUpperCase()}-${entryDate.getMonth() + 1}` }, [
+            { id: `${pfx}${pad}04-L1`, accountId: rentAccount.id, debit: rentAmount, credit: 0 },
+            { id: `${pfx}${pad}04-L2`, accountId: cashAccount.id, debit: 0, credit: rentAmount },
+          ]);
+        }
 
-          // Debit Rent, Credit Cash
-          for (const line of [
-            { id: `${rentEntryId}-L1`, accountId: rentAccount.id, debit: rentAmount, credit: 0 },
-            { id: `${rentEntryId}-L2`, accountId: cashAccount.id, debit: 0, credit: rentAmount },
-          ]) {
-            await prisma.journalLine.upsert({
-              where: { id: line.id },
-              update: {},
-              create: {
-                id: line.id,
-                entryId: rentEntryId,
-                accountId: line.accountId,
-                debit: line.debit,
-                credit: line.credit,
-              },
-            });
-          }
-          orgEntryCount++;
+        // === 07: Weekly utilities (every 7 days) ===
+        if (daysAgo % 7 === 0 && utilitiesAccount) {
+          const utilAmount = Math.floor((180000 + Math.random() * 120000) * branch.multiplier);
+          await upsertJE(`${pfx}${pad}07`, { orgId: org.id, branchId: branch.id, date: entryDate, memo: `Utilities - ${branch.name} - ${dateStr}`, source: 'EXPENSE', sourceId: `UTIL-${branch.name.substring(0, 3).toUpperCase()}-${dateStr}` }, [
+            { id: `${pfx}${pad}07-L1`, accountId: utilitiesAccount.id, debit: utilAmount, credit: 0 },
+            { id: `${pfx}${pad}07-L2`, accountId: cashAccount.id, debit: 0, credit: utilAmount },
+          ]);
+        }
+
+        // === 08: Weekly supplies (every 7 days, offset by 3) ===
+        if ((daysAgo + 3) % 7 === 0 && suppliesAccount) {
+          const supplyAmount = Math.floor((80000 + Math.random() * 60000) * branch.multiplier);
+          await upsertJE(`${pfx}${pad}08`, { orgId: org.id, branchId: branch.id, date: entryDate, memo: `Supplies purchase - ${branch.name} - ${dateStr}`, source: 'EXPENSE', sourceId: `SUP-${branch.name.substring(0, 3).toUpperCase()}-${dateStr}` }, [
+            { id: `${pfx}${pad}08-L1`, accountId: suppliesAccount.id, debit: supplyAmount, credit: 0 },
+            { id: `${pfx}${pad}08-L2`, accountId: cashAccount.id, debit: 0, credit: supplyAmount },
+          ]);
+        }
+
+        // === 09: Monthly marketing (15th of month) ===
+        if (entryDate.getDate() === 15 && marketingAccount) {
+          const mktAmount = Math.floor((400000 + Math.random() * 300000) * branch.multiplier);
+          await upsertJE(`${pfx}${pad}09`, { orgId: org.id, branchId: branch.id, date: entryDate, memo: `Marketing spend - ${branch.name} - ${dateStr}`, source: 'EXPENSE', sourceId: `MKT-${branch.name.substring(0, 3).toUpperCase()}-${entryDate.getMonth() + 1}` }, [
+            { id: `${pfx}${pad}09-L1`, accountId: marketingAccount.id, debit: mktAmount, credit: 0 },
+            { id: `${pfx}${pad}09-L2`, accountId: cashAccount.id, debit: 0, credit: mktAmount },
+          ]);
+        }
+
+        // === 10: Bank deposits (every 3 days, move cash → bank) ===
+        if (daysAgo % 3 === 0 && bankAccount) {
+          const depositAmount = Math.floor(salesAmount * 0.6); // deposit 60% of daily sales
+          await upsertJE(`${pfx}${pad}10`, { orgId: org.id, branchId: branch.id, date: entryDate, memo: `Bank deposit - ${branch.name} - ${dateStr}`, source: 'BANK_DEPOSIT', sourceId: `DEP-${branch.name.substring(0, 3).toUpperCase()}-${dateStr}` }, [
+            { id: `${pfx}${pad}10-L1`, accountId: bankAccount.id, debit: depositAmount, credit: 0 },
+            { id: `${pfx}${pad}10-L2`, accountId: cashAccount.id, debit: 0, credit: depositAmount },
+          ]);
         }
       }
     }
@@ -1595,6 +1775,101 @@ async function seedJournalEntries(prisma: PrismaClient): Promise<void> {
   }
 
   console.log(`  📊 Total journal entries: ${totalEntryCount}`);
+}
+
+/**
+ * Seed OpsBudget records for the finance/budgets page
+ * Creates budget targets for each category across all branches for the current month
+ * and previous month so both months show data.
+ */
+async function seedBudgets(prisma: PrismaClient): Promise<void> {
+  console.log('\n💰 Seeding Budgets...');
+
+  const orgs = [
+    {
+      id: ORG_TAPAS_ID,
+      name: 'Tapas',
+      branches: [
+        { id: BRANCH_TAPAS_MAIN_ID, name: 'Main', multiplier: 1.0 },
+      ],
+    },
+    {
+      id: ORG_CAFESSERIE_ID,
+      name: 'Cafesserie',
+      branches: [
+        { id: BRANCH_CAFE_VILLAGE_MALL_ID, name: 'Village Mall', multiplier: 1.2 },
+        { id: BRANCH_CAFE_ACACIA_MALL_ID, name: 'Acacia Mall', multiplier: 1.0 },
+        { id: BRANCH_CAFE_ARENA_MALL_ID, name: 'Arena Mall', multiplier: 0.8 },
+        { id: BRANCH_CAFE_MOMBASA_ID, name: 'Mombasa', multiplier: 0.6 },
+      ],
+    },
+  ];
+
+  // Budget targets per category (monthly, in UGX) — base amounts for multiplier 1.0
+  const budgetTargets: Array<{ category: string; base: number; actualPct: number }> = [
+    { category: 'STOCK', base: 8500000, actualPct: 0.92 },           // 8.5M stock budget, 92% utilized
+    { category: 'PAYROLL', base: 4800000, actualPct: 1.05 },         // 4.8M payroll, slightly over
+    { category: 'SERVICE_PROVIDERS', base: 1200000, actualPct: 0.78 },// 1.2M service providers
+    { category: 'UTILITIES', base: 950000, actualPct: 1.12 },        // 950K utilities, over budget
+    { category: 'RENT', base: 3000000, actualPct: 1.0 },             // 3M rent, exactly on budget
+    { category: 'MARKETING', base: 1500000, actualPct: 0.65 },       // 1.5M marketing, underutilized
+    { category: 'MISC', base: 500000, actualPct: 0.88 },             // 500K misc
+  ];
+
+  let count = 0;
+  const now = SEED_DATE_ANCHOR;
+  // Seed current month and previous month
+  const months = [
+    { year: now.getFullYear(), month: now.getMonth() + 1 },
+    { year: now.getMonth() === 0 ? now.getFullYear() - 1 : now.getFullYear(), month: now.getMonth() === 0 ? 12 : now.getMonth() },
+  ];
+
+  for (const org of orgs) {
+    for (const branch of org.branches) {
+      for (const period of months) {
+        for (const target of budgetTargets) {
+          const budgetAmount = Math.floor(target.base * branch.multiplier);
+          // Add some randomness to actuals (±10%)
+          const jitter = 0.9 + Math.random() * 0.2;
+          const actualAmount = Math.floor(budgetAmount * target.actualPct * jitter);
+          const variance = actualAmount - budgetAmount;
+          const variancePct = budgetAmount > 0 ? (variance / budgetAmount) * 100 : 0;
+
+          await prisma.opsBudget.upsert({
+            where: {
+              branchId_year_month_category: {
+                branchId: branch.id,
+                year: period.year,
+                month: period.month,
+                category: target.category as any,
+              },
+            },
+            update: {
+              budgetAmount,
+              actualAmount,
+              varianceAmount: variance,
+              variancePct: parseFloat(variancePct.toFixed(2)),
+            },
+            create: {
+              orgId: org.id,
+              branchId: branch.id,
+              year: period.year,
+              month: period.month,
+              category: target.category as any,
+              budgetAmount,
+              actualAmount,
+              varianceAmount: variance,
+              variancePct: parseFloat(variancePct.toFixed(2)),
+            },
+          });
+          count++;
+        }
+      }
+    }
+    console.log(`  ✅ Budgets seeded for ${org.name}`);
+  }
+
+  console.log(`  📊 Total budget records: ${count}`);
 }
 
 /**
@@ -1702,17 +1977,18 @@ async function seedStaffAwards(prisma: PrismaClient): Promise<void> {
     return;
   }
 
-  const now = new Date();
+  // Use SEED_DATE_ANCHOR for staff award dates
+  const anchor = SEED_DATE_ANCHOR;
   const categories: Array<'TOP_PERFORMER' | 'HIGHEST_SALES' | 'BEST_SERVICE' | 'MOST_RELIABLE'> = [
     'TOP_PERFORMER', 'HIGHEST_SALES', 'BEST_SERVICE', 'MOST_RELIABLE',
   ];
 
   let count = 0;
 
-  // Create awards for the last 3 months
+  // Create awards for the last 3 months relative to anchor
   for (let monthsAgo = 0; monthsAgo < 3; monthsAgo++) {
-    const periodStart = new Date(now.getFullYear(), now.getMonth() - monthsAgo, 1);
-    const periodEnd = new Date(now.getFullYear(), now.getMonth() - monthsAgo + 1, 0);
+    const periodStart = new Date(anchor.getFullYear(), anchor.getMonth() - monthsAgo, 1);
+    const periodEnd = new Date(anchor.getFullYear(), anchor.getMonth() - monthsAgo + 1, 0);
 
     // Pick a random employee for each category
     for (const category of categories) {
@@ -1754,7 +2030,6 @@ async function seedStaffAwards(prisma: PrismaClient): Promise<void> {
 async function seedFeedback(prisma: PrismaClient): Promise<void> {
   console.log('\n📝 Seeding Customer Feedback (NPS)...');
 
-  const now = new Date();
   const channels: Array<'POS' | 'PORTAL' | 'QR' | 'EMAIL'> = ['POS', 'PORTAL', 'QR', 'EMAIL'];
   
   // NPS score distribution: 60% promoters (9-10), 25% passives (7-8), 15% detractors (0-6)
@@ -1796,10 +2071,10 @@ async function seedFeedback(prisma: PrismaClient): Promise<void> {
 
   let count = 0;
 
-  // Create 200 feedback entries over the last 30 days
+  // Create 200 feedback entries over the last 30 days relative to anchor
   for (let i = 0; i < 200; i++) {
     const daysAgo = Math.floor(Math.random() * 30);
-    const createdAt = new Date(now.getTime() - daysAgo * 24 * 60 * 60 * 1000);
+    const createdAt = getSeedDate(-daysAgo);
     createdAt.setHours(10 + Math.floor(Math.random() * 10), Math.floor(Math.random() * 60));
 
     const score = getNpsScore();
@@ -1896,12 +2171,13 @@ async function seedTimeEntries(prisma: PrismaClient): Promise<void> {
     return;
   }
 
-  const now = new Date();
+  // Use SEED_DATE_ANCHOR for time entry dates
+  const anchor = SEED_DATE_ANCHOR;
   let entryCount = 0;
 
-  // Create time entries for the last 14 days
+  // Create time entries for the last 14 days relative to anchor
   for (let daysAgo = 14; daysAgo >= 0; daysAgo--) {
-    const workDate = new Date(now.getTime() - daysAgo * 24 * 60 * 60 * 1000);
+    const workDate = getSeedDate(-daysAgo);
     const dayOfWeek = workDate.getDay();
     
     // Skip Sundays
@@ -1928,7 +2204,7 @@ async function seedTimeEntries(prisma: PrismaClient): Promise<void> {
           userId: employee.id,
           branchId: BRANCH_TAPAS_MAIN_ID,
           clockInAt: clockIn,
-          clockOutAt: daysAgo === 0 && clockOut > now ? null : clockOut, // Today might still be working
+          clockOutAt: daysAgo === 0 && clockOut > anchor ? null : clockOut, // Today might still be working
           method: 'MSR', // Magnetic Stripe Reader (badge swipe)
         },
       });
@@ -1981,9 +2257,11 @@ export async function seedComprehensive(prisma: PrismaClient): Promise<void> {
     await seedCompletedOrders(prisma);
     await seedLiveOrders(prisma);         // NEW: OPEN orders for POS
     await seedInventoryGaps(prisma);      // M76: Depletions + COGS breakdowns (depends on orders + inventory)
-    await seedPosReceipts(prisma);        // M32: POS receipts for closed orders
+    await seedReportData(prisma);          // Report data: movements, waste, KDS, menu costs
+    await seedPosReceipts(prisma);         // M32: POS receipts for closed orders
     await seedCustomerReceipts(prisma);   // M32: Customer receipts for AR
     await seedJournalEntries(prisma);
+    await seedBudgets(prisma);            // NEW: Budget targets for finance page
     await seedEmployeeProfiles(prisma);
     await seedTimeEntries(prisma);
     await seedEmployees(prisma);      // NEW: Employee records for StaffAward

@@ -7,6 +7,7 @@ import { json } from 'express';
 import { RequestIdMiddleware } from './meta/request-id.middleware';
 import { HttpLoggerMiddleware } from './logging/http-logger.middleware';
 import { GlobalExceptionFilter } from './errors/global-exception.filter';
+import { TimeoutInterceptor } from './common/timeout.interceptor';
 
 // Catch all unhandled errors
 process.on('unhandledRejection', (reason, promise) => {
@@ -116,8 +117,15 @@ async function bootstrap() {
   // Errors: Global standardized error responses
   app.useGlobalFilters(new GlobalExceptionFilter());
 
+  // Timeouts: Global 30s request timeout — prevents indefinite hangs
+  app.useGlobalInterceptors(new TimeoutInterceptor());
+
   console.log(`[BOOTSTRAP] Binding to 0.0.0.0:${port}...`);
   await app.listen(port, '0.0.0.0');
+
+  // Graceful shutdown: close connections cleanly on SIGTERM/SIGINT
+  app.enableShutdownHooks();
+
   logger.info(`🚀 ChefCloud API running on http://0.0.0.0:${port}`);
   logger.info(`CORS allowlist: ${allowedOrigins.join(', ')}`);
   console.log(`[BOOTSTRAP] Server started successfully`);

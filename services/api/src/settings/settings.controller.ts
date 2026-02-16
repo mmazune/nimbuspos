@@ -2,6 +2,7 @@
  * E39-s1: Settings Controller
  *
  * Admin APIs (L5) for managing currency, tax matrix, and rounding settings.
+ * Also provides demo time endpoints for time-freeze feature.
  */
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -11,6 +12,7 @@ import { AuthGuard } from '@nestjs/passport';
 import { RolesGuard } from '../auth/roles.guard';
 import { Roles } from '../auth/roles.decorator';
 import { PrismaService } from '../prisma.service';
+import { DemoTimeService } from '../common/demo/demo-time.service';
 
 interface RequestWithUser extends Request {
   user: {
@@ -26,7 +28,10 @@ interface RequestWithUser extends Request {
 @Controller('settings')
 @UseGuards(AuthGuard('jwt'), RolesGuard)
 export class SettingsController {
-  constructor(private readonly prisma: PrismaService) {}
+  constructor(
+    private readonly prisma: PrismaService,
+    private readonly demoTime: DemoTimeService,
+  ) {}
 
   /**
    * GET /settings/currency - Get base currency
@@ -156,5 +161,27 @@ export class SettingsController {
     });
 
     return rate;
+  }
+
+  /**
+   * GET /settings/effective-time - Get the effective "now" for demo orgs
+   * 
+   * For demo orgs with a freeze date, returns that frozen date.
+   * For non-demo orgs, returns the real current time.
+   * This allows the frontend to use this as the base for date range calculations,
+   * ensuring demo data always appears fresh.
+   */
+  @Get('effective-time')
+  @Roles('L1', 'L2', 'L3', 'L4', 'L5')
+  async getEffectiveTime(@Request() req: RequestWithUser): Promise<any> {
+    const effectiveNow = await this.demoTime.getEffectiveNow(req.user.orgId);
+    const freezeDate = await this.demoTime.getOrgFreezeDate(req.user.orgId);
+    
+    return {
+      effectiveNow: effectiveNow.toISOString(),
+      isFrozen: freezeDate !== null,
+      freezeDate: freezeDate?.toISOString() || null,
+      realNow: new Date().toISOString(),
+    };
   }
 }

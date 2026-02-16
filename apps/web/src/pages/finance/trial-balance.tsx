@@ -3,7 +3,7 @@
  * 
  * Displays the trial balance report with all account balances.
  */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useAuth } from '@/contexts/AuthContext';
 import { useActiveBranch } from '@/contexts/ActiveBranchContext';
@@ -18,6 +18,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { RequireRole } from '@/components/RequireRole';
 import { RoleLevel } from '@/lib/auth';
+import { useEffectiveTime } from '@/hooks/useEffectiveTime';
 import {
   Table,
   TableBody,
@@ -61,29 +62,46 @@ interface TrialBalanceData {
   };
 }
 
+/** Normalize API response to frontend shape */
+function normalizeTrialBalance(raw: any): TrialBalanceData {
+  return {
+    accounts: raw.accounts ?? [],
+    totals: raw.totals ?? {
+      totalDebit: raw.totalDebits ?? 0,
+      totalCredit: raw.totalCredits ?? 0,
+    },
+  };
+}
+
 const ACCOUNT_TYPE_ORDER = ['ASSET', 'LIABILITY', 'EQUITY', 'REVENUE', 'COGS', 'EXPENSE'];
 
 export default function TrialBalancePage() {
   const { user } = useAuth();
-  const { activeBranchId } = useActiveBranch();
+  const { activeBranchId, activeBranch } = useActiveBranch();
+  const { effectiveNow, formatDate, isLoading: timeLoading } = useEffectiveTime();
   const branchId = activeBranchId || user?.branch?.id;
 
-  // Date range state
-  const now = new Date();
-  const [startDate, setStartDate] = useState(
-    new Date(now.getFullYear(), now.getMonth(), 1).toISOString().split('T')[0]
-  );
-  const [endDate, setEndDate] = useState(now.toISOString().split('T')[0]);
+  // Date range state - initialized from effective time
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
+  
+  useEffect(() => {
+    if (!timeLoading && effectiveNow) {
+      const start = new Date(effectiveNow.getFullYear(), effectiveNow.getMonth(), 1);
+      setStartDate(formatDate(start));
+      setEndDate(formatDate(effectiveNow));
+    }
+  }, [timeLoading, effectiveNow, formatDate]);
 
   const { data, isLoading, error, refetch } = useQuery({
     queryKey: ['trial-balance', branchId, startDate, endDate],
     queryFn: async () => {
-      const response = await apiClient.get<TrialBalanceData>('/accounting/trial-balance', {
-        params: { branchId, startDate, endDate },
+      const response = await apiClient.get('/accounting/trial-balance', {
+        params: { branchId, asOf: endDate || undefined },
       });
-      return response.data;
+      return normalizeTrialBalance(response.data);
     },
-    enabled: !!user,
+    enabled: !!user && !!endDate,
   });
 
   // Group accounts by type
@@ -278,7 +296,7 @@ export default function TrialBalancePage() {
         {/* Debug info */}
         <div className="mt-4 text-xs text-muted-foreground">
           ✓ Data source: GET /accounting/trial-balance
-          {branchId && ` • Branch filter: ${branchId}`}
+          {branchId && ` • Branch filter: ${activeBranch?.name ?? branchId}`}
         </div>
       </AppShell>
     </RequireRole>

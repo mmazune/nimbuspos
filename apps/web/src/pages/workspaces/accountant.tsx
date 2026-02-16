@@ -74,7 +74,7 @@ interface JournalEntry {
 
 export default function AccountantWorkspace() {
   const { user } = useAuth();
-  const { activeBranchId } = useActiveBranch();
+  const { activeBranchId, activeBranch } = useActiveBranch();
   const branchId = activeBranchId || user?.branch?.id;
 
   // Current date range (current month)
@@ -322,7 +322,7 @@ export default function AccountantWorkspace() {
         {/* Debug info */}
         <div className="mt-4 text-xs text-muted-foreground">
           ✓ Data source: /accounting/trial-balance, /accounting/pnl, /accounting/periods, /accounting/journal
-          {branchId && ` • Branch filter: ${branchId}`}
+          {branchId && ` • Branch filter: ${activeBranch?.name ?? branchId}`}
         </div>
       </AppShell>
     </RequireRole>

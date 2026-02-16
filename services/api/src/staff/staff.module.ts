@@ -1,5 +1,4 @@
 import { Module, forwardRef } from '@nestjs/common';
-import { PrismaService } from '../prisma.service';
 import { WaiterMetricsService } from './waiter-metrics.service';
 import { StaffInsightsService } from './staff-insights.service';
 import { PromotionInsightsService } from './promotion-insights.service';
@@ -12,7 +11,6 @@ import { AntiTheftModule } from '../anti-theft/anti-theft.module';
 @Module({
   imports: [forwardRef(() => AntiTheftModule)],
   providers: [
-    PrismaService,
     WaiterMetricsService,
     StaffInsightsService,
     PromotionInsightsService,

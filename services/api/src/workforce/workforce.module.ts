@@ -16,7 +16,6 @@ import { WorkforceService } from './workforce.service';
 import { WorkforceController } from './workforce.controller';
 import { PayrollService } from './payroll.service'; // E43-s2
 import { PayrollController } from './payroll.controller'; // E43-s2
-import { PrismaService } from '../prisma.service';
 import { AccountingModule } from '../accounting/accounting.module'; // E43-s2
 
 // M10.1: Workforce Core (Shifts + Timeclock + Approvals + Reports)
@@ -219,8 +218,7 @@ import { KioskOpsReportingService } from './kiosk-ops-reporting.service';
     KioskHealthService, // M10.22
     KioskFraudService, // M10.22
     KioskOpsReportingService, // M10.22
-    PrismaService,
-  ],
+    ],
   exports: [
     WorkforceService,
     PayrollService, // E43-s2

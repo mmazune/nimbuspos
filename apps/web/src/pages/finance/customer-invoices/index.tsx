@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { RequireRole } from '@/components/RequireRole';
 import { RoleLevel } from '@/lib/auth';
+import { useEffectiveTime } from '@/hooks/useEffectiveTime';
 import {
   Table,
   TableBody,
@@ -70,6 +71,7 @@ const STATUS_OPTIONS = [
 export default function CustomerInvoicesPage() {
   const { user } = useAuth();
   const { activeBranchId } = useActiveBranch();
+  const { effectiveNow } = useEffectiveTime();
   const router = useRouter();
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -285,7 +287,7 @@ export default function CustomerInvoicesPage() {
                 <TableBody>
                   {filteredInvoices.map(invoice => {
                     const outstanding = Number(invoice.total) - Number(invoice.paidAmount);
-                    const isOverdue = new Date(invoice.dueDate) < new Date() && outstanding > 0;
+                    const isOverdue = new Date(invoice.dueDate) < effectiveNow && outstanding > 0;
 
                     return (
                       <TableRow key={invoice.id} className="cursor-pointer hover:bg-muted/50">

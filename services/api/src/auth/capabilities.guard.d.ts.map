@@ -1,0 +1,1 @@
+{"version":3,"file":"capabilities.guard.d.ts","sourceRoot":"","sources":["capabilities.guard.ts"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;GAkBG;AAEH,OAAO,EAAc,WAAW,EAAE,gBAAgB,EAAsB,MAAM,gBAAgB,CAAC;AAC/F,OAAO,EAAE,SAAS,EAAE,MAAM,cAAc,CAAC;AAIzC,qBACa,iBAAkB,YAAW,WAAW;IACvC,OAAO,CAAC,SAAS;gBAAT,SAAS,EAAE,SAAS;IAExC,WAAW,CAAC,OAAO,EAAE,gBAAgB,GAAG,OAAO;CAiChD"}

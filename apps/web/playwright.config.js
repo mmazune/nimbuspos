@@ -1,0 +1,42 @@
+"use strict";
+/**
+ * Playwright Configuration for Role Navigation Smoke Tests
+ *
+ * Minimal footprint configuration for validating NavMap-driven UI.
+ * Tests verify that runtime JSON definitions actually drive the live UI.
+ *
+ * Run: pnpm test:e2e
+ */
+Object.defineProperty(exports, "__esModule", { value: true });
+const test_1 = require("@playwright/test");
+exports.default = (0, test_1.defineConfig)({
+    testDir: './e2e',
+    fullyParallel: false, // Run sequentially to avoid auth conflicts
+    forbidOnly: !!process.env.CI,
+    retries: process.env.CI ? 2 : 0,
+    workers: 1, // Single worker for predictable auth state
+    reporter: [
+        ['html', { outputFolder: 'playwright-report' }],
+        ['list'],
+    ],
+    use: {
+        baseURL: process.env.E2E_BASE_URL || 'http://localhost:3000',
+        trace: 'on-first-retry',
+        screenshot: 'only-on-failure',
+    },
+    projects: [
+        {
+            name: 'chromium',
+            use: { ...test_1.devices['Desktop Chrome'] },
+        },
+    ],
+    // M47: webServer disabled - expect server already running externally
+    // Avoids EADDRINUSE conflicts when web server is already running
+    // webServer: {
+    //   command: 'pnpm dev',
+    //   url: 'http://localhost:3000',
+    //   reuseExistingServer: true,
+    //   timeout: 120 * 1000,
+    // },
+});
+//# sourceMappingURL=playwright.config.js.map

@@ -18,6 +18,7 @@ import {
   BRANCH_CAFE_VILLAGE_MALL_ID,
   LOC_TAPAS_MAIN_ID,
   LOC_CAFE_VM_MAIN_ID,
+  getSeedDate,
 } from './constants';
 
 /**
@@ -212,7 +213,7 @@ async function seedCostLayers(
   });
 
   let costLayerCount = 0;
-  const seedDate = new Date('2025-12-23T12:00:00Z'); // SEED_DATE_ANCHOR
+  const seedDate = getSeedDate(-30); // 30 days ago relative to SEED_DATE_ANCHOR
 
   for (const item of inventoryItems) {
     // Check if cost layer already exists
@@ -301,7 +302,7 @@ async function seedLedgerEntries(
   });
 
   let ledgerCount = 0;
-  const seedDate = new Date('2025-12-23T12:00:00Z'); // SEED_DATE_ANCHOR
+  const seedDate = getSeedDate(-30); // 30 days ago relative to SEED_DATE_ANCHOR
   const sourceId = `m38-seed-${orgId}`;
 
   for (const item of inventoryItems) {

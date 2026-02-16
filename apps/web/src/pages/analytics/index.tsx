@@ -30,6 +30,7 @@ import { FranchiseMultiMonthChart } from '@/components/analytics/franchise/Franc
 import { useAuth } from '@/contexts/AuthContext';
 import { apiClient } from '@/lib/api';
 import { definePageMeta } from '@/lib/pageMeta';
+import { useEffectiveTime } from '@/hooks/useEffectiveTime';
 
 /** Phase I3: Page metadata for action catalog */
 export const pageMeta = definePageMeta({
@@ -62,13 +63,6 @@ interface DailyMetricPoint {
 // Helper to get date in YYYY-MM-DD format
 const formatDateForInput = (date: Date): string => {
   return date.toISOString().split('T')[0];
-};
-
-// Helper to get date N days ago
-const getDaysAgo = (days: number): Date => {
-  const date = new Date();
-  date.setDate(date.getDate() - days);
-  return date;
 };
 
 interface BranchMetric {
@@ -154,12 +148,23 @@ export default function AnalyticsPage() {
   const { user } = useAuth();
   const branchId = user?.branch?.id;
 
-  // Date range state
-  const [from, setFrom] = useState<string>(formatDateForInput(getDaysAgo(30)));
-  const [to, setTo] = useState<string>(formatDateForInput(new Date()));
+  // Use effective time for demo freeze support
+  const { effectiveNow, getDaysAgo: getEffDaysAgo, isLoading: timeLoading } = useEffectiveTime();
+
+  // Date range state - initialized after effectiveNow is available
+  const [from, setFrom] = useState<string>('');
+  const [to, setTo] = useState<string>('');
+
+  // Initialize dates from effective time (handles demo freeze)
+  React.useEffect(() => {
+    if (!timeLoading && effectiveNow) {
+      setFrom(formatDateForInput(getEffDaysAgo(30)));
+      setTo(formatDateForInput(effectiveNow));
+    }
+  }, [timeLoading, effectiveNow, getEffDaysAgo]);
 
   // Franchise analytics date selector (E22-FRANCHISE-FE-S1)
-  const currentDate = new Date();
+  const currentDate = timeLoading ? new Date() : effectiveNow;
   const [franchiseYear, setFranchiseYear] = useState<number>(currentDate.getFullYear());
   const [franchiseMonth, setFranchiseMonth] = useState<number>(currentDate.getMonth() + 1);
   
@@ -262,10 +267,10 @@ export default function AnalyticsPage() {
       lookbackMonths: 3,
     });
 
-  // Quick date range buttons
+  // Quick date range buttons (uses effective time for demo freeze support)
   const setQuickRange = (days: number) => {
-    setFrom(formatDateForInput(getDaysAgo(days)));
-    setTo(formatDateForInput(new Date()));
+    setFrom(formatDateForInput(getEffDaysAgo(days)));
+    setTo(formatDateForInput(effectiveNow));
   };
 
   // Calculate summary stats

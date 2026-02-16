@@ -1,0 +1,1 @@
+{"version":3,"file":"org-scope.guard.d.ts","sourceRoot":"","sources":["org-scope.guard.ts"],"names":[],"mappings":"AAAA,OAAO,EAEL,WAAW,EACX,gBAAgB,EAIjB,MAAM,gBAAgB,CAAC;AAExB;;;;;;;;GAQG;AACH,qBACa,aAAc,YAAW,WAAW;IAC/C,OAAO,CAAC,QAAQ,CAAC,MAAM,CAAkC;IAEzD,WAAW,CAAC,OAAO,EAAE,gBAAgB,GAAG,OAAO;CA8BhD"}

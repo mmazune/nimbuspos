@@ -16,6 +16,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { RequireRole } from '@/components/RequireRole';
 import { RoleLevel } from '@/lib/auth';
+import { useEffectiveTime } from '@/hooks/useEffectiveTime';
 import {
   Table,
   TableBody,
@@ -70,6 +71,7 @@ const STATUS_OPTIONS = [
 export default function VendorBillsPage() {
   const { user } = useAuth();
   const { activeBranchId } = useActiveBranch();
+  const { effectiveNow } = useEffectiveTime();
   const router = useRouter();
 
   const [searchTerm, setSearchTerm] = useState('');
@@ -287,7 +289,7 @@ export default function VendorBillsPage() {
                 <TableBody>
                   {filteredBills.map(bill => {
                     const outstanding = Number(bill.total) - Number(bill.paidAmount);
-                    const isOverdue = new Date(bill.dueDate) < new Date() && outstanding > 0;
+                    const isOverdue = new Date(bill.dueDate) < effectiveNow && outstanding > 0;
 
                     return (
                       <TableRow key={bill.id} className="cursor-pointer hover:bg-muted/50">

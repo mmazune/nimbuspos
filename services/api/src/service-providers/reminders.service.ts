@@ -2,6 +2,7 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../prisma.service';
 import { UpdateReminderDto, ServiceReminderResponse, ReminderSummary } from './dto/reminder.dto';
 import { ContractFrequency, ContractStatus, ReminderSeverity, ReminderStatus } from '@chefcloud/db';
+import { DemoTimeService } from '../common/demo/demo-time.service';
 
 /**
  * M7: Service Payable Reminders
@@ -11,7 +12,10 @@ import { ContractFrequency, ContractStatus, ReminderSeverity, ReminderStatus } f
  */
 @Injectable()
 export class RemindersService {
-  constructor(private readonly prisma: PrismaService) {}
+  constructor(
+    private readonly prisma: PrismaService,
+    private readonly demoTime: DemoTimeService,
+  ) {}
 
   /**
    * Get reminders for an organization with optional filters
@@ -119,6 +123,7 @@ export class RemindersService {
 
   /**
    * Get reminder summary statistics
+   * For demo orgs, recalculates severity using effective time
    */
   async getReminderSummary(orgId: string, branchId?: string): Promise<ReminderSummary> {
     const where: any = { orgId };
@@ -138,6 +143,9 @@ export class RemindersService {
       },
     });
 
+    // Use effective time for demo freeze support
+    const effectiveNow = await this.demoTime.getEffectiveNow(orgId);
+
     const summary: ReminderSummary = {
       overdue: 0,
       dueToday: 0,
@@ -149,11 +157,15 @@ export class RemindersService {
     for (const reminder of reminders) {
       summary.totalAmount += Number(reminder.contract.amount);
 
-      if (reminder.severity === 'OVERDUE') {
+      // Recalculate severity based on effective time for accurate display
+      const effectiveSeverity = this.calculateSeverity(reminder.dueDate, effectiveNow);
+      const severity = effectiveSeverity ?? reminder.severity;
+
+      if (severity === 'OVERDUE') {
         summary.overdue++;
-      } else if (reminder.severity === 'DUE_TODAY') {
+      } else if (severity === 'DUE_TODAY') {
         summary.dueToday++;
-      } else if (reminder.severity === 'DUE_SOON') {
+      } else if (severity === 'DUE_SOON') {
         summary.dueSoon++;
       }
     }

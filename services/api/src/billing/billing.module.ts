@@ -1,7 +1,6 @@
 import { Module } from '@nestjs/common';
 import { BillingController } from './billing.controller';
 import { BillingService } from './billing.service';
-import { PrismaService } from '../prisma.service';
 import { JwtModule } from '@nestjs/jwt';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { PlanRateLimiterGuard } from '../common/plan-rate-limiter.guard';
@@ -19,6 +18,6 @@ import { PlanRateLimiterGuard } from '../common/plan-rate-limiter.guard';
     }),
   ],
   controllers: [BillingController],
-  providers: [BillingService, PrismaService, PlanRateLimiterGuard], // RedisService from @Global() CacheModule
+  providers: [BillingService, PlanRateLimiterGuard], // RedisService from @Global() CacheModule
 })
 export class BillingModule {}

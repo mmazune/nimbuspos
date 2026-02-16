@@ -17,8 +17,8 @@
  *   1: Failed to start API
  */
 
-import { spawn } from 'child_process';
-import { writeFileSync, existsSync, mkdirSync } from 'fs';
+import { spawn, execSync } from 'child_process';
+import { writeFileSync, readFileSync, existsSync, unlinkSync, mkdirSync, openSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -32,6 +32,7 @@ const PID_FILE = join(API_DIR, '.api.pid');
 const LOG_DIR = join(API_DIR, 'audit-results', '_logs');
 const timestamp = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
 const LOG_FILE = join(LOG_DIR, `api-detached-${timestamp}.log`);
+const isWindows = process.platform === 'win32';
 
 // Ensure log directory exists
 mkdirSync(LOG_DIR, { recursive: true });
@@ -42,11 +43,30 @@ console.log(`[api-start-detached] Entry point: ${DIST_MAIN}`);
 console.log(`[api-start-detached] Log file: ${LOG_FILE}`);
 console.log(`[api-start-detached] PID file: ${PID_FILE}`);
 
-// Check if API is already running
+// Helper: check if a PID is actually alive
+function isPidAlive(pid) {
+  try {
+    if (isWindows) {
+      const out = execSync(`tasklist /FI "PID eq ${pid}" /FO CSV /NH`, { encoding: 'utf8', stdio: ['pipe','pipe','pipe'] });
+      return out.includes('node.exe');
+    } else {
+      process.kill(Number(pid), 0);
+      return true;
+    }
+  } catch { return false; }
+}
+
+// Check if API is already running (with stale PID auto-cleanup)
 if (existsSync(PID_FILE)) {
-  console.error('[ERROR] API appears to be already running (PID file exists)');
-  console.error('[ERROR] Stop it first with: node scripts/api-stop.mjs');
-  process.exit(1);
+  const oldPid = readFileSync(PID_FILE, 'utf8').trim();
+  if (isPidAlive(oldPid)) {
+    console.error(`[ERROR] API is already running (PID ${oldPid} is alive)`);
+    console.error('[ERROR] Stop it first with: node scripts/api-stop.mjs');
+    process.exit(1);
+  } else {
+    console.log(`[CLEANUP] Stale PID file found (PID ${oldPid} is dead). Removing...`);
+    unlinkSync(PID_FILE);
+  }
 }
 
 // Check if dist exists
@@ -56,11 +76,14 @@ if (!existsSync(DIST_MAIN)) {
   process.exit(1);
 }
 
+// Open log file for stdout+stderr so we can monitor the detached process
+const logFd = openSync(LOG_FILE, 'a');
+
 // Spawn detached process
 const child = spawn('node', ['dist/src/main.js'], {
   cwd: API_DIR,
   detached: true,  // CRITICAL: Runs in separate process group
-  stdio: ['ignore', 'ignore', 'ignore'], // Don't capture stdio (truly detached)
+  stdio: ['ignore', logFd, logFd], // Redirect stdout+stderr to log file
   env: {
     ...process.env,
     NODE_OPTIONS: '--max-old-space-size=2048',

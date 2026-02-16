@@ -74,8 +74,9 @@ export default function ChartOfAccountsPage() {
   const { data: accounts, isLoading, error } = useQuery({
     queryKey: ['accounts'],
     queryFn: async () => {
-      const response = await apiClient.get<Account[]>('/accounting/accounts');
-      return response.data;
+      const response = await apiClient.get('/accounting/accounts');
+      const body = response.data as any;
+      return (Array.isArray(body) ? body : body.accounts ?? []) as Account[];
     },
     enabled: !!user,
   });

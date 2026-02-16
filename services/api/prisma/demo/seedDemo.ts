@@ -21,6 +21,8 @@ import {
   TAPAS_DEMO_USERS,
   CAFESSERIE_DEMO_USERS,
   DEMO_PASSWORD,
+  SEED_DATE_ANCHOR,
+  getSeedDate,
 } from './constants';
 import { seedWorkforce } from './seedWorkforce';
 
@@ -226,17 +228,24 @@ async function seedOrg(
   });
   console.log(`    ✅ Org: ${org.name} (${org.id})`);
 
-  // Create org settings
+  // Create org settings with demoFreezeDate for time-freeze feature
+  // This ensures demo data always appears "fresh" regardless of when demo is viewed
+  const demoMetadata = {
+    demoFreezeDate: SEED_DATE_ANCHOR.toISOString(),
+  };
+
   await prisma.orgSettings.upsert({
     where: { orgId: org.id },
     update: {
       vatPercent: orgDef.vatPercent,
       currency: orgDef.currency,
+      metadata: demoMetadata,
     },
     create: {
       orgId: org.id,
       vatPercent: orgDef.vatPercent,
       currency: orgDef.currency,
+      metadata: demoMetadata,
       platformAccess: {
         WAITER: { desktop: true, web: false, mobile: false },
         CASHIER: { desktop: true, web: false, mobile: false },
@@ -486,9 +495,10 @@ async function seedChartOfAccounts(prisma: PrismaClient, orgId: string): Promise
 async function seedFiscalPeriods(prisma: PrismaClient, orgId: string): Promise<void> {
   console.log(`    📅 Seeding Fiscal Periods...`);
 
-  const now = new Date();
-  const currentYear = now.getFullYear();
-  const currentQuarter = Math.floor(now.getMonth() / 3) + 1;
+  // Use SEED_DATE_ANCHOR for fiscal periods
+  const anchor = SEED_DATE_ANCHOR;
+  const currentYear = anchor.getFullYear();
+  const currentQuarter = Math.floor(anchor.getMonth() / 3) + 1;
 
   // Previous quarter (LOCKED)
   const prevQ = currentQuarter === 1 ? 4 : currentQuarter - 1;
@@ -569,7 +579,8 @@ async function seedVendorsAndBills(prisma: PrismaClient, orgId: string): Promise
   console.log(`    ✅ ${vendorData.length} vendors created`);
 
   // Create 14 vendor bills (mix of statuses including PARTIALLY_PAID for M8.4)
-  const now = new Date();
+  // Use SEED_DATE_ANCHOR for bill dates
+  const anchor = SEED_DATE_ANCHOR;
   const billData = [
     { num: 'VB-001', vendorIdx: 0, days: -45, amount: 850000, status: 'PAID', paidAmount: 1003000 }, // total with tax
     { num: 'VB-002', vendorIdx: 1, days: -40, amount: 1200000, status: 'PAID', paidAmount: 1416000 },
@@ -588,7 +599,7 @@ async function seedVendorsAndBills(prisma: PrismaClient, orgId: string): Promise
   ];
 
   for (const bill of billData) {
-    const billDate = new Date(now.getTime() + bill.days * 24 * 60 * 60 * 1000);
+    const billDate = getSeedDate(bill.days);
     const dueDate = new Date(billDate.getTime() + 30 * 24 * 60 * 60 * 1000);
     const vendor = vendorData[bill.vendorIdx];
     const billId = `00000000-0000-4000-8000-vb${orgId.slice(-4)}${bill.num.slice(-3)}`;
@@ -648,7 +659,8 @@ async function seedCustomersAndInvoices(prisma: PrismaClient, orgId: string): Pr
   console.log(`    ✅ ${customerData.length} customers created`);
 
   // Create 14 customer invoices (mix of statuses including PARTIALLY_PAID for M8.4)
-  const now = new Date();
+  // Use SEED_DATE_ANCHOR for invoice dates
+  const anchor = SEED_DATE_ANCHOR;
   const invoiceData = [
     { num: 'INV-001', customerIdx: 0, days: -50, amount: 1500000, status: 'PAID', paidAmount: 1770000 }, // total with tax
     { num: 'INV-002', customerIdx: 1, days: -45, amount: 3200000, status: 'PAID', paidAmount: 3776000 },
@@ -667,7 +679,7 @@ async function seedCustomersAndInvoices(prisma: PrismaClient, orgId: string): Pr
   ];
 
   for (const inv of invoiceData) {
-    const invoiceDate = new Date(now.getTime() + inv.days * 24 * 60 * 60 * 1000);
+    const invoiceDate = getSeedDate(inv.days);
     const dueDate = new Date(invoiceDate.getTime() + 30 * 24 * 60 * 60 * 1000);
     const customer = customerData[inv.customerIdx];
     const invoiceId = `00000000-0000-4000-8000-ci${orgId.slice(-4)}${inv.num.slice(-3)}`;

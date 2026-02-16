@@ -12,8 +12,10 @@
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
+/** Known demo org slugs that should be write-protected */
+const DEMO_ORG_SLUGS = ['tapas-demo', 'cafesserie-demo'];
+
 interface DemoOrg {
-  isDemo?: boolean;
   slug: string;
 }
 
@@ -22,7 +24,9 @@ export class DemoProtectionService {
   constructor(private readonly config: ConfigService) {}
 
   /**
-   * Determines if the given org should have write protections enabled
+   * Determines if the given org should have write protections enabled.
+   * Uses slug-based detection since the isDemo column was removed from the schema.
+   * All demo orgs (Tapas + Cafesserie) are protected when DEMO_PROTECT_WRITES=1.
    * @param org - The organization to check
    * @returns true if this org is demo-protected, false otherwise
    */
@@ -31,12 +35,10 @@ export class DemoProtectionService {
 
     // Check if demo protections are enabled globally
     const protect = this.config.get<string>('DEMO_PROTECT_WRITES') === '1';
-    const demoSlug = this.config.get<string>('DEMO_TAPAS_ORG_SLUG') ?? 'tapas-demo';
+    if (!protect) return false;
 
-    if (!protect || !demoSlug) return false;
-
-    // Only protect the Tapas demo org (isDemo=true AND slug matches)
-    return org.isDemo === true && org.slug === demoSlug;
+    // Protect any org whose slug matches a known demo slug
+    return DEMO_ORG_SLUGS.includes(org.slug);
   }
 
   /**

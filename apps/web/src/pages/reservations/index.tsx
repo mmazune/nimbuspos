@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { AppShell } from '@/components/layout/AppShell';
 import { PageHeader } from '@/components/layout/PageHeader';
@@ -8,6 +8,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useAuth } from '@/contexts/AuthContext';
 import { apiClient } from '@/lib/api';
+import { useEffectiveTime } from '@/hooks/useEffectiveTime';
 
 // API_URL removed - using apiClient from @/lib/api
 
@@ -60,18 +61,21 @@ export default function ReservationsPage() {
   const queryClient = useQueryClient();
   const { user } = useAuth();
   const branchId = user?.branch?.id;
+  
+  // Use effective time for demo freeze support
+  const { effectiveNow, getDaysAhead, formatDate, isLoading: timeLoading } = useEffectiveTime();
 
-  const [dateFrom, setDateFrom] = useState(() => {
-    const today = new Date();
-    today.setHours(0, 0, 0, 0);
-    return today.toISOString().split('T')[0];
-  });
-  const [dateTo, setDateTo] = useState(() => {
-    const future = new Date();
-    future.setDate(future.getDate() + 7);
-    return future.toISOString().split('T')[0];
-  });
+  const [dateFrom, setDateFrom] = useState('');
+  const [dateTo, setDateTo] = useState('');
   const [statusFilter, setStatusFilter] = useState<string>('ALL');
+  
+  // Initialize dates from effective time
+  useEffect(() => {
+    if (!timeLoading && effectiveNow) {
+      setDateFrom(formatDate(effectiveNow));
+      setDateTo(formatDate(getDaysAhead(7)));
+    }
+  }, [timeLoading, effectiveNow, formatDate, getDaysAhead]);
 
   const { data: reservations = [], isLoading: reservationsLoading } = useQuery<Reservation[]>({
     queryKey: ['reservations', dateFrom, dateTo, statusFilter, branchId],

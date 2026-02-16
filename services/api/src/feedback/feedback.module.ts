@@ -2,8 +2,6 @@ import { Module } from '@nestjs/common';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { FeedbackController } from './feedback.controller';
 import { FeedbackService } from './feedback.service';
-import { PrismaService } from '../prisma.service';
-
 @Module({
   imports: [
     ThrottlerModule.forRoot([
@@ -14,7 +12,7 @@ import { PrismaService } from '../prisma.service';
     ]),
   ],
   controllers: [FeedbackController],
-  providers: [FeedbackService, PrismaService],
+  providers: [FeedbackService],
   exports: [FeedbackService],
 })
 export class FeedbackModule {}

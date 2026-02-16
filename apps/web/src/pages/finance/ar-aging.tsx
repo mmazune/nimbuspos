@@ -49,8 +49,37 @@ export default function ARAgingPage() {
   const { data, isLoading, error } = useQuery({
     queryKey: ['ar-aging'],
     queryFn: async () => {
-      const response = await apiClient.get<ARAgingData>('/accounting/ar/aging');
-      return response.data;
+      const response = await apiClient.get('/accounting/ar/aging');
+      const raw = response.data as any;
+      // Normalize API shape → frontend shape
+      if (raw?.customers && raw?.totals) return raw as ARAgingData;
+      // API returns { current, thirtyDays, sixtyDays, ninetyPlusDays, total, invoices[] }
+      const totals: AgingBucket = {
+        current: raw.current ?? 0,
+        days30: raw.thirtyDays ?? 0,
+        days60: raw.sixtyDays ?? 0,
+        days90: raw.ninetyDays ?? 0,
+        over90: raw.ninetyPlusDays ?? 0,
+        total: raw.total ?? 0,
+      };
+      // Group invoices by customer
+      const custMap = new Map<string, CustomerAging>();
+      for (const inv of (raw.invoices ?? [])) {
+        const cName = inv.customerName ?? 'Unknown';
+        if (!custMap.has(cName)) {
+          custMap.set(cName, { customerId: cName, customerName: cName, aging: { current: 0, days30: 0, days60: 0, days90: 0, over90: 0, total: 0 } });
+        }
+        const c = custMap.get(cName)!;
+        const balance = Number(inv.balance) || 0;
+        const overdue = Number(inv.daysOverdue) || 0;
+        if (overdue > 90) c.aging.over90 += balance;
+        else if (overdue > 60) c.aging.days90 += balance;
+        else if (overdue > 30) c.aging.days60 += balance;
+        else if (overdue > 0) c.aging.days30 += balance;
+        else c.aging.current += balance;
+        c.aging.total += balance;
+      }
+      return { customers: Array.from(custMap.values()), totals };
     },
     enabled: !!user,
   });

@@ -19,6 +19,7 @@ import { Prisma } from '@chefcloud/db';
 interface AutomationConfig {
   intervalMs: number;
   enabled: boolean;
+  cycleTimeoutMs: number;
 }
 
 @Injectable()
@@ -26,10 +27,12 @@ export class AutomationService implements OnModuleDestroy {
   private readonly logger = new Logger(AutomationService.name);
   private intervalHandle: NodeJS.Timeout | null = null;
   private isShuttingDown = false;
+  private isRunning = false; // Concurrency guard: prevent overlapping cycles
 
   private readonly config: AutomationConfig = {
     intervalMs: 60000, // Run every 60 seconds
     enabled: process.env.NODE_ENV !== 'test', // Disabled in tests
+    cycleTimeoutMs: 30000, // Max 30s per cycle — abort if stuck
   };
 
   constructor(
@@ -47,11 +50,22 @@ export class AutomationService implements OnModuleDestroy {
   }
 
   private startAutomation(): void {
-    this.logger.log('Starting reservation automation runner');
+    this.logger.log('Starting reservation automation runner (60s interval, 30s timeout, concurrency guard)');
     this.intervalHandle = setInterval(() => {
-      this.runAutomationCycle().catch((err) => {
-        this.logger.error('Automation cycle failed', err);
-      });
+      if (this.isRunning) {
+        this.logger.warn('Automation cycle still running — skipping this tick');
+        return;
+      }
+      this.isRunning = true;
+
+      // Wrap cycle in a timeout to prevent indefinite hangs
+      const timeout = new Promise<void>((_, reject) =>
+        setTimeout(() => reject(new Error('Automation cycle timed out')), this.config.cycleTimeoutMs),
+      );
+
+      Promise.race([this.runAutomationCycle(), timeout])
+        .catch((err) => this.logger.error(`Automation cycle failed: ${err.message}`))
+        .finally(() => { this.isRunning = false; });
     }, this.config.intervalMs);
   }
 

@@ -17,11 +17,9 @@ import { PeriodsController } from './periods.controller';
 import { PeriodsService } from './periods.service';
 import { BankRecController } from './bank-rec.controller';
 import { BankRecService } from './bank-rec.service';
-import { PrismaService } from '../prisma.service';
-
 @Module({
   controllers: [AccountingController, PeriodsController, BankRecController],
-  providers: [AccountingService, PostingService, PeriodsService, BankRecService, PrismaService],
+  providers: [AccountingService, PostingService, PeriodsService, BankRecService],
   exports: [PostingService, AccountingService],
 })
 export class AccountingModule {}

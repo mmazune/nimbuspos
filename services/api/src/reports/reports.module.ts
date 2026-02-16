@@ -2,9 +2,9 @@ import { Module, forwardRef } from '@nestjs/common';
 import { ReportsController } from './reports.controller';
 import { ReportsService } from './reports.service';
 import { ReportGeneratorService } from './report-generator.service';
+import { RestaurantReportsService } from './restaurant-reports.service';
 import { SubscriptionService } from './subscription.service';
 import { CsvGeneratorService } from './csv-generator.service';
-import { PrismaService } from '../prisma.service';
 import { DashboardsModule } from '../dashboards/dashboards.module';
 import { InventoryModule } from '../inventory/inventory.module';
 import { FranchiseModule } from '../franchise/franchise.module';
@@ -23,10 +23,10 @@ import { FeedbackModule } from '../feedback/feedback.module';
   providers: [
     ReportsService,
     ReportGeneratorService,
+    RestaurantReportsService,
     SubscriptionService,
     CsvGeneratorService,
-    PrismaService,
   ],
-  exports: [ReportsService, ReportGeneratorService, SubscriptionService, CsvGeneratorService],
+  exports: [ReportsService, ReportGeneratorService, RestaurantReportsService, SubscriptionService, CsvGeneratorService],
 })
 export class ReportsModule {}

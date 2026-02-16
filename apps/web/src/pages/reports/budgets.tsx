@@ -5,7 +5,7 @@
  * Makes franchise analytics budget data discoverable from Finance/Reports verticals.
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { AppShell } from '@/components/layout/AppShell';
 import { PageHeader } from '@/components/layout/PageHeader';
 import { Card } from '@/components/ui/card';
@@ -14,12 +14,21 @@ import { FranchiseBudgetTable } from '@/components/analytics/franchise/Franchise
 import { FranchiseVarianceCard } from '@/components/analytics/franchise/FranchiseVarianceCard';
 import { usePlanCapabilities } from '@/hooks/usePlanCapabilities';
 import { BillingUpsellGate } from '@/components/billing/BillingUpsellGate';
+import { useEffectiveTime } from '@/hooks/useEffectiveTime';
 
 export default function FinanceBudgetsPage() {
-  // Default to current month
-  const now = new Date();
-  const [year, setYear] = useState(now.getFullYear());
-  const [month, setMonth] = useState(now.getMonth() + 1); // JS months are 0-indexed
+  // Use effective time for demo freeze support
+  const { effectiveNow, isLoading: timeLoading } = useEffectiveTime();
+  
+  const [year, setYear] = useState(new Date().getFullYear());
+  const [month, setMonth] = useState(new Date().getMonth() + 1);
+  
+  useEffect(() => {
+    if (!timeLoading && effectiveNow) {
+      setYear(effectiveNow.getFullYear());
+      setMonth(effectiveNow.getMonth() + 1);
+    }
+  }, [timeLoading, effectiveNow]);
 
   const { capabilities } = usePlanCapabilities();
   const hasAnalytics = capabilities?.canUseFranchiseAnalytics ?? false;
@@ -32,7 +41,7 @@ export default function FinanceBudgetsPage() {
     'July', 'August', 'September', 'October', 'November', 'December'
   ];
 
-  const years = Array.from({ length: 5 }, (_, i) => now.getFullYear() - 2 + i);
+  const years = Array.from({ length: 5 }, (_, i) => effectiveNow.getFullYear() - 2 + i);
 
   return (
     <AppShell>

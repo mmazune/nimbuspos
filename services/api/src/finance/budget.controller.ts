@@ -17,6 +17,7 @@ import { CreateBudgetDto } from './dto/budget.dto';
 import { RolesGuard } from '../auth/roles.guard';
 import { Roles } from '../auth/roles.decorator';
 import { RemindersService } from '../service-providers/reminders.service';
+import { DemoTimeService } from '../common/demo/demo-time.service';
 
 @Controller('finance/budgets')
 @UseGuards(AuthGuard('jwt'), RolesGuard)
@@ -25,6 +26,7 @@ export class BudgetController {
     private readonly budgetService: BudgetService,
     private readonly costInsightsService: CostInsightsService,
     private readonly remindersService: RemindersService,
+    private readonly demoTime: DemoTimeService,
   ) {}
 
   /**
@@ -207,8 +209,9 @@ export class BudgetController {
     const summary = await this.remindersService.getReminderSummary(orgId, branchId);
 
     // Get upcoming reminders (within next N days, default 30)
+    // Use effective time for demo freeze support
     const daysAhead = days ? parseInt(days, 10) : 30;
-    const today = new Date();
+    const today = await this.demoTime.getEffectiveNow(orgId);
     const endDate = new Date(today);
     endDate.setDate(today.getDate() + daysAhead);
 

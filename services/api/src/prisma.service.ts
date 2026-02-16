@@ -3,6 +3,13 @@ import { prisma, PrismaClient } from '@chefcloud/db';
 import { slowQueryMiddleware } from './common/slow-query';
 import { ledgerImmutabilityMiddleware } from './common/ledger-immutability.middleware';
 
+/** Guard to ensure middleware is only registered once on the singleton client */
+const MIDDLEWARE_REGISTERED = Symbol.for('__prisma_middleware_registered__');
+const globalRef = globalThis as any;
+
+/** Default query timeout in milliseconds (15 seconds) */
+const QUERY_TIMEOUT_MS = parseInt(process.env.PRISMA_QUERY_TIMEOUT_MS || '15000', 10);
+
 @Injectable()
 export class PrismaService implements OnModuleInit, OnModuleDestroy {
   private readonly logger = new Logger(PrismaService.name);
@@ -10,13 +17,43 @@ export class PrismaService implements OnModuleInit, OnModuleDestroy {
   async onModuleInit() {
     await prisma.$connect();
 
-    // E54-s1: Register slow query middleware
-    prisma.$use(slowQueryMiddleware(this.logger));
+    // Guard: Only register middleware ONCE on the singleton prisma client
+    if (!globalRef[MIDDLEWARE_REGISTERED]) {
+      globalRef[MIDDLEWARE_REGISTERED] = true;
 
-    // M11.15: Register ledger immutability middleware (append-only enforcement)
-    prisma.$use(ledgerImmutabilityMiddleware(this.logger));
+      // Query timeout middleware — wraps every query in a timeout race
+      prisma.$use(async (params, next) => {
+        const timeout = new Promise((_, reject) => {
+          const id = setTimeout(() => {
+            clearTimeout(id);
+            reject(new Error(
+              `Query timeout after ${QUERY_TIMEOUT_MS}ms: ${params.model}.${params.action}`
+            ));
+          }, QUERY_TIMEOUT_MS);
+        });
+        return Promise.race([next(params), timeout]);
+      });
 
-    this.logger.log('Prisma connected with slow-query + ledger-immutability middleware');
+      // E54-s1: Register slow query middleware
+      prisma.$use(slowQueryMiddleware(this.logger));
+
+      // M11.15: Register ledger immutability middleware (append-only enforcement)
+      prisma.$use(ledgerImmutabilityMiddleware(this.logger));
+
+      this.logger.log(
+        `Prisma connected: slow-query + ledger-immutability + ${QUERY_TIMEOUT_MS}ms query timeout`
+      );
+    } else {
+      this.logger.warn('Prisma middleware already registered — skipping duplicate registration');
+    }
+
+    // Set PostgreSQL statement_timeout at session level as a DB-side safety net
+    try {
+      await prisma.$executeRawUnsafe(`SET statement_timeout = '${QUERY_TIMEOUT_MS}'`);
+      this.logger.log(`PostgreSQL statement_timeout set to ${QUERY_TIMEOUT_MS}ms`);
+    } catch (e) {
+      this.logger.warn(`Could not set statement_timeout: ${(e as Error).message}`);
+    }
   }
 
   async onModuleDestroy() {

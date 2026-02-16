@@ -59,4 +59,4 @@ Memory Leak Detected,Performance,CRITICAL,Heap size grows continuously without G
 CPU Usage High,Performance,HIGH,CPU > 80% for >5 min,N/A (runtime),Prometheus alert → profiling → optimization,services/api/src/main.ts
 Disk Space Low,Infrastructure,CRITICAL,Disk usage > 90%,N/A (OS-level),Docker/K8s alert → log rotation → volume expansion,infra/docker/Dockerfile
 Idempotency Key Collision,Concurrency,MEDIUM,Duplicate Idempotency-Key with different request body,ALL POST/PATCH endpoints,409 Conflict response → client retry with new key,services/api/src/common/idempotency.middleware.ts
-Webhook Delivery Failure,Integration,HIGH,MTN/Airtel/Billing webhook returns 500,POST /webhooks/mtn | POST /webhooks/airtel | POST /webhooks/billing,Retry queue → eventual manual reconciliation,services/api/src/webhooks.controller.ts
+Webhook Delivery Failure,Integration,HIGH,MTN/Airtel/Billing webhook returns 500,POST /webhooks/mtn | POST /webhooks/airtel | POST /webhooks/billing,Retry queue → eventual manual reconciliation,services/api/src/webhooks.controller.ts

@@ -13,7 +13,6 @@ import { PublicBookingService } from './public-booking.service';
 import { ReportingService } from './reporting.service';
 import { SchedulingConstraintsService } from './scheduling-constraints.service';
 import { OpsMonitoringService } from './ops-monitoring.service';
-import { PrismaService } from '../prisma.service';
 import { AuthModule } from '../auth/auth.module';
 import { CommonModule } from '../common/common.module';
 
@@ -32,7 +31,6 @@ import { CommonModule } from '../common/common.module';
     ReportingService,
     SchedulingConstraintsService,
     OpsMonitoringService,
-    PrismaService,
   ],
   exports: [
     ReservationsService,

@@ -81,8 +81,15 @@ export default function FiscalPeriodsPage() {
   const { data: periods, isLoading, error } = useQuery({
     queryKey: ['fiscal-periods'],
     queryFn: async () => {
-      const response = await apiClient.get<FiscalPeriod[]>('/accounting/periods');
-      return response.data;
+      const response = await apiClient.get('/accounting/periods');
+      const body = response.data as any;
+      const raw = (Array.isArray(body) ? body : body.periods ?? []) as any[];
+      // Normalize API field names (startsAt→startDate, endsAt→endDate)
+      return raw.map(p => ({
+        ...p,
+        startDate: p.startDate ?? p.startsAt ?? p.start_date,
+        endDate: p.endDate ?? p.endsAt ?? p.end_date,
+      })) as FiscalPeriod[];
     },
     enabled: !!user,
   });

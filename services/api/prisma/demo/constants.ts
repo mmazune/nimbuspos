@@ -3,7 +3,40 @@
  * 
  * Deterministic IDs and configurations for demo organizations.
  * These IDs MUST remain stable across machines and seed runs.
+ * 
+ * IMPORTANT: SEED_DATE_ANCHOR is computed dynamically to ensure seeded data
+ * always falls within dashboard default date ranges (7/30/90 days from "now").
  */
+
+// ===== Seed Date Anchor =====
+// Dynamic anchor: Set to "now" so all seeded data is relative to current time.
+// This ensures dashboards, analytics, and reports always show the seeded data.
+// Data is seeded spanning from (anchor - 90 days) to (anchor + 7 days future).
+export const SEED_DATE_ANCHOR = new Date();
+
+/**
+ * Helper: Get a date relative to SEED_DATE_ANCHOR
+ * @param daysOffset - Number of days from anchor (negative = past, positive = future)
+ * @param hoursOffset - Optional hours offset within the day
+ */
+export function getSeedDate(daysOffset: number, hoursOffset = 12): Date {
+  const date = new Date(SEED_DATE_ANCHOR);
+  date.setDate(date.getDate() + daysOffset);
+  date.setHours(hoursOffset, 0, 0, 0);
+  return date;
+}
+
+/**
+ * Helper: Get a random date between two offsets (for realistic distribution)
+ * @param daysAgoStart - Days ago to start range (e.g., 30 = 30 days ago)
+ * @param daysAgoEnd - Days ago to end range (e.g., 0 = today)
+ */
+export function getRandomSeedDate(daysAgoStart: number, daysAgoEnd = 0): Date {
+  const start = getSeedDate(-daysAgoStart);
+  const end = getSeedDate(-daysAgoEnd);
+  const randomTime = start.getTime() + Math.random() * (end.getTime() - start.getTime());
+  return new Date(randomTime);
+}
 
 // ===== Deterministic Organization IDs =====
 export const ORG_TAPAS_ID = '00000000-0000-4000-8000-000000000001';
@@ -36,6 +69,11 @@ export const TAPAS_DEMO_USERS = [
   { email: 'chef@tapas.demo.local', roleLevel: 'L2', jobRole: 'CHEF', firstName: 'Iris', lastName: 'Chef' },
   { email: 'bartender@tapas.demo.local', roleLevel: 'L1', jobRole: 'BARTENDER', firstName: 'Jack', lastName: 'Bartender' },
   { email: 'eventmgr@tapas.demo.local', roleLevel: 'L3', jobRole: 'EVENT_MANAGER', firstName: 'Kelly', lastName: 'Events' },
+  // Additional service staff for realistic Sales-by-Server reports
+  { email: 'waiter2@tapas.demo.local', roleLevel: 'L1', jobRole: 'WAITER', firstName: 'Sarah', lastName: 'Nalwanga' },
+  { email: 'waiter3@tapas.demo.local', roleLevel: 'L1', jobRole: 'WAITER', firstName: 'David', lastName: 'Okello' },
+  { email: 'bartender2@tapas.demo.local', roleLevel: 'L1', jobRole: 'BARTENDER', firstName: 'Rita', lastName: 'Nambi' },
+  { email: 'cashier2@tapas.demo.local', roleLevel: 'L2', jobRole: 'CASHIER', firstName: 'Peter', lastName: 'Mukasa' },
 ] as const;
 
 // All Cafesserie users (no eventmgr as requested)
@@ -49,6 +87,10 @@ export const CAFESSERIE_DEMO_USERS = [
   { email: 'cashier@cafesserie.demo.local', roleLevel: 'L2', jobRole: 'CASHIER', firstName: 'Quinn', lastName: 'Cashier' },
   { email: 'waiter@cafesserie.demo.local', roleLevel: 'L1', jobRole: 'WAITER', firstName: 'Rachel', lastName: 'Waiter' },
   { email: 'chef@cafesserie.demo.local', roleLevel: 'L2', jobRole: 'CHEF', firstName: 'Sam', lastName: 'Chef' },
+  // Additional service staff for realistic Sales-by-Server reports
+  { email: 'waiter2@cafesserie.demo.local', roleLevel: 'L1', jobRole: 'WAITER', firstName: 'Agnes', lastName: 'Kamya' },
+  { email: 'waiter3@cafesserie.demo.local', roleLevel: 'L1', jobRole: 'WAITER', firstName: 'Brian', lastName: 'Ssempijja' },
+  { email: 'cashier2@cafesserie.demo.local', roleLevel: 'L2', jobRole: 'CASHIER', firstName: 'Diana', lastName: 'Atim' },
 ] as const;
 
 // ===== Organization Definitions =====

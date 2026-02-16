@@ -16,7 +16,6 @@ import { LowStockAlertsController } from './low-stock-alerts.controller';
 import { TemplatePacksService } from './template-packs.service';
 import { CsvImportService } from './csv-import.service';
 import { TemplatesController, ImportController } from './templates.controller';
-import { PrismaService } from '../prisma.service';
 import { KpisModule } from '../kpis/kpis.module';
 import { AuditModule } from '../audit/audit.module';
 
@@ -226,7 +225,6 @@ import { PrepItemsService } from './prep-items.service';
     LowStockAlertsService,
     TemplatePacksService,
     CsvImportService,
-    PrismaService,
   ],
   exports: [
     InventoryService,

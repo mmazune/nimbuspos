@@ -73,4 +73,4 @@ Observability - Metrics,Monitoring,COMPLETE,ALL,PROMETHEUS,INTERNAL,GET /ops/met
 Observability - Tracing,Monitoring,COMPLETE,ALL,ALL,ALL,OpenTelemetry instrumentation,services/api/src/main.ts#L40-L60
 Observability - Logging,Monitoring,COMPLETE,ALL,ALL,ALL,Pino structured logging,services/api/src/common/logger.service.ts
 Webhooks - Payment Providers,Integration,COMPLETE,web,PUBLIC (external),EXTERNAL,POST /webhooks/mtn | POST /webhooks/airtel | POST /webhooks/billing,services/api/src/webhooks.controller.ts
-Developer Portal,DevTools,COMPLETE,web,OWNER (API users),/dev,GET /dev,docs/milestones/M14-DEV-PORTAL-COMPLETION.md
+Developer Portal,DevTools,COMPLETE,web,OWNER (API users),/dev,GET /dev,docs/milestones/M14-DEV-PORTAL-COMPLETION.md

@@ -6,6 +6,7 @@ import { seedOpenOrders } from './demo/seedOrders';
 import { seedComprehensive } from './demo/seedComprehensive';
 import { seedOperationalState } from './demo/seedOperationalState';
 import { seedInventoryGaps } from './demo/seedInventoryGaps';
+import { seedRealisticExpansion } from './demo/seedRealisticExpansion';
 
 async function hashPassword(password: string): Promise<string> {
   return argon2.hash(password, {
@@ -803,6 +804,9 @@ async function main() {
 
   // ===== M44/M45: Inventory Gaps (Stock Levels + COGS) =====
   await seedInventoryGaps(prisma);
+
+  // ===== Realistic Data Expansion (Audit Events, Anomalies, Rankings, etc.) =====
+  await seedRealisticExpansion(prisma);
 
   console.log('\n🎉 Seed completed successfully!');
   console.log('\n📝 Test Credentials:');

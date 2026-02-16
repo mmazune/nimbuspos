@@ -49,8 +49,37 @@ export default function APAgingPage() {
   const { data, isLoading, error } = useQuery({
     queryKey: ['ap-aging'],
     queryFn: async () => {
-      const response = await apiClient.get<APAgingData>('/accounting/ap/aging');
-      return response.data;
+      const response = await apiClient.get('/accounting/ap/aging');
+      const raw = response.data as any;
+      // Normalize API shape → frontend shape
+      if (raw?.vendors && raw?.totals) return raw as APAgingData;
+      // API returns { current, thirtyDays, sixtyDays, ninetyPlusDays, total, bills[] }
+      const totals: AgingBucket = {
+        current: raw.current ?? 0,
+        days30: raw.thirtyDays ?? 0,
+        days60: raw.sixtyDays ?? 0,
+        days90: raw.ninetyDays ?? 0,
+        over90: raw.ninetyPlusDays ?? 0,
+        total: raw.total ?? 0,
+      };
+      // Group bills by vendor
+      const vendorMap = new Map<string, VendorAging>();
+      for (const bill of (raw.bills ?? [])) {
+        const vName = bill.vendorName ?? 'Unknown';
+        if (!vendorMap.has(vName)) {
+          vendorMap.set(vName, { vendorId: vName, vendorName: vName, aging: { current: 0, days30: 0, days60: 0, days90: 0, over90: 0, total: 0 } });
+        }
+        const v = vendorMap.get(vName)!;
+        const balance = Number(bill.balance) || 0;
+        const overdue = Number(bill.daysOverdue) || 0;
+        if (overdue > 90) v.aging.over90 += balance;
+        else if (overdue > 60) v.aging.days90 += balance;
+        else if (overdue > 30) v.aging.days60 += balance;
+        else if (overdue > 0) v.aging.days30 += balance;
+        else v.aging.current += balance;
+        v.aging.total += balance;
+      }
+      return { vendors: Array.from(vendorMap.values()), totals };
     },
     enabled: !!user,
   });

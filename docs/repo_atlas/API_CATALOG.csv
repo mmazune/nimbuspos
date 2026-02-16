@@ -217,4 +217,4 @@ GET,/stream,api,stream.controller.ts,AUTHENTICATED,/kds /pos,services/api/src/st
 POST,/webhooks/mtn,api,webhooks.controller.ts,PUBLIC,EXTERNAL_WEBHOOK,services/api/src/webhooks.controller.ts#L26
 POST,/webhooks/airtel,api,webhooks.controller.ts,PUBLIC,EXTERNAL_WEBHOOK,services/api/src/webhooks.controller.ts#L37
 POST,/webhooks/billing,api,webhooks.controller.ts,PUBLIC,EXTERNAL_WEBHOOK,services/api/src/webhooks.controller.ts#L55
-GET,/dev,api,dev.controller.ts,L5,/dev,services/api/src/dev/dev.controller.ts
+GET,/dev,api,dev.controller.ts,L5,/dev,services/api/src/dev/dev.controller.ts

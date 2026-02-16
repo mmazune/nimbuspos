@@ -11,6 +11,7 @@
 
 import { Injectable, Logger } from '@nestjs/common';
 import { PrismaService } from '../prisma.service';
+import { DemoTimeService } from '../common/demo/demo-time.service';
 
 interface TodayBoardFilters {
   branchId?: string;
@@ -58,7 +59,10 @@ interface TodayBoardResult {
 export class HostOpsService {
   private readonly logger = new Logger(HostOpsService.name);
 
-  constructor(private prisma: PrismaService) { }
+  constructor(
+    private prisma: PrismaService,
+    private demoTime: DemoTimeService,
+  ) { }
 
   /**
    * AC-07: Get Today Board for host view
@@ -68,7 +72,8 @@ export class HostOpsService {
     orgId: string,
     filters: TodayBoardFilters = {},
   ): Promise<TodayBoardResult> {
-    const today = new Date();
+    // Use effective "now" for demo time freeze support
+    const today = await this.demoTime.getEffectiveNow(orgId);
     const dayStart = new Date(today);
     dayStart.setHours(0, 0, 0, 0);
 

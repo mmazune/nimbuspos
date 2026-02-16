@@ -101,7 +101,7 @@ interface NewEntryLine {
 
 export default function JournalEntriesPage() {
   const { user } = useAuth();
-  const { activeBranchId } = useActiveBranch();
+  const { activeBranchId, activeBranch } = useActiveBranch();
   const router = useRouter();
   const searchParams = useSearchParams();
   const queryClient = useQueryClient();
@@ -125,10 +125,11 @@ export default function JournalEntriesPage() {
   const { data: entries, isLoading: loadingEntries } = useQuery({
     queryKey: ['journal-entries', branchId],
     queryFn: async () => {
-      const response = await apiClient.get<JournalEntry[]>('/accounting/journal', {
+      const response = await apiClient.get('/accounting/journal', {
         params: { branchId },
       });
-      return response.data;
+      const body = response.data as any;
+      return (Array.isArray(body) ? body : body.entries ?? []) as JournalEntry[];
     },
     enabled: !!user,
   });
@@ -137,8 +138,9 @@ export default function JournalEntriesPage() {
   const { data: accounts } = useQuery({
     queryKey: ['accounts'],
     queryFn: async () => {
-      const response = await apiClient.get<Account[]>('/accounting/accounts');
-      return response.data;
+      const response = await apiClient.get('/accounting/accounts');
+      const body = response.data as any;
+      return (Array.isArray(body) ? body : body.accounts ?? []) as Account[];
     },
     enabled: !!user,
   });
@@ -455,7 +457,7 @@ export default function JournalEntriesPage() {
         {/* Debug info */}
         <div className="mt-4 text-xs text-muted-foreground">
           ✓ Data source: GET /accounting/journal, POST /accounting/journal
-          {branchId && ` • Branch filter: ${branchId}`}
+          {branchId && ` • Branch filter: ${activeBranch?.name ?? branchId}`}
         </div>
       </AppShell>
     </RequireRole>

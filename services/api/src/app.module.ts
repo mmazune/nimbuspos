@@ -3,7 +3,6 @@ import { ConfigModule } from '@nestjs/config';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { APP_GUARD } from '@nestjs/core';
 import { HealthController } from './health/health.controller';
-import { PrismaService } from './prisma.service';
 import { AuthModule } from './auth/auth.module';
 import { PlatformAccessGuard } from './auth/platform-access.guard';
 import { CustomThrottlerGuard } from './common/custom-throttler.guard';

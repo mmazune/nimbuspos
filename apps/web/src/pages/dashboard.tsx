@@ -60,15 +60,10 @@ import {
   useDashboardAlerts,
   useBranchTimeseries,
 } from '@/hooks/useDashboardData';
+import { useEffectiveTime } from '@/hooks/useEffectiveTime';
 
-// Helper functions
+// Helper functions - note: these use real Date, prefer useEffectiveTime hook for demo support
 const formatDateForInput = (date: Date): string => date.toISOString().split('T')[0];
-const getDaysAgo = (days: number): Date => {
-  const date = new Date();
-  date.setDate(date.getDate() - days);
-  date.setHours(0, 0, 0, 0);
-  return date;
-};
 
 // Demo org detection
 const CAFESSERIE_ORG_ID = '00000000-0000-4000-8000-000000000002';
@@ -78,10 +73,22 @@ export default function DashboardPage() {
   const { user } = useAuth();
   const { activeBranchId, branches, isMultiBranch, setActiveBranchId } = useActiveBranch();
   
-  // Date range state
+  // Use effective time for demo freeze support
+  const { effectiveNow, getDaysAgo, isLoading: timeLoading, isFrozen } = useEffectiveTime();
+  
+  // Date range state - initialized after effectiveNow is available
   const [datePreset, setDatePreset] = useState<DateRangePreset>(isMultiBranch ? '30d' : '7d');
-  const [from, setFrom] = useState<string>(formatDateForInput(getDaysAgo(isMultiBranch ? 30 : 7)));
-  const [to, setTo] = useState<string>(formatDateForInput(new Date()));
+  const [from, setFrom] = useState<string>('');
+  const [to, setTo] = useState<string>('');
+  
+  // Initialize date range from effective time (handles demo freeze)
+  React.useEffect(() => {
+    if (!timeLoading && effectiveNow) {
+      const days = isMultiBranch ? 30 : 7;
+      setFrom(formatDateForInput(getDaysAgo(days)));
+      setTo(formatDateForInput(effectiveNow));
+    }
+  }, [timeLoading, effectiveNow, isMultiBranch, getDaysAgo]);
 
   // Compare branches for multi-branch view
   const [compareBranchIds, setCompareBranchIds] = useState<string[]>([]);
@@ -123,8 +130,17 @@ export default function DashboardPage() {
     from, to 
   });
   
+  // Build a branchId→name lookup from the branches context
+  const branchNameMap = useMemo(() => {
+    const map: Record<string, string> = {};
+    for (const b of branches) {
+      map[b.id] = b.name;
+    }
+    return map;
+  }, [branches]);
+
   const { data: branchTimeseries } = useBranchTimeseries({
-    from, to, branchIds: compareBranchIds,
+    from, to, branchIds: compareBranchIds, branchNames: branchNameMap,
   });
 
   // Compute insights
@@ -209,6 +225,7 @@ export default function DashboardPage() {
             onPresetChange={setDatePreset}
             presets={datePresets}
             activePreset={datePreset}
+            effectiveNow={effectiveNow}
           />
           
           {/* V2.1.1: Use ActiveBranchContext for branch selection */}

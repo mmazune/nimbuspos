@@ -10,7 +10,6 @@ import { PosReceiptsService } from './services/pos-receipts.service';
 import { PosCashSessionsService } from './services/pos-cash-sessions.service';
 import { PosZReportService } from './services/pos-zreport.service'; // M13.5
 import { FakeCardProvider } from './providers/fake-card.provider';
-import { PrismaService } from '../prisma.service';
 import { EfrisModule } from '../efris/efris.module';
 import { EventsModule } from '../events/events.module';
 import { InventoryModule } from '../inventory/inventory.module';
@@ -43,8 +42,7 @@ import { KdsModule } from '../kds/kds.module';
     PosCashSessionsService, // M13.4
     PosZReportService,     // M13.5
     FakeCardProvider,      // M13.4
-    PrismaService,
-  ],
+    ],
   exports: [PosMenuService, PosPaymentsService, PosZReportService], // M13.5: Export z-report service
 })
 export class PosModule {}

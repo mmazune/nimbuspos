@@ -1,6 +1,8 @@
 /**
  * Date Range Selector Component
  * Milestone 6: ChefCloud V2 UX Upgrade
+ * 
+ * Supports demo time freeze via effectiveNow prop.
  */
 
 import React from 'react';
@@ -19,6 +21,8 @@ interface DateRangeSelectorProps {
   activePreset?: DateRangePreset;
   showCustomInputs?: boolean;
   className?: string;
+  /** Effective "now" date for demo time freeze support. Defaults to real Date. */
+  effectiveNow?: Date;
 }
 
 const presetLabels: Record<DateRangePreset, string> = {
@@ -41,13 +45,6 @@ const formatDateForInput = (date: Date): string => {
   return date.toISOString().split('T')[0];
 };
 
-// Helper to get date N days ago
-const getDaysAgo = (days: number): Date => {
-  const date = new Date();
-  date.setDate(date.getDate() - days);
-  return date;
-};
-
 export function DateRangeSelector({
   from,
   to,
@@ -58,7 +55,18 @@ export function DateRangeSelector({
   activePreset,
   showCustomInputs = true,
   className,
+  effectiveNow,
 }: DateRangeSelectorProps) {
+  // Use effectiveNow for demo time freeze, fallback to real time
+  const baseDate = effectiveNow ?? new Date();
+  
+  // Helper to get date N days ago from effective now
+  const getDaysAgo = (days: number): Date => {
+    const date = new Date(baseDate);
+    date.setDate(date.getDate() - days);
+    return date;
+  };
+
   const handlePresetClick = (preset: DateRangePreset) => {
     if (preset === 'custom') {
       onPresetChange?.(preset);
@@ -67,7 +75,7 @@ export function DateRangeSelector({
 
     const days = presetDays[preset];
     onFromChange(formatDateForInput(getDaysAgo(days)));
-    onToChange(formatDateForInput(new Date()));
+    onToChange(formatDateForInput(baseDate));
     onPresetChange?.(preset);
   };
 

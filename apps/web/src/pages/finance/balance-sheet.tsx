@@ -3,7 +3,7 @@
  * 
  * Displays assets, liabilities, and equity.
  */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useAuth } from '@/contexts/AuthContext';
 import { useActiveBranch } from '@/contexts/ActiveBranchContext';
@@ -20,6 +20,7 @@ import { RequireRole } from '@/components/RequireRole';
 import { RoleLevel } from '@/lib/auth';
 import { Download, CheckCircle, AlertCircle } from 'lucide-react';
 import { definePageMeta } from '@/lib/pageMeta';
+import { useEffectiveTime } from '@/hooks/useEffectiveTime';
 
 /** Phase I3: Page metadata for action catalog */
 export const pageMeta = definePageMeta({
@@ -45,23 +46,42 @@ interface BalanceSheetData {
   equityAccounts?: Array<{ code: string; name: string; balance: number }>;
 }
 
+/** Normalize API response to frontend shape */
+function normalizeBalanceSheet(raw: any): BalanceSheetData {
+  return {
+    totalAssets: raw.totalAssets ?? 0,
+    totalLiabilities: raw.totalLiabilities ?? 0,
+    totalEquity: raw.totalEquity ?? 0,
+    assetAccounts: raw.assets ?? raw.assetAccounts ?? [],
+    liabilityAccounts: raw.liabilities ?? raw.liabilityAccounts ?? [],
+    equityAccounts: raw.equity ?? raw.equityAccounts ?? [],
+  };
+}
+
 export default function BalanceSheetPage() {
   const { user } = useAuth();
-  const { activeBranchId } = useActiveBranch();
+  const { activeBranchId, activeBranch } = useActiveBranch();
+  const { effectiveNow, formatDate, isLoading: timeLoading } = useEffectiveTime();
   const branchId = activeBranchId || user?.branch?.id;
 
-  // Date state (as of date)
-  const [asOfDate, setAsOfDate] = useState(new Date().toISOString().split('T')[0]);
+  // Date state (as of date) - initialize from effective time
+  const [asOfDate, setAsOfDate] = useState('');
+  
+  useEffect(() => {
+    if (!timeLoading && effectiveNow) {
+      setAsOfDate(formatDate(effectiveNow));
+    }
+  }, [timeLoading, effectiveNow, formatDate]);
 
   const { data, isLoading, error, refetch } = useQuery({
     queryKey: ['balance-sheet', branchId, asOfDate],
     queryFn: async () => {
-      const response = await apiClient.get<BalanceSheetData>('/accounting/balance-sheet', {
-        params: { branchId, asOfDate },
+      const response = await apiClient.get('/accounting/balance-sheet', {
+        params: { branchId, asOf: asOfDate },
       });
-      return response.data;
+      return normalizeBalanceSheet(response.data);
     },
-    enabled: !!user,
+    enabled: !!user && !!asOfDate,
   });
 
   // Accounting equation: Assets = Liabilities + Equity
@@ -285,7 +305,7 @@ export default function BalanceSheetPage() {
         {/* Debug info */}
         <div className="mt-4 text-xs text-muted-foreground">
           ✓ Data source: GET /accounting/balance-sheet
-          {branchId && ` • Branch filter: ${branchId}`}
+          {branchId && ` • Branch filter: ${activeBranch?.name ?? branchId}`}
         </div>
       </AppShell>
     </RequireRole>

@@ -11,6 +11,7 @@ import { useAuth } from '@/contexts/AuthContext';
 import { useActiveBranch } from '@/contexts/ActiveBranchContext';
 import { RequireRole } from '@/components/RequireRole';
 import { RoleLevel } from '@/lib/auth';
+import { useEffectiveTime } from '@/hooks/useEffectiveTime';
 
 interface BudgetSummary {
   totalBudget: number;
@@ -22,12 +23,12 @@ interface BudgetSummary {
 export default function FinancePage() {
   const { user } = useAuth();
   const { activeBranchId } = useActiveBranch();
+  const { effectiveNow, isLoading: timeLoading } = useEffectiveTime();
   
   // Use activeBranchId if set, otherwise fall back to user's branch
   const branchId = activeBranchId || user?.branch?.id;
-  const now = new Date();
-  const year = now.getFullYear();
-  const month = now.getMonth() + 1;
+  const year = effectiveNow.getFullYear();
+  const month = effectiveNow.getMonth() + 1;
 
   const { data, isLoading, error } = useQuery({
     queryKey: ['budget-summary', branchId, year, month],
@@ -37,7 +38,7 @@ export default function FinancePage() {
       });
       return response.data;
     },
-    enabled: !!branchId && !!user,
+    enabled: !!branchId && !!user && !timeLoading,
   });
 
   return (

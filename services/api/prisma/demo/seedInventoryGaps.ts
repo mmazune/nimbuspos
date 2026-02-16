@@ -20,8 +20,8 @@ import {
 const LOC_TAPAS_MAIN_ID = '00000000-0000-4000-8000-000000001001';
 const LOC_CAFE_VM_MAIN_ID = '00000000-0000-4000-8000-000000002001';
 
-// Anchor date for deterministic seeding
-const SEED_ANCHOR = new Date('2026-01-15T10:00:00Z');
+// Anchor date for deterministic seeding — use dynamic anchor relative to now
+const SEED_ANCHOR = new Date();
 
 /**
  * Generate deterministic depletion ID from order and index

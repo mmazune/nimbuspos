@@ -3,7 +3,7 @@
  * 
  * Displays the income statement with revenue, COGS, and expenses.
  */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { useAuth } from '@/contexts/AuthContext';
 import { useActiveBranch } from '@/contexts/ActiveBranchContext';
@@ -20,6 +20,7 @@ import { RequireRole } from '@/components/RequireRole';
 import { RoleLevel } from '@/lib/auth';
 import { TrendingUp, TrendingDown, Download, DollarSign } from 'lucide-react';
 import { definePageMeta } from '@/lib/pageMeta';
+import { useEffectiveTime } from '@/hooks/useEffectiveTime';
 
 /** Phase I3: Page metadata for action catalog */
 export const pageMeta = definePageMeta({
@@ -47,27 +48,47 @@ interface PnLData {
   expenseAccounts?: Array<{ code: string; name: string; amount: number }>;
 }
 
+/** Normalize API response to frontend shape */
+function normalizePnL(raw: any): PnLData {
+  return {
+    totalRevenue: raw.totalRevenue ?? 0,
+    totalCogs: raw.totalCOGS ?? raw.totalCogs ?? 0,
+    grossProfit: raw.grossProfit ?? 0,
+    totalExpenses: raw.totalExpenses ?? 0,
+    netIncome: raw.netProfit ?? raw.netIncome ?? 0,
+    revenueAccounts: (raw.revenue ?? raw.revenueAccounts ?? []).map((a: any) => ({ code: a.code, name: a.name, amount: a.balance ?? a.amount ?? 0 })),
+    cogsAccounts: (raw.cogs ?? raw.cogsAccounts ?? []).map((a: any) => ({ code: a.code, name: a.name, amount: a.balance ?? a.amount ?? 0 })),
+    expenseAccounts: (raw.expenses ?? raw.expenseAccounts ?? []).map((a: any) => ({ code: a.code, name: a.name, amount: a.balance ?? a.amount ?? 0 })),
+  };
+}
+
 export default function ProfitLossPage() {
   const { user } = useAuth();
-  const { activeBranchId } = useActiveBranch();
+  const { activeBranchId, activeBranch } = useActiveBranch();
+  const { effectiveNow, formatDate, isLoading: timeLoading } = useEffectiveTime();
   const branchId = activeBranchId || user?.branch?.id;
 
-  // Date range state
-  const now = new Date();
-  const [startDate, setStartDate] = useState(
-    new Date(now.getFullYear(), now.getMonth(), 1).toISOString().split('T')[0]
-  );
-  const [endDate, setEndDate] = useState(now.toISOString().split('T')[0]);
+  // Date range state - initialized from effective time
+  const [startDate, setStartDate] = useState('');
+  const [endDate, setEndDate] = useState('');
+  
+  useEffect(() => {
+    if (!timeLoading && effectiveNow) {
+      const start = new Date(effectiveNow.getFullYear(), effectiveNow.getMonth(), 1);
+      setStartDate(formatDate(start));
+      setEndDate(formatDate(effectiveNow));
+    }
+  }, [timeLoading, effectiveNow, formatDate]);
 
   const { data, isLoading, error, refetch } = useQuery({
     queryKey: ['pnl', branchId, startDate, endDate],
     queryFn: async () => {
-      const response = await apiClient.get<PnLData>('/accounting/pnl', {
-        params: { branchId, startDate, endDate },
+      const response = await apiClient.get('/accounting/pnl', {
+        params: { branchId, from: startDate, to: endDate },
       });
-      return response.data;
+      return normalizePnL(response.data);
     },
-    enabled: !!user,
+    enabled: !!user && !!startDate && !!endDate,
   });
 
   const grossMargin = data?.totalRevenue 
@@ -237,10 +258,19 @@ export default function ProfitLossPage() {
                 <div>
                   <h3 className="font-semibold text-lg border-b pb-2 mb-3">Revenue</h3>
                   <div className="pl-4 space-y-2">
-                    <div className="flex justify-between">
-                      <span>Sales Revenue</span>
-                      <span className="font-mono">{formatCurrency(data.totalRevenue)}</span>
-                    </div>
+                    {data.revenueAccounts && data.revenueAccounts.length > 0 ? (
+                      data.revenueAccounts.map((a) => (
+                        <div key={a.code} className="flex justify-between">
+                          <span className="text-sm"><span className="text-muted-foreground mr-2">{a.code}</span>{a.name}</span>
+                          <span className="font-mono text-sm">{formatCurrency(a.amount)}</span>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="flex justify-between">
+                        <span>Sales Revenue</span>
+                        <span className="font-mono">{formatCurrency(data.totalRevenue)}</span>
+                      </div>
+                    )}
                   </div>
                   <div className="flex justify-between font-semibold mt-2 pt-2 border-t">
                     <span>Total Revenue</span>
@@ -252,10 +282,19 @@ export default function ProfitLossPage() {
                 <div>
                   <h3 className="font-semibold text-lg border-b pb-2 mb-3">Cost of Goods Sold</h3>
                   <div className="pl-4 space-y-2">
-                    <div className="flex justify-between">
-                      <span>Cost of Goods Sold</span>
-                      <span className="font-mono">{formatCurrency(data.totalCogs)}</span>
-                    </div>
+                    {data.cogsAccounts && data.cogsAccounts.length > 0 ? (
+                      data.cogsAccounts.map((a) => (
+                        <div key={a.code} className="flex justify-between">
+                          <span className="text-sm"><span className="text-muted-foreground mr-2">{a.code}</span>{a.name}</span>
+                          <span className="font-mono text-sm">{formatCurrency(a.amount)}</span>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="flex justify-between">
+                        <span>Cost of Goods Sold</span>
+                        <span className="font-mono">{formatCurrency(data.totalCogs)}</span>
+                      </div>
+                    )}
                   </div>
                   <div className="flex justify-between font-semibold mt-2 pt-2 border-t">
                     <span>Total COGS</span>
@@ -278,10 +317,19 @@ export default function ProfitLossPage() {
                 <div>
                   <h3 className="font-semibold text-lg border-b pb-2 mb-3">Operating Expenses</h3>
                   <div className="pl-4 space-y-2">
-                    <div className="flex justify-between">
-                      <span>Operating Expenses</span>
-                      <span className="font-mono">{formatCurrency(data.totalExpenses)}</span>
-                    </div>
+                    {data.expenseAccounts && data.expenseAccounts.length > 0 ? (
+                      data.expenseAccounts.map((a) => (
+                        <div key={a.code} className="flex justify-between">
+                          <span className="text-sm"><span className="text-muted-foreground mr-2">{a.code}</span>{a.name}</span>
+                          <span className="font-mono text-sm">{formatCurrency(a.amount)}</span>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="flex justify-between">
+                        <span>Operating Expenses</span>
+                        <span className="font-mono">{formatCurrency(data.totalExpenses)}</span>
+                      </div>
+                    )}
                   </div>
                   <div className="flex justify-between font-semibold mt-2 pt-2 border-t">
                     <span>Total Expenses</span>
@@ -314,7 +362,7 @@ export default function ProfitLossPage() {
         {/* Debug info */}
         <div className="mt-4 text-xs text-muted-foreground">
           ✓ Data source: GET /accounting/pnl
-          {branchId && ` • Branch filter: ${branchId}`}
+          {branchId && ` • Branch filter: ${activeBranch?.name ?? branchId}`}
         </div>
       </AppShell>
     </RequireRole>

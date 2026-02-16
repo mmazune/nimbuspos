@@ -1,8 +1,6 @@
 import { Module } from '@nestjs/common';
 import { IdempotencyService } from './idempotency.service';
 import { IdempotencyInterceptor } from './idempotency.interceptor';
-import { PrismaService } from '../prisma.service';
-
 /**
  * M21: Common Module
  *
@@ -11,7 +9,7 @@ import { PrismaService } from '../prisma.service';
  * - Future: Rate limiting, caching, etc.
  */
 @Module({
-  providers: [PrismaService, IdempotencyService, IdempotencyInterceptor],
+  providers: [IdempotencyService, IdempotencyInterceptor],
   exports: [IdempotencyService, IdempotencyInterceptor],
 })
 export class CommonModule {}

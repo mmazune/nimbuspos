@@ -62,6 +62,89 @@ export interface CategoryMix {
   [key: string]: string | number | undefined;
 }
 
+/**
+ * Group granular menu categories into broader display categories
+ * This prevents the pie chart legend from overflowing with 30+ categories
+ */
+function groupCategories(categories: CategoryMix[]): CategoryMix[] {
+  const groups: Record<string, CategoryMix> = {};
+  
+  // Use keyword matching for flexible grouping
+  function getGroupName(catName: string): string {
+    const lower = catName.toLowerCase();
+    
+    // Alcohol categories
+    if (lower.includes('spirit') || lower.includes('vodka') || lower.includes('gin') || 
+        lower.includes('rum') || lower.includes('whiskey') || lower.includes('bourbon') ||
+        lower.includes('tequila') || lower.includes('brandy') || lower.includes('cognac') ||
+        lower.includes('liqueur')) {
+      return 'Spirits';
+    }
+    if (lower.includes('wine') || lower.includes('champagne') || lower.includes('sparkling')) {
+      return 'Wines';
+    }
+    if (lower.includes('beer') || lower.includes('cider')) {
+      return 'Beer & Cider';
+    }
+    if (lower.includes('cocktail') || lower.includes('mocktail')) {
+      return 'Cocktails';
+    }
+    
+    // Beverages (non-alcoholic)
+    if (lower.includes('coffee') || lower.includes('espresso') || lower.includes('latte') ||
+        lower.includes('cappuccino') || lower.includes('americano')) {
+      return 'Coffee';
+    }
+    if (lower.includes('tea') || lower.includes('infusion') || lower.includes('chai')) {
+      return 'Tea';
+    }
+    if (lower.includes('juice') || lower.includes('smoothie') || lower.includes('shake') ||
+        lower.includes('milkshake') || lower.includes('soft drink') || lower.includes('soda') ||
+        lower.includes('beverage') || lower.includes('drink')) {
+      return 'Beverages';
+    }
+    
+    // Food categories
+    if (lower.includes('pastry') || lower.includes('pastries') || lower.includes('baked') ||
+        lower.includes('croissant') || lower.includes('muffin') || lower.includes('cake')) {
+      return 'Pastries';
+    }
+    if (lower.includes('dessert') || lower.includes('sweet')) {
+      return 'Desserts';
+    }
+    if (lower.includes('breakfast') || lower.includes('brunch')) {
+      return 'Breakfast';
+    }
+    if (lower.includes('sandwich') || lower.includes('wrap') || lower.includes('burger') ||
+        lower.includes('salad') || lower.includes('soup') || lower.includes('starter') ||
+        lower.includes('appetizer') || lower.includes('main') || lower.includes('meal') ||
+        lower.includes('grill') || lower.includes('pasta') || lower.includes('pizza') ||
+        lower.includes('taco') || lower.includes('slider') || lower.includes('fish') ||
+        lower.includes('curry') || lower.includes('vegan') || lower.includes('vegetarian') ||
+        lower.includes('side') || lower.includes('extra') || lower.includes('food')) {
+      return 'Food';
+    }
+    
+    // Default: keep original name
+    return catName;
+  }
+  
+  for (const cat of categories) {
+    const groupName = getGroupName(cat.name);
+    
+    if (!groups[groupName]) {
+      groups[groupName] = { name: groupName, value: 0, count: 0 };
+    }
+    groups[groupName].value += cat.value;
+    groups[groupName].count += cat.count || 0;
+  }
+  
+  // Sort by value descending and return top categories
+  return Object.values(groups)
+    .sort((a, b) => b.value - a.value)
+    .slice(0, 8); // Limit to top 8 for clean display
+}
+
 export interface PaymentMix {
   method: string;
   amount: number;
@@ -288,15 +371,16 @@ export function useCategoryMix(params: UseDashboardDataParams) {
             branchId: params.branchId,
           },
         });
-        return res.data;
+        // Group granular categories into broader ones for cleaner chart display
+        return groupCategories(res.data);
       } catch (err) {
         // M7.1: Gated fallback
         return handleFallback(err, [
-          { name: 'Tapas', value: 14500000, count: 567 },
-          { name: 'Drinks', value: 8200000, count: 423 },
-          { name: 'Mains', value: 6800000, count: 156 },
+          { name: 'Spirits', value: 14500000, count: 567 },
+          { name: 'Beverages', value: 8200000, count: 423 },
+          { name: 'Food', value: 6800000, count: 156 },
           { name: 'Desserts', value: 2400000, count: 189 },
-          { name: 'Starters', value: 1800000, count: 134 },
+          { name: 'Beer & Cider', value: 1800000, count: 134 },
         ], 'useCategoryMix');
       }
     },
@@ -381,13 +465,13 @@ export function useBranchRankings(params: UseDashboardDataParams) {
         return (data || []).map((b: any, idx: number) => ({
           branchId: b.branchId,
           branchName: b.branchName,
-          rank: idx + 1,
-          revenue: b.totalSales || b.netSales || 0,
-          orders: b.orderCount || 0,
+          rank: b.rank || idx + 1,
+          revenue: b.totalSales || b.netSales || b.metrics?.revenue || b.metrics?.netSales || b.sales || 0,
+          orders: b.orderCount || b.metrics?.orderCount || b.metrics?.orders || 0,
           growthPercent: b.growthPercent || 0,
-          marginPercent: b.marginPercent || 0,
-          nps: b.nps || null,
-          lowStockCount: b.lowStockCount || 0,
+          marginPercent: b.marginPercent || (b.metrics?.margin && b.metrics?.revenue ? Math.round((b.metrics.margin / b.metrics.revenue) * 100) : b.metrics?.marginPercent || 0),
+          nps: b.nps || b.metrics?.nps || null,
+          lowStockCount: b.lowStockCount || b.metrics?.lowStockCount || 0,
         }));
       } catch (err) {
         // M7.1: Gated fallback for Cafesserie multi-branch
@@ -447,7 +531,43 @@ export function useDashboardAlerts(branchId?: string | null) {
         }
       }
 
-      // Could add more alert sources: overdue bills, wastage, etc.
+      // Fetch overdue bill alerts from service provider reminders
+      try {
+        const remindersRes = await apiClient.get('/finance/service-reminders/summary', {
+          params: { branchId },
+        });
+        const summary = remindersRes.data;
+        const overdueCount = summary?.overdue || 0;
+        const dueTodayCount = summary?.dueToday || 0;
+        const dueSoonCount = summary?.dueSoon || 0;
+        const totalDue = overdueCount + dueTodayCount;
+        if (totalDue > 0) {
+          alerts.push({
+            id: 'overdue-bills',
+            type: 'overdue-bill',
+            severity: overdueCount > 0 ? 'high' : 'medium',
+            title: 'Pending Bills',
+            message: overdueCount > 0
+              ? `${overdueCount} overdue bill${overdueCount > 1 ? 's' : ''}${dueTodayCount > 0 ? `, ${dueTodayCount} due today` : ''}`
+              : `${dueTodayCount} bill${dueTodayCount > 1 ? 's' : ''} due today`,
+            count: totalDue,
+            link: '/services?tab=reminders',
+          });
+        }
+        if (dueSoonCount > 0 && totalDue === 0) {
+          alerts.push({
+            id: 'upcoming-bills',
+            type: 'overdue-bill',
+            severity: 'low',
+            title: 'Upcoming Bills',
+            message: `${dueSoonCount} bill${dueSoonCount > 1 ? 's' : ''} due this week`,
+            count: dueSoonCount,
+            link: '/services?tab=reminders',
+          });
+        }
+      } catch {
+        // Reminders endpoint may not exist yet — silently skip
+      }
       
       return alerts;
     },
@@ -456,12 +576,13 @@ export function useDashboardAlerts(branchId?: string | null) {
 }
 
 // Combined hook for branch timeseries data (for comparison chart)
-export function useBranchTimeseries(params: UseDashboardDataParams & { branchIds: string[] }) {
+export function useBranchTimeseries(params: UseDashboardDataParams & { branchIds: string[]; branchNames?: Record<string, string> }) {
   return useQuery({
     queryKey: ['branch-timeseries', params.from, params.to, params.branchIds],
     queryFn: async () => {
       const results = await Promise.all(
         params.branchIds.map(async (branchId) => {
+          const branchName = params.branchNames?.[branchId] || branchId;
           try {
             const res = await apiClient.get('/analytics/daily-metrics', {
               params: {
@@ -472,7 +593,7 @@ export function useBranchTimeseries(params: UseDashboardDataParams & { branchIds
             });
             return {
               id: branchId,
-              name: `Branch ${branchId}`, // Would need to fetch branch name separately
+              name: branchName,
               data: (res.data || []).map((d: any) => ({
                 date: d.date,
                 revenue: d.totalSales || 0,
@@ -483,7 +604,7 @@ export function useBranchTimeseries(params: UseDashboardDataParams & { branchIds
             const days = Math.ceil((new Date(params.to).getTime() - new Date(params.from).getTime()) / (1000 * 60 * 60 * 24));
             const fallbackData = {
               id: branchId,
-              name: branchId,
+              name: branchName,
               data: Array.from({ length: days }, (_, i) => {
                 const date = new Date(params.from);
                 date.setDate(date.getDate() + i);

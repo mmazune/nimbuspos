@@ -169,8 +169,8 @@ export function CategoryMixChart({
               cy="50%"
               labelLine={false}
               label={renderCustomizedLabel}
-              outerRadius={100}
-              innerRadius={50}
+              outerRadius={70}
+              innerRadius={35}
               fill="#8884d8"
               dataKey="value"
               paddingAngle={2}
@@ -184,8 +184,12 @@ export function CategoryMixChart({
               layout="horizontal"
               verticalAlign="bottom"
               align="center"
+              wrapperStyle={{ 
+                fontSize: '11px',
+                paddingTop: '10px',
+              }}
               formatter={(value) => (
-                <span className="text-sm text-gray-600">{value}</span>
+                <span className="text-xs text-gray-600">{value}</span>
               )}
             />
           </PieChart>

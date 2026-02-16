@@ -17,6 +17,8 @@ import {
   BRANCH_CAFE_ACACIA_MALL_ID,
   BRANCH_CAFE_ARENA_MALL_ID,
   BRANCH_CAFE_MOMBASA_ID,
+  SEED_DATE_ANCHOR,
+  getSeedDate,
 } from './constants';
 
 // ===== Deterministic IDs =====
@@ -151,15 +153,15 @@ async function seedTapasWorkforce(prisma: PrismaClient): Promise<void> {
     return;
   }
 
-  // Dates: use relative to "today" for demo freshness
-  const today = new Date();
+  // Dates: use SEED_DATE_ANCHOR for consistent demo data
+  const today = new Date(SEED_DATE_ANCHOR);
   today.setHours(0, 0, 0, 0);
-  const yesterday = new Date(today);
-  yesterday.setDate(yesterday.getDate() - 1);
-  const tomorrow = new Date(today);
-  tomorrow.setDate(tomorrow.getDate() + 1);
-  const dayAfter = new Date(today);
-  dayAfter.setDate(dayAfter.getDate() + 2);
+  const yesterday = getSeedDate(-1);
+  yesterday.setHours(0, 0, 0, 0);
+  const tomorrow = getSeedDate(1);
+  tomorrow.setHours(0, 0, 0, 0);
+  const dayAfter = getSeedDate(2);
+  dayAfter.setHours(0, 0, 0, 0);
 
   // Create 6 scheduled shifts
   await prisma.scheduledShift.createMany({

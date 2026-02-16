@@ -35,7 +35,9 @@
     "staging:migrate": "docker compose -f docker-compose.staging.yml exec api npx prisma migrate deploy",
     "staging:seed": "docker compose -f docker-compose.staging.yml exec api npx prisma db seed",
     "staging:smoke": "API_BASE_URL=http://localhost:3001 node scripts/verify/smoke-verification.mjs",
-    "staging:shell": "docker compose -f docker-compose.staging.yml exec api sh"
+    "staging:shell": "docker compose -f docker-compose.staging.yml exec api sh",
+    "notion:delta": "node scripts/notion_delta_report.mjs",
+    "atlas:generate": "node scripts/generate_atlas_catalogs.mjs"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.6.0",

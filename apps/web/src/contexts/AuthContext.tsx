@@ -38,7 +38,9 @@ function getPostLoginRoute(
   currentPath: string
 ): string {
   // If explicit redirect provided, validate it
-  if (explicitRedirect && explicitRedirect !== '/login') {
+  // Reject URLs containing bracket patterns (e.g., /reports/[type]) which are
+  // unresolved Next.js dynamic route patterns and would cause interpolation errors
+  if (explicitRedirect && explicitRedirect !== '/login' && !/\[.*\]/.test(explicitRedirect)) {
     if (canAccessRoute(jobRole, explicitRedirect)) {
       return explicitRedirect;
     }

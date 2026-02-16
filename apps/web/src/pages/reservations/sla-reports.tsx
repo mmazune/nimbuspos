@@ -9,6 +9,7 @@ import { Label } from '@/components/ui/label';
 import { useAuth } from '@/contexts/AuthContext';
 import { apiClient } from '@/lib/api';
 import { Download, TrendingUp, Users, Clock, AlertTriangle, Webhook, Bell } from 'lucide-react';
+import { useEffectiveTime } from '@/hooks/useEffectiveTime';
 
 const formatDate = (date: Date) => {
   const year = date.getFullYear();
@@ -60,11 +61,22 @@ interface SlaMetrics {
 export default function SlaReportsPage() {
   const { user } = useAuth();
   const branchId = user?.branch?.id;
+  const { effectiveNow, isLoading: timeLoading } = useEffectiveTime();
 
   const [dateRange, setDateRange] = useState({
-    start: formatDate(subDays(new Date(), 30)),
-    end: formatDate(new Date()),
+    start: formatDate(subDays(effectiveNow, 30)),
+    end: formatDate(effectiveNow),
   });
+
+  // Re-initialize dates when effective time loads (demo freeze support)
+  React.useEffect(() => {
+    if (!timeLoading && effectiveNow) {
+      setDateRange({
+        start: formatDate(subDays(effectiveNow, 30)),
+        end: formatDate(effectiveNow),
+      });
+    }
+  }, [timeLoading, effectiveNow]);
 
   const { data: metrics, isLoading, refetch } = useQuery<SlaMetrics>({
     queryKey: ['sla-metrics', branchId, dateRange],

@@ -16,7 +16,9 @@ export function ProtectedRoute({ children }: ProtectedRouteProps) {
   useEffect(() => {
     if (!loading && !user) {
       // User is not authenticated, redirect to login
-      router.push(`/login?redirect=${encodeURIComponent(router.pathname)}`);
+      // Use asPath (resolved URL like /reports/daily-sales) instead of pathname
+      // (pattern like /reports/[type]) to avoid Next.js href interpolation errors
+      router.push(`/login?redirect=${encodeURIComponent(router.asPath)}`);
     }
   }, [user, loading, router]);
 

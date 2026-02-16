@@ -8,6 +8,7 @@ import { apiClient } from '@/lib/api';
 import { Star, ThumbsUp, ThumbsDown } from 'lucide-react';
 import { RequireRole } from '@/components/RequireRole';
 import { RoleLevel } from '@/lib/auth';
+import { useEffectiveTime } from '@/hooks/useEffectiveTime';
 
 interface NPSSummary {
   nps: number;
@@ -20,28 +21,22 @@ interface NPSSummary {
   detractorPct: number;
 }
 
-// Helper to get date range (last 30 days)
-function getDateRange() {
-  const to = new Date();
-  const from = new Date();
-  from.setDate(from.getDate() - 30);
-  return {
-    from: from.toISOString().split('T')[0],
-    to: to.toISOString().split('T')[0],
-  };
-}
-
 export default function FeedbackPage() {
-  const dateRange = getDateRange();
+  const { effectiveNow, getDaysAgo, formatDate, isLoading: timeLoading } = useEffectiveTime();
+
+  // Use effective time for demo-frozen date ranges (last 30 days from effective "now")
+  const from = formatDate(getDaysAgo(30));
+  const to = formatDate(effectiveNow);
   
   const { data, isLoading, error } = useQuery({
-    queryKey: ['feedback-nps', dateRange],
+    queryKey: ['feedback-nps', from, to],
     queryFn: async () => {
       const response = await apiClient.get<NPSSummary>('/feedback/analytics/nps-summary', {
-        params: { from: dateRange.from, to: dateRange.to },
+        params: { from, to },
       });
       return response.data;
     },
+    enabled: !timeLoading,
   });
 
   return (
